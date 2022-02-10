@@ -23,8 +23,11 @@ function MyApp({ Component, pageProps }) {
   return <StoreProvider {...pageProps}>
     <Head>
       <title>Trustlink</title>
+      <meta name="viewport" content="width=device-width, minimum-scale=1.0"/>
       {/*<link rel="shortcut icon" href={profile?.entity?.logo_url ? appConfig.imageApiUrl + profile?.entity?.logo_url : "/assets/logo.svg"} />*/}
       {/*<link rel="shortcut icon" href="/assets/icons/map-marker.png" />*/}
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Montserrat:bold,light,regular,medium"/>
     </Head>
     {getLayout(
         <>
