@@ -1,9 +1,6 @@
 import React, {useEffect, useState} from "react";
 import '../styles/globals.scss';
 import 'tailwindcss/tailwind.css';
-import '../styles/component.css';
-import '../styles/demo.css';
-import '../styles/normalize.css';
 
 import {StoreProvider} from "../components/StoreProvider";
 import Script from 'next/script'
@@ -28,9 +25,6 @@ function MyApp({ Component, pageProps }) {
       <title>Trustlink</title>
       {/*<link rel="shortcut icon" href={profile?.entity?.logo_url ? appConfig.imageApiUrl + profile?.entity?.logo_url : "/assets/logo.svg"} />*/}
       {/*<link rel="shortcut icon" href="/assets/icons/map-marker.png" />*/}
-      <Script src={'../styles/animation/EasePack.min.js'} />
-      <Script src={'../styles/animation/rAf.js'} />
-      <Script src={'../styles/animation/TweenLite.min.js'} />
     </Head>
     {getLayout(
         <>
