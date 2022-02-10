@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nwp-website-react
+  namespace: nwp-production
+spec:
+  selector:
+    matchLabels:
+      app: nwp-website-react
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nwp-website-react
+    spec:
+      containers:
+        - name: nwp-website-react
+          image: registry.app.nationaalwerknemerplan.nl/nwp/nwp-website-react:<VERSION>
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: regcred
+

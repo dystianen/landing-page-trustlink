@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nwp-website-react-ingress
+  namespace: nwp-production
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    traefik.ingress.kubernetes.io/router.middlewares: nwp-production-redirect-https@kubernetescrd
+spec:
+  rules:
+    - host: "nwp.nationaalwerknemerplan.nl"
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: nwp-website-react
+                port:
+                  number: 3000
+  tls:
+    - hosts:
+        - "nwp.nationaalwerknemerplan.nl"
+      secretName: nwp-nationaalwerknemerplan-nl-tls

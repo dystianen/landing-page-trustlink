@@ -1,0 +1,94 @@
+//$background-color-base: #e3e8ee;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #E5E5E5;
+}
+
+#profile .ant-upload{
+  width: 100%;
+}
+
+.table-row-red {
+  background-color: #FFDBDC;
+}
+
+.table-row-yellow {
+  background-color: #FEEFD0;
+}
+
+.table-row-green {
+  background-color: #DCF3D1;
+}
+
+.bg-color-pending {
+  background-color: #FAAD14;
+  color: #FFFFFF;
+}
+
+.bg-color-rejected {
+  background-color: #FF4D4F;
+  color: #FFFFFF;
+}
+
+.bg-color-open {
+  background-color: #338500;
+  color: #FFFFFF;
+}
+
+.bg-color-approved {
+  background-color: #52C41A;
+  color: #FFFFFF;
+}
+
+.bg-color-editing {
+  background-color: #1890FF;
+  color: #FFFFFF;
+}
+
+.text-color-pending {
+  color: #FAAD14;
+}
+
+.text-color-rejected {
+  color: #FF4D4F;
+}
+
+.text-color-open {
+  color: #338500;
+}
+
+.text-color-approved {
+  color: #52C41A;
+}
+
+.text-color-editing {
+  color: #1890FF;
+}
+
+.register-modal .ant-modal-content {
+  border-radius: 20px !important;
+}
+
+.register-modal .ant-modal-body {
+  border-radius: 20px !important;
+  padding: 0 0 10px 0 !important;
+}
+
+.tc-modal .ant-tabs-tab {
+  padding-top: 0 !important;
+  font-size: 1rem;
+  font-weight: 600;
+  text-shadow: none;
+}
+
+.tc-modal .ant-tabs-content-holder {
+  padding-top: 0 !important;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
