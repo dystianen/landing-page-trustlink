@@ -26,6 +26,13 @@ function MyApp({ Component, pageProps }) {
       <title>Trustlink</title>
       {/*<link rel="shortcut icon" href={profile?.entity?.logo_url ? appConfig.imageApiUrl + profile?.entity?.logo_url : "/assets/logo.svg"} />*/}
       <link rel="shortcut icon" href="/assets/icons/map-marker.png" />
+      <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+      <link rel="stylesheet" type="text/css" href="/assets/css/demo.css" />
+      <link rel="stylesheet" type="text/css" href="/assets/css/component.css" />
+      <script src="/assets/js/TweenLite.min.js"></script>
+      <script src="/assets/js/EasePack.min.js"></script>
+      <script src="/assets/js/rAF.js"></script>
+      <script src="/assets/js/demo-1.js"></script>
     </Head>
     {getLayout(
         <>
