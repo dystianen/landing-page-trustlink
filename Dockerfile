@@ -16,7 +16,7 @@ ENV NEXT_PUBLIC_BASE_URL $NEXT_PUBLIC_BASE_URL
 RUN yarn build && yarn install --production --ignore-scripts --prefer-offline
 
 # Production image, copy all the files and run next
-FROM node:alpine AS runner
+FROM node:16-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV production
