@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
     <Head>
       <title>Trustlink</title>
       {/*<link rel="shortcut icon" href={profile?.entity?.logo_url ? appConfig.imageApiUrl + profile?.entity?.logo_url : "/assets/logo.svg"} />*/}
-      <link rel="shortcut icon" href="/assets/Favicon_VBG.png" />
+      <link rel="shortcut icon" href="/assets/icons/map-marker.png" />
     </Head>
     {getLayout(
         <>
