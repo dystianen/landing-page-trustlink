@@ -1,7 +1,12 @@
 import React, {useEffect, useState} from "react";
 import '../styles/globals.scss';
 import 'tailwindcss/tailwind.css';
+import '../styles/component.css';
+import '../styles/demo.css';
+import '../styles/normalize.css';
+
 import {StoreProvider} from "../components/StoreProvider";
+import Script from 'next/script'
 import Head from "next/head";
 import {ModalLoader} from "../components/Modal/ModalLoader";
 import {ModalLoaderContext} from "../utils/modal";
@@ -17,22 +22,15 @@ function MyApp({ Component, pageProps }) {
   };
 
 
-  // useSSR()
-
-  // useSSR(window.initialI18nStore, window.initialLanguage);
 
   return <StoreProvider {...pageProps}>
     <Head>
       <title>Trustlink</title>
       {/*<link rel="shortcut icon" href={profile?.entity?.logo_url ? appConfig.imageApiUrl + profile?.entity?.logo_url : "/assets/logo.svg"} />*/}
-      <link rel="shortcut icon" href="/assets/icons/map-marker.png" />
-      <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
-      <link rel="stylesheet" type="text/css" href="/assets/css/demo.css" />
-      <link rel="stylesheet" type="text/css" href="/assets/css/component.css" />
-      <script src="/assets/js/TweenLite.min.js"></script>
-      <script src="/assets/js/EasePack.min.js"></script>
-      <script src="/assets/js/rAF.js"></script>
-      <script src="/assets/js/demo-1.js"></script>
+      {/*<link rel="shortcut icon" href="/assets/icons/map-marker.png" />*/}
+      <Script src={'../styles/animation/EasePack.min.js'} />
+      <Script src={'../styles/animation/rAf.js'} />
+      <Script src={'../styles/animation/TweenLite.min.js'} />
     </Head>
     {getLayout(
         <>
