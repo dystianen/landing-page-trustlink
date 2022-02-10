@@ -1,13 +1,16 @@
 import React from 'react';
 import { Image } from 'antd';
+import Link from "next/link";
 
 const UnderConstruction = () => {
     const menu = [
         {
-            label: "more info"
+            label: "more info",
+            link:  'about'
         },
         {
-            label: "contact us"
+            label: "contact us",
+            link: 'contact_us'
         }
     ];
 
@@ -15,10 +18,12 @@ const UnderConstruction = () => {
         <div className={'menu-container'}>
             {menu.map(prop => {
                 return (
-                    <div className={'menu-item'} key={prop.label}>
-                        <div className={'menu-button'}></div>
-                        <div className={'menu-label'}>{prop.label}</div>
-                    </div>
+                    <Link href={`/${prop.link}`} key={prop.label} passHref>
+                        <div className={'menu-item'}>
+                                <div className={'menu-button'}></div>
+                                <div className={'menu-label'}>{prop.label}</div>
+                        </div>
+                    </Link>
                 )
             })}
         </div>
