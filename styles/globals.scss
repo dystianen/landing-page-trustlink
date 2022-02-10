@@ -105,12 +105,13 @@ body {
   border: 2px solid rgba(112, 112, 112, 0.25);
   height: 84vh;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  padding-left: 4vw;
-  padding-right: 4vw;
+  align-items: flex-start;
+  padding: 6vh 4vw;
 }
+
+.container-1::before { content: ''; }
 
 .we-are-text {
   color: #04204D;
@@ -122,8 +123,15 @@ body {
 
 .menu-container{
   display: flex;
+  justify-content: center;
   flex-direction: row;
+  align-items: flex-end;
 }
+
+.container-1::before, .menu-container {
+  flex: 1;
+}
+
 
 .menu-item{
   cursor: pointer;
@@ -189,9 +197,9 @@ body {
 }
 
 .scene {
-  width: 200px;
-  height: 200px;
-  perspective: 600px;
+  width: 100vw;
+  height: 100vh;
+  perspective: 60vw;
 }
 
 
@@ -203,16 +211,9 @@ body {
 }
 
 .cube__face {
-  width: 200px;
-  height: 200px;
   position: absolute;
 }
 
-.cube__face--front  { transform: rotateY(  0deg) translateZ(100px); }
-.cube__face--right  { transform: rotateY( 90deg) translateZ(100px); }
-.cube__face--back   { transform: rotateY(180deg) translateZ(100px); }
-.cube__face--left   { transform: rotateY(-90deg) translateZ(100px); }
-.cube__face--top    { transform: rotateX( 90deg) translateZ(100px); }
-.cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
-
+.cube__face--back   { transform: rotateY(180deg) translateZ(10vw);  width: 100vw; height: 100vh; }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(50vw); width:100vw;height: 200vh;}
 .refact {transform: rotateY(180deg)}

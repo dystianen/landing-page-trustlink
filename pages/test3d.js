@@ -8,10 +8,7 @@ const Test3D =  ()=> {
                     <div className="cube__face cube__face--back"><div className={"refact"}>
                         Hello
                     </div></div>
-                    <div className="cube__face cube__face--right">right</div>
                     <div className="cube__face cube__face--left">left</div>
-                    <div className="cube__face cube__face--top">top</div>
-                    <div className="cube__face cube__face--bottom">bottom</div>
                 </div>
             </div>
         </div>
