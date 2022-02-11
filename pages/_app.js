@@ -28,6 +28,7 @@ function MyApp({ Component, pageProps }) {
       {/*<link rel="shortcut icon" href="/assets/icons/map-marker.png" />*/}
       <link rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Montserrat:bold,light,regular,medium"/>
+      <Script src={"../styles/animation/textCarousel.js"} />
     </Head>
     {getLayout(
         <>

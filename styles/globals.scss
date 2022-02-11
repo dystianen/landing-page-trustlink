@@ -18,6 +18,8 @@ body {
   width: 100%;
 }
 
+svg { vertical-align: baseline; }
+
 .table-row-red {
   background-color: #FFDBDC;
 }
@@ -120,8 +122,10 @@ body {
   color: #04204D;
   text-align: left;
   font: normal normal bold 60px/80px Montserrat;
+  font-size: 5em;
   letter-spacing: 0px;
   text-transform: capitalize;
+  display: flex;
 }
 
 .menu-container{
@@ -155,7 +159,7 @@ body {
 }
 
 .menu-label {
-  font: normal normal medium 13px/17px Montserrat;
+  font: normal normal medium 13px/17px Montserrat !important;
   letter-spacing: 3.25px;
   text-transform: uppercase;
   font-weight: 500;
@@ -167,6 +171,29 @@ body {
   bottom:-36vh;
   right:-10vw;
   transform: rotate(45deg);
+}
+
+.container-1 .ant-carousel-vertical{
+  width: 66.666667%;
+  background: transparent linear-gradient(90deg, #FF6500 0%, #FFD1B300 100%) 0% 0% no-repeat padding-box;
+}
+
+.text-slider {
+  text-align: left;
+  //font: normal normal medium 60px/80px Montserrat;
+  font-family: Montserrat;
+  font-size: 5em;
+  line-height: 80px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  color: #04204D;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.text-slider-container {
+  background: transparent linear-gradient(90deg, #FF6500 0%, #FFD1B300 100%) 0% 0% no-repeat padding-box;
+  display: inline-flex;
 }
 
 .crop-div {
@@ -197,6 +224,23 @@ body {
 
   .logo-accent img {
     width: 50vw;
+  }
+
+  .we-are-text {
+    font-size: 3.5em;
+    letter-spacing: 0px;
+    text-transform: capitalize;
+    flex-direction: column;
+  }
+
+  .container-1 .ant-carousel-vertical{
+    width: 100%;
+  }
+
+  .text-slider {
+    font-size: 2.3em;
+    opacity: 1;
+    margin-left: 5px;
   }
 }
 
