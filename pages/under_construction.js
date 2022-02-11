@@ -71,14 +71,17 @@ const UnderConstruction = () => {
                         <Image className={"w-4/5 xs:w-3/5 md:w-2/4 xl:w-3/6"} style={{marginLeft:-15}} preview={false} src={'assets/logo/logo-for-light-background.png'} alt={"Trustlink"}/>
                         </Zoom>
                     </Slide>
+                    <Slide top delay={100} duration={1600}>
+                    <Zoom>
                     <div className={"grid grid-cols-12 gap-2"}>
                         <div className={'col-span-12 lg:col-span-24 xl:col-span-24 we-are-text'}>
-                            <Slide top delay={100} duration={1600}>
-                            <Zoom>
                                 <span>We Are&nbsp;</span>
-                            </Zoom>
+                            {/* </Zoom>
+                            </Slide> */}
+                            
+                            {/* <Slide top delay={100} duration={1600}>
+                                <Zoom> */}
                                 <div className={'container-slider'}>
-                                    <Zoom>
                                     <Carousel
                                         ref={carouselRef}
                                         dotPosition={'right'}
@@ -109,15 +112,15 @@ const UnderConstruction = () => {
                                         zIndex:1,
                                         width: contentWidth,
                                         position:'relative', top:-80}}/>
-                                    </Zoom>
                                 </div>
-                            </Slide>
                         </div>
                         <div className={'col-span-12 lg:col-span-8 xl:col-span-9'}>
 
 
                         </div>
                     </div>
+                    </Zoom>
+                    </Slide>
                     <RenderMenu />
                 </div>
             </div>
