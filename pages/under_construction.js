@@ -78,11 +78,8 @@ const UnderConstruction = () => {
                                     autoplaySpeed={4000}
                                     style={textSliderStyles}
                                     beforeChange={(from, to)=>{
-                                        setWidth(text[to].ref?.current?.offsetWidth*1.2);
+                                        setWidth(text[to].ref?.current?.offsetWidth*1.1);
                                         setActiveSlide(to+1);
-
-                                        // console.log('bruh123123', from,to, carouselRef)
-                                        // console.log('bruh123123', text[to].ref.current.offsetWidth)
                                     }}
                                 >
                                     {
