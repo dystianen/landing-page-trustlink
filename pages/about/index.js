@@ -18,7 +18,7 @@ const AboutPage = () => {
                         The Only Open Finance With Biometrics Ekyc Verification
                     </p>
                     </Col>
-                    <Col span={6} style={{backgroundImage:"url('/assets/accents/finger-print.png')", backgroundRepeat:'no-repeat', backgroundPositionY:"bottom"}} className="bg-[#FE6601]">
+                    <Col span={6} style={{backgroundImage:"url('/assets/accents/finger-print.png')", backgroundRepeat:'no-repeat', backgroundPosition:"bottom", backgroundSize:340}} className="bg-[#FE6601]">
                     <p className="font-bold pl-8 pt-4 text-2xl">The Most Advance <br />
                        <p className='font-normal -mb-1'> End-To-End</p>
                         Digital Biometrics <br />
