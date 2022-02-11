@@ -1,11 +1,20 @@
+import { CloseOutlined } from '@ant-design/icons';
 import { Image, Row, Col } from 'antd';
 import React from 'react';
+import Link from "next/link";
 
 const AboutPage = () => {
     return (
-        <div className='w-sceen h-screen p-12'>
-            <div className='bg-[#C1C1C1] h-full w-full grid grid-rows-3 grid-flow-col text-white'>
-                <Row>
+        <div className='w-sceen h-screen pb-20'>
+            <div className={'flex justify-end pad-0'}>
+                <Link href={`/under_construction`} passHref>
+                    <div className={'w-10 h-10 flex justify-center items-center cursor-pointer'} style={{backgroundColor: '#e6e9ed'}}>
+                        <CloseOutlined style={{color: '#B4BCC9'}} />
+                    </div>
+                </Link>
+            </div>
+            <div className={'flex flex-row min-h-full px-10 text-white'}>
+                <Row className=' bg-[#C1C1C1]'>
                     <Col span={6} className="bg-[#E6E9ED] text-center p-2">
                         <Image preview={false} className="w-72" style={{marginTop:'50%'}} src={'/assets/logo/logo-for-light-background.png'}/>
                     </Col>
@@ -37,22 +46,6 @@ const AboutPage = () => {
                         </p>
                     </Col>
                 </Row>
-                {/* <Row className="relative">
-                    <Col span={7} className="bg-[url('/assets/accents/finger-print.png')] bg-[#FE6601] bg-bottom-print">
-                    <p className="font-bold pl-8 pt-4 text-2xl">The Most Advance <br />
-                       <p className='font-normal -mb-1'> End-To-End</p>
-                        Digital Biometrics <br />
-                        Solution Provider</p>
-                    </Col>
-                    <Col span={8} className="bg-[#FFB280]">
-                    <p>CALL US</p>
-                    <p>(021) 22902348</p>
-                    <p>Mon - Fri (8.30 - 17.30)</p>
-                    <p>EMAIL</p>
-                    <p>info@withtrustlink.com</p>
-                    </Col>
-                    <Col span={9}></Col>
-                </Row> */}
             </div>
         </div>
     )
