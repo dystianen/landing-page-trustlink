@@ -1,6 +1,7 @@
 import React, {useRef, useState} from 'react';
 import {Carousel, Image} from 'antd';
 import Link from "next/link";
+import ParticlesLayout from "../components/Layout/ParticlesLayout";
 
 const UnderConstruction = () => {
     const [activeSlide, setActiveSlide] = useState(-1);
@@ -114,5 +115,11 @@ const UnderConstruction = () => {
         </div>
     )
 }
+
+UnderConstruction.getLayout = function Layout(page) {
+    return <ParticlesLayout>
+        {page}
+    </ParticlesLayout>;
+};
 
 export default UnderConstruction;
