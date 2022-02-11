@@ -105,7 +105,7 @@ const UnderConstruction = () => {
                                             text.map(prop => {
                                                 return (
                                                     <div key={prop.label}>
-                                                        <span className={'text-slider'} ref={prop.ref}>{prop.label}</span>
+                                                        <span className={'text-slider'} ref={prop.ref}>&nbsp;{prop.label}</span>
                                                     </div>
                                                 )
                                             })
