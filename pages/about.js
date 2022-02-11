@@ -1,20 +1,24 @@
 import { CloseOutlined } from '@ant-design/icons';
 import { Image, Avatar } from 'antd';
-import React from 'react';
-import Link from "next/link";
+import React, {useState} from 'react';
 import Fade from "react-reveal/Fade";
 import Slide from 'react-reveal/Slide';
+import { useRouter } from 'next/router';
 
 const AboutPage = () => {
+    const router = useRouter();
 
     return (
-        <div className='w-sceen h-screen pb-20'>
+        <div className='w-screen h-screen pb-20 bg-[#F6F6F6]'>
             <div className={'flex justify-end pad-0'}>
-                <Link href={`/under_construction`} passHref>
-                    <div className={'w-10 h-10 flex justify-center items-center cursor-pointer'} style={{backgroundColor: '#E6E9ED'}}>
-                        <Avatar shape="square" style={{ backgroundColor:'transparent'}} size={40} icon={<CloseOutlined style={{color: '#B4BCC9'}} />} />
+                {/* <Link href={`/under_construction`} passHref> */}
+                    <div className={'w-10 h-10 flex justify-center items-center cursor-pointer bg-[#E6E9ED]'}onClick={() => {
+                        
+                        router.push('/under_construction');
+                    }}>
+                        <Avatar shape="square" className={'bg-transparent'} size={40} icon={<CloseOutlined className={'text-[#B4BCC9]'} />} />
                     </div>
-                </Link>
+                {/* </Link> */}
             </div>
             <div className={'flex flex-row min-h-full min-w-full px-10 text-white'}>
                 <Fade bottom>
@@ -25,7 +29,7 @@ const AboutPage = () => {
                             </div>
                             <Fade right>
                                 <div className={'bg-no-repeat bg-left-bottom  p-20 h-2/5 bg-[#FE6601]'}  style={{backgroundImage:"url('/assets/accents/finger-print.png')", backgroundSize:250, backgroundPositionX:'-100px', backgroundPositionY:150}}>
-                                    <p className="font-bold text-2xl">The Most Advance <br />
+                                    <p className="font-bold text-xl">The Most Advance <br />
                                     <span className='font-light'> End-To-End</span><br />
                                         Digital Biometrics <br />
                                         Solution Provider</p>
@@ -44,20 +48,20 @@ const AboutPage = () => {
                                 <p className={'text-base font-light tracking-widest'}>CALL US <br />
                                 <Fade bottom>
                                     <Fade right>
-                                        <div className='font-normal tracking-normal text-3xl -mb-px'>(021) 22902348</div>
+                                        <div className='font-normal tracking-normal text-2xl'>(021) 22902348</div>
                                     </Fade>
                                 </Fade>
                                 <br />
-                                Mon - Fri (8.30 - 17.30)<br />
+                               <p className={'-my-6'}> Mon - Fri (8.30 - 17.30)</p><br />
                                 <p className={'mt-8 -mb-px'}>EMAIL <br /></p>
-                                <span className='font-normal tracking-normal text-3xl'>info@withtrustlink.com</span></p>
+                                <span className='font-normal tracking-normal text-2xl'>info@withtrustlink.com</span></p>
                             </div>
                         </div>
                         <div className={'bg-[#707070] col-span-5 '}>
                             <Fade left>
                                 <div className={'p-16 h-full bg-[#04204D]'}>
-                                    <p className='text-6xl font-bold mt-28'>About.</p>
-                                    <p className='text-2xl mt-20'>
+                                    <p className='text-5xl font-bold mt-28'>About.</p>
+                                    <p className='text-xl mt-20'>
                                         The Only Open Finance With Biometrics Ekyc Verification
                                     </p>
                                     <p className='text-gray-400 mt-6 text-lg'>
