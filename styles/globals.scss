@@ -1,9 +1,13 @@
 //$background-color-base: #e3e8ee;
+.pad-0 {
+  padding: 0 !important;
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 body {
@@ -92,3 +96,145 @@ body {
   font-size: 0.8rem;
   font-weight: 500;
 }
+
+.opacity-1 {
+  opacity: 1 !important;
+}
+.under-construction {
+  background: #F6F6F6;
+}
+
+.container-1 {
+  border: 2px solid rgba(112, 112, 112, 0.25);
+  height: 84vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 6vh 4vw;
+}
+
+.container-1::before { content: ''; }
+
+.we-are-text {
+  color: #04204D;
+  text-align: left;
+  font: normal normal bold 60px/80px Montserrat;
+  font-size: 5em;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+}
+
+.menu-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.container-1::before, .menu-container {
+  flex: 1;
+}
+
+
+.menu-item{
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-button {
+  width: 11px;
+  margin-right: 5px;
+  height: 11px;
+  background: #FE6601 0% 0% no-repeat padding-box;
+}
+
+.menu-item{
+  margin-right: 4vw;
+}
+
+.menu-label {
+  font: normal normal medium 13px/17px Montserrat !important;
+  letter-spacing: 3.25px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #04204D;
+}
+
+.logo-accent{
+  position: absolute;
+  bottom:-36vh;
+  right:-10vw;
+  transform: rotate(45deg);
+}
+
+.text-slider {
+  text-align: left;
+  //font: normal normal medium 60px/80px Montserrat;
+  font-family: Montserrat;
+  font-size: 5em;
+  line-height: 80px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  color: #04204D;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.text-slider-container {
+  background: transparent linear-gradient(90deg, #FF6500 0%, #FFD1B300 100%) 0% 0% no-repeat padding-box;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .logo-accent{
+    bottom: -12vh;
+    right:-20vw;
+  }
+
+  .logo-accent img {
+    width: 50vw;
+  }
+}
+
+.cube__face--back {
+  background: red;
+}
+.cube__face--top {
+  background: blue;
+}
+
+.cube__face--left {
+  background: green;
+}
+
+.cube__face--right {
+  background: yellow;
+}
+
+.cube__face--bottom {
+  background: purple;
+}
+
+.scene {
+  width: 100vw;
+  height: 100vh;
+  perspective: 60vw;
+}
+
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.cube__face {
+  position: absolute;
+}
+
+.cube__face--back   { transform: rotateY(180deg) translateZ(10vw);  width: 100vw; height: 100vh; }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(50vw); width:100vw;height: 200vh;}
+.refact {transform: rotateY(180deg)}
