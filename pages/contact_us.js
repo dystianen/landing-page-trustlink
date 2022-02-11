@@ -2,6 +2,7 @@ import React from 'react';
 import {CloseOutlined} from '@ant-design/icons'
 import Link from "next/link";
 import {Button, Col, Form, Image, Input, Row} from "antd";
+import Zoom from 'react-reveal/Zoom';
 
 const ContactPage = () => {
     const [form] = Form.useForm();
@@ -13,7 +14,7 @@ const ContactPage = () => {
         })
     }
     return (
-        <div className={'h-screen pb-20 overflow-y-auto lg:overflow-y-hidden'}>
+        <div className={'w-screen h-screen pb-20 overflow-y-auto lg:overflow-y-hidden'}>
             <div className={'flex justify-end pad-0'}>
                 <Link href={`/under_construction`} passHref>
                     <div className={'w-10 h-10 flex justify-center items-center cursor-pointer'} style={{backgroundColor: '#e6e9ed'}}>
@@ -23,35 +24,38 @@ const ContactPage = () => {
             </div>
 
             <div className={'flex flex-col lg:flex-row min-h-full px-3 lg:px-10'}>
-                <div className={'w-full lg:w-3/5 flex items-center relative justify-center lg:justify-start'} style={{backgroundColor: '#FE6601'}}>
-                    <div className={'text-white pl-2 lg:pl-14'}>
-                        <p className={'text-4xl lg:text-5xl font-bold mt-10 text-center lg:text-left lg:mt-0'}>Be the first <br/>to hear from us</p>
-                        <p className={'text-sm lg:w-72 pt-0 text-center lg:text-left'}>Sign Up to get notified whe our website <br/> is launch. We have some great stuff <br/>comin to you. Stay tuned!</p>
+                <Zoom>
+                    <div className={'w-full lg:w-3/5 flex items-center relative justify-center lg:justify-start'} style={{backgroundColor: '#FE6601'}}>
+                        <div className={'text-white pl-2 lg:pl-14'}>
+                            <p className={'text-4xl lg:text-5xl font-bold mt-10 text-center lg:text-left lg:mt-0'}>Be the first <br/>to hear from us</p>
+                            <p className={'text-sm lg:w-72 pt-0 text-center lg:text-left'}>Sign Up to get notified whe our website <br/> is launch. We have some great stuff <br/>comin to you. Stay tuned!</p>
 
-                        <Form
-                            layout={"vertical"}
-                            className={'pt-10 lg:pt-20'}
-                        >
-                            <Row gutter={16}>
-                                <Col xs={{span: 22}} sm={{span: 12}} md={{span: 12}} className={'text-center'}>
-                                    <Form.Item>
-                                        <Input className={'placeholder-white border-transparent	text-white w-52 h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Full Name"/>
-                                    </Form.Item>
-                                </Col>
-                                <Col xs={{span: 22}} sm={{span: 12}} md={{span: 12}} className={'text-center'}>
-                                    <Form.Item>
-                                        <Input className={'placeholder-white border-transparent	w-52 text-white h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Email"/>
-                                    </Form.Item>
-                                </Col>
-                            </Row>
-                        </Form>
-                        <div className={'pt-20 flex flex-row crop-div'}>
-                        </div>
-                        <div className={'crop-div'}>
-                            <Image src={'/assets/accents/finger-print.png'} preview={false} className={'crop-img'}/>
+                            <Form
+                                layout={"vertical"}
+                                className={'pt-10 lg:pt-20'}
+                            >
+                                <Row gutter={16}>
+                                    <Col xs={{span: 22}} sm={{span: 12}} md={{span: 12}} className={'text-center'}>
+                                        <Form.Item>
+                                            <Input className={'placeholder-white border-transparent	text-white w-52 h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Full Name"/>
+                                        </Form.Item>
+                                    </Col>
+                                    <Col xs={{span: 22}} sm={{span: 12}} md={{span: 12}} className={'text-center'}>
+                                        <Form.Item>
+                                            <Input className={'placeholder-white border-transparent	w-52 text-white h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Email"/>
+                                        </Form.Item>
+                                    </Col>
+                                </Row>
+                            </Form>
+                            <div className={'pt-20 flex flex-row crop-div'}>
+                            </div>
+                            <div className={'crop-div'}>
+                                <Image src={'/assets/accents/finger-print.png'} preview={false} className={'crop-img'}/>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </Zoom>
+                <Zoom>
                 <div className={'w-full lg:w-2/5'} style={{backgroundColor: '#E6E9ED'}}>
                     <div className={'px-5 lg:px-11'}>
                         <Form
@@ -144,6 +148,7 @@ const ContactPage = () => {
                         </Form>
                     </div>
                 </div>
+            </Zoom>
             </div>
         </div>
     )
