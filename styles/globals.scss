@@ -123,6 +123,7 @@ body {
   font-size: 5em;
   letter-spacing: 0px;
   text-transform: capitalize;
+  display: flex;
 }
 
 .menu-container{
@@ -170,6 +171,11 @@ body {
   transform: rotate(45deg);
 }
 
+.container-1 .ant-carousel-vertical{
+  width: 66.666667%;
+  background: transparent linear-gradient(90deg, #FF6500 0%, #FFD1B300 100%) 0% 0% no-repeat padding-box;
+}
+
 .text-slider {
   text-align: left;
   //font: normal normal medium 60px/80px Montserrat;
@@ -185,6 +191,7 @@ body {
 
 .text-slider-container {
   background: transparent linear-gradient(90deg, #FF6500 0%, #FFD1B300 100%) 0% 0% no-repeat padding-box;
+  display: inline-flex;
 }
 
 @media only screen and (max-device-width: 768px) {
@@ -201,6 +208,11 @@ body {
     font-size: 3.5em;
     letter-spacing: 0px;
     text-transform: capitalize;
+    flex-direction: column;
+  }
+
+  .container-1 .ant-carousel-vertical{
+    width: 100%;
   }
 
   .text-slider {
