@@ -183,6 +183,10 @@ body {
   opacity: 1;
 }
 
+.text-slider-container {
+  background: transparent linear-gradient(90deg, #FF6500 0%, #FFD1B300 100%) 0% 0% no-repeat padding-box;
+}
+
 @media only screen and (max-device-width: 768px) {
   .logo-accent{
     bottom: -12vh;

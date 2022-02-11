@@ -58,6 +58,7 @@ const UnderConstruction = () => {
                                     dotPosition={'right'}
                                     dots={false}
                                     autoplay={true}
+                                    className={'text-slider-container'}
                                     speed={1000}
                                     autoplaySpeed={4000}
                                 >
