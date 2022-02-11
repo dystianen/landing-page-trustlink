@@ -46,22 +46,6 @@ const AboutPage = () => {
                         </p>
                     </Col>
                 </Row>
-                {/* <Row className="relative">
-                    <Col span={7} className="bg-[url('/assets/accents/finger-print.png')] bg-[#FE6601] bg-bottom-print">
-                    <p className="font-bold pl-8 pt-4 text-2xl">The Most Advance <br />
-                       <p className='font-normal -mb-1'> End-To-End</p>
-                        Digital Biometrics <br />
-                        Solution Provider</p>
-                    </Col>
-                    <Col span={8} className="bg-[#FFB280]">
-                    <p>CALL US</p>
-                    <p>(021) 22902348</p>
-                    <p>Mon - Fri (8.30 - 17.30)</p>
-                    <p>EMAIL</p>
-                    <p>info@withtrustlink.com</p>
-                    </Col>
-                    <Col span={9}></Col>
-                </Row> */}
             </div>
         </div>
     )
