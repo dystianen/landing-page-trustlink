@@ -1,6 +1,8 @@
 import React, {useRef, useState} from 'react';
 import {Carousel, Image} from 'antd';
 import Link from "next/link";
+import Slide from "react-reveal/Slide";
+import Zoom from "react-reveal/Zoom";
 import ParticlesLayout from "../components/Layout/ParticlesLayout";
 
 const UnderConstruction = () => {
@@ -64,48 +66,61 @@ const UnderConstruction = () => {
         <div className={"w-screen h-screen under-construction"}>
             <div style={{paddingLeft:"4vw", paddingRight:'4vw', paddingTop:'8vh', paddingBottom:'8vh'}}>
                 <div className={'container-1'}>
-                    <Image className={"w-4/5 xs:w-3/5 md:w-2/4 xl:w-3/6"} style={{marginLeft:-15}} preview={false} src={'assets/logo/logo-for-light-background.png'} alt={"Trustlink"}/>
+                    <Slide top delay={100} duration={1600}>
+                        <Zoom>
+                        <Image className={"w-4/5 xs:w-3/5 md:w-2/4 xl:w-3/6"} style={{marginLeft:-15}} preview={false} src={'assets/logo/logo-for-light-background.png'} alt={"Trustlink"}/>
+                        </Zoom>
+                    </Slide>
+                    <Slide top delay={100} duration={1600}>
+                    <Zoom>
                     <div className={"grid grid-cols-12 gap-2"}>
                         <div className={'col-span-12 lg:col-span-24 xl:col-span-24 we-are-text'}>
-                            <span>We Are&nbsp;</span>
-                            <div className={'container-slider'}>
-                                <Carousel
-                                    ref={carouselRef}
-                                    dotPosition={'right'}
-                                    dots={false}
-                                    autoplay={true}
-                                    // className={`text-slider-container`}
-                                    speed={1000}
-                                    autoplaySpeed={4000}
-                                    style={textSliderStyles}
-                                    beforeChange={(from, to)=>{
-                                        setWidth(text[to].ref?.current?.offsetWidth*1.1);
-                                        setActiveSlide(to+1);
-                                    }}
-                                >
-                                    {
-                                        text.map(prop => {
-                                            return (
-                                                <div key={prop.label}>
-                                                    <span className={'text-slider'} ref={prop.ref}>{prop.label}</span>
-                                                </div>
-                                            )
-                                        })
-                                    }
-                                </Carousel>
-                                <div className={`text-slider-container text${activeSlide}Full`} style={{
-                                    alignSelf:'flex-end',
-                                    height:80,
-                                    zIndex:1,
-                                    width: contentWidth,
-                                    position:'relative', top:-80}}/>
-                            </div>
+                                <span>We Are&nbsp;</span>
+                            {/* </Zoom>
+                            </Slide> */}
+                            
+                            {/* <Slide top delay={100} duration={1600}>
+                                <Zoom> */}
+                                <div className={'container-slider'}>
+                                    <Carousel
+                                        ref={carouselRef}
+                                        dotPosition={'right'}
+                                        dots={false}
+                                        autoplay={true}
+                                        // className={`text-slider-container`}
+                                        speed={1000}
+                                        autoplaySpeed={4000}
+                                        style={textSliderStyles}
+                                        beforeChange={(from, to)=>{
+                                            setWidth(text[to].ref?.current?.offsetWidth*1.1);
+                                            setActiveSlide(to+1);
+                                        }}
+                                    >
+                                        {
+                                            text.map(prop => {
+                                                return (
+                                                    <div key={prop.label}>
+                                                        <span className={'text-slider'} ref={prop.ref}>{prop.label}</span>
+                                                    </div>
+                                                )
+                                            })
+                                        }
+                                    </Carousel>
+                                    <div className={`text-slider-container text${activeSlide}Full`} style={{
+                                        alignSelf:'flex-end',
+                                        height:80,
+                                        zIndex:1,
+                                        width: contentWidth,
+                                        position:'relative', top:-80}}/>
+                                </div>
                         </div>
                         <div className={'col-span-12 lg:col-span-8 xl:col-span-9'}>
 
 
                         </div>
                     </div>
+                    </Zoom>
+                    </Slide>
                     <RenderMenu />
                 </div>
             </div>

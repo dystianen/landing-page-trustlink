@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {CloseOutlined} from '@ant-design/icons'
 import Link from "next/link";
 import {Button, Col, Form, Image, Input, Row} from "antd";
@@ -6,6 +6,10 @@ import Zoom from 'react-reveal/Zoom';
 
 const ContactPage = () => {
     const [form] = Form.useForm();
+    const [show, setShow] = useState(false)
+    useEffect(() => {
+        setShow(true)
+    },[])
 
     const submitForm = () => {
         form
@@ -16,15 +20,18 @@ const ContactPage = () => {
     return (
         <div className={'w-screen h-screen pb-20 overflow-y-auto lg:overflow-y-hidden'}>
             <div className={'flex justify-end pad-0'}>
-                <Link href={`/under_construction`} passHref>
+                <div onClick={() => {
+                    setShow(false)
+                    window.location.href = 'under_construction'
+                }} passHref>
                     <div className={'w-9 h-9 flex justify-center items-center cursor-pointer'} style={{backgroundColor: '#e6e9ed'}}>
                         <CloseOutlined style={{color: '#B4BCC9'}} />
                     </div>
-                </Link>
+                </div>
             </div>
 
             <div className={'flex flex-col lg:flex-row min-h-full px-3 lg:px-10'}>
-                <Zoom>
+                <Zoom when={show} duration={500}>
                     <div className={'w-full lg:w-3/5 flex items-center relative justify-center lg:justify-start'} style={{backgroundColor: '#FE6601'}}>
                         <div className={'text-white pl-2 lg:pl-14'}>
                             <p className={'text-4xl lg:text-5xl font-bold mt-10 text-center lg:text-left lg:mt-0'}>Be the first <br/>to hear from us</p>
@@ -55,7 +62,7 @@ const ContactPage = () => {
                         </div>
                     </div>
                 </Zoom>
-                <Zoom>
+                <Zoom when={show} duration={500}>
                 <div className={'w-full lg:w-2/5'} style={{backgroundColor: '#E6E9ED'}}>
                     <div className={'px-5 lg:px-11'}>
                         <Form
