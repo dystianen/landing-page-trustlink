@@ -11,7 +11,7 @@ const ParticlesLayout = ({children}) => {
 
     return <div>
         {children}
-        <ParticlesBg color={"#FE944D"} num={120} type={"cobweb"} bg={true} />
+        <ParticlesBg color={"#FE944D"} num={100} type={"cobweb"} bg={true} />
     </div>
 }
 
