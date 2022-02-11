@@ -1,51 +1,74 @@
 import { CloseOutlined } from '@ant-design/icons';
-import { Image, Row, Col } from 'antd';
+import { Image, Avatar } from 'antd';
 import React from 'react';
 import Link from "next/link";
+import Fade from "react-reveal/Fade";
+import Slide from 'react-reveal/Slide';
 
 const AboutPage = () => {
+
     return (
         <div className='w-sceen h-screen pb-20'>
             <div className={'flex justify-end pad-0'}>
                 <Link href={`/under_construction`} passHref>
-                    <div className={'w-10 h-10 flex justify-center items-center cursor-pointer'} style={{backgroundColor: '#e6e9ed'}}>
-                        <CloseOutlined style={{color: '#B4BCC9'}} />
+                    <div className={'w-10 h-10 flex justify-center items-center cursor-pointer'} style={{backgroundColor: '#E6E9ED'}}>
+                        <Avatar shape="square" style={{ backgroundColor:'transparent'}} size={40} icon={<CloseOutlined style={{color: '#B4BCC9'}} />} />
                     </div>
                 </Link>
             </div>
-            <div className={'flex flex-row min-h-full px-10 text-white'}>
-                <Row className=' bg-[#C1C1C1]'>
-                    <Col span={6} className="bg-[#E6E9ED] text-center p-2">
-                        <Image preview={false} className="w-72" style={{marginTop:'50%'}} src={'/assets/logo/logo-for-light-background.png'}/>
-                    </Col>
-                    <Col span={7}>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3334781061417!2d106.82982881468574!3d-6.219681595497624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3f7062b8557%3A0xeab1cb9306fa3551!2sThe%20H%20Tower!5e0!3m2!1sen!2sid!4v1644525588163!5m2!1sen!2sid" width="100%" height="100%" loading="lazy"></iframe>
-                    </Col>
-                    <Col span={11} className="bg-[#04204D] p-12">
-                    <p className='text-5xl font-bold mt-40'>About.</p>
-                    <p className='text-2xl'>
-                        The Only Open Finance With Biometrics Ekyc Verification
-                    </p>
-                    </Col>
-                    <Col span={6} style={{backgroundImage:"url('/assets/accents/finger-print.png')", backgroundRepeat:'no-repeat', backgroundPosition:"bottom", backgroundSize:340}} className="bg-[#FE6601]">
-                    <p className="font-bold pl-8 pt-4 text-2xl">The Most Advance <br />
-                       <p className='font-normal -mb-1'> End-To-End</p>
-                        Digital Biometrics <br />
-                        Solution Provider</p>
-                    </Col>
-                    <Col span={7} className="bg-[#FFB280] p-5">
-                    <p>CALL US</p>
-                    <p className='font-bold'>(021) 22902348</p>
-                    <p>Mon - Fri (8.30 - 17.30)</p>
-                    <p>EMAIL</p>
-                    <p className='font-bold'>info@withtrustlink.com</p>
-                    </Col>
-                    <Col span={11} className="bg-[#04204D] p-12">
-                    <p className='text-gray-400 -mt-20'>
-                        We are the only company that provide the most advanced identity verification against Indonesian national database as the official Dukcapil partner in Platform Bersama that combine it with open finance facilitator for a seamless, simpler, and most secure financial data integration
-                        </p>
-                    </Col>
-                </Row>
+            <div className={'flex flex-row min-h-full min-w-full px-10 text-white'}>
+                <Fade bottom>
+                    <div className={'grid grid-cols-12'}>
+                        <div className={'col-span-3 bg-[#707070]'}>
+                            <div className={'text-center bg-[#E6E9ED] h-3/5'}>
+                                <Image preview={false} className="w-80" style={{marginTop:'50%'}} src={'/assets/logo/logo-for-light-background.png'} />
+                            </div>
+                            <Fade right>
+                                <div className={'p-20 h-2/5 bg-[#FE6601]'}  style={{backgroundImage:"url('/assets/accents/finger-print.png')", backgroundRepeat:'no-repeat', backgroundPosition:"left bottom", backgroundSize:230}}>
+                                    <p className="font-bold text-2xl">The Most Advance <br />
+                                    <span className='font-light'> End-To-End</span><br />
+                                        Digital Biometrics <br />
+                                        Solution Provider</p>
+                                </div>
+                            </Fade>
+                        </div>
+                        <div className={'col-span-4'}>
+                            <div className={'h-3/5 bg-[#D8D8D8]'}>
+                                <Slide left>
+                                    <div className="bg-red-200 h-full">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3334781061417!2d106.82982881468574!3d-6.219681595497624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3f7062b8557%3A0xeab1cb9306fa3551!2sThe%20H%20Tower!5e0!3m2!1sen!2sid!4v1644525588163!5m2!1sen!2sid" width="100%" height="100%" loading="lazy" />
+                                    </div>
+                                </Slide>
+                            </div>
+                            <div className={'h-2/5 px-20 py-14 bg-[#FFB280]'}>
+                                <p className={'text-base font-light tracking-widest'}>CALL US <br />
+                                <Fade bottom>
+                                    <Fade right>
+                                        <div className='font-normal tracking-normal text-3xl'>(021) 22902348</div>
+                                    </Fade>
+                                </Fade>
+                                <br />
+                                Mon - Fri (8.30 - 17.30)<br />
+                                <p className={'mt-8 -mb-px'}>EMAIL <br /></p>
+                                <span className='font-normal tracking-normal text-3xl'>info@withtrustlink.com</span></p>
+                            </div>
+                        </div>
+                        <div className={'bg-[#707070] col-span-5 '}>
+                            <Fade left>
+                                <div className={'p-16 h-full bg-[#04204D]'}>
+                                    <p className='text-6xl font-bold mt-28'>About.</p>
+                                    <p className='text-2xl mt-20'>
+                                        The Only Open Finance With Biometrics Ekyc Verification
+                                    </p>
+                                    <p className='text-gray-400 mt-6 text-lg'>
+                                        We are the only company that provide the most advanced identity verification against Indonesian national database as the official Dukcapil partner in Platform Bersama that combine it with open finance facilitator for a seamless, simpler, and most secure financial data integration
+                                    </p>
+                                </div>
+                            </Fade>
+                        </div>
+                    </div>
+                </Fade>
+                
             </div>
         </div>
     )
