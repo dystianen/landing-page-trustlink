@@ -32,6 +32,12 @@ svg { vertical-align: baseline; }
   background-color: #DCF3D1;
 }
 
+.imageLogo .ant-image {
+  position: relative !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
 .bg-color-pending {
   background-color: #FAAD14;
   color: #FFFFFF;
