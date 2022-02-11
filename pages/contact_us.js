@@ -67,7 +67,7 @@ const ContactPage = () => {
                     <div className={'px-5 lg:px-11'}>
                         <Form
                             layout={"vertical"}
-                            className={'pt-12 lg:pt-22'}
+                            className={'pt-12 lg:pt-18 xl:pt-22'}
                             form={form}
                         >
                             <Row gutter={16}>
@@ -141,10 +141,10 @@ const ContactPage = () => {
                                 ]}>
                                 <Input.TextArea autoSize={{ minRows: 3, maxRows: 4 }} className={'border-transparent'} style={{backgroundColor: '#B4BCC9'}}/>
                             </Form.Item>
-                            <div className={'flex justify-end pt-10'}>
+                            <div className={'flex justify-end xl:pt-10'}>
                                 <Button
                                     type="primary"
-                                    className={'rounded-none w-40'}
+                                    className={'rounded-none w-40 mb-8'}
                                     onClick={async () => {
                                         await submitForm();
                                     }}
