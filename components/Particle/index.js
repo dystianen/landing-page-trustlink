@@ -95,7 +95,7 @@ export const ParticlePage = (props) => {
                         number: {
                             density: {
                                 enable: true,
-                                area: 800,
+                                area: 1600,
                             },
                             value: 100,
                         },
