@@ -49,16 +49,15 @@ const UnderConstruction = () => {
         <div className={"w-screen h-screen under-construction"}>
             <div style={{paddingLeft:"4vw", paddingRight:'4vw', paddingTop:'8vh', paddingBottom:'8vh'}}>
                 <div className={'container-1'}>
-                    <Image className={"w-3/5 sm:w-3/5 md:w-3/5 xl:w-3/6"} style={{marginLeft:-15}} preview={false} src={'assets/logo/logo-for-light-background.png'} alt={"Trustlink"}/>
-                    <div className={"grid grid-cols-5 gap-4"}>
-                        <span className={'col-span-5 xl:col-span-1 we-are-text'}>We Are</span>
-                        <div className={'col-span-5 xl:col-span-4'}>
-                            <div className={"slider-container"}>
+                    <Image className={"w-4/5 xs:w-3/5 md:w-2/4 xl:w-3/6"} style={{marginLeft:-15}} preview={false} src={'assets/logo/logo-for-light-background.png'} alt={"Trustlink"}/>
+                    <div className={"grid grid-cols-12 gap-2"}>
+                        <div className={'col-span-12 lg:col-span-24 xl:col-span-24 we-are-text'}>
+                            <span>We Are&nbsp;</span>
                                 <Carousel
                                     dotPosition={'right'}
                                     dots={false}
                                     autoplay={true}
-                                    className={'text-slider-container'}
+
                                     speed={1000}
                                     autoplaySpeed={4000}
                                 >
@@ -72,7 +71,29 @@ const UnderConstruction = () => {
                                         })
                                     }
                                 </Carousel>
-                            </div>
+                            {/*<div className={"slider-container"}>*/}
+                            {/*    <Carousel*/}
+                            {/*        dotPosition={'right'}*/}
+                            {/*        dots={false}*/}
+                            {/*        autoplay={true}*/}
+                            {/*        className={'text-slider-container'}*/}
+                            {/*        speed={1000}*/}
+                            {/*        autoplaySpeed={4000}*/}
+                            {/*    >*/}
+                            {/*        {*/}
+                            {/*            text.map(prop => {*/}
+                            {/*                return (*/}
+                            {/*                    <div key={prop.label}>*/}
+                            {/*                        <span className={'text-slider'}>{prop.label}</span>*/}
+                            {/*                    </div>*/}
+                            {/*                )*/}
+                            {/*            })*/}
+                            {/*        }*/}
+                            {/*    </Carousel>*/}
+                            {/*</div>*/}
+                        </div>
+                        <div className={'col-span-12 lg:col-span-8 xl:col-span-9'}>
+
 
                         </div>
                     </div>
