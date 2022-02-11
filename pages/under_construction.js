@@ -49,10 +49,10 @@ const UnderConstruction = () => {
         <div className={"w-screen h-screen under-construction"}>
             <div style={{paddingLeft:"4vw", paddingRight:'4vw', paddingTop:'8vh', paddingBottom:'8vh'}}>
                 <div className={'container-1'}>
-                    <Image className={"w-3/5 sm:w-3/5 md:w-3/5 xl:w-3/6"} style={{marginLeft:-15}} preview={false} src={'assets/logo/logo-for-light-background.png'} alt={"Trustlink"}/>
-                    <div className={"grid grid-cols-5 gap-4"}>
-                        <span className={'col-span-5 xl:col-span-1 we-are-text'}>We Are</span>
-                        <div className={'col-span-5 xl:col-span-4'}>
+                    <Image className={"w-4/5 xs:w-3/5 md:w-2/4 xl:w-3/6"} style={{marginLeft:-15}} preview={false} src={'assets/logo/logo-for-light-background.png'} alt={"Trustlink"}/>
+                    <div className={"grid grid-cols-12 gap-2"}>
+                        <span className={'col-span-12 lg:col-span-4 xl:col-span-3 we-are-text'}>We Are</span>
+                        <div className={'col-span-12 lg:col-span-8 xl:col-span-9'}>
                             <div className={"slider-container"}>
                                 <Carousel
                                     dotPosition={'right'}

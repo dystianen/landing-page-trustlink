@@ -6,6 +6,10 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
+            screens: {
+                'xss': '320px',
+                'xs': '480px'
+            },
             colors: {
                 orange: '#FF6B00',
                 secondary: '#E95436',
