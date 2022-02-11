@@ -1,5 +1,5 @@
 module.exports = {
-    '@primary-color': '#E95436',
+    '@primary-color': '#145FD9',
     '@secondary-color': '#003049',
     '@body-background': '#F1F1F1',
     '@font-family': `'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
