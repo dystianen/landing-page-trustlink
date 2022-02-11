@@ -4,6 +4,7 @@ import Link from "next/link";
 import Slide from "react-reveal/Slide";
 import Zoom from "react-reveal/Zoom";
 import ParticlesLayout from "../components/Layout/ParticlesLayout";
+import {ParticlePage} from "../components/Particle";
 
 const UnderConstruction = () => {
     const [activeSlide, setActiveSlide] = useState(-1);
@@ -61,6 +62,9 @@ const UnderConstruction = () => {
         zIndex:2
     }
 
+    let changeParticlePosition = () => {
+        console.log('bruh123123', 'AAAAAAAAAAAA')
+    }
 
     return (
         <div className={"w-screen h-screen under-construction"}>
@@ -78,7 +82,7 @@ const UnderConstruction = () => {
                                 <span>We Are&nbsp;</span>
                             {/* </Zoom>
                             </Slide> */}
-                            
+
                             {/* <Slide top delay={100} duration={1600}>
                                 <Zoom> */}
                                 <div className={'container-slider'}>
@@ -94,6 +98,7 @@ const UnderConstruction = () => {
                                         beforeChange={(from, to)=>{
                                             setWidth(text[to].ref?.current?.offsetWidth*1.1);
                                             setActiveSlide(to+1);
+                                            changeParticlePosition(to+1);
                                         }}
                                     >
                                         {
@@ -126,6 +131,9 @@ const UnderConstruction = () => {
             </div>
             <div className={'logo-accent'}>
                 <Image preview={false} src={'/assets/accents/logo-big.png'}/>
+            </div>
+            <div>
+                <ParticlePage setChangeSlide={(val)=>changeParticlePosition = val} slide={activeSlide}/>
             </div>
         </div>
     )

@@ -306,3 +306,34 @@ svg { vertical-align: baseline; }
 .cube__face--back   { transform: rotateY(180deg) translateZ(10vw);  width: 100vw; height: 100vh; }
 .cube__face--left   { transform: rotateY(-90deg) translateZ(50vw); width:100vw;height: 200vh;}
 .refact {transform: rotateY(180deg)}
+
+
+#tsparticles canvas {
+  position: absolute;
+  bottom: 30vh;
+  //left:25vw;
+}
+
+.particle1 canvas{
+  transition: 1s;
+  bottom:30vh;
+  left:0;
+}
+
+.particle2 canvas{
+  transition: 1s;
+  bottom:30vh;
+  left:25vw;
+}
+
+.particle3 canvas{
+  transition: 1s;
+  bottom:30vh;
+  left:50vw;
+}
+
+.particle4 canvas{
+  transition: 1s;
+  bottom:30vh;
+  left:70vw;
+}

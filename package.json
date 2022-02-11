@@ -43,6 +43,7 @@
     "react-i18next": "^11.15.1",
     "react-responsive-carousel": "^3.2.22",
     "react-reveal": "^1.2.2",
+    "react-tsparticles": "^1.41.0",
     "react-youtube": "^7.13.1",
     "recharts": "^2.0.10",
     "sass": "^1.35.2",
