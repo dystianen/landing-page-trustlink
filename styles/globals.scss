@@ -169,7 +169,27 @@ body {
   transform: rotate(45deg);
 }
 
+.crop-div {
+  overflow:hidden;
+  margin:0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 20%;
+}
+
+.crop-img{
+  margin:0 -37% -100%;
+  opacity: 0.5;
+  width: 13vw !important;
+}
+
+
 @media only screen and (max-device-width: 768px) {
+  .crop-img{
+    width: 30vw !important;
+  }
+
   .logo-accent{
     bottom: -12vh;
     right:-20vw;
