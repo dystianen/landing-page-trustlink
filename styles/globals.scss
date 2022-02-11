@@ -32,6 +32,12 @@ svg { vertical-align: baseline; }
   background-color: #DCF3D1;
 }
 
+.imageLogo .ant-image {
+  position: relative !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
 .bg-color-pending {
   background-color: #FAAD14;
   color: #FFFFFF;
@@ -229,6 +235,13 @@ svg { vertical-align: baseline; }
   width: 13vw !important;
 }
 
+.imageBg {
+  background-image:url('/assets/accents/finger-print.png');
+  background-size:250;
+  background-position-x:-50px !important;
+  background-position-y:150px !important;
+}
+
 @media only screen and (min-device-width: 2560px) {
   .logo-accent{
     bottom: -22vh;
@@ -236,9 +249,23 @@ svg { vertical-align: baseline; }
   }
 }
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 480px) {
+  .imageBg {
+    background-size:100px !important;
+    background-position-x:-40px !important;
+    background-position-y:130px !important;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
   .crop-img{
     width: 30vw !important;
+  }
+
+  .imageBg {
+    background-size:250 !important;
+    background-position-x:-40px !important;
+    background-position-y:80px !important;
   }
 
   .logo-accent{
