@@ -17,7 +17,7 @@ const ContactPage = () => {
         <div className={'w-screen h-screen pb-20 overflow-y-auto lg:overflow-y-hidden'}>
             <div className={'flex justify-end pad-0'}>
                 <Link href={`/under_construction`} passHref>
-                    <div className={'w-10 h-10 flex justify-center items-center cursor-pointer'} style={{backgroundColor: '#e6e9ed'}}>
+                    <div className={'w-9 h-9 flex justify-center items-center cursor-pointer'} style={{backgroundColor: '#e6e9ed'}}>
                         <CloseOutlined style={{color: '#B4BCC9'}} />
                     </div>
                 </Link>
@@ -134,7 +134,7 @@ const ContactPage = () => {
                                 ]}>
                                 <Input.TextArea autoSize={{ minRows: 3, maxRows: 4 }} className={'border-transparent'} style={{backgroundColor: '#B4BCC9'}}/>
                             </Form.Item>
-                            <div className={'flex justify-end pt-16'}>
+                            <div className={'flex justify-end pt-10'}>
                                 <Button
                                     type="primary"
                                     className={'rounded-none w-40'}
