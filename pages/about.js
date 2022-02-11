@@ -24,7 +24,7 @@ const AboutPage = () => {
                                 <Image preview={false} className="w-80" style={{marginTop:'50%'}} src={'/assets/logo/logo-for-light-background.png'} />
                             </div>
                             <Fade right>
-                                <div className={'p-20 h-2/5 bg-[#FE6601]'}  style={{backgroundImage:"url('/assets/accents/finger-print.png')", backgroundRepeat:'no-repeat', backgroundPosition:"left bottom", backgroundSize:230}}>
+                                <div className={'bg-no-repeat bg-left-bottom  p-20 h-2/5 bg-[#FE6601]'}  style={{backgroundImage:"url('/assets/accents/finger-print.png')", backgroundSize:250, backgroundPositionX:'-100px', backgroundPositionY:150}}>
                                     <p className="font-bold text-2xl">The Most Advance <br />
                                     <span className='font-light'> End-To-End</span><br />
                                         Digital Biometrics <br />
@@ -44,7 +44,7 @@ const AboutPage = () => {
                                 <p className={'text-base font-light tracking-widest'}>CALL US <br />
                                 <Fade bottom>
                                     <Fade right>
-                                        <div className='font-normal tracking-normal text-3xl'>(021) 22902348</div>
+                                        <div className='font-normal tracking-normal text-3xl -mb-px'>(021) 22902348</div>
                                     </Fade>
                                 </Fade>
                                 <br />
