@@ -1,6 +1,5 @@
 import React from 'react';
 import {Carousel, Image} from 'antd';
-import { Image } from 'antd';
 import Link from "next/link";
 
 const UnderConstruction = () => {
