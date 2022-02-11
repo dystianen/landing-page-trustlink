@@ -18,6 +18,8 @@ body {
   width: 100%;
 }
 
+svg { vertical-align: baseline; }
+
 .table-row-red {
   background-color: #FFDBDC;
 }
@@ -101,7 +103,7 @@ body {
   opacity: 1 !important;
 }
 .under-construction {
-  background: #F6F6F6;
+  //background: #F6F6F6;
 }
 
 .container-1 {
@@ -112,6 +114,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding: 6vh 4vw;
+  background: #f1f1f1;
 }
 
 .container-1::before { content: ''; }
@@ -123,6 +126,7 @@ body {
   font-size: 5em;
   letter-spacing: 0px;
   text-transform: capitalize;
+  display: flex;
 }
 
 .menu-container{
@@ -170,11 +174,32 @@ body {
   transform: rotate(45deg);
 }
 
+.container-1 .container-slider{
+  width: 66.6% !important;
+}
+
+.text1Full {
+  transition: width 1.5s ease-out;
+}
+
+.text2Full {
+  transition: width 1.5s ease-out;
+}
+
+.text3Full {
+  transition: width 1.5s ease-out;
+}
+
+.text4Full {
+  transition: width 1.5s ease-out;
+}
+
 .text-slider {
   text-align: left;
   //font: normal normal medium 60px/80px Montserrat;
   font-family: Montserrat;
   font-size: 5em;
+  padding-left: 5px;
   line-height: 80px;
   font-weight: 500;
   letter-spacing: 0px;
@@ -185,9 +210,37 @@ body {
 
 .text-slider-container {
   background: transparent linear-gradient(90deg, #FF6500 0%, #FFD1B300 100%) 0% 0% no-repeat padding-box;
+  //width: 66.6667%;
+  //display: inline-flex;
+}
+
+.crop-div {
+  overflow:hidden;
+  margin:0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 20%;
+}
+
+.crop-img{
+  margin:0 -37% -100%;
+  opacity: 0.5;
+  width: 13vw !important;
+}
+
+@media only screen and (min-device-width: 2560px) {
+  .logo-accent{
+    bottom: -22vh;
+    right:-8vw;
+  }
 }
 
 @media only screen and (max-device-width: 768px) {
+  .crop-img{
+    width: 30vw !important;
+  }
+
   .logo-accent{
     bottom: -12vh;
     right:-20vw;
@@ -195,6 +248,27 @@ body {
 
   .logo-accent img {
     width: 50vw;
+  }
+
+  .we-are-text {
+    font-size: 3.5em;
+    letter-spacing: 0px;
+    text-transform: capitalize;
+    flex-direction: column;
+  }
+
+  .container-1 .container-slider{
+    width: 100% !important;
+  }
+
+  .text-slider-container {
+    width:100% !important;
+  }
+
+  .text-slider {
+    font-size: 2.3em;
+    opacity: 1;
+    margin-left: 5px;
   }
 }
 
@@ -238,3 +312,34 @@ body {
 .cube__face--back   { transform: rotateY(180deg) translateZ(10vw);  width: 100vw; height: 100vh; }
 .cube__face--left   { transform: rotateY(-90deg) translateZ(50vw); width:100vw;height: 200vh;}
 .refact {transform: rotateY(180deg)}
+
+
+#tsparticles canvas {
+  position: absolute;
+  bottom: 30vh;
+  //left:25vw;
+}
+
+.particle1 canvas{
+  transition: 1s;
+  bottom:30vh;
+  left:0;
+}
+
+.particle2 canvas{
+  transition: 1s;
+  bottom:30vh;
+  left:25vw;
+}
+
+.particle3 canvas{
+  transition: 1s;
+  bottom:30vh;
+  left:50vw;
+}
+
+.particle4 canvas{
+  transition: 1s;
+  bottom:30vh;
+  left:70vw;
+}
