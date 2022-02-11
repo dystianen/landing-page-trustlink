@@ -173,9 +173,24 @@ svg { vertical-align: baseline; }
   transform: rotate(45deg);
 }
 
-.container-1 .ant-carousel-vertical{
-  width: 66.666667%;
-  background: transparent linear-gradient(90deg, #FF6500 0%, #FFD1B300 100%) 0% 0% no-repeat padding-box;
+.container-1 .container-slider{
+  width: 66.6% !important;
+}
+
+.text1Full {
+  transition: width 1.5s ease-out;
+}
+
+.text2Full {
+  transition: width 1.5s ease-out;
+}
+
+.text3Full {
+  transition: width 1.5s ease-out;
+}
+
+.text4Full {
+  transition: width 1.5s ease-out;
 }
 
 .text-slider {
@@ -193,7 +208,8 @@ svg { vertical-align: baseline; }
 
 .text-slider-container {
   background: transparent linear-gradient(90deg, #FF6500 0%, #FFD1B300 100%) 0% 0% no-repeat padding-box;
-  display: inline-flex;
+  //width: 66.6667%;
+  //display: inline-flex;
 }
 
 .crop-div {
@@ -233,8 +249,12 @@ svg { vertical-align: baseline; }
     flex-direction: column;
   }
 
-  .container-1 .ant-carousel-vertical{
+  .container-1 .container-slider{
     width: 100%;
+  }
+
+  .text-slider-container {
+    width:100% !important;
   }
 
   .text-slider {

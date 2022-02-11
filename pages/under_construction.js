@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import {Carousel, Image} from 'antd';
 import Link from "next/link";
 
 const UnderConstruction = () => {
+    const [activeSlide, setActiveSlide] = useState(-1);
+    const [contentWidth, setWidth] = useState('50.6%');
     const menu = [
         {
             label: "more info",
@@ -14,20 +16,27 @@ const UnderConstruction = () => {
         }
     ];
 
+
     const text = [
         {
-            label: "Coming Soon"
+            label: "Coming Soon",
+            ref: useRef(null)
         },
         {
-            label: "Analytic Platforms"
+            label: "Analytic Platforms",
+            ref: useRef(null)
         },
         {
-            label: "Take the lead"
+            label: "Take the lead",
+            ref: useRef(null)
         },
         {
-            label: "The future"
+            label: "The future",
+            ref: useRef(null)
         }
     ];
+
+    const carouselRef = useRef(null)
 
     const RenderMenu = () => (
         <div className={'menu-container'}>
@@ -44,6 +53,11 @@ const UnderConstruction = () => {
         </div>
     );
 
+    const textSliderStyles = {
+        // backgroundColor: "transparent linear-gradient(90deg, #FF6500 0%, #FFD1B300 100%) 0% 0% no-repeat padding-box"
+        zIndex:2
+    }
+
 
     return (
         <div className={"w-screen h-screen under-construction"}>
@@ -53,44 +67,41 @@ const UnderConstruction = () => {
                     <div className={"grid grid-cols-12 gap-2"}>
                         <div className={'col-span-12 lg:col-span-24 xl:col-span-24 we-are-text'}>
                             <span>We Are&nbsp;</span>
+                            <div className={'container-slider'}>
                                 <Carousel
+                                    ref={carouselRef}
                                     dotPosition={'right'}
                                     dots={false}
                                     autoplay={true}
-
+                                    // className={`text-slider-container`}
                                     speed={1000}
                                     autoplaySpeed={4000}
+                                    style={textSliderStyles}
+                                    beforeChange={(from, to)=>{
+                                        setWidth(text[to].ref?.current?.offsetWidth*1.2);
+                                        setActiveSlide(to+1);
+
+                                        // console.log('bruh123123', from,to, carouselRef)
+                                        // console.log('bruh123123', text[to].ref.current.offsetWidth)
+                                    }}
                                 >
                                     {
                                         text.map(prop => {
                                             return (
                                                 <div key={prop.label}>
-                                                    <span className={'text-slider'}>{prop.label}</span>
+                                                    <span className={'text-slider'} ref={prop.ref}>{prop.label}</span>
                                                 </div>
                                             )
                                         })
                                     }
                                 </Carousel>
-                            {/*<div className={"slider-container"}>*/}
-                            {/*    <Carousel*/}
-                            {/*        dotPosition={'right'}*/}
-                            {/*        dots={false}*/}
-                            {/*        autoplay={true}*/}
-                            {/*        className={'text-slider-container'}*/}
-                            {/*        speed={1000}*/}
-                            {/*        autoplaySpeed={4000}*/}
-                            {/*    >*/}
-                            {/*        {*/}
-                            {/*            text.map(prop => {*/}
-                            {/*                return (*/}
-                            {/*                    <div key={prop.label}>*/}
-                            {/*                        <span className={'text-slider'}>{prop.label}</span>*/}
-                            {/*                    </div>*/}
-                            {/*                )*/}
-                            {/*            })*/}
-                            {/*        }*/}
-                            {/*    </Carousel>*/}
-                            {/*</div>*/}
+                                <div className={`text-slider-container text${activeSlide}Full`} style={{
+                                    alignSelf:'flex-end',
+                                    height:80,
+                                    zIndex:1,
+                                    width: contentWidth,
+                                    position:'relative', top:-80}}/>
+                            </div>
                         </div>
                         <div className={'col-span-12 lg:col-span-8 xl:col-span-9'}>
 
