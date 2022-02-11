@@ -67,7 +67,7 @@ const ContactPage = () => {
                     <div className={'px-5 lg:px-11'}>
                         <Form
                             layout={"vertical"}
-                            className={'pt-12 lg:pt-28'}
+                            className={'pt-12 lg:pt-22'}
                             form={form}
                         >
                             <Row gutter={16}>
