@@ -26,41 +26,45 @@ const AboutPage = () => {
                     </div>
                 {/* </Link> */}
             </div>
-            <div className={'flex flex-row min-h-full min-w-full px-10 text-white'}>
+            <div className={'flex flex-row min-h-full min-w-full px-4 md:px-10 text-white'}>
                 <Fade duration={1600} bottom>
                     <div className={'grid grid-cols-12'}>
-                        <div className={'col-span-12 md:col-span-5 lg:col-span-3 xl:col-span-3 bg-[#707070]'}>
-                            <div className={'text-center bg-[#E6E9ED] imageLogo h-3/5'}>
-                                <Image preview={false} className="w-80" src={'/assets/logo/logo-for-light-background.png'} />
-                            </div>
-                            <Fade when={transition} duration={1600} right>
-                                <div className={'bg-no-repeat bg-left-bottom  px-10 py-4 md:p-10 xl:p-20 h-2/5 bg-[#FE6601]'}  style={{backgroundImage:"url('/assets/accents/finger-print.png')", backgroundSize:220, backgroundPositionX:'-100px', backgroundPositionY:150}}>
-                                    <p className="font-bold text-lg xl:text-xl">The Most Advance <br />
-                                    <span className='font-light'> End-To-End</span><br />
-                                        Digital Biometrics <br />
-                                        Solution Provider</p>
+                        <div className={'col-span-12 lg:col-span-3 xl:col-span-3 bg-[#707070]'}>
+                            <div className={'flex flex-col h-full w-full'}>
+                                <div className={'text-center bg-[#E6E9ED] imageLogo h-full lg:h-3/5 w-full'}>
+                                    <Image preview={false} className="w-80" src={'/assets/logo/logo-for-light-background.png'} />
                                 </div>
-                            </Fade>
-                        </div>
-                        <div className={'col-span-12 md:col-span-7 lg:col-span-4 xl:col-span-4'}>
-                            <div className={'h-3/5 bg-[#D8D8D8]'}>
-                                <Slide when={transition} duration={1600} left>
-                                    <div className=" bg-[#D8D8D8] h-full">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3334781061417!2d106.82982881468574!3d-6.219681595497624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3f7062b8557%3A0xeab1cb9306fa3551!2sThe%20H%20Tower!5e0!3m2!1sen!2sid!4v1644525588163!5m2!1sen!2sid" width="100%" height="100%" loading="lazy" />
+                                <Fade when={transition} duration={1600} right>
+                                    <div className={'bg-no-repeat bg-left-bottom px-10 py-4 md:p-10 xl:p-20 h-full lg:h-2/5 bg-[#FE6601] imageBg'}>
+                                        <p className="font-bold text-lg xl:text-xl">The Most Advance <br />
+                                            <span className='font-light'> End-To-End</span><br />
+                                            Digital Biometrics <br />
+                                            Solution Provider</p>
                                     </div>
-                                </Slide>
-                            </div>
-                            <div className={'h-2/5 px-10 xl:px-20 py-6 xl:py-14 bg-[#FFB280]'}>
-                                <p className={'text-sm xl:text-base font-light tracking-widest'}>CALL US <br />
-                                <Fade when={transition} duration={1600} bottom>
-                                    <Fade when={transition} duration={1600} right>
-                                        <div className='font-normal tracking-normal text-xl xl:text-2xl'>(021) 22902348</div>
-                                    </Fade>
                                 </Fade>
-                                <br />
-                               <p className={'-my-6'}> Mon - Fri (8.30 - 17.30)</p><br />
-                                <p className={'mt-8 -mb-px'}>EMAIL <br /></p>
-                                <span className='font-normal tracking-normal text-xl xl:text-2xl'>info@withtrustlink.com</span></p>
+                            </div>
+                        </div>
+                        <div className={'col-span-12 lg:col-span-4 xl:col-span-4'}>
+                            <div className={'flex flex-col h-full w-full'}>
+                                <div className={'h-full lg:h-3/5 w-full bg-[#D8D8D8]'}>
+                                    <Slide when={transition} duration={1600} left>
+                                        <div className="bg-[#D8D8D8] h-full">
+                                            <iframe className={'h-full'} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3334781061417!2d106.82982881468574!3d-6.219681595497624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3f7062b8557%3A0xeab1cb9306fa3551!2sThe%20H%20Tower!5e0!3m2!1sen!2sid!4v1644525588163!5m2!1sen!2sid" width="100%" height="100%" loading="lazy" />
+                                        </div>
+                                    </Slide>
+                                </div>
+                                <div className={'h-full lg:h-2/5 w-full px-5 xl:px-20 py-6 xl:py-14 bg-[#FFB280]'}>
+                                    <p className={'text-sm xl:text-base font-light tracking-widest'}>CALL US <br />
+                                        <Fade when={transition} duration={1600} bottom>
+                                            <Fade when={transition} duration={1600} right>
+                                                <div className='font-normal tracking-normal text-xl xl:text-2xl'>(021) 22902348</div>
+                                            </Fade>
+                                        </Fade>
+                                        <br />
+                                        <p className={'-my-6'}> Mon - Fri (8.30 - 17.30)</p><br />
+                                        <p className={'mt-8 -mb-px'}>EMAIL <br /></p>
+                                        <span className='font-normal tracking-normal text-xl xl:text-2xl'>info@withtrustlink.com</span></p>
+                                </div>
                             </div>
                         </div>
                         <div className={'bg-[#707070] col-span-12  md:col-span-12 lg:col-span-5 xl:col-span-5 '}>
@@ -78,7 +82,7 @@ const AboutPage = () => {
                         </div>
                     </div>
                 </Fade>
-                
+
             </div>
         </div>
     )
