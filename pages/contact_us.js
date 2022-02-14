@@ -40,18 +40,18 @@ const ContactPage = () => {
                                 className={'pt-10 lg:pt-20'}
                             >
                                 <Row gutter={16}>
-                                    <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 10, offset:2}} className={'text-center'}>
+                                    <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 10, offset:2}} lg={{span: 10, offset:1}} className={'text-center'}>
                                         <Form.Item>
                                             <Input className={'placeholder-white border-transparent	text-white w-52 h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Full Name"/>
                                         </Form.Item>
                                     </Col>
-                                    <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 10}} className={'text-center'}>
+                                    <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 10}} lg={{span: 10}} className={'text-center'}>
                                         <Form.Item>
                                             <Input className={'placeholder-white border-transparent	w-52 text-white h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Email"/>
                                         </Form.Item>
                                     </Col>
-                                    <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 20, offset:2}}  className={'text-center lg:text-left mb-8 lg:mb-2'}>
-                                        <Button type="primary" size={'large'} style={{marginLeft:9}}>Get notified</Button>
+                                    <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 20, offset:2}} lg={{span: 24}}  className={'text-center lg:text-left mb-8 lg:mb-2'}>
+                                        <Button type="primary" size={'large'} className="-ml-3">Get notified</Button>
                                     </Col>
                                 </Row>
                                 {/*<Row gutter={16}>*/}
