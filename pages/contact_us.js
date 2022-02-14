@@ -7,6 +7,7 @@ import {useStore} from "../components/StoreProvider";
 
 const ContactPage = () => {
     const [form] = Form.useForm();
+    const [form2] = Form.useForm();
     const [show, setShow] = useState(false);
     const [loading, setLoading] = useState(false);
     const store = useStore();
@@ -21,6 +22,18 @@ const ContactPage = () => {
                 setLoading(false);
                 message.success('Successfully send your message!');
                 form.resetFields();
+                // alert('success')
+            })
+        })
+    }
+
+    const submitFormNewsletter = () => {
+        form2
+            .validateFields().then( res => {
+            return store.authentication.sendNewsletter(res).then(res=>{
+                setLoading(false);
+                message.success('Successfully subscribed!');
+                form2.resetFields();
                 // alert('success')
             })
         })
@@ -45,21 +58,47 @@ const ContactPage = () => {
 
                             <Form
                                 layout={"vertical"}
-                                className={'pt-10 lg:pt-20'}
+                                className={'pt-10 lg:pt-20 formNewsletter'}
+                                form={form2}
                             >
                                 <Row gutter={16}>
                                     <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 10, offset:2}} lg={{span: 10, offset:1}} className={'text-center'}>
-                                        <Form.Item>
+                                        <Form.Item
+                                            name={'fullname'}
+                                            rules={[
+                                                {
+                                                    required: true,
+                                                    message:'You must input your full name'
+                                                },
+                                            ]}
+                                        >
                                             <Input className={'placeholder-white border-transparent	text-white w-52 h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Full Name"/>
                                         </Form.Item>
                                     </Col>
                                     <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 10}} lg={{span: 10}} className={'text-center'}>
-                                        <Form.Item>
+                                        <Form.Item
+                                            name={'email'}
+                                            rules={[
+                                                {
+                                                    required: true,
+                                                    message:'You must input your email'
+                                                },
+                                                { type: 'email' }
+                                            ]}
+                                        >
                                             <Input className={'placeholder-white border-transparent	w-52 text-white h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Email"/>
                                         </Form.Item>
                                     </Col>
                                     <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 20, offset:2}} lg={{span: 24}}  className={'text-center lg:text-left mb-8 lg:mb-2'}>
-                                        <Button type="primary" size={'large'} className="-ml-3">Get notified</Button>
+                                        <Button
+                                            type="primary"
+                                            size={'large'}
+                                            loading={loading}
+                                            onClick={async () => {
+                                                setLoading(true);
+                                                await submitFormNewsletter();
+                                            }}
+                                            className="-ml-3">Get notified</Button>
                                     </Col>
                                 </Row>
                                 {/*<Row gutter={16}>*/}
