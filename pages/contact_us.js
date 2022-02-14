@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {CloseOutlined} from '@ant-design/icons'
+import {CloseOutlined, CheckOutlined} from '@ant-design/icons'
 import Link from "next/link";
 import {Button, Col, Form, Image, Input, Row, Avatar} from "antd";
 import Zoom from 'react-reveal/Zoom';
@@ -40,17 +40,28 @@ const ContactPage = () => {
                                 className={'pt-10 lg:pt-20'}
                             >
                                 <Row gutter={16}>
-                                    <Col xs={{span: 22}} sm={{span: 12}} md={{span: 12}} className={'text-center'}>
+                                    <Col xs={{span: 22}} sm={{span: 10}} md={{span: 10}} className={'text-center'}>
                                         <Form.Item>
                                             <Input className={'placeholder-white border-transparent	text-white w-52 h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Full Name"/>
                                         </Form.Item>
                                     </Col>
-                                    <Col xs={{span: 22}} sm={{span: 12}} md={{span: 12}} className={'text-center'}>
+                                    <Col xs={{span: 22}} sm={{span: 10}} md={{span: 10}} className={'text-center'}>
                                         <Form.Item>
                                             <Input className={'placeholder-white border-transparent	w-52 text-white h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Email"/>
                                         </Form.Item>
                                     </Col>
+                                    <Col xs={{span: 22}} sm={{span: 10}} md={{span: 10}}>
+                                        <Button type="primary" size={'large'} style={{marginLeft:9}}>Get notified</Button>
+                                    </Col>
                                 </Row>
+                                {/*<Row gutter={16}>*/}
+                                {/*    <Col xs={{span:0}} sm={{span:12}}></Col>*/}
+                                {/*    <Col xs={{span: 22}} sm={{span: 12}} md={{span: 12}} style={{display:'flex', justifyContent:'flex-end'}}>*/}
+                                {/*        <Form.Item>*/}
+                                {/*            <Button type={'primary'}>Subscribe</Button>*/}
+                                {/*        </Form.Item>*/}
+                                {/*    </Col>*/}
+                                {/*</Row>*/}
                             </Form>
                             <div className={'pt-20 flex flex-row crop-div'}>
                             </div>
@@ -75,7 +86,7 @@ const ContactPage = () => {
                                         name={'firstname'}
                                         rules={[
                                             {
-                                                required: false,
+                                                required: true,
                                                 message:'You must input First Name'
                                             },
                                         ]}>
@@ -88,7 +99,7 @@ const ContactPage = () => {
                                         name={'lastname'}
                                         rules={[
                                             {
-                                                required: false,
+                                                required: true,
                                                 message:'You must input Last Name'
                                             },
                                         ]}>
@@ -101,7 +112,7 @@ const ContactPage = () => {
                                 name={'company'}
                                 rules={[
                                     {
-                                       required: false,
+                                       required: true,
                                        message:'You must input your company'
                                     },
                                 ]}>
@@ -112,9 +123,10 @@ const ContactPage = () => {
                                 name={'email'}
                                 rules={[
                                     {
-                                        required: false,
-                                        message:'You must input email company'
+                                        required: true,
+                                        message:'You must input your company email'
                                     },
+                                    { type: 'email' }
                                 ]}>
                                 <Input className={'border-transparent h-10'} style={{backgroundColor: '#B4BCC9'}}/>
                             </Form.Item>
@@ -123,7 +135,7 @@ const ContactPage = () => {
                                 name={'phone_number'}
                                 rules={[
                                     {
-                                        required: false,
+                                        required: true,
                                         message:'You must input phone number'
                                     },
                                 ]}>
@@ -131,10 +143,11 @@ const ContactPage = () => {
                             </Form.Item>
                             <Form.Item
                                 label={<label className={'text-gray-500 font-normal text-lg'}>How Can We Help?</label>}
+                                name={'help'}
                                 rules={[
                                     {
-                                        required: false,
-                                        message:'You must input Last Name'
+                                        required: true,
+                                        message:'Please tell us how can we help you'
                                     },
                                 ]}>
                                 <Input.TextArea autoSize={{ minRows: 3, maxRows: 4 }} className={'border-transparent'} style={{backgroundColor: '#B4BCC9'}}/>
