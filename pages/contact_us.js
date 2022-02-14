@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {CloseOutlined} from '@ant-design/icons'
 import Link from "next/link";
-import {Button, Col, Form, Image, Input, Row} from "antd";
+import {Button, Col, Form, Image, Input, Row, Avatar} from "antd";
 import Zoom from 'react-reveal/Zoom';
 
 const ContactPage = () => {
@@ -20,15 +20,11 @@ const ContactPage = () => {
     return (
         <div className={'w-screen h-screen pb-20 overflow-y-auto lg:overflow-y-hidden'}>
             <div className={'flex justify-end pad-0'}>
-                <div onClick={() => {
+            <div className={'w-10 h-10 flex justify-center items-center cursor-pointer bg-[#FF4A63]'} onClick={() => {
                     setShow(false)
                     window.location.href = 'under_construction'
-                }} passHref>
-                    <div className={'w-9 h-9 flex justify-center items-center cursor-pointer'} style={{border: '2px solid #FE6615', backgroundColor:'white'}}>
-                        <CloseOutlined style={{color: '#FE6615'}} />
-                        {/*<span style={{fontStyle:'bold', fontSize:'2em', color:'#04204D'}}>x</span>*/}
-                        {/*<CloseSquareTwoTone twoToneColor={'#FE6615'} />*/}
-                    </div>
+                }}>
+                    <Avatar shape="square" className={'bg-transparent'} size={36} icon={<CloseOutlined className={'text-[#FFF] centerIcon'} />} />
                 </div>
             </div>
 
