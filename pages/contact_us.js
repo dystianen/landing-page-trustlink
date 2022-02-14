@@ -24,8 +24,10 @@ const ContactPage = () => {
                     setShow(false)
                     window.location.href = 'under_construction'
                 }} passHref>
-                    <div className={'w-9 h-9 flex justify-center items-center cursor-pointer'} style={{backgroundColor: '#e6e9ed'}}>
-                        <CloseOutlined style={{color: '#B4BCC9'}} />
+                    <div className={'w-9 h-9 flex justify-center items-center cursor-pointer'} style={{border: '2px solid #FE6615', backgroundColor:'white'}}>
+                        <CloseOutlined style={{color: '#FE6615'}} />
+                        {/*<span style={{fontStyle:'bold', fontSize:'2em', color:'#04204D'}}>x</span>*/}
+                        {/*<CloseSquareTwoTone twoToneColor={'#FE6615'} />*/}
                     </div>
                 </div>
             </div>
