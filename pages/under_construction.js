@@ -8,7 +8,7 @@ import {ParticlePage} from "../components/Particle";
 
 const UnderConstruction = () => {
     const [activeSlide, setActiveSlide] = useState(-1);
-    const [contentWidth, setWidth] = useState('50.6%');
+    const [contentWidth, setWidth] = useState('66.6%');
     const menu = [
         {
             label: "more info",
