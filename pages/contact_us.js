@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import {CloseOutlined, CheckOutlined} from '@ant-design/icons'
 import Link from "next/link";
-import {Button, Col, Form, Image, Input, Row, Avatar} from "antd";
+import {Button, Col, Form, Image, Input, Row, Avatar, message} from "antd";
 import Zoom from 'react-reveal/Zoom';
 import {useStore} from "../components/StoreProvider";
 
 const ContactPage = () => {
     const [form] = Form.useForm();
-    const [show, setShow] = useState(false)
+    const [show, setShow] = useState(false);
+    const [loading, setLoading] = useState(false);
     const store = useStore();
     useEffect(() => {
         setShow(true)
@@ -17,7 +18,10 @@ const ContactPage = () => {
         form
         .validateFields().then( res => {
             return store.authentication.sendContactUs(res).then(res=>{
-                alert('success')
+                setLoading(false);
+                message.success('Successfully send your message!');
+                form.resetFields();
+                // alert('success')
             })
         })
     }
@@ -158,9 +162,11 @@ const ContactPage = () => {
                             </Form.Item>
                             <div className={'flex justify-end xl:pt-10'}>
                                 <Button
+                                    loading={loading}
                                     type="primary"
                                     className={'rounded-none w-40 mb-8'}
                                     onClick={async () => {
+                                        setLoading(true);
                                         await submitForm();
                                     }}
                                 >
