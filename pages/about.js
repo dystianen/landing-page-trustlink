@@ -72,7 +72,7 @@ const AboutPage = () => {
                                 <div className={'p-10 lg:p-12 xl:p-16 h-full bg-[#04204D]'}>
                                     <p className='text-3xl xl:text-5xl font-bold mt-9 md:mt-12 lg:20 xl:mt-28'>About Us.</p>
                                     <p className='text-lg xl:text-xl mt-8 md:mt-10 lg:mt-14 xl:mt-20'>
-                                        The Only Open Finance with Biometrics Ekyc Verification
+                                        The Only Open Finance with Biometrics Identity Verification Solution
                                     </p>
                                     <p className='text-gray-400 mt-6 text base xl:text-lg'>
                                         We are the only company that provide the most advanced identity verification against Indonesian national database as the official Dukcapil partner in Platform Bersama that combine it with open finance facilitator for a seamless, simpler, and most secure financial data integration
