@@ -17,12 +17,13 @@ const AboutPage = () => {
     return (
         <div className='w-screen h-screen  overflow-y-auto lg:overflow-y-hidden pb-10 lg:pb-20 bg-[#F6F6F6]'>
             <div className={'flex justify-end pad-0'}>
+                {/* <Fade duration={1600} bottom></Fade> */}
                 {/* <Link href={`/under_construction`} passHref> */}
                     <div className={'w-10 h-10 flex justify-center items-center cursor-pointer bg-[#FF4A63]'} onClick={() => {
                         setTransition(false)
                         window.location.href = 'under_construction'
                     }}>
-                        <Avatar shape="square" className={'bg-transparent'} size={40} icon={<CloseOutlined className={'text-[#FFF] centerIcon'} />} />
+                        <Avatar shape="square" className={'bg-transparent'} size={36} icon={<CloseOutlined className={'text-[#FFF] centerIcon'} />} />
                     </div>
                 {/* </Link> */}
             </div>
