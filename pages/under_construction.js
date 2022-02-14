@@ -23,19 +23,19 @@ const UnderConstruction = () => {
 
     const text = [
         {
+            label: "Facial Biometrics",
+            ref: useRef(null)
+        },
+        {
+            label: "Identity Verification",
+            ref: useRef(null)
+        },
+        {
+            label: "Open Finance",
+            ref: useRef(null)
+        },
+        {
             label: "Coming Soon",
-            ref: useRef(null)
-        },
-        {
-            label: "Analytic Platforms",
-            ref: useRef(null)
-        },
-        {
-            label: "Take the lead",
-            ref: useRef(null)
-        },
-        {
-            label: "The future",
             ref: useRef(null)
         }
     ];
