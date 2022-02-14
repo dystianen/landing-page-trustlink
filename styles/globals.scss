@@ -242,6 +242,8 @@ svg { vertical-align: baseline; }
   background-position-y:150px !important;
 }
 
+.centerIcon svg { vertical-align: baseline; }
+
 @media only screen and (min-device-width: 2560px) {
   .logo-accent{
     bottom: -22vh;
