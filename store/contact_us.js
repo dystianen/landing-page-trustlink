@@ -18,11 +18,16 @@ export class ContactUsStore {
 
 
     sendContactUs(formData){
-        return http.post('/v1/contact_us').send(formData).then(res=>{
+        return superagent.post(targetForm).send(formData).type('form').then(res=>{
+            console.log('success');
+            http.post('/v1/contact_us').send(formData).then(res=>{
+                console.log('success send email')
+            }).catch(err=>{
+                console.log('failed sen email')
+            })
             return res
-        }).catch(err=>{
-            throw err;
         })
+
     }
 
     sendNewsletter(formData){
