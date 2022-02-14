@@ -10,6 +10,7 @@ const ContactPage = () => {
     const [form2] = Form.useForm();
     const [show, setShow] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [loading2, setLoading2] = useState(false);
     const store = useStore();
     useEffect(() => {
         setShow(true)
@@ -18,11 +19,13 @@ const ContactPage = () => {
     const submitForm = () => {
         form
         .validateFields().then( res => {
-            return store.authentication.sendContactUs(res).then(res=>{
+            return store.contact_us.sendContactUs(res).then(res=>{
                 setLoading(false);
                 message.success('Successfully send your message!');
                 form.resetFields();
                 // alert('success')
+            }).catch(err=>{
+                message.error('Something wrong');
             })
         })
     }
@@ -31,7 +34,7 @@ const ContactPage = () => {
         form2
             .validateFields().then( res => {
             return store.authentication.sendNewsletter(res).then(res=>{
-                setLoading(false);
+                setLoading2(false);
                 message.success('Successfully subscribed!');
                 form2.resetFields();
                 // alert('success')
@@ -93,7 +96,7 @@ const ContactPage = () => {
                                         <Button
                                             type="primary"
                                             size={'large'}
-                                            loading={loading}
+                                            loading={loading2}
                                             onClick={async () => {
                                                 setLoading(true);
                                                 await submitFormNewsletter();
