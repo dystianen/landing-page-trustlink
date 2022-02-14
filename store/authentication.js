@@ -1,4 +1,7 @@
 import {makeAutoObservable, runInAction} from "mobx";
+import superagent from "superagent";
+
+const targetForm = 'https://script.google.com/macros/s/AKfycbwlcg4r6KYvuJc24Bgd0thQgnXSMK-0R7xTksWk5RbT5SQpKCw2vm-xaKdO6jAnk3OF/exec';
 
 export class AuthenticationStore {
     isLoggedIn = false;
@@ -50,5 +53,12 @@ export class AuthenticationStore {
         // TokenUtil.clearColorTheme();
         // TokenUtil.persistColorToken();
         // this.isLoggedIn = false;
+    }
+
+    sendContactUs(formData){
+        return superagent.post(targetForm).send(formData).type('form').then(res=>{
+            console.log('success');
+            return res
+        })
     }
 }

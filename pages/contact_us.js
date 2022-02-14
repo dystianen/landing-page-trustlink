@@ -3,10 +3,12 @@ import {CloseOutlined, CheckOutlined} from '@ant-design/icons'
 import Link from "next/link";
 import {Button, Col, Form, Image, Input, Row, Avatar} from "antd";
 import Zoom from 'react-reveal/Zoom';
+import {useStore} from "../components/StoreProvider";
 
 const ContactPage = () => {
     const [form] = Form.useForm();
     const [show, setShow] = useState(false)
+    const store = useStore();
     useEffect(() => {
         setShow(true)
     },[])
@@ -14,7 +16,9 @@ const ContactPage = () => {
     const submitForm = () => {
         form
         .validateFields().then( res => {
-            console.log(res, 'result')
+            return store.authentication.sendContactUs(res).then(res=>{
+                alert('success')
+            })
         })
     }
     return (
