@@ -20,7 +20,7 @@ const ContactPage = () => {
     return (
         <div className={'w-screen h-screen pb-20 overflow-y-auto lg:overflow-y-hidden'}>
             <div className={'flex justify-end pad-0'}>
-            <div className={'w-10 h-10 flex justify-center items-center cursor-pointer bg-[#FF4A63]'} onClick={() => {
+            <div className={'w-8 lg:w-10 h-8 lg:h-10 flex justify-center items-center cursor-pointer bg-[#FF4A63]'} onClick={() => {
                     setShow(false)
                     window.location.href = 'under_construction'
                 }}>
@@ -28,7 +28,7 @@ const ContactPage = () => {
                 </div>
             </div>
 
-            <div className={'flex flex-col lg:flex-row min-h-full px-3 lg:px-10'}>
+            <div className={'flex flex-col lg:flex-row min-h-full px-8 lg:px-10'}>
                 <Zoom when={show} duration={500}>
                     <div className={'w-full lg:w-3/5 flex items-center relative justify-center lg:justify-start'} style={{backgroundColor: '#FE6601'}}>
                         <div className={'text-white pl-2 lg:pl-14'}>
@@ -40,17 +40,17 @@ const ContactPage = () => {
                                 className={'pt-10 lg:pt-20'}
                             >
                                 <Row gutter={16}>
-                                    <Col xs={{span: 22}} sm={{span: 10}} md={{span: 10}} className={'text-center'}>
+                                    <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 10, offset:2}} className={'text-center'}>
                                         <Form.Item>
                                             <Input className={'placeholder-white border-transparent	text-white w-52 h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Full Name"/>
                                         </Form.Item>
                                     </Col>
-                                    <Col xs={{span: 22}} sm={{span: 10}} md={{span: 10}} className={'text-center'}>
+                                    <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 10}} className={'text-center'}>
                                         <Form.Item>
                                             <Input className={'placeholder-white border-transparent	w-52 text-white h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Email"/>
                                         </Form.Item>
                                     </Col>
-                                    <Col xs={{span: 22}} sm={{span: 10}} md={{span: 10}}>
+                                    <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 20, offset:2}}  className={'text-center lg:text-left mb-8 lg:mb-2'}>
                                         <Button type="primary" size={'large'} style={{marginLeft:9}}>Get notified</Button>
                                     </Col>
                                 </Row>
