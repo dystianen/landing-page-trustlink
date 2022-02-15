@@ -42,7 +42,7 @@ const ContactPage = () => {
         })
     }
     return (
-        <div className={'w-screen h-screen pb-10 overflow-y-auto'}>
+        <div className={'w-screen h-screen pb-20 overflow-y-auto lg:overflow-y-hidden'}>
             <div className={'flex justify-end pad-0'}>
             <div className={'w-8 lg:w-10 h-8 lg:h-10 flex justify-center items-center cursor-pointer bg-[#FF4A63]'} onClick={() => {
                     setShow(false)
@@ -56,64 +56,63 @@ const ContactPage = () => {
                 <Zoom when={show} duration={500}>
                     <div className={'w-full lg:w-3/5 flex items-center relative justify-center lg:justify-start'} style={{backgroundColor: '#FE6601'}}>
                         <div className={'text-white pl-2 lg:pl-14'}>
-                            <p className={'text-5xl lg:text-8xl font-bold mt-10 text-center lg:text-left lg:mt-0'}>Get in touch <br/>with us</p>
-                            {/*<p className={'text-sm lg:w-72 pt-0 text-center lg:text-left'}>Sign Up to get notified when our website <br/> is launch. We have some great stuff <br/>coming to you. Stay tuned!</p>*/}
-                            {/*<p className={'text-sm lg:w-72 pt-0 text-center lg:text-left'}>Please enter your information below <br/> and a Trustlink solution specialist will be in touch.</p>*/}
-                            <p className={'text-sm lg:w-90 pt-0 text-center lg:text-left lg:text-2xl'}>Sign Up and let us know how we can help. <br/>  We&apos;ll get in touch shortly</p>
-                            {/*<Form*/}
-                            {/*    layout={"vertical"}*/}
-                            {/*    className={'pt-10 lg:pt-20 formNewsletter'}*/}
-                            {/*    form={form2}*/}
-                            {/*>*/}
-                            {/*    <Row gutter={16}>*/}
-                            {/*        <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 10, offset:2}} lg={{span: 10, offset:1}} className={'text-center'}>*/}
-                            {/*            <Form.Item*/}
-                            {/*                name={'fullname'}*/}
-                            {/*                rules={[*/}
-                            {/*                    {*/}
-                            {/*                        required: true,*/}
-                            {/*                        message:'You must input your full name'*/}
-                            {/*                    },*/}
-                            {/*                ]}*/}
-                            {/*            >*/}
-                            {/*                <Input className={'placeholder-white border-transparent	text-white w-52 h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Full Name"/>*/}
-                            {/*            </Form.Item>*/}
-                            {/*        </Col>*/}
-                            {/*        <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 10}} lg={{span: 10}} className={'text-center'}>*/}
-                            {/*            <Form.Item*/}
-                            {/*                name={'email'}*/}
-                            {/*                rules={[*/}
-                            {/*                    {*/}
-                            {/*                        required: true,*/}
-                            {/*                        message:'You must input your email'*/}
-                            {/*                    },*/}
-                            {/*                    { type: 'email' }*/}
-                            {/*                ]}*/}
-                            {/*            >*/}
-                            {/*                <Input className={'placeholder-white border-transparent	w-52 text-white h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Email"/>*/}
-                            {/*            </Form.Item>*/}
-                            {/*        </Col>*/}
-                            {/*        <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 20, offset:2}} lg={{span: 24}}  className={'text-center lg:text-left mb-8 lg:mb-2'}>*/}
-                            {/*            <Button*/}
-                            {/*                type="primary"*/}
-                            {/*                size={'large'}*/}
-                            {/*                loading={loading2}*/}
-                            {/*                onClick={async () => {*/}
-                            {/*                    setLoading(true);*/}
-                            {/*                    await submitFormNewsletter();*/}
-                            {/*                }}*/}
-                            {/*                className="-ml-3">Get notified</Button>*/}
-                            {/*        </Col>*/}
-                            {/*    </Row>*/}
-                            {/*    /!*<Row gutter={16}>*!/*/}
-                            {/*    /!*    <Col xs={{span:0}} sm={{span:12}}></Col>*!/*/}
-                            {/*    /!*    <Col xs={{span: 22}} sm={{span: 12}} md={{span: 12}} style={{display:'flex', justifyContent:'flex-end'}}>*!/*/}
-                            {/*    /!*        <Form.Item>*!/*/}
-                            {/*    /!*            <Button type={'primary'}>Subscribe</Button>*!/*/}
-                            {/*    /!*        </Form.Item>*!/*/}
-                            {/*    /!*    </Col>*!/*/}
-                            {/*    /!*</Row>*!/*/}
-                            {/*</Form>*/}
+                            <p className={'text-4xl lg:text-5xl font-bold mt-10 text-center lg:text-left lg:mt-0'}>Be the first <br/>to hear from us</p>
+                            <p className={'text-sm lg:w-72 pt-0 text-center lg:text-left'}>Sign Up to get notified when our website <br/> is launch. We have some great stuff <br/>coming to you. Stay tuned!</p>
+
+                            <Form
+                                layout={"vertical"}
+                                className={'pt-10 lg:pt-20 formNewsletter'}
+                                form={form2}
+                            >
+                                <Row gutter={16}>
+                                    <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 10, offset:2}} lg={{span: 10, offset:1}} className={'text-center'}>
+                                        <Form.Item
+                                            name={'fullname'}
+                                            rules={[
+                                                {
+                                                    required: true,
+                                                    message:'You must input your full name'
+                                                },
+                                            ]}
+                                        >
+                                            <Input className={'placeholder-white border-transparent	text-white w-52 h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Full Name"/>
+                                        </Form.Item>
+                                    </Col>
+                                    <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 10}} lg={{span: 10}} className={'text-center'}>
+                                        <Form.Item
+                                            name={'email'}
+                                            rules={[
+                                                {
+                                                    required: true,
+                                                    message:'You must input your email'
+                                                },
+                                                { type: 'email' }
+                                            ]}
+                                        >
+                                            <Input className={'placeholder-white border-transparent	w-52 text-white h-10'} style={{backgroundColor: '#FE944D'}} placeholder="Email"/>
+                                        </Form.Item>
+                                    </Col>
+                                    <Col xs={{span: 22, offset:1}} sm={{span: 10}} md={{span: 20, offset:2}} lg={{span: 24}}  className={'text-center lg:text-left mb-8 lg:mb-2'}>
+                                        <Button
+                                            type="primary"
+                                            size={'large'}
+                                            loading={loading2}
+                                            onClick={async () => {
+                                                setLoading(true);
+                                                await submitFormNewsletter();
+                                            }}
+                                            className="-ml-3">Get notified</Button>
+                                    </Col>
+                                </Row>
+                                {/*<Row gutter={16}>*/}
+                                {/*    <Col xs={{span:0}} sm={{span:12}}></Col>*/}
+                                {/*    <Col xs={{span: 22}} sm={{span: 12}} md={{span: 12}} style={{display:'flex', justifyContent:'flex-end'}}>*/}
+                                {/*        <Form.Item>*/}
+                                {/*            <Button type={'primary'}>Subscribe</Button>*/}
+                                {/*        </Form.Item>*/}
+                                {/*    </Col>*/}
+                                {/*</Row>*/}
+                            </Form>
                             <div className={'pt-20 flex flex-row crop-div'}>
                             </div>
                             <div className={'crop-div'}>
@@ -186,7 +185,7 @@ const ContactPage = () => {
                                 name={'phone_number'}
                                 rules={[
                                     {
-                                        required: false,
+                                        required: true,
                                         message:'You must input phone number'
                                     },
                                 ]}>
@@ -197,7 +196,7 @@ const ContactPage = () => {
                                 name={'help'}
                                 rules={[
                                     {
-                                        required: false,
+                                        required: true,
                                         message:'Please tell us how can we help you'
                                     },
                                 ]}>
