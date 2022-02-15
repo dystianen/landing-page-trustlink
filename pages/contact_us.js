@@ -57,7 +57,7 @@ const ContactPage = () => {
                     <div className={'w-full lg:w-3/5 flex items-center relative justify-center lg:justify-start'} style={{backgroundColor: '#FE6601'}}>
                         <div className={'text-white pl-2 lg:pl-14'}>
                             <p className={'text-4xl lg:text-5xl font-bold mt-10 text-center lg:text-left lg:mt-0'}>Be the first <br/>to hear from us</p>
-                            <p className={'text-sm lg:w-72 pt-0 text-center lg:text-left'}>Sign Up to get notified whe our website <br/> is launch. We have some great stuff <br/>comin to you. Stay tuned!</p>
+                            <p className={'text-sm lg:w-72 pt-0 text-center lg:text-left'}>Sign Up to get notified when our website <br/> is launch. We have some great stuff <br/>coming to you. Stay tuned!</p>
 
                             <Form
                                 layout={"vertical"}
