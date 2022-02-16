@@ -15,7 +15,7 @@ const AboutPage = () => {
     }, []);
 
     return (
-        <div className='w-screen h-screen  overflow-y-auto lg:overflow-y-hidden pb-10 lg:pb-20 bg-[#F6F6F6]'>
+        <div className='w-screen h-screen overflow-y-auto pb-10 bg-[#F6F6F6]'>
             <div className={'flex justify-end pad-0'}>
                 {/* <Fade duration={1600} bottom></Fade> */}
                 {/* <Link href={`/under_construction`} passHref> */}
@@ -68,7 +68,7 @@ const AboutPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={'bg-[#707070] col-span-12  md:col-span-12 lg:col-span-5 xl:col-span-5 '}>
+                        <div className={'bg-[#707070] col-span-12 md:col-span-12 lg:col-span-5 xl:col-span-5 '}>
                             <Fade when={transition} duration={1600} left>
                                 <div className={'p-10 lg:p-12 xl:p-16 h-full bg-[#04204D]'}>
                                     <p className='text-3xl xl:text-5xl font-bold mt-9 md:mt-12 lg:20 xl:mt-28'>About Us.</p>
@@ -78,6 +78,13 @@ const AboutPage = () => {
                                     <p className='text-gray-400 mt-6 text base xl:text-lg'>
                                         We are the only company that provide the most advanced identity verification against Indonesian national database as the official Dukcapil partner in Platform Bersama that combine it with open finance facilitator for a seamless, simpler, and most secure financial data integration
                                     </p>
+                                    <div className={'grid grid-cols-2 sm:grid-cols-4'} style={{justifyContent: 'space-between', alignItems: 'center', marginTop: 30}}>
+                                        <Image preview={false} className="w-30 company-logo logo-image" src={'/assets/keminfo.png'}/>
+                                        <Image preview={false} className="w-20 company-logo logo-dukcapil" src={'/assets/dukcapil.svg'}/>
+                                        <Image preview={false} className="w-20 company-logo logo-image mt-10 sm:mt-0" src={'/assets/aftech.png'}/>
+                                        <Image preview={false} className="w-20 company-logo logo-image mt-10 sm:mt-0" src={'/assets/iso.png'}/>
+                                    </div>
+
                                 </div>
                             </Fade>
                         </div>
