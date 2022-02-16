@@ -1,25 +1,25 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nwp-website-react-ingress
-  namespace: nwp-production
+  name: trustlink-fe
+  namespace: trustlink-production
   annotations:
     kubernetes.io/ingress.class: "traefik"
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-    traefik.ingress.kubernetes.io/router.middlewares: nwp-production-redirect-https@kubernetescrd
+    cert-manager.io/cluster-issuer: letsencrypt-prod-http
+    traefik.ingress.kubernetes.io/router.middlewares: trustlink-production-redirect-https@kubernetescrd
 spec:
   rules:
-    - host: "nwp.nationaalwerknemerplan.nl"
+    - host: "www.withtrustlink.com"
       http:
         paths:
           - pathType: Prefix
             path: /
             backend:
               service:
-                name: nwp-website-react
+                name: trustlink-fe
                 port:
                   number: 3000
   tls:
     - hosts:
-        - "nwp.nationaalwerknemerplan.nl"
-      secretName: nwp-nationaalwerknemerplan-nl-tls
+        - "www.withtrustlink.com"
+      secretName: www-withtrustlink-com-tls
