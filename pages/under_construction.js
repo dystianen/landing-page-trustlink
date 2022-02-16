@@ -130,7 +130,7 @@ const UnderConstruction = () => {
                 </div>
             </div>
             <div className={'logo-accent'}>
-                <Image preview={false} src={'/assets/accents/logo-big.png'}/>
+                <Image preview={false} src={'/assets/accents/logo-big-edited.png'}/>
             </div>
             <div>
                 <ParticlePage setChangeSlide={(val)=>changeParticlePosition = val} slide={activeSlide}/>
