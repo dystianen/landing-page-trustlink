@@ -24,13 +24,13 @@ export const ParticlePage = (props) => {
     }, [])
 
     return (
-        <div className={`particle${slide}`}>
+        <div className={``}>
             <Particles
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
-                width={'25%'}
-                height={'35vh'}
+                // width={'25%'}
+                // height={'35vh'}
                 options={{
                     background: {
                         color: {
@@ -58,7 +58,7 @@ export const ParticlePage = (props) => {
                             bubble: {
                                 distance: 400,
                                 duration: 2,
-                                opacity: 0.8,
+                                opacity: 0.5,
                                 size: 40,
                             },
                             push: {
@@ -78,7 +78,7 @@ export const ParticlePage = (props) => {
                             color: "#FE944D",
                             distance: 150,
                             enable: true,
-                            opacity:0.8 ,
+                            opacity:0.5 ,
                             width: 1,
                         },
                         collisions: {
@@ -95,12 +95,12 @@ export const ParticlePage = (props) => {
                         number: {
                             density: {
                                 enable: true,
-                                area: 1600,
+                                area: 3200,
                             },
-                            value: 110,
+                            value: 80,
                         },
                         opacity: {
-                            value: 0.8,
+                            value: 0.5,
                         },
                         shape: {
                             type: "circle",
