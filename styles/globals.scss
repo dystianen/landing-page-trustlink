@@ -244,6 +244,27 @@ svg { vertical-align: baseline; }
 
 .centerIcon svg { vertical-align: baseline; }
 
+.grid > .ant-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image{
+  filter: grayscale(100%) brightness(400%);
+}
+
+.logo-dukcapil{
+  filter: grayscale(100%) invert(100%) contrast(180%);
+  text-align: center;
+
+}
+
+.logo-image:hover, .logo-dukcapil:hover{
+  filter: none;
+  transition: 500ms;
+}
+
 @media only screen and (min-device-width: 2560px) {
   .logo-accent{
     bottom: -22vh;
