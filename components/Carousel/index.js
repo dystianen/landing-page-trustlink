@@ -1,8 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Carousel} from "antd";
 
-export const
-    CarouselPage = () => {
+export const CarouselPage = () => {
     const [activeSlide, setActiveSlide] = useState(-1);
     const [contentWidth, setWidth] = useState('66.6%');
 
@@ -33,7 +32,7 @@ export const
     }
 
     let changeParticlePosition = () => {
-
+        console.log('bruh123123', 'AAAAAAAAAAAA')
     }
     return (
         <div className={'container-slider'}>
@@ -44,7 +43,7 @@ export const
                 autoplay={true}
                 // className={`text-slider-container`}
                 speed={1000}
-                autoplaySpeed={3000}
+                autoplaySpeed={4000}
                 style={textSliderStyles}
                 beforeChange={(from, to)=>{
                     setWidth(text[to].ref?.current?.offsetWidth*1.1);
