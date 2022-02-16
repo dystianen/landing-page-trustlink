@@ -42,7 +42,7 @@ const ContactPage = () => {
         })
     }
     return (
-        <div className={'w-screen h-screen pb-20 overflow-y-auto lg:overflow-y-hidden'}>
+        <div className={'w-screen h-screen pb-10 overflow-y-auto'}>
             <div className={'flex justify-end pad-0'}>
             <div className={'w-8 lg:w-10 h-8 lg:h-10 flex justify-center items-center cursor-pointer bg-[#FF4A63]'} onClick={() => {
                     setShow(false)
