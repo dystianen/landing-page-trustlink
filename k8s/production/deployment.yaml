@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: trustlink-fe
-  namespace: ttrustlink-production
+  namespace: trustlink-production
 spec:
   selector:
     matchLabels:
