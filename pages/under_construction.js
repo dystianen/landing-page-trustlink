@@ -5,10 +5,10 @@ import Slide from "react-reveal/Slide";
 import Zoom from "react-reveal/Zoom";
 import ParticlesLayout from "../components/Layout/ParticlesLayout";
 import {ParticlePage} from "../components/Particle";
+import {CarouselPage} from "../components/Carousel";
 
 const UnderConstruction = () => {
-    const [activeSlide, setActiveSlide] = useState(-1);
-    const [contentWidth, setWidth] = useState('66.6%');
+
     const menu = [
         {
             label: "more info",
@@ -19,28 +19,6 @@ const UnderConstruction = () => {
             link: 'contact_us'
         }
     ];
-
-
-    const text = [
-        {
-            label: "Facial Biometrics",
-            ref: useRef(null)
-        },
-        {
-            label: "Identity Verification",
-            ref: useRef(null)
-        },
-        {
-            label: "Open Finance",
-            ref: useRef(null)
-        },
-        {
-            label: "Coming Soon",
-            ref: useRef(null)
-        }
-    ];
-
-    const carouselRef = useRef(null)
 
     const RenderMenu = () => (
         <div className={'menu-container'}>
@@ -57,15 +35,6 @@ const UnderConstruction = () => {
         </div>
     );
 
-    const textSliderStyles = {
-        // backgroundColor: "transparent linear-gradient(90deg, #FF6500 0%, #FFD1B300 100%) 0% 0% no-repeat padding-box"
-        zIndex:2
-    }
-
-    let changeParticlePosition = () => {
-        console.log('bruh123123', 'AAAAAAAAAAAA')
-    }
-
     return (
         <div className={"w-screen h-screen under-construction"}>
             <div style={{paddingLeft:"4vw", paddingRight:'4vw', paddingTop:'8vh', paddingBottom:'8vh'}}>
@@ -80,47 +49,9 @@ const UnderConstruction = () => {
                     <div className={"grid grid-cols-12 gap-2"}>
                         <div className={'col-span-12 lg:col-span-24 xl:col-span-24 we-are-text'}>
                                 <span>We Are&nbsp;</span>
-                            {/* </Zoom>
-                            </Slide> */}
-
-                            {/* <Slide top delay={100} duration={1600}>
-                                <Zoom> */}
-                                <div className={'container-slider'}>
-                                    <Carousel
-                                        ref={carouselRef}
-                                        dotPosition={'right'}
-                                        dots={false}
-                                        autoplay={true}
-                                        // className={`text-slider-container`}
-                                        speed={1000}
-                                        autoplaySpeed={4000}
-                                        style={textSliderStyles}
-                                        beforeChange={(from, to)=>{
-                                            setWidth(text[to].ref?.current?.offsetWidth*1.1);
-                                            setActiveSlide(to+1);
-                                            changeParticlePosition(to+1);
-                                        }}
-                                    >
-                                        {
-                                            text.map(prop => {
-                                                return (
-                                                    <div key={prop.label}>
-                                                        <span className={'text-slider'} ref={prop.ref}>&nbsp;{prop.label}</span>
-                                                    </div>
-                                                )
-                                            })
-                                        }
-                                    </Carousel>
-                                    <div className={`text-slider-container text${activeSlide}Full`} style={{
-                                        alignSelf:'flex-end',
-                                        height:80,
-                                        zIndex:1,
-                                        width: contentWidth,
-                                        position:'relative', top:-80}}/>
-                                </div>
+                                <CarouselPage />
                         </div>
                         <div className={'col-span-12 lg:col-span-8 xl:col-span-9'}>
-
 
                         </div>
                     </div>
@@ -133,7 +64,7 @@ const UnderConstruction = () => {
                 <Image preview={false} src={'/assets/accents/logo-big-edited.png'}/>
             </div>
             <div>
-                <ParticlePage setChangeSlide={(val)=>changeParticlePosition = val} slide={activeSlide}/>
+                <ParticlePage />
             </div>
         </div>
     )

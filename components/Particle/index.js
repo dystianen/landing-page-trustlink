@@ -97,7 +97,7 @@ export const ParticlePage = (props) => {
                                 enable: true,
                                 area: 3200,
                             },
-                            value: 80,
+                            value: 120,
                         },
                         opacity: {
                             value: 0.5,
