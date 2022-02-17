@@ -19,7 +19,7 @@ const AboutPage = () => {
             <div className={'flex justify-end pad-0'}>
                 {/* <Fade duration={1600} bottom></Fade> */}
                 {/* <Link href={`/under_construction`} passHref> */}
-                    <div className={'w-10 h-10 flex justify-center items-center cursor-pointer bg-[#FF4A63]'} onClick={() => {
+                    <div className={'w-10 h-10 short:w-8 short:h-8 flex justify-center items-center cursor-pointer bg-[#FF4A63]'} onClick={() => {
                         setTransition(false)
                         window.location.href = 'under_construction'
                     }}>
@@ -27,7 +27,7 @@ const AboutPage = () => {
                     </div>
                 {/* </Link> */}
             </div>
-            <div className={'flex flex-row min-h-full min-w-full px-4 md:px-10 text-white'}>
+            <div className={'flex flex-row min-h-full min-w-full px-4 md:px-10 short:px-8 text-white'}>
                 <Fade duration={1600} bottom>
                     <div className={'flex grid grid-cols-12 pb-6 tall:pb-10 short:pb-10'}>
                         <div className={'col-span-12 lg:col-span-3 xl:col-span-3 bg-[#707070]'}>
