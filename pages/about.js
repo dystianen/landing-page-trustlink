@@ -72,7 +72,7 @@ const AboutPage = () => {
                             <Fade when={transition} duration={1600} left>
                                 <div className={'p-10 lg:p-12 short:p-12 xl:p-16 h-full bg-[#04204D]'}>
                                     <p className='text-3xl xl:text-5xl font-bold mt-9 md:mt-12 lg:mt-10 short:mt-5 xl:mt-18'>About Us.</p>
-                                    <p className='text-lg xl:text-xl short:text-lg mt-8 md:mt-10 lg:mt-14 short:mt-6 xl:mt-20'>
+                                    <p className='text-lg xl:text-xl short:text-lg mt-8 md:mt-10 lg:mt-14 short:mt-8 xl:mt-20'>
                                         The Only Open Finance with Biometrics Identity Verification Solution
                                     </p>
                                     <p className='text-gray-400 mt-6 text-base short:text-base xl:text-lg'>
