@@ -15,7 +15,7 @@ const AboutPage = () => {
     }, []);
 
     return (
-        <div className='w-screen h-screen overflow-y-auto pb-10 bg-[#F6F6F6]'>
+        <div className='w-screen h-screen overflow-y-auto lg:overflow-y-hidden pb-10 lg:pb-20 bg-[#F6F6F6]'>
             <div className={'flex justify-end pad-0'}>
                 {/* <Fade duration={1600} bottom></Fade> */}
                 {/* <Link href={`/under_construction`} passHref> */}
@@ -54,7 +54,7 @@ const AboutPage = () => {
                                         </div>
                                     </Slide>
                                 </div>
-                                <div className={'h-full lg:h-2/5 w-full px-5 xl:px-20 py-6 xl:py-14 bg-[#FFB280]'}>
+                                <div className={'h-full lg:h-2/5 w-full px-10 xl:px-20 py-6 xl:py-14 bg-[#FFB280]'}>
                                     <p className={'text-sm xl:text-base font-light tracking-widest'}>CALL US <br />
                                         <Fade when={transition} duration={1600} bottom>
                                             <Fade when={transition} duration={1600} right>
@@ -71,7 +71,7 @@ const AboutPage = () => {
                         <div className={'bg-[#707070] col-span-12 md:col-span-12 lg:col-span-5 xl:col-span-5 '}>
                             <Fade when={transition} duration={1600} left>
                                 <div className={'p-10 lg:p-12 xl:p-16 h-full bg-[#04204D]'}>
-                                    <p className='text-3xl xl:text-5xl font-bold mt-9 md:mt-12 lg:20 xl:mt-28'>About Us.</p>
+                                    <p className='text-3xl xl:text-5xl font-bold mt-9 md:mt-12 lg:10 xl:mt-18'>About Us.</p>
                                     <p className='text-lg xl:text-xl mt-8 md:mt-10 lg:mt-14 xl:mt-20'>
                                         The Only Open Finance with Biometrics Identity Verification Solution
                                     </p>
@@ -80,9 +80,9 @@ const AboutPage = () => {
                                     </p>
                                     <div className={'grid grid-cols-2 sm:grid-cols-4'} style={{justifyContent: 'space-between', alignItems: 'center', marginTop: 30}}>
                                         <Image preview={false} className="w-30 company-logo logo-image" src={'/assets/keminfo.png'}/>
-                                        <Image preview={false} className="w-20 company-logo logo-dukcapil" src={'/assets/dukcapil.svg'}/>
+                                        <Image preview={false} className="w-16 company-logo logo-dukcapil" src={'/assets/dukcapil.svg'}/>
                                         <Image preview={false} className="w-20 company-logo logo-image mt-10 sm:mt-0" src={'/assets/aftech.png'}/>
-                                        <Image preview={false} className="w-20 company-logo logo-image mt-10 sm:mt-0" src={'/assets/iso.png'}/>
+                                        <Image preview={false} className="w-16 company-logo logo-image mt-10 sm:mt-0" src={'/assets/iso.png'}/>
                                     </div>
 
                                 </div>
