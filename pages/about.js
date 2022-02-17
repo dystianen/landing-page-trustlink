@@ -29,7 +29,7 @@ const AboutPage = () => {
             </div>
             <div className={'flex flex-row min-h-full min-w-full px-4 md:px-10 short:px-8 text-white'}>
                 <Fade duration={1600} bottom>
-                    <div className={'flex grid grid-cols-12 pb-6 tall:pb-10 short:pb-10'}>
+                    <div className={'flex grid grid-cols-12 pb-6 tall:pb-10 short:pb-7'}>
                         <div className={'col-span-12 lg:col-span-3 xl:col-span-3 bg-[#707070]'}>
                             <div className={'flex flex-col h-full w-full'}>
                                 <div className={'text-center bg-[#E6E9ED] imageLogo h-full lg:h-3/5  w-full'}>
