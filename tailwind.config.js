@@ -11,6 +11,7 @@ module.exports = {
                 'xs': '480px',
                 'tall': { raw: '(min-width: 1280px) and (max-height: 768px)'},
                 'short': { raw: '(min-width: 1280px) and (max-height: 660px)'},
+                'xshort': { raw: '(min-width: 1280px) and (max-height: 620px)'},
             },
             colors: {
                 orange: '#FF6B00',
