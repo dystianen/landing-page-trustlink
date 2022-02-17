@@ -29,14 +29,14 @@ const AboutPage = () => {
             </div>
             <div className={'flex flex-row min-h-full min-w-full px-4 md:px-10 text-white'}>
                 <Fade duration={1600} bottom>
-                    <div className={'flex grid grid-cols-12 pb-6 tall:pb-10'}>
+                    <div className={'flex grid grid-cols-12 pb-6 tall:pb-10 short:pb-10'}>
                         <div className={'col-span-12 lg:col-span-3 xl:col-span-3 bg-[#707070]'}>
                             <div className={'flex flex-col h-full w-full'}>
                                 <div className={'text-center bg-[#E6E9ED] imageLogo h-full lg:h-3/5  w-full'}>
                                     <Image preview={false} className="w-80" src={'/assets/logo/logo-for-light-background.png'} />
                                 </div>
                                 <Fade when={transition} duration={1600} right>
-                                    <div className={'bg-no-repeat bg-left-bottom px-10 py-4 md:p-10 lg:p-5 lg:py-10 tall:py-10 tall:px-12 xl:p-20 h-full lg:h-2/5 bg-[#FE6601] imageBg'}>
+                                    <div className={'bg-no-repeat bg-left-bottom px-10 py-4 md:p-10 lg:p-5 lg:py-10 short:px-12 tall:py-10 tall:px-12 xl:px-20 xl:py-12 h-full lg:h-2/5 bg-[#FE6601] imageBg'}>
                                         <p className="font-bold text-lg xl:text-xl">The Most Advanced <br />
                                             <span className='font-light'> End-To-End</span><br />
                                             Digital Biometrics <br />
@@ -54,7 +54,7 @@ const AboutPage = () => {
                                         </div>
                                     </Slide>
                                 </div>
-                                <div className={'h-full lg:h-2/5 w-full px-10 lg:px-5 lg:py-6 tall:py-8 tall:px-12 xl:px-20  xl:py-14 bg-[#FFB280]'}>
+                                <div className={'h-full lg:h-2/5 w-full px-10 lg:px-5 lg:py-6 tall:py-8 tall:px-12 short:px-12 xl:px-20  xl:py-14 bg-[#FFB280]'}>
                                     <p className={'text-sm xl:text-base font-light tracking-widest'}>CALL US <br />
                                         <Fade when={transition} duration={1600} bottom>
                                             <Fade when={transition} duration={1600} right>
@@ -70,9 +70,9 @@ const AboutPage = () => {
                         </div>
                         <div className={'bg-[#707070] col-span-12 md:col-span-12 lg:col-span-5 xl:col-span-5 '}>
                             <Fade when={transition} duration={1600} left>
-                                <div className={'p-10 lg:p-12 xl:p-16 h-full bg-[#04204D]'}>
-                                    <p className='text-3xl xl:text-5xl font-bold mt-9 md:mt-12 lg:10 xl:mt-18'>About Us.</p>
-                                    <p className='text-lg xl:text-xl mt-8 md:mt-10 lg:mt-14 xl:mt-20'>
+                                <div className={'p-10 lg:p-12 short:p-12 xl:p-16 h-full bg-[#04204D]'}>
+                                    <p className='text-3xl xl:text-5xl font-bold mt-9 md:mt-12 lg:mt-10 short:mt-5 xl:mt-18'>About Us.</p>
+                                    <p className='text-lg xl:text-xl mt-8 md:mt-10 lg:mt-14 short:mt-6 xl:mt-20'>
                                         The Only Open Finance with Biometrics Identity Verification Solution
                                     </p>
                                     <p className='text-gray-400 mt-6 text base xl:text-lg'>
