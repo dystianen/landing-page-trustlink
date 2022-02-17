@@ -15,7 +15,7 @@ const AboutPage = () => {
     }, []);
 
     return (
-        <div className='w-screen h-screen overflow-y-auto lg:overflow-y-hidden pb-10 lg:pb-20 bg-[#F6F6F6]'>
+        <div className='w-screen h-screen overflow-y-auto lg:overflow-y-hidden pb-10 lg:pb-10 bg-[#F6F6F6]'>
             <div className={'flex justify-end pad-0'}>
                 {/* <Fade duration={1600} bottom></Fade> */}
                 {/* <Link href={`/under_construction`} passHref> */}
@@ -37,7 +37,7 @@ const AboutPage = () => {
                                 </div>
                                 <Fade when={transition} duration={1600} right>
                                     <div className={'bg-no-repeat bg-left-bottom px-10 py-4 md:p-10 lg:p-5 lg:py-10 xl:p-20 h-full lg:h-2/5 bg-[#FE6601] imageBg'}>
-                                        <p className="font-bold text-lg xl:text-xl">The Most Advance <br />
+                                        <p className="font-bold text-lg xl:text-xl">The Most Advanced <br />
                                             <span className='font-light'> End-To-End</span><br />
                                             Digital Biometrics <br />
                                             Solution Provider and Open Finance</p>
@@ -76,7 +76,7 @@ const AboutPage = () => {
                                         The Only Open Finance with Biometrics Identity Verification Solution
                                     </p>
                                     <p className='text-gray-400 mt-6 text base xl:text-lg'>
-                                        We are the only company that provide the most advanced identity verification against Indonesian national database as the official Dukcapil partner in Platform Bersama that combine it with open finance facilitator for a seamless, simpler, and most secure financial data integration
+                                        We are the only company that provides the most advanced identity verification against Indonesian national database as the official Dukcapil partner in Platform Bersama that combine it with open finance facilitator for a seamless, simpler, and most secure financial data integration
                                     </p>
                                     <div className={'grid grid-cols-2 sm:grid-cols-4'} style={{justifyContent: 'space-between', alignItems: 'center', marginTop: 30}}>
                                         <Image preview={false} className="w-30 company-logo logo-image" src={'/assets/keminfo.png'}/>
