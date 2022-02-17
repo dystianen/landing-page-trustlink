@@ -58,13 +58,13 @@ const AboutPage = () => {
                                     <p className={'text-sm xl:text-base font-light tracking-widest'}>CALL US <br />
                                         <Fade when={transition} duration={1600} bottom>
                                             <Fade when={transition} duration={1600} right>
-                                                <div className='font-normal tracking-normal text-xl xl:text-2xl'>(021) 22902348</div>
+                                                <div className='font-normal tracking-normal text-xl short:text-xl short:font-bold xl:text-2xl'>(021) 22902348</div>
                                             </Fade>
                                         </Fade>
                                         <br />
                                         <p className={'-my-6'}> Mon - Fri (8.30 - 17.30)</p><br />
-                                        <p className={'mt-8 -mb-px'}>EMAIL <br /></p>
-                                        <span className='font-normal tracking-normal text-xl xl:text-2xl'>info@withtrustlink.com</span></p>
+                                        <p className={'mt-8 short:mt-6 -mb-px'}>EMAIL <br /></p>
+                                        <span className='font-normal tracking-normal text-xl short:text-xl short:font-bold xl:text-2xl'>info@withtrustlink.com</span></p>
                                 </div>
                             </div>
                         </div>
@@ -72,10 +72,10 @@ const AboutPage = () => {
                             <Fade when={transition} duration={1600} left>
                                 <div className={'p-10 lg:p-12 short:p-12 xl:p-16 h-full bg-[#04204D]'}>
                                     <p className='text-3xl xl:text-5xl font-bold mt-9 md:mt-12 lg:mt-10 short:mt-5 xl:mt-18'>About Us.</p>
-                                    <p className='text-lg xl:text-xl mt-8 md:mt-10 lg:mt-14 short:mt-6 xl:mt-20'>
+                                    <p className='text-lg xl:text-xl short:text-lg mt-8 md:mt-10 lg:mt-14 short:mt-6 xl:mt-20'>
                                         The Only Open Finance with Biometrics Identity Verification Solution
                                     </p>
-                                    <p className='text-gray-400 mt-6 text base xl:text-lg'>
+                                    <p className='text-gray-400 mt-6 text-base short:text-base xl:text-lg'>
                                         We are the only company that provides the most advanced identity verification against Indonesian national database as the official Dukcapil partner in Platform Bersama that combine it with open finance facilitator for a seamless, simpler, and most secure financial data integration
                                     </p>
                                     <div className={'grid grid-cols-2 sm:grid-cols-4'} style={{justifyContent: 'space-between', alignItems: 'center', marginTop: 30}}>
