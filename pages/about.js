@@ -54,7 +54,7 @@ const AboutPage = () => {
                                         </div>
                                     </Slide>
                                 </div>
-                                <div className={'h-full lg:h-2/5 w-full px-10 xl:px-20 py-6 xl:py-14 bg-[#FFB280]'}>
+                                <div className={'h-full lg:h-2/5 w-full px-10 md:px-5 xl:px-20 py-6 xl:py-14 bg-[#FFB280]'}>
                                     <p className={'text-sm xl:text-base font-light tracking-widest'}>CALL US <br />
                                         <Fade when={transition} duration={1600} bottom>
                                             <Fade when={transition} duration={1600} right>
