@@ -36,7 +36,7 @@ const AboutPage = () => {
                                     <Image preview={false} className="w-80" src={'/assets/logo/logo-for-light-background.png'} />
                                 </div>
                                 <Fade when={transition} duration={1600} right>
-                                    <div className={'bg-no-repeat bg-left-bottom px-10 py-4 md:p-10 lg:p-5 lg:py-10 short:px-12 tall:py-13 tall:px-12 xl:px-20 xl:py-12 h-full lg:h-2/5 bg-[#FE6601] imageBg'}>
+                                    <div className={'bg-no-repeat bg-left-bottom px-10 py-4 md:p-10 lg:p-5 lg:py-10 short:px-12 short:py-auto tall:py-13 tall:px-12 xl:px-20 xl:py-12 h-full lg:h-2/5 bg-[#FE6601] imageBg'}>
                                         <p className="font-bold text-lg xl:text-xl">The Most Advanced <br />
                                             <span className='font-light'> End-To-End</span><br />
                                             Digital Biometrics <br />
@@ -54,7 +54,7 @@ const AboutPage = () => {
                                         </div>
                                     </Slide>
                                 </div>
-                                <div className={'h-full lg:h-2/5 w-full px-10 lg:px-5 lg:py-6 tall:py-8 tall:px-12 short:px-15 xl:px-20  xl:py-14 bg-[#FFB280]'}>
+                                <div className={'h-full lg:h-2/5 w-full px-10 lg:px-5 lg:py-6 tall:py-8 tall:px-12 short:px-15 short:py-7 xl:px-20  xl:py-14 bg-[#FFB280]'}>
                                     <p className={'text-sm xl:text-base font-light tracking-widest'}>CALL US <br />
                                         <Fade when={transition} duration={1600} bottom>
                                             <Fade when={transition} duration={1600} right>
