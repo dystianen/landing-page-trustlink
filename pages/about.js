@@ -19,7 +19,7 @@ const AboutPage = () => {
             <div className={'flex justify-end pad-0'}>
                 {/* <Fade duration={1600} bottom></Fade> */}
                 {/* <Link href={`/under_construction`} passHref> */}
-                    <div className={'w-10 h-10 short:w-8 short:h-8 flex justify-center items-center cursor-pointer bg-[#FF4A63]'} onClick={() => {
+                    <div className={'w-10 h-10 short:w-8 short:h-8 xshort:w-7 xshort:h-7 flex justify-center items-center cursor-pointer bg-[#FF4A63]'} onClick={() => {
                         setTransition(false)
                         window.location.href = 'under_construction'
                     }}>
@@ -27,7 +27,7 @@ const AboutPage = () => {
                     </div>
                 {/* </Link> */}
             </div>
-            <div className={'flex flex-row min-h-full min-w-full px-4 md:px-10 short:px-8 text-white'}>
+            <div className={'flex flex-row min-h-full min-w-full px-4 md:px-10 short:px-8 xshort:px-7 text-white'}>
                 <Fade duration={1600} bottom>
                     <div className={'flex grid grid-cols-12 pb-6 tall:pb-10 short:pb-7'}>
                         <div className={'col-span-12 lg:col-span-3 xl:col-span-3 bg-[#707070]'}>
@@ -36,8 +36,8 @@ const AboutPage = () => {
                                     <Image preview={false} className="w-80" src={'/assets/logo/logo-for-light-background.png'} />
                                 </div>
                                 <Fade when={transition} duration={1600} right>
-                                    <div className={'bg-no-repeat bg-left-bottom px-10 py-4 md:p-10 lg:p-5 lg:py-10 short:px-12 tall:py-10 tall:px-12 xl:px-20 xl:py-12 h-full lg:h-2/5 bg-[#FE6601] imageBg'}>
-                                        <p className="font-bold text-lg xl:text-xl">The Most Advanced <br />
+                                    <div className={'bg-no-repeat bg-left-bottom px-10 py-4 md:p-10 lg:p-5 lg:py-10 h-full short:px-12 xshort:py-10 short:py-12 tall:py-13 tall:px-12 xl:px-20 xl:py-12 h-full lg:h-2/5 bg-[#FE6601] imageBg'}>
+                                        <p className="font-bold text-lg xshort:text-lg xl:text-xl">The Most Advanced <br />
                                             <span className='font-light'> End-To-End</span><br />
                                             Digital Biometrics <br />
                                             Solution Provider and Open Finance</p>
@@ -54,7 +54,7 @@ const AboutPage = () => {
                                         </div>
                                     </Slide>
                                 </div>
-                                <div className={'h-full lg:h-2/5 w-full px-10 lg:px-5 lg:py-6 tall:py-8 tall:px-12 short:px-12 xl:px-20  xl:py-14 bg-[#FFB280]'}>
+                                <div className={'h-full lg:h-2/5 w-full px-10 lg:px-5 lg:py-6 tall:py-8 tall:px-12 short:px-15 short:py-7 xl:px-20  xl:py-14 bg-[#FFB280]'}>
                                     <p className={'text-sm xl:text-base font-light tracking-widest'}>CALL US <br />
                                         <Fade when={transition} duration={1600} bottom>
                                             <Fade when={transition} duration={1600} right>
@@ -71,7 +71,7 @@ const AboutPage = () => {
                         <div className={'bg-[#707070] col-span-12 md:col-span-12 lg:col-span-5 xl:col-span-5 '}>
                             <Fade when={transition} duration={1600} left>
                                 <div className={'p-10 lg:p-12 short:p-12 xl:p-16 h-full bg-[#04204D]'}>
-                                    <p className='text-3xl xl:text-5xl font-bold mt-9 md:mt-12 lg:mt-10 short:mt-5 xl:mt-18'>About Us.</p>
+                                    <p className='text-3xl xshort:text-3xl xl:text-5xl font-bold mt-9 md:mt-12 lg:mt-10 short:mt-5 xl:mt-18'>About Us.</p>
                                     <p className='text-lg xl:text-xl short:text-lg mt-8 md:mt-10 lg:mt-14 short:mt-8 xl:mt-20'>
                                         The Only Open Finance with Biometrics Identity Verification Solution
                                     </p>
