@@ -15,7 +15,7 @@ const AboutPage = () => {
     }, []);
 
     return (
-        <div className='w-screen h-screen overflow-y-auto lg:overflow-y-hidden pb-10 lg:pb-10 bg-[#F6F6F6]'>
+        <div className='w-screen h-screen overflow-y-auto lg:overflow-y-hidden pb-10 bg-[#F6F6F6]'>
             <div className={'flex justify-end pad-0'}>
                 {/* <Fade duration={1600} bottom></Fade> */}
                 {/* <Link href={`/under_construction`} passHref> */}
@@ -29,7 +29,7 @@ const AboutPage = () => {
             </div>
             <div className={'flex flex-row min-h-full min-w-full px-4 md:px-10 short:px-8 xshort:px-7 text-white'}>
                 <Fade duration={1600} bottom>
-                    <div className={'flex grid grid-cols-12 pb-6 tall:pb-10 short:pb-7'}>
+                    <div className={'flex grid grid-cols-12 pb-6 short:pb-7 tall:pb-10'}>
                         <div className={'col-span-12 lg:col-span-3 xl:col-span-3 bg-[#707070]'}>
                             <div className={'flex flex-col h-full w-full'}>
                                 <div className={'text-center bg-[#E6E9ED] imageLogo h-full lg:h-3/5  w-full'}>
@@ -54,7 +54,7 @@ const AboutPage = () => {
                                         </div>
                                     </Slide>
                                 </div>
-                                <div className={'h-full lg:h-2/5 w-full px-10 lg:px-5 lg:py-6 tall:py-10 tall:px-20 short:px-15 short:py-7 xl:px-20  xl:py-14 bg-[#FFB280]'}>
+                                <div className={'h-full lg:h-2/5 w-full px-10 lg:px-5 lg:py-6 xshort:py-5 xshort:px-14 short:px-15 short:py-7 tall:py-10 tall:px-20  xl:px-20  xl:py-14 bg-[#FFB280]'}>
                                     <p className={'text-sm xl:text-base font-light tracking-widest'}>CALL US <br />
                                         <Fade when={transition} duration={1600} bottom>
                                             <Fade when={transition} duration={1600} right>
@@ -79,10 +79,10 @@ const AboutPage = () => {
                                         We are the only company that provides the most advanced identity verification against Indonesian national database as the official Dukcapil partner in Platform Bersama that combine it with open finance facilitator for a seamless, simpler, and most secure financial data integration
                                     </p>
                                     <div className={'grid grid-cols-2 sm:grid-cols-4'} style={{justifyContent: 'space-between', alignItems: 'center', marginTop: 30}}>
-                                        <Image preview={false} className="w-30 company-logo logo-image" src={'/assets/keminfo.png'}/>
-                                        <Image preview={false} className="w-16 company-logo logo-dukcapil" src={'/assets/dukcapil.svg'}/>
-                                        <Image preview={false} className="w-20 company-logo logo-image mt-10 sm:mt-0" src={'/assets/aftech.png'}/>
-                                        <Image preview={false} className="w-16 company-logo logo-image mt-10 sm:mt-0" src={'/assets/iso.png'}/>
+                                        <Image preview={false} className="w-30 xshort:w-28 company-logo logo-image" src={'/assets/keminfo.png'}/>
+                                        <Image preview={false} className="w-16 xshort:w-14 company-logo logo-dukcapil" src={'/assets/dukcapil.svg'}/>
+                                        <Image preview={false} className="w-20 xshort:w-18 company-logo logo-image mt-10 sm:mt-0" src={'/assets/aftech.png'}/>
+                                        <Image preview={false} className="w-16 xshort:w-14 company-logo logo-image mt-10 sm:mt-0" src={'/assets/iso.png'}/>
                                     </div>
 
                                 </div>
