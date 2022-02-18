@@ -32,7 +32,7 @@ export const CarouselPage = () => {
     }
 
     let changeParticlePosition = () => {
-        console.log('bruh123123', 'AAAAAAAAAAAA')
+
     }
     return (
         <div className={'container-slider'}>
@@ -43,7 +43,7 @@ export const CarouselPage = () => {
                 autoplay={true}
                 // className={`text-slider-container`}
                 speed={1000}
-                autoplaySpeed={4000}
+                autoplaySpeed={3000}
                 style={textSliderStyles}
                 beforeChange={(from, to)=>{
                     setWidth(text[to].ref?.current?.offsetWidth*1.1);
