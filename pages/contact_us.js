@@ -59,7 +59,7 @@ const ContactPage = () => {
                             <p className={'text-5xl lg:text-8xl font-bold mt-10 text-center lg:text-left lg:mt-0'}>Get in touch <br/>with us</p>
                             {/*<p className={'text-sm lg:w-72 pt-0 text-center lg:text-left'}>Sign Up to get notified when our website <br/> is launch. We have some great stuff <br/>coming to you. Stay tuned!</p>*/}
                             {/*<p className={'text-sm lg:w-72 pt-0 text-center lg:text-left'}>Please enter your information below <br/> and a Trustlink solution specialist will be in touch.</p>*/}
-                            <p className={'text-sm lg:w-72 pt-0 text-center lg:text-left lg:text-xl'}>Sign Up and tell us how we can help. We’ll get in touch shortly</p>
+                            <p className={'text-sm lg:w-90 pt-0 text-center lg:text-left lg:text-2xl'}>Sign Up and let us know how we can help. <br/>  We'll get in touch shortly</p>
                             {/*<Form*/}
                             {/*    layout={"vertical"}*/}
                             {/*    className={'pt-10 lg:pt-20 formNewsletter'}*/}
