@@ -9,8 +9,8 @@ module.exports = {
             screens: {
                 'xss': '320px',
                 'xs': '480px',
-                'tall': { raw: '(min-width: 1280px) and (max-height: 768px)'},
-                'short': { raw: '(min-width: 1280px) and (max-height: 660px)'},
+                'tall': { raw: '(min-width: 1280px) and (min-height: 768px)'},
+                'short': { raw: '(min-width: 1280px) and (max-height: 760px)'},
                 'xshort': { raw: '(min-width: 1280px) and (max-height: 620px)'},
             },
             colors: {
