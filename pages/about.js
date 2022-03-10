@@ -33,7 +33,7 @@ const AboutPage = () => {
                         <div className={'col-span-12 lg:col-span-3 xl:col-span-3 bg-[#707070]'}>
                             <div className={'flex flex-col h-full w-full'}>
                                 <div className={'text-center bg-[#E6E9ED] imageLogo h-full lg:h-3/5  w-full'}>
-                                    <Image preview={false} className="w-80" src={'/assets/logo/logo-for-light-background.png'} />
+                                    <Image preview={false} className="w-80" src={'/assets/logo/logo-for-light-background-rotated.png'} />
                                 </div>
                                 <Fade when={transition} duration={1600} right>
                                     <div className={'bg-no-repeat bg-left-bottom px-10 py-4 md:p-10 lg:p-5 lg:py-10 h-full short:px-12 xshort:py-10 short:py-12 tall:py-18 tall:px-14 xl:px-20 xl:py-12 h-full lg:h-2/5 bg-[#FE6601] imageBg'}>
