@@ -254,15 +254,50 @@ svg { vertical-align: baseline; }
   filter: grayscale(100%) brightness(400%);
 }
 
+.logo-image-gray{
+  filter: grayscale(100%);
+}
+
+.logo-image-gray:hover{
+  filter: none;
+  transition: 500ms;
+}
+
 .logo-dukcapil{
   filter: grayscale(100%) invert(100%) contrast(180%);
   text-align: center;
-
 }
 
 .logo-image:hover, .logo-dukcapil:hover{
   filter: none;
   transition: 500ms;
+}
+
+.certificate {
+  text-align: center;
+  justify-content: center;
+}
+
+.certificate-sub {
+  font: normal normal medium 14px/18px Montserrat;
+  letter-spacing: 2.1px;
+  color: #818FA6;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.certificate-title {
+  font: normal normal bold 72px/72px Montserrat;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
+.certificate-subtitle {
+  font: normal normal medium 48px/48px Montserrat;
+  font-size: 48px;
+  letter-spacing: 0px;
+  opacity: 1;
+  margin-top: -5%;
 }
 
 @media only screen and (min-device-width: 2560px) {
