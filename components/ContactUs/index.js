@@ -45,7 +45,10 @@ export const ContactPage = observer(() => {
             <div className={'min-h-full px-8 lg:px-10 mt-10'}>
                 <div className={'w-full lg:w-3/5 flex relative justify-center lg:justify-start'} >
                     <div className={'lg:pl-14'} style={{fontFamily: 'montserrat'}}>
-                        <p className={'lg:text-xl mb-2 text-center lg:text-left lg:mt-0'} style={{color: '#818FA6'}}> FIRST TO KNOW</p>
+                        <div className={'flex flex-row items-center'}>
+                            <div className={'w-1/3 h-px mr-6'} style={{backgroundColor: '#818FA6'}}/>
+                            <p className={'lg:text-xl mb-2 text-center lg:text-left lg:mt-0'} style={{color: '#818FA6'}}> FIRST TO KNOW</p>
+                        </div>
                         <p className={'text-5xl lg:text-7xl font-bold mb-2 text-center lg:text-left lg:mt-0'} style={{color: '#1D365F'}}>Intouch.</p>
                         <p className={'lg:text-5xl'} style={{color: '#1D365F'}}>Ask anything.</p>
                     </div>
