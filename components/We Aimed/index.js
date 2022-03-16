@@ -23,7 +23,7 @@ const WeAimed = () => {
 
             <div className="sm:ml-20 mt-80 sm:mt-20 lg:h-81 h-84 md:h-72 bg-[#04204D] text-white flex">
                 {/*<div className="text-3xl sm:text-xs pt-20 px-96 ">*/}
-                <Image className="pt-80 2xl:pt-5 xl:pt-[46px] lg:pt-[119px] md:pt-[141px] " preview={false} src={"../assets/icon.png"}/>
+                <Image className="pt-80 2xl:pt-14 xl:pt-[46px] lg:pt-[119px] md:pt-[141px] " preview={false} src={"../assets/icon.png"}/>
                 <div className="2xl:pl-10 2xl:py-10">
                     <div className="px-10 pt-8 text-xl xss:pt-16 md:text-2xl lg:text-3xl 2xl:text-5xl">
                         We Aim To Be The Most Advance End-To-End Digital Biometrics Solution Provider
