@@ -62,7 +62,7 @@ const TrustedBy = () => {
     ]
 
     return (
-        <div className={'flex flex-row justify-between items-center w-full min-h-screen'}>
+        <div className={'flex flex-row justify-between items-center w-full min-h-screen pl-20'}>
             {/* text section */}
             <div className={' w-full z-50 '}>
                 <div className={'relative z-50'}>

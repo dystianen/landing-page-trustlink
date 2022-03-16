@@ -1,6 +1,6 @@
 import {Image} from "antd";
 
-// const we_aimed = () => {
+// const weAimed = () => {
 //   return (<>
 //
 //       <div className="mt-80 bg-[#04204D] text-white flex h-80 xss:h-72 sm:ml-20 sm:mt-20 lg:h-81 md:h-72">
@@ -18,7 +18,7 @@ import {Image} from "antd";
 //     )
 // }
 
-const We_aimed = () => {
+const WeAimed = () => {
     return (<>
 
             <div className="sm:ml-20 mt-80 sm:mt-20 lg:h-81 h-84 md:h-72 bg-[#04204D] text-white flex">
@@ -38,4 +38,4 @@ const We_aimed = () => {
     )
 }
 
-export default We_aimed;
+export default WeAimed;

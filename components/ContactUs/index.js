@@ -3,7 +3,7 @@ import {Button, Col, Form, Input, Row, message} from "antd";
 import {useStore} from "../StoreProvider";
 import {observer} from "mobx-react-lite";
 
-export const ContactPage = observer(() => {
+const Intouch = observer(() => {
     const [form] = Form.useForm();
     const [form2] = Form.useForm();
     const [show, setShow] = useState(false);
@@ -155,3 +155,5 @@ export const ContactPage = observer(() => {
         // </div>
     )
 })
+
+export default Intouch;

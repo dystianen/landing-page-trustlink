@@ -22,6 +22,9 @@ module.exports = {
                 'half': '50vh',
                 'three-q': '75vh'
             },
+            width: {
+                '110' : '110%'
+            },
             colors: {
                 orange: '#FF6B00',
                 secondary: '#E95436',
