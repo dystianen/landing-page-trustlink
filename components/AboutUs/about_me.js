@@ -20,7 +20,7 @@ const AboutMePage = () => {
 
     return (
         <div className=' overflow-y-auto lg:overflow-y-hidden pb-10 mt-[10vw]'>
-            <div className={'relative w-screen md:flex justify-center'}>
+            <div className={'relative w-full max-w-screen md:flex justify-center'}>
                 <Fade bottom when={transition}>
                     <div className={'md:flex invisible mobilel:visible absolute bottom-[-320px] left-9 xl:bottom-[-250px] xl:-left-5'}>
                         <Image width={512} height={512} className={"h-[256px] w-[256px] xl:h-[512px] xl:w-[512px]"} src={'/assets/about_me.svg'} preview={false}/>
