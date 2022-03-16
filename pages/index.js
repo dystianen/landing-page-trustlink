@@ -17,7 +17,7 @@ export default function Home() {
   const router = useRouter();
   const store = useStore();
     const [isOpen, setIsOpen] = useState(false);
-    const genericHamburgerLine = `h-1 w-4 my-1 rounded-full bg-orange transition ease transform duration-300`;
+    const genericHamburgerLine = `h-1 my-1 rounded-full bg-orange transition ease transform duration-300`;
     const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-orange transition ease transform duration-300`;
 
     const menu = [
@@ -48,7 +48,7 @@ export default function Home() {
                   <div className={`${genericHamburgerLine} self-start ${
                       isOpen
                           ? "w-full rotate-45 translate-y-3 opacity-100"
-                          : "opacity-100"
+                          : "w-4 opacity-100"
                     }`}
                   />
                   <div className={`${genericHamburgerLine2} ${
@@ -58,7 +58,7 @@ export default function Home() {
                   <div className={`${genericHamburgerLine} self-end ${
                       isOpen
                           ? "w-full -rotate-45 -translate-y-3 opacity-100"
-                          : "opacity-100"
+                          : "w-4 opacity-100"
                     }`}
                   />
               </button>
