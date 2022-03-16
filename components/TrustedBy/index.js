@@ -77,9 +77,9 @@ const TrustedBy = () => {
                 <div className={'flex flex-row justify-end  mt-6 z-50'}>
                     <div className={"bg-gray-300  w-[95%]"}>
                             <Carousel autoplay dots={false} slidesToShow={5}>
-                                {logos.map(props => {
+                                {logos.map((props, index) => {
                                     return (
-                                        <div className={props.class_name}>
+                                        <div key={index} className={props.class_name}>
                                             <Image src={props.src} height={props.height} preview={ props.priview}/>
                                         </div>
                                     )
