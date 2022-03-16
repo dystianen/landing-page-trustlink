@@ -19,10 +19,10 @@ const AboutMePage = () => {
     }, []);
 
     return (
-        <div className=' overflow-y-auto lg:overflow-y-hidden pb-10 mt-[10vw]'>
-            <div className={'relative w-full max-w-screen md:flex justify-center'}>
+        <div className='ml-20 max-w-screen overflow-y-hidden lg:overflow-y-hidden pb-10 mt-[10vw]'>
+            <div className={'relative max-w-screen md:flex justify-center'}>
                 <Fade bottom when={transition}>
-                    <div className={'md:flex invisible mobilel:visible absolute bottom-[-320px] left-9 xl:bottom-[-250px] xl:-left-5'}>
+                    <div className={'md:flex invisible mobilel:visible absolute bottom-[-320px] left-[-30px] xl:bottom-[-250px] xl:left-[-70px]'}>
                         <Image width={512} height={512} className={"h-[256px] w-[256px] xl:h-[512px] xl:w-[512px]"} src={'/assets/about_me.svg'} preview={false}/>
                     </div>
                 </Fade>
@@ -42,14 +42,14 @@ const AboutMePage = () => {
             <div className={'flex ml-[40px] justify-end mobilel:justify-end mobilel:mt-[40px]'}>
                 <div className={'mobilel:w-[60vw]'}>
                     <div className={"w-[13vw]"}>
-                        <Divider orientation="right" orientationMargin={24} className={"w-[10px] text-[#818fa6] tracking-[2.1px]"}>ABOUT US</Divider>
+                        <Divider orientation="right" orientationMargin={24} className={"w-[10px] text-[#818fa6] tracking-[2.1px] font-bold"}>ABOUT US</Divider>
                     </div>
                     <Fade when={transition} duration={1600}>
                         <div className={"w-screen mobilel:w-[40vw]"}>
-                            <Title>We are thrilled to advance our technology to meet the needs of our valued customers.</Title>
+                            <Title className={"font-bold text-[30px]"} >We are thrilled to advance our technology to meet the needs of our valued customers.</Title>
                         </div>
                         <div className={"mobilel:w-[30vw]"}>
-                            <Text className={'text-[#4f6382]'}>We are a leading digital biometric provider in Indonesia, exclusively focused on comprehensive biometric recognition products and highly tailored with data analytics platforms.</Text>
+                            <Text className={'text-[#4f6382] text-[14px]'}>We are a leading digital biometric provider in Indonesia, exclusively focused on comprehensive biometric recognition products and highly tailored with data analytics platforms.</Text>
                         </div>
                     </Fade>
                 </div>
