@@ -42,7 +42,7 @@ const Intouch = observer(() => {
     return (
         // <div className={'w-screen h-screen pb-10 overflow-y-auto overflow-x-hidden'}>
 
-            <div className={'min-h-full px-8 lg:px-10 mt-10'}>
+            <div className={'min-h-full px-8 lg:px-10'}>
                 <div className={'w-full lg:w-3/5 flex relative justify-center lg:justify-start'} >
                     <div className={'lg:pl-14'} style={{fontFamily: 'montserrat'}}>
                         <div className={'flex flex-row items-center'}>

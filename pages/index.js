@@ -160,7 +160,7 @@ export default function Home() {
         />
       </div>
     <AboutMePage />
-      <section className={'pl-20 mt-60'}>
+      <section className={'pl-20 mt-52'}>
         <Product/>
       </section>
     </div>
