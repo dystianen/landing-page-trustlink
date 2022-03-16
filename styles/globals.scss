@@ -359,6 +359,16 @@ svg { vertical-align: baseline; }
   opacity: 0.2;
 }
 
+.arrow-usecase:hover{
+  opacity: 0.5 !important;
+  filter: brightness(120%) !important;
+}
+
+.css-1abc02a:hover, .css-hn784z:hover button{
+  opacity: 1;
+  filter: brightness(1);
+}
+
 @media only screen and (min-device-width: 2560px) {
   .logo-accent{
     bottom: -22vh;

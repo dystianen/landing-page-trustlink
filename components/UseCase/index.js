@@ -63,13 +63,14 @@ const UseCase = () => {
                     navButtonsAlwaysVisible={true}
                     navButtonsProps={{
                         style: {
-                            backgroundColor: '#000000'
-                        }
+                            backgroundColor: 'rgba(0,0,0, .1)'
+                        },
+                        className: 'arrow-usecase'
                     }}
                     navButtonsWrapperProps={{
                         style: {
                             margin: '0 20px 0 20px',
-                        },
+                        }
                     }}
                     NextIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-right.svg'}/>}
                     PrevIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-left.svg'}/>}
