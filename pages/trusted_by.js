@@ -74,7 +74,7 @@ const TrustedBy = () => {
                     <span style={{ fontSize: '3.4em', fontFamily: 'montserrat', fontWeight: '500', color:'#04204D', textTransform:'capitalize'}} >Clients & Partners</span>
                 </div>
                 {/* logos */}
-                <div className={'flex flex-row justify-end  mt-5 z-50'}>
+                <div className={'flex flex-row justify-end  mt-6 z-50'}>
                     <div className={"bg-gray-300  w-[95%]"}>
                             <Carousel autoplay dots={false} slidesToShow={5}>
                                 {logos.map(props => {
