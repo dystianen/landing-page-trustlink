@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 15" width="37" height="15">
+	<title>arrow-svg</title>
+	<style>
+		.s0 { fill: #ffffff }
+	</style>
+	<g id="Group_871">
+		<path id="chevron-left" class="s0" d="m29.2 0.5q0.1 0 0.2 0q0 0 0.1 0q0.1 0.1 0.1 0.1l6.9 6.9q0 0 0.1 0.1q0 0.1 0 0.2q0 0 0 0.1q-0.1 0.1-0.1 0.1l-6.9 6.9q0 0-0.1 0.1q-0.1 0-0.1 0q-0.1 0-0.2 0q-0.1-0.1-0.1-0.1l-0.2-0.2q-0.1-0.1-0.1-0.2q-0.1 0-0.1-0.1q0-0.1 0.1-0.2q0 0 0.1-0.1l6.3-6.3l-6.3-6.4q-0.1 0-0.1-0.1q-0.1-0.1-0.1-0.2q0 0 0.1-0.1q0-0.1 0.1-0.1l0.2-0.3q0 0 0.1-0.1z"/>
+		<path id="Rectangle_21" class="s0" d="m0 8.3v-1.1h35.2v1.1z"/>
+	</g>
+</svg>

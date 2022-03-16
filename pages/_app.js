@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import '../styles/globals.scss';
+import '../styles/home.scss';
 import 'tailwindcss/tailwind.css';
 
 import {StoreProvider} from "../components/StoreProvider";

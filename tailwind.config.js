@@ -12,18 +12,33 @@ module.exports = {
                 'tall': { raw: '(min-width: 1280px) and (min-height: 768px)'},
                 'short': { raw: '(min-width: 1280px) and (max-height: 760px)'},
                 'xshort': { raw: '(min-width: 1280px) and (max-height: 620px)'},
+                'tablet': '769px',
+                'mobilel': '426px',
+                'mobilem': '376px',
+                'mobiles': '321px',
+            },
+            height: {
+                'quarter': '25vh',
+                'half': '50vh',
+                'three-q': '75vh'
+            },
+            width: {
+                '110' : '110%'
             },
             colors: {
                 orange: '#FF6B00',
                 secondary: '#E95436',
                 grey: '#4F4F4F',
-                profile: '#989898'
+                profile: '#989898',
+                footer: '#04204D'
             },
             spacing: {
                 '26': '6.5rem',
                 '30': '7.5rem',
+                '98': '26rem',
                 '100': '28rem',
-                '104': '32rem'
+                '104': '32rem',
+                '112': '42rem',
             }
         },
     },
