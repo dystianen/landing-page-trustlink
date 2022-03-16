@@ -40,7 +40,7 @@ export const ContactPage = observer(() => {
         })
     }
     return (
-        <div className={'w-screen h-screen pb-10 overflow-y-auto'}>
+        // <div className={'w-screen h-screen pb-10 overflow-y-auto overflow-x-hidden'}>
 
             <div className={'min-h-full px-8 lg:px-10 mt-10'}>
                 <div className={'w-full lg:w-3/5 flex relative justify-center lg:justify-start'} >
@@ -152,6 +152,6 @@ export const ContactPage = observer(() => {
                     </div>
                 </div>
             </div>
-        </div>
+        // </div>
     )
 })
