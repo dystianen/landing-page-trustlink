@@ -12,6 +12,10 @@ module.exports = {
                 'tall': { raw: '(min-width: 1280px) and (min-height: 768px)'},
                 'short': { raw: '(min-width: 1280px) and (max-height: 760px)'},
                 'xshort': { raw: '(min-width: 1280px) and (max-height: 620px)'},
+                'tablet': '769px',
+                'mobilel': '426px',
+                'mobilem': '376px',
+                'mobiles': '321px',
             },
             colors: {
                 orange: '#FF6B00',
