@@ -76,7 +76,7 @@ export default function Home() {
           <p className={'cursor-pointer'}>ID</p>
         </div>
       </div>
-      <div className={'flex flex-row'}>
+      <div className={'grid grid-cols-2'}>
         <section className={'pl-20'}>
           <div className={'home-next-generation mt-30'}>
             <span>Next</span>
@@ -84,10 +84,10 @@ export default function Home() {
           </div>
           <div className={'home-next-generation-sub'}>
             <span>Digital biometric</span>
-            <span style={{ marginTop: -20 }}>Identification system</span>
+            <span style={{ marginTop: -20 }}>Identification system.</span>
           </div>
         </section>
-        <section>
+        <section className={'justify-center'}>
           <div style={{
             backgroundColor: '#FFFFFF',
             padding: 15,
@@ -109,8 +109,8 @@ export default function Home() {
             borderRadius: '50% / 50%',
             width: 180,
             height: 180,
-            marginTop: '-50%',
-            marginLeft: '150%'
+            marginTop: '-15%',
+            marginLeft: '40%'
           }}>
             <Image preview={false} src={'/assets/logo/trust-connect/trust-connect.png'} className={'z-10 mt-2'} />
           </div>
@@ -123,8 +123,8 @@ export default function Home() {
             borderRadius: '50% / 50%',
             width: 130,
             height: 130,
-            marginTop: '100%',
-            marginLeft: '250%'
+            marginTop: '25%',
+            marginLeft: '60%'
           }}>
             <Image preview={false} src={'/assets/logo/trust-live/trust-live.png'} className={'z-10 mt-1'} />
           </div>
@@ -137,8 +137,8 @@ export default function Home() {
             borderRadius: '50% / 50%',
             width: 180,
             height: 180,
-            marginTop: '-20%',
-            marginLeft: '50%'
+            marginTop: '-10%',
+            marginLeft: '5%'
           }}>
             <Image preview={false} src={'/assets/logo/trust-verify/trust-verify.png'} className={'z-10 ml-1'} />
           </div>
