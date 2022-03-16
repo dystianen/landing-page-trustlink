@@ -300,6 +300,65 @@ svg { vertical-align: baseline; }
   margin-top: -5%;
 }
 
+.logo-usecase{
+  clip-path: inset(0% 50% 50% 0%);
+  filter: grayscale(1) invert(1);
+  opacity: 0.5;
+  position: relative;
+  right: -50%;
+  bottom: -250px;
+}
+
+.monsterrat {
+  font-family: 'Montserrat'
+}
+
+.stroke {
+  -webkit-text-stroke: 2px #FFFFFF;
+}
+
+.circle{
+  position: absolute;
+  top: 18%;
+  left: 20px;
+  width: 55%;
+  height: 65%;
+  background: transparent;
+  border: 6px solid #145FD9;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.line-top{
+  position: absolute;
+  top: 0;
+  left: 28%;
+  width: 6px;
+  height: 18%;
+  background: #145FD9;
+  opacity: 0.2;
+}
+
+.line-mid{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 43.5%;
+  height: 6px;
+  background: #145FD9;
+  opacity: 0.2;
+}
+
+.line-bottom{
+  position: absolute;
+  top: 50.5%;
+  right: 15%;
+  width: 6px;
+  height: 50%;
+  background: #145FD9;
+  opacity: 0.2;
+}
+
 @media only screen and (min-device-width: 2560px) {
   .logo-accent{
     bottom: -22vh;
