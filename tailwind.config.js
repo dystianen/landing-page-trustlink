@@ -17,11 +17,17 @@ module.exports = {
                 'mobilem': '376px',
                 'mobiles': '321px',
             },
+            height: {
+                'quarter': '25vh',
+                'half': '50vh',
+                'three-q': '75vh'
+            },
             colors: {
                 orange: '#FF6B00',
                 secondary: '#E95436',
                 grey: '#4F4F4F',
-                profile: '#989898'
+                profile: '#989898',
+                footer: '#04204D'
             },
             spacing: {
                 '26': '6.5rem',
