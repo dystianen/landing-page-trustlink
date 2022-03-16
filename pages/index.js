@@ -10,7 +10,11 @@ import {Product} from "../components/Product";
 import UseCase from "../components/UseCase";
 import Footer from "../components/Footer";
 import AboutMePage from "../components/AboutUs/about_me";
-
+import Banner from "../components/Banner";
+import TrustedBy from "../components/TrustedBy";
+import WeAimed from "../components/We Aimed";
+import { CertificationMembership } from "../components/CertificationMembership";
+import Intouch from "../components/ContactUs";
 export const checkRerouteLoggedUser = (store, router) => {
   if (typeof window !== 'undefined') {
     router.push('/under_construction')
@@ -155,7 +159,6 @@ export default function Home() {
           className={'home-plexus'}
         />
       </div>
-    <div className="h-quarter" />
     <AboutMePage />
       <section className={'pl-20 mt-60'}>
         <Product/>
@@ -163,6 +166,13 @@ export default function Home() {
     </div>
     <div className="h-quarter" />
     <UseCase />
+    <Banner />
+    <TrustedBy />
+    <WeAimed />
+    <div className="h-quarter" />
+    <CertificationMembership />
+    <div className="h-quarter" />
+    <Intouch />
     <Footer />
   </>
   )

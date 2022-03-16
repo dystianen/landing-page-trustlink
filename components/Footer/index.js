@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <div>
+        <>
             <div className="h-three-q text-white py-4 px-32 w-full max-w-screen text-2xl bg-footer">
                 <div className={"w-full grid grid-cols-12 gap-2"}>
                     <div className={'col-span-6 lg:col-span-6 xl:col-span-6'}>
@@ -29,18 +29,19 @@ const Footer = () => {
                         <p className="mt-3 tracking-normal text-4xl font-normal m-0 p-0">Carrer</p>
                     </div>
                 </div>
-                <div className={"w-full relative grid grid-cols-12 gap-2 bottom-0"}>
-                    <div className={'col-span-3 lg:col-span-3 xl:col-span-3'}>
+                <div className={"w-110 mt-30 text-lg relative grid grid-cols-12 gap-2 bottom-0"}>
+                    <div className={'col-span-2 lg:col-span-2 xl:col-span-2'}>
                         2022 &copy; All right reserved
                     </div>
-                    <div className={'col-span-5 lg:col-span-5 xl:col-span-5'}>
+                    <div className={'col-span-7 lg:col-span-7 xl:col-span-7'}>
+                        <hr className="mt-3" />
                     </div>
-                    <div className={'col-span-4 lg:col-span-4 xl:col-span-4'}>
+                    <div className={'col-span-3 lg:col-span-3 xl:col-span-3'}>
                         Privacy Policy * Term &#38; Condition
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
