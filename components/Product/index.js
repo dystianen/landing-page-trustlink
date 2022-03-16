@@ -63,7 +63,7 @@ export const Product = () => {
         >
             {
                 items.map( (item, i) => (
-                    <div className={'flex flex-row h-[1000px]'}>
+                    <div key={i} className={'flex flex-row h-[1000px]'}>
                         <div className={'flex justify-center items-center w-2/4 z-20'}>
                             <Image preview={false} className="w-[325px] ml-24" src={item.icon}/>
                         </div>
