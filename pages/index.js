@@ -6,6 +6,9 @@ import { Image } from "antd";
 import React, { useState } from "react";
 import { ParticlePage } from "../components/Particle";
 import { DrawerSlide } from "../components/DrawerSlide";
+import UseCase from "../components/UseCase";
+import Footer from "../components/Footer";
+import AboutMePage from "../components/AboutUs/about_me";
 
 export const checkRerouteLoggedUser = (store, router) => {
   if (typeof window !== 'undefined') {
@@ -37,8 +40,9 @@ export default function Home() {
   // checkRerouteLoggedUser(store,router);
 
 
-  return (
-    <div style={{ padding: 16 }}>
+  return (<>
+  
+  <div style={{ padding: 16 }}>
       <DrawerSlide menu={menu} isOpen={isOpen} />
       <div className={'fixed w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 10000 }}>
         <button
@@ -151,5 +155,11 @@ export default function Home() {
         />
       </div>
     </div>
+    <div className="h-quarter" />
+    <AboutMePage />
+    <div className="h-quarter" />
+    <UseCase />
+    <Footer />
+  </>
   )
 }
