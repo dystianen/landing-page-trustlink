@@ -17,30 +17,28 @@ const TrustedBy = () => {
                 </div>
                 {/* logos */}
                 <div className={'flex flex-row justify-end  mt-5'}>
-                    <div className={"bg-gray-300  w-11/12 h-90"}>
-                        <div className={'grid grid-cols-5 divide-x-[2px] items-center bg-white text-center w-full '}>
-                            <div>
-                                <Image src={'assets/logo/adie-logo.png'} preview={false} width={85}/>
+                    <div className={"bg-gray-300  w-11/12"}>
+                        <div className={'grid grid-cols-5 divide-x-[2px] items-center bg-white text-center w-full'}>
+                            <div className={'flex justify-center items-center h-20'}>
+                                <Image src={'assets/logo/adie-logo.png'} preview={false} width={85} />
                             </div>
-                            <div>
-                                <Image src={'assets/logo/banque-logo.png'} preview={false} width={150}/>
+                            <div className={'flex justify-center items-center h-20'}>
+                                <Image src={'assets/logo/banque-logo.png'} preview={false} width={150} />
                             </div>
-                            <div>
-                                <Image src={'assets/logo/alma-logo.png'} preview={false} width={75}/>
+                            <div className={'flex justify-center items-center h-20'}>
+                                <Image src={'assets/logo/alma-logo.png'} preview={false} width={75} />
                             </div>
-                            <div>
-                                <Image src={'assets/logo/bnp-logo.png'} preview={false} width={150}/>
+                            <div className={'flex justify-center items-center h-20'}>
+                                <Image src={'assets/logo/bnp-logo.png'} preview={false} width={150} />
                             </div>
-                            <div>
-                                <Image src={'assets/logo/aria-logo.png'} preview={false} width={105}/>
+                            <div className={'flex justify-center items-center h-20'}>
+                                <Image src={'assets/logo/aria-logo.png'} preview={false} width={105} />
                             </div>
                         </div>
                     </div>
                   </div>
             </div>
         </div> 
-
-        
     )
 }
 
