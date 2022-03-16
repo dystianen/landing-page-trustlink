@@ -92,22 +92,6 @@ svg { vertical-align: baseline; }
   padding: 0 0 10px 0 !important;
 }
 
-.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
-  background-color: #FE6601 !important;
-}
-
-.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
-  background-color: #FE6601 !important;
-}
-
-.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
-  background-color: #FE6601 !important;
-}
-
-.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
-  color: #FE6601 !important;
-}
-
 .tc-modal .ant-tabs-tab {
   padding-top: 0 !important;
   font-size: 1rem;
@@ -325,12 +309,8 @@ svg { vertical-align: baseline; }
   bottom: -250px;
 }
 
-.montserrat {
+.monsterrat {
   font-family: 'Montserrat'
-}
-
-.ant-steps-item-title {
-  display: none !important;
 }
 
 .stroke {
@@ -377,35 +357,6 @@ svg { vertical-align: baseline; }
   height: 50%;
   background: #145FD9;
   opacity: 0.2;
-}
-
-.arrow-usecase:hover{
-  opacity: 0.5 !important;
-  filter: brightness(120%) !important;
-}
-
-.arrow-prev-product > button[aria-label='Previous'], .arrow-next-product > button[aria-label='Next'] {
-  display: none;
-}
-
-.css-1abc02a:hover, .css-hn784z:hover button{
-  opacity: 1;
-  filter: brightness(1);
-}
-
-.box {
-  width: 150px;
-  height: 150px;
-  margin: 20px;
-  border-radius: 4px;
-  padding: 10px;
-  background-color: teal;
-  position: relative;
-  transform: translateX(0);
-  transition: transform 500ms ease-in-out;
-}
-.box.right {
-  transform: translateX(100%);
 }
 
 @media only screen and (min-device-width: 2560px) {
@@ -552,204 +503,4 @@ svg { vertical-align: baseline; }
 
 .formNewsletter .ant-form-item-explain.ant-form-item-explain-error{
   color:white !important;
-}
-
-#about-me {
-  filter: grayscale(1) invert(1) opacity(0.6);
-  height: 100%;
-}
-
-.about-img > .ant-image {
-  height: 100%;
-}
-
-.usecase-img > .ant-image{
-  width: 100%;
-  height: 100%;
-}
-
-.usecase-img-2 > .ant-image{
-  width: 100%;
-}
-
-.trusted-img > .ant-image{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-bg > .ant-image{
-  height: auto
-}
-
-.section-gradient-bg{
-  background: rgb(0,11,30);
-  background: linear-gradient(90deg, rgba(0,11,30,1) 0%, rgba(7,39,91,1) 48%, rgba(4,32,77,1) 100%);
-}
-
-.bg-usecase-top {
-  background: linear-gradient(180deg, rgba(19, 47, 112, 0.16) 16.89%, #132F70 100%);
-}
-
-.bg-menu{
-  background-color: rgba(255,255,255, 0.8);
-}
-.custom-modal > .ant-modal-content{
-  width: 100vw !important;
-  height: 100% !important;
-  background: transparent;
-  box-shadow: none !important;
-}
-
-@media only screen and (max-device-width: 576px) {
-  .contact-bg > .ant-image{
-    height: 100%
-  }
-}
-
-@media only screen and (max-device-width: 425px) {
-  .ant-steps-item-icon{
-    width: 10px !important;
-  }
-}
-
-@media only screen and (min-device-width: 1024px) and (max-device-height: 596px) {
-  .custom-height{
-    height: 24rem !important;
-    overflow-y: scroll !important;
-  }
-}
-
-.height-top{
-  height: calc(100vh - 50px);
-}
-
-@media only screen and (min-device-width: 1024px) and (max-device-height: 712px) {
-  .m-usecase{
-    //margin-top: 2rem;
-  }
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) and (max-device-height: 738px) {
-  .custom-height{
-    height: 29rem !important;
-    overflow-y: scroll !important;
-  }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 360px) {.triv-top {top: 10px !important}}
-@media only screen and (min-device-width: 361px) and (max-device-width: 419px){.triv-top {top: 20px !important}}
-@media only screen and (min-device-width: 420px) and (max-device-width: 519px){.triv-top {top: 40px !important}}
-@media only screen and (min-device-width: 520px) and (max-device-width: 575px){.triv-top {top: 50px !important}}
-@media only screen and (min-device-width: 576px) and (max-device-width: 639px) {.triv-top {top: 60px !important}}
-
-.size-full {
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.use-case-applications {
-  list-style: none;
-}
-
-.use-case-applications li::before {
-  content: "\2022";
-  color: #FF6703;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-
-.section-most-top{
-  scroll-margin-top: 6rem;
-}
-
-.section-most-top-use-case{
-  scroll-margin-top: 5rem;
-}
-
-.section-most-top-client{
-  scroll-margin-top: 5rem;
-}
-
-@media only screen and (min-device-width: 1280px) and (max-device-height: 619px){
-  .w-custom-small{
-    width: 5.5rem !important;
-    height: 5.5rem !important;
-  }
-  .w-custom-big{
-    width: 7.5rem !important;
-    height: 7.5rem !important;
-    margin-top: -4rem !important;
-  }
-}
-
-@media only screen and (max-device-width: 1024px) and (max-device-height: 634px){
-  .w-tablet{
-    width: 36rem
-  }
-  .w-custom-big{
-    width: 7rem !important;
-    height: 7rem !important;
-  }
-}
-
-@media only screen and (max-device-width: 369px){
-  .m-top{
-    top: 25rem !important
-  }
-}
-
-@media only screen and (max-device-width: 767px) and (max-device-height: 546px){
-  .space-mobile {
-    height: 10.5rem !important;
-  }
-}
-
-@media only screen and (max-device-width: 767px) and (min-device-height: 547px) and (max-device-height: 597px) {
-  .space-mobile {
-    height: 11rem !important;
-  }
-}
-
-@media only screen and (max-device-width: 767px) and (min-device-height: 598px) and (max-device-height: 647px) {
-  .space-mobile {
-    height: 8rem !important;
-  }
-}
-@media only screen and (max-device-width: 767px) and (min-device-height: 648px) and (max-device-height: 689px) {
-  .space-mobile {
-    height: 7rem !important;
-  }
-}
-
-.box-hover {
-  transition: box-shadow .3s;
-  float: left;
-
-}
-.box-hover:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}
-
-.box-hover {
-  transition: box-shadow .3s;
-  float: left;
-
-}
-.box-hover:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}
-.drawer-mt {
-  margin-top: auto;
-}
-
-@media only screen and (max-device-width: 360px) and (max-device-height : 780px){
-  .huawei30-screen{
-    width: 6.5rem !important;
-    height: auto !important;
-  }
 }
