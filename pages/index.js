@@ -155,12 +155,12 @@ export default function Home() {
           className={'home-plexus'}
         />
       </div>
-      <section className={'pl-20'}>
+    <div className="h-quarter" />
+    <AboutMePage />
+      <section className={'pl-20 mt-60'}>
         <Product/>
       </section>
     </div>
-    <div className="h-quarter" />
-    <AboutMePage />
     <div className="h-quarter" />
     <UseCase />
     <Footer />
