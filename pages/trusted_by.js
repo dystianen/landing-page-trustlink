@@ -1,11 +1,69 @@
-import { Image } from "antd";
+import { Carousel, Image } from "antd";
+import { propertyOf } from "lodash";
 import React from "react";
 
 
 const TrustedBy = () => {
+    const logos = [
+        {
+            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6 ',
+            src: 'assets/logo/adie-logo.png',
+            priview : false,
+            height : 45
+        },
+        {
+            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
+            src: 'assets/logo/banque-logo.png',
+            priview : false,
+            height : 45
+        },
+        {
+            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
+            src: 'assets/logo/alma-logo.png',
+            priview : false,
+            height : 45
+        },
+        {
+            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
+            src: 'assets/logo/bnp-logo.png',
+            priview : false,
+            height : 45
+        },
+        {
+            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
+            src: 'assets/logo/aria-logo.png',
+            priview : false,
+            height : 45
+        },
+        {
+            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
+            src: 'assets/logo/adie-logo.png',
+            priview : false,
+            height : 45
+        },
+        {
+            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
+            src: 'assets/logo/banque-logo.png',
+            priview : false,
+            height : 45
+        },
+        {
+            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
+            src: 'assets/logo/alma-logo.png',
+            priview : false,
+            height : 45
+        },
+        {
+            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
+            src: 'assets/logo/aria-logo.png',
+            priview : false,
+            height : 45
+        },
+    ]
+
     return (
         <div className={'flex flex-row justify-between items-center w-full min-h-screen'}>
-            <div className={'h-[255px] w-5/6 bg-gray-200 z-10 absolute right-0 sm:top-44  ' }/>
+            <div className={'h-[255px] w-5/6 bg-gray-200 z-10 absolute right-0 sm:top-[12rem]  ' }/>
             {/* text section */}
             <div className={' w-full z-50 '}>
                 <div className={'block z-50'}>
@@ -19,23 +77,15 @@ const TrustedBy = () => {
                 {/* logos */}
                 <div className={'flex flex-row justify-end  mt-5 z-50'}>
                     <div className={"bg-gray-300  w-[95%]"}>
-                        <div className={'grid grid-cols-5 divide-x-[2px] items-center bg-white text-center w-full'}>
-                            <div className={'flex justify-center items-center h-20 '}>
-                                <Image src={'assets/logo/adie-logo.png'} preview={false} width={85} />
-                            </div>
-                            <div className={'flex justify-center items-center h-20'}>
-                                <Image src={'assets/logo/banque-logo.png'} preview={false} width={175} />
-                            </div>
-                            <div className={'flex justify-center items-center h-20'}>
-                                <Image src={'assets/logo/alma-logo.png'} preview={false} width={85} />
-                            </div>
-                            <div className={'flex justify-center items-center h-20'}>
-                                <Image src={'assets/logo/bnp-logo.png'} preview={false} width={175} />
-                            </div>
-                            <div className={'flex justify-center items-center h-20'}>
-                                <Image src={'assets/logo/aria-logo.png'} preview={false} width={105} />
-                            </div>
-                        </div>
+                            <Carousel autoplay dots={false} slidesToShow={5}>
+                                {logos.map(props => {
+                                    return (
+                                        <div className={props.class_name}>
+                                            <Image src={props.src} height={props.height} preview={ props.priview}/>
+                                        </div>
+                                    )
+                                })}
+                            </Carousel>
                     </div>
                   </div>
             </div>
