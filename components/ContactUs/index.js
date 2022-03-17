@@ -42,11 +42,11 @@ const Intouch = observer(() => {
     return (
         // <div className={'w-screen h-screen pb-10 overflow-y-auto overflow-x-hidden'}>
 
-            <div className={'min-h-full px-8 lg:px-10'}>
+            <div className={'min-h-full pl-8 lg:pl-10 w-full'}>
                 <div className={'w-full lg:w-3/5 flex relative justify-center lg:justify-start'} >
                     <div className={'lg:pl-14'} style={{fontFamily: 'montserrat'}}>
                         <div className={'flex flex-row items-center'}>
-                            <div className={'w-1/3 h-px mr-6'} style={{backgroundColor: '#818FA6'}}/>
+                            <div className={'w-1/5 h-px mr-6'} style={{backgroundColor: '#818FA6'}}/>
                             <p className={'lg:text-xl mb-2 text-center lg:text-left lg:mt-0'} style={{color: '#818FA6'}}> FIRST TO KNOW</p>
                         </div>
                         <p className={'text-5xl lg:text-7xl font-bold mb-2 text-center lg:text-left lg:mt-0'} style={{color: '#1D365F'}}>Intouch.</p>
@@ -54,7 +54,7 @@ const Intouch = observer(() => {
                     </div>
                 </div>
                 <div className={'flex justify-end'}>
-                    <div className={'w-2/3'} style={{backgroundColor: '#E6E9ED'}}>
+                    <div className={'lg:w-2/3 md:w-3/4 sm:w-3/4'} style={{backgroundColor: '#E6E9ED'}}>
                         <div className={'px-5 lg:px-11'}>
                             <Form
                                 layout={"vertical"}
