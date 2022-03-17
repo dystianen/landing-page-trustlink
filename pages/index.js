@@ -6,7 +6,7 @@ import { Image } from "antd";
 import React, { useState } from "react";
 import { ParticlePage } from "../components/Particle";
 import { DrawerSlide } from "../components/DrawerSlide";
-import {Product} from "../components/Product";
+import { Product } from "../components/Product";
 import UseCase from "../components/UseCase";
 import Footer from "../components/Footer";
 import AboutMePage from "../components/AboutUs";
@@ -47,7 +47,7 @@ export default function Home() {
 
   return (<>
 
-  <div style={{ padding: 16 }}>
+    <div style={{ padding: 16 }}>
       <DrawerSlide menu={menu} isOpen={isOpen} />
       <div className={'fixed w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 10000 }}>
         <button
@@ -55,16 +55,16 @@ export default function Home() {
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className={`${genericHamburgerLine} self-start ${isOpen
-              ? "w-full rotate-45 translate-y-3 opacity-100"
-              : "w-4 opacity-100"
+            ? "w-full rotate-45 translate-y-3 opacity-100"
+            : "w-4 opacity-100"
             }`}
           />
           <div className={`${genericHamburgerLine2} ${isOpen ? "opacity-0" : "opacity-100"
             }`}
           />
           <div className={`${genericHamburgerLine} self-end ${isOpen
-              ? "w-full -rotate-45 -translate-y-3 opacity-100"
-              : "w-4 opacity-100"
+            ? "w-full -rotate-45 -translate-y-3 opacity-100"
+            : "w-4 opacity-100"
             }`}
           />
         </button>
@@ -75,9 +75,9 @@ export default function Home() {
           <Image preview={false} className="relative h-14 left-14" src={'/assets/logo/text-only.png'} />
         </div>
         <div className={'choose-lang flex flex-row mr-32 mt-10'}>
-          <p className={'cursor-pointer'}>EN</p>
+          <p className={'cursor-pointer font-medium'}>EN</p>
           <div className={'w-px h-5 mt-1 mx-2'} style={{ backgroundColor: '#818FA6' }} />
-          <p className={'cursor-pointer'}>ID</p>
+          <p className={'cursor-pointer font-medium'}>ID</p>
         </div>
       </div>
       <div className={'grid grid-cols-2'}>
@@ -91,60 +91,60 @@ export default function Home() {
             <span style={{ marginTop: -20 }}>Identification system.</span>
           </div>
         </section>
-        <section className={'justify-center'}>
+        <section>
           <div style={{
             backgroundColor: '#FFFFFF',
-            padding: 15,
             borderStyle: 'solid',
             borderWidth: 8,
-            borderColor: '#FE6601',
+            borderColor: '#FE7519',
+            boxShadow: '0px 12px 12px 9px #ff66001a',
             borderRadius: '50% / 50%',
-            width: 130,
-            height: 130
-          }}>
-            <Image preview={false} src={'/assets/logo/trust-scan/trust-scan.png'} className={'z-10 mt-2'} />
+            padding: 15,
+          }}
+            className={'w-40 h-40 flex justify-center items-center shadow-xl'}>
+            <Image preview={false} src={'/assets/logo/trust-scan/trust-scan.png'} className={'z-10 justify-center'} />
           </div>
           <div style={{
             backgroundColor: '#FFFFFF',
             padding: 20,
             borderStyle: 'solid',
             borderWidth: 8,
-            borderColor: '#FE6601',
+            borderColor: '#FE7519',
+            boxShadow: '0px 12px 12px 9px #ff66001a',
             borderRadius: '50% / 50%',
-            width: 180,
-            height: 180,
-            marginTop: '-15%',
-            marginLeft: '40%'
-          }}>
-            <Image preview={false} src={'/assets/logo/trust-connect/trust-connect.png'} className={'z-10 mt-2'} />
+            marginTop: '-17%',
+            marginLeft: '40%',
+          }}
+            className={'w-52 h-52 flex justify-center items-center shadow-xl'}>
+            <Image preview={false} src={'/assets/logo/trust-connect/trust-connect.png'} className={'z-10 justify-center'} />
           </div>
           <div style={{
             backgroundColor: '#FFFFFF',
             padding: 15,
             borderStyle: 'solid',
             borderWidth: 8,
-            borderColor: '#FE6601',
+            borderColor: '#FE7519',
+            boxShadow: '0px 12px 12px 9px #ff66001a',
             borderRadius: '50% / 50%',
-            width: 130,
-            height: 130,
-            marginTop: '25%',
-            marginLeft: '60%'
-          }}>
-            <Image preview={false} src={'/assets/logo/trust-live/trust-live.png'} className={'z-10 mt-1'} />
+            marginTop: '17%',
+            marginLeft: '65%',
+          }}
+            className={'w-40 h-40 flex justify-center items-center shadow-xl'}>
+            <Image preview={false} src={'/assets/logo/trust-live/trust-live.png'} className={'z-10 justify-center'} />
           </div>
           <div style={{
             backgroundColor: '#FFFFFF',
             padding: 25,
             borderStyle: 'solid',
             borderWidth: 8,
-            borderColor: '#FE6601',
+            borderColor: '#FE7519',
+            boxShadow: '0px 12px 12px 9px #ff66001a',
             borderRadius: '50% / 50%',
-            width: 180,
-            height: 180,
             marginTop: '-10%',
-            marginLeft: '5%'
-          }}>
-            <Image preview={false} src={'/assets/logo/trust-verify/trust-verify.png'} className={'z-10 ml-1'} />
+            marginLeft: '7%',
+          }}
+            className={'w-52 h-52 flex justify-center items-center shadow-xl'}>
+            <Image preview={false} src={'/assets/logo/trust-verify/trust-verify.png'} className={'z-10 justify-center'} />
           </div>
         </section>
       </div>
@@ -159,11 +159,11 @@ export default function Home() {
           className={'home-plexus'}
         />
       </div>
-    <section className={"AboutMe"}>
-      <AboutMePage />
-    </section>
+      <section className={"AboutMe"}>
+        <AboutMePage />
+      </section>
       <section className={'pl-20 mt-52'}>
-        <Product/>
+        <Product />
       </section>
     </div>
     <div className="h-quarter" />
