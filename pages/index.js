@@ -9,7 +9,7 @@ import { DrawerSlide } from "../components/DrawerSlide";
 import {Product} from "../components/Product";
 import UseCase from "../components/UseCase";
 import Footer from "../components/Footer";
-import AboutMePage from "../components/AboutUs/about_me";
+import AboutMePage from "../components/AboutUs";
 import Banner from "../components/Banner";
 import TrustedBy from "../components/TrustedBy";
 import WeAimed from "../components/We Aimed";
