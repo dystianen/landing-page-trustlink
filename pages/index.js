@@ -81,7 +81,11 @@ export default function Home() {
         </div>
       </div>
       <div className={'grid grid-cols-2'}>
-        <section className={'pl-20'}>
+      <section className={'flex justify-start'}>
+          <div className={'flex items-end justify-center w-1/12'}>
+            <p className={'w-max -rotate-180'} style={{ color: '#161D24', fontFamily: 'Montserrat', letterSpacing: '0.15rem', writingMode: 'vertical-lr', textOrientation: 'sideways' }}>SCROLL DOWN</p>
+          </div>
+          <div className={'w-max ml-10'}>
           <div className={'home-next-generation mt-30'}>
             <span>Next</span>
             <span className={'-mt-8'}>― Generation</span>
@@ -89,6 +93,7 @@ export default function Home() {
           <div className={'home-next-generation-sub'}>
             <span>Digital biometric</span>
             <span style={{ marginTop: -20 }}>Identification system.</span>
+          </div>
           </div>
         </section>
         <section>
@@ -101,7 +106,7 @@ export default function Home() {
             borderRadius: '50% / 50%',
             padding: 15,
           }}
-            className={'w-40 h-40 flex justify-center items-center shadow-xl'}>
+            className={'w-36 h-36 flex justify-center items-center shadow-xl'}>
             <Image preview={false} src={'/assets/logo/trust-scan/trust-scan.png'} className={'z-10 justify-center'} />
           </div>
           <div style={{
@@ -129,7 +134,7 @@ export default function Home() {
             marginTop: '17%',
             marginLeft: '65%',
           }}
-            className={'w-40 h-40 flex justify-center items-center shadow-xl'}>
+            className={'w-36 h-36 flex justify-center items-center shadow-xl'}>
             <Image preview={false} src={'/assets/logo/trust-live/trust-live.png'} className={'z-10 justify-center'} />
           </div>
           <div style={{
