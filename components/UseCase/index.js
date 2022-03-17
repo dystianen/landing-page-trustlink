@@ -18,18 +18,18 @@ const UseCase = () => {
     return (
         <div className={'ml-20'}>
             <section className={'relative'}>
-                <div className={'relative h-[525px]'}>
-                    <Image preview={false} className="w-[100vw] h-auto brightness-50" src={'/assets/img-about-us.png'}/>
+                <div className={'relative h-[350px] md:h-[525px]'}>
+                    <Image preview={false} className="w-[100vw] h-[350px] md:h-[525px] brightness-50" src={'/assets/img-about-us.png'}/>
                     <div className={'absolute top-0 left-0'}>
-                        <Image preview={false} className="w-[250px] h-[250px] grayscale invert opacity-50" src={'/assets/accents/logo-usecase-top.png'}/>
+                        <Image preview={false} className="w-[100px] md:w-[200px] lg:w-[250px] grayscale invert opacity-50" src={'/assets/accents/logo-usecase-top.png'}/>
                     </div>
                     <div className={'absolute right-0 -bottom-2'}>
-                        <Image preview={false} className="w-[250px] h-[250px] grayscale invert opacity-50" src={'/assets/accents/logo-usecase-bottom.png'}/>
+                        <Image preview={false} className="w-[100px] md:w-[200px] lg:w-[250px] grayscale invert opacity-50" src={'/assets/accents/logo-usecase-bottom.png'}/>
                     </div>
                 </div>
-                <div className={'absolute left-12 bottom-10'}>
-                    <p className={'text-white text-6xl font-bold mb-5 monsterrat'}>Modern.</p>
-                    <p className={'text-white text-5xl monsterrat'}>Biometric Use Case.</p>
+                <div className={'absolute left-6 md:left-12 bottom-10'}>
+                    <p className={'text-white text-4xl md:text-6xl font-bold mb-5 monsterrat'}>Modern.</p>
+                    <p className={'text-white text-3xl md:text-5xl monsterrat'}>Biometric Use Case.</p>
                 </div>
             </section>
             <section>
