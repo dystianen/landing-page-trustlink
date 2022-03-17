@@ -19,7 +19,7 @@ const AboutMePage = () => {
     }, []);
 
     return (
-        <div className='ml-20 max-w-screen overflow-y-hidden lg:overflow-y-hidden pb-10 mt-[10vw]'>
+        <div className='ml-20 max-w-[95em] overflow-y-hidden lg:overflow-y-hidden pb-10 mt-[10vw]'>
             <div className={'relative w-full h-[550px] items-start flex justify-end'}>
                 {/*<Fade bottom when={transition}>*/}
                 {/*    <div className={'md:flex invisible mobilel:visible absolute bottom-[-320px] left-[-30px] xl:bottom-[-250px] xl:left-[-70px]'}>*/}
@@ -32,7 +32,7 @@ const AboutMePage = () => {
 
                         {/* preview image */}
                 <div className={'flex relative w-["100%"] justify-center'}>
-                        <Image preview={false} src={"/assets/meeting_stock_image.png"} height={450} width={1040}/>
+                        <Image className={"object-fill"} preview={false} src={"/assets/meeting_stock_image.png"} height={450} width={1040}/>
                     <div className={'flex absolute right-0 bottom-0 items-end'}>
                         <Image src={"/assets/about_me_right.png"} preview={false} id={'about_me'} />
                     </div>
@@ -41,16 +41,16 @@ const AboutMePage = () => {
                     </div>
                 </div>
             </div>
-            <div className={'flex justify-end'}>
-                <div className={'w-[45vw]'}>
+            <div className={'max-w-[90em] typographyAboutUs float-right flex justify-end'}>
+                <div>
                     <div className={"w-[13vw]"}>
                         <Divider orientation="right" orientationMargin={24} className={"w-[10px] text-[#818fa6] tracking-[2.1px] font-bold"}>ABOUT US</Divider>
                     </div>
                     <Fade when={transition} duration={1600}>
-                        <div className={"w-screen mobilel:w-[40vw]"}>
+                        <div>
                             <Title className={"font-bold text-[30px]"} >We are thrilled to advance our technology to meet the needs of our valued customers.</Title>
                         </div>
-                        <div className={"mobilel:w-[30vw]"}>
+                        <div>
                             <Text className={'text-[#4f6382] text-[14px]'}>We are a leading digital biometric provider in Indonesia, exclusively focused on comprehensive biometric recognition products and highly tailored with data analytics platforms.</Text>
                         </div>
                     </Fade>
