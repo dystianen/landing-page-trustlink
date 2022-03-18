@@ -577,7 +577,13 @@ svg { vertical-align: baseline; }
     right: 180px;
   }
 }
-
+@media (max-width: 27em) {
+  .trustlinkIcon{
+    top: 350px;
+    right: 80px;
+    height: 200px;
+  }
+}
 
 .typographyAboutUs {
   width: 700px;
@@ -588,9 +594,14 @@ svg { vertical-align: baseline; }
   }
 }
 
-@media (max-width: 27em) {
+@media (max-width: 39em) {
   .typographyAboutUs {
-    width: 200px;
+    width: 26em;
+  }
+}
+@media (max-width: 27em){
+  .typographyAboutUsTitle {
+    width: 26em;
   }
 }
 
