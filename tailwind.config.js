@@ -20,6 +20,7 @@ module.exports = {
             height: {
                 'quarter': '25vh',
                 'half': '50vh',
+                'sixth': '60vh',
                 'three-q': '75vh'
             },
             width: {
