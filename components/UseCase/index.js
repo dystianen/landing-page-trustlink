@@ -97,7 +97,7 @@ const UseCase = () => {
             <div className={'flex flex-row h-[1097px] bg-[#05204D]'}>
                 <Carousel
                 autoPlay={false}
-                    className={'w-full h-[1100px]'}
+                    className={'w-full '}
                     indicatorContainerProps={{
                         style: {
                             position: 'absolute',
@@ -138,7 +138,7 @@ const UseCase = () => {
                     PrevIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-left.svg'}/>}
                     animation={'slide'}
                 >
-                     <div className={'flex flex-row lg:h-[1100px] md:h-[900px] bg-[#05204D]'}>
+                     <div className={'flex flex-row lg:h-[1100px] md:h-[1100px] sm:h-[1100px] bg-[#05204D]'}>
                         <div className={'flex justify-center items-center w-2/4 z-20'}>
                             <Image preview={false} className="lg:w-[325px] md:w-[280px] lg:ml-24 md:ml-14" src={'/assets/phone-face.png'}/>
                         </div>
@@ -158,7 +158,7 @@ const UseCase = () => {
                         <div className={'z-10 line-mid'}/>
                         <div className={'z-10 line-bottom'}/>
                     </div>
-                    <div className={'flex flex-row lg:h-[1100px] md:h-[900px] bg-[#4A90E2]'}>
+                    <div className={'flex flex-row lg:h-[1100px] md:h-[1100px] sm:h-[1100px] bg-[#4A90E2]'}>
                         <div className={'absolute -left-10 z-20'}>
                             <p className={'opacity-50 text-transparent monsterrat stroke lg:text-[410px] md:text-[200px] leading-none'}>Airport</p>
                         </div>
