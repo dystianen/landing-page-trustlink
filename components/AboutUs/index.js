@@ -19,7 +19,7 @@ const AboutMePage = () => {
     }, []);
 
     return (
-        <div className='ml-20 max-w-[95em] overflow-y-hidden lg:overflow-y-hidden pb-10 mt-[10vw]'>
+        <div className='ml-20 max-w-[110em] overflow-y-hidden lg:overflow-y-hidden pb-10 mt-[10vw]'>
             <div className={'relative w-full h-[550px] items-start flex justify-end'}>
                 {/*<Fade bottom when={transition}>*/}
                 {/*    <div className={'md:flex invisible mobilel:visible absolute bottom-[-320px] left-[-30px] xl:bottom-[-250px] xl:left-[-70px]'}>*/}
