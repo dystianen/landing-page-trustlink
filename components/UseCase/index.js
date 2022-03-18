@@ -16,88 +16,26 @@ const UseCase = () => {
     }, []);
 
     return (
-        // <div className={'ml-20'}>
-        //     <section className={'relative'}>
-        //         <div className={'relative h-[350px] md:h-[525px]'}>
-        //             <Image preview={false} className="w-[100vw] h-[350px] md:h-[525px] brightness-50" src={'/assets/img-about-us.png'}/>
-        //             <div className={'absolute top-0 left-0'}>
-        //                 <Image preview={false} className="w-[100px] md:w-[200px] lg:w-[250px] grayscale invert opacity-50" src={'/assets/accents/logo-usecase-top.png'}/>
-        //             </div>
-        //             <div className={'absolute right-0 -bottom-2'}>
-        //                 <Image preview={false} className="w-[100px] md:w-[200px] lg:w-[250px] grayscale invert opacity-50" src={'/assets/accents/logo-usecase-bottom.png'}/>
-        //             </div>
-        //         </div>
-        //         <div className={'absolute left-6 md:left-12 bottom-10'}>
-        //             <p className={'text-white text-4xl md:text-6xl font-bold mb-5 monsterrat'}>Modern.</p>
-        //             <p className={'text-white text-3xl md:text-5xl monsterrat'}>Biometric Use Case.</p>
-        //         </div>
-        //     </section>
-        //     <section>
-        //         <Carousel
-        //             autoPlay={false}
-        //             className={'w-full h-[1100px]'}
-        //             indicatorContainerProps={{
-        //                 style: {
-        //                     position: 'absolute',
-        //                     top: '55%',
-        //                     right: '-2%',
-        //                     zIndex: 10
-        //                 },
-        //             }}
-        //             indicatorIconButtonProps={{
-        //                 style: {
-        //                     color : '#B7DFFF'
-        //                   }
-        //             }}
-        //             activeIndicatorIconButtonProps={{
-        //                 style: {
-        //                     backgroundColor: '#fff',
-        //                     color: '#fff',
-        //                     width: 25,
-        //                     height: 10,
-        //                     borderRadius: 10,
-        //                     marginRight: 5,
-        //                     marginLeft: 5,
-        //                 }
-        //             }}
-        //             navButtonsAlwaysVisible={true}
-        //             navButtonsProps={{
-        //                 style: {
-        //                     backgroundColor: 'rgba(0,0,0, .1)'
-        //                 },
-        //                 className: 'arrow-usecase'
-        //             }}
-        //             navButtonsWrapperProps={{
-        //                 style: {
-        //                     margin: '0 20px 0 20px',
-        //                 }
-        //             }}
-        //             NextIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-right.svg'}/>}
-        //             PrevIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-left.svg'}/>}
-        //             animation={'slide'}
-        //         >
-                   
-        //         </Carousel>
-        //     </section>
-        // </div>
         <div className={'ml-20'}>
-            <div className={"relative h-[519px]"} style={{background: "url('/assets/base_img_card.jpg') ", backgroundPosition:'fill'}}>
-                    {/* <Image preview={false} className="w-full brightness-50 h-[519px]"  src={'/assets/base_img_card.jpg'}/> */}
-                    <div className={'absolute z-20'}>
+            <section className={'relative'}>
+                <div className={'relative h-[350px] md:h-[525px]'}>
+                    <Image preview={false} className="w-[100vw] h-[350px] md:h-[525px] brightness-50" src={'/assets/img-about-us.png'}/>
+                    <div className={'absolute top-0 left-0'}>
                         <Image preview={false} className="w-[100px] md:w-[200px] lg:w-[250px] grayscale invert opacity-50" src={'/assets/accents/logo-usecase-top.png'}/>
                     </div>
-                    <div className={'absolute right-0 -bottom-1 z-20'}>
-                        <Image preview={false} className="w-[100px] md:w-[200px] lg:w-[250px] grayscale invert opacity-50" src={' /assets/accents/logo-usecase-bottom.png'}/>
+                    <div className={'absolute right-0 -bottom-2'}>
+                        <Image preview={false} className="w-[100px] md:w-[200px] lg:w-[250px] grayscale invert opacity-50" src={'/assets/accents/logo-usecase-bottom.png'}/>
                     </div>
-                    <div className={'absolute left-[2.2rem] bottom-[2.3rem] z-20'}>
-                        <b className={'text-white text-4xl md:text-6xl font-bold mb-5 monsterrat'}>Modern.</b>
-                        <p className={'text-white text-3xl md:text-5xl monsterrat'}>Biometric Use Case</p>
-                    </div>
-            </div>
-            <div className={'flex flex-row h-[1097px] bg-[#05204D]'}>
+                </div>
+                <div className={'absolute left-6 md:left-12 bottom-10'}>
+                    <p className={'text-white text-4xl md:text-6xl font-bold mb-5 monsterrat'}>Modern.</p>
+                    <p className={'text-white text-3xl md:text-5xl monsterrat'}>Biometric Use Case.</p>
+                </div>
+            </section>
+            <section>
                 <Carousel
-                autoPlay={false}
-                    className={'w-full h-[1100px]'}
+                    autoPlay={false}
+                    className={'w-full h-[400px] lg:h-[1100px]'}
                     indicatorContainerProps={{
                         style: {
                             position: 'absolute',
@@ -181,7 +119,7 @@ const UseCase = () => {
                         <div className={'z-10 line-bottom'}/>
                     </div>
                 </Carousel>
-            </div>
+            </section>
         </div>
     )
 }
