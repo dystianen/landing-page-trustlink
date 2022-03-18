@@ -32,7 +32,7 @@ const AboutMePage = () => {
 
                         {/* preview image */}
                 <div className={'flex relative w-["100%"] justify-center'}>
-                        <Image className={"object-fill"} preview={false} src={"/assets/meeting_stock_image.png"} height={450} width={1040}/>
+                        <Image preview={false} src={"/assets/meeting_stock_image.png"} height={450} width={1040}/>
                     <div className={'flex absolute right-0 bottom-0 items-end'}>
                         <Image src={"/assets/about_me_right.png"} preview={false} id={'about_me'} />
                     </div>
