@@ -35,7 +35,7 @@ const UseCase = () => {
             <section>
                 <Carousel
                     autoPlay={false}
-                    className={'w-full h-[1100px]'}
+                    className={'w-full h-[400px] lg:h-[1100px]'}
                     indicatorContainerProps={{
                         style: {
                             position: 'absolute',
