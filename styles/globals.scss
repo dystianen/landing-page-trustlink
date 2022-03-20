@@ -325,8 +325,12 @@ svg { vertical-align: baseline; }
   bottom: -250px;
 }
 
-.monsterrat {
+.montserrat {
   font-family: 'Montserrat'
+}
+
+.ant-steps-item-title {
+  display: none !important;
 }
 
 .stroke {
@@ -378,6 +382,10 @@ svg { vertical-align: baseline; }
 .arrow-usecase:hover{
   opacity: 0.5 !important;
   filter: brightness(120%) !important;
+}
+
+.arrow-prev-product > button[aria-label='Previous'], .arrow-next-product > button[aria-label='Next'] {
+  display: none;
 }
 
 .css-1abc02a:hover, .css-hn784z:hover button{
