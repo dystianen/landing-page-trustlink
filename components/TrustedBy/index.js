@@ -10,55 +10,55 @@ const TrustedBy = () => {
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6 ',
             src: 'assets/logo/adie-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/banque-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/alma-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/bnp-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/aria-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/adie-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/banque-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/alma-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/aria-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
     ]
@@ -82,7 +82,7 @@ const TrustedBy = () => {
                                 {logos.map((props, index) => {
                                     return (
                                         <div key={index} className={props.class_name}>
-                                            <Image src={props.src} height={props.height} preview={ props.priview}/>
+                                            <Image src={props.src} height={props.height} preview={ props.preview}/>
                                         </div>
                                     )
                                 })}

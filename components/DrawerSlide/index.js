@@ -18,7 +18,7 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
                                     {
                                         menu.map((it, index) => (
                                             <Button type="link" className={'flex flex-row w-full h-8 justify-between items-center mb-7'} ghost key={index} onClick={() => it.name === 'Products.' ? setShowProduct(true) : null}>
-                                                <h1 className={'text-xl md:text-2xl font-bold mb-0 monsterrat'} style={{color: '#04204D'}}>{it.name}</h1>
+                                                <h1 className={'text-xl md:text-2xl font-bold mb-0 montserrat'} style={{color: '#04204D'}}>{it.name}</h1>
                                                 <RightOutlined className={'text-lg opacity-50'} style={{color: '#04204D'}} />
                                             </Button>
                                         ))
@@ -36,25 +36,25 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
                         <div className={`flex flex-col lg:${showProduct ? "flex-col lg:pt-0" : "flex-row justify-between"} pt-10 md:pt-24`} style={{ transition: 'width 300ms ease-in-out'}}>
                             <div className={`flex flex-col`}>
                                 <div className={'flex-col text-white mb-10'}>
-                                    <p className={'text-xs opacity-80 mb-3 monsterrat'} style={{letterSpacing: 1.8}}>CALL US</p>
-                                    <p className={`text-xl ${showProduct ? 'md:text-xl' : 'md:text-2xl'} mb-2 monsterrat`}>(021) 22902348</p>
-                                    <p className={'text-xs opacity-80 monsterrat'} style={{letterSpacing: 0.3}}>Mon - Fri (8:30 - 17:30)</p>
+                                    <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>CALL US</p>
+                                    <p className={`text-xl ${showProduct ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>(021) 22902348</p>
+                                    <p className={'text-xs opacity-80 montserrat'} style={{letterSpacing: 0.3}}>Mon - Fri (8:30 - 17:30)</p>
                                 </div>
                                 <div className={'flex-col text-white mb-10'}>
-                                    <p className={'text-xs opacity-80 mb-3 monsterrat'} style={{letterSpacing: 1.8}}>Email</p>
-                                    <p className={`text-xl ${showProduct ? 'md:text-xl' : 'md:text-2xl'} mb-2 monsterrat`}>info@withtrustlink.com</p>
+                                    <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>Email</p>
+                                    <p className={`text-xl ${showProduct ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>info@withtrustlink.com</p>
                                 </div>
                             </div>
                             <div className={'flex-col text-white mb-10'}>
-                                <p className={'text-xs opacity-80 mb-3 monsterrat lg:mr-16'} style={{letterSpacing: 1.8}}>SOCIAL MEDIA</p>
-                                <p className={`text-xl ${showProduct ? 'md:text-xl' : 'md:text-2xl'} mb-2 monsterrat`}>Instagram</p>
-                                <p className={`text-xl ${showProduct ? 'md:text-xl' : 'md:text-2xl'} mb-2 monsterrat`}>Facebook</p>
-                                <p className={`text-xl ${showProduct ? 'md:text-xl' : 'md:text-2xl'} mb-2 monsterrat`}>LinkedIn</p>
+                                <p className={'text-xs opacity-80 mb-3 montserrat lg:mr-16'} style={{letterSpacing: 1.8}}>SOCIAL MEDIA</p>
+                                <p className={`text-xl ${showProduct ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>Instagram</p>
+                                <p className={`text-xl ${showProduct ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>Facebook</p>
+                                <p className={`text-xl ${showProduct ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>LinkedIn</p>
                             </div>
                         </div>
                         <div className={'flex flex-row w-full justify-start'}>
                             <div className={'w-full md:w-auto mb-12 md:mb-0'}>
-                                <h1 className={`text-white text-xl  ${showProduct ? 'md:text-xl' : 'md:text-2xl'} font-bold mb-3 monsterrat`}>The Most Advance <br/> <span className={'font-light'}>End-To-End</span> <br/>Digital Biometrics <br/> Solution Provider</h1>
+                                <h1 className={`text-white text-xl  ${showProduct ? 'md:text-xl' : 'md:text-2xl'} font-bold mb-3 montserrat`}>The Most Advance <br/> <span className={'font-light'}>End-To-End</span> <br/>Digital Biometrics <br/> Solution Provider</h1>
                             </div>
                         </div>
                     </div>

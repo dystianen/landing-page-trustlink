@@ -7,10 +7,10 @@ const WeAimed = () => {
                     <Image preview={false} src={"../assets/icon.png"}/>
                 </Col>
                 <Col className="ml-8 py-4 md:pt-14 lg:pt-8 2xl:ml-4 2xl:pt-8" span={12} xs={{ order: 2 }} sm={{ order: 2 }} md={{ order: 2 }} lg={{ order: 2 }}>
-                    <div className="monsterrat text-lg md:text-2xl lg:text-3xl xl:text-4xl">
+                    <div className="montserrat text-lg md:text-2xl lg:text-3xl xl:text-4xl">
                         We Aim To Be <span className="font-bold">The Most Advance</span> End-To-End <span className="font-bold">Digital Biometrics Solution Provider</span>
                     </div>
-                    <div className="monsterrat text-xs pt-4 lg:text-lg 2xl:pt-2 2xl:text-2xl">
+                    <div className="montserrat text-xs pt-4 lg:text-lg 2xl:pt-2 2xl:text-2xl">
                         Accomplish great contribution in the digitalized economic solution across various organizations and thrive and nurture infrastructure in Indonesia.
                     </div>
                 </Col>
