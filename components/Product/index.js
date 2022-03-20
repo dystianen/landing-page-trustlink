@@ -1,16 +1,33 @@
 import React, {useState} from 'react';
-import {Image, Popover, Steps} from "antd";
-import Carousel from 'react-material-ui-carousel'
-
+import {Image, Popover, Steps, Button, Row, Col} from "antd";
+import Carousel from 'react-material-ui-carousel';
 
 export const Product = () => {
     const [current, setCurrent] = useState(0)
     const { Step } = Steps;
 
-    const onChange = current => {
-        console.log('onChange:', current);
-        setCurrent(current)
-    };
+    const data = [
+        {
+            name: 'Live',
+            icon: '/assets/logo/trust-live/match.png',
+        },
+        {
+            name: 'Scan',
+            icon: '/assets/logo/trust-scan/scan.png',
+        },
+        {
+            name: 'Verify',
+            icon: '/assets/logo/trust-verify/verification.png',
+        },
+        {
+            name: 'Connect',
+            icon: '/assets/logo/trust-connect/icon-without-text.png',
+        },
+        {
+            name: 'Score',
+            icon: '/assets/logo/trust-score/score.png',
+        }
+    ]
 
     let items = [
         {
@@ -31,81 +48,39 @@ export const Product = () => {
             icon: '/assets/phone-face2.png',
             desc: 'TrustVerification is the highest compliance to verify identity by comparing the face biometric to Dukcapil database. TrustLink is the official “Platform Bersama” operator'
         },
-        // {
-        //     name: 'TrustConnect',
-        //     icon: '/assets/logo/trust-connect/icon-without-text.png'
-        // },
-        // {
-        //     name: 'TrustScore',
-        //     icon: '/assets/logo/trust-score/score.png'
-        // }
-    ]
-
-    const content = (
-        <Carousel
-            autoPlay={false}
-            className={'w-full h-[1000px]'}
-            indicators={false}
-            navButtonsAlwaysVisible={true}
-            navButtonsProps={{
-                style: {
-                    backgroundColor: '#000000'
-                }
-            }}
-            navButtonsWrapperProps={{
-                style: {
-                    margin: '0 20px 0 20px',
-                },
-            }}
-            NextIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-right.svg'}/>}
-            PrevIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-left.svg'}/>}
-            animation={'slide'}
-        >
-            {
-                items.map( (item, i) => (
-                    <div key={i} className={'flex flex-row h-[1000px]'}>
-                        <div className={'flex justify-center items-center w-2/4 z-20'}>
-                            <Image preview={false} className="w-[325px] ml-24" src={item.icon}/>
-                        </div>
-                        <div className={'flex flex-col justify-center w-2/4 mb-48 z-20'}>
-                            <div>
-                                <p className={'text-6xl mb-0 monsterrat leading-none font-bold'} style={{color: '#04204D'}}>{item.name}<span style={{color: '#FE6601'}}>{item.name2}</span></p>
-                            </div>
-                            <div className={'mt-14'}>
-                                <p style={{color: '#04204D'}} className={"w-[65%] text-base monsterrat"}>
-                                    {item.desc}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                ) )
-            }
-        </Carousel>
-    )
-
-    const data = [
         {
-            name: 'TrustLive',
-            icon: '/assets/logo/trust-live/match.png',
-            content: content
+            name: 'Trust',
+            name2: 'Connect',
+            icon: '/assets/phone-face.png',
+            desc: 'TrustScan is a powerful AI-powered machine learning trained to scan and extract data from ID’s and auto-fill your customer data - making onboarding process seamless and no hassle.'
         },
         {
-            name: 'TrustScan',
-            icon: '/assets/logo/trust-scan/scan.png'
-        },
-        {
-            name: 'TrustVerify',
-            icon: '/assets/logo/trust-verify/verification.png'
-        },
-        {
-            name: 'TrustConnect',
-            icon: '/assets/logo/trust-connect/icon-without-text.png'
-        },
-        {
-            name: 'TrustScore',
-            icon: '/assets/logo/trust-score/score.png'
+            name: 'Trust',
+            name2: 'Score',
+            icon: '/assets/phone-face3.png',
+            desc: 'TrustScan is a powerful AI-powered machine learning trained to scan and extract data from ID’s and auto-fill your customer data - making onboarding process seamless and no hassle.'
         }
     ]
+
+    const Item = ({item}) => {
+        return (
+            <div className={'flex w-full h-auto'}>
+                <div className={'flex justify-center items-center w-2/4 text-center'}>
+                    <Image preview={false} className="w-[325px] ml-24 justify-end items-end" src={item.icon}/>
+                </div>
+                <div className={'flex flex-col justify-center w-2/4'}>
+                    <div>
+                        <p className={'text-6xl mb-0 montserrat leading-none font-bold'} style={{color: '#04204D'}}>{item.name}<span style={{color: '#FE6601'}}>{item.name2}</span></p>
+                    </div>
+                    <div className={'mt-14'}>
+                        <p style={{color: '#04204D'}} className={"w-[65%] text-base montserrat"}>
+                            {item.desc}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <>
@@ -133,23 +108,53 @@ export const Product = () => {
                     </p>
                 </div>
             </div>
-            <Steps current={current} className={'mt-16 w-11/12 h-20'} onChange={onChange}>
-                {data.map((it, index) => (
-                    <Step
-                        key={index}
-                        title={it.name}
-                        icon={
-                            <div className={'rounded-full border-4 p-3 w-16'} style={{borderColor: '#FE6601'}}>
-                                <Image preview={false} src={it.icon}/>
-                            </div>
+            <div className={'relative w-full'}>
+                <Steps current={current} className={'mt-16 w-11/12 h-48'} onChange={(num) => setCurrent(num)}>
+                    {data.map((it, index) => (
+                        <Step
+                            className={'flex justify-center items-center'}
+                            key={index}
+                            icon={
+                                <div className={`flex flex-col justify-content items-center ${current === index ? 'mt-8' : 'mt-12'}`}>
+                                    <div className={`rounded-full border-4 ${current === index ? 'w-32 h-32 mb-10 border-[#FE6601]' : 'w-24 h-24 border-[#FE944D]'} mb-2 bg-white z-10 flex justify-center items-center`}
+                                         style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? '0 0 20px 1px #FE6601' : null}}
+                                    >
+                                        <Image preview={false} src={it.icon} className={'w-[50px]'}/>
+                                    </div>
+                                    <p className={`w-40 text-lg montserrat text-[#B4BCC9] ${current === index ? 'hidden' : null}`}><span className={'font-bold'}>Trust</span>{it.name}</p>
+                                </div>
+                            }
+                        />
+                    ))}
+                    <hr className={'absolute right-0 top-[48%] w-[90%] h-1 bg-[#FE6601] z-0'}/>
+                </Steps>
+            </div>
+
+            <div className={'mt-28'}>
+                <Carousel
+                    navButtonsAlwaysVisible={true}
+                    animation={'slide'}
+                    next={num => setCurrent(num)}
+                    prev={num => setCurrent(num)}
+                    index={current}
+                    autoPlay={false}
+                    NextIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-right.svg'}/>}
+                    PrevIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-left.svg'}/>}
+                    indicators={false}
+                    navButtonsProps={{
+                        style: {
+                            backgroundColor: '#000000',
+                            opacity: 0.15,
                         }
-                    />
-                ))}
-            </Steps>
-            <div style={{minHeight: '200px',
-                marginTop: 16,
-                borderRadius: 2}}>
-                {data[current].content}
+                    }}
+                    navButtonsWrapperProps={{
+                        className: `mr-5 ml-5 ${!current ? 'arrow-prev-product' : current == 4 ? 'arrow-next-product' : null}`
+                    }}
+                >
+                    {
+                        items.map( (item, i) => <Item key={i} item={item} /> )
+                    }
+                </Carousel>
             </div>
         </>
     )

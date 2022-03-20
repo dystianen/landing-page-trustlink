@@ -45,9 +45,9 @@ export default function Home() {
   // checkRerouteLoggedUser(store,router);
 
 
-  return (<>
-
-    <div style={{ padding: 16 }}>
+  return (
+      <div className={'overflow-hidden'}>
+    <div>
       <DrawerSlide menu={menu} isOpen={isOpen} />
       <div className={'fixed w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 10000 }}>
         <button
@@ -181,6 +181,6 @@ export default function Home() {
     <div className="h-quarter" />
     <Intouch />
     <Footer />
-  </>
+  </div>
   )
 }
