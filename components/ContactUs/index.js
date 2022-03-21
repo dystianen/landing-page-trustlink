@@ -72,7 +72,7 @@ const Intouch = observer(() => {
                                                     message:'You must input First Name'
                                                 },
                                             ]}>
-                                            <Input className={'border-transparent h-10'} style={{backgroundColor: '#B4BCC9'}}/>
+                                            <Input className={'border-transparent border-[1px] rounded border-solid border-gray-400 h-10'} />
                                         </Form.Item>
                                     </Col>
                                     <Col xs={{span: 24}} sm={{span: 12}}>
@@ -85,7 +85,7 @@ const Intouch = observer(() => {
                                                     message:'You must input Last Name'
                                                 },
                                             ]}>
-                                            <Input className={'border-transparent h-10'} style={{backgroundColor: '#B4BCC9'}}/>
+                                            <Input className={'border-transparent border-[1px] rounded border-solid border-gray-400 h-10'} />
                                         </Form.Item>
                                     </Col>
                                 </Row>
@@ -98,7 +98,7 @@ const Intouch = observer(() => {
                                             message:'You must input your company'
                                         },
                                     ]}>
-                                    <Input className={'border-transparent h-10'} style={{backgroundColor: '#B4BCC9'}}/>
+                                    <Input className={'border-transparent border-[1px] rounded border-solid border-gray-400 h-10'} />
                                 </Form.Item>
                                 <Form.Item
                                     label={<label className={'text-gray-500 font-normal lg:text-xl'}>Email (Company’s Email Only)</label>}
@@ -110,7 +110,7 @@ const Intouch = observer(() => {
                                         },
                                         { type: 'email' }
                                     ]}>
-                                    <Input className={'border-transparent h-10'} style={{backgroundColor: '#B4BCC9'}}/>
+                                    <Input className={'border-transparent border-[1px] rounded border-solid border-gray-400 h-10'} />
                                 </Form.Item>
                                 <Form.Item
                                     label={<label className={'text-gray-500 font-normal lg:text-xl'}>Phone Number</label>}
@@ -121,7 +121,7 @@ const Intouch = observer(() => {
                                             message:'You must input phone number'
                                         },
                                     ]}>
-                                    <Input type={"number"} className={'border-transparent h-10 w-full validation'} style={{backgroundColor: '#B4BCC9'}}/>
+                                    <Input type={"number"} className={'border-transparent border-[1px] rounded border-solid border-gray-400 h-10 w-full validation'} />
                                 </Form.Item>
                                 <Form.Item
                                     label={<label className={'text-gray-500 font-normal lg:text-xl'}>How Can We Help?</label>}
@@ -132,7 +132,7 @@ const Intouch = observer(() => {
                                             message:'Please tell us how can we help you'
                                         },
                                     ]}>
-                                    <Input.TextArea autoSize={{ minRows: 3, maxRows: 4 }} className={'border-transparent'} style={{backgroundColor: '#B4BCC9'}}/>
+                                    <Input.TextArea autoSize={{ minRows: 3, maxRows: 4 }} className={'border-transparent border-[1px] rounded border-solid border-gray-400'} />
                                 </Form.Item>
                                 <div className={'flex justify-end xl:pt-10'}>
                                     <Button
@@ -153,14 +153,112 @@ const Intouch = observer(() => {
                 </div>
             </div>
         // </div>
-        // <div className={'flex  w-full justify-center h-52'}>
-        //     <div className={'grid grid-rows-2 w-6/12  '}>
-        //         <div className={'inline-flex items-center'}>
-        //             <hr style={{ width: '4em', border: '0', borderTop: 'solid rgba(156, 163, 175) 3px' }} className={'inline-block  opacity-30 mr-3 '} />
-        //             <p className={'lg:text-sm mb-0 font-medium tracking-[.23em] uppercase'} style={{ color: '#818FA6', fontFamily:'montserrat' }}>First To Know</p>
+
+        // Redesign
+        // <div className={'flex  w-full justify-center'}>
+        //     <div className={'grid  gap-4 w-6/12'}>
+        //         <div className={'inline ml-5 '}>
+        //             <div className={'inline-flex items-center'}>
+        //                 <hr style={{ width: '4em', border: '0', borderTop: 'solid rgba(156, 163, 175) 2.5px' }} className={'inline-block  opacity-30 mr-3 '} />
+        //                 <p className={'text-sm mb-0 font-medium tracking-[.23em] uppercase'} style={{ color: '#818FA6', fontFamily: 'montserrat' }}>First To Know</p>
+        //             </div>
+        //             <p className={'lg:text-5xl sm:text-4xl'} style={{color :'#1D365F'}}>
+        //                 <b className={'lg:text-7xl sm:text-6xl '} >Intouch.</b> Ask Anything.
+        //             </p>
         //         </div>
-        //         <div>
-        //             Ini formnya
+        //         <div className={'flex justify-center'}>
+        //             <Form
+        //                         layout={"vertical"}
+        //                         className={'w-full'}
+        //                         form={form}
+        //                     >
+        //                         <Row gutter={16}>
+        //                             <Col xs={{span: 24}} sm={{span: 12}}>
+        //                                 <Form.Item
+        //                                     label={<label className={'text-gray-500 font-normal lg:text-xl '}>First Name</label>}
+        //                                     name={'firstname'}
+        //                                     rules={[
+        //                                         {
+        //                                             required: true,
+        //                                             message:'You must input First Name'
+        //                                         },
+        //                                     ]}>
+        //                                     <Input className={'border-transparent border-[1px] rounded border-solid border-gray-400 h-10'} />
+        //                                 </Form.Item>
+        //                             </Col>
+        //                             <Col xs={{span: 24}} sm={{span: 12}}>
+        //                                 <Form.Item
+        //                                     label={<label className={'text-gray-500 font-normal lg:text-xl'}>Last Name</label>}
+        //                                     name={'lastname'}
+        //                                     rules={[
+        //                                         {
+        //                                             required: true,
+        //                                             message:'You must input Last Name'
+        //                                         },
+        //                                     ]}>
+        //                                     <Input className={'border-transparent border-[1px] rounded border-solid border-gray-400 h-10'} />
+        //                                 </Form.Item>
+        //                             </Col>
+        //                         </Row>
+        //                         <Form.Item
+        //                             label={<label className={'text-gray-500 font-normal lg:text-xl'}>Company</label>}
+        //                             name={'company'}
+        //                             rules={[
+        //                                 {
+        //                                     required: true,
+        //                                     message:'You must input your company'
+        //                                 },
+        //                             ]}>
+        //                             <Input className={'border-transparent border-[1px] rounded border-solid border-gray-400 h-10'} />
+        //                         </Form.Item>
+        //                         <Form.Item
+        //                             label={<label className={'text-gray-500 font-normal lg:text-xl'}>Email (Company’s Email Only)</label>}
+        //                             name={'email'}
+        //                             rules={[
+        //                                 {
+        //                                     required: true,
+        //                                     message:'You must input your company email'
+        //                                 },
+        //                                 { type: 'email' }
+        //                             ]}>
+        //                             <Input className={'border-transparent border-[1px] rounded border-solid border-gray-400 h-10'} />
+        //                         </Form.Item>
+        //                         <Form.Item
+        //                             label={<label className={'text-gray-500 font-normal lg:text-xl'}>Phone Number</label>}
+        //                             name={'phone_number'}
+        //                             rules={[
+        //                                 {
+        //                                     required: false,
+        //                                     message:'You must input phone number'
+        //                                 },
+        //                             ]}>
+        //                             <Input type={"number"} className={'border-transparent border-[1px] rounded border-solid border-gray-400 h-10 w-full validation'} />
+        //                         </Form.Item>
+        //                         <Form.Item
+        //                             label={<label className={'text-gray-500 font-normal lg:text-xl'}>How Can We Help?</label>}
+        //                             name={'help'}
+        //                             rules={[
+        //                                 {
+        //                                     required: false,
+        //                                     message:'Please tell us how can we help you'
+        //                                 },
+        //                             ]}>
+        //                             <Input.TextArea autoSize={{ minRows: 3, maxRows: 4 }} className={'border-transparent border-[1px] rounded border-solid border-gray-400'}/>
+        //                         </Form.Item>
+        //                         <div className={'flex justify-end'}>
+        //                             <Button
+        //                                 loading={loading}
+        //                                 // type="primary"
+        //                                 className={'rounded-lg w-[50%] h-12 py-2 mb-8 lg:text-xl bg-[#1D365F] text-white'}
+        //                                 onClick={async () => {
+        //                                     setLoading(true);
+        //                                     await submitForm();
+        //                                 }}
+        //                             >
+        //                                 Submit
+        //                             </Button>
+        //                         </div>
+        //                     </Form>
         //         </div>
         //     </div>
         // </div>
