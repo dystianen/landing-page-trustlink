@@ -36,7 +36,7 @@ const UseCase = () => {
                         style: {
                             position: 'absolute',
                             top: '55%',
-                            right: '-2%',
+                            right: '-3%',
                             zIndex: 10
                         },
                     }}
