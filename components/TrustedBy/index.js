@@ -1,62 +1,64 @@
 import { Carousel, Image } from "antd";
 import { propertyOf } from "lodash";
 import React from "react";
-
+import {useMediaQuery} from 'react-responsive'
 
 const TrustedBy = () => {
+      const isDesktopOrLaptop = useMediaQuery({query: '(min-width: 1224px)'})
+
     const logos = [
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6 ',
             src: 'assets/logo/adie-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/banque-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/alma-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/bnp-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/aria-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/adie-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/banque-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/alma-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
         {
             class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/aria-logo.png',
-            priview : false,
+            preview : false,
             height : 45
         },
     ]
@@ -76,11 +78,11 @@ const TrustedBy = () => {
                 {/* logos */}
                 <div className={'flex flex-row justify-end  mt-6 z-50'}>
                     <div className={"bg-gray-300  w-[95%]"}>
-                            <Carousel autoplay dots={false} slidesToShow={5}>
+                        <Carousel dots={true} slidesToShow={ isDesktopOrLaptop ? 5: 3 }>
                                 {logos.map((props, index) => {
                                     return (
                                         <div key={index} className={props.class_name}>
-                                            <Image src={props.src} height={props.height} preview={ props.priview}/>
+                                            <Image src={props.src} height={props.height} preview={ props.preview}/>
                                         </div>
                                     )
                                 })}

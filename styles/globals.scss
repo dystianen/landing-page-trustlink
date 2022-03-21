@@ -325,8 +325,12 @@ svg { vertical-align: baseline; }
   bottom: -250px;
 }
 
-.monsterrat {
+.montserrat {
   font-family: 'Montserrat'
+}
+
+.ant-steps-item-title {
+  display: none !important;
 }
 
 .stroke {
@@ -380,9 +384,28 @@ svg { vertical-align: baseline; }
   filter: brightness(120%) !important;
 }
 
+.arrow-prev-product > button[aria-label='Previous'], .arrow-next-product > button[aria-label='Next'] {
+  display: none;
+}
+
 .css-1abc02a:hover, .css-hn784z:hover button{
   opacity: 1;
   filter: brightness(1);
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: teal;
+  position: relative;
+  transform: translateX(0);
+  transition: transform 500ms ease-in-out;
+}
+.box.right {
+  transform: translateX(100%);
 }
 
 @media only screen and (min-device-width: 2560px) {
@@ -531,7 +554,76 @@ svg { vertical-align: baseline; }
   color:white !important;
 }
 
+.AboutMe{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+// for About Us
+.trustlinkIcon{
+  position: absolute;
+  top: 184px;
+  right: 384px;
+  width: 100%;
+  height: 530px;
+}
+
+@media (max-width: 80em) {
+  .trustlinkIcon{
+    right: 454px;
+  }
+}
+@media (max-width: 64em) {
+  .trustlinkIcon{
+    right: 314px;
+    height: 275px;
+    top: 294px;
+  }
+}
+@media (max-width: 48em) {
+  .trustlinkIcon{
+    right: 180px;
+  }
+}
+@media (max-width: 27em) {
+  .trustlinkIcon{
+    top: 350px;
+    right: 80px;
+    height: 200px;
+  }
+}
+
+.typographyAboutUs {
+  width: 700px;
+}
+@media (max-width: 64em) {
+  .typographyAboutUs {
+    width: 500px;
+  }
+}
+
+@media (max-width: 39em) {
+  .typographyAboutUs {
+    width: 26em;
+  }
+}
+@media (max-width: 27em){
+  .typographyAboutUsTitle {
+    width: 26em;
+  }
+}
+
+
+
+.trustlinkIconBody{
+  margin-left: auto;
+  margin-right: auto;
+}
 #about_me {
-  filter: grayscale(1) invert(1) opacity(0.4);
+  filter: grayscale(1) invert(1) opacity(0.6);
   overflow: hidden;
 }
