@@ -40,7 +40,10 @@ module.exports = {
                 '100': '28rem',
                 '104': '32rem',
                 '112': '42rem',
-            }
+            },
+            backgroundImage:()=>({
+                'banner' : "url('/assets/banner_bg.svg')"
+            })
         },
     },
     variants: {
