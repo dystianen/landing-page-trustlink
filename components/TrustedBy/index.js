@@ -3,8 +3,9 @@ import { propertyOf } from "lodash";
 import React from "react";
 import {useMediaQuery} from 'react-responsive'
 import { ParticlePage } from "../Particle";
-import Particles from "react-tsparticles";
+// import Particles from "react-tsparticles";
 import { ParticlesTrusted } from "./ParticlesTrusted";
+import { Particles } from "react-particles-js";
 
 const TrustedBy = () => {
       const isDesktopOrLaptop = useMediaQuery({query: '(min-width: 1224px)'})
