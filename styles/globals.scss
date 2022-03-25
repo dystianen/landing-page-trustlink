@@ -562,3 +562,13 @@ svg { vertical-align: baseline; }
 .about-img > .ant-image {
   height: 100%;
 }
+
+.contact-bg > .ant-image{
+  height: auto
+}
+
+@media only screen and (max-device-width: 576px) {
+  .contact-bg > .ant-image{
+    height: 100%
+  }
+}
