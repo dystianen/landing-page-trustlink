@@ -14,7 +14,7 @@ import Banner from "../components/Banner";
 import TrustedBy from "../components/TrustedBy";
 import WeAimed from "../components/We Aimed";
 import { CertificationMembership } from "../components/CertificationMembership";
-import Intouch from "../components/ContactUs";
+import ContactUs from "../components/ContactUs";
 export const checkRerouteLoggedUser = (store, router) => {
   if (typeof window !== 'undefined') {
     router.push('/under_construction')
@@ -191,7 +191,7 @@ export default function Home() {
       <div className="h-quarter" />
       <CertificationMembership />
       <div className="h-quarter" />
-      <Intouch />
+      <ContactUs />
       <Footer />
     </div>
   )
