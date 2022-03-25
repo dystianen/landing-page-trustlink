@@ -13,7 +13,7 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
         <Drawer title={null} placement="left" onClose={() => {}} closable={false} visible={isOpen} contentWrapperStyle={{width: '100%'}} bodyStyle={{padding: 0}}>
             <div className={'w-screen h-full flex flex-col md:flex-row'}>
                     <Fade when={!showProduct} duration={500}>
-                        <div className={`ml-20 px-0 border-l border-gray-300 w-auto md:w-[40%] h-full flex items-center ${showProduct ? 'hidden' : null}`}>
+                        <div className={`ml-16 sm:ml-20 px-0 border-l border-gray-300 w-auto md:w-[40%] h-full flex items-center ${showProduct ? 'hidden' : null}`}>
                             <div className={'flex flex-col py-11 px-2 sm:px-4 lg:px-18 lg:p-11 w-full'}>
                                     {
                                         menu.map((it, index) => (
@@ -31,7 +31,7 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
                             <Product show={showProduct} setShow={setShowProduct}/>
                         </div>
                     </Fade>
-                <div className={`${showProduct ? 'w-auto md:w-[35%] md:fixed md:right-0 lg:py-8' : 'w-auto md:w-[60%] md:pl-14'} h-full md:py-16 pl-6 ml-20 md:ml-0`} style={{backgroundColor: '#1D365F', transition: 'width 500ms'}}>
+                <div className={`${showProduct ? 'w-auto md:w-[35%] md:fixed md:right-0 lg:py-8' : 'w-auto md:w-[60%] md:pl-14'} h-full md:py-16 pl-6 ml-16 sm:ml-20 md:ml-0`} style={{backgroundColor: '#1D365F', transition: 'width 500ms'}}>
                     <div className={'flex flex-col w-full h-full justify-between'}>
                         <div className={`flex flex-col lg:${showProduct ? "flex-col lg:pt-0" : "flex-row justify-between"} pt-10 md:pt-24`} style={{ transition: 'width 300ms ease-in-out'}}>
                             <div className={`flex flex-col`}>
