@@ -50,8 +50,8 @@ const ContactUs = observer(() => {
                 <div className={'w-full flex justify-center mb-10'} >
                     <div className={'montserrat'}>
                         <div className={'flex flex-row items-center'}>
-                            <div className={'w-16 h-[2px] mr-6'} style={{backgroundColor: '#818FA6'}}/>
-                            <p className={'text-lg mb-0 text-center text-[#818FA6] tracking-widest'}> FIRST TO KNOW</p>
+                            <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
+                            <p className={'text-sm mb-2 text-center text-[#818FA6] tracking-widest'}> FIRST TO KNOW</p>
                         </div>
                         <div className={'flex flex-row items-end'}>
                             <p className={'text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-0 text-[#1D365F] mr-4 sm:mr-8'}>Intouch.</p>
