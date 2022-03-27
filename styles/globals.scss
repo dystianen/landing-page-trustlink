@@ -572,3 +572,9 @@ svg { vertical-align: baseline; }
     height: 100%
   }
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 360px) {.triv-top {top: 10px !important}}
+@media only screen and (min-device-width: 361px) and (max-device-width: 419px){.triv-top {top: 20px !important}}
+@media only screen and (min-device-width: 420px) and (max-device-width: 519px){.triv-top {top: 40px !important}}
+@media only screen and (min-device-width: 520px) and (max-device-width: 575px){.triv-top {top: 50px !important}}
+@media only screen and (min-device-width: 576px) and (max-device-width: 639px) {.triv-top {top: 60px !important}}

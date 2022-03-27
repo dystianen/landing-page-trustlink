@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 import AboutMePage from "../components/AboutUs";
 import Banner from "../components/Banner";
 import TrustedBy from "../components/TrustedBy";
-import WeAimed from "../components/We Aimed";
+import WeAimed from "../components/WeAimed";
 import { CertificationMembership } from "../components/CertificationMembership";
 import ContactUs from "../components/ContactUs";
 export const checkRerouteLoggedUser = (store, router) => {
@@ -188,7 +188,7 @@ export default function Home() {
       <Banner />
       <TrustedBy />
       <WeAimed />
-      <div className="h-quarter" />
+      <div className="h-[43vh]" />
       <CertificationMembership />
       <div className="h-quarter" />
       <ContactUs />
