@@ -45,9 +45,9 @@ const TrustedBy = () => {
     ]
 
     return (
-        <div className={'flex items-center w-full h-full min-h-screen pl-12 md:pl-20'}>
+        <div className={'relative flex items-center w-full h-full min-h-screen pl-12 md:pl-20 z-50 bg-[#F1F1F1]'}>
              <div className={'relative w-full h-full'}>
-                <div className={'absolute top-14 sm:top-20 lg:top-24 right-0 h-60 sm:h-72 w-[85%] bg-[#EAEDF1] z-00'}/>
+                <div className={'absolute top-14 sm:top-20 lg:top-24 right-0 h-60 sm:h-72 w-[85%] bg-[#EAEDF1]'}/>
                 <div className={'relative w-full z-10'}>
                     <div className={'flex flex-row items-center'}>
                         <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
