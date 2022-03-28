@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Image, Popover, Steps, Button, Row, Col} from "antd";
+import {Image, Popover, Steps, Button, Row, Col, Tooltip} from "antd";
 import Carousel from 'react-material-ui-carousel';
 
 export const Product = () => {
@@ -9,24 +9,28 @@ export const Product = () => {
     const data = [
         {
             name: 'Live',
-            icon: '/assets/logo/trust-live/match.png',
+            icon: '/assets/logo/trust/live.png',
         },
         {
             name: 'Scan',
-            icon: '/assets/logo/trust-scan/scan.png',
+            icon: '/assets/logo/trust/scan.png',
         },
         {
             name: 'Verify',
-            icon: '/assets/logo/trust-verify/verification.png',
+            icon: '/assets/logo/trust/verify.png',
         },
         {
             name: 'Connect',
-            icon: '/assets/logo/trust-connect/icon-without-text.png',
+            icon: '/assets/logo/trust/connect.png',
         },
         {
             name: 'Score',
-            icon: '/assets/logo/trust-score/score.png',
-        }
+            icon: '/assets/logo/trust/score.png',
+        },
+        {
+            name: 'Vision',
+            icon: '/assets/logo/trust/vision.png',
+        },
     ]
 
     let items = [
@@ -59,21 +63,27 @@ export const Product = () => {
             name2: 'Score',
             icon: '/assets/phone-face3.png',
             desc: 'TrustScan is a powerful AI-powered machine learning trained to scan and extract data from ID’s and auto-fill your customer data - making onboarding process seamless and no hassle.'
+        },
+        {
+            name: 'Trust',
+            name2: 'Vision',
+            icon: '/assets/phone-face3.png',
+            desc: 'TrustVision is a powerful AI-powered machine learning trained to scan and extract data from ID’s and auto-fill your customer data - making onboarding process seamless and no hassle.'
         }
     ]
 
     const Item = ({item}) => {
         return (
-            <div className={'flex w-full h-auto'}>
-                <div className={'flex justify-center items-center w-2/4 text-center'}>
-                    <Image preview={false} className="w-[325px] ml-24 justify-end items-end" src={item.icon}/>
+            <div className={'flex flex-col md:flex-row w-full h-auto'}>
+                <div className={'flex md:justify-center items-center w-full md:w-3/6 lg:w-2/4 text-center'}>
+                    <Image preview={false} className="w-[160px] md:w-[200px] lg:w-[325px] ml-16 md:ml-12 lg:ml-24 justify-end items-end" src={item.icon}/>
                 </div>
-                <div className={'flex flex-col justify-center w-2/4'}>
+                <div className={'flex flex-col justify-center mt-4 w-full md:w-3/6 lg:w-2/4'}>
                     <div>
-                        <p className={'text-6xl mb-0 montserrat leading-none font-bold'} style={{color: '#04204D'}}>{item.name}<span style={{color: '#FE6601'}}>{item.name2}</span></p>
+                        <p className={'text-3xl md:text-4xl lg:text-6xl mb-0 montserrat leading-none font-bold'} style={{color: '#04204D'}}>{item.name}<span style={{color: '#FE6601'}}>{item.name2}</span></p>
                     </div>
-                    <div className={'mt-14'}>
-                        <p style={{color: '#04204D'}} className={"w-[65%] text-base montserrat"}>
+                    <div className={'mt-5 md:mt-14'}>
+                        <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base montserrat"}>
                             {item.desc}
                         </p>
                     </div>
@@ -109,19 +119,21 @@ export const Product = () => {
                 </div>
             </div>
             <div className={'relative w-full'}>
-                <Steps current={current} className={'mt-16 w-11/12 h-48'} onChange={(num) => setCurrent(num)}>
+                <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-11/12 h-24 md:h-48'} onChange={(num) => setCurrent(num)}>
                     {data.map((it, index) => (
                         <Step
                             className={'flex justify-center items-center'}
                             key={index}
                             icon={
-                                <div className={`flex flex-col justify-content items-center ${current === index ? 'mt-8' : 'mt-12'}`}>
-                                    <div className={`rounded-full border-4 ${current === index ? 'w-32 h-32 mb-10 border-[#FE6601]' : 'w-24 h-24 border-[#FE944D]'} mb-2 bg-white z-10 flex justify-center items-center`}
+                                <div className={`flex flex-col justify-content items-center ${current === index ? 'mt-2 md:mt-2 lg:mt-4' : 'mt-12 md:mt-10 lg:mt-12'}`}>
+                                    <div className={`rounded-full border-4 ${current === index ? 'w-[40px] md:w-[71px] lg:w-32 h-[40px] md:h-[71px] lg:h-32 mb-10 border-[#FE6601]' : 'w-8 md:w-14 lg:w-24 h-8 md:h-14 lg:h-24 border-[#FE944D]'} mb-2 bg-white z-10 flex justify-center items-center`}
                                          style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? '0 0 20px 1px #FE6601' : null}}
                                     >
-                                        <Image preview={false} src={it.icon} className={'w-[50px]'}/>
+                                        <Tooltip title={'Trust' +it.name}>
+                                            <Image preview={false} src={it.icon} className={`${current === index ? 'w-[16px] md:w-[30px] lg:w-[50px]' :'w-[12px] md:w-[20px] lg:w-[50px]'}`}/>
+                                        </Tooltip>
                                     </div>
-                                    <p className={`w-40 text-lg montserrat text-[#B4BCC9] ${current === index ? 'hidden' : null}`}><span className={'font-bold'}>Trust</span>{it.name}</p>
+                                    <p className={`w-24 md:w-40 text-[10px] md:text-sm lg:text-lg montserrat text-[#B4BCC9] ${current === index ? 'hidden' : null}`}><span className={'font-bold hidden md:contents'}>Trust</span>{it.name}</p>
                                 </div>
                             }
                         />
@@ -130,7 +142,7 @@ export const Product = () => {
                 </Steps>
             </div>
 
-            <div className={'mt-28'}>
+            <div className={'mt-4 md:mt-28'}>
                 <Carousel
                     navButtonsAlwaysVisible={true}
                     animation={'slide'}
@@ -138,8 +150,8 @@ export const Product = () => {
                     prev={num => setCurrent(num)}
                     index={current}
                     autoPlay={false}
-                    NextIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-right.svg'}/>}
-                    PrevIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-left.svg'}/>}
+                    NextIcon={<Image preview={false} className="w-[20px] lg:w-[25px] h-[20px] lg:h-[25px]" src={'/assets/arrow-right.svg'}/>}
+                    PrevIcon={<Image preview={false} className="w-[20px] lg:w-[25px] h-[20px] lg:h-[25px]" src={'/assets/arrow-left.svg'}/>}
                     indicators={false}
                     navButtonsProps={{
                         style: {
