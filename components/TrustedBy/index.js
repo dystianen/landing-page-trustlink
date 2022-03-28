@@ -6,11 +6,14 @@ import {useMediaQuery} from 'react-responsive'
 import { ParticlesTrusted } from "./ParticlesTrusted";
 
 const TrustedBy = () => {
-      const isDesktopOrLaptop = useMediaQuery({query: '(min-width: 1224px)'})
+    const lg = useMediaQuery({query: '(min-width: 1024px)'})
+    const md = useMediaQuery({query: '(min-width: 768px)'})
+    const sm = useMediaQuery({query: '(min-width: 576px)'})
 
+    const showSlide = lg ? 5 : md ? 4: sm ? 3 : 2
     const logos = [
         {
-            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6 ',
+            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
             src: 'assets/logo/adie-logo.png',
             preview : false,
             height : 45
@@ -39,59 +42,23 @@ const TrustedBy = () => {
             preview : false,
             height : 45
         },
-        {
-            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
-            src: 'assets/logo/adie-logo.png',
-            preview : false,
-            height : 45
-        },
-        {
-            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
-            src: 'assets/logo/banque-logo.png',
-            preview : false,
-            height : 45
-        },
-        {
-            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
-            src: 'assets/logo/alma-logo.png',
-            preview : false,
-            height : 45
-        },
-        {
-            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
-            src: 'assets/logo/aria-logo.png',
-            preview : false,
-            height : 45
-        },
     ]
 
     return (
-        <div className="relative">
-             <ParticlesTrusted
-                dimention={{
-                    width: '50%',
-                    height: '100vh'
-                }}
-                numberValue={240}
-                opacity={0.8}
-                className={'home-plexus'}
-            />
-        <div className={'flex flex-row justify-between items-center w-full min-h-screen pl-20'}>
-            {/* text section */}
-             <div className={' w-full z-50 '}>
-                <div className={'relative z-50'}>
-                    <div className={'flex flex-row items-center z-50'}>
-                        <hr style={{ width: '4em', border:'0', borderTop:'solid rgba(156, 163, 175) 3px'}}  className={ 'inline-block  opacity-30 mr-3 '}/>
-                         <span className={'text-[1em] tracking-[.23em] font-bold uppercase text-gray-400 text-opacity-30'} style={{fontFamily:'montserrat'}}>Always Reliable</span>
+        <div className={'flex items-center w-full h-full min-h-screen pl-12 md:pl-20'}>
+             <div className={'relative w-full h-full'}>
+                <div className={'absolute top-14 sm:top-20 lg:top-24 right-0 h-60 sm:h-72 w-[85%] bg-[#EAEDF1] z-00'}/>
+                <div className={'relative w-full z-10'}>
+                    <div className={'flex flex-row items-center'}>
+                        <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
+                        <p className={'text-sm text-[#818FA6] mb-0 ml-6 montserrat tracking-widest'}>ALWAYS RELIABLE</p>
                     </div>
-                    <span className={'we-are-text'}>Trusted By.</span>
-                    <span style={{ fontSize: '3.4em', fontFamily: 'montserrat', fontWeight: '500', color:'#04204D', textTransform:'capitalize'}} >Clients & Partners</span>
+                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl montserrat text-[#1D365F] font-bold my-2 sm:my-6'}>Trusted by.</p>
+                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl montserrat text-[#1D365F] font-medium mb-0'}>Clients & Partners</p>
                 </div>
-                {/* logos */}
-                 <div className={'flex flex-row justify-end  mt-6 z-50'}>
-                    
-                    <div className={"bg-gray-300  w-[95%]"}>
-                        <Carousel dots={true} slidesToShow={ isDesktopOrLaptop ? 5: 3 }>
+                <div className={'flex flex-row justify-end mt-6 sm:mt-10 z-10'}>
+                    <div className={"bg-gray-300 w-[94%]"}>
+                        <Carousel dots={true} slidesToShow={showSlide} autoplay={true}>
                                 {logos.map((props, index) => {
                                     return (
                                         <div key={index} className={props.class_name}>
@@ -99,16 +66,11 @@ const TrustedBy = () => {
                                         </div>
                                     )
                                 })}
-                            </Carousel>
+                        </Carousel>
                     </div>
                 </div>
-                <div className={'flex justify-end -mt-52 z-0'}>
-                    <div className={'h-[255px] w-5/6 bg-gray-200 ' }/>
-                </div> 
             </div>
-            </div> 
-          </div>
-
+        </div>
     )
 }
 
