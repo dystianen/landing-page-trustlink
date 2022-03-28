@@ -48,7 +48,7 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
                             <div className={'flex-col text-white mb-10'}>
                                 <p className={'text-xs opacity-80 mb-3 montserrat lg:mr-16'} style={{letterSpacing: 1.8}}>SOCIAL MEDIA</p>
                                 <p className={`text-xl ${showProduct ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>Instagram</p>
-                                <p className={`text-xl ${showProduct ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>Facebook</p>
+                                <p className={`text-xl ${showProduct ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>Twitter</p>
                                 <p className={`text-xl ${showProduct ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>LinkedIn</p>
                             </div>
                         </div>
