@@ -14,7 +14,7 @@ export const CertificationMembership = () => {
             <div className={'flex justify-center montserrat mt-4'}>
                 <div className={'z-10'}>
                     <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-0 text-[#161D24]'}>World-Class</p>
-                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl text-center mt-4 text-[#161D24]'}>Certification & Membership</p>
+                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl text-center mt-4 text-[#161D24] font-medium'}>Certification & Membership</p>
                 </div>
             </div>
             <div className={'w-full sm:mt-5 flex justify-center items-center'}>

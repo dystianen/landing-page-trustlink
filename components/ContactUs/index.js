@@ -55,7 +55,7 @@ const ContactUs = observer(() => {
                         </div>
                         <div className={'flex flex-row items-end'}>
                             <p className={'text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-0 text-[#1D365F] mr-4 sm:mr-8'}>Intouch.</p>
-                            <p className={'text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1D365F] mb-0'}>Ask anything.</p>
+                            <p className={'text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1D365F] mb-0 font-medium'}>Ask anything.</p>
                         </div>
                     </div>
                 </div>
