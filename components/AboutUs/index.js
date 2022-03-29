@@ -19,9 +19,9 @@ const AboutMePage = () => {
     }, []);
 
     return (
-        <div className='pl-20 overflow-y-hidden lg:overflow-y-hidden pb-10 mt-[10vw]'>
+        <div className='pl-12 md:pl-20 overflow-y-hidden lg:overflow-y-hidden pb-10 mt-[10vw]'>
             <div className={'relative w-full h-auto items-start flex justify-center'}>
-                <div className={'flex relative w-[90%]'}>
+                <div className={'flex relative w-full lg:w-[95%] xl:w-[90%]'}>
                     <span className={'z-10 about-img'}>
                         <Image preview={false} src={"/assets/meeting_stock_image.png"} className={'h-full'} />
                     </span>
@@ -33,13 +33,17 @@ const AboutMePage = () => {
                     </div>
                 </div>
             </div>
-            <div className={'w-[60%] float-right mt-10 mr-10'}>
-                <div className={"w-[13vw]"}>
-                    <Divider orientation="right" orientationMargin={24} className={"w-[10px] text-[#818fa6] tracking-[2.1px] font-bold montserrat"}>ABOUT US</Divider>
+            <div className={'w-fullsm:w-3/5 float-right mt-20 sm:mt-10 mr-10'}>
+                <div className={'flex flex-row items-center mb-2'}>
+                    <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
+                    <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>ABOUT US</p>
                 </div>
                 <Fade when={transition} duration={1600}>
                     <div>
-                        <Title className={"font-bold text-[30px] montserrat"} >We are thrilled to advance <br />our technology to meet <br />the needs of our valued customers.</Title>
+                        <Title className={"font-bold text-lg sm:text-2xl lg:text-[30px] montserrat"}>
+                            <span className={'block leading-snug'}>We are thrilled to advance</span>
+                            <span className={'block leading-snug'}>our technology to meet </span>
+                            <span className={'leading-snug'}>the needs of our valued customers.</span></Title>
                     </div>
                     <div>
                         <Text className={'text-[#4f6382] text-[14px] montserrat'}>We are a leading digital biometric provider in Indonesia, <br />exclusively focused on comprehensive biometric recognition <br />products and highly tailored with data analytics platforms.</Text>
