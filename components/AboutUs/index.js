@@ -33,7 +33,7 @@ const AboutMePage = () => {
                     </div>
                 </div>
             </div>
-            <div className={'w-fullsm:w-3/5 float-right mt-20 sm:mt-10 mr-10'}>
+            <div className={'w-full sm:w-3/5 float-right mt-20 sm:mt-10 mr-10 pl-12 md:pl-0'}>
                 <div className={'flex flex-row items-center mb-2'}>
                     <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
                     <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>ABOUT US</p>
@@ -46,7 +46,11 @@ const AboutMePage = () => {
                             <span className={'leading-snug'}>the needs of our valued customers.</span></Title>
                     </div>
                     <div>
-                        <Text className={'text-[#4f6382] text-[14px] montserrat'}>We are a leading digital biometric provider in Indonesia, <br />exclusively focused on comprehensive biometric recognition <br />products and highly tailored with data analytics platforms.</Text>
+                        <Text className={'text-[#4f6382] text-[14px] montserrat'}>
+                            <span className={'inline md:block'}>We are a leading digital biometric provider in Indonesia,</span>
+                            <span className={'inline lg:block'}>exclusively focused on comprehensive biometric recognition </span>
+                            <span>products and highly tailored with data analytics platforms.</span>
+                        </Text>
                     </div>
                 </Fade>
             </div>
