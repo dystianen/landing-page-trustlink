@@ -10,38 +10,24 @@ const TrustedBy = () => {
     const md = useMediaQuery({query: '(min-width: 768px)'})
     const sm = useMediaQuery({query: '(min-width: 576px)'})
 
-    const showSlide = lg ? 5 : md ? 4: sm ? 3 : 2
+    const showSlide = lg ? 4 : md ? 3: sm ? 3 : 2
     const logos = [
         {
-            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
-            src: 'assets/logo/adie-logo.png',
-            preview : false,
-            height : 45
+            class_name: 'flex justify-center border-r-2 items-center text-center bg-white company-logo logo-image-gray h-20 md:h-24 xl:h-30',
+            src: 'assets/trusted_by/logo_aitb.png',
         },
         {
-            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
-            src: 'assets/logo/banque-logo.png',
-            preview : false,
-            height : 45
+            class_name: 'flex justify-center border-r-2 items-center text-center bg-white company-logo logo-image-gray h-20 md:h-24 xl:h-30',
+            src: 'assets/trusted_by/asaren-crop.png',
         },
         {
-            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
-            src: 'assets/logo/alma-logo.png',
-            preview : false,
-            height : 45
+            class_name: 'flex justify-center border-r-2 items-center text-center bg-white company-logo logo-image-gray h-20 md:h-24 xl:h-30',
+            src: 'assets/trusted_by/duitku.png',
         },
         {
-            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
-            src: 'assets/logo/bnp-logo.png',
-            preview : false,
-            height : 45
-        },
-        {
-            class_name: 'flex justify-center border-r-2 items-center text-center bg-white py-6',
-            src: 'assets/logo/aria-logo.png',
-            preview : false,
-            height : 45
-        },
+            class_name: 'flex justify-center border-r-2 items-center text-center bg-white company-logo logo-image-gray h-20 md:h-24 xl:h-30',
+            src: 'assets/trusted_by/flip.png',
+        }
     ]
 
     return (
@@ -58,11 +44,13 @@ const TrustedBy = () => {
                 </div>
                 <div className={'flex flex-row justify-end mt-6 sm:mt-10 z-10'}>
                     <div className={"bg-gray-300 w-[94%]"}>
-                        <Carousel dots={true} slidesToShow={showSlide} autoplay={true}>
+                        <Carousel dots={false} slidesToShow={showSlide} autoplay={true}>
                                 {logos.map((props, index) => {
                                     return (
                                         <div key={index} className={props.class_name}>
-                                            <Image src={props.src} height={props.height} preview={ props.preview}/>
+                                            <div className={'h-full about-img p-4'}>
+                                                <Image src={props.src} className={'h-full w-auto'} preview={false}/>
+                                            </div>
                                         </div>
                                     )
                                 })}
