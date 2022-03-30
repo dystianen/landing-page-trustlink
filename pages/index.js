@@ -16,6 +16,9 @@ import WeAimed from "../components/WeAimed";
 import { CertificationMembership } from "../components/CertificationMembership";
 import ContactUs from "../components/ContactUs";
 import {useMediaQuery} from "react-responsive";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import Link from "next/link";
 
 export const checkRerouteLoggedUser = (store, router) => {
   if (typeof window !== 'undefined') {
@@ -26,6 +29,7 @@ export const checkRerouteLoggedUser = (store, router) => {
 export default function Home() {
   const router = useRouter();
   const store = useStore();
+  const { t } = useTranslation('common');
   const [isOpen, setIsOpen] = useState(false);
   const genericHamburgerLine = `h-1 my-1 rounded-full bg-orange transition ease transform duration-300`;
   const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-orange transition ease transform duration-300`;
@@ -92,9 +96,13 @@ export default function Home() {
                     <Image preview={false} className="relative h-14 left-14 mt-4" src={'/assets/logo/text-only.png'} />
                 </div>
                 <div className={'choose-lang flex flex-row mr-10 mt-8 md:mr-32 lg:mt-10'}>
-                    <p className={'cursor-pointer font-medium'}>EN</p>
+                    <Link href={'/'} locale="en">
+                      <p className={'cursor-pointer font-medium'}>EN</p>
+                    </Link>
                     <div className={'w-px h-5 mt-1 mx-2'} style={{ backgroundColor: '#818FA6' }} />
-                    <p className={'cursor-pointer font-medium'}>ID</p>
+                    <Link href={'/'} locale="id">
+                      <p className={'cursor-pointer font-medium'}>ID</p>
+                    </Link>
                 </div>
             </div>
             <div className={'relative w-full pl-12 md:pl-20'}>
@@ -152,3 +160,9 @@ export default function Home() {
     </div>
   )
 }
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common']),
+  },
+})

@@ -1,6 +1,11 @@
 const withAntdLess = require('next-plugin-antd-less');
 const antdVariables = require('./styles/antd_variables');
+const { i18n } = require('./next-i18next.config')
 module.exports = withAntdLess({
+  i18n: {
+    locales: ['en', 'id',],
+    defaultLocale: 'en',
+  },
 
   modifyVars: antdVariables,
 

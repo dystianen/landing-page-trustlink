@@ -55,7 +55,6 @@ export const Product = observer(({show, setShow}) => {
 
                 <div className={'w-full h-full'}>
                     <div className={'w-full h-auto mt-4 md:mt-16 px-2 lg:px-5'}>
-
                         <div>
                             <div className={'inline-block md:hidden mr-4 mb-4'} onClick={() => setShow(!show)}>
                                 <div className={'w-12 h-12 rounded-full border-[1px] border-[#5B6D8A] flex justify-center items-center opacity-50'}>
@@ -76,7 +75,7 @@ export const Product = observer(({show, setShow}) => {
                                         <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mt-4 md:mt-0 md:mb-2 lg:mb-4 z-10'}>Trust<span className="text-orange">{data.title}</span></p>
                                         <p className={'md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>{data.description}</p>
                                         <div className={'absolute -bottom-2 justify-start items-start w-full left-0 z-0'}>
-                                            <Image preview={false} className="w-[40px] lg:w-[70px]" src={data.image}/>
+                                            <Image preview={false} className="w-[40px] opacity-80 lg:w-[70px]" src={data.image}/>
                                         </div>
                                     </div>
                                 </div>
