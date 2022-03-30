@@ -2,12 +2,50 @@ import {Button, Drawer, Image} from "antd";
 import {LeftOutlined, RightOutlined} from "@ant-design/icons";
 import React, {useState} from "react";
 import {observer} from "mobx-react-lite";
-import Fade from 'react-reveal/Fade';
 
 export const Product = observer(({show, setShow}) => {
 
+    const products = [
+        {
+            key: 'verify',
+            title: 'Verify',
+            description: 'TrustVerify is our product about...',
+            image: '/assets/logo/trust/verify.png'
+        },
+        {
+            key: 'scan',
+            title: 'Scan',
+            description: 'TrustScan is our product about...',
+            image: '/assets/logo/trust/scan.png'
+        },
+        {
+            key: 'live',
+            title: 'Live',
+            description: 'TrustLive is our product about...',
+            image: '/assets/logo/trust/live.png'
+        },
+        {
+            key: 'vision',
+            title: 'Vision',
+            description: 'TrustVision is our product about...',
+            image: '/assets/logo/trust/vision.png'
+        },
+        {
+            key: 'connect',
+            title: 'Connect',
+            description: 'TrustConnect is our product about...',
+            image: '/assets/logo/trust/connect.png'
+        },
+        {
+            key: 'score',
+            title: 'Score',
+            description: 'TrustScore is our product about...',
+            image: '/assets/logo/trust/score.png'
+        },
+    ]
+
     return (
-            <div className={'flex flex-row bg-white h-auto md:h-full min-h-[100vh]'}>
+            <div className={'flex montserrat overflow-hidden flex-row bg-white h-auto md:h-full min-h-[100vh]'}>
                 <div className={'ml-20 border-l border-gray-300 h-auto md:h-full'}/>
                 <div className={'border-r border-gray-300 px-5 hidden md:inline-block'} onClick={() => setShow(!show)}>
                     <div className={'mt-16 w-12 h-12 rounded-full border-[1px] border-[#5B6D8A] flex justify-center items-center opacity-50'}>
@@ -24,59 +62,26 @@ export const Product = observer(({show, setShow}) => {
                                     <LeftOutlined className={'text-xl mb-1 font-bold'}/>
                                 </div>
                             </div>
-                            <p className={'inline text-3xl mb-5 pt-2 montserrat leading-none font-bold text-[#04204D]'}>Products.</p>
-                            <p className={'text-sm pt-2 pb-6 montserrat text-[#4F6382]'}>
+                            <p className={'inline text-3xl mb-5 pt-2 leading-none font-bold text-[#04204D]'}>Products.</p>
+                            <p className={'text-sm pt-2 pb-6 text-[#4F6382]'}>
                                 Learn how the digitalize biometric of human <br/> unique pattern becomes the lead of security alignment.
                             </p>
                         </div>
-                        {/* <div className={'flex flex-row mt-8 mb-10'}>
-                            <div className={'flex flex-row items-center mr-12 lg:mr-16'}>
-                                <p className={'montserrat text-[18px] lg:text-[20px] text-[#1D365F] m-0 mr-2'}>Global Coverage</p>
-                                <RightOutlined className={'text-base text-[#1D365F]'}/>
-                            </div>
-                            <div className={'flex flex-row items-center'}>
-                                <p className={'montserrat text-[18px] lg:text-[20px] text-[#1D365F] m-0 mr-2'}>Pricing</p>
-                                <RightOutlined className={'text-base text-[#1D365F]'}/>
-                            </div>
-                        </div> */}
                     </div>
-                    <div className={'grid grid-cols-1 md:grid-cols-2 gap-0 mb-12'}>
-                        <div className={'w-full h-auto md:h-48 lg:h-52 border border-l-0 border-b-0 border-gray-300'}>
-                            <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-8 pt-6'}>
-                                <p className={'montserrat md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10'}>Biometric <br/>Recognition.</p>
-                                <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>New technology to accommodate the future of today’s businesses.</p>
-                                <div className={'absolute -bottom-2 -left-1 z-0'}>
-                                    <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[85px]" src={'/assets/finger.png'}/>
+                    <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 mb-12'}>
+                        {products.map((data, index) => {
+                            return (
+                                <div key={data.key} className={`w-full h-auto md:h-36 lg:h-52 border border-l-0 ${index >= 3 ? null : 'border-b-0'} border-gray-300`}>
+                                    <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-8'}>
+                                        <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mt-4 md:mt-0 md:mb-2 lg:mb-4 z-10'}>Trust<span className="text-orange">{data.title}</span></p>
+                                        <p className={'md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>{data.description}</p>
+                                        <div className={'absolute -bottom-2 justify-start items-start w-full left-0 z-0'}>
+                                            <Image preview={false} className="w-[40px] lg:w-[70px]" src={data.image}/>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className={'w-full h-auto md:h-48 lg:h-52 border border-l-0 border-b-0 border-gray-300'}>
-                            <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-6 pt-6'}>
-                                <p className={'montserrat md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10'}>Low Code <br/>Platform.</p>
-                                <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>New technology to accommodate the future of today’s businesses.</p>
-                                <div className={'absolute -bottom-2 left-0 z-0'}>
-                                    <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[85px]" src={'/assets/atom.png'}/>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={'w-full h-auto md:h-48 lg:h-52 border border-l-0 border-gray-300'}>
-                            <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-6 pt-6'}>
-                                <p className={'montserrat md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10'}>Secure <br/>Biometric Code.</p>
-                                <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>New technology to accommodate the future of today’s businesses.</p>
-                                <div className={'absolute -bottom-2 left-0 z-0'}>
-                                    <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[85px]" src={'/assets/shield.png'}/>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={'w-full h-auto md:h-48 lg:h-52 border border-l-0 border-gray-300'}>
-                            <div className={'relative h-full flex flex-col justify-center items-center pl-4 lg:pl-6 pt-6'}>
-                                <p className={'montserrat md:text-base lg:text-xl text-[#1D365F] leading-tight w-[90%] mb-4 z-10'}>Behaviour Analytics <br/>& Surveilance Platform.</p>
-                                <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[90%] mb-5 md:mb-0 z-10'}>New technology to accommodate the future of today’s businesses.</p>
-                                <div className={'absolute -bottom-2 left-0 z-0'}>
-                                    <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[85px]" src={'/assets/dice.png'}/>
-                                </div>
-                            </div>
-                        </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
