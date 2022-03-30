@@ -4,12 +4,13 @@ import React, {useEffect, useState} from 'react';
 import Fade from "react-reveal/Fade";
 import Slide from 'react-reveal/Slide';
 import { useRouter } from 'next/router';
-import Link from "next/link";
+import { useTranslation } from 'next-i18next';
 
 const { Title, Text } = Typography;
 
 const AboutMePage = () => {
     const router = useRouter();
+    const { t } = useTranslation('common');
     const [transition, setTransition] = useState(false);
 
     useEffect(() => {
@@ -35,20 +36,19 @@ const AboutMePage = () => {
                 <div className={'w-full sm:w-3/5'}>
                     <div className={'flex flex-row items-center mb-2'}>
                         <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
-                        <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>ABOUT US</p>
+                        <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>{t('About Us')}</p>
                     </div>
                     <Fade when={transition} duration={1600}>
                         <div>
                             <Title className={"font-bold text-lg sm:text-2xl lg:text-[30px] montserrat"}>
-                                <span className={'block leading-snug'}>We are thrilled to advance</span>
-                                <span className={'block leading-snug'}>our technology to meet </span>
-                                <span className={'leading-snug'}>the needs of our valued customers.</span></Title>
+                                <span className={'block leading-snug w-3/5'}>{t('We are thrilled to advance')}</span>
+                                {/* <span className={'block leading-snug'}>our technology to meet </span>
+                                <span className={'leading-snug'}>the needs of our valued customers.</span> */}
+                                </Title>
                         </div>
                         <div>
                             <Text className={'text-[#4f6382] text-[14px] montserrat'}>
-                                <span className={'inline md:block'}>We are a leading digital biometric provider in Indonesia,</span>
-                                <span className={'inline lg:block'}>exclusively focused on comprehensive biometric recognition </span>
-                                <span>products and highly tailored with data analytics platforms.</span>
+                                <span className={'inline md:block w-3/5'}>{t('We are a leading digital biometric')}</span>
                             </Text>
                         </div>
                     </Fade>
