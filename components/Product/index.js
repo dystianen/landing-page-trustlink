@@ -75,10 +75,10 @@ export const Product = () => {
     const Item = ({item}) => {
         return (
             <div className={'flex flex-col md:flex-row w-full h-auto'}>
-                <div className={'flex md:justify-center items-center w-full md:w-3/6 lg:w-2/4 text-center'}>
-                    <Image preview={false} className="w-[160px] md:w-[200px] lg:w-[325px] ml-16 md:ml-12 lg:ml-24 justify-end items-end" src={item.icon}/>
+                <div className={'flex justify-center items-center w-full md:w-3/6 lg:w-2/4 text-center z-10'}>
+                    <Image preview={false} className="w-[160px] md:w-[200px] lg:w-[325px]" src={item.icon}/>
                 </div>
-                <div className={'flex flex-col justify-center mt-4 w-full md:w-3/6 lg:w-2/4'}>
+                <div className={'flex flex-col justify-center mt-4 w-full md:w-3/6 lg:w-2/4 z-10'}>
                     <div>
                         <p className={'text-3xl md:text-4xl lg:text-6xl mb-0 montserrat leading-none font-bold'} style={{color: '#04204D'}}>{item.name}<span style={{color: '#FE6601'}}>{item.name2}</span></p>
                     </div>
@@ -93,25 +93,19 @@ export const Product = () => {
     }
 
     return (
-        <>
+        <div className={'relative h-auto w-full'}>
             <div className={'flex w-full justify-center'}>
-                <div className={'flex flex-row items-center'}>
-                    <div className={'w-8 h-px'} style={{backgroundColor: 'rgba(129, 143, 166, 0.5)'}}/>
-                    <p className={'text-sm mx-6'} style={{color: '#818FA6'}}>
-                        ONE & FOR ALL
-                    </p>
-                    <div className={'w-8 h-px'} style={{backgroundColor: 'rgba(129, 143, 166, 0.5)'}}/>
+                <div className={'flex flex-row items-center z-10 mb-2'}>
+                    <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
+                    <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center'}>ONE & FOR ALL</p>
+                    <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                 </div>
             </div>
             <div className={'flex justify-center'}>
                 <div>
-                    <p style={{color: '#161D24'}} className={'text-7xl font-bold text-center mb-0'}>
-                        Products
-                    </p>
-                    <p className={'text-5xl text-center mt-2'} style={{color: '#161D24'}}>
-                        End-to-End Services.
-                    </p>
-                    <p className={'text-center'} style={{color: '#4F6382'}}>
+                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#161D24] mb-0 montserrat'}>Products</p>
+                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl text-center mt-2 text-[#161D24] montserrat font-medium'}>End-to-End Services.</p>
+                    <p className={'text-sm text-center text-[#4F6382] montserrat'}>
                         We are a leading digital biometric provider in Indonesia, <br/>
                         exclusively focused on comprehensive biometric recognition<br/>
                         products and highly tailored with data analytics platforms.
@@ -142,7 +136,7 @@ export const Product = () => {
                 </Steps>
             </div>
 
-            <div className={'mt-4 md:mt-28'}>
+            <div className={'mt-4 md:mt-28 z-10'}>
                 <Carousel
                     navButtonsAlwaysVisible={true}
                     animation={'slide'}
@@ -160,7 +154,7 @@ export const Product = () => {
                         }
                     }}
                     navButtonsWrapperProps={{
-                        className: `mr-5 ml-5 ${!current ? 'arrow-prev-product' : current == 4 ? 'arrow-next-product' : null}`
+                        className: `mr-5 ml-5 z-10 ${!current ? 'arrow-prev-product' : current == 4 ? 'arrow-next-product' : null}`
                     }}
                 >
                     {
@@ -168,6 +162,10 @@ export const Product = () => {
                     }
                 </Carousel>
             </div>
-        </>
+            <div className="relative h-[10vh] sm:h-quarter xl:h-half" />
+            <div className={'absolute w-full lg:w-10/12 xl:w-8/12 h-1/3 sm:h-auto -bottom-10 right-0 usecase-img z-0'}>
+                <Image preview={false} src={'/assets/images/accent-home-sectionProduct-2-edit.png'} className={'h-full w-full opacity-10'}/>
+            </div>
+        </div>
     )
 }
