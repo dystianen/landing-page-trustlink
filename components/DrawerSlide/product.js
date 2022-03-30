@@ -9,37 +9,37 @@ export const Product = observer(({show, setShow}) => {
         {
             key: 'verify',
             title: 'Verify',
-            description: 'TrustVerify is our product about...',
+            description: 'TrustVerify is our AI that can match your pict to dukcapil',
             image: '/assets/logo/trust/verify.png'
         },
         {
             key: 'scan',
             title: 'Scan',
-            description: 'TrustScan is our product about...',
+            description: 'TrustScan is our OCR for your needed',
             image: '/assets/logo/trust/scan.png'
         },
         {
             key: 'live',
             title: 'Live',
-            description: 'TrustLive is our product about...',
+            description: 'TrustLive is powerfull to scan the liveness of a picture',
             image: '/assets/logo/trust/live.png'
         },
         {
             key: 'vision',
             title: 'Vision',
-            description: 'TrustVision is our product about...',
+            description: 'TrustVision able to scan multiple face and match the data',
             image: '/assets/logo/trust/vision.png'
         },
         {
             key: 'connect',
             title: 'Connect',
-            description: 'TrustConnect is our product about...',
+            description: 'TrustConnect can help you connect to multiple bank',
             image: '/assets/logo/trust/connect.png'
         },
         {
             key: 'score',
             title: 'Score',
-            description: 'TrustScore is our product about...',
+            description: 'TrustScore will help analys and control your spending.',
             image: '/assets/logo/trust/score.png'
         },
     ]
