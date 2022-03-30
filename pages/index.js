@@ -168,22 +168,10 @@ export default function Home() {
         <section className={"AboutMe"}>
           <AboutMePage />
         </section>
-        <section className={'pl-20 mt-52'}>
+        <section className={'pl-12 md:pl-20 mt-52'}>
           <Product />
-          <div>
-          <ParticlePage
-            dimention={{
-              width: '50%',
-              height: '100vh'
-            }}
-            numberValue={240}
-            opacity={0.8}
-            className={'home-plexus'}
-          />
-        </div>
         </section>
       </div>
-      <div className="h-quarter" />
       <UseCase />
       <Banner />
       <TrustedBy />
