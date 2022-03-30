@@ -1,14 +1,16 @@
 import { Carousel, Image } from "antd";
 import { propertyOf } from "lodash";
+import { useTranslation } from "next-i18next";
 import React from "react";
 import {useMediaQuery} from 'react-responsive'
 // import Particles from "react-tsparticles";
 import { ParticlesTrusted } from "./ParticlesTrusted";
 
-const TrustedBy = () => {
+const TrustedBy = (props) => {
     const lg = useMediaQuery({query: '(min-width: 1024px)'})
     const md = useMediaQuery({query: '(min-width: 768px)'})
     const sm = useMediaQuery({query: '(min-width: 576px)'})
+    const { t } = useTranslation();
 
     const showSlide = lg ? 4 : md ? 3: sm ? 3 : 2
     const logos = [
@@ -36,10 +38,10 @@ const TrustedBy = () => {
                 <div className={'relative w-full z-10'}>
                     <div className={'flex flex-row items-center'}>
                         <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
-                        <p className={'text-sm text-[#818FA6] mb-0 ml-6 montserrat tracking-widest'}>ALWAYS RELIABLE</p>
+                        <p className={'text-sm text-[#818FA6] mb-0 ml-6 montserrat tracking-widest'}>{t('Always Reliable')}</p>
                     </div>
-                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl montserrat text-[#1D365F] font-bold my-2 sm:my-6'}>Trusted by.</p>
-                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl montserrat text-[#1D365F] font-medium mb-0'}>Clients & Partners</p>
+                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl montserrat text-[#1D365F] font-bold my-2 sm:my-6'}>{t('Trusted By')}</p>
+                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl montserrat text-[#1D365F] font-medium mb-0'}>{t('Clients and Partners')}</p>
                 </div>
                 <div className={'flex flex-row justify-end mt-6 sm:mt-10 z-10'}>
                     <div className={"bg-gray-300 w-[94%]"}>
