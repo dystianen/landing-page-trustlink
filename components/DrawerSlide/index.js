@@ -29,12 +29,12 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
                         </div>
                     </Fade>
                     <Fade right when={showProduct} duration={500}>
-                        <div className={`w-full overflow-x-hidden md:w-[65%] h-auto md:h-full m-0 ${!showProduct ? 'hidden' : null}`}>
+                        <div className={`w-full lg:overflow-x-hidden md:w-[65%] h-auto md:h-full m-0 ${!showProduct ? 'hidden' : null}`}>
                             <Product show={showProduct} setShow={setShowProduct}/>
                         </div>
                     </Fade>
                     <Fade right when={showUseCase} duration={500}>
-                        <div className={`w-full overflow-x-hidden md:w-[65%] h-auto md:h-full m-0 ${!showUseCase ? 'hidden' : null}`}>
+                        <div className={`w-full lg:overflow-x-hidden md:w-[65%] h-auto md:h-full m-0 ${!showUseCase ? 'hidden' : null}`}>
                             <UseCases show={showUseCase} setShow={setShowUseCase} />
                         </div>
                     </Fade>
