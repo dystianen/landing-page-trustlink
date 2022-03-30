@@ -13,27 +13,26 @@ const TrustedBy = () => {
     const showSlide = lg ? 4 : md ? 3: sm ? 3 : 2
     const logos = [
         {
-            class_name: 'flex justify-center border-r-2 items-center text-center bg-white company-logo logo-image-gray h-20 md:h-24 xl:h-30',
-            src: 'assets/trusted_by/logo_aitb.png',
-        },
-        {
-            class_name: 'flex justify-center border-r-2 items-center text-center bg-white company-logo logo-image-gray h-20 md:h-24 xl:h-30',
-            src: 'assets/trusted_by/asaren-crop.png',
-        },
-        {
-            class_name: 'flex justify-center border-r-2 items-center text-center bg-white company-logo logo-image-gray h-20 md:h-24 xl:h-30',
             src: 'assets/trusted_by/duitku.png',
         },
         {
-            class_name: 'flex justify-center border-r-2 items-center text-center bg-white company-logo logo-image-gray h-20 md:h-24 xl:h-30',
             src: 'assets/trusted_by/flip.png',
+        },
+        {
+            src: 'assets/trusted_by/logo_aitb.png',
+        },
+        {
+            src: 'assets/trusted_by/asaren-crop.png',
         }
     ]
 
     return (
-        <div className={'relative flex items-center w-full h-full min-h-screen pl-12 md:pl-20 z-50 bg-[#F1F1F1]'}>
+        <div className={'relative flex items-center w-full h-auto py-28 sm:py-40 lg:py-52 pl-12 md:pl-20 z-50 bg-[#F1F1F1] my-10 sm:my-0 sm:mb-20'}>
+            <div className={'h-full sm:h-auto absolute bottom-0 right-0 about-img'}>
+                <Image preview={false} className="h-full w-auto opacity-30" src={'/assets/images/accent-master-connecting-dots-2.png'}/>
+            </div>
              <div className={'relative w-full h-full'}>
-                <div className={'absolute top-14 sm:top-20 lg:top-24 right-0 h-60 sm:h-72 w-[85%] bg-[#EAEDF1]'}/>
+                <div className={'absolute top-14 sm:top-20 lg:top-24 right-0 h-48 sm:h-72 w-[85%] bg-[#EAEDF1]'}/>
                 <div className={'relative w-full z-10'}>
                     <div className={'flex flex-row items-center'}>
                         <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
@@ -47,8 +46,8 @@ const TrustedBy = () => {
                         <Carousel dots={false} slidesToShow={showSlide} autoplay={true}>
                                 {logos.map((props, index) => {
                                     return (
-                                        <div key={index} className={props.class_name}>
-                                            <div className={'h-full about-img p-4'}>
+                                        <div key={index} className={'flex justify-center border-r-2 items-center text-center bg-white company-logo logo-image-gray h-20 md:h-24 xl:h-30'}>
+                                            <div className={'h-full about-img py-5 md:py-7 xl:py-8 px-2'}>
                                                 <Image src={props.src} className={'h-full w-auto'} preview={false}/>
                                             </div>
                                         </div>
