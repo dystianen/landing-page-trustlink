@@ -35,10 +35,6 @@ export default function Home() {
       name: 'Products.',
     }, {
       name: 'Use Cases.',
-    }, {
-      name: 'For Developers.',
-    }, {
-      name: 'For Customers.',
     },
   ]
 
