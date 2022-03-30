@@ -4,6 +4,36 @@ import {Image} from "antd";
 import {LeftOutlined, RightOutlined} from "@ant-design/icons";
 
 export const UseCases = observer(({show, setShow}) => {
+    const dataUseCases = [
+        {
+            key: '',
+            title: '',
+            description: '',
+            bottom: '',
+            top: '',
+        },
+        {
+            key: '',
+            title: '',
+            description: '',
+            bottom: '',
+            top: '',
+        },
+        {
+            key: '',
+            title: '',
+            description: '',
+            bottom: '',
+            top: '',
+        },
+        {
+            key: '',
+            title: '',
+            description: '',
+            bottom: '',
+            top: '',
+        },
+    ]
     return (
         <div className={'flex flex-row bg-white h-auto md:h-full min-h-[100vh]'}>
         <div className={'ml-20 border-l border-gray-300 h-auto md:h-full'}/>
@@ -29,37 +59,49 @@ export const UseCases = observer(({show, setShow}) => {
             <div className={'grid grid-cols-1 md:grid-cols-2 gap-0 mb-12 montserrat'}>
                 <div className={'w-full h-auto md:h-48 lg:h-52 border border-l-0 border-b-0 border-gray-300'}>
                     <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-8 pt-6'}>
-                        <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10'}>Biometric <br/>Recognition.</p>
-                        <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>New technology to accommodate the future of today’s businesses.</p>
-                        <div className={'absolute -bottom-2 -left-1 z-0'}>
-                            <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[85px]" src={'/assets/finger.png'}/>
+                        <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10'}>Security and Laws.</p>
+                        <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>New technology to accommodate the future of security with TrustVision and TrustVerify.</p>
+                        <div className={'absolute -bottom-2 left-0 z-0'}>
+                            <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[80px]" src={'/assets/logo/trust/vision.png'}/>
+                        </div>
+                        <div className={'absolute top-0 right-0 z-0'}>
+                            <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[80px]" src={'/assets/logo/trust/verify.png'}/>
                         </div>
                     </div>
                 </div>
                 <div className={'w-full h-auto md:h-48 lg:h-52 border border-l-0 border-b-0 border-gray-300'}>
                     <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-6 pt-6'}>
-                        <p className={'montserrat md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10'}>Low Code <br/>Platform.</p>
-                        <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>New technology to accommodate the future of today’s businesses.</p>
+                        <p className={'montserrat md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10'}>Your Bank.</p>
+                        <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>With TrustConnect and TrustScore, you can manage your banking easier.</p>
+                        <div className={'absolute top-0 right-0 z-0'}>
+                            <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[80px]" src={'/assets/logo/trust/connect.png'}/>
+                        </div>
                         <div className={'absolute -bottom-2 left-0 z-0'}>
-                            <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[85px]" src={'/assets/atom.png'}/>
+                            <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[80px]" src={'/assets/logo/trust/score.png'}/>
                         </div>
                     </div>
                 </div>
                 <div className={'w-full h-auto md:h-48 lg:h-52 border border-l-0 border-gray-300'}>
                     <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-6 pt-6'}>
-                        <p className={'montserrat md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10'}>Secure <br/>Biometric Code.</p>
-                        <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>New technology to accommodate the future of today’s businesses.</p>
+                        <p className={'montserrat md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10'}>We Know You.</p>
+                        <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>To our user, we can trust TrustLive and TrustScan for your scanning purpose.</p>
+                        <div className={'absolute top-0 right-0 z-0'}>
+                            <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[80px]" src={'/assets/logo/trust/scan.png'}/>
+                        </div>
                         <div className={'absolute -bottom-2 left-0 z-0'}>
-                            <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[85px]" src={'/assets/shield.png'}/>
+                            <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[80px]" src={'/assets/logo/trust/live.png'}/>
                         </div>
                     </div>
                 </div>
                 <div className={'w-full h-auto md:h-48 lg:h-52 border border-l-0 border-gray-300'}>
                     <div className={'relative h-full flex flex-col justify-center items-center pl-4 lg:pl-6 pt-6'}>
-                        <p className={'montserrat md:text-base lg:text-xl text-[#1D365F] leading-tight w-[90%] mb-4 z-10'}>Behaviour Analytics <br/>& Surveilance Platform.</p>
-                        <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[90%] mb-5 md:mb-0 z-10'}>New technology to accommodate the future of today’s businesses.</p>
+                        <p className={'montserrat md:text-base lg:text-xl text-[#1D365F] leading-tight w-[90%] mb-4 z-10'}>Manage User Data.</p>
+                        <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[90%] mb-5 md:mb-0 z-10'}>You can now scan your identity and verify it to goverment just by using our TrustVerify and TrustScan.</p>
+                        <div className={'absolute top-0 right-0 z-0'}>
+                            <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[80px]" src={'/assets/logo/trust/verify.png'}/>
+                        </div>
                         <div className={'absolute -bottom-2 left-0 z-0'}>
-                            <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[85px]" src={'/assets/dice.png'}/>
+                            <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[80px]" src={'/assets/logo/trust/scan.png'}/>
                         </div>
                     </div>
                 </div>
