@@ -44,29 +44,55 @@ export default function Home() {
 
   // checkRerouteLoggedUser(store,router);
 
+  const TrustScan = () => (
+      <div className={'w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 relative z-10'}>
+            <Image preview={false} src={'/assets/images/trust-scan.png'} className={'z-10 justify-center'} />
+      </div>
+  )
+
+  const TrustConnect = () => (
+      <div
+        className={'w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 relative z-10'}
+        style={{
+            marginTop: '-17%',
+            marginLeft: '40%',
+        }}>
+            <Image preview={false} src={'/assets/images/trust-connect.png'} className={'z-10 justify-center'} />
+      </div>
+  )
+
+  const TrustLive = () => (
+      <div
+        className={'w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 relative z-10'}
+        style={{
+            marginTop: '17%',
+            marginLeft: '65%',
+        }}>
+            <Image preview={false} src={'/assets/images/trust-live.png'} className={'z-10 justify-center'} />
+      </div>
+  )
+
+  const TrustVerify = () => (
+      <div
+        className={'w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 relative z-10'}
+        style={{
+            marginTop: '-10%',
+            marginLeft: '7%',
+        }}>
+            <Image preview={false} src={'/assets/images/trust-verify.png'} className={'z-10 justify-center'} />
+      </div>
+  )
+
 
   return (
     <div className={'overflow-hidden'}>
-      <div>
         <DrawerSlide menu={menu} isOpen={isOpen} />
         <div className={'fixed w-16 sm:w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 10000 }}>
-          <button
-            className="flex flex-col w-full h-full justify-center group"
-            onClick={() => setIsOpen(!isOpen)}
+          <button className="flex flex-col w-full h-full justify-center group" onClick={() => setIsOpen(!isOpen)}
           >
-            <div className={`${genericHamburgerLine} self-start ${isOpen
-              ? "w-full rotate-45 translate-y-3 opacity-100"
-              : "w-3 sm:w-4 opacity-100"
-              }`}
-            />
-            <div className={`${genericHamburgerLine2} ${isOpen ? "opacity-0" : "opacity-100"
-              }`}
-            />
-            <div className={`${genericHamburgerLine} self-end ${isOpen
-              ? "w-full -rotate-45 -translate-y-3 opacity-100"
-              : "w-3 sm:w-4 opacity-100"
-              }`}
-            />
+            <div className={`${genericHamburgerLine} self-start ${isOpen ? "w-full rotate-45 translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`}/>
+            <div className={`${genericHamburgerLine2} ${isOpen ? "opacity-0" : "opacity-100"}`}/>
+            <div className={`${genericHamburgerLine} self-end ${isOpen ? "w-full -rotate-45 -translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`}/>
           </button>
         </div>
         <div className={'flex flex-row'} style={{ justifyContent: 'space-between' }}>
@@ -98,60 +124,10 @@ export default function Home() {
             </div>
           </section>
           <section className={'invisible md:visible'}>
-            <div style={{
-              backgroundColor: '#FFFFFF',
-              borderStyle: 'solid',
-              borderWidth: 8,
-              borderColor: '#FE7519',
-              boxShadow: '0px 12px 12px 9px #ff66001a',
-              borderRadius: '50% / 50%',
-              padding: 15,
-            }}
-              className={'w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl'}>
-              <Image preview={false} src={'/assets/logo/trust-scan/trust-scan.png'} className={'z-10 justify-center'} />
-            </div>
-            <div style={{
-              backgroundColor: '#FFFFFF',
-              padding: 20,
-              borderStyle: 'solid',
-              borderWidth: 8,
-              borderColor: '#FE7519',
-              boxShadow: '0px 12px 12px 9px #ff66001a',
-              borderRadius: '50% / 50%',
-              marginTop: '-17%',
-              marginLeft: '40%',
-            }}
-              className={'w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl'}>
-              <Image preview={false} src={'/assets/logo/trust-connect/trust-connect.png'} className={'z-10 justify-center'} />
-            </div>
-            <div style={{
-              backgroundColor: '#FFFFFF',
-              padding: 15,
-              borderStyle: 'solid',
-              borderWidth: 8,
-              borderColor: '#FE7519',
-              boxShadow: '0px 12px 12px 9px #ff66001a',
-              borderRadius: '50% / 50%',
-              marginTop: '17%',
-              marginLeft: '65%',
-            }}
-              className={'w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl'}>
-              <Image preview={false} src={'/assets/logo/trust-live/trust-live.png'} className={'z-10 justify-center'} />
-            </div>
-            <div style={{
-              backgroundColor: '#FFFFFF',
-              padding: 25,
-              borderStyle: 'solid',
-              borderWidth: 8,
-              borderColor: '#FE7519',
-              boxShadow: '0px 12px 12px 9px #ff66001a',
-              borderRadius: '50% / 50%',
-              marginTop: '-10%',
-              marginLeft: '7%',
-            }}
-              className={'w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl'}>
-              <Image preview={false} src={'/assets/logo/trust-verify/trust-verify.png'} className={'z-10 justify-center'} />
-            </div>
+            <TrustScan />
+            <TrustConnect />
+            <TrustLive />
+            <TrustVerify />
           </section>
         </div>
         <div>
@@ -171,16 +147,15 @@ export default function Home() {
         <section className={'pl-12 md:pl-20 mt-52'}>
           <Product />
         </section>
-      </div>
-      <UseCase />
-      <Banner />
-      <TrustedBy />
-      <WeAimed />
-      <div className="h-[43vh]" />
-      <CertificationMembership />
-      <div className="h-quarter" />
-      <ContactUs />
-      <Footer />
+        <UseCase />
+        <Banner />
+        <TrustedBy />
+        <WeAimed />
+        <div className="h-[43vh]" />
+        <CertificationMembership />
+        <div className="h-quarter" />
+        <ContactUs />
+        <Footer />
     </div>
   )
 }
