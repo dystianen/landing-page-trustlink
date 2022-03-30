@@ -25,11 +25,11 @@ export const Product = observer(({show, setShow}) => {
                                 </div>
                             </div>
                             <p className={'inline text-3xl mb-5 pt-2 montserrat leading-none font-bold text-[#04204D]'}>Products.</p>
-                            <p className={'text-sm mb-0 montserrat text-[#4F6382]'}>
+                            <p className={'text-sm pt-2 pb-6 montserrat text-[#4F6382]'}>
                                 Learn how the digitalize biometric of human <br/> unique pattern becomes the lead of security alignment.
                             </p>
                         </div>
-                        <div className={'flex flex-row mt-8 mb-10'}>
+                        {/* <div className={'flex flex-row mt-8 mb-10'}>
                             <div className={'flex flex-row items-center mr-12 lg:mr-16'}>
                                 <p className={'montserrat text-[18px] lg:text-[20px] text-[#1D365F] m-0 mr-2'}>Global Coverage</p>
                                 <RightOutlined className={'text-base text-[#1D365F]'}/>
@@ -38,7 +38,7 @@ export const Product = observer(({show, setShow}) => {
                                 <p className={'montserrat text-[18px] lg:text-[20px] text-[#1D365F] m-0 mr-2'}>Pricing</p>
                                 <RightOutlined className={'text-base text-[#1D365F]'}/>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className={'grid grid-cols-1 md:grid-cols-2 gap-0 mb-12'}>
                         <div className={'w-full h-auto md:h-48 lg:h-52 border border-l-0 border-b-0 border-gray-300'}>
