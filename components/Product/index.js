@@ -94,6 +94,9 @@ export const Product = () => {
 
     return (
         <div className={'relative h-auto w-full'}>
+            <div className={'h-1/2 lg:h-auto absolute top-24 -left-60 about-img'}>
+                <Image preview={false} className="h-full w-auto " src={'/assets/images/accent-master-connecting-dots-1.png'}/>
+            </div>
             <div className={'flex w-full justify-center'}>
                 <div className={'flex flex-row items-center z-10 mb-2'}>
                     <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
