@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import '../styles/globals.scss';
 import '../styles/home.scss';
 import 'tailwindcss/tailwind.css';
-
+import { appWithTranslation } from 'next-i18next'
 import {StoreProvider} from "../components/StoreProvider";
 import Script from 'next/script'
 import Head from "next/head";
@@ -41,4 +41,4 @@ function MyApp({ Component, pageProps }) {
   </StoreProvider>;
 }
 
-export default MyApp
+export default appWithTranslation(MyApp)
