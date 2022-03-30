@@ -37,11 +37,11 @@ export default function Home() {
 
   const menu = [
     {
-      name: 'About Us.',
+      name: t('About Us.'),
     }, {
-      name: 'Products.',
+      name: t('Products'),
     }, {
-      name: 'Use Cases.',
+      name: t('Use Cases'),
     },
   ]
 
@@ -118,8 +118,8 @@ export default function Home() {
                             <span>― Generation</span>
                         </div>
                         <div className={'home-next-generation-sub leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-5 font-medium'}>
-                            <span className={'block mb-2'}>Digital biometric</span>
-                            <span>Identification system.</span>
+                            <span className={'block mb-2'}>{t('Digital Biometric')}</span>
+                            <span>{t('Identification System')}.</span>
                         </div>
                     </div>
                 </section>

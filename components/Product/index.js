@@ -2,11 +2,13 @@ import React, {useState} from 'react';
 import {Image, Popover, Steps, Button, Row, Col, Tooltip} from "antd";
 import Carousel from 'react-material-ui-carousel';
 import {useMediaQuery} from "react-responsive";
+import { useTranslation } from 'next-i18next';
 
 export const Product = () => {
     const [current, setCurrent] = useState(0)
     const { Step } = Steps;
 
+    const { t } = useTranslation();
     const xl = useMediaQuery({query: '(min-width: 1440px)'})
     const lg = useMediaQuery({query: '(min-width: 1024px)'})
     const md = useMediaQuery({query: '(min-width: 768px)'})
@@ -111,19 +113,17 @@ export const Product = () => {
             <div className={'flex w-full justify-center'}>
                 <div className={'flex flex-row items-center z-10 mb-2'}>
                     <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
-                    <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center'}>ONE & FOR ALL</p>
+                    <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center'}>{t('One and For All')}</p>
                     <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                 </div>
             </div>
             <div className={'flex justify-center'}>
                 <div>
-                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#161D24] mb-0 montserrat'}>Products</p>
-                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl text-center mt-2 text-[#161D24] montserrat font-medium'}>End-to-End Services.</p>
-                    <p className={'text-sm text-center text-[#4F6382] montserrat'}>
-                        We are a leading digital biometric provider in Indonesia, <br/>
-                        exclusively focused on comprehensive biometric recognition<br/>
-                        products and highly tailored with data analytics platforms.
-                    </p>
+                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#161D24] mb-0 montserrat'}>{t('Products')}</p>
+                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl text-center mt-2 text-[#161D24] montserrat font-medium'}>{t('End to End Services')}</p>
+                    <div className={'text-sm text-center text-[#4F6382] montserrat w-full'}>
+                        <p className=''>{t('We are a leading digital biometric')}</p>
+                    </div>
                 </div>
             </div>
             <div className={'relative w-screen lg:w-auto'}>

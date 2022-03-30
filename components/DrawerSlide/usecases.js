@@ -64,10 +64,10 @@ export const UseCases = observer(({show, setShow}) => {
                             <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10'}>{data.title}</p>
                             <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>{data.description}</p>
                             <div className={'absolute -bottom-2 left-0 z-0'}>
-                                <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[80px]" src={data.left}/>
+                                <Image preview={false} className="w-[50px] opacity-70 md:w-[60px] lg:w-[80px]" src={data.left}/>
                             </div>
                             <div className={'absolute top-0 right-0 z-0'}>
-                                <Image preview={false} className="w-[50px] md:w-[60px] lg:w-[80px]" src={data.right}/>
+                                <Image preview={false} className="w-[50px] opacity-60 md:w-[60px] lg:w-[80px]" src={data.right}/>
                             </div>
                         </div>
                     </div>

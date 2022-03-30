@@ -24,7 +24,7 @@ const Footer = () => {
                     <div className={'w-full md:w-1/2 lg:w-2/5 flex md:justify-center my-6 md:my-0'}>
                         <div className={'w-auto'}>
                             <p className={'text-base montserrat opacity-80'}>EMAIL</p>
-                            <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-9">contact@withtrustlink.com</p>
+                            <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-9">info@withtrustlink.com</p>
                         </div>
                     </div>
                     <div className={'w-full md:w-1/2 lg:w-auto flex md:justify-center lg:justify-end md:mt-8 lg:mt-0'}>
