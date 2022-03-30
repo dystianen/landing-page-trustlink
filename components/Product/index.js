@@ -1,35 +1,46 @@
 import React, {useState} from 'react';
 import {Image, Popover, Steps, Button, Row, Col, Tooltip} from "antd";
 import Carousel from 'react-material-ui-carousel';
+import {useMediaQuery} from "react-responsive";
 
 export const Product = () => {
     const [current, setCurrent] = useState(0)
     const { Step } = Steps;
 
+    const xl = useMediaQuery({query: '(min-width: 1440px)'})
+    const lg = useMediaQuery({query: '(min-width: 1024px)'})
+    const md = useMediaQuery({query: '(min-width: 768px)'})
+    const sm = useMediaQuery({query: '(min-width: 576px)'})
+    const xs = useMediaQuery({query: '(max-width: 476px)'})
+
+    const shadow = xl ? 20 : lg ? 10 : md ? 15: sm ? 15 : 5
+    const step = xs ? 'w-10 h-10' : 'w-14 h-14'
+    const stepActive = xs ? 'w-[50px] h-[50px]' : 'w-[65px] h-[65px]'
+    const imageSm = xs ? 'w-[16px]' : 'w-[24px]'
     const data = [
         {
             name: 'Live',
-            icon: '/assets/logo/trust/live.png',
+            icon: '/assets/images/logo-trust-live.png',
         },
         {
             name: 'Scan',
-            icon: '/assets/logo/trust/scan.png',
+            icon: '/assets/images/logo-trust-scan.png',
         },
         {
             name: 'Verify',
-            icon: '/assets/logo/trust/verify.png',
+            icon: '/assets/images/logo-trust-verify.png',
         },
         {
             name: 'Connect',
-            icon: '/assets/logo/trust/connect.png',
+            icon: '/assets/images/logo-trust-connect.png',
         },
         {
             name: 'Score',
-            icon: '/assets/logo/trust/score.png',
+            icon: '/assets/images/logo-trust-score.png',
         },
         {
             name: 'Vision',
-            icon: '/assets/logo/trust/vision.png',
+            icon: '/assets/images/logo-trust-vision.png',
         },
     ]
 
@@ -115,27 +126,27 @@ export const Product = () => {
                     </p>
                 </div>
             </div>
-            <div className={'relative w-full'}>
-                <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-11/12 h-24 md:h-48'} onChange={(num) => setCurrent(num)}>
+            <div className={'relative w-screen lg:w-auto'}>
+                <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-32 sm:h-48 -ml-12 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => setCurrent(num)}>
                     {data.map((it, index) => (
                         <Step
                             className={'flex justify-center items-center'}
                             key={index}
                             icon={
-                                <div className={`flex flex-col justify-content items-center ${current === index ? 'mt-2 md:mt-2 lg:mt-4' : 'mt-12 md:mt-10 lg:mt-12'}`}>
-                                    <div className={`rounded-full border-4 ${current === index ? 'w-[40px] md:w-[71px] lg:w-32 h-[40px] md:h-[71px] lg:h-32 mb-10 border-[#FE6601]' : 'w-8 md:w-14 lg:w-24 h-8 md:h-14 lg:h-24 border-[#FE944D]'} mb-2 bg-white z-10 flex justify-center items-center`}
-                                         style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? '0 0 20px 1px #FE6601' : null}}
+                                <div className={`flex flex-col justify-content items-center ${current === index ? 'mt-2 lg:mt-0' : 'mt-12 sm:mt-10 lg:mt-12'}`}>
+                                    <div className={`rounded-full border-4 ${current === index ? `${stepActive} sm:w-[78px] md:w-[95px] lg:w-32 sm:h-[78px] md:h-[95px] lg:h-32 border-[#FE6601]` : `${step} sm:w-16 md:w-20 lg:w-24 sm:h-16 md:h-20 lg:h-24 border-[#FE944D]`} mb-2 bg-white z-10 flex justify-center items-center`}
+                                         style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? `0 0 ${shadow}px 1px #FE6601` : null}}
                                     >
                                         <Tooltip title={'Trust' +it.name}>
-                                            <Image preview={false} src={it.icon} className={`${current === index ? 'w-[16px] md:w-[30px] lg:w-[50px]' :'w-[12px] md:w-[20px] lg:w-[50px]'}`}/>
+                                            <Image preview={false} src={it.icon} className={`${imageSm} sm:w-[28px] md:w-[35px] lg:w-[50px]`}/>
                                         </Tooltip>
                                     </div>
-                                    <p className={`w-24 md:w-40 text-[10px] md:text-sm lg:text-lg montserrat text-[#B4BCC9] ${current === index ? 'hidden' : null}`}><span className={'font-bold hidden md:contents'}>Trust</span>{it.name}</p>
+                                    <p className={`w-24 md:w-40 text-[10px] sm:text-sm lg:text-lg montserrat text-[#B4BCC9] ${current === index ? 'hidden' : null}`}><span className={'font-bold hidden sm:contents'}>Trust</span>{it.name}</p>
                                 </div>
                             }
                         />
                     ))}
-                    <hr className={'absolute right-0 top-[48%] w-[90%] h-1 bg-[#FE6601] z-0'}/>
+                    <hr className={`absolute right-0 top-[48%] ${xs ? 'w-[105%]' : 'w-full' } lg:w-[90%] h-1 bg-[#FE6601] z-0`}/>
                 </Steps>
             </div>
 
