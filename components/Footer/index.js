@@ -1,7 +1,11 @@
 import { Image } from "antd";
 import React from "react";
+import {useTranslation} from "next-i18next";
 
 const Footer = () => {
+
+    const { t } = useTranslation('common');
+
     return (
         <div className={'relative'}>
             <div className="h-auto w-full text-white py-4 pl-16 pr-6 md:pr-16 text-2xl bg-footer">
@@ -16,9 +20,9 @@ const Footer = () => {
                 <div className={"w-full mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-around xl:pl-24"}>
                     <div className={'w-full md:w-1/2 lg:w-auto flex md:justify-center'}>
                         <div className={'w-full md:w-9/12 lg:w-auto'}>
-                            <p className={'text-base montserrat opacity-80'}>CALL US</p>
+                            <p className={'text-base montserrat opacity-80'}>{t('Call Us')}</p>
                             <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-3">0628 671 8889</p>
-                            <p className="text-base montserrat opacity-80">Mon - Fri (8.30 - 17.30)</p>
+                            <p className="text-base montserrat opacity-80">{t('Mon to Fri')} (8.30 - 17.30)</p>
                         </div>
                     </div>
                     <div className={'w-full md:w-1/2 lg:w-2/5 flex md:justify-center my-6 md:my-0'}>
@@ -29,25 +33,25 @@ const Footer = () => {
                     </div>
                     <div className={'w-full md:w-1/2 lg:w-auto flex md:justify-center lg:justify-end md:mt-8 lg:mt-0'}>
                         <div className={'w-full md:w-9/12 lg:w-auto'}>
-                            <p className={'text-base montserrat opacity-80'}>COMPANY</p>
-                            <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-2">Partners</p>
-                            <p className="montserrat text-lg md:text-2xl tracking-normal">Carrer</p>
+                            <p className={'text-base montserrat opacity-80'}>{t('Company')}</p>
+                            <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-2">{t('Partners')}</p>
+                            <p className="montserrat text-lg md:text-2xl tracking-normal">{t('Carrer')}</p>
                         </div>
                     </div>
                     <div className={'md:w-1/2 lg:w-0'}/>
                 </div>
                 <div className={"w-full mt-4 md:mt-10 lg:mt-30 text-xs md:text-base lg:text-lg relative bottom-0 flex flex-col md:flex-row"}>
                     <div className={'w-full md:w-1/2 text-base montserrat text-[#EAEDF1] my-4 md:my-0'}>
-                        2022 &copy; All right reserved
+                        2022 &copy; {t('Copyright')}
                     </div>
                     <div className={'w-full md:w-1/2 text-base montserrat tracking-wide md:text-right text-[#EAEDF1]'}>
-                        Privacy Policy <span className={'text-[24px] m-0 p-0'}>&bull;</span> Term &#38; Condition
+                        {t('Privacy Policy')} <span className={'text-[24px] m-0 p-0'}>&bull;</span> {t('Tnc')}
                     </div>
                 </div>
             </div>
             <div className={'absolute top-6 md:top-10 right-6 md:right-10 cursor-pointer'} onClick={() => window.scrollTo(0, 0)}>
                 <Image preview={false} src={'/assets/scroll-top.svg'} className={'rotate-180'}/>
-                <p className={'w-max mt-4'} style={{ color: '#fff', fontFamily: 'Montserrat', letterSpacing: '0.15rem', fontSize: '0.6rem', writingMode: 'vertical-rl', textOrientation: 'sideways-right' }}>GO TO TOP</p>
+                <p className={'w-max mt-4'} style={{ color: '#fff', fontFamily: 'Montserrat', letterSpacing: '0.15rem', fontSize: '0.6rem', writingMode: 'vertical-rl', textOrientation: 'sideways-right' }}>{t('Go To Top')}</p>
             </div>
         </div>
     );
