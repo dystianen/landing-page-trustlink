@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Button, Col, Form, Input, Row, message, Divider, Image} from "antd";
 import {useStore} from "../StoreProvider";
 import {observer} from "mobx-react-lite";
+import {useTranslation} from "next-i18next";
 
 const ContactUs = observer(() => {
     const [form] = Form.useForm();
@@ -10,6 +11,8 @@ const ContactUs = observer(() => {
     const [loading, setLoading] = useState(false);
     const [loading2, setLoading2] = useState(false);
     const store = useStore();
+    const { t } = useTranslation('common');
+
     useEffect(() => {
         setShow(true)
     },[])
@@ -51,11 +54,11 @@ const ContactUs = observer(() => {
                     <div className={'montserrat'}>
                         <div className={'flex flex-row items-center'}>
                             <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
-                            <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}> FIRST TO KNOW</p>
+                            <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>{t('First to Know')}</p>
                         </div>
                         <div className={'flex flex-row items-end'}>
-                            <p className={'text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-0 text-[#1D365F] mr-4 sm:mr-8'}>Intouch.</p>
-                            <p className={'text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1D365F] mb-0 font-medium'}>Ask anything.</p>
+                            <p className={'text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-0 text-[#1D365F] mr-4 sm:mr-8'}>{t('Intouch')}</p>
+                            <p className={'text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1D365F] mb-0 font-medium'}>{t('Ask Anything')}</p>
                         </div>
                     </div>
                 </div>
@@ -66,7 +69,7 @@ const ContactUs = observer(() => {
                                 <Row gutter={16}>
                                     <Col xs={{span: 24}} sm={{span: 12}}>
                                         <Form.Item
-                                            label={<label className={'text-sm sm:text-base montserrat'}>First Name</label>}
+                                            label={<label className={'text-sm sm:text-base montserrat'}>{t('First Name')}</label>}
                                             name={'firstname'}
                                             rules={[
                                                 {
@@ -76,13 +79,13 @@ const ContactUs = observer(() => {
                                             ]}>
                                             <Input
                                                 className={'border rounded border-[#D4D4D8] h-12 montserrat text-sm sm:text-base'}
-                                                placeholder={'Enter your first name'}
+                                                placeholder={t('Enter your first name')}
                                             />
                                         </Form.Item>
                                     </Col>
                                     <Col xs={{span: 24}} sm={{span: 12}}>
                                         <Form.Item
-                                            label={<label className={'text-sm sm:text-base montserrat'}>Last Name</label>}
+                                            label={<label className={'text-sm sm:text-base montserrat'}>{t('Last Name')}</label>}
                                             name={'lastname'}
                                             rules={[
                                                 {
@@ -92,13 +95,13 @@ const ContactUs = observer(() => {
                                             ]}>
                                             <Input
                                                 className={'border rounded border-[#D4D4D8] h-12 montserrat text-sm sm:text-base'}
-                                                placeholder={'Enter your last name'}
+                                                placeholder={t('Enter your last name')}
                                             />
                                         </Form.Item>
                                     </Col>
                                 </Row>
                                 <Form.Item
-                                    label={<label className={'text-sm sm:text-base montserrat'}>Company</label>}
+                                    label={<label className={'text-sm sm:text-base montserrat'}>{t('Company')}</label>}
                                     name={'company'}
                                     rules={[
                                         {
@@ -108,11 +111,11 @@ const ContactUs = observer(() => {
                                     ]}>
                                     <Input
                                         className={'border rounded border-[#D4D4D8] h-12 montserrat text-sm sm:text-base'}
-                                        placeholder={'Enter your company name'}
+                                        placeholder={t('Enter your company name')}
                                     />
                                 </Form.Item>
                                 <Form.Item
-                                    label={<label className={'text-sm sm:text-base montserrat'}>Email (Company’s Email Only)</label>}
+                                    label={<label className={'text-sm sm:text-base montserrat'}>Email ({t('Company Email Only')})</label>}
                                     name={'email'}
                                     rules={[
                                         {
@@ -123,11 +126,11 @@ const ContactUs = observer(() => {
                                     ]}>
                                     <Input
                                         className={'border rounded border-[#D4D4D8] h-12 montserrat text-sm sm:text-base'}
-                                        placeholder={'Enter your email'}
+                                        placeholder={t('Enter your email')}
                                     />
                                 </Form.Item>
                                 <Form.Item
-                                    label={<label className={'text-sm sm:text-base montserrat'}>Phone Number</label>}
+                                    label={<label className={'text-sm sm:text-base montserrat'}>{t('Phone Number')}</label>}
                                     name={'phone_number'}
                                     rules={[
                                         {
@@ -138,11 +141,11 @@ const ContactUs = observer(() => {
                                     {/*<Input type={"number"} className={'border-transparent border-[1px] rounded border-solid border-gray-400 h-10 w-full validation'} />*/}
                                     <Input
                                         className={'border rounded border-[#D4D4D8] h-12 montserrat text-sm sm:text-base'}
-                                        placeholder={'Enter your phone number'}
+                                        placeholder={t('Enter your phone number')}
                                     />
                                 </Form.Item>
                                 <Form.Item
-                                    label={<label className={'text-sm sm:text-base montserrat'}>How Can We Help?</label>}
+                                    label={<label className={'text-sm sm:text-base montserrat'}>{t('How Can We Help')}</label>}
                                     name={'help'}
                                     rules={[
                                         {
@@ -153,7 +156,7 @@ const ContactUs = observer(() => {
                                     <Input.TextArea
                                         autoSize={{ minRows: 3, maxRows: 4 }}
                                         className={'border rounded border-[#D4D4D8] h-12 montserrat text-sm sm:text-base'}
-                                        placeholder={'Enter Your Inquiries'}
+                                        placeholder={t('Enter your inquiries')}
                                     />
                                 </Form.Item>
                                 <div className={'flex justify-end'}>
@@ -165,7 +168,7 @@ const ContactUs = observer(() => {
                                             await submitForm();
                                         }}
                                     >
-                                        Submit
+                                        {t('Submit')}
                                     </Button>
                                 </div>
                             </Form>
