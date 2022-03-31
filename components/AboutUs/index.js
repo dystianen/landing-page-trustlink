@@ -41,9 +41,7 @@ const AboutMePage = () => {
                     <Fade when={transition} duration={1600}>
                         <div>
                             <Title className={"font-bold text-lg sm:text-2xl lg:text-[30px] montserrat"}>
-                                <span className={'block leading-snug w-3/5'}>{t('We are thrilled to advance')}</span>
-                                {/* <span className={'block leading-snug'}>our technology to meet </span>
-                                <span className={'leading-snug'}>the needs of our valued customers.</span> */}
+                                <span className={'block leading-snug w-full md:w-5/6 lg:w-3/4 xl:w-3/5'}>{t('We are thrilled to advance')}</span>
                                 </Title>
                         </div>
                         <div>
