@@ -19,7 +19,6 @@ const UseCase = () => {
     const pageCarousel = 2
     const [current, setCurrent] = useState(0)
 
-    console.log(i18n.language, 'ini lang')
     const CarouselPage1 = () => (
         <div className={'w-full h-auto md:h-screen flex flex-col md:flex-row bg-[#05204D]'}>
             <div className={'flex justify-center items-center w-full md:w-1/2 h-auto md:h-full my-16 md:my-0'}>
