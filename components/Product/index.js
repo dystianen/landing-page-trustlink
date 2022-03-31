@@ -3,6 +3,7 @@ import {Image, Popover, Steps, Button, Row, Col, Tooltip} from "antd";
 import Carousel from 'react-material-ui-carousel';
 import {useMediaQuery} from "react-responsive";
 import { useTranslation } from 'next-i18next';
+import ReactPlayer from 'react-player'
 
 export const Product = () => {
     const [current, setCurrent] = useState(0)
@@ -50,37 +51,37 @@ export const Product = () => {
         {
             name: 'Trust',
             name2: 'Live',
-            icon: '/assets/phone-face.png',
+            src: '/assets/product-animation/TrustLive-GP.mp4',
             desc: t('Desc TrustLive')
         },
         {
             name: 'Trust',
             name2: 'Scan',
-            icon: '/assets/phone-face3.png',
+            src: '/assets/product-animation/TrustScan.mp4',
             desc: t('Desc TrustScan')
         },
         {
             name: 'Trust',
             name2: 'Verify',
-            icon: '/assets/phone-face2.png',
+            src: '/assets/product-animation/TrustVerify.mp4',
             desc: t('Desc TrustVerification')
         },
         {
             name: 'Trust',
             name2: 'Connect',
-            icon: '/assets/phone-face.png',
+            src: '/assets/product-animation/TrustConnect.mp4',
             desc: t('Desc TrustLive')
         },
         {
             name: 'Trust',
             name2: 'Score',
-            icon: '/assets/phone-face3.png',
+            src: '/assets/product-animation/TrustScore.mp4',
             desc: t('Desc TrustLive')
         },
         {
             name: 'Trust',
             name2: 'Vision',
-            icon: '/assets/phone-face3.png',
+            src: '/assets/product-animation/TrustVision.mp4',
             desc: t('Desc TrustLive')
         }
     ]
@@ -89,7 +90,15 @@ export const Product = () => {
         return (
             <div className={'flex flex-col md:flex-row w-full h-auto'}>
                 <div className={'flex justify-center items-center w-full md:w-3/6 lg:w-2/4 text-center z-10'}>
-                    <Image preview={false} className="w-[160px] md:w-[200px] lg:w-[325px]" src={item.icon}/>
+                    <ReactPlayer
+                        className=''
+                        url={item.src}
+                        width='100%'
+                        height='100%'
+                        loop={true}
+                        playing={true}
+                    />
+                    {/*<Image preview={false} className="w-[160px] md:w-[200px] lg:w-[325px]" src={item.icon}/>*/}
                 </div>
                 <div className={'flex flex-col justify-center mt-4 w-full md:w-3/6 lg:w-2/4 z-10'}>
                     <div>
