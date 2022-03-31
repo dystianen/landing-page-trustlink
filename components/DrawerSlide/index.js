@@ -1,6 +1,6 @@
 import {Button, Drawer} from "antd";
 import {RightOutlined} from "@ant-design/icons";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {observer} from "mobx-react-lite";
 import {Product} from "./product"
 import Fade from 'react-reveal/Fade';
@@ -12,6 +12,13 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
     const [showProduct, setShowProduct] = useState(false)
     const [showUseCase, setShowUseCase] = useState(false);
     const { t } = useTranslation();
+
+    useEffect(() => {
+        if(!isOpen){
+            setShowProduct(false)
+            setShowUseCase(false)
+        }
+    }, [isOpen])
     const socialMedia = [
         {
             key: 'ig',
