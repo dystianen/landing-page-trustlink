@@ -29,7 +29,7 @@ export const checkRerouteLoggedUser = (store, router) => {
 export default function Home() {
     const router = useRouter();
     const store = useStore();
-    const { t } = useTranslation('common');
+    const { t, i18n } = useTranslation('common');
     const [isOpen, setIsOpen] = useState(false);
     const genericHamburgerLine = `h-1 my-1 rounded-full bg-orange transition ease transform duration-300`;
     const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-orange transition ease transform duration-300`;
@@ -97,11 +97,11 @@ export default function Home() {
                     </div>
                     <div className={'choose-lang flex flex-row mr-10 mt-8 md:mr-32 lg:mt-10'}>
                         <Link href={'/'} locale="en">
-                            <p className={'cursor-pointer font-medium'}>EN</p>
+                            <p className={`cursor-pointer font-medium ${i18n.language === 'en' && 'text-[#FE7519]'}`}>EN</p>
                         </Link>
                         <div className={'w-px h-5 mt-1 mx-2'} style={{ backgroundColor: '#818FA6' }} />
                         <Link href={'/'} locale="id">
-                            <p className={'cursor-pointer font-medium'}>ID</p>
+                            <p className={`cursor-pointer font-medium ${i18n.language === 'id' && 'text-[#FE7519]'}`}>ID</p>
                         </Link>
                     </div>
                 </div>
