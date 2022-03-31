@@ -51,37 +51,37 @@ export const Product = () => {
             name: 'Trust',
             name2: 'Live',
             icon: '/assets/phone-face.png',
-            desc: 'Increase assurance levels for every verification, our liveness detection determines whether the presented face is a real person and not a spoof. Preventing fraud in your onboarding process and within your product.'
+            desc: t('Desc TrustLive')
         },
         {
             name: 'Trust',
             name2: 'Scan',
             icon: '/assets/phone-face3.png',
-            desc: 'TrustScan is a powerful AI-powered machine learning trained to scan and extract data from ID’s and auto-fill your customer data - making onboarding process seamless and no hassle.'
+            desc: t('Desc TrustScan')
         },
         {
             name: 'Trust',
             name2: 'Verify',
             icon: '/assets/phone-face2.png',
-            desc: 'TrustVerification is the highest compliance to verify identity by comparing the face biometric to Dukcapil database. TrustLink is the official “Platform Bersama” operator'
+            desc: t('Desc TrustVerification')
         },
         {
             name: 'Trust',
             name2: 'Connect',
             icon: '/assets/phone-face.png',
-            desc: 'TrustScan is a powerful AI-powered machine learning trained to scan and extract data from ID’s and auto-fill your customer data - making onboarding process seamless and no hassle.'
+            desc: t('Desc TrustLive')
         },
         {
             name: 'Trust',
             name2: 'Score',
             icon: '/assets/phone-face3.png',
-            desc: 'TrustScan is a powerful AI-powered machine learning trained to scan and extract data from ID’s and auto-fill your customer data - making onboarding process seamless and no hassle.'
+            desc: t('Desc TrustLive')
         },
         {
             name: 'Trust',
             name2: 'Vision',
             icon: '/assets/phone-face3.png',
-            desc: 'TrustVision is a powerful AI-powered machine learning trained to scan and extract data from ID’s and auto-fill your customer data - making onboarding process seamless and no hassle.'
+            desc: t('Desc TrustLive')
         }
     ]
 
@@ -121,8 +121,8 @@ export const Product = () => {
                 <div>
                     <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#161D24] mb-0 montserrat'}>{t('Products')}</p>
                     <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl text-center mt-2 text-[#161D24] montserrat font-medium'}>{t('End to End Services')}</p>
-                    <div className={'text-sm text-center text-[#4F6382] montserrat w-full'}>
-                        <p className=''>{t('We are a leading digital biometric')}</p>
+                    <div className={'text-sm text-center text-[#4F6382] montserrat w-full flex justify-center items-center'}>
+                        <p className='sm:w-4/6 lg:w-[45%] xl:w-[35%]'>{t('We are a leading digital biometric')}</p>
                     </div>
                 </div>
             </div>
