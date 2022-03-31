@@ -102,7 +102,7 @@ export const Product = () => {
                 </div>
                 <div className={'flex flex-col justify-center mt-4 w-full md:w-3/6 lg:w-2/4 z-10'}>
                     <div>
-                        <p className={'text-3xl md:text-4xl lg:text-6xl mb-0 montserrat leading-none font-bold'} style={{color: '#04204D'}}>{item.name}<span style={{color: '#FE6601'}}>{item.name2}</span></p>
+                        <p className={'text-3xl md:text-4xl lg:text-6xl mb-0 montserrat leading-none font-bold'} style={{color: '#04204D'}}>{item.name}<span className='text-orange font-medium'>{item.name2}</span></p>
                     </div>
                     <div className={'mt-5 md:mt-14'}>
                         <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base montserrat"}>
@@ -159,7 +159,7 @@ export const Product = () => {
                 </Steps>
             </div>
 
-            <div className={'mt-4 md:mt-28 z-10'}>
+            <div className={'mt-4 md:mt-8 z-10'}>
                 <Carousel
                     navButtonsAlwaysVisible={true}
                     animation={'slide'}
@@ -177,7 +177,7 @@ export const Product = () => {
                         }
                     }}
                     navButtonsWrapperProps={{
-                        className: `mr-5 ml-5 z-10 ${!current ? 'arrow-prev-product' : current == 4 ? 'arrow-next-product' : null}`
+                        className: `mr-5 ml-5 z-10 ${!current ? 'arrow-prev-product' : current == 5 ? 'arrow-next-product' : null}`
                     }}
                 >
                     {
