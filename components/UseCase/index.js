@@ -5,10 +5,12 @@ import Fade from "react-reveal/Fade";
 import Slide from 'react-reveal/Slide';
 import { useRouter } from 'next/router';
 import Carousel from 'react-material-ui-carousel'
+import {useTranslation} from "next-i18next";
 
 const UseCase = () => {
     const router = useRouter();
     const [transition, setTransition] = useState(false);
+    const { t, i18n } = useTranslation('common');
 
     useEffect(() => {
         setTransition(true);
@@ -17,6 +19,7 @@ const UseCase = () => {
     const pageCarousel = 2
     const [current, setCurrent] = useState(0)
 
+    console.log(i18n.language, 'ini lang')
     const CarouselPage1 = () => (
         <div className={'w-full h-auto md:h-screen flex flex-col md:flex-row bg-[#05204D]'}>
             <div className={'flex justify-center items-center w-full md:w-1/2 h-auto md:h-full my-16 md:my-0'}>
@@ -26,20 +29,21 @@ const UseCase = () => {
             </div>
             <div className={'flex flex-col justify-center w-full md:w-1/2 h-auto md:h-full'}>
                 <div className={"mb-7"}>
-                    <p className={'text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>AIRPORT</p>
+                    <p className={'text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{t('Airport')}</p>
                 </div>
-                <div className={'text-3xl lg:text-4xl text-white montserrat text-center md:text-left'}>
-                    <p className={'mb-0 leading-none'}><span className={'font-semibold'}>Seamless</span> Passenger</p>
-                    <p className={'mb-8'}>Verification & Identification</p>
+                <div className={'text-3xl lg:text-4xl text-white montserrat text-center md:text-left w-full'}>
+                    <p className={'mb-8 leading-snug md:leading-tight xl:w-3/4'}><span className={'font-semibold'}>{i18n.language === 'en' ? 'Seamless' :'Kelancaran'}</span>&nbsp;
+                        {i18n.language === 'en' ? 'Passenger Verification & Identification' : 'Verifikasi & Identifikasi Penumpang'}
+                    </p>
                 </div>
                 <div className={'mb-6 px-4 md:px-0'}>
-                    <p className={"text-white w-auto lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-center md:text-left"}>Our guarded biometric approach supports law enforcement agencies by analyzing and recognizing potential
-                        suspect via face recognition and finger to deter or further investigate illicit behaviours or crimes.
+                    <p className={"text-white w-auto lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-center md:text-left"}>
+                        {t('Desc Law')}
                     </p>
                 </div>
                 <div className={'text-center md:text-left mb-24 md:mb-0'}>
                     <Button className={"text-white text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-48"}>
-                        Request Demo
+                        {t('Request Demo')}
                     </Button>
                 </div>
             </div>
@@ -53,20 +57,25 @@ const UseCase = () => {
             </div>
             <div className={'flex flex-col justify-center w-full md:w-1/2 h-auto md:h-full'}>
                 <div className={"mb-7"}>
-                    <p className={'text-[16px] text-[#818fa6] tracking-[3px] mb-0 montserrat leading-none text-center md:text-left'}>LAW FIELDS</p>
+                    <p className={'text-[16px] text-[#818fa6] tracking-[3px] mb-0 montserrat leading-none text-center md:text-left'}>{t('Law')}</p>
                 </div>
-                <div className={'text-[32px] lg:text-[40px] text-white montserrat text-center md:text-left'}>
-                    <p className={'mb-0 leading-snug md:leading-none'}>Top Level <span className={'font-bold'}>Guarded</span></p>
-                    <p className={'mb-8'}><span className={'font-bold'}>Biometric</span> Approach</p>
+                <div className={'text-[32px] lg:text-[40px] text-white montserrat text-center md:text-left w-full'}>
+                    <p className={'mb-8 leading-snug md:leading-tight xl:w-3/4'}>
+                        {i18n.language === 'en' ? (
+                            <span>Top Level <span className={'font-bold'}>Guarded Biometric </span>Approach</span>
+                        ) : (
+                            <span>Pendekatan <span className={'font-bold'}>Biometrik Terjaga </span>Tingkat Atas</span>
+                        )}
+                    </p>
                 </div>
                 <div className={'mb-6 px-4 md:px-0'}>
                     <p className={"text-white w-auto lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-center md:text-left"}>
-                        Our guarded biometric approach supports law enforcement agencies by analyzing and recognizing potential suspect via face recognition and finger to deter or further investigate illicit behaviors or crimes.
+                        {t('Desc Law')}
                     </p>
                 </div>
                 <div className={'text-center md:text-left mb-24 md:mb-0'}>
                     <Button className={"text-white text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-48"}>
-                        Request Demo
+                        {t('Request Demo')}
                     </Button>
                 </div>
             </div>
@@ -85,8 +94,8 @@ const UseCase = () => {
                         <Image preview={false} className="h-full w-auto" src={'/assets/images/accent-home-sectionUseCase-1.png'}/>
                     </div>
                     <div className={'absolute left-[1.2rem] sm:left-[2.2rem] bottom-[1rem] sm:bottom-[2.3rem] z-20'}>
-                        <b className={'text-white text-3xl sm:text-4xl md:text-6xl font-bold mb-5 montserrat'}>Modern.</b>
-                        <p className={'text-white text-2xl sm:text-3xl md:text-5xl montserrat'}>Biometric Use Case</p>
+                        <b className={'text-white text-3xl sm:text-4xl md:text-6xl font-bold mb-5 montserrat'}>{t('Modern')}</b>
+                        <p className={'text-white text-2xl sm:text-3xl md:text-5xl montserrat'}>{t('Biometric Use Case')}</p>
                     </div>
 
                 </div>
