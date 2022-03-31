@@ -1,6 +1,8 @@
 import React from "react";
 import {Image} from "antd";
+import {useTranslation} from "next-i18next";
 const Banner = () => {
+    const { t } = useTranslation('common');
     return (
         <div className={'h-auto w-full pl-12 md:pl-20'}>
             <div className="relative text-white h-[400px] sm:h-[450px] w-full bg-white">
@@ -9,9 +11,9 @@ const Banner = () => {
                 </div>
                 <div className={'flex flex-col md:flex-row w-full h-full'}>
                     <div className="w-full md:w-3/5 h-full flex justify-center items-center z-10">
-                        <div className={'md:w-[80%] lg:w-auto'}>
+                        <div className={'md:w-[80%] lg:w-3/4'}>
                             <p className="montserrat text-[#161D24] text-xl sm:text-2xl lg:text-3xl xl:text-[32px] font-medium mb-0 text-center md:text-left">
-                                We are thrilled to advance <br/>our technology to meet<br/> the needs of our valued customers
+                                {t('We are thrilled to advance')}
                             </p>
                         </div>
                     </div>
