@@ -1,6 +1,10 @@
 import {Image} from "antd";
+import {useTranslation} from "next-i18next";
 
 const WeAimed = () => {
+
+    const { t } = useTranslation('common');
+
     return (<>
             <div className="h-[340px] w-full pl-12 md:pl-20 z-0 ">
                 <div className={'w-full h-full relative text-white montserrat '}>
@@ -13,15 +17,14 @@ const WeAimed = () => {
                     </div>
                     <div className="flex sm:justify-center lg:justify-end py-16 w-full h-full px-4 md:px-0 ">
                         <div className={'sm:w-3/4 lg:w-4/6 flex flex-col justify-around z-30'}>
-                            <p className="text-xl sm:text-2xl md:text-3xl w-auto ">
-                                <span className={'block'}>We Aim To Be&nbsp;
-                                    <span className="font-bold">The Most Advance&nbsp;</span>
+                            <p className="text-xl sm:text-2xl md:text-3xl w-auto">
+                                <span className={'block'}>{t('We Aim To Be')}&nbsp;
+                                    <span className="font-bold">{t('The Most Advance')}&nbsp;</span>
                                 </span>
-                                <span className={'block'}>
-                                    End-To-End&nbsp;
-                                    <span className="font-bold">Digital Biometrics&nbsp;</span>
+                                <span className={'block lg:w-3/4 xl:w-3/5'}>
+                                    {t('End to End')}&nbsp;
+                                    <span className="font-bold">{t('Digital Biometrics Solution')}</span>
                                 </span>
-                                <span className="font-bold">Solution Provider</span>
                             </p>
                             <p className="text-xs md:text-sm opacity-90 sm:w-4/5 md:w-[80%] lg:w-[65%] xl:w-[50%]">
                                 Accomplish great contribution in the digitalized economic solution across various organizations and thrive and nurture infrastructure in Indonesia.
