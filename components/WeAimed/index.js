@@ -17,17 +17,14 @@ const WeAimed = () => {
                     </div>
                     <div className="flex sm:justify-center lg:justify-end py-16 w-full h-full px-4 md:px-0 ">
                         <div className={'sm:w-3/4 lg:w-4/6 flex flex-col justify-around z-30'}>
-                            <p className="text-xl sm:text-2xl md:text-3xl w-auto">
-                                <span className={'block'}>{t('We Aim To Be')}&nbsp;
-                                    <span className="font-bold">{t('The Most Advance')}&nbsp;</span>
-                                </span>
-                                <span className={'block lg:w-3/4 xl:w-3/5'}>
-                                    {t('End to End')}&nbsp;
-                                    <span className="font-bold">{t('Digital Biometrics Solution')}</span>
+                            <p className="text-xl sm:text-2xl md:text-3xl md:full lg:w-3/4 xl:w-3/5">
+                                {t('We Aim To Be')} <span className="font-bold">{t('The Most Advance')} </span>
+                                <span>
+                                    {t('End to End')} <span className="font-bold">{t('Digital Biometrics Solution')}</span>
                                 </span>
                             </p>
                             <p className="text-xs md:text-sm opacity-90 sm:w-4/5 md:w-[80%] lg:w-[65%] xl:w-[50%]">
-                                Accomplish great contribution in the digitalized economic solution across various organizations and thrive and nurture infrastructure in Indonesia.
+                                {t('Accomplish')}
                             </p>
                         </div>
                     </div>
