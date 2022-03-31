@@ -4,14 +4,13 @@ import React, {useEffect, useState} from 'react';
 import Fade from "react-reveal/Fade";
 import Slide from 'react-reveal/Slide';
 import { useRouter } from 'next/router';
-import Link from "next/link";
+import { useTranslation } from 'next-i18next';
 
 const { Title, Text } = Typography;
 
-
-
 const AboutMePage = () => {
     const router = useRouter();
+    const { t } = useTranslation('common');
     const [transition, setTransition] = useState(false);
 
     useEffect(() => {
@@ -19,9 +18,9 @@ const AboutMePage = () => {
     }, []);
 
     return (
-        <div className='pl-20 overflow-y-hidden lg:overflow-y-hidden pb-10 mt-[10vw]'>
+        <div className='pl-12 md:pl-20 mt-[10vw] h-auto flex flex-col'>
             <div className={'relative w-full h-auto items-start flex justify-center'}>
-                <div className={'flex relative w-[90%]'}>
+                <div className={'flex relative w-full lg:w-[95%] xl:w-[90%]'}>
                     <span className={'z-10 about-img'}>
                         <Image preview={false} src={"/assets/meeting_stock_image.png"} className={'h-full'} />
                     </span>
@@ -33,18 +32,25 @@ const AboutMePage = () => {
                     </div>
                 </div>
             </div>
-            <div className={'w-[60%] float-right mt-10 mr-10'}>
-                <div className={"w-[13vw]"}>
-                    <Divider orientation="right" orientationMargin={24} className={"w-[10px] text-[#818fa6] tracking-[2.1px] font-bold montserrat"}>ABOUT US</Divider>
+            <div className={'w-full mt-20 sm:mt-10 mr-10 flex justify-end'}>
+                <div className={'w-full sm:w-3/5'}>
+                    <div className={'flex flex-row items-center mb-2'}>
+                        <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
+                        <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>{t('About Us')}</p>
+                    </div>
+                    <Fade when={transition} duration={1600}>
+                        <div>
+                            <Title className={"font-bold text-lg sm:text-2xl lg:text-[30px] montserrat"}>
+                                <span className={'block leading-snug w-full md:w-5/6 lg:w-3/4 xl:w-3/5'}>{t('We are thrilled to advance')}</span>
+                                </Title>
+                        </div>
+                        <div>
+                            <Text className={'text-[#4f6382] text-[14px] montserrat'}>
+                                <span className={'inline md:block w-3/5'}>{t('We are a leading digital biometric')}</span>
+                            </Text>
+                        </div>
+                    </Fade>
                 </div>
-                <Fade when={transition} duration={1600}>
-                    <div>
-                        <Title className={"font-bold text-[30px] montserrat"} >We are thrilled to advance <br />our technology to meet <br />the needs of our valued customers.</Title>
-                    </div>
-                    <div>
-                        <Text className={'text-[#4f6382] text-[14px] montserrat'}>We are a leading digital biometric provider in Indonesia, <br />exclusively focused on comprehensive biometric recognition <br />products and highly tailored with data analytics platforms.</Text>
-                    </div>
-                </Fade>
             </div>
         </div>
     )

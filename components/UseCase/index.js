@@ -1,120 +1,151 @@
 import { CloseOutlined } from '@ant-design/icons';
-import { Image, Avatar, Row } from 'antd';
+import {Image, Avatar, Row, Button} from 'antd';
 import React, {useEffect, useState} from 'react';
 import Fade from "react-reveal/Fade";
 import Slide from 'react-reveal/Slide';
 import { useRouter } from 'next/router';
 import Carousel from 'react-material-ui-carousel'
+import {useTranslation} from "next-i18next";
 
 const UseCase = () => {
     const router = useRouter();
     const [transition, setTransition] = useState(false);
+    const { t, i18n } = useTranslation('common');
 
     useEffect(() => {
         setTransition(true);
     }, []);
 
-    return (
-        <div className={'ml-20'}>
-            <div className={"relative h-[519px]"} style={{background: "url('/assets/base_img_card.jpg') ", backgroundPosition:'fill'}}>
-                    <div className={'absolute z-20'}>
-                        <Image preview={false} className="w-[100px] md:w-[200px] lg:w-[250px] grayscale invert opacity-50" src={'/assets/accents/logo-usecase-top.png'}/>
-                    </div>
-                    <div className={'absolute right-0 -bottom-1 z-20'}>
-                        <Image preview={false} className="w-[100px] md:w-[200px] lg:w-[250px] grayscale invert opacity-50" src={' /assets/accents/logo-usecase-bottom.png'}/>
-                    </div>
-                    <div className={'absolute left-[2.2rem] bottom-[2.3rem] z-20'}>
-                        <b className={'text-white text-4xl md:text-6xl font-bold mb-5 montserrat'}>Modern.</b>
-                        <p className={'text-white text-3xl md:text-5xl montserrat'}>Biometric Use Case</p>
-                    </div>
+    const pageCarousel = 2
+    const [current, setCurrent] = useState(0)
+
+    console.log(i18n.language, 'ini lang')
+    const CarouselPage1 = () => (
+        <div className={'w-full h-auto md:h-screen flex flex-col md:flex-row bg-[#05204D]'}>
+            <div className={'flex justify-center items-center w-full md:w-1/2 h-auto md:h-full my-16 md:my-0'}>
+                <div className={'h-full w-auto flex justify-center items-center'}>
+                    <Image preview={false} src={'/assets/logo/logo-for-dark-background.png'} className={'z-10 justify-center w-full h-full'} />
+                </div>
             </div>
-            <div className={'flex flex-row h-[1097px] bg-[#05204D]'}>
-                <Carousel
-                    autoPlay={false}
-                    className={'w-full '}
-                    indicatorContainerProps={{
-                        style: {
-                            position: 'absolute',
-                            top: '55%',
-                            right: '-3%',
-                            zIndex: 10
-                        },
-                    }}
-                    indicatorIconButtonProps={{
-                        style: {
-                            color : '#B7DFFF'
-                          }
-                    }}
-                    activeIndicatorIconButtonProps={{
-                        style: {
-                            backgroundColor: '#fff',
-                            color: '#fff',
-                            width: 25,
-                            height: 10,
-                            borderRadius: 10,
-                            marginRight: 5,
-                            marginLeft: 5,
-                        }
-                    }}
-                    navButtonsAlwaysVisible={true}
-                    navButtonsProps={{
-                        style: {
-                            backgroundColor: 'rgba(0,0,0, .1)'
-                        },
-                        className: 'arrow-usecase'
-                    }}
-                    navButtonsWrapperProps={{
-                        style: {
-                            margin: '0 20px 0 20px',
-                        }
-                    }}
-                    NextIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-right.svg'}/>}
-                    PrevIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-left.svg'}/>}
-                    animation={'slide'}
-                >
-                     <div className={'w-full flex flex-row lg:h-[1100px] md:h-[1100px] sm:h-[1100px] bg-[#05204D]'}>
-                        <div className={'flex justify-center items-center w-2/4'}>
-                            <Image preview={false} className="lg:w-[325px] md:w-[280px] lg:ml-24 md:ml-14" src={'/assets/phone-face.png'}/>
-                        </div>
-                        <div className={'flex flex-col justify-center lg:w-2/4 mb-44 md:w-1/3 md:ml-10'}>
-                            <div>
-                                <p className={'text-[32px] text-white mb-0 montserrat leading-none'}>Top Level <span className={'font-bold'}>Guarded</span></p>
-                                <p className={'text-[32px] text-white montserrat mb-5'}><span className={'font-bold'}>Biometric</span> Approach</p>
-                            </div>
-                            <div>
-                                <p className={"text-white w-[65%] text-base montserrat"}>Our guarded biometric approach supports law enforcement agencies by analyzing and recognizing potential
-                                    suspect via face recognition and finger to deter or further investigate illicit behaviours or crimes.
-                                </p>
-                            </div>
-                        </div>
-                        <div className={'line-top'}/>
-                        <div className={'circle'}/>
-                        <div className={'line-mid'}/>
-                        <div className={'line-bottom'}/>
+            <div className={'flex flex-col justify-center w-full md:w-1/2 h-auto md:h-full'}>
+                <div className={"mb-7"}>
+                    <p className={'text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{t('Airport')}</p>
+                </div>
+                <div className={'text-3xl lg:text-4xl text-white montserrat text-center md:text-left w-full'}>
+                    <p className={'mb-8 leading-snug md:leading-tight xl:w-3/4'}><span className={'font-semibold'}>{i18n.language === 'en' ? 'Seamless' :'Kelancaran'}</span>&nbsp;
+                        {i18n.language === 'en' ? 'Passenger Verification & Identification' : 'Verifikasi & Identifikasi Penumpang'}
+                    </p>
+                </div>
+                <div className={'mb-6 px-4 md:px-0'}>
+                    <p className={"text-white w-auto lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-center md:text-left"}>
+                        {t('Desc Law')}
+                    </p>
+                </div>
+                <div className={'text-center md:text-left mb-24 md:mb-0'}>
+                    <Button className={"text-white text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-48"}>
+                        {t('Request Demo')}
+                    </Button>
+                </div>
+            </div>
+        </div>
+    )
+
+    const CarouselPage2 = () => (
+        <div className={'w-full h-auto md:h-screen flex flex-col md:flex-row bg-[#05204D]'}>
+            <div className={'flex justify-center items-center w-full md:w-1/2 h-auto md:h-full my-16 md:my-0'}>
+                <Image preview={false} src={'/assets/logo/logo-for-dark-background.png'} className={'z-10 justify-center w-auto md:w-full h-full'} />
+            </div>
+            <div className={'flex flex-col justify-center w-full md:w-1/2 h-auto md:h-full'}>
+                <div className={"mb-7"}>
+                    <p className={'text-[16px] text-[#818fa6] tracking-[3px] mb-0 montserrat leading-none text-center md:text-left'}>{t('Law')}</p>
+                </div>
+                <div className={'text-[32px] lg:text-[40px] text-white montserrat text-center md:text-left w-full'}>
+                    <p className={'mb-8 leading-snug md:leading-tight xl:w-3/4'}>
+                        {i18n.language === 'en' ? (
+                            <span>Top Level <span className={'font-bold'}>Guarded Biometric </span>Approach</span>
+                        ) : (
+                            <span>Pendekatan <span className={'font-bold'}>Biometrik Terjaga </span>Tingkat Atas</span>
+                        )}
+                    </p>
+                </div>
+                <div className={'mb-6 px-4 md:px-0'}>
+                    <p className={"text-white w-auto lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-center md:text-left"}>
+                        {t('Desc Law')}
+                    </p>
+                </div>
+                <div className={'text-center md:text-left mb-24 md:mb-0'}>
+                    <Button className={"text-white text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-48"}>
+                        {t('Request Demo')}
+                    </Button>
+                </div>
+            </div>
+        </div>
+    )
+
+    return (
+        <div className={'w-full h-full pl-12 md:pl-20'}>
+            <div className={'w-full h-full'}>
+                <div className={"relative w-full h-auto max-h-[519px] usecase-img"}>
+                    <Image preview={false} className="w-full h-full brightness-50" src={'/assets/usecase-airport.png'}/>
+                    <div className={'absolute top-0 left-0 h-full w-full usecase-img'}>
+                        <Image preview={false} className="w-full h-full brightness-50 " src={'/assets/usecase-airport.png'}/>
                     </div>
-                    <div className={'w-full flex flex-row lg:h-[1100px] md:h-[1100px] sm:h-[1100px] bg-[#4A90E2]'}>
-                        <div className={'absolute -left-10'}>
-                            <p className={'opacity-50 text-transparent montserrat stroke lg:text-[410px] md:text-[200px] leading-none'}>Airport</p>
-                        </div>
-                        <div className={'flex justify-center items-center w-2/4'}>
-                            <Image preview={false} className="lg:w-[325px] md:w-[280px] lg:ml-24 md:ml-14" src={'/assets/phone-face-2x.png'}/>
-                        </div>
-                        <div className={'flex flex-col justify-center lg:w-2/4 mb-44 md:w-1/3 md:ml-10'}>
-                            <div>
-                                <p className={'text-[32px] text-white mb-0 montserrat leading-none'}><span className={'font-bold'}>Seamless</span> Passenger</p>
-                                <p className={'text-[32px] text-white montserrat mb-5'}>Verification & Identification</p>
-                            </div>
-                            <div>
-                                <p className={"text-white w-[70%] text-base montserrat"}>Improve the passenger’s identification and verification process in recognizing the white listed person.
-                                </p>
-                            </div>
-                        </div>
-                        <div className={'line-top'}/>
-                        <div className={'circle'}/>
-                        <div className={'line-mid'}/>
-                        <div className={'line-bottom'}/>
+                    <div className={'absolute right-0 top-0 z-20 h-full w-auto usecase-img'}>
+                        <Image preview={false} className="h-full w-auto" src={'/assets/images/accent-home-sectionUseCase-1.png'}/>
                     </div>
-                </Carousel>
+                    <div className={'absolute left-[1.2rem] sm:left-[2.2rem] bottom-[1rem] sm:bottom-[2.3rem] z-20'}>
+                        <b className={'text-white text-3xl sm:text-4xl md:text-6xl font-bold mb-5 montserrat'}>{t('Modern')}</b>
+                        <p className={'text-white text-2xl sm:text-3xl md:text-5xl montserrat'}>{t('Biometric Use Case')}</p>
+                    </div>
+
+                </div>
+                <div className={'flex flex-row h-auto bg-[#05204D]'}>
+                    <Carousel
+                        autoPlay={false}
+                        className={'w-full h-full'}
+                        indicatorContainerProps={{
+                            style: {
+                                position: 'absolute',
+                                bottom: '3%',
+                                // right: '3%',
+                                zIndex: 10
+                            },
+                        }}
+                        indicatorIconButtonProps={{
+                            style: {
+                                color : '#B7DFFF'
+                            }
+                        }}
+                        activeIndicatorIconButtonProps={{
+                            style: {
+                                backgroundColor: '#0681FA',
+                                color: '#0681FA',
+                                width: 25,
+                                height: 10,
+                                borderRadius: 10,
+                                marginRight: 5,
+                                marginLeft: 5,
+                            }
+                        }}
+                        navButtonsAlwaysVisible={true}
+                        navButtonsProps={{
+                            style: {
+                                backgroundColor: 'rgba(0,0,0, .1)',
+                            },
+                            className: 'arrow-usecase mt-56 md:mt-36'
+                        }}
+                        navButtonsWrapperProps={{
+                            className: `mx-2 md:mx-8 ${!current ? 'arrow-prev-product' : current === (pageCarousel - 1) ? 'arrow-next-product' : null}`
+                        }}
+                        NextIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-right.svg'}/>}
+                        PrevIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-left.svg'}/>}
+                        animation={'slide'}
+                        onChange={num => setCurrent(num)}
+                    >
+                        <CarouselPage1 />
+                        <CarouselPage2 />
+                    </Carousel>
+                </div>
             </div>
         </div>
     )

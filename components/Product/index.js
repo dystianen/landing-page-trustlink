@@ -1,32 +1,49 @@
 import React, {useState} from 'react';
-import {Image, Popover, Steps, Button, Row, Col} from "antd";
+import {Image, Popover, Steps, Button, Row, Col, Tooltip} from "antd";
 import Carousel from 'react-material-ui-carousel';
+import {useMediaQuery} from "react-responsive";
+import { useTranslation } from 'next-i18next';
 
 export const Product = () => {
     const [current, setCurrent] = useState(0)
     const { Step } = Steps;
 
+    const { t } = useTranslation();
+    const xl = useMediaQuery({query: '(min-width: 1440px)'})
+    const lg = useMediaQuery({query: '(min-width: 1024px)'})
+    const md = useMediaQuery({query: '(min-width: 768px)'})
+    const sm = useMediaQuery({query: '(min-width: 576px)'})
+    const xs = useMediaQuery({query: '(max-width: 476px)'})
+
+    const shadow = xl ? 20 : lg ? 10 : md ? 15: sm ? 15 : 5
+    const step = xs ? 'w-10 h-10' : 'w-14 h-14'
+    const stepActive = xs ? 'w-[50px] h-[50px]' : 'w-[65px] h-[65px]'
+    const imageSm = xs ? 'w-[16px]' : 'w-[24px]'
     const data = [
         {
             name: 'Live',
-            icon: '/assets/logo/trust-live/match.png',
+            icon: '/assets/images/logo-trust-live.png',
         },
         {
             name: 'Scan',
-            icon: '/assets/logo/trust-scan/scan.png',
+            icon: '/assets/images/logo-trust-scan.png',
         },
         {
             name: 'Verify',
-            icon: '/assets/logo/trust-verify/verification.png',
+            icon: '/assets/images/logo-trust-verify.png',
         },
         {
             name: 'Connect',
-            icon: '/assets/logo/trust-connect/icon-without-text.png',
+            icon: '/assets/images/logo-trust-connect.png',
         },
         {
             name: 'Score',
-            icon: '/assets/logo/trust-score/score.png',
-        }
+            icon: '/assets/images/logo-trust-score.png',
+        },
+        {
+            name: 'Vision',
+            icon: '/assets/images/logo-trust-vision.png',
+        },
     ]
 
     let items = [
@@ -34,46 +51,52 @@ export const Product = () => {
             name: 'Trust',
             name2: 'Live',
             icon: '/assets/phone-face.png',
-            desc: 'Increase assurance levels for every verification, our liveness detection determines whether the presented face is a real person and not a spoof. Preventing fraud in your onboarding process and within your product.'
+            desc: t('Desc TrustLive')
         },
         {
             name: 'Trust',
             name2: 'Scan',
             icon: '/assets/phone-face3.png',
-            desc: 'TrustScan is a powerful AI-powered machine learning trained to scan and extract data from ID’s and auto-fill your customer data - making onboarding process seamless and no hassle.'
+            desc: t('Desc TrustScan')
         },
         {
             name: 'Trust',
             name2: 'Verify',
             icon: '/assets/phone-face2.png',
-            desc: 'TrustVerification is the highest compliance to verify identity by comparing the face biometric to Dukcapil database. TrustLink is the official “Platform Bersama” operator'
+            desc: t('Desc TrustVerification')
         },
         {
             name: 'Trust',
             name2: 'Connect',
             icon: '/assets/phone-face.png',
-            desc: 'TrustScan is a powerful AI-powered machine learning trained to scan and extract data from ID’s and auto-fill your customer data - making onboarding process seamless and no hassle.'
+            desc: t('Desc TrustLive')
         },
         {
             name: 'Trust',
             name2: 'Score',
             icon: '/assets/phone-face3.png',
-            desc: 'TrustScan is a powerful AI-powered machine learning trained to scan and extract data from ID’s and auto-fill your customer data - making onboarding process seamless and no hassle.'
+            desc: t('Desc TrustLive')
+        },
+        {
+            name: 'Trust',
+            name2: 'Vision',
+            icon: '/assets/phone-face3.png',
+            desc: t('Desc TrustLive')
         }
     ]
 
     const Item = ({item}) => {
         return (
-            <div className={'flex w-full h-auto'}>
-                <div className={'flex justify-center items-center w-2/4 text-center'}>
-                    <Image preview={false} className="w-[325px] ml-24 justify-end items-end" src={item.icon}/>
+            <div className={'flex flex-col md:flex-row w-full h-auto'}>
+                <div className={'flex justify-center items-center w-full md:w-3/6 lg:w-2/4 text-center z-10'}>
+                    <Image preview={false} className="w-[160px] md:w-[200px] lg:w-[325px]" src={item.icon}/>
                 </div>
-                <div className={'flex flex-col justify-center w-2/4'}>
+                <div className={'flex flex-col justify-center mt-4 w-full md:w-3/6 lg:w-2/4 z-10'}>
                     <div>
-                        <p className={'text-6xl mb-0 montserrat leading-none font-bold'} style={{color: '#04204D'}}>{item.name}<span style={{color: '#FE6601'}}>{item.name2}</span></p>
+                        <p className={'text-3xl md:text-4xl lg:text-6xl mb-0 montserrat leading-none font-bold'} style={{color: '#04204D'}}>{item.name}<span style={{color: '#FE6601'}}>{item.name2}</span></p>
                     </div>
-                    <div className={'mt-14'}>
-                        <p style={{color: '#04204D'}} className={"w-[65%] text-base montserrat"}>
+                    <div className={'mt-5 md:mt-14'}>
+                        <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base montserrat"}>
                             {item.desc}
                         </p>
                     </div>
@@ -83,54 +106,51 @@ export const Product = () => {
     }
 
     return (
-        <>
+        <div className={'relative h-auto w-full'}>
+            <div className={'h-1/2 lg:h-auto absolute top-24 -left-60 about-img'}>
+                <Image preview={false} className="h-full w-auto " src={'/assets/images/accent-master-connecting-dots-1.png'}/>
+            </div>
             <div className={'flex w-full justify-center'}>
-                <div className={'flex flex-row items-center'}>
-                    <div className={'w-8 h-px'} style={{backgroundColor: 'rgba(129, 143, 166, 0.5)'}}/>
-                    <p className={'text-sm mx-6'} style={{color: '#818FA6'}}>
-                        ONE & FOR ALL
-                    </p>
-                    <div className={'w-8 h-px'} style={{backgroundColor: 'rgba(129, 143, 166, 0.5)'}}/>
+                <div className={'flex flex-row items-center z-10 mb-2'}>
+                    <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
+                    <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center'}>{t('One and For All')}</p>
+                    <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                 </div>
             </div>
             <div className={'flex justify-center'}>
                 <div>
-                    <p style={{color: '#161D24'}} className={'text-7xl font-bold text-center mb-0'}>
-                        Products
-                    </p>
-                    <p className={'text-5xl text-center mt-2'} style={{color: '#161D24'}}>
-                        End-to-End Services.
-                    </p>
-                    <p className={'text-center'} style={{color: '#4F6382'}}>
-                        We are a leading digital biometric provider in Indonesia, <br/>
-                        exclusively focused on comprehensive biometric recognition<br/>
-                        products and highly tailored with data analytics platforms.
-                    </p>
+                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#161D24] mb-0 montserrat'}>{t('Products')}</p>
+                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl text-center mt-2 text-[#161D24] montserrat font-medium'}>{t('End to End Services')}</p>
+                    <div className={'text-sm text-center text-[#4F6382] montserrat w-full flex justify-center items-center'}>
+                        <p className='sm:w-4/6 lg:w-[45%] xl:w-[35%]'>{t('We are a leading digital biometric')}</p>
+                    </div>
                 </div>
             </div>
-            <div className={'relative w-full'}>
-                <Steps current={current} className={'mt-16 w-11/12 h-48'} onChange={(num) => setCurrent(num)}>
+            <div className={'relative w-screen lg:w-auto'}>
+                <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-32 sm:h-48 -ml-12 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => setCurrent(num)}>
                     {data.map((it, index) => (
                         <Step
                             className={'flex justify-center items-center'}
                             key={index}
                             icon={
-                                <div className={`flex flex-col justify-content items-center ${current === index ? 'mt-8' : 'mt-12'}`}>
-                                    <div className={`rounded-full border-4 ${current === index ? 'w-32 h-32 mb-10 border-[#FE6601]' : 'w-24 h-24 border-[#FE944D]'} mb-2 bg-white z-10 flex justify-center items-center`}
-                                         style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? '0 0 20px 1px #FE6601' : null}}
+                                <div className={`flex flex-col justify-content items-center ${current === index ? 'mt-2 lg:mt-0' : 'mt-12 sm:mt-10 lg:mt-12'}`}>
+                                    <div className={`rounded-full border-4 ${current === index ? `${stepActive} sm:w-[78px] md:w-[95px] lg:w-32 sm:h-[78px] md:h-[95px] lg:h-32 border-[#FE6601]` : `${step} sm:w-16 md:w-20 lg:w-24 sm:h-16 md:h-20 lg:h-24 border-[#FE944D]`} mb-2 bg-white z-10 flex justify-center items-center`}
+                                         style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? `0 0 ${shadow}px 1px #FE6601` : null}}
                                     >
-                                        <Image preview={false} src={it.icon} className={'w-[50px]'}/>
+                                        <Tooltip title={'Trust' +it.name}>
+                                            <Image preview={false} src={it.icon} className={`${imageSm} sm:w-[28px] md:w-[35px] lg:w-[50px]`}/>
+                                        </Tooltip>
                                     </div>
-                                    <p className={`w-40 text-lg montserrat text-[#B4BCC9] ${current === index ? 'hidden' : null}`}><span className={'font-bold'}>Trust</span>{it.name}</p>
+                                    <p className={`w-24 md:w-40 text-[10px] sm:text-sm lg:text-lg montserrat text-[#B4BCC9] ${current === index ? 'hidden' : null}`}><span className={'font-bold hidden sm:contents'}>Trust</span>{it.name}</p>
                                 </div>
                             }
                         />
                     ))}
-                    <hr className={'absolute right-0 top-[48%] w-[90%] h-1 bg-[#FE6601] z-0'}/>
+                    <hr className={`absolute right-0 top-[48%] ${xs ? 'w-[105%]' : 'w-full' } lg:w-[90%] h-1 bg-[#FE6601] z-0`}/>
                 </Steps>
             </div>
 
-            <div className={'mt-28'}>
+            <div className={'mt-4 md:mt-28 z-10'}>
                 <Carousel
                     navButtonsAlwaysVisible={true}
                     animation={'slide'}
@@ -138,8 +158,8 @@ export const Product = () => {
                     prev={num => setCurrent(num)}
                     index={current}
                     autoPlay={false}
-                    NextIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-right.svg'}/>}
-                    PrevIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-left.svg'}/>}
+                    NextIcon={<Image preview={false} className="w-[20px] lg:w-[25px] h-[20px] lg:h-[25px]" src={'/assets/arrow-right.svg'}/>}
+                    PrevIcon={<Image preview={false} className="w-[20px] lg:w-[25px] h-[20px] lg:h-[25px]" src={'/assets/arrow-left.svg'}/>}
                     indicators={false}
                     navButtonsProps={{
                         style: {
@@ -148,7 +168,7 @@ export const Product = () => {
                         }
                     }}
                     navButtonsWrapperProps={{
-                        className: `mr-5 ml-5 ${!current ? 'arrow-prev-product' : current == 4 ? 'arrow-next-product' : null}`
+                        className: `mr-5 ml-5 z-10 ${!current ? 'arrow-prev-product' : current == 4 ? 'arrow-next-product' : null}`
                     }}
                 >
                     {
@@ -156,6 +176,10 @@ export const Product = () => {
                     }
                 </Carousel>
             </div>
-        </>
+            <div className="relative h-[10vh] sm:h-quarter xl:h-half" />
+            <div className={'absolute w-full lg:w-10/12 xl:w-8/12 h-1/3 sm:h-auto -bottom-10 right-0 usecase-img z-0'}>
+                <Image preview={false} src={'/assets/images/accent-home-sectionProduct-2-edit.png'} className={'h-full w-full opacity-10'}/>
+            </div>
+        </div>
     )
 }
