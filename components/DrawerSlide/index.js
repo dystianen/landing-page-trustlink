@@ -36,7 +36,7 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
                     <Fade when={(!showProduct || !showUseCase)} duration={500}>
                         <div className={`ml-16 sm:ml-20 px-0 border-l border-gray-300 w-auto md:w-[40%] h-full flex items-center ${(showProduct || showUseCase) ? 'hidden' : null}`}>
                             <div className={'flex flex-col py-11 px-2 sm:px-4 lg:px-18 lg:p-11 w-full'}>
-                                    {
+                                     {
                                         menu.map((it, index) => (
                                             <Button type="link" className={'flex flex-row w-full h-8 justify-between items-center mb-7'} ghost key={index} onClick={() => it.name === t('Products') ? setShowProduct(true) : it.name === t('Use Cases') ? setShowUseCase(true) : null}>
                                                 <h1 className={'text-xl md:text-2xl font-bold mb-0 montserrat'} style={{color: '#04204D'}}>{it.name}</h1>
@@ -57,10 +57,9 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
                             <UseCases show={showUseCase} setShow={setShowUseCase} />
                         </div>
                     </Fade>
-                    {console.log(menu, "ehehehhe")}
                 <div className={`${(showProduct || showUseCase) ? 'w-auto md:w-[35%] md:fixed md:right-0 lg:py-8' : 'w-auto md:w-[60%] md:pl-14'} h-full md:py-16 pl-6 ml-16 sm:ml-20 md:ml-0`} style={{backgroundColor: '#1D365F', transition: 'width 500ms'}}>
                     <div className={'flex flex-col w-full h-full justify-between'}>
-                        <div className={`flex flex-col lg:${(showProduct || showUseCase) ? "flex-col lg:pt-0" : "flex-row justify-between"} pt-10 md:pt-24`} style={{ transition: 'width 300ms ease-in-out'}}>
+                        <div className={`flex flex-col lg:${(showProduct || showUseCase) ? "flex-col lg:pt-0" : "flex-row justify-between"} pt-10 md:pt-20`} style={{ transition: 'width 300ms ease-in-out'}}>
                             <div className={`flex flex-col`}>
                                 <div className={'flex-col text-white mb-10'}>
                                     <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>{t('Call Us')}</p>
