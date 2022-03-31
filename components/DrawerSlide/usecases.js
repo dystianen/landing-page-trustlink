@@ -2,8 +2,10 @@ import React from "react";
 import { observer } from "mobx-react-lite";
 import {Image} from "antd";
 import {LeftOutlined, RightOutlined} from "@ant-design/icons";
+import { useTranslation } from "next-i18next";
 
 export const UseCases = observer(({show, setShow}) => {
+    const { t } = useTranslation();
     const dataUseCases = [
         {
             key: 'sclaw',
@@ -50,9 +52,9 @@ export const UseCases = observer(({show, setShow}) => {
                             <LeftOutlined className={'text-xl mb-1 font-bold'}/>
                         </div>
                     </div>
-                    <p className={'inline text-3xl mb-5 pt-2 montserrat leading-none font-bold text-[#04204D]'}>Use Cases.</p>
+                    <p className={'inline text-3xl mb-5 pt-2 montserrat leading-none font-bold text-[#04204D]'}>{t('Use Cases')}</p>
                     <p className={'text-sm pb-6 pt-2 montserrat text-[#4F6382]'}>
-                        When Do You Need to Use Trustlink? <br/> Check Out Our Trustlink Use Cases in Your App!
+                        {t('When')} <br/> {t('Check')}
                     </p>
                 </div>
             </div>
