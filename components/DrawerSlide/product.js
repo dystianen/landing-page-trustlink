@@ -2,8 +2,10 @@ import {Button, Drawer, Image} from "antd";
 import {LeftOutlined, RightOutlined} from "@ant-design/icons";
 import React, {useState} from "react";
 import {observer} from "mobx-react-lite";
+import { useTranslation } from "next-i18next";
 
 export const Product = observer(({show, setShow}) => {
+    const { t } = useTranslation();
 
     const products = [
         {
@@ -61,9 +63,10 @@ export const Product = observer(({show, setShow}) => {
                                     <LeftOutlined className={'text-xl mb-1 font-bold'}/>
                                 </div>
                             </div>
-                            <p className={'inline text-3xl mb-5 pt-2 leading-none font-bold text-[#04204D]'}>Products.</p>
-                            <p className={'text-sm pt-2 pb-6 text-[#4F6382]'}>
-                                Learn how the digitalize biometric of human <br/> unique pattern becomes the lead of security alignment.
+                            <p className={'inline text-3xl mb-5 pt-2 leading-none font-bold text-[#04204D]'}>{t('Products')}</p>
+                            <p className={'text-sm lg:w-3/5 pt-2 pb-6 text-[#4F6382]'}>
+                                {t('Learn How To')}
+                                {/* Learn how the digitalize biometric of human <br/> unique pattern becomes the lead of security alignment. */}
                             </p>
                         </div>
                     </div>
