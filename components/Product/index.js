@@ -96,6 +96,7 @@ export const Product = () => {
                         width='100%'
                         height='100%'
                         loop={true}
+                        muted
                         playing={true}
                     />
                     {/*<Image preview={false} className="w-[160px] md:w-[200px] lg:w-[325px]" src={item.icon}/>*/}
