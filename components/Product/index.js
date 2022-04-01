@@ -106,7 +106,7 @@ export const Product = () => {
                         <p className={'text-3xl md:text-4xl lg:text-6xl mb-0 montserrat leading-none font-bold'} style={{color: '#04204D'}}>{item.name}<span className='text-orange font-medium'>{item.name2}</span></p>
                     </div>
                     <div className={'mt-5 md:mt-14'}>
-                        <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base montserrat"}>
+                        <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base lg:text-lg montserrat"}>
                             {item.desc}
                         </p>
                     </div>
