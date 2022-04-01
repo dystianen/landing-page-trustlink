@@ -21,10 +21,19 @@ const TrustedBy = (props) => {
             src: 'assets/trusted_by/flip.png',
         },
         {
-            src: 'assets/trusted_by/logo_aitb.png',
+            src: 'assets/trusted_by/asaren-crop.png',
         },
         {
-            src: 'assets/trusted_by/asaren-crop.png',
+            src: 'assets/trusted_by/TECH5_logo-01.png',
+        },
+        {
+            src: 'assets/trusted_by/interbio.svg',
+        },
+        {
+            src: 'assets/trusted_by/logo-light.png',
+        },
+        {
+            src: 'assets/trusted_by/more.png',
         }
     ]
 
