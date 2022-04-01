@@ -44,7 +44,7 @@ const Footer = () => {
                         <div className={'w-full md:w-9/12 lg:w-auto'}>
                             <p className={'text-base montserrat opacity-80'}>{t('Company')}</p>
                             <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-2">{t('Partners')}</p>
-                            <p className="montserrat text-lg md:text-2xl tracking-normal">{t('Carrer')}</p>
+                            <p className="montserrat text-lg md:text-2xl tracking-normal">{t('Career')}</p>
                         </div>
                     </div>
                     <div className={'md:w-1/2 lg:w-0'}/>
@@ -61,6 +61,12 @@ const Footer = () => {
             <div className={'absolute top-6 md:top-10 right-6 md:right-10 cursor-pointer'} onClick={() => window.scrollTo(0, 0)}>
                 <Image preview={false} src={'/assets/scroll-top.svg'} className={'rotate-180'}/>
                 <p className={'w-max mt-4'} style={{ color: '#fff', fontFamily: 'Montserrat', letterSpacing: '0.15rem', fontSize: '0.6rem', writingMode: 'vertical-rl', textOrientation: 'sideways-right' }}>{t('Go To Top')}</p>
+            </div>
+            <div className={'absolute bottom-0 left-0'}>
+                <Image preview={false} src={'/assets/images/accent-footer-left.png'}/>
+            </div>
+            <div className={'absolute bottom-0 right-0'}>
+                <Image preview={false} src={'/assets/images/accent-footer-right.png'}/>
             </div>
         </div>
     );
