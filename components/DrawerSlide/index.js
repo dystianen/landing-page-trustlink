@@ -31,6 +31,11 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
             url: '#'
         },
         {
+            key: 'fb',
+            title: 'Facebook',
+            url: '#'
+        },
+        {
             key: 'in',
             title: 'LinkedIn',
             url: 'https://www.linkedin.com/company/withtrustlink/'
