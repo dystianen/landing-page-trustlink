@@ -39,6 +39,11 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
             key: 'in',
             title: 'LinkedIn',
             url: 'https://www.linkedin.com/company/withtrustlink/'
+        },
+        {
+            key: 'fb',
+            title: 'Facebook',
+            url: '#'
         }
     ]
 
@@ -87,7 +92,7 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
                                 <p className={'text-xs opacity-80 mb-3 montserrat lg:mr-16'} style={{letterSpacing: 1.8}}>{t('Social Media')}</p>
                                 {socialMedia.map((data, index) => {
                                     return <p key={data.key} className={`text-xl ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>
-                                        <a href={data.url} rel="opener" className="text-white">{data.title}</a>
+                                        <a href={data.url} target={"_blank"} rel="noopener noreferrer" className="text-white">{data.title}</a>
                                     </p>
                                 })}
                             </div>
