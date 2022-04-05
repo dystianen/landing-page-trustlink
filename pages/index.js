@@ -47,36 +47,21 @@ export default function Home() {
 
     // checkRerouteLoggedUser(store,router);
 
-    const TrustScan = () => (
-        <div className={'w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 relative -ml-20 md:ml-0 xl:ml-24 z-10'}>
-            <Image preview={false} src={'/assets/images/trust-scan.png'} className={'z-10 justify-center'} />
-        </div>
-    )
-
-    const TrustConnect = () => (
-        <div
-            className={'w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 relative z-10 -mt-24 ml-[25%] md:ml-[40%]'}
-        >
-            <Image preview={false} src={'/assets/images/trust-connect.png'} className={'z-10 justify-center'} />
-        </div>
-    )
-
-    const TrustLive = () => (
-        <div
-            className={'w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 relative z-10 mt-[5%] md:mt-[17%] lg:mt-[8%] ml-[55%] md:ml-[65%]'}
-        >
-            <Image preview={false} src={'/assets/images/trust-live.png'} className={'z-10 justify-center'} />
-        </div>
-    )
-
-    const TrustVerify = () => (
-        <div
-            className={'w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 relative z-10 -ml-16 md:ml-[7%] xl:ml-[18%] -mt-12 md:-mt-6 lg:-mt-12'}
-        >
-            <Image preview={false} src={'/assets/images/trust-verify.png'} className={'z-10 justify-center'} />
-        </div>
-    )
-
+    const product = [
+        {
+            image: 'trust-scan.png',
+            className: 'w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 relative -ml-20 md:ml-0 xl:ml-24 z-10'
+        },{
+            image: 'trust-connect.png',
+            className: 'w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 relative z-10 -mt-24 ml-[25%] md:ml-[40%]'
+        },{
+            image: 'trust-live.png',
+            className: 'w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 relative z-10 mt-[5%] md:mt-[17%] lg:mt-[8%] ml-[55%] md:ml-[65%]'
+        },{
+            image: 'trust-verify.png',
+            className: 'w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 relative z-10 -ml-16 md:ml-[7%] xl:ml-[18%] -mt-12 md:-mt-6 lg:-mt-12'
+        },
+    ]
 
     return (
         <div className={'overflow-hidden'}>
@@ -124,10 +109,13 @@ export default function Home() {
                         </div>
                     </section>
                     <section className={'absolute top-[100%] md:top-0 right-10 w-3/5 h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
-                        <TrustScan />
-                        <TrustConnect />
-                        <TrustLive />
-                        <TrustVerify />
+                        {
+                            product.map((it,index) => (
+                                <div key={index} className={it.className}>
+                                    <Image preview={false} src={`/assets/images/${it.image}`} className={'z-10 justify-center'} />
+                                </div>
+                            ))
+                        }
                     </section>
                 </div>
             </div>
