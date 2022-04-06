@@ -269,6 +269,9 @@ svg { vertical-align: baseline; }
   .logo-accent{
     width: 34%;
   }
+  .about-section {
+    overflow-y: auto !important;
+  }
 }
 
 @media only screen and (min-device-width: 2560px) {

@@ -15,7 +15,7 @@ const AboutPage = () => {
     }, []);
 
     return (
-        <div className='w-screen h-screen overflow-y-auto lg:overflow-y-hidden pb-10 bg-[#F6F6F6]'>
+        <div className='w-screen h-screen overflow-y-auto lg:overflow-y-hidden pb-10 bg-[#F6F6F6] about-section'>
             <div className={'flex justify-end pad-0'}>
                 {/* <Fade duration={1600} bottom></Fade> */}
                 {/* <Link href={`/under_construction`} passHref> */}
