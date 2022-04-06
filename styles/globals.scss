@@ -265,6 +265,15 @@ svg { vertical-align: baseline; }
   transition: 500ms;
 }
 
+@media only screen and (max-device-height: 596px) and (min-device-width: 986px) {
+  .logo-accent{
+    width: 34%;
+  }
+  .about-section {
+    overflow-y: auto !important;
+  }
+}
+
 @media only screen and (min-device-width: 2560px) {
   .logo-accent{
     bottom: -22vh;
