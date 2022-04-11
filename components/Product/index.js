@@ -51,44 +51,44 @@ export const Product = () => {
         {
             name: 'Trust',
             name2: 'Live',
-            src: '/assets/product-animation/TrustLive-GP.mp4',
+            src: '/assets/product/TrustLive-short.webm',
             desc: t('Desc TrustLive')
         },
         {
             name: 'Trust',
             name2: 'Scan',
-            src: '/assets/product-animation/TrustScan.mp4',
+            src: '/assets/product/TrustScan.webm',
             desc: t('Desc TrustScan')
         },
         {
             name: 'Trust',
             name2: 'Verify',
-            src: '/assets/product-animation/TrustVerify.mp4',
+            src: '/assets/product/TrustVerify.webm',
             desc: t('Desc TrustVerification')
         },
         {
             name: 'Trust',
             name2: 'Connect',
-            src: '/assets/product-animation/TrustConnect.mp4',
+            src: '/assets/product/TrustConnect.webm',
             desc: t('Desc TrustLive')
         },
         {
             name: 'Trust',
             name2: 'Score',
-            src: '/assets/product-animation/TrustScore.mp4',
+            src: '/assets/product/TrustScore.webm',
             desc: t('Desc TrustLive')
         },
         {
             name: 'Trust',
             name2: 'Vision',
-            src: '/assets/product-animation/TrustVision.mp4',
+            src: '/assets/product/TrustVision.webm',
             desc: t('Desc TrustLive')
         }
     ]
 
     const Item = ({item}) => {
         return (
-            <div className={'flex flex-col md:flex-row w-full h-auto'}>
+            <div className={'flex flex-col md:flex-row w-full h-auto md:min-h-[28rem] lg:min-h-[38rem] xl:min-h-[42rem]'}>
                 <div className={'flex justify-center items-center w-full md:w-3/6 lg:w-2/4 text-center z-10'}>
                     <ReactPlayer
                         className=''
@@ -99,9 +99,8 @@ export const Product = () => {
                         muted
                         playing={true}
                     />
-                    {/*<Image preview={false} className="w-[160px] md:w-[200px] lg:w-[325px]" src={item.icon}/>*/}
                 </div>
-                <div className={'flex flex-col justify-center mt-4 w-full md:w-3/6 lg:w-2/4 z-10'}>
+                <div className={'flex flex-col justify-center mt-4 w-full md:w-3/6 lg:w-2/4 z-10 pl-12 md:pl-0'}>
                     <div>
                         <p className={'text-3xl md:text-4xl lg:text-6xl mb-0 montserrat leading-none font-bold'} style={{color: '#04204D'}}>{item.name}<span className='text-orange font-medium'>{item.name2}</span></p>
                     </div>
@@ -180,13 +179,14 @@ export const Product = () => {
                     navButtonsWrapperProps={{
                         className: `mr-5 ml-5 z-10 ${!current ? 'arrow-prev-product' : current == 5 ? 'arrow-next-product' : null}`
                     }}
+                    className={'-ml-12 md:ml-0'}
                 >
                     {
                         items.map( (item, i) => <Item key={i} item={item} /> )
                     }
                 </Carousel>
             </div>
-            <div className="relative h-[10vh] sm:h-quarter xl:h-half" />
+            <div className="relative h-[10vh]" />
             <div className={'absolute w-full lg:w-10/12 xl:w-8/12 h-1/3 sm:h-auto -bottom-10 right-0 usecase-img z-0'}>
                 <Image preview={false} src={'/assets/images/accent-home-sectionProduct-2-edit.png'} className={'h-full w-full opacity-10'}/>
             </div>
