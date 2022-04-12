@@ -56,7 +56,8 @@ export const Product = ({onClickContact=emptyFunction}) => {
             coming_soon : '',
             src: '/assets/product/TrustLive-short.webm',
             subhead: 'SEAMLESS , NON-INVASIVE SINGLE IMAGE LIVENESS  DETECTION',
-            desc: t('Desc TrustLive')
+            desc: t('Desc TrustLive'),
+            size: '100%'
         },
         {
             name: 'Trust',
@@ -64,7 +65,8 @@ export const Product = ({onClickContact=emptyFunction}) => {
             coming_soon : '',
             src: '/assets/product/TrustScan.webm',
             subhead: 'ULTRA FAST, ACCURATE, AND PRACTICAL',
-            desc: t('Desc TrustScan')
+            desc: t('Desc TrustScan'),
+            size: '100%'
         },
         {
             name: 'Trust',
@@ -72,7 +74,8 @@ export const Product = ({onClickContact=emptyFunction}) => {
             coming_soon : '',
             src: '/assets/product/TrustVerify.webm',
             subhead: 'HIGHEST COMPLIENCE & ADVANCED BIOMETRICS IDENTITY VERIFICATION',
-            desc: t('Desc TrustVerification')
+            desc: t('Desc TrustVerification'),
+            size: '100%'
         },
         {
             name: 'Trust',
@@ -80,15 +83,16 @@ export const Product = ({onClickContact=emptyFunction}) => {
             coming_soon : '',
             src: '/assets/product/TrustConnect.webm',
             subhead: 'CONNECT TO FINANCIAL DATA IN REAL-TIME',
-            desc: t('Desc TrustConnect')
+            desc: t('Desc TrustConnect'),
+            size: '100%'
         },
         {
             name: 'Trust',
             name2: 'Vision',
-            coming_soon : '',
             src: '/assets/product/TrustVision.webm',
             subhead: 'An FR BASED VIDEO SURVEILLANCE TECHNOLOGY',
-            desc: t('Desc TrustVision')
+            desc: t('Desc TrustVision'),
+            size: '90%'
         },
         {
             name: 'Trust',
@@ -96,19 +100,20 @@ export const Product = ({onClickContact=emptyFunction}) => {
             src: '/assets/product/TrustScore.webm',
             coming_soon : true,
             subhead: 'ULTRA FAST, ACCURATE, AND PRACTICAL',
-            desc: t('Desc TrustScore')
+            desc: t('Desc TrustScore'),
+            size: '90%'
         },
     ]
 
     const Item = ({item}) => {
         return (
             <div className={'flex flex-col md:flex-row w-full h-auto md:min-h-[28rem] lg:min-h-[38rem] xl:min-h-[42rem]'}>
-                <div className={'flex justify-center items-center w-full md:w-3/6 lg:w-2/4 text-center z-10'}>
+                <div className={'flex justify-center md:justify-end items-center w-full md:w-3/6 lg:w-2/4 text-center z-10'}>
                     <ReactPlayer
                         className=''
                         url={item.src}
-                        width='100%'
-                        height='100%'
+                        width={item.size}
+                        height={item.size}
                         loop={true}
                         muted
                         playing={true}
