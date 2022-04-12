@@ -5,7 +5,9 @@ import {useMediaQuery} from "react-responsive";
 import { useTranslation } from 'next-i18next';
 import ReactPlayer from 'react-player'
 
-export const Product = () => {
+const emptyFunction = () => {}
+
+export const Product = ({onClickContact=emptyFunction}) => {
     const [current, setCurrent] = useState(0)
     const { Step } = Steps;
 
@@ -38,63 +40,80 @@ export const Product = () => {
             icon: '/assets/images/logo-trust-connect.png',
         },
         {
-            name: 'Score',
-            icon: '/assets/images/logo-trust-score.png',
-        },
-        {
             name: 'Vision',
             icon: '/assets/images/logo-trust-vision.png',
         },
+        {
+            name: 'Score',
+            icon: '/assets/images/logo-trust-score.png',
+        }
     ]
 
     let items = [
         {
             name: 'Trust',
             name2: 'Live',
+            coming_soon : '',
             src: '/assets/product/TrustLive-short.webm',
-            desc: t('Desc TrustLive')
+            subhead: 'SEAMLESS , NON-INVASIVE SINGLE IMAGE LIVENESS  DETECTION',
+            desc: t('Desc TrustLive'),
+            size: '100%'
         },
         {
             name: 'Trust',
             name2: 'Scan',
+            coming_soon : '',
             src: '/assets/product/TrustScan.webm',
-            desc: t('Desc TrustScan')
+            subhead: 'ULTRA FAST, ACCURATE, AND PRACTICAL',
+            desc: t('Desc TrustScan'),
+            size: '100%'
         },
         {
             name: 'Trust',
             name2: 'Verify',
+            coming_soon : '',
             src: '/assets/product/TrustVerify.webm',
-            desc: t('Desc TrustVerification')
+            subhead: 'HIGHEST COMPLIENCE & ADVANCED BIOMETRICS IDENTITY VERIFICATION',
+            desc: t('Desc TrustVerification'),
+            size: '100%'
         },
         {
             name: 'Trust',
             name2: 'Connect',
+            coming_soon : '',
             src: '/assets/product/TrustConnect.webm',
-            desc: t('Desc TrustLive')
-        },
-        {
-            name: 'Trust',
-            name2: 'Score',
-            src: '/assets/product/TrustScore.webm',
-            desc: t('Desc TrustLive')
+            subhead: 'CONNECT TO FINANCIAL DATA IN REAL-TIME',
+            desc: t('Desc TrustConnect'),
+            size: '100%'
         },
         {
             name: 'Trust',
             name2: 'Vision',
             src: '/assets/product/TrustVision.webm',
-            desc: t('Desc TrustLive')
-        }
+            subhead: 'An FR BASED VIDEO SURVEILLANCE TECHNOLOGY',
+            desc: t('Desc TrustVision'),
+            size: '90%'
+        },
+        {
+            name: 'Trust',
+            name2: 'Score',
+            src: '/assets/product/TrustScore.webm',
+            coming_soon : true,
+            subhead: 'ULTRA FAST, ACCURATE, AND PRACTICAL',
+            desc: t('Desc TrustScore'),
+            size: '90%'
+        },
     ]
 
     const Item = ({item}) => {
         return (
             <div className={'flex flex-col md:flex-row w-full h-auto md:min-h-[28rem] lg:min-h-[38rem] xl:min-h-[42rem]'}>
-                <div className={'flex justify-center items-center w-full md:w-3/6 lg:w-2/4 text-center z-10'}>
+                <div className={'flex justify-center md:justify-end items-center w-full md:w-3/6 lg:w-2/4 text-center z-10'}>
                     <ReactPlayer
                         className=''
                         url={item.src}
-                        width='100%'
-                        height='100%'
+                        width={item.size}
+                        height={item.size}
                         loop={true}
                         muted
                         playing={true}
@@ -102,12 +121,25 @@ export const Product = () => {
                 </div>
                 <div className={'flex flex-col justify-center mt-4 w-full md:w-3/6 lg:w-2/4 z-10 pl-12 md:pl-0'}>
                     <div>
-                        <p className={'text-3xl md:text-4xl lg:text-6xl mb-0 montserrat leading-none font-bold'} style={{color: '#04204D'}}>{item.name}<span className='text-orange font-medium'>{item.name2}</span></p>
+                        <p className={'text-3xl md:text-4xl lg:text-6xl mb-0 montserrat text-gray-400 font-bold leading-none'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-orange' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-[28px]'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
                     </div>
-                    <div className={'mt-5 md:mt-14'}>
-                        <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base lg:text-lg montserrat"}>
-                            {item.desc}
-                        </p>
+                    <p className={'w-[95%] md:w-[85%] text-xl md:text-2xl lg:text-2xl mb-0 montserrat leading-none font-bold mt-5'} style={{color: '#04204D'}}>{item.subhead}</p>
+                    <div className={'mt-5 md:mt-5'}>
+                        <div>
+                            <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base lg:text-lg montserrat text-justify mb-3"}>
+                                {item.desc}
+                            </p>
+                        </div>
+                        <div>
+                            <span
+                                type="primary"
+                                className={' bg-[#04204D] text-white text-base sm:text-lg h-12 w-1/2 p-5 montserrat mt-5'}
+                                onClick={onClickContact}
+                            >
+                                    Contact Us
+                                </span>
+                        </div>
+
                     </div>
                 </div>
             </div>
