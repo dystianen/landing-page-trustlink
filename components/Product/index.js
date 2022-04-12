@@ -24,16 +24,16 @@ export const Product = ({onClickContact=emptyFunction}) => {
     const imageSm = xs ? 'w-[16px]' : 'w-[24px]'
     const data = [
         {
-            name: 'Live',
-            icon: '/assets/images/logo-trust-live.png',
+            name: 'Verify',
+            icon: '/assets/images/logo-trust-verify.png',
         },
         {
             name: 'Scan',
             icon: '/assets/images/logo-trust-scan.png',
         },
         {
-            name: 'Verify',
-            icon: '/assets/images/logo-trust-verify.png',
+            name: 'Live',
+            icon: '/assets/images/logo-trust-live.png',
         },
         {
             name: 'Connect',
@@ -52,11 +52,11 @@ export const Product = ({onClickContact=emptyFunction}) => {
     let items = [
         {
             name: 'Trust',
-            name2: 'Live',
+            name2: 'Verify',
             coming_soon : '',
-            src: '/assets/product/TrustLive-short.webm',
-            subhead: 'SEAMLESS , NON-INVASIVE SINGLE IMAGE LIVENESS  DETECTION',
-            desc: t('Desc TrustLive'),
+            src: '/assets/product/TrustVerify.webm',
+            subhead: 'HIGHEST COMPLIENCE & ADVANCED BIOMETRICS IDENTITY VERIFICATION',
+            desc: t('Desc TrustVerification'),
             size: '100%'
         },
         {
@@ -68,13 +68,14 @@ export const Product = ({onClickContact=emptyFunction}) => {
             desc: t('Desc TrustScan'),
             size: '100%'
         },
+
         {
             name: 'Trust',
-            name2: 'Verify',
+            name2: 'Live',
             coming_soon : '',
-            src: '/assets/product/TrustVerify.webm',
-            subhead: 'HIGHEST COMPLIENCE & ADVANCED BIOMETRICS IDENTITY VERIFICATION',
-            desc: t('Desc TrustVerification'),
+            src: '/assets/product/TrustLive-short.webm',
+            subhead: 'SEAMLESS , NON-INVASIVE SINGLE IMAGE LIVENESS  DETECTION',
+            desc: t('Desc TrustLive'),
             size: '100%'
         },
         {
@@ -123,14 +124,14 @@ export const Product = ({onClickContact=emptyFunction}) => {
                     <div>
                         <p className={'text-3xl md:text-4xl lg:text-6xl mb-0 montserrat text-gray-400 font-bold leading-none'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-orange' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-[28px]'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
                     </div>
-                    <p className={'w-[95%] md:w-[85%] text-xl md:text-2xl lg:text-2xl mb-0 montserrat leading-none font-bold mt-5'} style={{color: '#04204D'}}>{item.subhead}</p>
+                    <p className={'w-[95%] md:w-[80%] text-xl md:text-2xl lg:text-2xl mb-0 montserrat leading-none font-bold mt-5'} style={{color: '#04204D'}}>{item.subhead}</p>
                     <div className={'mt-5 md:mt-5'}>
                         <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base lg:text-lg montserrat text-justify mb-3"}>
                             {item.desc}
                         </p>
                             <a
                                 type="primary"
-                                className={'rounded-lg bg-[#04204D]  flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 w-3/12 montserrat'}
+                                className={'rounded-lg bg-[#04204D] mt-2 flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 w-3/12 montserrat'}
                                 onClick={onClickContact}
                             >
                                     Contact Us
@@ -157,8 +158,9 @@ export const Product = ({onClickContact=emptyFunction}) => {
             <div className={'flex justify-center'}>
                 <div>
                     <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#161D24] mb-0 montserrat'}>{t('Products')}</p>
-                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl text-center mt-2 text-[#161D24] montserrat font-medium'}>{t('End to End Services')}</p>
-                    <div className={'text-sm text-center text-[#4F6382] montserrat w-full flex justify-center items-center'}>
+                    {/*<p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl text-center mt-2 text-[#161D24] montserrat font-medium'}>{t('End to End Services')}</p>*/}
+                    <br />
+                    <div className={'text-sm text-[18px] leading-relaxed text-center text-[#4F6382] montserrat w-full flex justify-center items-center'}>
                         <p className='sm:w-4/6 lg:w-[45%] xl:w-[35%]'>{t('We are a leading digital biometric')}</p>
                     </div>
                 </div>
