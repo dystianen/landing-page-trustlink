@@ -100,17 +100,15 @@ export default function Home() {
                         {/*</div>*/}
                         {/*</div>*/}
                         <div className={'w-max h-[50vh] md:h-full md:min-h-screen lg:pl-8 flex flex-col justify-end md:justify-center'}>
-                            <div className={'home-next-generation text-3xl sm:text-4xl md:text-5xl lg:text-6xl'}>
-                                <span className={'block mb-2'}>Trust-Centric</span>
-                                <span>Solution</span>
-                            </div>
-                            <div className={'home-next-generation-sub leading-tight text-xl sm:text-3xl md:text-3xl lg:text-4xl mt-5 font-medium'}>
-                                <span className={'block mb-2'}>For Identity Management</span>
-                                <span> And Open Finance Platform</span>
+                            {/*<div className={'home-next-generation text-3xl sm:text-4xl md:text-5xl lg:text-5xl'}>*/}
+                            {/*    <span className={'mb-2'}><span className={''}>Trust-Centric Solution</span> For Identity Management  And Open Finance Platform</span>*/}
+                            {/*</div>*/}
+                            <div className={'home-next-generation-sub text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-5 font-medium'}>
+                                <span className={'block mb-2 leading-tight'}><span className={'font-bold block'}>Trust-Centric Solution</span> For Identity Management <br/>And Open Finance Platform</span>
                             </div>
                         </div>
                     </section>
-                    <section className={'absolute top-[100%] md:top-20 right-10 w-3/5 h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
+                    <section className={'absolute top-[100%] md:top-20 right-0 w-3/5 h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
                         {
                             product.map((it,index) => (
                                 <div key={index} className={it.className}>
