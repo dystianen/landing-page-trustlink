@@ -52,37 +52,43 @@ export const Product = () => {
             name: 'Trust',
             name2: 'Live',
             src: '/assets/product/TrustLive-short.webm',
+            subhead: 'SEAMLESS , NON-INVASIVE SINGLE IMAGE LIVENESS  DETECTION',
             desc: t('Desc TrustLive')
         },
         {
             name: 'Trust',
             name2: 'Scan',
             src: '/assets/product/TrustScan.webm',
+            subhead: 'ULTRA FAST, ACCURATE, AND PRACTICAL',
             desc: t('Desc TrustScan')
         },
         {
             name: 'Trust',
             name2: 'Verify',
             src: '/assets/product/TrustVerify.webm',
+            subhead: 'HIGHEST COMPLIENCE & ADVANCED BIOMETRICS IDENTITY VERIFICATION',
             desc: t('Desc TrustVerification')
         },
         {
             name: 'Trust',
             name2: 'Connect',
             src: '/assets/product/TrustConnect.webm',
-            desc: t('Desc TrustLive')
+            subhead: 'CONNECT TO FINANCIAL DATA IN REAL-TIME',
+            desc: t('Desc TrustConnect')
         },
         {
             name: 'Trust',
             name2: 'Score',
             src: '/assets/product/TrustScore.webm',
-            desc: t('Desc TrustLive')
+            subhead: 'ULTRA FAST, ACCURATE, AND PRACTICAL',
+            desc: t('Desc TrustScore')
         },
         {
             name: 'Trust',
             name2: 'Vision',
             src: '/assets/product/TrustVision.webm',
-            desc: t('Desc TrustLive')
+            subhead: 'An FR BASED VIDEO SURVEILLANCE TECHNOLOGY',
+            desc: t('Desc TrustVision')
         }
     ]
 
@@ -104,8 +110,9 @@ export const Product = () => {
                     <div>
                         <p className={'text-3xl md:text-4xl lg:text-6xl mb-0 montserrat leading-none font-bold'} style={{color: '#04204D'}}>{item.name}<span className='text-orange font-medium'>{item.name2}</span></p>
                     </div>
-                    <div className={'mt-5 md:mt-14'}>
-                        <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base lg:text-lg montserrat"}>
+                    <p className={'w-[95%] md:w-[85%] text-xl md:text-2xl lg:text-2xl mb-0 montserrat leading-none font-bold mt-5'} style={{color: '#04204D'}}>{item.subhead}</p>
+                    <div className={'mt-5 md:mt-5'}>
+                        <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base lg:text-lg montserrat text-justify"}>
                             {item.desc}
                         </p>
                     </div>
