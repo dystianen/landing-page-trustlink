@@ -4,7 +4,7 @@ import {useStore} from "../StoreProvider";
 import {observer} from "mobx-react-lite";
 import {useTranslation} from "next-i18next";
 
-const ContactUs = observer(() => {
+const ContactUs = observer(({sectionRef}) => {
     const [form] = Form.useForm();
     const [form2] = Form.useForm();
     const [show, setShow] = useState(false);
@@ -43,7 +43,7 @@ const ContactUs = observer(() => {
         })
     }
     return (
-            <div className={'w-full relative'}>
+            <div className={'w-full relative'} id='contact' ref={sectionRef}>
                 <div className={'h-full contact-bg absolute -left-20 md:-left-16 lg:-left-12 xl:left-0 top-5'}>
                     <Image preview={false} className="h-full w-auto" src={'/assets/images/accent-home-sectionContact-1.jpg'}/>
                 </div>
@@ -62,7 +62,7 @@ const ContactUs = observer(() => {
                         </div>
                     </div>
                 </div>
-                <div className={'flex justify-center w-full'}>
+                <div className={'flex justify-center w-full'} >
                     <div className={'w-[80%] lg:w-8/12 xl:w-[52%] bg-white z-30'}>
                         <div className={'px-6 sm:px-12 md:px-20 pt-6 sm:pt-12 md:pt-20 pb-6 md:pb-10'}>
                             <Form layout={"vertical"} form={form}>

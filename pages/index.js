@@ -3,7 +3,7 @@ import { appConfig } from "../config/app";
 import { isAuthUrl } from "../utils/checkUrl";
 import { useStore } from "../components/StoreProvider";
 import { Image } from "antd";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { ParticlePage } from "../components/Particle";
 import { DrawerSlide } from "../components/DrawerSlide";
 import { Product } from "../components/Product";
@@ -33,7 +33,9 @@ export default function Home() {
     const [isOpen, setIsOpen] = useState(false);
     const genericHamburgerLine = `h-1 my-1 rounded-full bg-orange transition ease transform duration-300`;
     const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-orange transition ease transform duration-300`;
-    const mobile = useMediaQuery({query: '(max-width: 576px)'})
+    const mobile = useMediaQuery({ query: '(max-width: 576px)' });
+
+    const contactUsRef = useRef(null);
 
     const menu = [
         {
@@ -134,7 +136,7 @@ export default function Home() {
                 <AboutMePage />
             </section>
             <section className={'pl-12 md:pl-20 mt-52'}>
-                <Product />
+                <Product onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }/>
             </section>
             <UseCase />
             <Banner />
@@ -143,7 +145,7 @@ export default function Home() {
             <div className="h-[43vh]" />
             <CertificationMembership />
             <div className="h-quarter" />
-            <ContactUs />
+            <ContactUs sectionRef={contactUsRef } />
             <Footer />
         </div>
     )
