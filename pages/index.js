@@ -99,12 +99,12 @@ export default function Home() {
                         {/*</div>*/}
                         <div className={'w-max lg:pl-8'}>
                             <div className={'home-next-generation mt-30 text-3xl sm:text-4xl md:text-5xl lg:text-6xl'}>
-                                <span className={'block mb-2'}>Next</span>
-                                <span>― Generation</span>
+                                <span className={'block mb-2'}>TRUST-CENTRIC</span>
+                                <span>SOLUTION</span>
                             </div>
                             <div className={'home-next-generation-sub leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-5 font-medium'}>
-                                <span className={'block mb-2'}>{t('Digital Biometric')}</span>
-                                <span>{t('Identification System')}.</span>
+                                <span className={'block mb-2'}>FOR IDENTITY MANAGEMENT</span>
+                                <span> AND OPEN FINANCE PLATFORM</span>
                             </div>
                         </div>
                     </section>
