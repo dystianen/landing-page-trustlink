@@ -82,7 +82,7 @@ export default function Home() {
                         <Image preview={false} className="fixed w-14 top-4" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }} />
                         <Image preview={false} className="relative h-14 left-14 mt-4" src={'/assets/logo/text-only.png'} />
                     </div>
-                    <div className={'choose-lang flex flex-row mr-10 mt-8 md:mr-32 lg:mt-10'}>
+                    <div className={'choose-lang flex flex-row mr-10 mt-8 md:mr-32 lg:mt-10 z-30'}>
                         <Link href={'/'} locale="en">
                             <p className={`cursor-pointer font-medium ${i18n.language === 'en' && 'text-[#FE7519]'}`}>EN</p>
                         </Link>
