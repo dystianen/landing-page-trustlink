@@ -34,6 +34,9 @@ const TrustedBy = (props) => {
         },
         {
             src: 'assets/trusted_by/more.png',
+        },
+        {
+            src: 'assets/trusted_by/vida.png',
         }
     ]
 
