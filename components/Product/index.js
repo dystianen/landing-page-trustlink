@@ -130,7 +130,7 @@ export const Product = ({onClickContact=emptyFunction}) => {
                         </p>
                                 <a
                                     type="primary"
-                                    className={' bg-[#04204D] text-white text-base sm:text-lg h-12 w-1/2 p-5 montserrat mt-5'}
+                                    className={'rounded-lg bg-[#04204D]  flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 w-3/12 montserrat'}
                                     onClick={onClickContact}
                                 >
                                     Contact Us
