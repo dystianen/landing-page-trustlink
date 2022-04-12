@@ -11,37 +11,37 @@ export const Product = observer(({show, setShow}) => {
         {
             key: 'verify',
             title: 'Verify',
-            description: 'TrustVerify is our AI that can match your pict to dukcapil',
+            description: 'TrustVerify is a biometrics recognition platform enables to verify identity through both biometrics and demographics',
             image: '/assets/logo/trust/verify.png'
         },
         {
             key: 'scan',
             title: 'Scan',
-            description: 'TrustScan is our OCR for your needed',
+            description: 'TrustScan is an AI-powered OCR that Identify the user data from ID’s in seconds.',
             image: '/assets/logo/trust/scan.png'
         },
         {
             key: 'live',
             title: 'Live',
-            description: 'TrustLive is powerfull to scan the liveness of a picture',
+            description: 'TrustLive is a Passive Liveness Detection System increase the assurance levels for verification.',
             image: '/assets/logo/trust/live.png'
         },
         {
             key: 'vision',
             title: 'Vision',
-            description: 'TrustVision able to scan multiple face and match the data',
+            description: 'TrustVision a combination of AI and Facial Recognition technology with an advanced analytic software',
             image: '/assets/logo/trust/vision.png'
         },
         {
             key: 'connect',
             title: 'Connect',
-            description: 'TrustConnect can help you connect to multiple bank',
+            description: 'TrustConnect allows integration of banking & financial institution accounts with a third party platform for enhanced customer experience',
             image: '/assets/logo/trust/connect.png'
         },
         {
             key: 'score',
             title: 'Score',
-            description: 'TrustScore will help analys and control your spending.',
+            description: 'TrustScore enable businesses to enhance risk assessments, improve accuracy in decision-making',
             image: '/assets/logo/trust/score.png'
         },
     ]
