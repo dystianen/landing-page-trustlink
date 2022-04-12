@@ -121,20 +121,21 @@ export const Product = ({onClickContact=emptyFunction}) => {
                 </div>
                 <div className={'flex flex-col justify-center mt-4 w-full md:w-3/6 lg:w-2/4 z-10 pl-12 md:pl-0'}>
                     <div>
-                        <p className={'text-3xl md:text-4xl lg:text-6xl mb-0 montserrat text-gray-400 font-bold leading-none'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-orange' } font-medium`}>{item.name2} </span><span style={{ color: '#04204D' }} className={'text-[40px]'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
+                        <p className={'text-3xl md:text-4xl lg:text-6xl mb-0 montserrat text-gray-400 font-bold leading-none'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-orange' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-[28px]'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
                     </div>
                     <p className={'w-[95%] md:w-[85%] text-xl md:text-2xl lg:text-2xl mb-0 montserrat leading-none font-bold mt-5'} style={{color: '#04204D'}}>{item.subhead}</p>
                     <div className={'mt-5 md:mt-5'}>
                         <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base lg:text-lg montserrat text-justify mb-3"}>
                             {item.desc}
                         </p>
-                                <a
-                                    type="primary"
-                                    className={'rounded-lg bg-[#04204D]  flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 w-3/12 montserrat'}
-                                    onClick={onClickContact}
-                                >
+                            <a
+                                type="primary"
+                                className={'rounded-lg bg-[#04204D]  flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 w-3/12 montserrat'}
+                                onClick={onClickContact}
+                            >
                                     Contact Us
                                 </a>
+
                     </div>
                 </div>
             </div>
