@@ -125,16 +125,21 @@ export const Product = ({onClickContact=emptyFunction}) => {
                     </div>
                     <p className={'w-[95%] md:w-[85%] text-xl md:text-2xl lg:text-2xl mb-0 montserrat leading-none font-bold mt-5'} style={{color: '#04204D'}}>{item.subhead}</p>
                     <div className={'mt-5 md:mt-5'}>
-                        <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base lg:text-lg montserrat text-justify mb-3"}>
-                            {item.desc}
-                        </p>
-                                <a
-                                    type="primary"
-                                    className={' bg-[#04204D] text-white text-base sm:text-lg h-12 w-1/2 p-5 montserrat mt-5'}
-                                    onClick={onClickContact}
-                                >
+                        <div>
+                            <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base lg:text-lg montserrat text-justify mb-3"}>
+                                {item.desc}
+                            </p>
+                        </div>
+                        <div>
+                            <span
+                                type="primary"
+                                className={' bg-[#04204D] text-white text-base sm:text-lg h-12 w-1/2 p-5 montserrat mt-5'}
+                                onClick={onClickContact}
+                            >
                                     Contact Us
-                                </a>
+                                </span>
+                        </div>
+
                     </div>
                 </div>
             </div>
