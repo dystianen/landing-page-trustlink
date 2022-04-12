@@ -97,7 +97,7 @@ export default function Home() {
                         {/*    <Image preview={false} src={'/assets/scroll-down.svg'} />*/}
                         {/*</div>*/}
                         {/*</div>*/}
-                        <div className={'w-max lg:pl-8'}>
+                        <div className={'w-max lg:pl-8 flex flex-col'}>
                             <div className={'home-next-generation mt-30 text-3xl sm:text-4xl md:text-5xl lg:text-6xl'}>
                                 <span className={'block mb-2'}>Trust-Centric</span>
                                 <span>Solution</span>
