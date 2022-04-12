@@ -28,23 +28,18 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
         {
             key: 'twt',
             title: 'Twitter',
-            url: '#'
+            url: 'https://twitter.com/withtrustlink'
         },
         {
             key: 'fb',
             title: 'Facebook',
-            url: '#'
+            url: 'https://www.facebook.com/withtrustlink'
         },
         {
             key: 'in',
             title: 'LinkedIn',
             url: 'https://www.linkedin.com/company/withtrustlink/'
         },
-        {
-            key: 'fb',
-            title: 'Facebook',
-            url: '#'
-        }
     ]
 
     return (
