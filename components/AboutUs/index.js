@@ -44,11 +44,11 @@ const AboutMePage = () => {
                                 <span className={'block leading-snug w-full md:w-5/6 lg:w-3/4 xl:w-3/5'}>{t('We are thrilled to advance')}</span>
                                 </Title>
                         </div>
-                        <div>
+                        {/* <div>
                             <Text className={'text-[#4f6382] text-[14px] montserrat'}>
                                 <span className={'inline md:block w-3/5'}>{t('We are a leading digital biometric')}</span>
                             </Text>
-                        </div>
+                        </div> */}
                     </Fade>
                 </div>
             </div>
