@@ -45,8 +45,9 @@ const AboutMePage = () => {
                                 </Title>
                         </div>
                         <div>
-                            <Text className={'text-[#4f6382] text-[14px] montserrat'}>
+                            <Text className={'text-[#4f6382] text-[18px] montserrat font-normal'}>
                                 <span className={'inline md:block w-3/5'}>{t('About SubHeadline 1')}</span>
+                                <br/>
                                 <span className={'inline md:block w-3/5'}>{t('About SubHeadline 2')}</span>
                             </Text>
                         </div>
