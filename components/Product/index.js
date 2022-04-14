@@ -55,7 +55,7 @@ export const Product = ({onClickContact=emptyFunction}) => {
             name2: 'Verify',
             coming_soon : '',
             src: '/assets/product/TrustVerify.webm',
-            subhead: 'HIGHEST COMPLIENCE & ADVANCED BIOMETRICS IDENTITY VERIFICATION',
+            subhead: t('Subhead trust verify'),
             desc: t('Desc TrustVerification'),
             size: '100%'
         },
@@ -64,7 +64,7 @@ export const Product = ({onClickContact=emptyFunction}) => {
             name2: 'Scan',
             coming_soon : '',
             src: '/assets/product/TrustScan.webm',
-            subhead: 'ULTRA FAST, ACCURATE, AND PRACTICAL',
+            subhead: t('Subhead trust scan'),
             desc: t('Desc TrustScan'),
             size: '100%'
         },
@@ -74,7 +74,7 @@ export const Product = ({onClickContact=emptyFunction}) => {
             name2: 'Live',
             coming_soon : '',
             src: '/assets/product/TrustLive-short.webm',
-            subhead: 'SEAMLESS , NON-INVASIVE SINGLE IMAGE LIVENESS  DETECTION',
+            subhead: t('Subhead trust live'),
             desc: t('Desc TrustLive'),
             size: '100%'
         },
@@ -83,7 +83,7 @@ export const Product = ({onClickContact=emptyFunction}) => {
             name2: 'Connect',
             coming_soon : '',
             src: '/assets/product/TrustConnect.webm',
-            subhead: 'CONNECT TO FINANCIAL DATA IN REAL-TIME',
+            subhead: t('Subhead trust connect'),
             desc: t('Desc TrustConnect'),
             size: '100%'
         },
@@ -91,7 +91,7 @@ export const Product = ({onClickContact=emptyFunction}) => {
             name: 'Trust',
             name2: 'Vision',
             src: '/assets/product/TrustVision.webm',
-            subhead: 'An FR BASED VIDEO SURVEILLANCE TECHNOLOGY',
+            subhead: t('Subhead trust vision'),
             desc: t('Desc TrustVision'),
             size: '90%'
         },
@@ -100,7 +100,7 @@ export const Product = ({onClickContact=emptyFunction}) => {
             name2: 'Score',
             src: '/assets/product/TrustScore.webm',
             coming_soon : true,
-            subhead: 'ULTRA FAST, ACCURATE, AND PRACTICAL',
+            subhead: t('Subhead trust score'),
             desc: t('Desc TrustScore'),
             size: '90%'
         },
@@ -134,7 +134,7 @@ export const Product = ({onClickContact=emptyFunction}) => {
                                 className={'rounded-lg bg-[#04204D] mt-2 flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 w-3/12 montserrat'}
                                 onClick={onClickContact}
                             >
-                                    Contact Us
+                                {t('Contact Us')}
                                 </a>
 
                     </div>

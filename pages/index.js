@@ -104,7 +104,7 @@ export default function Home() {
                             {/*    <span className={'mb-2'}><span className={''}>Trust-Centric Solution</span> For Identity Management  And Open Finance Platform</span>*/}
                             {/*</div>*/}
                             <div className={'home-next-generation-sub text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-5 font-medium'}>
-                                <span className={'block mb-2 leading-tight'}><span className={'font-bold block'}>Trust-Centric Solution</span> For Identity Management <br/>And Open Finance Platform</span>
+                                <span className={'block mb-2 leading-tight'}><span className={'font-bold block'}>{t('Trust Centric Solution')}</span> {t('For Identity Management')} <br/>{t('And Open Finance Platform')}</span>
                             </div>
                         </div>
                     </section>
