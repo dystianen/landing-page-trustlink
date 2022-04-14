@@ -26,6 +26,7 @@ export const CertificationMembership = () => {
                     <Image preview={false} className="h-3/5 w-auto company-logo logo-image-gray" src={'/assets/aftech-2.png'} />
                     <Image preview={false} className="h-3/5 w-auto company-logo logo-image-gray" src={'/assets/images/logo-iso-2.png'} />
                     <Image preview={false} className="h-1/2 w-auto company-logo logo-image-gray" src={'/assets/keminfo.png'} />
+                    <Image preview={false} className="h-1/2 w-auto company-logo logo-image-gray" src={'/assets/dukcapil.png'} />
                     <Image preview={false} className="h-1/2 w-auto company-logo logo-image-gray" src={'/assets/images/logo-aitb-2.png'} />
                 </div>
             </div>
