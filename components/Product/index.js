@@ -115,7 +115,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             <div className={'flex flex-col md:flex-row w-full h-auto md:min-h-[28rem] lg:min-h-[38rem] xl:min-h-[42rem]'}>
                 <div className={'flex justify-center md:justify-end items-center w-full md:w-3/6 lg:w-2/4 text-center z-10'}>
                     <ReactPlayer
-                        className=''
+                        className='bg-transparent'
                         url={item.src}
                         width={item.size}
                         height={item.size}
