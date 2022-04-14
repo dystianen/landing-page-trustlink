@@ -30,7 +30,7 @@ export const UseCases = observer(({show, setShow}) => {
         },
         {
             key: 'data',
-            title: t('Manage user data'),
+            title: t('Manage User Data'),
             description: t('Desc manage user data'),
             left: '/assets/logo/trust/verify.png',
             right: '/assets/logo/trust/scan.png',
