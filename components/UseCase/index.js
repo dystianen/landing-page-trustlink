@@ -36,7 +36,7 @@ const UseCase = () => {
                     </p>
                 </div>
                 <div className={'mb-6 px-4 md:px-0'}>
-                    <p className={"text-white w-auto lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-center md:text-left"}>
+                    <p className={"text-white text-base lg:text-lg w-auto lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-center md:text-left"}>
                         {t('Desc Law')}
                     </p>
                 </div>
@@ -68,7 +68,7 @@ const UseCase = () => {
                     </p>
                 </div>
                 <div className={'mb-6 px-4 md:px-0'}>
-                    <p className={"text-white w-auto lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-center md:text-left"}>
+                    <p className={"text-white text-base lg:text-lg w-auto lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-center md:text-left"}>
                         {t('Desc Law')}
                     </p>
                 </div>
