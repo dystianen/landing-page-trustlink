@@ -55,19 +55,19 @@ export default function Home() {
     const product = [
         {
             image: 'trust-scan.png',
-            className: 'cursor-pointer w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 relative -ml-20 md:ml-0 xl:ml-24 z-10',
+            className: 'cursor-pointer w-28 h-28 lg:w-36 lg:h-36 2xl:w-44 2xl:h-44 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 relative -ml-20 md:ml-0 xl:ml-24 z-10',
             productIndex: 1 // index carousel
         },{
             image: 'trust-connect.png',
-            className: 'cursor-pointer w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 relative z-10 -mt-24 ml-[25%] md:ml-[40%]',
+            className: 'cursor-pointer w-44 h-44 lg:w-52 lg:h-52 2xl:w-60 2xl:h-60 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 relative z-10 -mt-24 ml-[25%] md:ml-[40%]',
             productIndex: 3 // index carousel
         },{
             image: 'trust-live.png',
-            className: 'cursor-pointer w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 absolute bottom-0 md:bottom-56 2xl:bottom-36 z-10 ml-[55%] md:ml-[65%]',
+            className: 'cursor-pointer w-28 h-28 lg:w-36 lg:h-36 2xl:w-44 2xl:h-44 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 absolute bottom-6 md:bottom-[30vh] z-10 ml-[55%] md:ml-[65%]',
             productIndex: 2 // index carousel
         },{
             image: 'trust-verify.png',
-            className: 'cursor-pointer w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 absolute -bottom-10 md:bottom-28 2xl:bottom-36 z-10 -ml-16 md:ml-[7%] xl:ml-[18%]',
+            className: 'cursor-pointer w-44 h-44 lg:w-52 lg:h-52 2xl:w-60 2xl:h-60 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 absolute -bottom-10 md:bottom-28 2xl:bottom-36 z-10 -ml-16 md:ml-[7%] xl:ml-[18%]',
             productIndex: 0 // index carousel
         },
     ]
@@ -119,7 +119,7 @@ export default function Home() {
                             {/*<div className={'home-next-generation text-3xl sm:text-4xl md:text-5xl lg:text-5xl'}>*/}
                             {/*    <span className={'mb-2'}><span className={''}>Trust-Centric Solution</span> For Identity Management  And Open Finance Platform</span>*/}
                             {/*</div>*/}
-                            <div className={'home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl  mt-5 font-medium'}>
+                            <div className={'home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem]  mt-5 font-medium'}>
                                 <span className={'block mb-2 leading-tight'}><span className={'font-bold block'}>{t('Trust Centric Solution')}</span> {t('For Identity Management')} <br/>{t('And Open Finance Platform')}</span>
                             </div>
                         </div>
