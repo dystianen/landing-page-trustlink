@@ -119,12 +119,12 @@ export default function Home() {
                             {/*<div className={'home-next-generation text-3xl sm:text-4xl md:text-5xl lg:text-5xl'}>*/}
                             {/*    <span className={'mb-2'}><span className={''}>Trust-Centric Solution</span> For Identity Management  And Open Finance Platform</span>*/}
                             {/*</div>*/}
-                            <div className={'home-next-generation-sub text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-5 font-medium'}>
+                            <div className={'home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl  mt-5 font-medium'}>
                                 <span className={'block mb-2 leading-tight'}><span className={'font-bold block'}>{t('Trust Centric Solution')}</span> {t('For Identity Management')} <br/>{t('And Open Finance Platform')}</span>
                             </div>
                         </div>
                     </section>
-                    <section className={'absolute top-[100%] md:top-20 right-0 w-3/5 h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
+                    <section className={'absolute top-[100%] md:top-20 right-10 md:-right-10 lg:-right-12 xl:-right-28 w-3/5 h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
                         {
                             product.map((it,index) => (
                                 <div key={index} className={it.className} onClick={()=> handleClickProduct(it.productIndex) }>
