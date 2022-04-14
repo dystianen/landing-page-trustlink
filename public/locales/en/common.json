@@ -1,4 +1,7 @@
 {
+    "Trust Centric Solution": "Trust-Centric Solution",
+    "For Identity Management": "For Identity Management",
+    "And Open Finance Platform": "And Open Finance Platform",
     "Trusted By": "Trusted By",
     "Clients and Partners": "Clients & Partners",
     "Always Reliable": "ALWAYS RELIABLE",
@@ -48,6 +51,7 @@
     "Enter your inquiries": "Enter your inquiries",
     "Submit": "Submit",
     "Call Us": "CALL US",
+    "Contact Us": "Contact Us",
     "Mon to Fri": "Mon - Fri",
     "Company": "Company",
     "Partners": "Partners",
@@ -66,5 +70,11 @@
     "Learn How To": "Learn how our multitude of products can help leverage your business, enriching your services, and enhance your customer experience",
     "Use Cases": "Use Cases.",
     "When": "When Do You Need to Use Trustlink?",
-    "Check": "Check Out Our Trustlink Use Cases in Your App!"
+    "Check": "Check Out Our Trustlink Use Cases in Your App!",
+    "Subhead trust verify": "HIGHEST COMPLIENCE & ADVANCED BIOMETRICS IDENTITY VERIFICATION",
+    "Subhead trust scan": "ULTRA FAST, ACCURATE, AND PRACTICAL",
+    "Subhead trust live": "SEAMLESS , NON-INVASIVE SINGLE IMAGE LIVENESS  DETECTION",
+    "Subhead trust connect": "CONNECT TO FINANCIAL DATA IN REAL-TIME",
+    "Subhead trust vision": "An FR BASED VIDEO SURVEILLANCE TECHNOLOGY",
+    "Subhead trust score": "ULTRA FAST, ACCURATE, AND PRACTICAL"
 }

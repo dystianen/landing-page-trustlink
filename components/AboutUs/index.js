@@ -11,6 +11,7 @@ const { Title, Text } = Typography;
 const AboutMePage = () => {
     const router = useRouter();
     const { t } = useTranslation('common');
+    console.log(t, 'isi')
     const [transition, setTransition] = useState(false);
 
     useEffect(() => {
