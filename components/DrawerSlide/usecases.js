@@ -30,7 +30,7 @@ export const UseCases = observer(({show, setShow}) => {
         },
         {
             key: 'data',
-            title: t('Manage user data'),
+            title: t('Manage User Data'),
             description: t('Desc manage user data'),
             left: '/assets/logo/trust/verify.png',
             right: '/assets/logo/trust/scan.png',
@@ -61,7 +61,7 @@ export const UseCases = observer(({show, setShow}) => {
             <div className={'grid grid-cols-1 md:grid-cols-2 gap-0 mb-12 montserrat'}>
                 {dataUseCases.map((data, index) => {
                     return (
-                    <div key={data.key} className={`w-full h-auto md:h-48 lg:h-52 border border-l-0 ${index >= 3 ? null : 'border-b-0'} border-gray-300`}>
+                    <div key={data.key} className={`w-full h-auto md:h-48 lg:h-52 border border-l-0 ${index >= 2 ? null : 'border-b-0'} border-gray-300`}>
                         <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-8 pt-6'}>
                             <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10'}>{data.title}</p>
                             <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>{data.description}</p>
