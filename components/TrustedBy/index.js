@@ -30,11 +30,11 @@ const TrustedBy = (props) => {
             src: 'assets/trusted_by/interbio.svg',
         },
         {
-            src: 'assets/trusted_by/logo-light.png',
+            src: 'assets/trusted_by/logo-dark.png',
         },
-        {
-            src: 'assets/trusted_by/more.png',
-        },
+        // {
+        //     src: 'assets/trusted_by/more.png',
+        // },
         {
             src: 'assets/trusted_by/vida.png',
         }
@@ -57,7 +57,7 @@ const TrustedBy = (props) => {
                 </div>
                 <div className={'flex flex-row justify-end mt-6 sm:mt-10 z-10'}>
                     <div className={"bg-gray-300 w-[94%]"}>
-                        <Carousel dots={false} slidesToShow={showSlide} autoplay={true}>
+                        <Carousel dots={false} slidesToShow={showSlide} autoplay={true} speed={6000}>
                                 {logos.map((props, index) => {
                                     return (
                                         <div key={index} className={'flex justify-center border-r-2 items-center text-center bg-white company-logo logo-image-gray h-20 md:h-24 xl:h-30'}>
