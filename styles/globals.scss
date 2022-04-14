@@ -568,6 +568,14 @@ svg { vertical-align: baseline; }
   height: 100%;
 }
 
+.trusted-img > .ant-image{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .contact-bg > .ant-image{
   height: auto
 }

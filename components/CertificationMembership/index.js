@@ -6,6 +6,29 @@ export const CertificationMembership = () => {
 
     const { t } = useTranslation('common');
 
+    const item = [
+        {
+            src: '/assets/aftech-2.png',
+            className: 'h-1/2 md:h-3/5 w-auto'
+        },
+        {
+            src: '/assets/images/ISO-27001-logo.png',
+            className: 'h-1/2 md:h-3/5 w-auto'
+        },
+        {
+            src: '/assets/dukcapil.png',
+            className: 'h-3/4 md:h-full w-auto'
+        },
+        {
+            src: '/assets/keminfo.png',
+            className: 'h-3/5 md:h-3/4 w-auto'
+        },
+        {
+            src: '/assets/images/logo-aitb-2.png',
+            className: 'h-2/5 md:h-1/2 w-auto'
+        },
+    ]
+
     return (
         <div>
             <div className={'flex w-full justify-center'}>
@@ -22,11 +45,14 @@ export const CertificationMembership = () => {
                 </div>
             </div>
             <div className={'w-full sm:mt-5 flex justify-center items-center'}>
-                <div className={'md:w-[90%] lg:w-5/6 h-full grid grid-cols-2 sm:grid-cols-4'}>
-                    <Image preview={false} className="h-3/5 w-auto company-logo logo-image-gray" src={'/assets/aftech-2.png'} />
-                    <Image preview={false} className="h-3/5 w-auto company-logo logo-image-gray" src={'/assets/images/logo-iso-2.png'} />
-                    <Image preview={false} className="h-1/2 w-auto company-logo logo-image-gray" src={'/assets/keminfo.png'} />
-                    <Image preview={false} className="h-1/2 w-auto company-logo logo-image-gray" src={'/assets/images/logo-aitb-2.png'} />
+                <div className={'md:w-[90%] lg:w-5/6 h-auto flex flex-wrap justify-around'}>
+                    {
+                        item.map((props, index) => (
+                            <div key={index} className={`w-1/2 md:w-1/3 trusted-img h-36 mb-2`}>
+                                <Image preview={false} className={`${props.className} company-logo logo-image-gray`} src={props.src} />
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>

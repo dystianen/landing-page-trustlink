@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Image, Popover, Steps, Button, Row, Col, Tooltip} from "antd";
 import Carousel from 'react-material-ui-carousel';
 import {useMediaQuery} from "react-responsive";
@@ -7,9 +7,13 @@ import ReactPlayer from 'react-player'
 
 const emptyFunction = () => {}
 
-export const Product = ({onClickContact=emptyFunction}) => {
+export const Product = ({onClickContact=emptyFunction, productRef, indexProduct, setIndexProduct=emptyFunction}) => {
     const [current, setCurrent] = useState(0)
     const { Step } = Steps;
+
+    useEffect(() => {
+        setCurrent(indexProduct)
+    }, [indexProduct])
 
     const { t } = useTranslation();
     const xl = useMediaQuery({query: '(min-width: 1440px)'})
@@ -55,7 +59,7 @@ export const Product = ({onClickContact=emptyFunction}) => {
             name2: 'Verify',
             coming_soon : '',
             src: '/assets/product/TrustVerify.webm',
-            subhead: 'HIGHEST COMPLIENCE & ADVANCED BIOMETRICS IDENTITY VERIFICATION',
+            subhead: t('Subhead trust verify'),
             desc: t('Desc TrustVerification'),
             size: '100%'
         },
@@ -64,7 +68,7 @@ export const Product = ({onClickContact=emptyFunction}) => {
             name2: 'Scan',
             coming_soon : '',
             src: '/assets/product/TrustScan.webm',
-            subhead: 'ULTRA FAST, ACCURATE, AND PRACTICAL',
+            subhead: t('Subhead trust scan'),
             desc: t('Desc TrustScan'),
             size: '100%'
         },
@@ -74,7 +78,7 @@ export const Product = ({onClickContact=emptyFunction}) => {
             name2: 'Live',
             coming_soon : '',
             src: '/assets/product/TrustLive-short.webm',
-            subhead: 'SEAMLESS , NON-INVASIVE SINGLE IMAGE LIVENESS  DETECTION',
+            subhead: t('Subhead trust live'),
             desc: t('Desc TrustLive'),
             size: '100%'
         },
@@ -83,7 +87,7 @@ export const Product = ({onClickContact=emptyFunction}) => {
             name2: 'Connect',
             coming_soon : '',
             src: '/assets/product/TrustConnect.webm',
-            subhead: 'CONNECT TO FINANCIAL DATA IN REAL-TIME',
+            subhead: t('Subhead trust connect'),
             desc: t('Desc TrustConnect'),
             size: '100%'
         },
@@ -91,7 +95,7 @@ export const Product = ({onClickContact=emptyFunction}) => {
             name: 'Trust',
             name2: 'Vision',
             src: '/assets/product/TrustVision.webm',
-            subhead: 'An FR BASED VIDEO SURVEILLANCE TECHNOLOGY',
+            subhead: t('Subhead trust vision'),
             desc: t('Desc TrustVision'),
             size: '90%'
         },
@@ -100,7 +104,7 @@ export const Product = ({onClickContact=emptyFunction}) => {
             name2: 'Score',
             src: '/assets/product/TrustScore.webm',
             coming_soon : true,
-            subhead: 'ULTRA FAST, ACCURATE, AND PRACTICAL',
+            subhead: t('Subhead trust score'),
             desc: t('Desc TrustScore'),
             size: '90%'
         },
@@ -134,13 +138,18 @@ export const Product = ({onClickContact=emptyFunction}) => {
                                 className={'rounded-lg bg-[#04204D] mt-2 flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 w-3/12 montserrat'}
                                 onClick={onClickContact}
                             >
-                                    Contact Us
+                                {t('Contact Us')}
                                 </a>
 
                     </div>
                 </div>
             </div>
         )
+    }
+
+    const onChangeProduct = (num) => {
+        setCurrent(num)
+        setIndexProduct(num)
     }
 
     return (
@@ -165,8 +174,8 @@ export const Product = ({onClickContact=emptyFunction}) => {
                     </div>
                 </div>
             </div>
-            <div className={'relative w-screen lg:w-auto'}>
-                <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-32 sm:h-48 -ml-12 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => setCurrent(num)}>
+            <div className={'relative w-screen lg:w-auto'} ref={productRef}>
+                <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-32 sm:h-48 -ml-12 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => onChangeProduct(num)}>
                     {data.map((it, index) => (
                         <Step
                             className={'flex justify-center items-center'}
@@ -193,8 +202,8 @@ export const Product = ({onClickContact=emptyFunction}) => {
                 <Carousel
                     navButtonsAlwaysVisible={true}
                     animation={'slide'}
-                    next={num => setCurrent(num)}
-                    prev={num => setCurrent(num)}
+                    next={num => onChangeProduct(num)}
+                    prev={num => onChangeProduct(num)}
                     index={current}
                     autoPlay={false}
                     NextIcon={<Image preview={false} className="w-[20px] lg:w-[25px] h-[20px] lg:h-[25px]" src={'/assets/arrow-right.svg'}/>}

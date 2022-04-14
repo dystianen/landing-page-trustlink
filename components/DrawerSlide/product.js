@@ -11,37 +11,37 @@ export const Product = observer(({show, setShow}) => {
         {
             key: 'verify',
             title: 'Verify',
-            description: 'TrustVerify is a biometrics recognition platform enables to verify identity through both biometrics and demographics',
+            description: t('Desc trust verify'),
             image: '/assets/logo/trust/verify.png'
         },
         {
             key: 'scan',
             title: 'Scan',
-            description: 'TrustScan is an AI-powered OCR that Identify the user data from ID’s in seconds.',
+            description: t('Desc trust scan'),
             image: '/assets/logo/trust/scan.png'
         },
         {
             key: 'live',
             title: 'Live',
-            description: 'TrustLive is a Passive Liveness Detection System increase the assurance levels for verification.',
+            description: t('Desc trust live'),
             image: '/assets/logo/trust/live.png'
         },
         {
             key: 'vision',
             title: 'Vision',
-            description: 'TrustVision a combination of AI and Facial Recognition technology with an advanced analytic software',
+            description: t('Desc trust vision'),
             image: '/assets/logo/trust/vision.png'
         },
         {
             key: 'connect',
             title: 'Connect',
-            description: 'TrustConnect allows integration of banking & financial institution accounts with a third party platform for enhanced customer experience',
+            description: t('Desc trust connect'),
             image: '/assets/logo/trust/connect.png'
         },
         {
             key: 'score',
             title: 'Score',
-            description: 'TrustScore enable businesses to enhance risk assessments, improve accuracy in decision-making',
+            description: t('Desc trust score'),
             image: '/assets/logo/trust/score.png'
         },
     ]
