@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Image, Popover, Steps, Button, Row, Col, Tooltip} from "antd";
 import Carousel from 'react-material-ui-carousel';
 import {useMediaQuery} from "react-responsive";
@@ -7,9 +7,13 @@ import ReactPlayer from 'react-player'
 
 const emptyFunction = () => {}
 
-export const Product = ({onClickContact=emptyFunction}) => {
+export const Product = ({onClickContact=emptyFunction, productRef, indexProduct, setIndexProduct=emptyFunction}) => {
     const [current, setCurrent] = useState(0)
     const { Step } = Steps;
+
+    useEffect(() => {
+        setCurrent(indexProduct)
+    }, [indexProduct])
 
     const { t } = useTranslation();
     const xl = useMediaQuery({query: '(min-width: 1440px)'})
@@ -143,6 +147,11 @@ export const Product = ({onClickContact=emptyFunction}) => {
         )
     }
 
+    const onChangeProduct = (num) => {
+        setCurrent(num)
+        setIndexProduct(num)
+    }
+
     return (
         <div className={'relative h-auto w-full'}>
             <div className={'h-1/2 lg:h-auto absolute top-24 -left-60 about-img'}>
@@ -165,8 +174,8 @@ export const Product = ({onClickContact=emptyFunction}) => {
                     </div>
                 </div>
             </div>
-            <div className={'relative w-screen lg:w-auto'}>
-                <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-32 sm:h-48 -ml-12 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => setCurrent(num)}>
+            <div className={'relative w-screen lg:w-auto'} ref={productRef}>
+                <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-32 sm:h-48 -ml-12 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => onChangeProduct(num)}>
                     {data.map((it, index) => (
                         <Step
                             className={'flex justify-center items-center'}
@@ -193,8 +202,8 @@ export const Product = ({onClickContact=emptyFunction}) => {
                 <Carousel
                     navButtonsAlwaysVisible={true}
                     animation={'slide'}
-                    next={num => setCurrent(num)}
-                    prev={num => setCurrent(num)}
+                    next={num => onChangeProduct(num)}
+                    prev={num => onChangeProduct(num)}
                     index={current}
                     autoPlay={false}
                     NextIcon={<Image preview={false} className="w-[20px] lg:w-[25px] h-[20px] lg:h-[25px]" src={'/assets/arrow-right.svg'}/>}
