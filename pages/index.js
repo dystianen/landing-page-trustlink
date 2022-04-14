@@ -63,11 +63,11 @@ export default function Home() {
             productIndex: 3 // index carousel
         },{
             image: 'trust-live.png',
-            className: 'cursor-pointer w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 relative z-10 mt-[5%] md:mt-[17%] lg:mt-[8%] ml-[55%] md:ml-[65%]',
+            className: 'cursor-pointer w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 absolute bottom-0 md:bottom-56 2xl:bottom-36 z-10 ml-[55%] md:ml-[65%]',
             productIndex: 2 // index carousel
         },{
             image: 'trust-verify.png',
-            className: 'cursor-pointer w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 relative z-10 -ml-16 md:ml-[7%] xl:ml-[18%] -mt-12 md:-mt-6 lg:-mt-12',
+            className: 'cursor-pointer w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 absolute -bottom-10 md:bottom-28 2xl:bottom-36 z-10 -ml-16 md:ml-[7%] xl:ml-[18%]',
             productIndex: 0 // index carousel
         },
     ]
