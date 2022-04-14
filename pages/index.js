@@ -35,7 +35,10 @@ export default function Home() {
     const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-orange transition ease transform duration-300`;
     const mobile = useMediaQuery({ query: '(max-width: 576px)' });
 
+    const [indexProduct, setIndexProduct] = useState(0);
+
     const contactUsRef = useRef(null);
+    const sectionProductRef = useRef(null);
 
     const menu = [
         {
@@ -52,18 +55,31 @@ export default function Home() {
     const product = [
         {
             image: 'trust-scan.png',
-            className: 'w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 relative -ml-20 md:ml-0 xl:ml-24 z-10'
+            className: 'cursor-pointer w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 relative -ml-20 md:ml-0 xl:ml-24 z-10',
+            productIndex: 1 // index carousel
         },{
             image: 'trust-connect.png',
-            className: 'w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 relative z-10 -mt-24 ml-[25%] md:ml-[40%]'
+            className: 'cursor-pointer w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 relative z-10 -mt-24 ml-[25%] md:ml-[40%]',
+            productIndex: 3 // index carousel
         },{
             image: 'trust-live.png',
-            className: 'w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 relative z-10 mt-[5%] md:mt-[17%] lg:mt-[8%] ml-[55%] md:ml-[65%]'
+            className: 'cursor-pointer w-28 h-28 lg:w-36 lg:h-36 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-3.5 relative z-10 mt-[5%] md:mt-[17%] lg:mt-[8%] ml-[55%] md:ml-[65%]',
+            productIndex: 2 // index carousel
         },{
             image: 'trust-verify.png',
-            className: 'w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 relative z-10 -ml-16 md:ml-[7%] xl:ml-[18%] -mt-12 md:-mt-6 lg:-mt-12'
+            className: 'cursor-pointer w-44 h-44 lg:w-52 lg:h-52 flex justify-center items-center shadow-xl bg-white border-8 border-[#FE7519] rounded-full p-5 relative z-10 -ml-16 md:ml-[7%] xl:ml-[18%] -mt-12 md:-mt-6 lg:-mt-12',
+            productIndex: 0 // index carousel
         },
     ]
+
+    const handleClickProduct = (index) => {
+        setIndexProduct(index)
+        sectionProductRef.current.scrollIntoView({behavior: 'smooth'})
+    }
+
+    const setIndex = (num) => {
+        setIndexProduct(num)
+    }
 
     return (
         <div className={'overflow-hidden'}>
@@ -111,7 +127,7 @@ export default function Home() {
                     <section className={'absolute top-[100%] md:top-20 right-0 w-3/5 h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
                         {
                             product.map((it,index) => (
-                                <div key={index} className={it.className}>
+                                <div key={index} className={it.className} onClick={()=> handleClickProduct(it.productIndex) }>
                                     <Image preview={false} src={`/assets/images/${it.image}`} className={'z-10 justify-center'} />
                                 </div>
                             ))
@@ -134,7 +150,12 @@ export default function Home() {
                 <AboutMePage />
             </section>
             <section className={'pl-12 md:pl-20 mt-52'}>
-                <Product onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }/>
+                <Product
+                    onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
+                    productRef={sectionProductRef}
+                    indexProduct={indexProduct}
+                    setIndexProduct={setIndex}
+                />
             </section>
             <UseCase />
             <Banner />
