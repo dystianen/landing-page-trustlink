@@ -26,6 +26,15 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
     const step = xs ? 'w-10 h-10' : 'w-14 h-14'
     const stepActive = xs ? 'w-[50px] h-[50px]' : 'w-[65px] h-[65px]'
     const imageSm = xs ? 'w-[16px]' : 'w-[24px]'
+
+    const [isSafari, setIsSafari] = useState(false)
+    useEffect(() => {
+        const checkSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+        if(checkSafari){
+            setIsSafari(true)
+        }
+    },[])
+
     const data = [
         {
             name: 'Verify',
@@ -58,7 +67,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             name: 'Trust',
             name2: 'Verify',
             coming_soon : '',
-            src: '/assets/product/TrustVerify.webm',
+            src: isSafari ? '/assets/product/bg-white/TrustVerify.mp4' : '/assets/product/TrustVerify.webm',
             subhead: t('Subhead trust verify'),
             desc: t('Desc TrustVerification'),
             size: '100%'
@@ -67,7 +76,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             name: 'Trust',
             name2: 'Scan',
             coming_soon : '',
-            src: '/assets/product/TrustScan.webm',
+            src: isSafari ? '/assets/product/bg-white/TrustScan.mp4' : '/assets/product/TrustScan.webm',
             subhead: t('Subhead trust scan'),
             desc: t('Desc TrustScan'),
             size: '100%'
@@ -77,7 +86,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             name: 'Trust',
             name2: 'Live',
             coming_soon : '',
-            src: '/assets/product/TrustLive-short.webm',
+            src: isSafari ? '/assets/product/bg-white/TrustLive-short.mp4' : '/assets/product/TrustLive-short.webm',
             subhead: t('Subhead trust live'),
             desc: t('Desc TrustLive'),
             size: '100%'
@@ -86,7 +95,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             name: 'Trust',
             name2: 'Connect',
             coming_soon : '',
-            src: '/assets/product/TrustConnect.webm',
+            src: isSafari ? '/assets/product/TrustConnect.webm' : '/assets/product/TrustConnect.webm',
             subhead: t('Subhead trust connect'),
             desc: t('Desc TrustConnect'),
             size: '100%'
@@ -94,7 +103,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
         {
             name: 'Trust',
             name2: 'Vision',
-            src: '/assets/product/TrustVision.webm',
+            src: isSafari ? '/assets/product/bg-white/TrustVision.mp4' : '/assets/product/TrustVision.webm',
             subhead: t('Subhead trust vision'),
             desc: t('Desc TrustVision'),
             size: '90%'
@@ -102,7 +111,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
         {
             name: 'Trust',
             name2: 'Score',
-            src: '/assets/product/TrustScore.webm',
+            src: isSafari ? '/assets/product/bg-white/TrustScore.mp4' : '/assets/product/TrustScore.webm',
             coming_soon : true,
             subhead: t('Subhead trust score'),
             desc: t('Desc TrustScore'),
@@ -115,7 +124,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             <div className={'flex flex-col md:flex-row w-full h-auto md:min-h-[28rem] lg:min-h-[38rem] xl:min-h-[42rem]'}>
                 <div className={'flex justify-center md:justify-end items-center w-full md:w-3/6 lg:w-2/4 text-center z-10'}>
                     <ReactPlayer
-                        className='bg-transparent'
+                        className=''
                         url={item.src}
                         width={item.size}
                         height={item.size}
