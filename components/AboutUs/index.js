@@ -42,7 +42,7 @@ const AboutMePage = () => {
                     <Fade when={transition} duration={1600}>
                         <div>
                             <Title className={"font-bold text-lg sm:text-2xl lg:text-[30px] montserrat"}>
-                                <span className={'block leading-snug w-full md:w-5/6 lg:w-3/4 xl:w-3/5'}>{t('About Headline')}</span>
+                                <span className={'block leading-snug w-full md:w-5/6 lg:w-3/4 xl:w-3/6'}>{t('About Headline')}</span>
                                 </Title>
                         </div>
                         <div>
