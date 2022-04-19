@@ -95,7 +95,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             name: 'Trust',
             name2: 'Connect',
             coming_soon : '',
-            src: isSafari ? '/assets/product/TrustConnect.webm' : '/assets/product/TrustConnect.webm',
+            src: isSafari ? '/assets/product/bg-white/TrustConnect.webm' : '/assets/product/TrustConnect.webm',
             subhead: t('Subhead trust connect'),
             desc: t('Desc TrustConnect'),
             size: '100%'
