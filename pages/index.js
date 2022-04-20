@@ -161,7 +161,7 @@ export default function Home() {
             <Banner />
             <TrustedBy />
             <WeAimed />
-            <div className="h-[43vh]" />
+            <div className="h-[20vh]" />
             <CertificationMembership />
             <div className="h-quarter" />
             <ContactUs sectionRef={contactUsRef } />
