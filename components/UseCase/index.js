@@ -13,19 +13,19 @@ const UseCase = () => {
 
     const dataUseCase = [
         {
-            title: "eKYC & User Onboarding",
+            title: i18n.language === 'en' ?  "eKYC & User Onboarding" : "eKYC & Orientasi Pengguna",
             name: i18n.language === 'en' ? "Automated AI-Driven Identity Verification" : "Verifikasi Identitas Berbasis AI Otomatis",
             desc: t('Desc eKYC & User Onboarding')
         },{
-            title: "Credit and Loan Services",
+            title: i18n.language === 'en' ?  "Credit and Loan Services" : "Servis Kredit dan Pinjaman",
             name: i18n.language === 'en' ? "Make better credit decision with income verification" : "Buat keputusan kredit yang lebih baik dengan verifikasi pendapatan",
             desc: t("Desc Credit and Loan Services")
         },{
-            title: "Security Surveillance Management",
+            title: i18n.language === 'en' ?  "Security Surveillance Management" : "Manajemen Pengawasan Pengamanan",
             name: i18n.language === 'en' ? "Advance solutions for convenience-of-living" : "Solusi Terdepan untuk kenyamanan-dari-hidup",
             desc: t("Desc Security Surveillance Management")
         },{
-            title: "Personal Finance Management",
+            title: i18n.language === 'en' ?  "Personal Finance Management" : "Manajemen Keuangan Pribadi",
             name: i18n.language === 'en' ? "Adding Value with Seamless Infrastructure" : "Menambahkan Nilai dengan Infrastruktur yang Mulus",
             desc: t("Desc Personal Finance Management")
         },
