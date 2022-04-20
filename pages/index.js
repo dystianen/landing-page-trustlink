@@ -149,7 +149,7 @@ export default function Home() {
             <section className={'mt-56 md:mt-0'}>
                 <AboutMePage />
             </section>
-            <section className={'pl-12 md:pl-20 mt-52'}>
+            <section className={'pl-12 md:pl-20 mt-24'}>
                 <Product
                     onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
                     productRef={sectionProductRef}
