@@ -1,85 +1,37 @@
-import { CloseOutlined } from '@ant-design/icons';
-import {Image, Avatar, Row, Button} from 'antd';
-import React, {useEffect, useState} from 'react';
-import Fade from "react-reveal/Fade";
-import Slide from 'react-reveal/Slide';
-import { useRouter } from 'next/router';
+import {Image, Button} from 'antd';
+import React, {useState} from 'react';
 import Carousel from 'react-material-ui-carousel'
 import {useTranslation} from "next-i18next";
 
 const UseCase = () => {
-    const router = useRouter();
-    const [transition, setTransition] = useState(false);
     const { t, i18n } = useTranslation('common');
 
-    useEffect(() => {
-        setTransition(true);
-    }, []);
+    const dataUseCase = [
+        {
+            title: i18n.language === 'en' ?  "eKYC & User Onboarding" : "eKYC & Orientasi Pengguna",
+            name: i18n.language === 'en' ? "Automated AI-Driven Identity Verification" : "Verifikasi Identitas Berbasis AI Otomatis",
+            desc: t('Desc eKYC & User Onboarding'),
+            src: '/assets/usecase/usecase-ekyc.png'
+        },{
+            title: i18n.language === 'en' ?  "Credit and Loan Services" : "Servis Kredit dan Pinjaman",
+            name: i18n.language === 'en' ? "Make better credit decision with income verification" : "Buat keputusan kredit yang lebih baik dengan verifikasi pendapatan",
+            desc: t("Desc Credit and Loan Services"),
+            src: '/assets/usecase/usecase-ekyc.png'
+        },{
+            title: i18n.language === 'en' ?  "Security Surveillance Management" : "Manajemen Pengawasan Pengamanan",
+            name: i18n.language === 'en' ? "Advance solutions for convenience-of-living" : "Solusi Terdepan untuk kenyamanan-dari-hidup",
+            desc: t("Desc Security Surveillance Management"),
+            src: '/assets/usecase/usecase-ekyc.png'
+        },{
+            title: i18n.language === 'en' ?  "Personal Finance Management" : "Manajemen Keuangan Pribadi",
+            name: i18n.language === 'en' ? "Adding Value with Seamless Infrastructure" : "Menambahkan Nilai dengan Infrastruktur yang Mulus",
+            desc: t("Desc Personal Finance Management"),
+            src: '/assets/usecase/usecase-ekyc.png'
+        },
+    ]
 
-    const pageCarousel = 2
+    const pageCarousel = dataUseCase.length
     const [current, setCurrent] = useState(0)
-
-    const CarouselPage1 = () => (
-        <div className={'w-full h-auto md:h-screen flex flex-col md:flex-row bg-[#05204D]'}>
-            <div className={'flex justify-center items-center w-full md:w-1/2 h-auto md:h-full my-16 md:my-0'}>
-                <div className={'h-full w-auto flex justify-center items-center'}>
-                    <Image preview={false} src={'/assets/logo/logo-for-dark-background.png'} className={'z-10 justify-center w-full h-full'} />
-                </div>
-            </div>
-            <div className={'flex flex-col justify-center w-full md:w-1/2 h-auto md:h-full'}>
-                <div className={"mb-7"}>
-                    <p className={'text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{t('Airport')}</p>
-                </div>
-                <div className={'text-3xl lg:text-4xl text-white montserrat text-center md:text-left w-full'}>
-                    <p className={'mb-8 leading-snug md:leading-tight xl:w-3/4'}><span className={'font-semibold'}>{i18n.language === 'en' ? 'Seamless' :'Kelancaran'}</span>&nbsp;
-                        {i18n.language === 'en' ? 'Passenger Verification & Identification' : 'Verifikasi & Identifikasi Penumpang'}
-                    </p>
-                </div>
-                <div className={'mb-6 px-4 md:px-0'}>
-                    <p className={"text-white text-base lg:text-lg w-auto lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-center md:text-left"}>
-                        {t('Desc Law')}
-                    </p>
-                </div>
-                <div className={'text-center md:text-left mb-24 md:mb-0'}>
-                    <Button className={"text-white text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-48"}>
-                        {t('Request Demo')}
-                    </Button>
-                </div>
-            </div>
-        </div>
-    )
-
-    const CarouselPage2 = () => (
-        <div className={'w-full h-auto md:h-screen flex flex-col md:flex-row bg-[#05204D]'}>
-            <div className={'flex justify-center items-center w-full md:w-1/2 h-auto md:h-full my-16 md:my-0'}>
-                <Image preview={false} src={'/assets/logo/logo-for-dark-background.png'} className={'z-10 justify-center w-auto md:w-full h-full'} />
-            </div>
-            <div className={'flex flex-col justify-center w-full md:w-1/2 h-auto md:h-full'}>
-                <div className={"mb-7"}>
-                    <p className={'text-[16px] text-[#818fa6] tracking-[3px] mb-0 montserrat leading-none text-center md:text-left'}>{t('Law')}</p>
-                </div>
-                <div className={'text-[32px] lg:text-[40px] text-white montserrat text-center md:text-left w-full'}>
-                    <p className={'mb-8 leading-snug md:leading-tight xl:w-3/4'}>
-                        {i18n.language === 'en' ? (
-                            <span>Top Level <span className={'font-bold'}>Guarded Biometric </span>Approach</span>
-                        ) : (
-                            <span>Pendekatan <span className={'font-bold'}>Biometrik Terjaga </span>Tingkat Atas</span>
-                        )}
-                    </p>
-                </div>
-                <div className={'mb-6 px-4 md:px-0'}>
-                    <p className={"text-white text-base lg:text-lg w-auto lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-center md:text-left"}>
-                        {t('Desc Law')}
-                    </p>
-                </div>
-                <div className={'text-center md:text-left mb-24 md:mb-0'}>
-                    <Button className={"text-white text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-48"}>
-                        {t('Request Demo')}
-                    </Button>
-                </div>
-            </div>
-        </div>
-    )
 
     return (
         <div className={'w-full h-full pl-12 md:pl-20'}>
@@ -131,7 +83,7 @@ const UseCase = () => {
                             style: {
                                 backgroundColor: 'rgba(0,0,0, .1)',
                             },
-                            className: 'arrow-usecase mt-56 md:mt-36'
+                            className: 'arrow-usecase mt-[17rem] md:mt-48 lg:mt-36'
                         }}
                         navButtonsWrapperProps={{
                             className: `mx-2 md:mx-8 ${!current ? 'arrow-prev-product' : current === (pageCarousel - 1) ? 'arrow-next-product' : null}`
@@ -141,8 +93,35 @@ const UseCase = () => {
                         animation={'slide'}
                         onChange={num => setCurrent(num)}
                     >
-                        <CarouselPage1 />
-                        <CarouselPage2 />
+                        {dataUseCase.map((item, index) => ( <div key={index} className={'w-full h-auto md:h-screen flex flex-col md:flex-row bg-[#05204D]'}>
+                                <div className={'relative flex justify-center items-center w-full md:w-1/2 h-[18rem] md:h-full my-16 md:my-0'}>
+                                    <div className={'absolute -top-14 right-0 w-auto h-full flex justify-center items-center'}>
+                                        <Image preview={false} src={item.src} className={'z-10 justify-center w-full h-full'} />
+                                    </div>
+                                </div>
+                                <div className={'flex flex-col justify-center w-full md:w-1/2 h-auto md:h-full'}>
+                                    <div className={"mb-7"}>
+                                        <p className={'text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
+                                    </div>
+                                    <div className={'text-3xl lg:text-4xl text-white montserrat text-center md:text-left w-full'}>
+                                        <p className={'mb-8 leading-snug md:leading-tight xl:w-3/4'}>
+                                            {item.name}
+                                        </p>
+                                    </div>
+                                    <div className={'mb-6 px-4 sm:px-12 md:px-0'}>
+                                        <p className={"text-white text-base lg:text-lg w-auto md:w-4/5 lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-justify"}>
+                                            {item.desc}
+                                        </p>
+                                    </div>
+                                    <div className={'text-center md:text-left mb-24 md:mb-0'}>
+                                        <Button className={"text-white text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-48"}>
+                                            {t('Request Demo')}
+                                        </Button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        ))}
                     </Carousel>
                 </div>
             </div>
