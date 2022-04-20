@@ -39,20 +39,20 @@ const AboutMePage = () => {
                         <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
                         <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>{t('About Us')}</p>
                     </div>
-                    <Fade when={transition} duration={1600}>
+                    {/*<Fade when={transition} duration={1600}>*/}
                         <div>
-                            <Title className={"font-bold text-lg sm:text-xl md:text-2xl lg:text-[30px] montserrat"}>
+                            <Title className={"font-bold text-xl md:text-2xl lg:text-[30px] montserrat"}>
                                     <span className={'block leading-snug w-full md:w-[26rem] lg:w-[32rem]'}>{t('About Headline')}</span>
                                 </Title>
                         </div>
                         <div>
                             <Text className={'text-[#4f6382] text-[18px] montserrat font-normal'}>
-                                <span className={'inline md:block w-3/5'}>{t('About SubHeadline 1')}</span>
+                                <span className={'block w-[90%] sm:w-3/4 xl:w-3/5 text-justify'}>{t('About SubHeadline 1')}</span>
                                 <br/>
-                                <span className={'inline md:block w-3/5'}>{t('About SubHeadline 2')}</span>
+                                <span className={'block w-[90%] sm:w-3/4 xl:w-3/5 text-justify'}>{t('About SubHeadline 2')}</span>
                             </Text>
                         </div>
-                    </Fade>
+                    {/*</Fade>*/}
                 </div>
             </div>
         </div>
