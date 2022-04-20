@@ -1,33 +1,32 @@
-import { CloseOutlined } from '@ant-design/icons';
-import {Image, Avatar, Row, Button} from 'antd';
-import React, {useEffect, useState} from 'react';
-import Fade from "react-reveal/Fade";
-import Slide from 'react-reveal/Slide';
-import { useRouter } from 'next/router';
+import {Image, Button} from 'antd';
+import React, {useState} from 'react';
 import Carousel from 'react-material-ui-carousel'
 import {useTranslation} from "next-i18next";
 
 const UseCase = () => {
-    const router = useRouter();
     const { t, i18n } = useTranslation('common');
 
     const dataUseCase = [
         {
             title: i18n.language === 'en' ?  "eKYC & User Onboarding" : "eKYC & Orientasi Pengguna",
             name: i18n.language === 'en' ? "Automated AI-Driven Identity Verification" : "Verifikasi Identitas Berbasis AI Otomatis",
-            desc: t('Desc eKYC & User Onboarding')
+            desc: t('Desc eKYC & User Onboarding'),
+            src: '/assets/usecase/usecase-ekyc.png'
         },{
             title: i18n.language === 'en' ?  "Credit and Loan Services" : "Servis Kredit dan Pinjaman",
             name: i18n.language === 'en' ? "Make better credit decision with income verification" : "Buat keputusan kredit yang lebih baik dengan verifikasi pendapatan",
-            desc: t("Desc Credit and Loan Services")
+            desc: t("Desc Credit and Loan Services"),
+            src: '/assets/usecase/usecase-ekyc.png'
         },{
             title: i18n.language === 'en' ?  "Security Surveillance Management" : "Manajemen Pengawasan Pengamanan",
             name: i18n.language === 'en' ? "Advance solutions for convenience-of-living" : "Solusi Terdepan untuk kenyamanan-dari-hidup",
-            desc: t("Desc Security Surveillance Management")
+            desc: t("Desc Security Surveillance Management"),
+            src: '/assets/usecase/usecase-ekyc.png'
         },{
             title: i18n.language === 'en' ?  "Personal Finance Management" : "Manajemen Keuangan Pribadi",
             name: i18n.language === 'en' ? "Adding Value with Seamless Infrastructure" : "Menambahkan Nilai dengan Infrastruktur yang Mulus",
-            desc: t("Desc Personal Finance Management")
+            desc: t("Desc Personal Finance Management"),
+            src: '/assets/usecase/usecase-ekyc.png'
         },
     ]
 
@@ -95,9 +94,9 @@ const UseCase = () => {
                         onChange={num => setCurrent(num)}
                     >
                         {dataUseCase.map((item, index) => ( <div key={index} className={'w-full h-auto md:h-screen flex flex-col md:flex-row bg-[#05204D]'}>
-                                <div className={'flex justify-center items-center w-full md:w-1/2 h-auto md:h-full my-16 md:my-0'}>
-                                    <div className={'h-full w-auto flex justify-center items-center'}>
-                                        <Image preview={false} src={'/assets/logo/logo-for-dark-background.png'} className={'z-10 justify-center w-full h-full'} />
+                                <div className={'relative flex justify-center items-center w-full md:w-1/2 h-[18rem] md:h-full my-16 md:my-0'}>
+                                    <div className={'absolute -top-14 right-0 w-auto h-full flex justify-center items-center'}>
+                                        <Image preview={false} src={item.src} className={'z-10 justify-center w-full h-full'} />
                                     </div>
                                 </div>
                                 <div className={'flex flex-col justify-center w-full md:w-1/2 h-auto md:h-full'}>
