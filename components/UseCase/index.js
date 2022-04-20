@@ -16,8 +16,32 @@ const UseCase = () => {
         setTransition(true);
     }, []);
 
-    const pageCarousel = 2
+    const dataUseCase = [
+        {
+            title: "eKYC & User Onboarding",
+            name: i18n.language === 'en' ? "Automated AI-Driven Identity Verification" : "Verifikasi Identitas Berbasis AI Otomatis",
+            desc: t('Desc eKYC & User Onboarding')
+        },{
+            title: "Credit and Loan Services",
+            name: i18n.language === 'en' ? "Make better credit decision with income verification" : "Buat keputusan kredit yang lebih baik dengan verifikasi pendapatan",
+            desc: t("Desc Credit and Loan Services")
+        },{
+            title: "Security Surveillance Management",
+            name: i18n.language === 'en' ? "Advance solutions for convenience-of-living" : "Solusi Terdepan untuk kenyamanan-dari-hidup",
+            desc: t("Desc Security Surveillance Management")
+        },{
+            title: "Personal Finance Management",
+            name: i18n.language === 'en' ? "Adding Value with Seamless Infrastructure" : "Menambahkan Nilai dengan Infrastruktur yang Mulus",
+            desc: t("Desc Personal Finance Management")
+        },
+    ]
+
+    const pageCarousel = dataUseCase.length
     const [current, setCurrent] = useState(0)
+
+
+
+
 
     const CarouselPage1 = () => (
         <div className={'w-full h-auto md:h-screen flex flex-col md:flex-row bg-[#05204D]'}>
@@ -131,7 +155,7 @@ const UseCase = () => {
                             style: {
                                 backgroundColor: 'rgba(0,0,0, .1)',
                             },
-                            className: 'arrow-usecase mt-56 md:mt-36'
+                            className: 'arrow-usecase mt-[17rem] md:mt-48 lg:mt-36'
                         }}
                         navButtonsWrapperProps={{
                             className: `mx-2 md:mx-8 ${!current ? 'arrow-prev-product' : current === (pageCarousel - 1) ? 'arrow-next-product' : null}`
@@ -141,8 +165,35 @@ const UseCase = () => {
                         animation={'slide'}
                         onChange={num => setCurrent(num)}
                     >
-                        <CarouselPage1 />
-                        <CarouselPage2 />
+                        {dataUseCase.map((item, index) => ( <div key={index} className={'w-full h-auto md:h-screen flex flex-col md:flex-row bg-[#05204D]'}>
+                                <div className={'flex justify-center items-center w-full md:w-1/2 h-auto md:h-full my-16 md:my-0'}>
+                                    <div className={'h-full w-auto flex justify-center items-center'}>
+                                        <Image preview={false} src={'/assets/logo/logo-for-dark-background.png'} className={'z-10 justify-center w-full h-full'} />
+                                    </div>
+                                </div>
+                                <div className={'flex flex-col justify-center w-full md:w-1/2 h-auto md:h-full'}>
+                                    <div className={"mb-7"}>
+                                        <p className={'text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
+                                    </div>
+                                    <div className={'text-3xl lg:text-4xl text-white montserrat text-center md:text-left w-full'}>
+                                        <p className={'mb-8 leading-snug md:leading-tight xl:w-3/4'}>
+                                            {item.name}
+                                        </p>
+                                    </div>
+                                    <div className={'mb-6 px-4 md:px-0'}>
+                                        <p className={"text-white text-justify text-base lg:text-lg w-auto lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-center md:text-left"}>
+                                            {item.desc}
+                                        </p>
+                                    </div>
+                                    <div className={'text-center md:text-left mb-24 md:mb-0'}>
+                                        <Button className={"text-white text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-48"}>
+                                            {t('Request Demo')}
+                                        </Button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        ))}
                     </Carousel>
                 </div>
             </div>
