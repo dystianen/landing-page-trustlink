@@ -94,7 +94,7 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
                         </div>
                         <div className={'flex flex-row w-full justify-start'}>
                             <div className={'w-full md:w-auto mb-12 md:mb-0'}>
-                                <h1 className={`text-white text-xl  ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} font-bold mb-3 montserrat`}>{t('Trust Centric Solution')} <br/> <span className={'font-light'}>{t('For Identity Management')}</span> <br/>{t('Digital Biometric')} <br/> {t('And Open Finance Platform')}</h1>
+                                <h1 className={`text-white text-xl  ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} font-bold mb-3 montserrat`}>{t('Advance Solutions')} <br/> <span className={'font-light'}>{t('For On Boarding Experience')}</span> <br/>{t('and Seamless Open Finance')} <br/> {t('API Infrastructure')}</h1>
                             </div>
                         </div>
                     </div>
