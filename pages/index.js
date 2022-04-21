@@ -94,11 +94,11 @@ export default function Home() {
             </div>
             <div className={'relative h-full md:h-[75vh] lg:h-full min-h-screen'}>
                 <div className={'absolute w-full top-0 flex flex-row'} style={{ justifyContent: 'space-between' }}>
-                    <div>
+                    <div className={'flex items-center'}>
                         <Image preview={false} className="fixed w-14 top-4" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }} />
-                        <Image preview={false} className="relative h-14 w-auto left-14 mt-4" src={'/assets/logo/text-only.png'} />
+                        <Image preview={false} className="relative h-20 w-auto left-14" src={'/assets/logo/text-only.png'} />
                     </div>
-                    <div className={'choose-lang flex flex-row mr-10 mt-8 md:mr-32 lg:mt-10 z-30'}>
+                    <div className={'choose-lang flex flex-row mr-10 mt-8 md:mr-16 lg:mt-10 z-30'}>
                         <Link href={'/'} locale="en">
                             <p className={`cursor-pointer font-medium ${i18n.language === 'en' && 'text-[#FE7519]'}`}>EN</p>
                         </Link>
@@ -119,8 +119,11 @@ export default function Home() {
                             {/*<div className={'home-next-generation text-3xl sm:text-4xl md:text-5xl lg:text-5xl'}>*/}
                             {/*    <span className={'mb-2'}><span className={''}>Trust-Centric Solution</span> For Identity Management  And Open Finance Platform</span>*/}
                             {/*</div>*/}
-                            <div className={'home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem]  mt-5 font-medium'}>
-                                <span className={'block mb-2 leading-tight'}><span className={'font-bold block'}>{t('Trust Centric Solution')}</span> {t('For Identity Management')} <br/>{t('And Open Finance Platform')}</span>
+                            <div className={'home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem] font-medium z-10'}>
+                                <span className={'block leading-tight'}>
+                                    <span className={'font-bold block text-7xl mb-4'}>{t('Trust Centric Solution')}</span>
+                                    {t('For Identity Management')} <br/>{t('And Open Finance Platform')}
+                                </span>
                             </div>
                         </div>
                     </section>
@@ -149,7 +152,7 @@ export default function Home() {
             <section className={'mt-56 md:mt-0'}>
                 <AboutMePage />
             </section>
-            <section className={'pl-12 md:pl-20 mt-24'}>
+            <section className={'pl-12 md:pl-20 mt-52'}>
                 <Product
                     onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
                     productRef={sectionProductRef}
