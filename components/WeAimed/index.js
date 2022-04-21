@@ -17,13 +17,10 @@ const WeAimed = () => {
                     </div>
                     <div className="flex sm:justify-center lg:justify-end py-16 w-full h-full px-4 md:px-0 ">
                         <div className={'sm:w-3/4 lg:w-4/6 flex flex-col justify-around z-30'}>
-                            <p className="text-xl sm:text-2xl md:text-3xl md:full lg:w-3/4 xl:w-3/5">
-                                {t('We Aim To Be')} <span className="font-bold">{t('The Most Advance')} </span>
-                                <span>
-                                    {t('End to End')} <span className="font-bold">{t('Digital Biometrics Solution')}</span>
-                                </span>
+                            <p className="text-xl sm:text-2xl md:text-3xl md:full lg:w-3/4 xl:w-3/5 font-bold">
+                                {t('We Aim To Be')}
                             </p>
-                            <p className="text-xs md:text-sm opacity-90 sm:w-4/5 md:w-[80%] lg:w-[65%] xl:w-[50%]">
+                            <p className="text-xs md:text-sm 2xl:text-lg opacity-90 sm:w-4/5 md:w-[80%] lg:w-[65%] xl:w-[50%]">
                                 {t('Accomplish')}
                             </p>
                         </div>
