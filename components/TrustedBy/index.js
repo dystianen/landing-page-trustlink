@@ -50,10 +50,10 @@ const TrustedBy = (props) => {
                 <div className={'relative w-full z-10'}>
                     <div className={'flex flex-row items-center'}>
                         <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
-                        <p className={'text-sm text-[#818FA6] mb-0 ml-6 montserrat tracking-widest'}>{t('Always Reliable')}</p>
+                        <p className={'text-sm text-[#818FA6] mb-0 ml-6 montserrat tracking-widest'}>{t('Trusted By')}</p>
                     </div>
-                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl montserrat text-[#1D365F] font-bold my-2 sm:my-6'}>{t('Trusted By')}</p>
-                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl montserrat text-[#1D365F] font-medium mb-0'}>{t('Clients and Partners')}</p>
+                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl montserrat text-[#1D365F] font-bold my-2 sm:my-6'}>{t('Clients and Partners')}</p>
+                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-xl montserrat text-[#1D365F] font-medium mb-0'}>{t('Collaboration')}</p>
                 </div>
                 <div className={'flex flex-row justify-end mt-6 sm:mt-10 z-10'}>
                     <div className={"bg-gray-300 w-[94%]"}>
