@@ -8,23 +8,23 @@ const UseCase = () => {
 
     const dataUseCase = [
         {
-            title: i18n.language === 'en' ?  "eKYC & User Onboarding" : "eKYC & Orientasi Pengguna",
-            name: i18n.language === 'en' ? "Automated AI-Driven Identity Verification" : "Verifikasi Identitas Berbasis AI Otomatis",
+            title: t("eKYC & User Onboarding"),
+            name: t("Desc eKYC"),
             desc: t('Desc eKYC & User Onboarding'),
             src: '/assets/usecase/usecase-ekyc.png'
         },{
-            title: i18n.language === 'en' ?  "Credit and Loan Services" : "Servis Kredit dan Pinjaman",
-            name: i18n.language === 'en' ? "Make better credit decision with income verification" : "Buat keputusan kredit yang lebih baik dengan verifikasi pendapatan",
+            title: t("Credit and Loan Services"),
+            name: t("Desc Credit and Loan"),
             desc: t("Desc Credit and Loan Services"),
             src: '/assets/usecase/usecase-ekyc.png'
         },{
-            title: i18n.language === 'en' ?  "Security Surveillance Management" : "Manajemen Pengawasan Pengamanan",
-            name: i18n.language === 'en' ? "Advance solutions for convenience-of-living" : "Solusi Terdepan untuk kenyamanan-dari-hidup",
+            title: t("Security Surveillance Management"),
+            name: t("Desc Security Surveillance"),
             desc: t("Desc Security Surveillance Management"),
             src: '/assets/usecase/usecase-ekyc.png'
         },{
-            title: i18n.language === 'en' ?  "Personal Finance Management" : "Manajemen Keuangan Pribadi",
-            name: i18n.language === 'en' ? "Adding Value with Seamless Infrastructure" : "Menambahkan Nilai dengan Infrastruktur yang Mulus",
+            title: t("Personal Finance Management"),
+            name: t("Desc Personal Finance"),
             desc: t("Desc Personal Finance Management"),
             src: '/assets/usecase/usecase-ekyc.png'
         },
@@ -37,7 +37,7 @@ const UseCase = () => {
         <div className={'w-full h-full pl-12 md:pl-20'}>
             <div className={'w-full h-full'}>
                 <div className={"relative w-full h-auto max-h-[519px] usecase-img"}>
-                    <Image preview={false} className="w-full h-full brightness-50" src={'/assets/usecase-airport.png'}/>
+                    <Image preview={false} className="w-full h-64 md:h-full brightness-50" src={'/assets/usecase-airport.png'}/>
                     <div className={'absolute top-0 left-0 h-full w-full usecase-img'}>
                         <Image preview={false} className="w-full h-full brightness-50 " src={'/assets/usecase-airport.png'}/>
                     </div>
@@ -45,8 +45,8 @@ const UseCase = () => {
                         <Image preview={false} className="h-full w-auto" src={'/assets/images/accent-home-sectionUseCase-1.png'}/>
                     </div>
                     <div className={'absolute left-[1.2rem] sm:left-[2.2rem] bottom-[1rem] sm:bottom-[2.3rem] z-20'}>
-                        <b className={'text-white text-3xl sm:text-4xl md:text-6xl font-bold mb-5 montserrat'}>{t('Modern')}</b>
-                        <p className={'text-white text-2xl sm:text-3xl md:text-lg text-justify montserrat'}>{t('Biometric Use Case 2')}</p>
+                        <b className={'text-white text-3xl sm:text-4xl md:text-6xl font-bold mb-5 montserrat'}>{t('Use Case')}</b>
+                        <p className={'text-white text-lg montserrat pr-6 lg:pr-0'}>{t('Biometric Use Case 2')}</p>
                     </div>
 
                 </div>
@@ -104,12 +104,12 @@ const UseCase = () => {
                                         <p className={'text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
                                     </div>
                                     <div className={'text-3xl lg:text-4xl text-white montserrat text-center md:text-left w-full'}>
-                                        <p className={'mb-8 leading-snug md:leading-tight xl:w-3/4'}>
+                                        <p className={'mb-8 leading-snug md:leading-tight w-auto md:w-[90%] lg:w-[83%] xl:w-3/4'}>
                                             {item.name}
                                         </p>
                                     </div>
                                     <div className={'mb-6 px-4 sm:px-12 md:px-0'}>
-                                        <p className={"text-white text-base lg:text-lg w-auto md:w-4/5 lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-justify"}>
+                                        <p className={"text-white text-base lg:text-lg w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
                                             {item.desc}
                                         </p>
                                     </div>
