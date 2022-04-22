@@ -32,18 +32,6 @@ export const Product = observer(({show, setShow}) => {
             description: t('Desc trust vision'),
             image: '/assets/logo/trust/vision.png'
         },
-        {
-            key: 'connect',
-            title: 'Connect',
-            description: t('Desc trust connect'),
-            image: '/assets/logo/trust/connect.png'
-        },
-        {
-            key: 'score',
-            title: 'Score',
-            description: t('Desc trust score'),
-            image: '/assets/logo/trust/score.png'
-        },
     ]
 
     return (
@@ -70,18 +58,29 @@ export const Product = observer(({show, setShow}) => {
                             </p>
                         </div>
                     </div>
-                    <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 mb-12'}>
+                    <div className={'grid grid-cols-1 md:grid-cols-2 gap-0 mb-12 montserrat'}>
                         {products.map((data, index) => {
                             return (
-                                <div key={data.key} className={`w-full h-auto md:h-36 lg:h-52 border border-l-0 ${index >= 3 ? null : 'border-b-0'} border-gray-300`}>
-                                    <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-8'}>
+                                <div key={data.key} className={`w-full h-auto md:h-48 lg:h-52 border border-l-0 ${index >= 2 ? null : 'border-b-0'} border-gray-300`}>
+                                    <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-14 pt-6'}>
                                         <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mt-4 md:mt-0 md:mb-2 lg:mb-4 z-10'}>Trust<span className="text-orange">{data.title}</span></p>
-                                        <p className={'md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>{data.description}</p>
-                                        <div className={'absolute -bottom-2 justify-start items-start w-full left-0 z-0'}>
-                                            <Image preview={false} className="w-[40px] opacity-80 lg:w-[70px]" src={data.image}/>
+                                        <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>{data.description}</p>
+                                        <div className={'absolute -bottom-2 left-0 z-0'}>
+                                            <Image preview={false} className="w-[50px] opacity-70 md:w-[60px] lg:w-[80px]" src={data.image}/>
                                         </div>
                                     </div>
                                 </div>
+
+
+                                // <div key={data.key} className={`w-full h-auto md:h-36 lg:h-52 border border-l-0 ${index <= 3 ? null : 'border-b-0'} border-gray-300`}>
+                                //     <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-8'}>
+                                //         <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mt-4 md:mt-0 md:mb-2 lg:mb-4 z-10'}>Trust<span className="text-orange">{data.title}</span></p>
+                                //         <p className={'md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>{data.description}</p>
+                                //         <div className={'absolute -bottom-2 justify-start items-start w-full left-0 z-0'}>
+                                //             <Image preview={false} className="w-[40px] opacity-80 lg:w-[70px]" src={data.image}/>
+                                //         </div>
+                                //     </div>
+                                // </div>
                             );
                         })}
                     </div>
