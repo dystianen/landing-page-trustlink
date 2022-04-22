@@ -45,7 +45,7 @@ const UseCase = () => {
                         <Image preview={false} className="h-full w-auto" src={'/assets/images/accent-home-sectionUseCase-1.png'}/>
                     </div>
                     <div className={'absolute left-[1.2rem] sm:left-[2.2rem] bottom-[1rem] sm:bottom-[2.3rem] z-20'}>
-                        <b className={'text-white text-3xl sm:text-4xl md:text-6xl font-bold mb-5 montserrat'}>{t('Modern')}</b>
+                        <b className={'text-white text-3xl sm:text-4xl md:text-6xl font-bold mb-5 montserrat'}>{t('Use Case')}</b>
                         <p className={'text-white text-2xl sm:text-3xl md:text-lg text-justify montserrat'}>{t('Biometric Use Case 2')}</p>
                     </div>
 
