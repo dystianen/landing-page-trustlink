@@ -7,7 +7,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 body {
@@ -90,6 +90,22 @@ svg { vertical-align: baseline; }
 .register-modal .ant-modal-body {
   border-radius: 20px !important;
   padding: 0 0 10px 0 !important;
+}
+
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+  background-color: #FE6601 !important;
+}
+
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+  background-color: #FE6601 !important;
+}
+
+.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+  background-color: #FE6601 !important;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
+  color: #FE6601 !important;
 }
 
 .tc-modal .ant-tabs-tab {
@@ -254,15 +270,142 @@ svg { vertical-align: baseline; }
   filter: grayscale(100%) brightness(400%);
 }
 
+.logo-image-gray{
+  filter: grayscale(100%);
+}
+
+.logo-image-gray:hover{
+  filter: none;
+  transition: 500ms;
+}
+
 .logo-dukcapil{
   filter: grayscale(100%) invert(100%) contrast(180%);
   text-align: center;
-
 }
 
 .logo-image:hover, .logo-dukcapil:hover{
   filter: none;
   transition: 500ms;
+}
+
+.certificate {
+  text-align: center;
+  justify-content: center;
+}
+
+.certificate-sub {
+  font: normal normal medium 14px/18px Montserrat;
+  letter-spacing: 2.1px;
+  color: #818FA6;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.certificate-title {
+  font: normal normal bold 72px/72px Montserrat;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
+.certificate-subtitle {
+  font: normal normal medium 48px/48px Montserrat;
+  font-size: 48px;
+  letter-spacing: 0px;
+  opacity: 1;
+  margin-top: -5%;
+}
+
+.logo-usecase{
+  clip-path: inset(0% 50% 50% 0%);
+  filter: grayscale(1) invert(1);
+  opacity: 0.5;
+  position: relative;
+  right: -50%;
+  bottom: -250px;
+}
+
+.montserrat {
+  font-family: 'Montserrat'
+}
+
+.ant-steps-item-title {
+  display: none !important;
+}
+
+.stroke {
+  -webkit-text-stroke: 2px #FFFFFF;
+}
+
+.circle{
+  position: absolute;
+  top: 18%;
+  left: 20px;
+  width: 55%;
+  height: 65%;
+  background: transparent;
+  border: 6px solid #145FD9;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.line-top{
+  position: absolute;
+  top: 0;
+  left: 28%;
+  width: 6px;
+  height: 18%;
+  background: #145FD9;
+  opacity: 0.2;
+}
+
+.line-mid{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 43.5%;
+  height: 6px;
+  background: #145FD9;
+  opacity: 0.2;
+}
+
+.line-bottom{
+  position: absolute;
+  top: 50.5%;
+  right: 15%;
+  width: 6px;
+  height: 50%;
+  background: #145FD9;
+  opacity: 0.2;
+}
+
+.arrow-usecase:hover{
+  opacity: 0.5 !important;
+  filter: brightness(120%) !important;
+}
+
+.arrow-prev-product > button[aria-label='Previous'], .arrow-next-product > button[aria-label='Next'] {
+  display: none;
+}
+
+.css-1abc02a:hover, .css-hn784z:hover button{
+  opacity: 1;
+  filter: brightness(1);
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: teal;
+  position: relative;
+  transform: translateX(0);
+  transition: transform 500ms ease-in-out;
+}
+.box.right {
+  transform: translateX(100%);
 }
 
 @media only screen and (min-device-width: 2560px) {
@@ -410,3 +553,46 @@ svg { vertical-align: baseline; }
 .formNewsletter .ant-form-item-explain.ant-form-item-explain-error{
   color:white !important;
 }
+
+#about-me {
+  filter: grayscale(1) invert(1) opacity(0.6);
+  height: 100%;
+}
+
+.about-img > .ant-image {
+  height: 100%;
+}
+
+.usecase-img > .ant-image{
+  width: 100%;
+  height: 100%;
+}
+
+.trusted-img > .ant-image{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-bg > .ant-image{
+  height: auto
+}
+
+.section-gradient-bg{
+  background: rgb(0,11,30);
+  background: linear-gradient(90deg, rgba(0,11,30,1) 0%, rgba(7,39,91,1) 48%, rgba(4,32,77,1) 100%);
+}
+
+@media only screen and (max-device-width: 576px) {
+  .contact-bg > .ant-image{
+    height: 100%
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 360px) {.triv-top {top: 10px !important}}
+@media only screen and (min-device-width: 361px) and (max-device-width: 419px){.triv-top {top: 20px !important}}
+@media only screen and (min-device-width: 420px) and (max-device-width: 519px){.triv-top {top: 40px !important}}
+@media only screen and (min-device-width: 520px) and (max-device-width: 575px){.triv-top {top: 50px !important}}
+@media only screen and (min-device-width: 576px) and (max-device-width: 639px) {.triv-top {top: 60px !important}}

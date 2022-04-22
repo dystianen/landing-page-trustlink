@@ -8,7 +8,7 @@ const WeAimed = () => {
     return (<>
             <div className="h-[340px] w-full pl-12 md:pl-20 z-0 ">
                 <div className={'w-full h-full relative text-white montserrat '}>
-                    <div className={'bg-[#04204D] w-full h-full absolute z-10'} />
+                    <div className={'section-gradient-bg w-full h-full absolute z-10'} />
                     <div className={'absolute triv-top top-6 md:top-16 md:top-5 -left-12 sm:-left-20 h-[175%] sm:h-auto w-1/2 sm:w-auto about-img z-0'}>
                         <Image preview={false} src={'/assets/images/accent-home-sectionTrivia-1.jpg'} className={'h-full w-auto'}/>
                     </div>
