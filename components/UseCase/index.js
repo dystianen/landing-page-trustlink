@@ -104,12 +104,12 @@ const UseCase = () => {
                                         <p className={'text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
                                     </div>
                                     <div className={'text-3xl lg:text-4xl text-white montserrat text-center md:text-left w-full'}>
-                                        <p className={'mb-8 leading-snug md:leading-tight xl:w-3/4'}>
+                                        <p className={'mb-8 leading-snug md:leading-tight w-auto md:w-[90%] lg:w-[83%] xl:w-3/4'}>
                                             {item.name}
                                         </p>
                                     </div>
                                     <div className={'mb-6 px-4 sm:px-12 md:px-0'}>
-                                        <p className={"text-white text-base lg:text-lg w-auto md:w-4/5 lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-justify"}>
+                                        <p className={"text-white text-base lg:text-lg w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
                                             {item.desc}
                                         </p>
                                     </div>
