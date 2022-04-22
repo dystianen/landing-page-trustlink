@@ -53,7 +53,7 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
                             <div className={'flex flex-col py-11 px-2 sm:px-4 lg:px-18 lg:p-11 w-full'}>
                                      {
                                         menu.map((it, index) => (
-                                            <Button type="link" className={'flex flex-row w-full h-8 justify-between items-center mb-7'} ghost key={index} onClick={() => it.name === t('Products') ? setShowProduct(true) : it.name === t('Use Cases') ? setShowUseCase(true) : null}>
+                                            <Button type="link" className={'flex flex-row w-full h-8 justify-between items-center mb-7'} ghost key={index} onClick={() => it.name === t('Products') ? setShowProduct(true) : it.name === t('Use Cases') ? setShowUseCase(true) : it.name === t('About Us.') ? setShowAbout(true) : null}>
                                                 <h1 className={'text-xl md:text-2xl font-bold mb-0 montserrat'} style={{color: '#04204D'}}>{it.name}</h1>
                                                 <RightOutlined className={'text-lg opacity-50'} style={{color: '#04204D'}} />
                                             </Button>
