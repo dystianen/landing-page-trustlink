@@ -46,7 +46,7 @@ const UseCase = () => {
                     </div>
                     <div className={'absolute left-[1.2rem] sm:left-[2.2rem] bottom-[1rem] sm:bottom-[2.3rem] z-20'}>
                         <b className={'text-white text-3xl sm:text-4xl md:text-6xl font-bold mb-5 montserrat'}>{t('Use Case')}</b>
-                        <p className={'text-white text-lg text-justify montserrat pr-6 lg:pr-0'}>{t('Biometric Use Case 2')}</p>
+                        <p className={'text-white text-lg montserrat pr-6 lg:pr-0'}>{t('Biometric Use Case 2')}</p>
                     </div>
 
                 </div>

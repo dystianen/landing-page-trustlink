@@ -63,15 +63,15 @@ export const About =  observer(({show, setShow}) => {
                                     <LeftOutlined className={'text-xl mb-1 font-bold'}/>
                                 </div>
                             </div>
-                            <p className={'inline text-3xl mb-5 pt-2 leading-none font-bold text-[#04204D]'}>{t('About Us')}</p>
+                            <p className={'inline text-3xl mb-5 pt-2 leading-none font-bold text-[#04204D]'}>{t('About Us.')}</p>
                         </div>
                     </div>
                     <div className={'w-full pl-4 pr-8'}>
                         <p className='text-lg xl:text-xl mt-8'>
-                            The Only Open Finance with Biometrics Identity Verification Solution
+                            {t('Header About Us')}
                         </p>
-                        <p className='text-gray-400 mt-6 text-base xl:text-lg text-justify'>
-                            We are the only company that provides the most advanced identity verification against Indonesian national database as the official Dukcapil partner in Platform Bersama that combine it with open finance facilitator for a seamless, simpler, and most secure financial data integration
+                        <p className='text-gray-400 mt-6 text-sm md:text-base xl:text-lg md:text-justify'>
+                            {t('Desc About Us')}
                         </p>
                         <div className={'grid grid-cols-2 lg:grid-cols-4'} style={{justifyContent: 'space-between', alignItems: 'center', marginTop: 30}}>
                             <Image preview={false} className="w-30 xshort:w-28 company-logo logo-image-gray" src={'/assets/keminfo.png'}/>
