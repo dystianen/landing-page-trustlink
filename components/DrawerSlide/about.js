@@ -63,28 +63,22 @@ export const About =  observer(({show, setShow}) => {
                                     <LeftOutlined className={'text-xl mb-1 font-bold'}/>
                                 </div>
                             </div>
-                            <p className={'inline text-3xl mb-5 pt-2 leading-none font-bold text-[#04204D]'}>{t('Products')}</p>
-                            <p className={'text-sm lg:w-3/5 pt-2 pb-6 text-[#4F6382]'}>
-                                {t('Learn How To')}
-                                {/* Learn how the digitalize biometric of human <br/> unique pattern becomes the lead of security alignment. */}
-                            </p>
+                            <p className={'inline text-3xl mb-5 pt-2 leading-none font-bold text-[#04204D]'}>{t('About Us')}</p>
                         </div>
                     </div>
-                    <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 mb-12'}>
-                        {/* {products.map((data, index) => {
-                            return (
-                                <div key={data.key} className={`w-full h-auto md:h-36 lg:h-52 border border-l-0 ${index >= 3 ? null : 'border-b-0'} border-gray-300`}>
-                                    <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-8'}>
-                                        <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mt-4 md:mt-0 md:mb-2 lg:mb-4 z-10'}>Trust<span className="text-orange">{data.title}</span></p>
-                                        <p className={'md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>{data.description}</p>
-                                        <div className={'absolute -bottom-2 justify-start items-start w-full left-0 z-0'}>
-                                            <Image preview={false} className="w-[40px] opacity-80 lg:w-[70px]" src={data.image}/>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })} */}
-                        About US
+                    <div className={'w-full pl-4 pr-8'}>
+                        <p className='text-lg xl:text-xl mt-8'>
+                            The Only Open Finance with Biometrics Identity Verification Solution
+                        </p>
+                        <p className='text-gray-400 mt-6 text-base xl:text-lg text-justify'>
+                            We are the only company that provides the most advanced identity verification against Indonesian national database as the official Dukcapil partner in Platform Bersama that combine it with open finance facilitator for a seamless, simpler, and most secure financial data integration
+                        </p>
+                        <div className={'grid grid-cols-2 lg:grid-cols-4'} style={{justifyContent: 'space-between', alignItems: 'center', marginTop: 30}}>
+                            <Image preview={false} className="w-30 xshort:w-28 company-logo logo-image-gray" src={'/assets/keminfo.png'}/>
+                            <Image preview={false} className="w-16 xshort:w-14 company-logo logo-image-gray" src={'/assets/dukcapil.svg'}/>
+                            <Image preview={false} className="w-20 xshort:w-18 company-logo logo-image-gray mt-10 sm:mt-0" src={'/assets/aftech.png'}/>
+                            <Image preview={false} className="w-16 xshort:w-14 company-logo logo-image-gray mt-10 sm:mt-0" src={'/assets/iso.png'}/>
+                        </div>
                     </div>
                 </div>
             </div>
