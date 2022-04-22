@@ -16,7 +16,7 @@ const WeAimed = () => {
                         <Image preview={false} src={'/assets/images/accent-home-sectionTrivia-2.jpg'} className={'h-full w-auto opacity-40'}/>
                     </div>
                     <div className="flex sm:justify-center lg:justify-end py-16 w-full h-full px-4 md:px-0 ">
-                        <div className={'sm:w-3/4 lg:w-4/6 flex flex-col justify-around z-30'}>
+                        <div className={'sm:w-3/4 lg:w-4/6 pl-48 flex flex-col justify-around z-30'}>
                             <p className="text-xl sm:text-2xl md:text-3xl md:full lg:w-3/4 xl:w-3/5 font-bold">
                                 {t('We Aim To Be')}
                             </p>
