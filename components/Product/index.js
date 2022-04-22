@@ -122,7 +122,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
     const Item = ({item}) => {
         return (
             <div className={'flex flex-col md:flex-row w-full h-auto md:min-h-[28rem] lg:min-h-[38rem] xl:min-h-[42rem]'}>
-                <div className={'flex justify-center md:justify-end items-center w-full md:w-3/6 lg:w-2/4 text-center z-10'}>
+                <div className={`flex justify-center md:justify-end items-center w-full md:w-3/6 lg:w-2/4 text-center ${isSafari ? 'z-30' : 'z-10'}`}>
                     <ReactPlayer
                         className=''
                         url={item.src}
@@ -133,7 +133,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         playing={true}
                     />
                 </div>
-                <div className={'flex flex-col justify-center mt-4 w-full md:w-3/6 lg:w-2/4 z-10 pl-12 md:pl-0'}>
+                <div className={'flex flex-col justify-center mt-4 w-full md:w-3/6 lg:w-2/4 pl-12 md:pl-0 z-40'}>
                     <div>
                         <p className={'text-3xl md:text-4xl lg:text-6xl mb-0 montserrat text-gray-400 font-bold leading-none'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-orange' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-lg md:text-xl'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
                     </div>
@@ -224,7 +224,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         }
                     }}
                     navButtonsWrapperProps={{
-                        className: `mr-5 ml-5 z-10 ${!current ? 'arrow-prev-product' : current == 5 ? 'arrow-next-product' : null}`
+                        className: `mr-5 ml-5 ${isSafari ? 'z-40' : 'z-10'} ${!current ? 'arrow-prev-product' : current == 5 ? 'arrow-next-product' : null}`
                     }}
                     className={'-ml-12 md:ml-0'}
                 >
@@ -234,7 +234,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                 </Carousel>
             </div>
             <div className="relative h-[10vh]" />
-            <div className={'absolute w-full lg:w-10/12 xl:w-8/12 h-1/3 sm:h-auto -bottom-10 right-0 usecase-img z-0'}>
+            <div className={`absolute w-full lg:w-10/12 xl:w-8/12 h-1/3 sm:h-auto -bottom-10 right-0 usecase-img ${isSafari ? 'z-30' : 'z-0'}`}>
                 <Image preview={false} src={'/assets/images/accent-home-sectionProduct-2-edit.png'} className={'h-full w-full opacity-10'}/>
             </div>
         </div>
