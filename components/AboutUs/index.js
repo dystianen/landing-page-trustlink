@@ -34,25 +34,27 @@ const AboutMePage = () => {
                 </div>
             </div>
             <div className={'w-full mt-20 sm:mt-10 mr-10 flex justify-end'}>
-                <div className={'w-full sm:w-3/5'}>
-                    <div className={'flex flex-row items-center mb-2'}>
-                        <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
-                        <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>{t('About Us')}</p>
-                    </div>
-                    {/*<Fade when={transition} duration={1600}>*/}
-                        <div>
-                            <Title className={"font-bold text-xl md:text-2xl lg:text-[30px] montserrat"}>
-                                    <span className={'block leading-snug w-full md:w-[26rem] lg:w-[32rem]'}>{t('About Headline')}</span>
-                                </Title>
+                <div className={'w-full  sm:w-[100vw]'}>
+                        <div className={'flex flex-col sm:pl-32'}>
+                            <div className={'flex flex-row items-center mb-2'}>
+                                <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
+                                <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>{t('About Us')}</p>
+                            </div>
+                            {/*<Fade when={transition} duration={1600}>*/}
+                            <div>
+                                <Title className={"font-bold text-xl md:text-2xl lg:text-[30px] montserrat"}>
+                                        <span className={'block leading-snug w-full md:w-[26rem] lg:w-[32rem]'}>{t('About Headline')}</span>
+                                    </Title>
+                            </div>
                         </div>
                         <div>
-                            <Text className={'text-[#4f6382] text-[18px] montserrat font-normal'}>
-                                <span className={'block w-[90%] sm:w-3/4 xl:w-3/5 text-justify'}>{t('About SubHeadline 1')}</span>
+                            <Text className={'text-[#4f6382] sm:mt-10 xl:mt-20 text-[18px] sm:flex montserrat font-normal'}>
+                                <span className={'block w-[90%] sm:w-3/4 sm:pr-10 xl:w-3/5 text-justify'}>{t('About SubHeadline 1')}</span>
                                 <br/>
                                 <span className={'block w-[90%] sm:w-3/4 xl:w-3/5 text-justify'}>{t('About SubHeadline 2')}</span>
                             </Text>
                         </div>
-                    {/*</Fade>*/}
+                        {/*</Fade>*/}
                 </div>
             </div>
         </div>
