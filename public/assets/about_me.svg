@@ -8,13 +8,11 @@
     <rect id="Rectangle_78" data-name="Rectangle 78" width="286.037" height="71.509" rx="35.755" transform="translate(229.334 229.338)" fill="#f60"/>
     <rect id="Rectangle_79" data-name="Rectangle 79" width="286.037" height="71.509" rx="35.755" transform="translate(14.811 229.338)" fill="#f60"/>
     <g id="Group_65" data-name="Group 65" transform="translate(12.366 12.365)">
-      <ellipse id="Ellipse_130" data-name="Ellipse 130" cx="35.755" cy="35.755" rx="35.755" ry="35.755" transform="matrix(-0.997, -0.071, 0.071, -0.997, 500.386, 76.399)" fill="#04204d"/>
       <path id="Path_308" data-name="Path 308" d="M129.245,119.159h0a35.756,35.756,0,0,1,0,71.511h0a35.756,35.756,0,1,1,0-71.511Z" transform="translate(123.485 -116.713)" fill="#04204d"/>
       <ellipse id="Ellipse_131" data-name="Ellipse 131" cx="35.755" cy="35.755" rx="35.755" ry="35.755" transform="matrix(-0.997, -0.071, 0.071, -0.997, 71.33, 76.399)" fill="#04204d"/>
       <path id="Path_309" data-name="Path 309" d="M102.637,145.759a35.755,35.755,0,0,1,35.752,35.752h0a35.752,35.752,0,1,1-71.5,0h0A35.749,35.749,0,0,1,102.637,145.759Z" transform="translate(364.619 71.213)" fill="#04204d"/>
       <path id="Path_310" data-name="Path 310" d="M129.245,145.759h0A35.755,35.755,0,0,1,165,181.511h0a35.756,35.756,0,0,1-35.752,35.76h0a35.758,35.758,0,0,1-35.76-35.76h0A35.756,35.756,0,0,1,129.245,145.759Z" transform="translate(123.485 71.213)" fill="#04204d"/>
       <path id="Path_311" data-name="Path 311" d="M155.845,145.759A35.755,35.755,0,0,1,191.6,181.511h0a35.756,35.756,0,1,1-71.511,0h0A35.756,35.756,0,0,1,155.845,145.759Z" transform="translate(-117.642 71.213)" fill="#04204d"/>
-      <path id="Path_312" data-name="Path 312" d="M102.637,172.359a35.756,35.756,0,1,1-35.752,35.76A35.756,35.756,0,0,1,102.637,172.359Z" transform="translate(364.619 259.139)" fill="#04204d"/>
       <path id="Path_313" data-name="Path 313" d="M129.245,172.359h0a35.756,35.756,0,0,1,0,71.511h0a35.756,35.756,0,1,1,0-71.511Z" transform="translate(123.485 259.139)" fill="#04204d"/>
       <path id="Path_314" data-name="Path 314" d="M155.845,172.359a35.756,35.756,0,1,1-35.76,35.76A35.756,35.756,0,0,1,155.845,172.359Z" transform="translate(-117.642 259.139)" fill="#04204d"/>
     </g>

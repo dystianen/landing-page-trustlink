@@ -26,7 +26,7 @@ const AboutMePage = () => {
                         <Image preview={false} src={"/assets/meeting_stock_image.png"} className={'h-full'} />
                     </span>
                     <div className={'absolute left-0 bottom-0 h-[50%] w-[21%] z-20'}>
-                        <Image src={"/assets/about_me_left.png"} preview={false} id={'about-me'} className={'h-full'}/>
+                        <Image src={"/assets/about_us_left.png"} preview={false} id={'about-me'} className={'h-full'}/>
                     </div>
                     <div className={"absolute left-[-21%] top-[50%] w-[42%] h-full z-0 about-img"}>
                         <Image src={"/assets/about_me.svg"} preview={false} className={'h-full'}/>
