@@ -8,23 +8,23 @@ const UseCase = () => {
 
     const dataUseCase = [
         {
-            title: i18n.language === 'en' ?  "eKYC & User Onboarding" : "eKYC & Orientasi Pengguna",
-            name: i18n.language === 'en' ? "Automated AI-Driven Identity Verification" : "Verifikasi Identitas Berbasis AI Otomatis",
+            title: t("eKYC & User Onboarding"),
+            name: t("Desc eKYC"),
             desc: t('Desc eKYC & User Onboarding'),
             src: '/assets/usecase/usecase-ekyc.png'
         },{
-            title: i18n.language === 'en' ?  "Credit and Loan Services" : "Servis Kredit dan Pinjaman",
-            name: i18n.language === 'en' ? "Make better credit decision with income verification" : "Buat keputusan kredit yang lebih baik dengan verifikasi pendapatan",
+            title: t("Credit and Loan Services"),
+            name: t("Desc Credit and Loan"),
             desc: t("Desc Credit and Loan Services"),
             src: '/assets/usecase/usecase-ekyc.png'
         },{
-            title: i18n.language === 'en' ?  "Security Surveillance Management" : "Manajemen Pengawasan Pengamanan",
-            name: i18n.language === 'en' ? "Advance solutions for convenience-of-living" : "Solusi Terdepan untuk kenyamanan-dari-hidup",
+            title: t("Security Surveillance Management"),
+            name: t("Desc Security Surveillance"),
             desc: t("Desc Security Surveillance Management"),
             src: '/assets/usecase/usecase-ekyc.png'
         },{
-            title: i18n.language === 'en' ?  "Personal Finance Management" : "Manajemen Keuangan Pribadi",
-            name: i18n.language === 'en' ? "Adding Value with Seamless Infrastructure" : "Menambahkan Nilai dengan Infrastruktur yang Mulus",
+            title: t("Personal Finance Management"),
+            name: t("Desc Personal Finance"),
             desc: t("Desc Personal Finance Management"),
             src: '/assets/usecase/usecase-ekyc.png'
         },

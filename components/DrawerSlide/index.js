@@ -6,17 +6,20 @@ import {Product} from "./product"
 import Fade from 'react-reveal/Fade';
 import { UseCases } from "./usecases";
 import { useTranslation } from "next-i18next";
+import {About} from "./about";
 
 export const DrawerSlide = observer(({menu, isOpen}) => {
     const [positionLeft, setPositionLeft] = useState(true)
     const [showProduct, setShowProduct] = useState(false)
     const [showUseCase, setShowUseCase] = useState(false);
+    const [showAbout, setShowAbout] = useState(false);
     const { t } = useTranslation();
 
     useEffect(() => {
         if(!isOpen){
             setShowProduct(false)
             setShowUseCase(false)
+            setShowAbout(false)
         }
     }, [isOpen])
     const socialMedia = [
@@ -45,12 +48,12 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
     return (
         <Drawer title={null} placement="left" onClose={() => {}} closable={false} visible={isOpen} contentWrapperStyle={{width: '100%'}} bodyStyle={{padding: 0}}>
             <div className={'w-screen h-full flex flex-col md:flex-row'}>
-                    <Fade when={(!showProduct || !showUseCase)} duration={500}>
-                        <div className={`ml-16 sm:ml-20 px-0 border-l border-gray-300 w-auto md:w-[40%] h-full flex items-center ${(showProduct || showUseCase) ? 'hidden' : null}`}>
+                    <Fade when={(!showProduct || !showUseCase|| !showAbout)} duration={500}>
+                        <div className={`ml-16 sm:ml-20 px-0 border-l border-gray-300 w-auto md:w-[40%] h-full flex items-center ${(showProduct || showUseCase || showAbout) ? 'hidden' : null}`}>
                             <div className={'flex flex-col py-11 px-2 sm:px-4 lg:px-18 lg:p-11 w-full'}>
                                      {
                                         menu.map((it, index) => (
-                                            <Button type="link" className={'flex flex-row w-full h-8 justify-between items-center mb-7'} ghost key={index} onClick={() => it.name === t('Products') ? setShowProduct(true) : it.name === t('Use Cases') ? setShowUseCase(true) : null}>
+                                            <Button type="link" className={'flex flex-row w-full h-8 justify-between items-center mb-7'} ghost key={index} onClick={() => it.name === t('Products') ? setShowProduct(true) : it.name === t('Use Cases') ? setShowUseCase(true) : it.name === t('About Us.') ? setShowAbout(true) : null}>
                                                 <h1 className={'text-xl md:text-2xl font-bold mb-0 montserrat'} style={{color: '#04204D'}}>{it.name}</h1>
                                                 <RightOutlined className={'text-lg opacity-50'} style={{color: '#04204D'}} />
                                             </Button>
@@ -67,6 +70,11 @@ export const DrawerSlide = observer(({menu, isOpen}) => {
                     <Fade right when={showUseCase} duration={500}>
                         <div className={`w-full lg:overflow-x-hidden md:w-[65%] h-auto md:h-full m-0 ${!showUseCase ? 'hidden' : null}`}>
                             <UseCases show={showUseCase} setShow={setShowUseCase} />
+                        </div>
+                    </Fade>
+                    <Fade right when={showAbout} duration={500}>
+                        <div className={`w-full lg:overflow-x-hidden md:w-[65%] h-auto md:h-full m-0 ${!showAbout ? 'hidden' : null}`}>
+                            <About show={showAbout} setShow={setShowAbout} />
                         </div>
                     </Fade>
                 <div className={`${(showProduct || showUseCase) ? 'w-auto md:w-[35%] md:fixed md:right-0 lg:py-8' : 'w-auto md:w-[60%] md:pl-14'} h-full md:py-16 pl-6 ml-16 sm:ml-20 md:ml-0`} style={{backgroundColor: '#1D365F', transition: 'width 500ms'}}>

@@ -6,6 +6,8 @@
     "For On Boarding Experience": "For Onboarding Experience",
     "And Open Finance API": "And Open Finance API",
     "Seamless Infrastructure": "Seamless Infrastructure",
+    "and Seamless Open Finance": "and Seamless Open Finance",
+    "API Infrastructure": "API Infrastructure",
     "BannerText1": "Discover your needs",
     "BannerText2": "We provide solutions to support variety issues, help prevent risk, downtime and troubleshooting for your business.",
     "Trusted By": "Trusted By",
@@ -103,5 +105,6 @@
     "Desc eKYC & User Onboarding": "With the combination of TrustScan (OCR), TrustLive (Passive Liveness), and TrustVerify, your app can have a fast and seamless onboarding journey and verified users’ identification automatically to the National ID Database (Dukcapil) No more manual data input and costly verification. With our solutions, your company will save money and time to acquire potential users in no time.",
     "Desc Credit and Loan Services": "Prevail insights and real-time financial data of your customers to provide faster and better decision making on loan approval. We can provide real-time balance, transaction history, income verification, and many more to support the approval process of the business.",
     "Desc Security Surveillance Management":  "The implementation of Biometric System for Person Identification. Addressing real-time information of Identity on livestream using IP Camera AI-Driven. This Feature will elevate the convenience-of-living in the society serve as an alert for responding to security events opted-in staff and VIPs.",
-    "Desc Personal Finance Management": "Optimize your financial product with our API Banking system. The seamless infrastructure allows third-party providers to exchange information between platforms to improve customer financial experience in retrieve Account Information, evaluate Transaction History and give information of Balance Statement."
+    "Desc Personal Finance Management": "Optimize your financial product with our API Banking system. The seamless infrastructure allows third-party providers to exchange information between platforms to improve customer financial experience in retrieve Account Information, evaluate Transaction History and give information of Balance Statement.",
+    "About" : "About Us"
 }
