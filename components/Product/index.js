@@ -48,18 +48,18 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             name: 'Live',
             icon: '/assets/images/logo-trust-live.png',
         },
-        {
-            name: 'Connect',
-            icon: '/assets/images/logo-trust-connect.png',
-        },
+        // {
+        //     name: 'Connect',
+        //     icon: '/assets/images/logo-trust-connect.png',
+        // },
         {
             name: 'Vision',
             icon: '/assets/images/logo-trust-vision.png',
         },
-        {
-            name: 'Score',
-            icon: '/assets/images/logo-trust-score.png',
-        }
+        // {
+        //     name: 'Score',
+        //     icon: '/assets/images/logo-trust-score.png',
+        // }
     ]
 
     let items = [
@@ -91,15 +91,15 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             desc: t('Desc TrustLive'),
             size: '100%'
         },
-        {
-            name: 'Trust',
-            name2: 'Connect',
-            coming_soon : '',
-            src: isSafari ? '/assets/product/bg-white/TrustConnect.webm' : '/assets/product/TrustConnect.webm',
-            subhead: t('Subhead trust connect'),
-            desc: t('Desc TrustConnect'),
-            size: '100%'
-        },
+        // {
+        //     name: 'Trust',
+        //     name2: 'Connect',
+        //     coming_soon : '',
+        //     src: isSafari ? '/assets/product/bg-white/TrustConnect.webm' : '/assets/product/TrustConnect.webm',
+        //     subhead: t('Subhead trust connect'),
+        //     desc: t('Desc TrustConnect'),
+        //     size: '100%'
+        // },
         {
             name: 'Trust',
             name2: 'Vision',
@@ -108,15 +108,15 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             desc: t('Desc TrustVision'),
             size: '90%'
         },
-        {
-            name: 'Trust',
-            name2: 'Score',
-            src: isSafari ? '/assets/product/bg-white/TrustScore.mp4' : '/assets/product/TrustScore.webm',
-            coming_soon : true,
-            subhead: t('Subhead trust score'),
-            desc: t('Desc TrustScore'),
-            size: '90%'
-        },
+        // {
+        //     name: 'Trust',
+        //     name2: 'Score',
+        //     src: isSafari ? '/assets/product/bg-white/TrustScore.mp4' : '/assets/product/TrustScore.webm',
+        //     coming_soon : true,
+        //     subhead: t('Subhead trust score'),
+        //     desc: t('Desc TrustScore'),
+        //     size: '90%'
+        // },
     ]
 
     const Item = ({item}) => {
@@ -142,14 +142,13 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base lg:text-lg montserrat text-justify mb-3"}>
                             {item.desc}
                         </p>
-                            <a
-                                type="primary"
-                                className={'rounded-lg bg-[#04204D] mt-2 flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 mr-4 md:mr-0 md:w-1/2 lg:w-3/12 montserrat'}
-                                onClick={onClickContact}
-                            >
-                                {t('Contact Us')}
-                                </a>
-
+                        <a
+                            type="primary"
+                            className={'rounded-lg bg-[#04204D] mt-2 flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 mr-4 md:mr-0 md:w-1/2 lg:w-3/12 montserrat'}
+                            onClick={onClickContact}
+                        >
+                            {t('Contact Us')}
+                        </a>
                     </div>
                 </div>
             </div>
