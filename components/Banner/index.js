@@ -7,7 +7,7 @@ const Banner = () => {
         <div className={'h-auto w-full pl-12 md:pl-20'}>
             <div className="relative text-white h-[400px] sm:h-[350px] w-full bg-white">
                 <div className="absolute left-0 top-0 w-full h-full about-img">
-                    <Image preview={false} className="relative w-full h-[105%] invert-[.1] z-0" src={"/assets/images/accent-master-logo-3-crop.png"}/>
+                    <Image preview={false} className="w-full h-full xshort:h-[105%] invert-[.1] z-0" src={"/assets/images/accent-master-logo-3-crop.png"}/>
                 </div>
                 <div className={'flex flex-col md:flex-row w-full h-full'}>
                     <div className="w-full md:w-3/5 h-full flex justify-center items-center z-10">

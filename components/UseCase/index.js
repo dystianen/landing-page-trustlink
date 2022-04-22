@@ -37,7 +37,7 @@ const UseCase = () => {
         <div className={'w-full h-full pl-12 md:pl-20'}>
             <div className={'w-full h-full'}>
                 <div className={"relative w-full h-auto max-h-[519px] usecase-img"}>
-                    <Image preview={false} className="w-full h-full brightness-50" src={'/assets/usecase-airport.png'}/>
+                    <Image preview={false} className="w-full h-64 md:h-full brightness-50" src={'/assets/usecase-airport.png'}/>
                     <div className={'absolute top-0 left-0 h-full w-full usecase-img'}>
                         <Image preview={false} className="w-full h-full brightness-50 " src={'/assets/usecase-airport.png'}/>
                     </div>
