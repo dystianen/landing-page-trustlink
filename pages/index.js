@@ -63,11 +63,11 @@ export default function Home() {
             productIndex: 0 // index carousel
         },{
             image: 'trust-live.png',
-            className: 'cursor-pointer w-20 h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 2xl:w-40 2xl:h-40 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FE7519] rounded-full p-3.5 absolute bottom-6 md:bottom-[30vh] z-10 ml-[65%] md:ml-[65%]',
+            className: 'cursor-pointer w-20 h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 2xl:w-40 2xl:h-40 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FE7519] rounded-full p-3.5 absolute bottom-10 md:bottom-[30vh] z-10 ml-[65%] md:ml-[65%]',
             productIndex: 2 // index carousel
         },{
             image: 'trust-vision.png',
-            className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FE7519] rounded-full p-5 absolute -bottom-10 md:bottom-28 2xl:bottom-36 z-10 ml-0 md:ml-[7%] lg:ml-[18%]',
+            className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FE7519] rounded-full p-5 absolute -bottom-6 md:bottom-28 2xl:bottom-36 z-10 ml-0 md:ml-[7%] lg:ml-[18%]',
             productIndex: 3 // index carousel
         },
     ]
@@ -115,7 +115,7 @@ export default function Home() {
                         {/*    <Image preview={false} src={'/assets/scroll-down.svg'} />*/}
                         {/*</div>*/}
                         {/*</div>*/}
-                        <div className={'w-max h-[50vh] md:h-full md:min-h-screen lg:pl-8 flex flex-col justify-end md:justify-center'}>
+                        <div className={'w-max h-[40vh] md:h-full md:min-h-screen lg:pl-8 flex flex-col justify-end md:justify-center'}>
                             {/*<div className={'home-next-generation text-3xl sm:text-4xl md:text-5xl lg:text-5xl'}>*/}
                             {/*    <span className={'mb-2'}><span className={''}>Trust-Centric Solution</span> For Identity Management  And Open Finance Platform</span>*/}
                             {/*</div>*/}

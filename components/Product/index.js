@@ -139,7 +139,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                     </div>
                     <p className={'w-[95%] md:w-[80%] text-xl md:text-2xl mb-0 montserrat leading-none font-bold mt-5'} style={{color: '#04204D'}}>{item.subhead}</p>
                     <div className={'mt-5 md:mt-5'}>
-                        <p style={{color: '#04204D'}} className={"w-[95%] md:w-[65%] text-base lg:text-lg montserrat text-justify mb-3"}>
+                        <p style={{color: '#04204D'}} className={"w-[95%] md:w-[80%] text-base lg:text-lg montserrat text-justify mb-3"}>
                             {item.desc}
                         </p>
                         <a

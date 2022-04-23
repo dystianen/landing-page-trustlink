@@ -46,7 +46,7 @@ const UseCase = () => {
                     </div>
                     <div className={'absolute left-[1.2rem] sm:left-[2.2rem] bottom-[1rem] sm:bottom-[2.3rem] z-20'}>
                         <b className={'text-white text-3xl sm:text-4xl md:text-6xl font-bold mb-5 montserrat'}>{t('Use Case')}</b>
-                        <p className={'text-white text-2xl sm:text-3xl md:text-lg text-justify montserrat'}>{t('Biometric Use Case 2')}</p>
+                        <p className={'text-white text-lg montserrat pr-6 lg:pr-0'}>{t('Biometric Use Case 2')}</p>
                     </div>
 
                 </div>
@@ -104,12 +104,12 @@ const UseCase = () => {
                                         <p className={'text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
                                     </div>
                                     <div className={'text-3xl lg:text-4xl text-white montserrat text-center md:text-left w-full'}>
-                                        <p className={'mb-8 leading-snug md:leading-tight xl:w-3/4'}>
+                                        <p className={'mb-8 leading-snug md:leading-tight w-auto md:w-[90%] lg:w-[83%] xl:w-3/4'}>
                                             {item.name}
                                         </p>
                                     </div>
                                     <div className={'mb-6 px-4 sm:px-12 md:px-0'}>
-                                        <p className={"text-white text-base lg:text-lg w-auto md:w-4/5 lg:w-4/5 xl:w-7/12 text-sm montserrat mb-0 text-justify"}>
+                                        <p className={"text-white text-base lg:text-lg w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
                                             {item.desc}
                                         </p>
                                     </div>
