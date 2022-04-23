@@ -63,9 +63,9 @@ export const About =  observer(({show, setShow}) => {
                                     <LeftOutlined className={'text-xl mb-1 font-bold'}/>
                                 </div>
                             </div>
-                            <p className={'inline text-3xl mb-5 pt-2 leading-none font-bold text-[#04204D]'}>{t('Products')}</p>
+                            <p className={'inline text-3xl mb-5 pt-2 leading-none font-bold text-[#04204D]'}>{t('About Us')}</p>
                             <p className={'text-sm lg:w-3/5 pt-2 pb-6 text-[#4F6382]'}>
-                                {t('Learn How To')}
+                                {t('About Us')}
                                 {/* Learn how the digitalize biometric of human <br/> unique pattern becomes the lead of security alignment. */}
                             </p>
                         </div>
