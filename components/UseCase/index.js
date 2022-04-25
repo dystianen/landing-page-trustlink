@@ -83,7 +83,8 @@ const UseCase = () => {
                             style: {
                                 backgroundColor: 'rgba(0,0,0, .1)',
                             },
-                            className: 'arrow-usecase mt-[17rem] md:mt-48 lg:mt-36'
+                            // className: 'arrow-usecase mt-[17rem] md:mt-48 lg:mt-36'
+                            className: 'arrow-usecase -mt-44 sm:mt-48 lg:mt-36'
                         }}
                         navButtonsWrapperProps={{
                             className: `mx-2 md:mx-8 ${!current ? 'arrow-prev-product' : current === (pageCarousel - 1) ? 'arrow-next-product' : null}`
