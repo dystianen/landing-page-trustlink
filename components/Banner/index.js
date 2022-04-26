@@ -13,7 +13,10 @@ const Banner = () => {
                     <div className="w-full md:w-3/5 h-full flex justify-center items-center z-10">
                         <div className={'md:w-[80%] lg:w-3/4'}>
                             <p className="montserrat text-[#161D24] text-xl sm:text-2xl lg:text-3xl xl:text-[24px] font-medium mb-0 text-center md:text-left">
-                                <span className={'xl:text-[26px] font-bold'}>{t('BannerText1')}</span><br/>{t('BannerText2')}
+                                {/*<span className={'xl:text-[26px] font-bold'}>*/}
+                                {/*    {t('BannerText1')}*/}
+                                {/*</span>*/}
+                                <br/>{t('BannerText2')}
                             </p>
                         </div>
                     </div>
