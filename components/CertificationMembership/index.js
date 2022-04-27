@@ -1,11 +1,12 @@
 import React from "react";
 import { Image } from "antd";
 import {useTranslation} from "next-i18next";
-
+import { useRouter } from 'next/router'
 export const CertificationMembership = () => {
 
     const { t } = useTranslation('common');
-
+    const router = useRouter()
+    const {color} = router.query;
     const item = [
         {
             src: '/assets/aftech-2.png',
@@ -49,7 +50,7 @@ export const CertificationMembership = () => {
                     {
                         item.map((props, index) => (
                             <div key={index} className={`w-1/2 md:w-1/3 trusted-img h-36 mb-2 ${props.class}`}>
-                                <Image preview={false} className={`${props.className} company-logo logo-image-gray`} src={props.src} />
+                                <Image preview={false} className={`${props.className} company-logo ${color === 'true' ? 'logo-image-gray' : ''}`} src={props.src} />
                             </div>
                         ))
                     }
