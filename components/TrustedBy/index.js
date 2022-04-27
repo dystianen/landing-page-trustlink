@@ -53,7 +53,7 @@ const TrustedBy = (props) => {
                         <p className={'text-sm text-[#818FA6] mb-0 ml-6 montserrat tracking-widest'}>{t('Trusted By')}</p>
                     </div>
                     <p className={'text-3xl sm:text-5xl md:text-6xl lg:text-7xl montserrat text-[#1D365F] font-bold my-2 sm:my-6'}>{t('Clients and Partners')}</p>
-                    <p className={'text-[20px] sm:text-3xl md:text-4xl lg:text-xl montserrat text-[#1D365F] font-medium mb-0'}>{t('Collaboration')}</p>
+                    <p className={'text-lg sm:text-xl montserrat text-[#1D365F] font-medium mb-0'}>{t('Collaboration')}</p>
                 </div>
                 <div className={'flex flex-row justify-end mt-6 sm:mt-10 z-10'}>
                     <div className={"bg-gray-300 w-[94%]"}>
@@ -63,7 +63,7 @@ const TrustedBy = (props) => {
                                         <div key={index} className={'flex justify-center border-r-2 items-center text-center bg-white company-logo logo-image-gray h-20 md:h-24 xl:h-30'}>
                                             <div className={'h-full about-img py-5 md:py-7 xl:py-8 px-2'}>
                                                 <Image src={props.src} className={'h-full w-auto'} preview={false}/>
-                                            </div>
+                                                </div>
                                         </div>
                                     )
                                 })}

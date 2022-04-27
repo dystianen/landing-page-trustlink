@@ -12,22 +12,25 @@ const UseCase = () => {
             name: t("Desc eKYC"),
             desc: t('Desc eKYC & User Onboarding'),
             src: '/assets/usecase/usecase-ekyc.png'
-        },{
-            title: t("Credit and Loan Services"),
-            name: t("Desc Credit and Loan"),
-            desc: t("Desc Credit and Loan Services"),
-            src: '/assets/usecase/usecase-ekyc.png'
-        },{
+        },
+        // {
+        //     title: t("Credit and Loan Services"),
+        //     name: t("Desc Credit and Loan"),
+        //     desc: t("Desc Credit and Loan Services"),
+        //     src: '/assets/usecase/usecase-ekyc.png'
+        // },
+        {
             title: t("Security Surveillance Management"),
             name: t("Desc Security Surveillance"),
             desc: t("Desc Security Surveillance Management"),
             src: '/assets/usecase/usecase-ekyc.png'
-        },{
-            title: t("Personal Finance Management"),
-            name: t("Desc Personal Finance"),
-            desc: t("Desc Personal Finance Management"),
-            src: '/assets/usecase/usecase-ekyc.png'
         },
+        // {
+        //     title: t("Personal Finance Management"),
+        //     name: t("Desc Personal Finance"),
+        //     desc: t("Desc Personal Finance Management"),
+        //     src: '/assets/usecase/usecase-ekyc.png'
+        // },
     ]
 
     const pageCarousel = dataUseCase.length

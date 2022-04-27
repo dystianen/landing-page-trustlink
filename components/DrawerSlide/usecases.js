@@ -14,13 +14,13 @@ export const UseCases = observer(({show, setShow}) => {
             left: '/assets/logo/trust/vision.png',
             right: '/assets/logo/trust/verify.png',
         },
-        {
-            key: 'bank',
-            title: t('Credit and Loan Services'),
-            description: t('Desc Credit and Loan'),
-            left: '/assets/logo/trust/connect.png',
-            right: '/assets/logo/trust/score.png',
-        },
+        // {
+        //     key: 'bank',
+        //     title: t('Credit and Loan Services'),
+        //     description: t('Desc Credit and Loan'),
+        //     left: '/assets/logo/trust/connect.png',
+        //     right: '/assets/logo/trust/score.png',
+        // },
         {
             key: 'user',
             title: t('Security Surveillance Management'),
@@ -28,13 +28,13 @@ export const UseCases = observer(({show, setShow}) => {
             left: '/assets/logo/trust/scan.png',
             right: '/assets/logo/trust/live.png',
         },
-        {
-            key: 'data',
-            title: t('Personal Finance Management'),
-            description: t('Desc Personal Finance'),
-            left: '/assets/logo/trust/verify.png',
-            right: '/assets/logo/trust/scan.png',
-        },
+        // {
+        //     key: 'data',
+        //     title: t('Personal Finance Management'),
+        //     description: t('Desc Personal Finance'),
+        //     left: '/assets/logo/trust/verify.png',
+        //     right: '/assets/logo/trust/scan.png',
+        // },
     ]
     return (
         <div className={'flex flex-row bg-white h-auto md:h-full min-h-[100vh]'}>
@@ -58,10 +58,10 @@ export const UseCases = observer(({show, setShow}) => {
                     </p>
                 </div>
             </div>
-            <div className={'grid grid-cols-1 md:grid-cols-2 gap-0 mb-12 montserrat'}>
+            <div className={'grid grid-cols-1 lg:grid-cols-2 gap-0 mb-12 montserrat'}>
                 {dataUseCases.map((data, index) => {
                     return (
-                    <div key={data.key} className={`w-full h-auto md:h-48 lg:h-52 border border-l-0 ${index >= 2 ? null : 'border-b-0'} border-gray-300`}>
+                    <div key={data.key} className={`w-full h-auto md:h-48 lg:h-52 border border-l-0 ${index >= 0 ? null : 'border-b-0'} border-gray-300`}>
                         <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-8 pt-6'}>
                             <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10'}>{data.title}</p>
                             <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>{data.description}</p>
