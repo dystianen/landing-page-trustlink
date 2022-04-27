@@ -39,6 +39,7 @@ export default function Home() {
 
     const contactUsRef = useRef(null);
     const sectionProductRef = useRef(null);
+    const topSectionRef = useRef(null);
 
     const menu = [
         {
@@ -92,7 +93,7 @@ export default function Home() {
                     <div className={`${genericHamburgerLine} self-end ${isOpen ? "w-full -rotate-45 -translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`}/>
                 </button>
             </div>
-            <div className={'relative h-full md:h-[75vh] lg:h-full min-h-screen'}>
+            <div className={'relative h-full md:h-[75vh] lg:h-full min-h-screen'} ref={topSectionRef}>
                 <div className={'absolute w-full top-0 flex flex-row'} style={{ justifyContent: 'space-between' }}>
                     <div className={'flex items-center'}>
                         <Image preview={false} className="fixed w-14 md:w-20 top-4" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }} />
@@ -169,7 +170,7 @@ export default function Home() {
             <CertificationMembership />
             <div className="h-quarter" />
             <ContactUs sectionRef={contactUsRef } />
-            <Footer />
+            <Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>
         </div>
     )
 }
