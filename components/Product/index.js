@@ -177,7 +177,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                     <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#161D24] mb-0 montserrat'}>{t('Products')}</p>
                     {/*<p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl text-center mt-2 text-[#161D24] montserrat font-medium'}>{t('End to End Services')}</p>*/}
                     <br />
-                    <div className={'text-[18px] leading-relaxed text-center text-[#4F6382] montserrat w-full flex justify-center items-center'}>
+                    <div className={'text-base lg:text-lg leading-relaxed text-center text-[#4F6382] montserrat w-full flex justify-center items-center'}>
                         <p className='z-10 sm:w-4/6 lg:w-[45%] xl:w-[35%]'>{t('We are a leading digital biometric')}</p>
                     </div>
                 </div>

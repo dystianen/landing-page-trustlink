@@ -48,12 +48,12 @@ const AboutMePage = () => {
                             </div>
                         </div>
                         <div>
-                            <Text className={'text-[#4f6382] lg:pl-32 xl:pl-48 2xl:pl-64 lg:pr-10 2xl:pr-32 sm:mt-10 xl:mt-6 text-[18px] sm:flex montserrat font-normal'}>
-                                <span className={'block w-[90%] sm:w-3/4 sm:pr-10 xl:w-3/5 text-justify'}>{t('About SubHeadline 1')}</span>
+                            <Text className={'text-[#4f6382] lg:pl-32 xl:pl-48 2xl:pl-64 sm:pr-10 2xl:pr-32 sm:mt-10 xl:mt-6 text-base lg:text-lg sm:flex montserrat font-normal'}>
+                                <span className={'block w-[95%] sm:w-3/4 sm:pr-10 xl:w-3/5 text-justify'}>{t('About SubHeadline 1')}</span>
                                 <br/>
-                                <span className={'block w-[90%] sm:w-3/4 sm:pr-10 xl:w-3/5 text-justify'}>{t('About SubHeadline 2')}</span>
+                                <span className={'block w-[95%] sm:w-3/4 sm:pr-10 xl:w-3/5 text-justify'}>{t('About SubHeadline 2')}</span>
                                 <br/>
-                                <span className={'block w-[90%] sm:w-3/4 xl:w-3/5 text-justify'}>{t('About SubHeadline 3')}</span>
+                                <span className={'block w-[95%] sm:w-3/4 xl:w-3/5 text-justify'}>{t('About SubHeadline 3')}</span>
                             </Text>
                         </div>
                         {/*</Fade>*/}
