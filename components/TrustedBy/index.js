@@ -5,12 +5,14 @@ import React from "react";
 import {useMediaQuery} from 'react-responsive'
 // import Particles from "react-tsparticles";
 import { ParticlesTrusted } from "./ParticlesTrusted";
+import { useRouter } from 'next/router'
 
 const TrustedBy = (props) => {
     const lg = useMediaQuery({query: '(min-width: 1024px)'})
     const md = useMediaQuery({query: '(min-width: 768px)'})
     const sm = useMediaQuery({query: '(min-width: 576px)'})
-    const { t } = useTranslation();
+    const { t } = useTranslation(); const router = useRouter()
+    const {color} = router.query
 
     const showSlide = lg ? 4 : md ? 3: sm ? 3 : 2
     const logos = [
@@ -61,7 +63,7 @@ const TrustedBy = (props) => {
                         <Carousel dots={false} slidesToShow={showSlide} autoplay={true} speed={1000} autoplaySpeed={1000}>
                                 {logos.map((props, index) => {
                                     return (
-                                        <div key={index} className={'flex justify-center border-r-2 items-center text-center bg-white company-logo logo-image-gray h-20 md:h-24 xl:h-30'}>
+                                        <div key={index} className={`flex justify-center border-r-2 items-center text-center bg-white company-logo ${color === 'true' ? 'logo-image-gray' : ''} h-20 md:h-24 xl:h-30`}>
                                             <div className={'h-full about-img py-5 md:py-7 xl:py-8 px-2'}>
                                                 <Image src={props.src} className={'h-full w-auto'} preview={false}/>
                                                 </div>
