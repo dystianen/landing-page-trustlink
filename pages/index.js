@@ -122,8 +122,8 @@ export default function Home() {
                             {/*</div>*/}
                             <div className={'home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem] font-medium z-10'}>
                                 <span className={'block leading-tight'}>
-                                    <span className={'font-bold block text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4'}>{t('Trust Centric Solution')}</span>
-                                    {t('For Identity Management')}
+                                    <span className={'font-bold block text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl mb-4'}>{t('Trust Centric Solution')}</span>
+                                    <span>{t('For Identity Management')}</span>
                                     {/*<br/> {t('And Open Finance Platform')}*/}
                                 </span>
                             </div>
