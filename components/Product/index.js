@@ -203,7 +203,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                                 }
                             />
                         ))}
-                        <hr className={`absolute right-0 top-[48%] ${xs ? 'w-[105%]' : 'w-full' } lg:w-[90%] h-1 bg-[#FE6601] z-0`}/>
+                        <hr className={`absolute left-0 lg:left-[10%] top-[48%] w-[78%] h-1 bg-[#FE6601] z-0`}/>
                     </Steps>
                 </div>
 
