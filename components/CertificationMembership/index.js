@@ -10,25 +10,34 @@ export const CertificationMembership = () => {
     const item = [
         {
             src: '/assets/aftech-2.png',
-            className: 'h-1/2 md:h-3/5 w-auto'
+            className: 'h-1/2 md:h-3/5 w-auto',
+            href: 'https://fintech.id/id'
         },
         {
             src: '/assets/images/ISO-27001-logo.png',
-            className: 'h-1/2 md:h-3/5 w-auto'
+            className: 'h-1/2 md:h-3/5 w-auto',
+            href: 'https://isoindonesiacenter.com/iso-27001-information-security/'
         },
         {
             src: '/assets/dukcapil.png',
-            className: 'h-3/4 md:h-full w-auto'
+            className: 'h-3/4 md:h-full w-auto',
+            href: 'https://dukcapil.kemendagri.go.id/'
         },
         {
             src: '/assets/keminfo.png',
-            className: 'h-3/5 md:h-3/4 w-auto'
+            className: 'h-3/5 md:h-3/4 w-auto',
+            href: 'https://www.kominfo.go.id/'
         },
         {
             src: '/assets/images/logo-aitb-2.png',
-            className: 'h-2/5 md:h-1/2 w-auto'
+            className: 'h-2/5 md:h-1/2 w-auto',
+            href: 'https://biometrik.org/'
         },
-    ]
+    ];
+
+    const openLink = (href, index, src) => {
+        window.open(href, "_blank");
+    }
 
     return (
         <div>
@@ -49,8 +58,8 @@ export const CertificationMembership = () => {
                 <div className={'md:w-[90%] lg:w-5/6 h-auto flex flex-wrap justify-center'}>
                     {
                         item.map((props, index) => (
-                            <div key={index} className={`w-1/2 md:w-1/3 trusted-img h-36 mb-2 ${props.class}`}>
-                                <Image preview={false} className={`${props.className} company-logo ${color === 'true' ? 'logo-image-gray' : ''}`} src={props.src} />
+                            <div key={index} onClick={()=>openLink(props.href)} className={`cursor-pointer w-1/2 md:w-1/3 trusted-img h-36 mb-2 ${props.class}`}>
+                                <Image  preview={false} className={`${props.className} company-logo ${color === 'true' ? 'logo-image-gray' : ''}`} src={props.src} />
                             </div>
                         ))
                     }
