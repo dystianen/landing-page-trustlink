@@ -591,6 +591,20 @@ svg { vertical-align: baseline; }
   }
 }
 
+@media only screen and (min-device-width: 1024px) and (max-device-height: 596px) {
+  .custom-height{
+    height: 24rem !important;
+    overflow-y: scroll !important;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) and (max-device-height: 738px) {
+  .custom-height{
+    height: 29rem !important;
+    overflow-y: scroll !important;
+  }
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 360px) {.triv-top {top: 10px !important}}
 @media only screen and (min-device-width: 361px) and (max-device-width: 419px){.triv-top {top: 20px !important}}
 @media only screen and (min-device-width: 420px) and (max-device-width: 519px){.triv-top {top: 40px !important}}

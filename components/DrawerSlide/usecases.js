@@ -61,15 +61,15 @@ export const UseCases = observer(({show, setShow}) => {
             <div className={'grid grid-cols-1 lg:grid-cols-2 gap-0 mb-12 montserrat'}>
                 {dataUseCases.map((data, index) => {
                     return (
-                    <div key={data.key} className={`w-full h-auto md:h-48 lg:h-52 border border-l-0 ${index >= 0 ? null : 'border-b-0'} border-gray-300`}>
-                        <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-8 pt-6'}>
-                            <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10'}>{data.title}</p>
-                            <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>{data.description}</p>
+                    <div key={data.key} className={`w-full h-32 md:h-48 lg:h-52 border border-l-0 ${index >= 0 ? null : 'border-b-0'} border-gray-300`}>
+                        <div className={'relative h-full flex flex-col justify-center items-start pl-14 md:pl-16 xl:pl-20 pt-6'}>
+                            <p className={'md:text-base lg:text-lg 2xl:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10'}>{data.title}</p>
+                            <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-3/5 md:w-[90%] lg:w-3/4 xl:w-1/2 2xl:w-[70%] mb-5 md:mb-0 z-10'}>{data.description}</p>
                             <div className={'absolute -bottom-2 left-0 z-0'}>
-                                <Image preview={false} className="w-[50px] opacity-70 md:w-[60px] lg:w-[80px]" src={data.left}/>
+                                <Image preview={false} className="w-[50px] md:w-[3rem] lg:w-[3.5rem] xl:w-[4.5rem]" src={data.left}/>
                             </div>
                             <div className={'absolute top-0 right-0 z-0'}>
-                                <Image preview={false} className="w-[50px] opacity-60 md:w-[60px] lg:w-[80px]" src={data.right}/>
+                                <Image preview={false} className="w-[50px] md:w-[3rem] lg:w-[3.5rem] xl:w-[4.5rem]" src={data.right}/>
                             </div>
                         </div>
                     </div>
