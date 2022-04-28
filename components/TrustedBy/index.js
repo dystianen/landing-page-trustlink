@@ -50,13 +50,13 @@ const TrustedBy = (props) => {
     ];
 
     const openLink = (href, index, src) => {
-        // let selectedIndex = index - 2;
-        // if(selectedIndex < 0){
-        //     selectedIndex = logos.length + index - 2;
-        // }
-        // const data = logos[selectedIndex];
-        // window.open(data.href, "_blank");
-        window.open(href, "_blank");
+        let selectedIndex = index + 2;
+        if(index >= logos.length - 2 ){
+            selectedIndex = (logos.length - index) % 2;
+        }
+        const data = logos[selectedIndex];
+        window.open(data.href, "_blank");
+        // window.open(href, "_blank");
     }
 
     return (
