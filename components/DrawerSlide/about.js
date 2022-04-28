@@ -74,10 +74,10 @@ export const About =  observer(({show, setShow}) => {
                             {t('Desc About Us')}
                         </p>
                         <div className={'grid grid-cols-2 lg:grid-cols-4'} style={{justifyContent: 'space-between', alignItems: 'center', marginTop: 30}}>
-                            <Image preview={false} className="w-30 xshort:w-28 company-logo logo-image-gray" src={'/assets/keminfo.png'}/>
-                            <Image preview={false} className="w-16 xshort:w-14 company-logo logo-image-gray" src={'/assets/dukcapil.svg'}/>
-                            <Image preview={false} className="w-20 xshort:w-18 company-logo logo-image-gray mt-10 sm:mt-0" src={'/assets/aftech.png'}/>
-                            <Image preview={false} className="w-16 xshort:w-14 company-logo logo-image-gray mt-10 sm:mt-0" src={'/assets/iso.png'}/>
+                            <Image preview={false} className="w-30 xshort:w-28 company-logo" src={'/assets/keminfo.png'}/>
+                            <Image preview={false} className="w-16 xshort:w-14 company-logo" src={'/assets/dukcapil.svg'}/>
+                            <Image preview={false} className="w-20 xshort:w-18 company-logo mt-10 sm:mt-0" src={'/assets/aftech.png'}/>
+                            <Image preview={false} className="w-16 xshort:w-14 company-logo mt-10 sm:mt-0" src={'/assets/iso.png'}/>
                         </div>
                     </div>
                 </div>
