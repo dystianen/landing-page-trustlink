@@ -56,7 +56,6 @@ const TrustedBy = (props) => {
         }
         const data = logos[selectedIndex];
         window.open(data.href, "_blank");
-        // window.open(href, "_blank");
     }
 
     return (
@@ -65,8 +64,8 @@ const TrustedBy = (props) => {
                 <Image preview={false} className="h-full w-auto opacity-30" src={'/assets/images/accent-master-connecting-dots-2.png'}/>
             </div>
              <div className={'relative w-full h-full'}>
-                <div className={'absolute top-14 sm:top-20 lg:top-24 right-0 h-48 sm:h-72 w-[85%] bg-[#EAEDF1]'}/>
-                <div className={'relative w-full z-10'}>
+                <div className={'absolute top-14 sm:top-20 lg:top-24 right-0 h-64 sm:h-72 w-[85%] bg-[#EAEDF1] mr-4 lg:mr-20'}/>
+                <div className={'relative w-full z-10 pr-4 lg:pr-0'}>
                     <div className={'flex flex-row items-center'}>
                         <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                         <p className={'text-sm text-[#818FA6] mb-0 ml-6 montserrat tracking-widest'}>{t('Trusted By')}</p>
@@ -75,8 +74,8 @@ const TrustedBy = (props) => {
                     <p className={'text-base sm:text-lg lg:text-xl montserrat text-[#1D365F] font-medium mb-0'}>{t('Collaboration 1')}</p>
                     <p className={'text-base sm:text-lg lg:text-xl montserrat text-[#1D365F] font-medium mb-0'}>{t('Collaboration 2')}</p>
                 </div>
-                <div className={'flex flex-row justify-end mt-6 sm:mt-10 z-10'}>
-                    <div className={"bg-gray-300 w-[94%]"}>
+                <div className={'flex flex-row justify-start mt-6 sm:mt-10 z-10 mr-4 lg:mr-20'}>
+                    <div className={"bg-gray-300 w-full"}>
                         <Carousel dots={false} slidesToShow={showSlide} autoplay={true} speed={1000} autoplaySpeed={1000}>
                                 {logos.map((props, index) => {
                                     return (

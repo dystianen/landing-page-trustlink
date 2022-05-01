@@ -34,8 +34,8 @@ const AboutMePage = () => {
                 </div>
             </div>
             <div className={'w-full mt-20 sm:mt-10 mr-10 flex justify-end'}>
-                <div className={'w-full  sm:w-[100vw]'}>
-                        <div className={'flex flex-col sm:pl-32 xl:pl-48 2xl:pl-[17rem] xl:pt-10 '}>
+                <div className={'w-full sm:w-[100vw]'}>
+                        <div className={'flex flex-col sm:pl-32 md:pl-12 lg:pl-24 xl:pl-40 2xl:pl-[15%] xl:pt-10 '}>
                             <div className={'flex flex-row items-center mb-2'}>
                                 <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
                                 <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>{t('About Us')}</p>
@@ -48,7 +48,7 @@ const AboutMePage = () => {
                             </div>
                         </div>
                         <div>
-                            <Text className={'text-[#4f6382] lg:pl-32 xl:pl-48 2xl:pl-64 sm:pr-10 2xl:pr-32 sm:mt-10 xl:mt-6 text-base lg:text-lg sm:flex montserrat font-normal'}>
+                            <Text className={'text-[#4f6382] w-full lg:w-[60rem] xl:w-[75rem] 2xl:w-[83rem] lg:pl-24 xl:pl-40 2xl:pl-[15%] md:px-4 sm:pr-10 sm:mt-10 xl:mt-6 text-base lg:text-lg sm:flex montserrat font-normal'}>
                                 <span className={'block w-[95%] sm:w-3/4 sm:pr-10 xl:w-3/5 text-justify'}>{t('About SubHeadline 1')}</span>
                                 <br/>
                                 {/*<span className={'block w-[95%] sm:w-3/4 sm:pr-10 xl:w-3/5 text-justify'}>{t('About SubHeadline 2')}</span>*/}
