@@ -17,7 +17,7 @@ const WeAimed = () => {
                     </div>
                     <div className="flex sm:justify-center lg:justify-end py-16 w-full h-full px-4 md:px-0 ">
                         <div className={'w-full sm:w-3/4 lg:w-4/6 md:pl-48 flex flex-col justify-around z-30'}>
-                            <p className="text-xl sm:text-2xl lg:text-3xl md:full lg:w-3/4 xl:w-3/5 font-bold">
+                            <p className="text-xl sm:text-2xl xl:text-3xl md:full lg:w-3/4 xl:w-3/5 font-bold">
                                 {t('We Aim To Be')}
                             </p>
                             <p className="text-xs md:text-sm 2xl:text-lg opacity-90 sm:w-4/5 md:w-[80%] lg:w-[65%] xl:w-[50%]">
