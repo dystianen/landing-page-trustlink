@@ -70,7 +70,9 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             src: isSafari ? '/assets/product/bg-white/TrustVerify.mp4' : '/assets/product/TrustVerify.webm',
             subhead: t('Subhead trust verify'),
             desc: t('Desc TrustVerification'),
-            size: '100%'
+            size: '100%',
+            width_subhead: 'lg:w-[25rem] xl:w-[38rem]',
+            width_desc: 'lg:w-[33rem] xl:w-[39rem] 2xl:w-[48rem]'
         },
         {
             name: 'Trust',
@@ -79,7 +81,9 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             src: isSafari ? '/assets/product/bg-white/TrustScan.mp4' : '/assets/product/TrustScan.webm',
             subhead: t('Subhead trust scan'),
             desc: t('Desc TrustScan'),
-            size: '100%'
+            size: '100%',
+            width_subhead: 'lg:w-[23rem] xl:w-auto',
+            width_desc: 'lg:w-[33rem] xl:w-[41rem] 2xl:w-[50rem]'
         },
 
         {
@@ -89,7 +93,9 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             src: isSafari ? '/assets/product/bg-white/TrustLive-short.mp4' : '/assets/product/TrustLive-short.webm',
             subhead: t('Subhead trust live'),
             desc: t('Desc TrustLive'),
-            size: '100%'
+            size: '100%',
+            width_subhead: 'lg:w-[33rem] xl:w-[39rem]',
+            width_desc: 'lg:w-[34rem] xl:w-[41rem] 2xl:w-[50rem]'
         },
         // {
         //     name: 'Trust',
@@ -106,7 +112,9 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             src: isSafari ? '/assets/product/bg-white/TrustVision.mp4' : '/assets/product/TrustVision.webm',
             subhead: t('Subhead trust vision'),
             desc: t('Desc TrustVision'),
-            size: '90%'
+            size: '90%',
+            width_subhead: 'lg:w-[25rem] 2xl:w-[50rem]',
+            width_desc: 'lg:w-[33rem] xl:w-[39rem] 2xl:w-[50rem]'
         },
         // {
         //     name: 'Trust',
@@ -137,8 +145,8 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                     <div>
                         <p className={'text-center md:text-left text-3xl md:text-4xl lg:text-6xl mb-0 montserrat text-gray-400 font-bold leading-none'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-orange' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-lg md:text-xl'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
                     </div>
-                    <p className={'w-[95%] md:w-[80%] text-lg md:text-xl lg:text-2xl mb-0 montserrat leading-none font-bold mt-5 text-center md:text-left'} style={{color: '#04204D'}}>{item.subhead}</p>
-                    <div className={'mt-5 md:mt-5'}>
+                    <p className={`w-[95%] md:w-[80%] ${item.width_subhead} text-lg md:text-xl lg:text-2xl mb-0 montserrat leading-none font-bold mt-5 text-center md:text-left`} style={{color: '#04204D'}}>{item.subhead}</p>
+                    <div className={'mt-5 md:mt-5 ' + item.width_desc}>
                         <p style={{color: '#04204D'}} className={"w-[95%] md:w-[80%] text-sm md:text-base lg:text-lg montserrat text-justify mb-3"}>
                             {item.desc}
                         </p>
