@@ -82,6 +82,11 @@ export default function Home() {
         setIndexProduct(num)
     }
 
+    const onClickLogo = () => {
+        setIsOpen(false)
+        topSectionRef.current.scrollIntoView({behavior: 'smooth'})
+    }
+
     return (
         <div className={'overflow-hidden'}>
             <DrawerSlide menu={menu} isOpen={isOpen} />
@@ -96,7 +101,7 @@ export default function Home() {
             <div className={'relative h-full md:h-[75vh] lg:h-full min-h-screen'} ref={topSectionRef}>
                 <div className={'absolute w-full top-0 flex flex-row'} style={{ justifyContent: 'space-between' }}>
                     <div className={'flex items-center'}>
-                        <Image preview={false} className="fixed w-14 md:w-20 top-4" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }} />
+                        <Image preview={false} className="cursor-pointer fixed w-14 md:w-20 top-4" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }} onClick={onClickLogo} />
                         <Image preview={false} className="relative h-14 md:h-20 w-auto left-12 md:left-16 top-2 md:top-4" src={'/assets/logo/text-only.png'} />
                     </div>
                     <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12 mt-8 z-30'}>
@@ -122,8 +127,8 @@ export default function Home() {
                             {/*</div>*/}
                             <div className={'home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem] font-medium z-10'}>
                                 <span className={'block leading-tight'}>
-                                    <span className={'font-bold block text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4'}>{t('Trust Centric Solution')}</span>
-                                    {t('For Identity Management')}
+                                    <span className={'font-bold block text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl mb-4'}>{t('Trust Centric Solution')}</span>
+                                    <span>{t('For Identity Management')}</span>
                                     {/*<br/> {t('And Open Finance Platform')}*/}
                                 </span>
                             </div>

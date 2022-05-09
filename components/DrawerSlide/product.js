@@ -52,38 +52,30 @@ export const Product = observer(({show, setShow}) => {
                                 </div>
                             </div>
                             <p className={'inline text-3xl mb-5 pt-2 leading-none font-bold text-[#04204D]'}>{t('Products')}</p>
-                            <p className={'text-sm lg:w-3/5 pt-2 pb-6 text-[#4F6382]'}>
+                            <p className={'text-sm lg:w-3/4 pt-2 pb-6 text-[#4F6382]'}>
                                 {t('Learn How To')}
                                 {/* Learn how the digitalize biometric of human <br/> unique pattern becomes the lead of security alignment. */}
                             </p>
                         </div>
                     </div>
-                    <div className={'grid grid-cols-1 md:grid-cols-2 gap-0 mb-12 montserrat'}>
-                        {products.map((data, index) => {
-                            return (
-                                <div key={data.key} className={`w-full h-auto md:h-48 lg:h-52 border border-l-0 ${index >= 2 ? null : 'border-b-0'} border-gray-300`}>
-                                    <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-14 pt-6'}>
-                                        <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mt-4 md:mt-0 md:mb-2 lg:mb-4 z-10'}>Trust<span className="text-orange">{data.title}</span></p>
-                                        <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>{data.description}</p>
-                                        <div className={'absolute -bottom-2 left-0 z-0'}>
-                                            <Image preview={false} className="w-[50px] opacity-70 md:w-[60px] lg:w-[80px]" src={data.image}/>
+                    <div className={'h-auto custom-height'}>
+                        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 mb-12 montserrat`}>
+                            {products.map((data, index) => {
+                                return (
+                                    <div key={data.key} className={`w-full h-32 lg:h-52 border border-l-0 ${index >= 2 ? null : 'border-b-0'} border-gray-300 flex flex-row`}>
+                                        <div className={'z-0 flex justify-end items-end'}>
+                                            <Image preview={false} className="w-[6rem] sm:w-[3rem] md:w-[5rem] lg:w-32 xl:w-20" src={data.image}/>
+                                        </div>
+                                        <div className={'relative h-full flex flex-col justify-center px-2 lg:px-2 xl:px-4'}>
+                                            <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight mt-4 md:mt-0 md:mb-2 z-10'}>Trust<span className="text-orange">{data.title}</span></p>
+                                            <p className={'montserrat md:text-xs text-[#818FA6] xl:w-60 mb-5 md:mb-0 z-10 text-justify'}>{data.description}</p>
                                         </div>
                                     </div>
-                                </div>
-
-
-                                // <div key={data.key} className={`w-full h-auto md:h-36 lg:h-52 border border-l-0 ${index <= 3 ? null : 'border-b-0'} border-gray-300`}>
-                                //     <div className={'relative h-full flex flex-col justify-center items-center pl-2 lg:pl-8'}>
-                                //         <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight w-[70%] mt-4 md:mt-0 md:mb-2 lg:mb-4 z-10'}>Trust<span className="text-orange">{data.title}</span></p>
-                                //         <p className={'md:text-[10px] lg:text-xs text-[#818FA6] w-[70%] mb-5 md:mb-0 z-10'}>{data.description}</p>
-                                //         <div className={'absolute -bottom-2 justify-start items-start w-full left-0 z-0'}>
-                                //             <Image preview={false} className="w-[40px] opacity-80 lg:w-[70px]" src={data.image}/>
-                                //         </div>
-                                //     </div>
-                                // </div>
-                            );
-                        })}
+                                )
+                            })}
+                        </div>
                     </div>
+
                 </div>
             </div>
     )

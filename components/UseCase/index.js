@@ -48,8 +48,8 @@ const UseCase = () => {
                         <Image preview={false} className="h-full w-auto" src={'/assets/images/accent-home-sectionUseCase-1.png'}/>
                     </div>
                     <div className={'absolute left-[1.2rem] sm:left-[2.2rem] bottom-[1rem] sm:bottom-[2.3rem] z-20'}>
-                        <b className={'text-white text-3xl sm:text-4xl md:text-6xl font-bold mb-5 montserrat'}>{t('Use Case')}</b>
-                        <p className={'text-white text-lg montserrat pr-6 lg:pr-0'}>{t('Biometric Use Case 2')}</p>
+                        <p className={'text-white text-3xl sm:text-4xl md:text-6xl font-bold mb-2 montserrat'}>{t('Use Case')}</p>
+                        <p className={'text-white text-base md:text-lg xl:text-xl w-[20rem] sm:w-[24rem] md:w-[28rem] xl:w-[48rem] montserrat pr-6 lg:pr-0'}>{t('Biometric Use Case 2')}</p>
                     </div>
 
                 </div>
@@ -105,20 +105,20 @@ const UseCase = () => {
                                 </div>
                                 <div className={'flex flex-col justify-center w-full md:w-1/2 h-auto md:h-full'}>
                                     <div className={"mb-7"}>
-                                        <p className={'text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
+                                        <p className={'text-sm lg:text-base xl:text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
                                     </div>
-                                    <div className={'text-3xl lg:text-4xl text-white montserrat text-center md:text-left w-full'}>
+                                    <div className={'text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white montserrat text-center md:text-left w-full '}>
                                         <p className={'mb-8 leading-snug md:leading-tight w-auto md:w-[90%] lg:w-[83%] xl:w-3/4'}>
                                             {item.name}
                                         </p>
                                     </div>
                                     <div className={'mb-6 px-4 sm:px-12 md:px-0'}>
-                                        <p className={"text-white text-base lg:text-lg w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
+                                        <p className={"text-white text-sm lg:text-base xl:text-lg w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
                                             {item.desc}
                                         </p>
                                     </div>
                                     <div className={'text-center md:text-left mb-24 md:mb-0'}>
-                                        <Button className={"text-white text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-48"}>
+                                        <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-36 md:w-48"}>
                                             {t('Request Demo')}
                                         </Button>
                                     </div>
