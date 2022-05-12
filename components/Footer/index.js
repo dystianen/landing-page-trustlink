@@ -49,6 +49,13 @@ const Footer = ({onClickTop = () => {}}) => {
                                 <p className="text-base montserrat opacity-80">{t('Mon to Fri')} (8.30 - 17.30)</p>
                             </div>
                         </div>
+                        <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start '}>
+                            <div className={'w-full md:w-9/12 lg:w-auto '}>
+                                <p className={'text-base montserrat opacity-80'}>{t('Social Media')}</p>
+                                {/*<p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-3">0628 671 8889</p>*/}
+                                {/*<p className="text-base montserrat opacity-80">{t('Mon to Fri')} (8.30 - 17.30)</p>*/}
+                            </div>
+                        </div>
                         <div className={'md:w-1/2 lg:w-0'}/>
                     </div>
                     <div className={"w-full lg:w-1/3 xl:w-1/3 mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-between"}>
