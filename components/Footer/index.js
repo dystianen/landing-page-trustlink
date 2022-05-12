@@ -78,7 +78,7 @@ const Footer = ({onClickTop = () => {}}) => {
                                 <div className="flex flex-row gap-4">
                                     {socmed.map((items) => (
                                         <a href={items.url} target="_blank">
-                                            <div className="rounded-full flex  items-center w-12 h-12 bg-white text-[bg-footer]">
+                                            <div className="rounded-full flex  items-center w-12 h-12 bg-white text-[#04204D]">
                                                     {items.icon}
                                             </div>
                                         </a>
