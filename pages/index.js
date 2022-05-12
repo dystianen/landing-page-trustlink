@@ -133,13 +133,17 @@ export default function Home() {
                                 {/*<div className={'home-next-generation text-3xl sm:text-4xl md:text-5xl lg:text-5xl'}>*/}
                                 {/*    <span className={'mb-2'}><span className={''}>Trust-Centric Solution</span> For Identity Management  And Open Finance Platform</span>*/}
                                 {/*</div>*/}
-                                <div className={'home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem] font-medium z-10'}>
+                                <div className={'mt-24 lg:mt-32 home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem] font-medium z-10'}>
                                     <span className={'block leading-tight'}>
                                         <span className={'font-bold block text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl mb-4'}>{t('Trust Centric Solution')}</span>
                                         <span>{t('For Identity Management')}</span>
                                         {/*<br/> {t('And Open Finance Platform')}*/}
                                     </span>
+                                    <div>
+                                        <p className={'mt-8 text-justify md:text-left w-[20rem] md:w-[36rem] lg:w-[42rem] text-sm md:text-xl lg:text-2xl tracking-normal font-normal'} style={{lineHeight: 1.75}}>{t('Desc Top Page')}</p>
+                                    </div>
                                 </div>
+
                             </div>
                         </section>
                         <section className={'absolute top-[100%] md:top-20 right-10 md:-right-10 lg:-right-12 xl:-right-28 w-3/5 h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
