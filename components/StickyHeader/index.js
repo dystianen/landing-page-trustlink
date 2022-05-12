@@ -4,12 +4,17 @@ import Link from 'next/link';
 import React ,{ useState, useEffect } from 'react';
 import { DrawerSlide } from '../DrawerSlide';
 
-const StickyHeader = () => {
+const StickyHeader = (props) => {
+    const {changeMenuOpen, isMenuOpen} = props;
     const { t, i18n } = useTranslation('common');
     const [header, setHeader] = useState("header");
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(isMenuOpen);
     const genericHamburgerLine = `h-1 my-1 rounded-full bg-[#FF6600] transition ease transform duration-300`;
     const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-[#FF6600] transition ease transform duration-300`;
+
+    useEffect(()=>{
+        setIsOpen(isMenuOpen)
+    }, [isMenuOpen])
 
     const listenScrollEvent = event => {
         if (window.scrollY < 73) {
@@ -43,7 +48,9 @@ const StickyHeader = () => {
                 <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12  z-30'}>
                     <DrawerSlide menu={menu} isOpen={isOpen} />
                     <div className={'w-16 sm:w-20 h-20 transparent  top-6 left-0 p-5'} style={{ zIndex: 10000 }}>
-                        <button className="flex flex-col w-full h-full justify-center group" style={{ zIndex: 10000 }} onClick={() => setIsOpen(!isOpen)}
+                        <button className="flex flex-col w-full h-full justify-center group" style={{ zIndex: 10000 }} onClick={() =>{
+                            changeMenuOpen(!isOpen)
+                        }}
                         >
                             <div className={`${genericHamburgerLine} self-start ${isOpen ? "w-full rotate-45 translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100 z[60]"}`}/>
                             <div className={`${genericHamburgerLine2} ${isOpen ? "opacity-0" : "opacity-100 z[60]"}`}/>

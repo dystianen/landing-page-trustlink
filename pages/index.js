@@ -94,17 +94,17 @@ export default function Home() {
 
     return (
         <div>
-            <StickyHeader/>
+            <StickyHeader changeMenuOpen={setIsOpen} isMenuOpen={isOpen}/>
             <div className="overflow-hidden">
-                {/* <DrawerSlide menu={menu} isOpen={isOpen} />
+                {/*<DrawerSlide menu={menu} isOpen={isOpen} />*/}
                 <div className={'fixed w-16 sm:w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 999999 }}>
-                    <button className="flex flex-col w-full h-full justify-center group" onClick={() => setIsOpen(!isOpen)}
+                    <button className="flex flex-col w-full h-full justify-center group" style={{visibility: isOpen ? 'visible': 'hidden'}} onClick={() => setIsOpen(!isOpen)}
                     >
                         <div className={`${genericHamburgerLine} self-start ${isOpen ? "w-full rotate-45 translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`}/>
                         <div className={`${genericHamburgerLine2} ${isOpen ? "opacity-0" : "opacity-100"}`}/>
                         <div className={`${genericHamburgerLine} self-end ${isOpen ? "w-full -rotate-45 -translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`}/>
                     </button>
-                </div> */}
+                </div>
                 <div className={'relative h-full md:h-[75vh] lg:h-full min-h-screen'} ref={topSectionRef}>
                     {/* <div className={'absolute w-full top-0 flex flex-row'} style={{ justifyContent: 'space-between' }}>
                         <div className={'flex items-center'}>
