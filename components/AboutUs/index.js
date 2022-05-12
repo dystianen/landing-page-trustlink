@@ -8,7 +8,7 @@ import { useTranslation } from 'next-i18next';
 
 const { Title, Text } = Typography;
 
-const AboutMePage = () => {
+const AboutMePage = ({sectionRef}) => {
     const router = useRouter();
     const { t } = useTranslation('common');
     console.log(t, 'isi')
@@ -33,7 +33,7 @@ const AboutMePage = () => {
                     </div>
                 </div>
             </div>
-            <div className={'w-full mt-20 sm:mt-10 mr-10 flex justify-end'}>
+            <div className={'w-full mt-20 sm:mt-10 mr-10 flex justify-end'} ref={sectionRef}>
                 <div className={'w-full sm:w-[100vw]'}>
                         <div className={'flex flex-col sm:pl-32 md:pl-12 lg:pl-24 xl:pl-40 2xl:pl-[15%] xl:pt-10 '}>
                             <div className={'flex flex-row items-center mb-2'}>
