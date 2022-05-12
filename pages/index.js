@@ -78,7 +78,7 @@ export default function Home() {
         },
     ]
 
-    
+
     const handleClickProduct = (index) => {
         setIndexProduct(index)
         sectionProductRef.current.scrollIntoView({behavior: 'smooth'})
@@ -185,40 +185,40 @@ export default function Home() {
                 <ContactUs sectionRef={contactUsRef } />
                 <Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>
             </div>
-            <div>
-                <ParticlePage
-                    dimention={{
-                        width: mobile ? '100%' : '50%',
-                        height: '100vh'
-                    }}
-                    numberValue={120}
-                    opacity={0.8}
-                    className={'home-plexus'}
-                />
-            </div>
-            <section>
-                <AboutMePage />
-            </section>
-            <section className={'pl-12 md:pl-20 mt-52'}>
-                <Product
-                    onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
-                    productRef={sectionProductRef}
-                    indexProduct={indexProduct}
-                    setIndexProduct={setIndex}
-                />
-            </section>
-            <UseCase
-                onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
-            />
-            <Banner />
-            <TrustedBy />
-            <WeAimed />
-            <div className="h-[5vh] md:h-[20vh]" />
-            <CertificationMembership />
-            <div className="h-quarter" />
-            <ContactUs sectionRef={contactUsRef } />
-            <MapAddress />
-            <Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>
+            {/*<div>*/}
+            {/*    <ParticlePage*/}
+            {/*        dimention={{*/}
+            {/*            width: mobile ? '100%' : '50%',*/}
+            {/*            height: '100vh'*/}
+            {/*        }}*/}
+            {/*        numberValue={240}*/}
+            {/*        opacity={0.8}*/}
+            {/*        className={'home-plexus'}*/}
+            {/*    />*/}
+            {/*</div>*/}
+            {/*<section>*/}
+            {/*    <AboutMePage />*/}
+            {/*</section>*/}
+            {/*<section className={'pl-12 md:pl-20 mt-52'}>*/}
+            {/*    <Product*/}
+            {/*        onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }*/}
+            {/*        productRef={sectionProductRef}*/}
+            {/*        indexProduct={indexProduct}*/}
+            {/*        setIndexProduct={setIndex}*/}
+            {/*    />*/}
+            {/*</section>*/}
+            {/*<UseCase*/}
+            {/*    onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }*/}
+            {/*/>*/}
+            {/*<Banner />*/}
+            {/*<TrustedBy />*/}
+            {/*<WeAimed />*/}
+            {/*<div className="h-[5vh] md:h-[20vh]" />*/}
+            {/*<CertificationMembership />*/}
+            {/*<div className="h-quarter" />*/}
+            {/*<ContactUs sectionRef={contactUsRef } />*/}
+            {/*<MapAddress />*/}
+            {/*<Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>*/}
         </div>
     )
 }
