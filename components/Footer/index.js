@@ -26,25 +26,25 @@ const Footer = ({onClickTop = () => {}}) => {
                     {/*    </p>*/}
                     {/*</div>*/}
                 </div>
-                <div className={"w-full mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-around"}>
-                    <div className={'w-full md:w-1/2 lg:w-auto flex md:justify-center lg:justify-end md:mt-8 lg:mt-0'}>
-                        <div className={'w-full md:w-9/12 lg:w-auto'}>
+                <div className={"w-full lg:w-2/3 xl:w-2/3  mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-between"}>
+                    <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-center lg:justify-center md:mt-8 lg:mt-0 bg-orange'}>
+                        <div className={'w-full md:w-9/12 lg:w-auto bg-yellow-900'}>
                             <p className={'text-base montserrat opacity-80'}>{t('Address')}</p>
                             <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-2">{t('Kota Kasablanca Office 88')}</p>
                             <p className="text-base montserrat opacity-80">{t('Jl. Raya Casablanca No.16, RW.5,')}<br/>{t(' Menteng Dalam, Kec. Tebet, DKI Jakarta 12870')}</p>
                         </div>
                     </div>
-                    <div className={'w-full md:w-1/2 lg:w-auto flex md:justify-center'}>
+                    <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-center my-6 md:my-0 bg-green-500'}>
                         <div className={'w-full md:w-9/12 lg:w-auto'}>
+                            <p className={'text-base montserrat opacity-80'}>EMAIL</p>
+                            <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-9">info@withtrustlink.com</p>
+                        </div>
+                    </div>
+                    <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-center bg-red-500'}>
+                        <div className={'w-full md:w-9/12 lg:w-auto bg-red-900'}>
                             <p className={'text-base montserrat opacity-80'}>{t('Call Us')}</p>
                             <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-3">0628 671 8889</p>
                             <p className="text-base montserrat opacity-80">{t('Mon to Fri')} (8.30 - 17.30)</p>
-                        </div>
-                    </div>
-                    <div className={'w-full md:w-1/2 lg:w-2/5 flex md:justify-center my-6 md:my-0'}>
-                        <div className={'w-auto'}>
-                            <p className={'text-base montserrat opacity-80'}>EMAIL</p>
-                            <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-9">info@withtrustlink.com</p>
                         </div>
                     </div>
                     <div className={'md:w-1/2 lg:w-0'}/>

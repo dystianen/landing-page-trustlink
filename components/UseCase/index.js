@@ -11,7 +11,13 @@ const UseCase = ({sectionRef}) => {
             title: t("eKYC & User Onboarding"),
             name: t("Desc eKYC"),
             desc: t('Desc eKYC & User Onboarding'),
-            src: '/assets/usecase/usecase-ekyc.png'
+            src: '/assets/usecase/usecase-ekyc.png',
+            applications: [
+                t('use_case_1_app1'),
+                t('use_case_1_app2'),
+                t('use_case_1_app3'),
+                t('use_case_1_app4'),
+            ]
         },
         // {
         //     title: t("Credit and Loan Services"),
@@ -20,11 +26,35 @@ const UseCase = ({sectionRef}) => {
         //     src: '/assets/usecase/usecase-ekyc.png'
         // },
         {
-            title: t("Security Surveillance Management"),
-            name: t("Desc Security Surveillance"),
-            desc: t("Desc Security Surveillance Management"),
-            src: '/assets/usecase/usecase-ekyc.png'
+            title: t("use_case_2_mini_text"),
+            name: t("use_case_2_title"),
+            desc: t("use_case_2_description"),
+            src: '/assets/usecase/usecase-ekyc.png',
+            applications: [
+                t("use_case_2_app1"),
+                t("use_case_2_app2"),
+                t("use_case_2_app3"),
+                t("use_case_2_app4"),
+            ]
         },
+        {
+            title: t("use_case_3_mini_text"),
+            name: t("use_case_3_title"),
+            desc: t("use_case_3_description"),
+            src: '/assets/usecase/usecase-ekyc.png',
+            applications: [
+                t("use_case_3_app1"),
+                t("use_case_3_app2"),
+                t("use_case_3_app3"),
+                t("use_case_3_app4"),
+            ]
+        },
+        // {
+        //     title: t("Security Surveillance Management"),
+        //     name: t("Desc Security Surveillance"),
+        //     desc: t("Desc Security Surveillance Management"),
+        //     src: '/assets/usecase/usecase-ekyc.png'
+        // },
         // {
         //     title: t("Personal Finance Management"),
         //     name: t("Desc Personal Finance"),
@@ -117,6 +147,20 @@ const UseCase = ({sectionRef}) => {
                                         <p className={"text-white text-sm lg:text-base xl:text-lg w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
                                             {item.desc}
                                         </p>
+                                    </div>
+                                    <div className={'mb-6 px-4 sm:px-12 md:px-0'}>
+                                        <p className={"mb-3 text-white text-base lg:text-lg xl:text-xl w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
+                                            {t('use_case_application')}
+                                        </p>
+                                        <ul className={'use-case-applications'}>
+                                            {
+                                                item.applications.map(prop => (
+                                                    <li key={prop} className={"text-white text-xs lg:text-sm xl:text-base w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
+                                                        {prop}
+                                                    </li>
+                                                ))
+                                            }
+                                        </ul>
                                     </div>
                                     <div className={'text-center md:text-left mb-24 md:mb-0'}>
                                         <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-36 md:w-48"} onClick={()=>props.onClickContact()}>
