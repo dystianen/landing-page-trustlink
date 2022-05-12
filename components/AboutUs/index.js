@@ -22,8 +22,8 @@ const AboutMePage = () => {
         <div className='pl-12 md:pl-20 mt-[10vw] h-auto flex flex-col'>
             <div className={'relative w-full h-auto items-start flex justify-center'}>
                 <div className={'flex relative w-full lg:w-[95%] xl:w-[90%]'}>
-                    <span className={'z-10 about-img'}>
-                        <Image preview={false} src={"/assets/meeting_stock_image.png"} className={'h-full'} />
+                    <span className={'z-10 about-img w-full'}>
+                        <Image preview={false} src={"/assets/about_me3.jpg"} className={'h-full w-full'} />
                     </span>
                     <div className={'absolute left-0 bottom-0 h-[50%] w-[21%] z-20'}>
                         <Image src={"/assets/about_us_left.png"} preview={false} id={'about-me'} className={'h-full'}/>
@@ -43,17 +43,17 @@ const AboutMePage = () => {
                             {/*<Fade when={transition} duration={1600}>*/}
                             <div>
                                 <Title className={"font-bold text-xl md:text-2xl lg:text-3xl montserrat"}>
-                                        <span className={'block leading-snug w-full'}>{t('About Headline')}</span>
+                                        <span className={'block leading-snug w-full'}>{t('about_us_main_text')}</span>
                                     </Title>
                             </div>
                         </div>
-                        <div>
+                        <div style={{whiteSpace: 'pre-line'}}>
                             <Text className={'text-[#4f6382] w-full lg:w-[60rem] xl:w-[75rem] 2xl:w-[83rem] lg:pl-24 xl:pl-40 2xl:pl-[15%] md:px-4 sm:pr-10 sm:mt-10 xl:mt-6 text-base lg:text-lg sm:flex montserrat font-normal'}>
-                                <span className={'block w-[95%] sm:w-3/4 sm:pr-10 xl:w-3/5 text-justify'}>{t('About SubHeadline 1')}</span>
+                                <span className={'block w-[95%] sm:w-3/4 sm:pr-10 xl:w-3/5 text-justify'}>{t('about_us_column1')}</span>
                                 <br/>
                                 {/*<span className={'block w-[95%] sm:w-3/4 sm:pr-10 xl:w-3/5 text-justify'}>{t('About SubHeadline 2')}</span>*/}
                                 {/*<br/>*/}
-                                <span className={'block w-[95%] sm:w-3/4 xl:w-3/5 text-justify'}>{t('About SubHeadline 2')}</span>
+                                <span className={'block w-[95%] sm:w-3/4 xl:w-3/5 text-justify'}>{t('about_us_column2')}</span>
                             </Text>
                         </div>
                         {/*</Fade>*/}
