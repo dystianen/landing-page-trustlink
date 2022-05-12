@@ -21,7 +21,7 @@ const Banner = () => {
                         </div>
                     </div>
                     <div className="w-full md:w-2/5 h-full flex justify-center items-center z-10">
-                        <Image preview={false} className={'h-[130px] w-auto'} src={"/assets/logo/logo-for-light-background.png"}/>
+                        <Image preview={false} className={'h-auto w-auto'} src={"/assets/logo/logo-for-light-background.png"}/>
                     </div>
                 </div>
             </div>
