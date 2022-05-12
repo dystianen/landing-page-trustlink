@@ -111,5 +111,16 @@
     "Desc Security Surveillance Management": "Penerapan Sistem Biometrik untuk Identifikasi Orang. Mengatasi informasi Identitas real-time pada streaming langsung menggunakan IP Camera AI-Driven. Fitur ini akan meningkatkan kenyamanan hidup di masyarakat yang berfungsi sebagai peringatan untuk menanggapi peristiwa keamanan yang diikuti oleh staf dan VIP. Minta Demo",
     "Desc Personal Finance Management": "Optimalkan produk keuangan Anda dengan sistem API Banking kami. Infrastruktur mulus memungkinkan penyedia pihak ketiga untuk bertukar informasi antar platform untuk meningkatkan pengalaman keuangan pelanggan dalam mengambil Informasi Akun, mengevaluasi Riwayat Transaksi dan memberikan informasi Laporan Saldo. Minta Demo",
     "About" : "Tentang Kami",
-    "Address": "Alamat"
+    "Address": "ADDRESS",
+    "about_us_main_text": "THE MOST COMPREHENSIVE API-BASED IDENTITY MANAGEMENT PLATFORM TO ACCELERATE DIGITAL TRANSFORMATION FOR ALL",
+    "about_us_column1": "Trustlink provides an affordable and secure solution that helps identity owners and service providers to establish the credibility and authenticity of users' identities and preventing identity fraud.\n\nWe strive to empower organizations by delivering the most secure, simple, and scalable solution to accelerate your business growth. We have created a suite of user-experience-driven tools to help you achieve both compliance and user acquisition goals—without compromising either.",
+    "about_us_column2": "Experience our services for onboarding your new user with an advanced eKYC platform that is integrated into more than 200 million national records from Dukcapil (Ministry of Home Affairs) as the official license holder of the “Platform Bersama”. Connect to  your new customer anywhere, everywhere securely.",
+    "trust_verify_title": "ADVANCED BIOMETRICS IDENTITY VERIFICATION WITH THE HIGHEST COMPLIANCE",
+    "trust_verify_subtitle": "An advanced biometrics recognition platform. This solution enables to digitally verify identity through both biometrics and demographics with high accuracy to KTP-el Dukcapil database validation, providing the most advanced, secure and highest compliance in identity verification.",
+    "trust_scan_title": "ULTRA FAST, ACCURATE, AND PRACTICAL",
+    "trust_scan_subtitle": "Built to Identify the user data from ID’s in seconds, our OCR will recognize, extract, and auto-fill your customer data - ready to process without incommoding your customers",
+    "trust_live_title": "SEAMLESS , NON-INVASIVE PASSIVE LIVENESS  DETECTION",
+    "trust_live_subtitle": "Our Passive Liveness Detection System increase the assurance levels for verification to proof the face is a real person and not a spoof, preventing fraud on your onboarding process and within your product in just a single selfie.",
+    "trust_vision_title": "An FR BASED VIDEO SURVEILLANCE TECHNOLOGY",
+    "trust_vision_subtitle": "Our Passive Liveness Detection System increase the assurance levels for verification to proof the face is a real person and not a spoof, preventing fraud on your onboarding process and within your product."
 }

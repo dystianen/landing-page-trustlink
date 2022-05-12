@@ -42,9 +42,7 @@ export default function Home() {
     const contactUsRef = useRef(null);
     const sectionProductRef = useRef(null);
     const topSectionRef = useRef(null);
-    const membershipRef = useRef(null);
-    const clientsRef = useRef(null);
-    const useCasesRef = useRef(null)
+    const sectionRef = useRef(null);
     const menu = [
         {
             name: t('About Us.'),
@@ -80,7 +78,7 @@ export default function Home() {
         },
     ]
 
-    
+
     const handleClickProduct = (index) => {
         setIndexProduct(index)
         sectionProductRef.current.scrollIntoView({behavior: 'smooth'})
@@ -97,7 +95,7 @@ export default function Home() {
 
     return (
         <div>
-            <StickyHeader changeMenuOpen={setIsOpen} isMenuOpen={isOpen} onClickProduct={() => sectionProductRef.current.scrollIntoView({ behavior: 'smooth' })} onClickMembership={() => membershipRef.current.scrollIntoView({ behavior: 'smooth' }) } onClickClients={() => clientsRef.current.scrollIntoView({ behavior: 'smooth' }) } onClickUseCases={() => useCasesRef.current.scrollIntoView({ behavior: 'smooth' }) } />
+            <StickyHeader changeMenuOpen={setIsOpen} isMenuOpen={isOpen}/>
             <div className="overflow-hidden">
                 {/*<DrawerSlide menu={menu} isOpen={isOpen} />*/}
                 <div className={'fixed w-16 sm:w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 999999 }}>
@@ -177,50 +175,50 @@ export default function Home() {
                         setIndexProduct={setIndex}
                     />
                 </section>
-                <UseCase sectionRef={useCasesRef} />
+                <UseCase />
                 <Banner />
-                <TrustedBy sectionRef={clientsRef}/>
+                <TrustedBy />
                 <WeAimed />
                 <div className="h-[20vh]" />
-                <CertificationMembership sectionRef={membershipRef}/>
+                <CertificationMembership />
                 <div className="h-quarter" />
                 <ContactUs sectionRef={contactUsRef } />
                 <Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>
             </div>
-            <div>
-                <ParticlePage
-                    dimention={{
-                        width: mobile ? '100%' : '50%',
-                        height: '100vh'
-                    }}
-                    numberValue={120}
-                    opacity={0.8}
-                    className={'home-plexus'}
-                />
-            </div>
-            <section>
-                <AboutMePage />
-            </section>
-            <section className={'pl-12 md:pl-20 mt-52'}>
-                <Product
-                    onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
-                    productRef={sectionProductRef}
-                    indexProduct={indexProduct}
-                    setIndexProduct={setIndex}
-                />
-            </section>
-            <UseCase
-                onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
-            />
-            <Banner />
-            <TrustedBy sectionRef={clientsRef}/>
-            <WeAimed />
-            <div className="h-[5vh] md:h-[20vh]" />
-            <CertificationMembership sectionRef={membershipRef}/>
-            <div className="h-quarter" />
-            <ContactUs sectionRef={contactUsRef } />
-            <MapAddress />
-            <Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>
+            {/*<div>*/}
+            {/*    <ParticlePage*/}
+            {/*        dimention={{*/}
+            {/*            width: mobile ? '100%' : '50%',*/}
+            {/*            height: '100vh'*/}
+            {/*        }}*/}
+            {/*        numberValue={240}*/}
+            {/*        opacity={0.8}*/}
+            {/*        className={'home-plexus'}*/}
+            {/*    />*/}
+            {/*</div>*/}
+            {/*<section>*/}
+            {/*    <AboutMePage />*/}
+            {/*</section>*/}
+            {/*<section className={'pl-12 md:pl-20 mt-52'}>*/}
+            {/*    <Product*/}
+            {/*        onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }*/}
+            {/*        productRef={sectionProductRef}*/}
+            {/*        indexProduct={indexProduct}*/}
+            {/*        setIndexProduct={setIndex}*/}
+            {/*    />*/}
+            {/*</section>*/}
+            {/*<UseCase*/}
+            {/*    onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }*/}
+            {/*/>*/}
+            {/*<Banner />*/}
+            {/*<TrustedBy />*/}
+            {/*<WeAimed />*/}
+            {/*<div className="h-[5vh] md:h-[20vh]" />*/}
+            {/*<CertificationMembership />*/}
+            {/*<div className="h-quarter" />*/}
+            {/*<ContactUs sectionRef={contactUsRef } />*/}
+            {/*<MapAddress />*/}
+            {/*<Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>*/}
         </div>
     )
 }
