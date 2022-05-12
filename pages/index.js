@@ -56,19 +56,19 @@ export default function Home() {
     const product = [
         {
             image: 'trust-scan.png',
-            className: 'cursor-pointer w-20 h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 2xl:w-40 2xl:h-40 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FE7519] rounded-full p-3.5 relative -ml-4 md:ml-0 lg:ml-16 xl:ml-24 z-10',
+            className: 'cursor-pointer w-20 h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 2xl:w-40 2xl:h-40 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6600] rounded-full p-3.5 relative -ml-4 md:ml-0 lg:ml-16 xl:ml-24 z-10',
             productIndex: 1 // index carousel
         },{
             image: 'trust-verify.png',
-            className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FE7519] rounded-full p-5 relative z-10 -mt-12 lg:-mt-24 ml-[30%] md:ml-[40%]',
+            className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6600] rounded-full p-5 relative z-10 -mt-12 lg:-mt-24 ml-[30%] md:ml-[40%]',
             productIndex: 0 // index carousel
         },{
             image: 'trust-live.png',
-            className: 'cursor-pointer w-20 h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 2xl:w-40 2xl:h-40 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FE7519] rounded-full p-3.5 absolute bottom-10 md:bottom-[30vh] z-10 ml-[65%] md:ml-[65%]',
+            className: 'cursor-pointer w-20 h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 2xl:w-40 2xl:h-40 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6600] rounded-full p-3.5 absolute bottom-10 md:bottom-[30vh] z-10 ml-[65%] md:ml-[65%]',
             productIndex: 2 // index carousel
         },{
             image: 'trust-vision.png',
-            className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FE7519] rounded-full p-5 absolute -bottom-6 md:bottom-28 2xl:bottom-36 z-10 ml-0 md:ml-[7%] lg:ml-[18%]',
+            className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6600] rounded-full p-5 absolute -bottom-6 md:bottom-28 2xl:bottom-36 z-10 ml-0 md:ml-[7%] lg:ml-[18%]',
             productIndex: 3 // index carousel
         },
     ]
