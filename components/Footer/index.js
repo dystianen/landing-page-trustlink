@@ -27,6 +27,13 @@ const Footer = ({onClickTop = () => {}}) => {
                     </div>
                 </div>
                 <div className={"w-full mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-around xl:pl-24"}>
+                    <div className={'w-full md:w-1/2 lg:w-auto flex md:justify-center lg:justify-end md:mt-8 lg:mt-0'}>
+                        <div className={'w-full md:w-9/12 lg:w-auto'}>
+                            <p className={'text-base montserrat opacity-80'}>{t('Address')}</p>
+                            <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-2">{t('Kota Kasablanca Office 88')}</p>
+                            <p className="text-base montserrat opacity-80">{t('Jl. Raya Casablanca No.16, RW.5,')}<br/>{t(' Menteng Dalam, Kec. Tebet, DKI Jakarta 12870')}</p>
+                        </div>
+                    </div>
                     <div className={'w-full md:w-1/2 lg:w-auto flex md:justify-center'}>
                         <div className={'w-full md:w-9/12 lg:w-auto'}>
                             <p className={'text-base montserrat opacity-80'}>{t('Call Us')}</p>
@@ -38,13 +45,6 @@ const Footer = ({onClickTop = () => {}}) => {
                         <div className={'w-auto'}>
                             <p className={'text-base montserrat opacity-80'}>EMAIL</p>
                             <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-9">info@withtrustlink.com</p>
-                        </div>
-                    </div>
-                    <div className={'w-full md:w-1/2 lg:w-auto flex md:justify-center lg:justify-end md:mt-8 lg:mt-0'}>
-                        <div className={'w-full md:w-9/12 lg:w-auto'}>
-                            <p className={'text-base montserrat opacity-80'}>{t('Company')}</p>
-                            <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-2">{t('Partners')}</p>
-                            <p className="montserrat text-lg md:text-2xl tracking-normal">{t('Career')}</p>
                         </div>
                     </div>
                     <div className={'md:w-1/2 lg:w-0'}/>

@@ -143,7 +143,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                 </div>
                 <div className={'flex flex-col justify-center mt-4 w-full md:w-3/6 lg:w-2/4 pl-12 md:pl-0 z-40'}>
                     <div>
-                        <p className={'text-center md:text-left text-3xl md:text-4xl lg:text-6xl mb-0 montserrat text-gray-400 font-bold leading-none'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-orange' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-lg md:text-xl'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
+                        <p className={'text-center md:text-left text-3xl md:text-4xl lg:text-6xl mb-0 montserrat text-gray-400 font-bold leading-none'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-[#FF6600]' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-lg md:text-xl'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
                     </div>
                     <p className={`w-[95%] md:w-[80%] ${item.width_subhead} text-lg md:text-xl lg:text-2xl mb-0 montserrat leading-none font-bold mt-5 text-center md:text-left`} style={{color: '#04204D'}}>{item.subhead}</p>
                     <div className={'mt-5 md:mt-5 ' + item.width_desc}>
@@ -170,7 +170,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
 
     return (
         <div className={'relative h-auto w-full'}>
-            <div className={'h-1/2 lg:h-auto absolute top-24 -left-60 about-img'}>
+            <div className={'h-[35%] lg:h-auto absolute top-24 -left-60 about-img'}>
                 <Image preview={false} className="h-full w-auto " src={'/assets/images/accent-master-connecting-dots-1.png'}/>
             </div>
             <div className={'flex w-full justify-center'}>
@@ -199,7 +199,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                                 key={index}
                                 icon={
                                     <div className={`flex flex-col justify-content items-center ${current === index ? 'mt-2 lg:mt-0' : 'mt-12 sm:mt-10 lg:mt-12'}`}>
-                                        <div className={`rounded-full border-4 ${current === index ? `w-[55px] h-[55px] sm:w-[78px] md:w-[95px] lg:w-32 sm:h-[78px] md:h-[95px] lg:h-32 border-[#FE6601]` : `w-12 h-12 sm:w-16 md:w-20 lg:w-24 sm:h-16 md:h-20 lg:h-24 border-[#FE944D]`} mb-2 bg-white z-10 flex justify-center items-center`}
+                                        <div className={`rounded-full border-4 ${current === index ? `w-[55px] h-[55px] sm:w-[78px] md:w-[95px] lg:w-32 sm:h-[78px] md:h-[95px] lg:h-32 border-[#FF6600]` : `w-12 h-12 sm:w-16 md:w-20 lg:w-24 sm:h-16 md:h-20 lg:h-24 border-[#FF6600]`} mb-2 bg-white z-10 flex justify-center items-center`}
                                              style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? `0 0 ${shadow}px 1px #FE6601` : null}}
                                         >
                                             <Tooltip title={'Trust' +it.name}>

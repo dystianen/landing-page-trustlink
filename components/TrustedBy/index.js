@@ -61,10 +61,10 @@ const TrustedBy = (props) => {
     return (
         <div className={'relative flex items-center w-full h-auto py-28 sm:py-40 lg:py-52 pl-12 md:pl-20 z-50 bg-[#F1F1F1] my-10 sm:my-0 sm:mb-20'}>
             <div className={'h-full sm:h-auto absolute bottom-0 right-0 about-img'}>
-                <Image preview={false} className="h-full w-auto opacity-30" src={'/assets/images/accent-master-connecting-dots-2.png'}/>
+                <Image preview={false} className="w-auto opacity-30" src={'/assets/images/accent-master-connecting-dots-2.png'}/>
             </div>
              <div className={'relative w-full h-full'}>
-                <div className={'absolute top-14 sm:top-20 lg:top-24 right-0 h-64 sm:h-72 w-[85%] bg-[#EAEDF1] mr-4 lg:mr-20'}/>
+                {/* <div className={'absolute top-14 sm:top-20 lg:top-24 right-0 h-64 sm:h-72 w-[85%] bg-[#EAEDF1] mr-4 lg:mr-20'}/> */}
                 <div className={'relative w-full z-10 pr-4 lg:pr-0'}>
                     <div className={'flex flex-row items-center'}>
                         <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
@@ -79,9 +79,10 @@ const TrustedBy = (props) => {
                         <Carousel dots={false} slidesToShow={showSlide} autoplay={true} speed={1000} autoplaySpeed={1000}>
                                 {logos.map((props, index) => {
                                     return (
-                                        <div key={index} onClick={()=>openLink(props.href, index, props.src)} className={`flex justify-center cursor-pointer border-r-2 items-center text-center bg-white company-logo ${color === 'true' ? 'logo-image-gray' : ''} h-20 md:h-24 xl:h-30`}>
+                                        <div key={index}  className={`flex justify-center cursor-pointer border-r-2 items-center text-center bg-white company-logo ${color === 'true' ? 'logo-image-gray' : ''} h-20 md:h-24 xl:h-30`}>
                                             <div className={'h-full about-img py-5 md:py-7 xl:py-8 px-2'}>
-                                                <Image onClick={()=>openLink(props.href, index, props.src)} src={props.src} className={'cursor-pointer h-full w-auto'} preview={false}/>
+                                                {/* <Image onClick={()=>openLink(props.href, index, props.src)} src={props.src} className={'cursor-pointer h-full w-auto'} preview={false}/> */}
+                                                <Image src={props.src} className={'cursor-pointer h-full w-auto'} preview={false}/>
                                                 </div>
                                         </div>
                                     )

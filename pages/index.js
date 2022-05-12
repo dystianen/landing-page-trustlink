@@ -19,6 +19,7 @@ import {useMediaQuery} from "react-responsive";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import Link from "next/link";
+import {MapAddress} from "../components/MapAddress";
 
 export const checkRerouteLoggedUser = (store, router) => {
     if (typeof window !== 'undefined') {
@@ -31,8 +32,8 @@ export default function Home() {
     const store = useStore();
     const { t, i18n } = useTranslation('common');
     const [isOpen, setIsOpen] = useState(false);
-    const genericHamburgerLine = `h-1 my-1 rounded-full bg-orange transition ease transform duration-300`;
-    const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-orange transition ease transform duration-300`;
+    const genericHamburgerLine = `h-1 my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
+    const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
     const mobile = useMediaQuery({ query: '(max-width: 576px)' });
 
     const [indexProduct, setIndexProduct] = useState(0);
@@ -49,6 +50,9 @@ export default function Home() {
         }, {
             name: t('Use Cases'),
         },
+        {
+            name: t('Contact Us')
+        }
     ]
 
     // checkRerouteLoggedUser(store,router);
@@ -56,19 +60,19 @@ export default function Home() {
     const product = [
         {
             image: 'trust-scan.png',
-            className: 'cursor-pointer w-20 h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 2xl:w-40 2xl:h-40 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FE7519] rounded-full p-3.5 relative -ml-4 md:ml-0 lg:ml-16 xl:ml-24 z-10',
+            className: 'cursor-pointer w-20 h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 2xl:w-40 2xl:h-40 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6600] rounded-full p-3.5 relative -ml-4 md:ml-0 lg:ml-16 xl:ml-24 z-10',
             productIndex: 1 // index carousel
         },{
             image: 'trust-verify.png',
-            className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FE7519] rounded-full p-5 relative z-10 -mt-12 lg:-mt-24 ml-[30%] md:ml-[40%]',
+            className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6600] rounded-full p-5 relative z-10 -mt-12 lg:-mt-24 ml-[30%] md:ml-[40%]',
             productIndex: 0 // index carousel
         },{
             image: 'trust-live.png',
-            className: 'cursor-pointer w-20 h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 2xl:w-40 2xl:h-40 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FE7519] rounded-full p-3.5 absolute bottom-10 md:bottom-[30vh] z-10 ml-[65%] md:ml-[65%]',
+            className: 'cursor-pointer w-20 h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 2xl:w-40 2xl:h-40 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6600] rounded-full p-3.5 absolute bottom-10 md:bottom-[30vh] z-10 ml-[65%] md:ml-[65%]',
             productIndex: 2 // index carousel
         },{
             image: 'trust-vision.png',
-            className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FE7519] rounded-full p-5 absolute -bottom-6 md:bottom-28 2xl:bottom-36 z-10 ml-0 md:ml-[7%] lg:ml-[18%]',
+            className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6600] rounded-full p-5 absolute -bottom-6 md:bottom-28 2xl:bottom-36 z-10 ml-0 md:ml-[7%] lg:ml-[18%]',
             productIndex: 3 // index carousel
         },
     ]
@@ -89,7 +93,11 @@ export default function Home() {
 
     return (
         <div className={'overflow-hidden'}>
-            <DrawerSlide menu={menu} isOpen={isOpen} />
+            <DrawerSlide
+                onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
+                menu={menu}
+                onClose={()=>setIsOpen(false)}
+                isOpen={isOpen} />
             <div className={'fixed w-16 sm:w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 10000 }}>
                 <button className="flex flex-col w-full h-full justify-center group" onClick={() => setIsOpen(!isOpen)}
                 >
@@ -167,14 +175,17 @@ export default function Home() {
                     setIndexProduct={setIndex}
                 />
             </section>
-            <UseCase />
+            <UseCase
+                onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
+            />
             <Banner />
             <TrustedBy />
             <WeAimed />
-            <div className="h-[20vh]" />
+            <div className="h-[5vh] md:h-[20vh]" />
             <CertificationMembership />
             <div className="h-quarter" />
             <ContactUs sectionRef={contactUsRef } />
+            <MapAddress />
             <Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>
         </div>
     )
