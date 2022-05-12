@@ -159,7 +159,7 @@ export default function Home() {
                             width:'100%',
                             height: '100vh'
                         }}
-                        numberValue={240}
+                        numberValue={120}
                         opacity={0.8}
                         className={'home-plexus'}
                     />
@@ -191,7 +191,7 @@ export default function Home() {
                         width: mobile ? '100%' : '50%',
                         height: '100vh'
                     }}
-                    numberValue={240}
+                    numberValue={120}
                     opacity={0.8}
                     className={'home-plexus'}
                 />
