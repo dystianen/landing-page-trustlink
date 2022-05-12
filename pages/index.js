@@ -156,7 +156,7 @@ export default function Home() {
             <div>
                 <ParticlePage
                     dimention={{
-                        width: mobile ? '100%' : '50%',
+                        width: '100%',
                         height: '100vh'
                     }}
                     numberValue={240}
