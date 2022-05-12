@@ -31,8 +31,8 @@ export default function Home() {
     const store = useStore();
     const { t, i18n } = useTranslation('common');
     const [isOpen, setIsOpen] = useState(false);
-    const genericHamburgerLine = `h-1 my-1 rounded-full bg-orange transition ease transform duration-300`;
-    const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-orange transition ease transform duration-300`;
+    const genericHamburgerLine = `h-1 my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
+    const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
     const mobile = useMediaQuery({ query: '(max-width: 576px)' });
 
     const [indexProduct, setIndexProduct] = useState(0);
