@@ -2,6 +2,7 @@ import { Image } from "antd";
 import React from "react";
 import {useTranslation} from "next-i18next";
 import Link from "next/link";
+import {MapAddress} from "../MapAddress";
 
 const Footer = ({onClickTop = () => {}}) => {
 
@@ -26,28 +27,38 @@ const Footer = ({onClickTop = () => {}}) => {
                     {/*    </p>*/}
                     {/*</div>*/}
                 </div>
-                <div className={"w-full lg:w-2/3 xl:w-2/3  mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-between"}>
-                    <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-center lg:justify-center md:mt-8 lg:mt-0 bg-orange'}>
-                        <div className={'w-full md:w-9/12 lg:w-auto bg-yellow-900'}>
-                            <p className={'text-base montserrat opacity-80'}>{t('Address')}</p>
-                            <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-2">{t('Kota Kasablanca Office 88')}</p>
-                            <p className="text-base montserrat opacity-80">{t('Jl. Raya Casablanca No.16, RW.5,')}<br/>{t(' Menteng Dalam, Kec. Tebet, DKI Jakarta 12870')}</p>
+                <div className={"flex flex-row"}>
+                    <div className={"w-full lg:w-2/3 xl:w-2/3 ml-4 mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-between"}>
+                        <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start lg:justify-start md:mt-8 lg:mt-0 '}>
+                            <div className={'w-full md:w-9/12 lg:w-auto '}>
+                                <p className={'text-base montserrat opacity-80'}>{t('Address')}</p>
+                                <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-2">{t('Kota Kasablanca Office 88')}</p>
+                                <p className="text-base montserrat opacity-80">{t('Jl. Raya Casablanca No.16, RW.5,')}<br/>{t(' Menteng Dalam, Kec. Tebet, DKI Jakarta 12870')}</p>
+                            </div>
+                        </div>
+                        <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start my-6 md:my-0 '}>
+                            <div className={'w-full md:w-9/12 lg:w-auto'}>
+                                <p className={'text-base montserrat opacity-80'}>EMAIL</p>
+                                <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-9">info@withtrustlink.com</p>
+                            </div>
+                        </div>
+                        <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start '}>
+                            <div className={'w-full md:w-9/12 lg:w-auto '}>
+                                <p className={'text-base montserrat opacity-80'}>{t('Call Us')}</p>
+                                <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-3">0628 671 8889</p>
+                                <p className="text-base montserrat opacity-80">{t('Mon to Fri')} (8.30 - 17.30)</p>
+                            </div>
+                        </div>
+                        <div className={'md:w-1/2 lg:w-0'}/>
+                    </div>
+                    <div className={"w-full lg:w-1/3 xl:w-1/3 mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-between"}>
+                        <div className={'w-full flex md:justify-start '}>
+                            <div className={'w-full '}>
+                                <p className={'text-base montserrat opacity-80'}>{t('Address')}</p>
+                                <MapAddress className={'w-full h-[40vh]'}/>
+                            </div>
                         </div>
                     </div>
-                    <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-center my-6 md:my-0 bg-green-500'}>
-                        <div className={'w-full md:w-9/12 lg:w-auto'}>
-                            <p className={'text-base montserrat opacity-80'}>EMAIL</p>
-                            <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-9">info@withtrustlink.com</p>
-                        </div>
-                    </div>
-                    <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-center bg-red-500'}>
-                        <div className={'w-full md:w-9/12 lg:w-auto bg-red-900'}>
-                            <p className={'text-base montserrat opacity-80'}>{t('Call Us')}</p>
-                            <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-3">0628 671 8889</p>
-                            <p className="text-base montserrat opacity-80">{t('Mon to Fri')} (8.30 - 17.30)</p>
-                        </div>
-                    </div>
-                    <div className={'md:w-1/2 lg:w-0'}/>
                 </div>
                 <div className={"w-full mt-4 md:mt-10 lg:mt-30 text-xs md:text-base lg:text-lg relative bottom-0 flex flex-col md:flex-row"}>
                     <div className={'w-full md:w-1/2 text-base montserrat text-[#EAEDF1] my-4 md:my-0'}>
