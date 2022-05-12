@@ -2,12 +2,35 @@ import { Image } from "antd";
 import React from "react";
 import {useTranslation} from "next-i18next";
 import Link from "next/link";
-import {MapAddress} from "../MapAddress";
+import { MapAddress } from "../MapAddress";
+import { FacebookFilled, InstagramFilled, InstagramOutlined, LinkedinFilled, TwitterCircleFilled } from '@ant-design/icons';
 
 const Footer = ({onClickTop = () => {}}) => {
 
     const { t, i18n } = useTranslation('common');
 
+    const socmed = [
+        {
+            'name': 'Instagram',
+            'icon' :<InstagramFilled className={'mx-auto'} width={ 100}/>,
+            'url' : 'https://www.instagram.com/withtrustlink/'
+        },
+        {
+            'name': 'Twitter',
+            'icon' :<TwitterCircleFilled className={'mx-auto'} width={ 100}/>,
+            'url' : 'https://twitter.com/withtrustlink'
+        },
+        {
+            'name': 'Facebook',
+            'icon' :<FacebookFilled className={'mx-auto'} width={ 100}/>,
+            'url' :'https://www.facebook.com/withtrustlink'
+        },
+        {
+            'name': ' LinkedIn',
+            'icon' :<LinkedinFilled className={'mx-auto'} width={ 100}/>,
+            'url': 'https://www.linkedin.com/company/withtrustlink/'
+        }
+    ]
     return (
         <div className={'relative'}>
             <div className="h-auto w-full text-white py-4 pr-6 md:pr-16 text-2xl bg-footer  pl-6 ">
@@ -50,10 +73,17 @@ const Footer = ({onClickTop = () => {}}) => {
                             </div>
                         </div>
                         <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start '}>
-                            <div className={'w-full md:w-9/12 lg:w-auto '}>
+                            <div className={'w-full md:w-9/12 lg:w-auto'}>
                                 <p className={'text-base montserrat opacity-80'}>{t('Social Media')}</p>
-                                {/*<p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-3">0628 671 8889</p>*/}
-                                {/*<p className="text-base montserrat opacity-80">{t('Mon to Fri')} (8.30 - 17.30)</p>*/}
+                                <div className="flex flex-row gap-4">
+                                    {socmed.map((items) => (
+                                        <a href={items.url} target="_blank">
+                                            <div className="rounded-full flex  items-center w-12 h-12 bg-white text-[bg-footer]">
+                                                    {items.icon}
+                                            </div>
+                                        </a>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                         <div className={'md:w-1/2 lg:w-0'}/>

@@ -23,7 +23,7 @@ const AboutMePage = ({sectionRef}) => {
             <div className={'relative w-full h-auto items-start flex justify-center'}>
                 <div className={'flex relative w-full lg:w-[95%] xl:w-[90%]'}>
                     <span className={'z-10 about-img w-full'}>
-                        <Image preview={false} src={"/assets/about_me3.jpg"} className={'h-full w-full'} />
+                        <Image preview={false} src={"/assets/meeting_stock_image.png"} className={'h-full w-full'} />
                     </span>
                     <div className={'absolute left-0 bottom-0 h-[50%] w-[21%] z-20'}>
                         <Image src={"/assets/about_us_left.png"} preview={false} id={'about-me'} className={'h-full'}/>
@@ -43,7 +43,7 @@ const AboutMePage = ({sectionRef}) => {
                             {/*<Fade when={transition} duration={1600}>*/}
                             <div>
                                 <Title className={"font-bold text-xl md:text-2xl lg:text-3xl montserrat"}>
-                                        <span className={'block leading-snug w-full'}>{t('about_us_main_text')}</span>
+                                        <span className={'block leading-snug '}>{t('about_us_main_text')}</span>
                                     </Title>
                             </div>
                         </div>
