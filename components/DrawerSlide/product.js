@@ -63,7 +63,7 @@ export const Product = observer(({show, setShow}) => {
                             {products.map((data, index) => {
                                 return (
                                     <div key={data.key} className={`w-full h-32 lg:h-52 border border-l-0 ${index >= 2 ? null : 'border-b-0'} border-gray-300 flex flex-row`}>
-                                        <div className={'z-0 flex justify-end items-end'}>
+                                        <div className={'z-0 flex justify-end items-center'}>
                                             <Image preview={false} className="w-[6rem] sm:w-[3rem] md:w-[5rem] lg:w-32 xl:w-20" src={data.image}/>
                                         </div>
                                         <div className={'relative h-full flex flex-col justify-center px-2 lg:px-2 xl:px-4'}>
