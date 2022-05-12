@@ -50,6 +50,9 @@ export default function Home() {
         }, {
             name: t('Use Cases'),
         },
+        {
+            name: t('Contact Us')
+        }
     ]
 
     // checkRerouteLoggedUser(store,router);
