@@ -2,19 +2,31 @@ import { Image } from 'antd';
 import { useTranslation } from "next-i18next";
 import Link from 'next/link';
 import React ,{ useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { DrawerSlide } from '../DrawerSlide';
 
 const emptyFunction = () => {}
 
 const StickyHeader = (props) => {
-    const {changeMenuOpen, isMenuOpen, onClickProduct=emptyFunction, onClickClients=emptyFunction, onClickMembership=emptyFunction, onClickUseCases=emptyFunction } = props;
+    const {changeMenuOpen, isMenuOpen, onClickProduct=emptyFunction, onClickClients=emptyFunction, onClickMembership=emptyFunction, onClickUseCases=emptyFunction, onClickAboutUs=emptyFunction, onClickTopPage = emptyFunction} = props;
     const { t, i18n } = useTranslation('common');
     const [header, setHeader] = useState("header");
     const [isOpen, setIsOpen] = useState(isMenuOpen);
     const genericHamburgerLine = `h-1 my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
     const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
+    const mobile = useMediaQuery({ query: '(max-width: 576px)' });
+    const tablet = useMediaQuery({ query: '(max-width: 980px)' });
+
     const menu = [
         {
+            name: 'Home',
+            onClicked : onClickTopPage,
+        }, {
+        
+            name: t('About Us'),
+            onClicked : onClickAboutUs,
+        }, {
+        
             name: t('Products'),
             onClicked : onClickProduct,
         }, {
@@ -58,8 +70,8 @@ const StickyHeader = (props) => {
                     </div>
                 <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12  z-30'}>
                     <DrawerSlide menu={menu} isOpen={isOpen} />
-                    {menu.map((items, _props) => (
-                        <div className='mt-6 mx-3 ' onClick={items.onClicked}>
+                    {mobile || tablet ? '' : menu.map((items, _props) => (
+                        <div className='mt-6 mx-2 ' onClick={items.onClicked}>
                             <p>
                                {items.name}
                             </p>
