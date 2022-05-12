@@ -84,7 +84,7 @@ const UseCase = ({sectionRef}) => {
                     </div>
 
                 </div>
-                <div className={'flex flex-row h-auto bg-[#05204D]'} ref={sectionRef}>
+                <div className={'flex flex-row h-auto bg-[#05204D] section-most-top'} ref={sectionRef}>
                     <Carousel
                         autoPlay={false}
                         className={'w-full h-full'}

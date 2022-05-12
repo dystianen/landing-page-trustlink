@@ -43,7 +43,7 @@ const ContactUs = observer(({sectionRef}) => {
         })
     }
     return (
-            <div className={'w-full relative'} id='contact' ref={sectionRef}>
+            <div className={'w-full relative section-most-top'} id='contact' ref={sectionRef}>
                 <div className={'h-full contact-bg absolute -left-20 md:-left-16 lg:-left-12 xl:left-0 top-5'}>
                     <Image preview={false} className="h-full w-auto" src={'/assets/images/accent-home-sectionContact-1.jpg'}/>
                 </div>

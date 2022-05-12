@@ -169,7 +169,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
     }
 
     return (
-        <div className={'relative h-auto w-full'} >
+        <div className={'relative h-auto w-full section-most-top'} ref={productRef}>
             <div className={'h-[35%] lg:h-auto absolute top-24 -left-60 about-img'}>
                 <Image preview={false} className="h-full w-auto " src={'/assets/images/accent-master-connecting-dots-1.png'}/>
             </div>
