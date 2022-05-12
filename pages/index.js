@@ -19,6 +19,7 @@ import {useMediaQuery} from "react-responsive";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import Link from "next/link";
+import StickyHeader from "../components/StickyHeader";
 import {MapAddress} from "../components/MapAddress";
 
 export const checkRerouteLoggedUser = (store, router) => {
@@ -92,66 +93,96 @@ export default function Home() {
     }
 
     return (
-        <div className={'overflow-hidden'}>
-            <DrawerSlide
-                onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
-                menu={menu}
-                onClose={()=>setIsOpen(false)}
-                isOpen={isOpen} />
-            <div className={'fixed w-16 sm:w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 10000 }}>
-                <button className="flex flex-col w-full h-full justify-center group" onClick={() => setIsOpen(!isOpen)}
-                >
-                    <div className={`${genericHamburgerLine} self-start ${isOpen ? "w-full rotate-45 translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`}/>
-                    <div className={`${genericHamburgerLine2} ${isOpen ? "opacity-0" : "opacity-100"}`}/>
-                    <div className={`${genericHamburgerLine} self-end ${isOpen ? "w-full -rotate-45 -translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`}/>
-                </button>
-            </div>
-            <div className={'relative h-full md:h-[75vh] lg:h-full min-h-screen'} ref={topSectionRef}>
-                <div className={'absolute w-full top-0 flex flex-row'} style={{ justifyContent: 'space-between' }}>
-                    <div className={'flex items-center'}>
-                        <Image preview={false} className="cursor-pointer fixed w-14 md:w-20 top-4" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }} onClick={onClickLogo} />
-                        <Image preview={false} className="relative h-14 md:h-20 w-auto left-12 md:left-16 top-2 md:top-4" src={'/assets/logo/text-only.png'} />
-                    </div>
-                    <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12 mt-8 z-30'}>
-                        <Link href={'/'} locale="en">
-                            <p className={`cursor-pointer font-medium ${i18n.language === 'en' && 'text-[#FE7519]'}`}>EN</p>
-                        </Link>
-                        <div className={'w-px h-5 mt-1 mx-2'} style={{ backgroundColor: '#818FA6' }} />
-                        <Link href={'/'} locale="id">
-                            <p className={`cursor-pointer font-medium ${i18n.language === 'id' && 'text-[#FE7519]'}`}>ID</p>
-                        </Link>
-                    </div>
-                </div>
-                <div className={'relative w-full pl-12 sm:pl-20'}>
-                    <section className={'flex justify-start w-auto h-full'}>
-                        {/*<div className={'flex items-end justify-center w-32'}>*/}
-                        {/*<div className={'auto-rows-auto invisible ml-8 lg:ml-3 xl:ml-0 md:visible'}><p className={'w-max -rotate-180'} style={{ color: '#161D24', fontFamily: 'Montserrat', letterSpacing: '0.15rem', fontSize: '0.6rem', writingMode: 'vertical-lr', textOrientation: 'sideways' }}>SCROLL DOWN</p>*/}
-                        {/*    <Image preview={false} src={'/assets/scroll-down.svg'} />*/}
-                        {/*</div>*/}
-                        {/*</div>*/}
-                        <div className={'w-max h-[40vh] md:h-full md:min-h-screen lg:pl-8 flex flex-col justify-end md:justify-center'}>
-                            {/*<div className={'home-next-generation text-3xl sm:text-4xl md:text-5xl lg:text-5xl'}>*/}
-                            {/*    <span className={'mb-2'}><span className={''}>Trust-Centric Solution</span> For Identity Management  And Open Finance Platform</span>*/}
-                            {/*</div>*/}
-                            <div className={'home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem] font-medium z-10'}>
-                                <span className={'block leading-tight'}>
-                                    <span className={'font-bold block text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl mb-4'}>{t('Trust Centric Solution')}</span>
-                                    <span>{t('For Identity Management')}</span>
-                                    {/*<br/> {t('And Open Finance Platform')}*/}
-                                </span>
-                            </div>
+        <div>
+            <StickyHeader/>
+            <div className="overflow-hidden">
+                {/* <DrawerSlide menu={menu} isOpen={isOpen} />
+                <div className={'fixed w-16 sm:w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 999999 }}>
+                    <button className="flex flex-col w-full h-full justify-center group" onClick={() => setIsOpen(!isOpen)}
+                    >
+                        <div className={`${genericHamburgerLine} self-start ${isOpen ? "w-full rotate-45 translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`}/>
+                        <div className={`${genericHamburgerLine2} ${isOpen ? "opacity-0" : "opacity-100"}`}/>
+                        <div className={`${genericHamburgerLine} self-end ${isOpen ? "w-full -rotate-45 -translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`}/>
+                    </button>
+                </div> */}
+                <div className={'relative h-full md:h-[75vh] lg:h-full min-h-screen'} ref={topSectionRef}>
+                    {/* <div className={'absolute w-full top-0 flex flex-row'} style={{ justifyContent: 'space-between' }}>
+                        <div className={'flex items-center'}>
+                            <Image preview={false} className="cursor-pointer fixed w-14 md:w-20 top-4" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }} onClick={onClickLogo} />
+                            <Image preview={false} className="relative h-14 md:h-20 w-auto left-12 md:left-16 top-2 md:top-4" src={'/assets/logo/text-only.png'} />
                         </div>
-                    </section>
-                    <section className={'absolute top-[100%] md:top-20 right-10 md:-right-10 lg:-right-12 xl:-right-28 w-3/5 h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
-                        {
-                            product.map((it,index) => (
-                                <div key={index} className={it.className} onClick={()=> handleClickProduct(it.productIndex) }>
-                                    <Image preview={false} src={`/assets/images/${it.image}`} className={'z-10 justify-center'} />
+                        <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12 mt-8 z-30'}>
+                            <Link href={'/'} locale="en">
+                                <p className={`cursor-pointer font-medium ${i18n.language === 'en' && 'text-[#FE7519]'}`}>EN</p>
+                            </Link>
+                            <div className={'w-px h-5 mt-1 mx-2'} style={{ backgroundColor: '#818FA6' }} />
+                            <Link href={'/'} locale="id">
+                                <p className={`cursor-pointer font-medium ${i18n.language === 'id' && 'text-[#FE7519]'}`}>ID</p>
+                            </Link>
+                        </div>
+                    </div> */}
+                    <div className={'relative w-full pl-12 sm:pl-20'}>
+                        <section className={'flex justify-start w-auto h-full'}>
+                            {/*<div className={'flex items-end justify-center w-32'}>*/}
+                            {/*<div className={'auto-rows-auto invisible ml-8 lg:ml-3 xl:ml-0 md:visible'}><p className={'w-max -rotate-180'} style={{ color: '#161D24', fontFamily: 'Montserrat', letterSpacing: '0.15rem', fontSize: '0.6rem', writingMode: 'vertical-lr', textOrientation: 'sideways' }}>SCROLL DOWN</p>*/}
+                            {/*    <Image preview={false} src={'/assets/scroll-down.svg'} />*/}
+                            {/*</div>*/}
+                            {/*</div>*/}
+                            <div className={'w-max h-[40vh] md:h-full md:min-h-screen lg:pl-8 flex flex-col justify-end md:justify-center'}>
+                                {/*<div className={'home-next-generation text-3xl sm:text-4xl md:text-5xl lg:text-5xl'}>*/}
+                                {/*    <span className={'mb-2'}><span className={''}>Trust-Centric Solution</span> For Identity Management  And Open Finance Platform</span>*/}
+                                {/*</div>*/}
+                                <div className={'home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem] font-medium z-10'}>
+                                    <span className={'block leading-tight'}>
+                                        <span className={'font-bold block text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl mb-4'}>{t('Trust Centric Solution')}</span>
+                                        <span>{t('For Identity Management')}</span>
+                                        {/*<br/> {t('And Open Finance Platform')}*/}
+                                    </span>
                                 </div>
-                            ))
-                        }
-                    </section>
+                            </div>
+                        </section>
+                        <section className={'absolute top-[100%] md:top-20 right-10 md:-right-10 lg:-right-12 xl:-right-28 w-3/5 h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
+                            {
+                                product.map((it,index) => (
+                                    <div key={index} className={it.className} onClick={()=> handleClickProduct(it.productIndex) }>
+                                        <Image preview={false} src={`/assets/images/${it.image}`} className={'z-10 justify-center'} />
+                                    </div>
+                                ))
+                            }
+                        </section>
+                    </div>
                 </div>
+                <div>
+                    <ParticlePage
+                        dimention={{
+                            width:'100%',
+                            height: '100vh'
+                        }}
+                        numberValue={240}
+                        opacity={0.8}
+                        className={'home-plexus'}
+                    />
+                </div>
+                <section>
+                    <AboutMePage />
+                </section>
+                <section className={'pl-12 md:pl-20 mt-52'}>
+                    <Product
+                        onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
+                        productRef={sectionProductRef}
+                        indexProduct={indexProduct}
+                        setIndexProduct={setIndex}
+                    />
+                </section>
+                <UseCase />
+                <Banner />
+                <TrustedBy />
+                <WeAimed />
+                <div className="h-[20vh]" />
+                <CertificationMembership />
+                <div className="h-quarter" />
+                <ContactUs sectionRef={contactUsRef } />
+                <Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>
             </div>
             <div>
                 <ParticlePage

@@ -8,8 +8,8 @@ const StickyHeader = () => {
     const { t, i18n } = useTranslation('common');
     const [header, setHeader] = useState("header");
     const [isOpen, setIsOpen] = useState(false);
-    const genericHamburgerLine = `h-1 my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
-    const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
+    const genericHamburgerLine = `h-1 my-1 rounded-full bg-[#FF6600] transition ease transform duration-300`;
+    const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-[#FF6600] transition ease transform duration-300`;
 
     const listenScrollEvent = event => {
         if (window.scrollY < 73) {
@@ -40,15 +40,14 @@ const StickyHeader = () => {
                         <Image preview={false} className="cursor-pointer relative w-14 md:w-20 top-0" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }}  />
                         <Image preview={false} className="relative h-14 md:h-20 w-auto" src={'/assets/logo/text-only.png'} />
                     </div>
-                <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12 mt-6 z-30'}>
-                    
+                <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12  z-30'}>
                     <DrawerSlide menu={menu} isOpen={isOpen} />
-                    <div className={'fixed w-16 sm:w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 10000 }}>
-                        <button className="flex flex-col w-full h-full justify-center group" onClick={() => setIsOpen(!isOpen)}
+                    <div className={'w-16 sm:w-20 h-20 transparent  top-6 left-0 p-5'} style={{ zIndex: 10000 }}>
+                        <button className="flex flex-col w-full h-full justify-center group" style={{ zIndex: 10000 }} onClick={() => setIsOpen(!isOpen)}
                         >
-                            <div className={`${genericHamburgerLine} self-start ${isOpen ? "w-full rotate-45 translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`}/>
-                            <div className={`${genericHamburgerLine2} ${isOpen ? "opacity-0" : "opacity-100"}`}/>
-                            <div className={`${genericHamburgerLine} self-end ${isOpen ? "w-full -rotate-45 -translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`}/>
+                            <div className={`${genericHamburgerLine} self-start ${isOpen ? "w-full rotate-45 translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100 z[60]"}`}/>
+                            <div className={`${genericHamburgerLine2} ${isOpen ? "opacity-0" : "opacity-100 z[60]"}`}/>
+                            <div className={`${genericHamburgerLine} self-end ${isOpen ? "w-full -rotate-45 -translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100 z[60]"}`}/>
                         </button>
                     </div>
                         {/* <Link href={'/'} locale="en">
@@ -59,7 +58,7 @@ const StickyHeader = () => {
                             <p className={`cursor-pointer font-medium ${i18n.language === 'id' && 'text-[#FE7519]'}`}>ID</p>
                         </Link> */}
                     </div>
-                </div>
+             </div>
         </div>
     );
 }
