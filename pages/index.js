@@ -42,7 +42,7 @@ export default function Home() {
     const contactUsRef = useRef(null);
     const sectionProductRef = useRef(null);
     const topSectionRef = useRef(null);
-
+    const sectionRef = useRef(null);
     const menu = [
         {
             name: t('About Us.'),
@@ -78,6 +78,7 @@ export default function Home() {
         },
     ]
 
+    
     const handleClickProduct = (index) => {
         setIndexProduct(index)
         sectionProductRef.current.scrollIntoView({behavior: 'smooth'})
