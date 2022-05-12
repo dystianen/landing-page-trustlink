@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React ,{ useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { DrawerSlide } from '../DrawerSlide';
-
+import {startCase} from 'lodash';
 const emptyFunction = () => {}
 
 const StickyHeader = (props) => {
@@ -26,7 +26,7 @@ const StickyHeader = (props) => {
             name: t('About Us.'),
             onClicked : onClickAboutUs,
         }, {
-        
+
             name: t('Products'),
             onClicked : onClickProduct,
         }, {
@@ -46,7 +46,7 @@ const StickyHeader = (props) => {
     useEffect(() => {
         setIsOpen(isMenuOpen)
     }, [isMenuOpen]);
-    
+
 
     const listenScrollEvent = _event => {
         if (window.scrollY < 73) {
@@ -69,9 +69,12 @@ const StickyHeader = (props) => {
                         <Image preview={false} className="relative h-14 md:h-20 w-auto" src={'/assets/logo/text-only.png'} />
                     </div>
                 <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12  z-30'}>
-                    <DrawerSlide menu={menu} isOpen={isOpen} />
+                    <DrawerSlide
+                        menu={menu}
+                        setOpen={changeMenuOpen}
+                        isOpen={isOpen} />
                     {mobile || tablet ? '' : menu.map((items, _props) => (
-                        <div className='mt-6 mx-2 capitalize' onClick={items.onClicked}>
+                        <div className='mt-6 mx-2 cursor-pointer ' onClick={items.onClicked}>
                             <p>
                                {items.name}
                             </p>
