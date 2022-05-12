@@ -65,7 +65,7 @@ export const DrawerSlide = observer((props) => {
 
     return (
         <Drawer title={null} placement="left" onClose={() => {}} closable={false} visible={isOpen} contentWrapperStyle={{width: '100%'}} bodyStyle={{padding: 0}}>
-            <div className={'w-screen h-full flex flex-col md:flex-row'}>
+            <div className={'w-full h-full flex flex-col md:flex-row'}>
                     <Fade when={(!showProduct || !showUseCase|| !showAbout)} duration={500}>
                         <div className={`ml-16 sm:ml-20 px-0 border-l border-gray-300 w-auto md:w-[40%] h-full flex items-center ${(showProduct || showUseCase || showAbout) ? 'hidden' : null}`}>
                             <div className={'flex flex-col py-11 px-2 sm:px-4 lg:px-18 lg:p-11 w-full'}>
