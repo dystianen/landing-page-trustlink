@@ -7,7 +7,7 @@ import {useMediaQuery} from 'react-responsive'
 import { ParticlesTrusted } from "./ParticlesTrusted";
 import { useRouter } from 'next/router'
 
-const TrustedBy = (props) => {
+const TrustedBy = ({sectionRef}) => {
     const lg = useMediaQuery({query: '(min-width: 1024px)'})
     const md = useMediaQuery({query: '(min-width: 768px)'})
     const sm = useMediaQuery({query: '(min-width: 576px)'})
@@ -59,7 +59,7 @@ const TrustedBy = (props) => {
     }
 
     return (
-        <div className={'relative flex items-center w-full h-auto py-28 sm:py-40 lg:py-52 pl-12 md:pl-20 z-50 bg-[#F1F1F1] my-10 sm:my-0 sm:mb-20'}>
+        <div className={'relative flex items-center w-full h-auto py-28 sm:py-40 lg:py-52 pl-12 md:pl-20 z-50 bg-[#F1F1F1] my-10 sm:my-0 sm:mb-20'} ref={sectionRef}>
             <div className={'h-full sm:h-auto absolute bottom-0 right-0 about-img'}>
                 <Image preview={false} className="w-auto opacity-30" src={'/assets/images/accent-master-connecting-dots-2.png'}/>
             </div>

@@ -4,25 +4,30 @@ import Link from 'next/link';
 import React ,{ useState, useEffect } from 'react';
 import { DrawerSlide } from '../DrawerSlide';
 
-
+const emptyFunction = () => {}
 
 const StickyHeader = (props) => {
-    const {changeMenuOpen, isMenuOpen} = props;
+    const {changeMenuOpen, isMenuOpen, onClickProduct=emptyFunction, onClickClients=emptyFunction, onClickMembership=emptyFunction, onClickUseCases=emptyFunction } = props;
     const { t, i18n } = useTranslation('common');
     const [header, setHeader] = useState("header");
     const [isOpen, setIsOpen] = useState(isMenuOpen);
-    const genericHamburgerLine = `h-1 my-1 rounded-full bg-[#FF6600] transition ease transform duration-300`;
-    const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-[#FF6600] transition ease transform duration-300`;
+    const genericHamburgerLine = `h-1 my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
+    const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
     const menu = [
         {
             name: t('Products'),
+            onClicked : onClickProduct,
         }, {
             name: t('Use Cases'),
+            onClicked :onClickUseCases
+
         }, {
             name: 'Clients',
+            onClicked :onClickClients
         },
         {
             name: 'Membership',
+            onClicked :onClickMembership
         }
     ];
 
@@ -54,7 +59,7 @@ const StickyHeader = (props) => {
                 <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12  z-30'}>
                     <DrawerSlide menu={menu} isOpen={isOpen} />
                     {menu.map((items, _props) => (
-                        <div className='mt-6 mx-3 '>
+                        <div className='mt-6 mx-3 ' onClick={items.onClicked}>
                             <p>
                                {items.name}
                             </p>

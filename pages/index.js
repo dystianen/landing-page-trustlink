@@ -42,7 +42,9 @@ export default function Home() {
     const contactUsRef = useRef(null);
     const sectionProductRef = useRef(null);
     const topSectionRef = useRef(null);
-    const sectionRef = useRef(null);
+    const membershipRef = useRef(null);
+    const clientsRef = useRef(null);
+    const useCasesRef = useRef(null)
     const menu = [
         {
             name: t('About Us.'),
@@ -95,7 +97,7 @@ export default function Home() {
 
     return (
         <div>
-            <StickyHeader changeMenuOpen={setIsOpen} isMenuOpen={isOpen}/>
+            <StickyHeader changeMenuOpen={setIsOpen} isMenuOpen={isOpen} onClickProduct={() => sectionProductRef.current.scrollIntoView({ behavior: 'smooth' })} onClickMembership={() => membershipRef.current.scrollIntoView({ behavior: 'smooth' }) } onClickClients={() => clientsRef.current.scrollIntoView({ behavior: 'smooth' }) } onClickUseCases={() => useCasesRef.current.scrollIntoView({ behavior: 'smooth' }) } />
             <div className="overflow-hidden">
                 {/*<DrawerSlide menu={menu} isOpen={isOpen} />*/}
                 <div className={'fixed w-16 sm:w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 999999 }}>
@@ -175,12 +177,12 @@ export default function Home() {
                         setIndexProduct={setIndex}
                     />
                 </section>
-                <UseCase />
+                <UseCase sectionRef={useCasesRef} />
                 <Banner />
-                <TrustedBy />
+                <TrustedBy sectionRef={clientsRef}/>
                 <WeAimed />
                 <div className="h-[20vh]" />
-                <CertificationMembership />
+                <CertificationMembership sectionRef={membershipRef}/>
                 <div className="h-quarter" />
                 <ContactUs sectionRef={contactUsRef } />
                 <Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>
@@ -211,10 +213,10 @@ export default function Home() {
                 onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
             />
             <Banner />
-            <TrustedBy />
+            <TrustedBy sectionRef={clientsRef}/>
             <WeAimed />
             <div className="h-[5vh] md:h-[20vh]" />
-            <CertificationMembership />
+            <CertificationMembership sectionRef={membershipRef}/>
             <div className="h-quarter" />
             <ContactUs sectionRef={contactUsRef } />
             <MapAddress />

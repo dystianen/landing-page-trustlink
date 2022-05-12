@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import Carousel from 'react-material-ui-carousel'
 import {useTranslation} from "next-i18next";
 
-const UseCase = (props) => {
+const UseCase = ({sectionRef}) => {
     const { t, i18n } = useTranslation('common');
 
     const dataUseCase = [
@@ -38,7 +38,7 @@ const UseCase = (props) => {
 
 
     return (
-        <div className={'w-full h-full pl-12 md:pl-20'}>
+        <div className={'w-full h-full pl-12 md:pl-20'} >
             <div className={'w-full h-full'}>
                 <div className={"relative w-full h-auto max-h-[519px] usecase-img"}>
                     <Image preview={false} className="w-full h-64 md:h-full brightness-50" src={'/assets/usecase-airport.png'}/>
@@ -54,7 +54,7 @@ const UseCase = (props) => {
                     </div>
 
                 </div>
-                <div className={'flex flex-row h-auto bg-[#05204D]'}>
+                <div className={'flex flex-row h-auto bg-[#05204D]'} ref={sectionRef}>
                     <Carousel
                         autoPlay={false}
                         className={'w-full h-full'}
