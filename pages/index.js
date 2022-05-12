@@ -19,6 +19,7 @@ import {useMediaQuery} from "react-responsive";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import Link from "next/link";
+import {MapAddress} from "../components/MapAddress";
 
 export const checkRerouteLoggedUser = (store, router) => {
     if (typeof window !== 'undefined') {
@@ -89,7 +90,11 @@ export default function Home() {
 
     return (
         <div className={'overflow-hidden'}>
-            <DrawerSlide menu={menu} isOpen={isOpen} />
+            <DrawerSlide
+                onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
+                menu={menu}
+                onClose={()=>setIsOpen(false)}
+                isOpen={isOpen} />
             <div className={'fixed w-16 sm:w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 10000 }}>
                 <button className="flex flex-col w-full h-full justify-center group" onClick={() => setIsOpen(!isOpen)}
                 >
@@ -167,7 +172,9 @@ export default function Home() {
                     setIndexProduct={setIndex}
                 />
             </section>
-            <UseCase />
+            <UseCase
+                onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
+            />
             <Banner />
             <TrustedBy />
             <WeAimed />
@@ -175,6 +182,7 @@ export default function Home() {
             <CertificationMembership />
             <div className="h-quarter" />
             <ContactUs sectionRef={contactUsRef } />
+            <MapAddress />
             <Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>
         </div>
     )

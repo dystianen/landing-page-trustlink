@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import Carousel from 'react-material-ui-carousel'
 import {useTranslation} from "next-i18next";
 
-const UseCase = () => {
+const UseCase = (props) => {
     const { t, i18n } = useTranslation('common');
 
     const dataUseCase = [
@@ -34,7 +34,8 @@ const UseCase = () => {
     ]
 
     const pageCarousel = dataUseCase.length
-    const [current, setCurrent] = useState(0)
+    const [current, setCurrent] = useState(0);
+
 
     return (
         <div className={'w-full h-full pl-12 md:pl-20'}>
@@ -118,7 +119,7 @@ const UseCase = () => {
                                         </p>
                                     </div>
                                     <div className={'text-center md:text-left mb-24 md:mb-0'}>
-                                        <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-36 md:w-48"}>
+                                        <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-36 md:w-48"} onClick={()=>props.onClickContact()}>
                                             {t('Request Demo')}
                                         </Button>
                                     </div>
