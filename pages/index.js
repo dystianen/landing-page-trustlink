@@ -98,7 +98,15 @@ export default function Home() {
 
     return (
         <div>
-            <StickyHeader changeMenuOpen={setIsOpen} isMenuOpen={isOpen} onClickProduct={() => sectionProductRef.current.scrollIntoView({ behavior: 'smooth' })} onClickMembership={() => membershipRef.current.scrollIntoView({ behavior: 'smooth' }) } onClickClients={() => clientsRef.current.scrollIntoView({ behavior: 'smooth' }) } onClickUseCases={() => useCasesRef.current.scrollIntoView({ behavior: 'smooth' }) } onClickAboutUs={() => aboutUsRef.current.scrollIntoView({ behavior: 'smooth' }) } onClickTopPage={() => topSectionRef.current.scrollIntoView({ behavior: 'smooth' }) } />
+            <StickyHeader
+                changeMenuOpen={setIsOpen}
+                isMenuOpen={isOpen}
+                onClickProduct={() => sectionProductRef.current.scrollIntoView({ behavior: 'smooth' })}
+                onClickMembership={() => membershipRef.current.scrollIntoView({ behavior: 'smooth' }) }
+                onClickClients={() => clientsRef.current.scrollIntoView({ behavior: 'smooth' }) }
+                onClickUseCases={() => useCasesRef.current.scrollIntoView({ behavior: 'smooth' }) }
+                onClickAboutUs={() => aboutUsRef.current.scrollIntoView({ behavior: 'smooth' }) }
+                onClickTopPage={() => topSectionRef.current.scrollIntoView({ behavior: 'smooth' }) } />
             <div className="overflow-hidden">
                 {/*<DrawerSlide menu={menu} isOpen={isOpen} />*/}
                 <div className={'fixed w-16 sm:w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 999999 }}>
