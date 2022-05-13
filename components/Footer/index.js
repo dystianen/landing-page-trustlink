@@ -76,8 +76,8 @@ const Footer = ({onClickTop = () => {}}) => {
                             <div className={'w-full md:w-9/12 lg:w-auto'}>
                                 <p className={'text-base montserrat opacity-80'}>{t('Social Media')}</p>
                                 <div className="flex flex-row gap-4">
-                                    {socmed.map((items) => (
-                                        <a href={items.url} target="_blank">
+                                    {socmed.map((items, index) => (
+                                        <a key={index} href={items.url} target="_blank" rel="noopener noreferrer">
                                             <div className="rounded-full flex  items-center w-12 h-12 bg-white text-[#04204D]">
                                                     {items.icon}
                                             </div>
