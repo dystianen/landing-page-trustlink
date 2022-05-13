@@ -70,6 +70,11 @@ const UseCase = ({sectionRef}) => {
 
     return (
         <div className={'w-full h-full pl-12 md:pl-20 mt-10'} >
+            <div className={'relative w-full'}>
+                         <div className={'absolute right-[-20vh] z-0 top-[-20vh]'}>
+                            <Image className={'z-10 w-[550px]'} preview={ false} src={'/assets/usecase/group-orange.png'} /> 
+                        </div>
+                    </div>
             <div className={'w-full h-full'}>
                 <div className={"relative w-full h-auto max-h-[519px] usecase-img -mb-1"}>
                     {/* <Image preview={false} className="w-full  h-[10rem] md:h-[15rem] lg:h-[18rem] xl:h-full" src={'/assets/usecase/bg-usecase-crop.png'}/> */}
@@ -86,14 +91,19 @@ const UseCase = ({sectionRef}) => {
                     </div> */}
 
                 </div>
-                <div className={'flex flex-col h-auto items-start pl-20 bg-[#132F70] section-most-top'} ref={sectionRef}>
-                     <div className={'mt-10 w-full'}>
+                <div className={'flex flex-col h-auto  pl-20 bg-[#132F70] section-most-top'} ref={sectionRef}>
+                    <div className={'relative w-full '}>
+                        <div className={'absolute -left-80 z-0 -top-16 opacity-40'}>
+                            <Image className={'z-10 w-auto'} preview={ false} src={'/assets/usecase/bg-group.png'} /> 
+                        </div>
+                    </div>
+                     <div className={'mt-10 w-3/4'}>
                         <p className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-2 montserrat'}>{t('Use Case')}</p>
                         <p className={'text-white text-base md:text-lg xl:text-xl montserrat pr-6 lg:pr-0'}>{t('Biometric Use Case 2')}</p>
                     </div>
                     <Carousel
                         autoPlay={false}
-                        className={'w-full h-full  flex flex-row'}
+                        className={'w-full h-full  flex flex-row z-40'}
                         indicatorContainerProps={{
                             style: {
                                 position: 'absolute',
@@ -109,7 +119,7 @@ const UseCase = ({sectionRef}) => {
                         }}
                         activeIndicatorIconButtonProps={{
                             style: {
-                                backgroundColor: '#0681FA',
+                                // backgroundColor: '#0681FA',
                                 color: '#0681FA',
                                 width: 25,
                                 height: 10,
@@ -134,7 +144,7 @@ const UseCase = ({sectionRef}) => {
                         animation={'slide'}
                         onChange={num => setCurrent(num)}
                     >
-                        {dataUseCase.map((item, index) => (<div key={index} className={'w-full h-[68vh] flex flex-col md:flex-row bg-[#132F70]'}>
+                        {dataUseCase.map((item, index) => (<div key={index} className={'w-full h-[68vh] flex flex-col md:flex-row'}>
                                 <div className={'relative flex justify-center items-center w-full md:w-1/2 h-[18rem] md:h-full my-16 md:my-0'}>
                                     <div className={'h-[65vh] flex justify-center items-center usecase-img-2 px-10'}>
                                         <Image preview={false} src={item.src} className={'z-10 justify-center h-[50vh]'} />
