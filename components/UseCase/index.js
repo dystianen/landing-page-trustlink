@@ -140,7 +140,7 @@ const UseCase = ({sectionRef}) => {
                                         <Image preview={false} src={item.src} className={'z-10 justify-center h-[50vh]'} />
                                     </div>
                                 </div>
-                                <div className={'flex flex-col justify-start w-full md:w-1/2 h-[67vh] md:h-full'}>
+                                <div className={'flex flex-col justify-center w-full md:w-1/2 h-[67vh] md:h-full'}>
                                     <div className={"mb-0"}>
                                         <p className={'text-sm lg:text-base xl:text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
                                     </div>
