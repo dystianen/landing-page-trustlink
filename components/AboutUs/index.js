@@ -22,8 +22,11 @@ const AboutMePage = ({sectionRef}) => {
         <div className='pl-12 md:pl-20 mt-[10vw] h-auto flex flex-col'>
             <div className={'relative w-full h-auto items-start flex justify-center'}>
                 <div className={'flex relative w-full lg:w-[95%] xl:w-[90%]'}>
+                        <div className={'absolute z-20 w-full left-[83%] top-0'}>
+                            <Image preview={false} src={"/assets/about-logo.png"} className={'h-full w-full'} />
+                        </div>
                     <span className={'z-10 about-img w-full'}>
-                        <Image preview={false} src={"/assets/meeting_stock_image.png"} className={'h-full w-full'} />
+                        <Image preview={false} src={"/assets/about-new.png"} className={'h-full w-[2500px]'} />
                     </span>
                     <div className={'absolute left-0 bottom-0 h-[50%] w-[21%] z-20'}>
                         <Image src={"/assets/about_us_left.png"} preview={false} id={'about-me'} className={'h-full'}/>
