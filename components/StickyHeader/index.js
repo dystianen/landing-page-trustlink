@@ -39,10 +39,10 @@ const StickyHeader = (props) => {
             onClicked :onClickUseCases
 
         },
-        // {
-        //     name: 'Clients',
-        //     onClicked :onClickClients
-        // },
+        {
+            name: 'Clients',
+            onClicked :onClickClients
+        },
         {
             name: t('Contact Us'),
             onClicked :onClickContactUs
