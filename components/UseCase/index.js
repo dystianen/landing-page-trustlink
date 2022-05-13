@@ -130,7 +130,7 @@ const UseCase = ({sectionRef}) => {
                         animation={'slide'}
                         onChange={num => setCurrent(num)}
                     >
-                        {dataUseCase.map((item, index) => ( <div key={index} className={'w-full h-auto md:h-screen flex flex-col md:flex-row bg-[#132F70]'}>
+                        {dataUseCase.map((item, index) => ( <div key={index} className={'w-full h-auto md:h-[90vh] flex flex-col md:flex-row bg-[#132F70]'}>
                                 <div className={'relative flex justify-center items-center w-full md:w-1/2 h-[18rem] md:h-full my-16 md:my-0'}>
                                     <div className={'w-full h-full flex justify-center items-center usecase-img-2 px-10'}>
                                         <Image preview={false} src={item.src} className={'z-10 justify-center w-full h-full'} />
