@@ -29,8 +29,8 @@ const UseCase = ({sectionRef}) => {
             title: t("use_case_2_mini_text"),
             name: t("use_case_2_title"),
             desc: t("use_case_2_description"),
-            src: '/assets/usecase/usecase-ekyc.png',
-            // src: '/assets/usecase/usecase-2.png',
+            // src: '/assets/usecase/usecase-ekyc.png',
+            src: '/assets/usecase/usecase-2.png',
             applications: [
                 t("use_case_2_app1"),
                 t("use_case_2_app2"),
@@ -42,7 +42,7 @@ const UseCase = ({sectionRef}) => {
             title: t("use_case_3_mini_text"),
             name: t("use_case_3_title"),
             desc: t("use_case_3_description"),
-            src: '/assets/usecase/usecase-3.png',
+            src: '/assets/usecase/usecase-3-new.png',
             applications: [
                 t("use_case_3_app1"),
                 t("use_case_3_app2"),
