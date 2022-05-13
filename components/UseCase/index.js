@@ -11,7 +11,7 @@ const UseCase = ({sectionRef}) => {
             title: t("eKYC & User Onboarding"),
             name: t("Desc eKYC"),
             desc: t('Desc eKYC & User Onboarding'),
-            src: '/assets/usecase/usecase-ekyc.png',
+            src: '/assets/usecase/usecase-1.png',
             applications: [
                 t('use_case_1_app1'),
                 t('use_case_1_app2'),
@@ -30,6 +30,7 @@ const UseCase = ({sectionRef}) => {
             name: t("use_case_2_title"),
             desc: t("use_case_2_description"),
             src: '/assets/usecase/usecase-ekyc.png',
+            // src: '/assets/usecase/usecase-2.png',
             applications: [
                 t("use_case_2_app1"),
                 t("use_case_2_app2"),
@@ -41,7 +42,7 @@ const UseCase = ({sectionRef}) => {
             title: t("use_case_3_mini_text"),
             name: t("use_case_3_title"),
             desc: t("use_case_3_description"),
-            src: '/assets/usecase/usecase-ekyc.png',
+            src: '/assets/usecase/usecase-3.png',
             applications: [
                 t("use_case_3_app1"),
                 t("use_case_3_app2"),
@@ -130,7 +131,7 @@ const UseCase = ({sectionRef}) => {
                     >
                         {dataUseCase.map((item, index) => ( <div key={index} className={'w-full h-auto md:h-screen flex flex-col md:flex-row bg-[#05204D]'}>
                                 <div className={'relative flex justify-center items-center w-full md:w-1/2 h-[18rem] md:h-full my-16 md:my-0'}>
-                                    <div className={'absolute -top-14 right-0 w-auto h-full flex justify-center items-center'}>
+                                    <div className={'w-full h-full flex justify-center items-center usecase-img-2 px-10'}>
                                         <Image preview={false} src={item.src} className={'z-10 justify-center w-full h-full'} />
                                     </div>
                                 </div>
