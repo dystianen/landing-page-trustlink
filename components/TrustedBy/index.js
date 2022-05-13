@@ -59,7 +59,7 @@ const TrustedBy = ({sectionRef}) => {
     }
 
     return (
-        <div className={'relative flex items-center w-full h-auto py-28 sm:py-40 lg:py-52 pl-12 md:pl-20 z-50 bg-[#F1F1F1] my-10 sm:my-0 sm:mb-20 section-most-top'} ref={sectionRef}>
+        <div className={'relative flex items-center w-full h-auto py-28 sm:py-40 lg:py-52 pl-12 md:pl-20 z-50 bg-[#F1F1F1] my-10 sm:my-0 sm:mb-20 section-most-top-client'} ref={sectionRef}>
             <div className={'h-full sm:h-auto absolute bottom-0 right-0 about-img'}>
                 <Image preview={false} className="w-auto opacity-30" src={'/assets/images/accent-master-connecting-dots-2.png'}/>
             </div>
