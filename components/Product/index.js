@@ -68,8 +68,8 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             name2: 'Verify',
             coming_soon : '',
             src: isSafari ? '/assets/product/bg-white/TrustVerify.mp4' : '/assets/product/TrustVerify.webm',
-            subhead: t('Subhead trust verify'),
-            desc: t('Desc TrustVerification'),
+            subhead: t('trust_verify_title'),
+            desc: t('trust_verify_subtitle'),
             size: '100%',
             width_subhead: 'lg:w-[25rem] xl:w-[38rem]',
             width_desc: 'lg:w-[33rem] xl:w-[39rem] 2xl:w-[48rem]'
@@ -79,8 +79,8 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             name2: 'Scan',
             coming_soon : '',
             src: isSafari ? '/assets/product/bg-white/TrustScan.mp4' : '/assets/product/TrustScan.webm',
-            subhead: t('Subhead trust scan'),
-            desc: t('Desc TrustScan'),
+            subhead: t('trust_scan_title'),
+            desc: t('trust_scan_subtitle'),
             size: '100%',
             width_subhead: 'lg:w-[23rem] xl:w-auto',
             width_desc: 'lg:w-[33rem] xl:w-[41rem] 2xl:w-[50rem]'
@@ -91,8 +91,8 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             name2: 'Live',
             coming_soon : '',
             src: isSafari ? '/assets/product/bg-white/TrustLive-short.mp4' : '/assets/product/TrustLive-short.webm',
-            subhead: t('Subhead trust live'),
-            desc: t('Desc TrustLive'),
+            subhead: t('trust_live_title'),
+            desc: t('trust_live_subtitle'),
             size: '100%',
             width_subhead: 'lg:w-[33rem] xl:w-[39rem]',
             width_desc: 'lg:w-[34rem] xl:w-[41rem] 2xl:w-[50rem]'
@@ -110,8 +110,8 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             name: 'Trust',
             name2: 'Vision',
             src: isSafari ? '/assets/product/bg-white/TrustVision.mp4' : '/assets/product/TrustVision.webm',
-            subhead: t('Subhead trust vision'),
-            desc: t('Desc TrustVision'),
+            subhead: t('trust_vision_title'),
+            desc: t('trust_vision_subtitle'),
             size: '90%',
             width_subhead: 'lg:w-[25rem] 2xl:w-[50rem]',
             width_desc: 'lg:w-[33rem] xl:w-[39rem] 2xl:w-[50rem]'
@@ -169,11 +169,11 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
     }
 
     return (
-        <div className={'relative h-auto w-full'}>
+        <div className={'relative h-auto w-full section-most-top'} ref={productRef}>
             <div className={'h-[35%] lg:h-auto absolute top-24 -left-60 about-img'}>
                 <Image preview={false} className="h-full w-auto " src={'/assets/images/accent-master-connecting-dots-1.png'}/>
             </div>
-            <div className={'flex w-full justify-center'}>
+            <div className={'flex w-full justify-center'} ref={productRef}>
                 <div className={'flex flex-row items-center z-10 mb-2'}>
                     <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                         <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center'}>{t('One and For All')}</p>
@@ -190,7 +190,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                     </div>
                 </div>
             </div>
-            <div ref={productRef}>
+            <div >
                 <div className={'relative w-screen lg:w-auto'}>
                     <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-32 sm:h-48 -ml-12 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => onChangeProduct(num)}>
                         {data.map((it, index) => (

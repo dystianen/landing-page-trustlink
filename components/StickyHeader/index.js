@@ -2,21 +2,53 @@ import { Image } from 'antd';
 import { useTranslation } from "next-i18next";
 import Link from 'next/link';
 import React ,{ useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { DrawerSlide } from '../DrawerSlide';
+import {startCase} from 'lodash';
+const emptyFunction = () => {}
 
 const StickyHeader = (props) => {
-    const {changeMenuOpen, isMenuOpen} = props;
+    const {changeMenuOpen, isMenuOpen, onClickProduct=emptyFunction, onClickClients=emptyFunction, onClickMembership=emptyFunction, onClickUseCases=emptyFunction, onClickAboutUs=emptyFunction, onClickTopPage = emptyFunction} = props;
     const { t, i18n } = useTranslation('common');
     const [header, setHeader] = useState("header");
     const [isOpen, setIsOpen] = useState(isMenuOpen);
-    const genericHamburgerLine = `h-1 my-1 rounded-full bg-[#FF6600] transition ease transform duration-300`;
-    const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-[#FF6600] transition ease transform duration-300`;
+    const genericHamburgerLine = `h-1 my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
+    const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
+    const mobile = useMediaQuery({ query: '(max-width: 576px)' });
+    const tablet = useMediaQuery({ query: '(max-width: 980px)' });
 
-    useEffect(()=>{
+    const menu = [
+        {
+            name: 'Home',
+            onClicked : onClickTopPage,
+        }, {
+        
+            name: t('About Us.'),
+            onClicked : onClickAboutUs,
+        }, {
+
+            name: t('Products'),
+            onClicked : onClickProduct,
+        }, {
+            name: t('Use Cases'),
+            onClicked :onClickUseCases
+
+        }, {
+            name: 'Clients',
+            onClicked :onClickClients
+        },
+        {
+            name: 'Membership',
+            onClicked :onClickMembership
+        }
+    ];
+
+    useEffect(() => {
         setIsOpen(isMenuOpen)
-    }, [isMenuOpen])
+    }, [isMenuOpen]);
 
-    const listenScrollEvent = event => {
+
+    const listenScrollEvent = _event => {
         if (window.scrollY < 73) {
         return setHeader("ease-in duration-200 ");
         } else if (window.scrollY > 70) {
@@ -29,24 +61,25 @@ const StickyHeader = (props) => {
 
         return () => window.removeEventListener("scroll", listenScrollEvent);
     }, []);
-     const menu = [
-        {
-            name: t('About Us.'),
-        }, {
-            name: t('Products'),
-        }, {
-            name: t('Use Cases'),
-        },
-    ]
     return (
          <div className={`z-[60] w-full sticky top-0 ${header}`}>
             <div className={' w-full top-0 flex flex-row'} style={{ justifyContent: 'space-between' }}>
-                    <div className={'flex items-center'}>
+                    <div className={'flex items-center ml-12 md:ml-20'}>
                         <Image preview={false} className="cursor-pointer relative w-14 md:w-20 top-0" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }}  />
                         <Image preview={false} className="relative h-14 md:h-20 w-auto" src={'/assets/logo/text-only.png'} />
                     </div>
                 <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12  z-30'}>
-                    <DrawerSlide menu={menu} isOpen={isOpen} />
+                    <DrawerSlide
+                        menu={menu}
+                        setOpen={changeMenuOpen}
+                        isOpen={isOpen} />
+                    {mobile || tablet ? '' : menu.map((items, _props) => (
+                        <div className='mt-6 mx-2 cursor-pointer ' onClick={items.onClicked}>
+                            <p>
+                               {items.name}
+                            </p>
+                        </div>
+                    ))}
                     <div className={'w-16 sm:w-20 h-20 transparent  top-6 left-0 p-5'} style={{ zIndex: 10000 }}>
                         <button className="flex flex-col w-full h-full justify-center group" style={{ zIndex: 10000 }} onClick={() =>{
                             changeMenuOpen(!isOpen)
@@ -57,14 +90,7 @@ const StickyHeader = (props) => {
                             <div className={`${genericHamburgerLine} self-end ${isOpen ? "w-full -rotate-45 -translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100 z[60]"}`}/>
                         </button>
                     </div>
-                        {/* <Link href={'/'} locale="en">
-                            <p className={`cursor-pointer font-medium ${i18n.language === 'en' && 'text-[#FE7519]'}`}>EN</p>
-                        </Link>
-                        <div className={'w-px h-5 mt-1 mx-2'} style={{ backgroundColor: '#818FA6' }} />
-                        <Link href={'/'} locale="id">
-                            <p className={`cursor-pointer font-medium ${i18n.language === 'id' && 'text-[#FE7519]'}`}>ID</p>
-                        </Link> */}
-                    </div>
+                </div>
              </div>
         </div>
     );

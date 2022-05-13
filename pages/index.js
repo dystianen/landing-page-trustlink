@@ -42,7 +42,10 @@ export default function Home() {
     const contactUsRef = useRef(null);
     const sectionProductRef = useRef(null);
     const topSectionRef = useRef(null);
-
+    const membershipRef = useRef(null);
+    const clientsRef = useRef(null);
+    const useCasesRef = useRef(null)
+    const aboutUsRef = useRef(null);
     const menu = [
         {
             name: t('About Us.'),
@@ -78,6 +81,7 @@ export default function Home() {
         },
     ]
 
+
     const handleClickProduct = (index) => {
         setIndexProduct(index)
         sectionProductRef.current.scrollIntoView({behavior: 'smooth'})
@@ -94,7 +98,15 @@ export default function Home() {
 
     return (
         <div>
-            <StickyHeader changeMenuOpen={setIsOpen} isMenuOpen={isOpen}/>
+            <StickyHeader
+                changeMenuOpen={setIsOpen}
+                isMenuOpen={isOpen}
+                onClickProduct={() => sectionProductRef.current.scrollIntoView({ behavior: 'smooth' })}
+                onClickMembership={() => membershipRef.current.scrollIntoView({ behavior: 'smooth' }) }
+                onClickClients={() => clientsRef.current.scrollIntoView({ behavior: 'smooth' }) }
+                onClickUseCases={() => useCasesRef.current.scrollIntoView({ behavior: 'smooth' }) }
+                onClickAboutUs={() => aboutUsRef.current.scrollIntoView({ behavior: 'smooth' }) }
+                onClickTopPage={() => window.scrollTo({top: 0, behavior: 'smooth'}) } />
             <div className="overflow-hidden">
                 {/*<DrawerSlide menu={menu} isOpen={isOpen} />*/}
                 <div className={'fixed w-16 sm:w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 999999 }}>
@@ -132,13 +144,17 @@ export default function Home() {
                                 {/*<div className={'home-next-generation text-3xl sm:text-4xl md:text-5xl lg:text-5xl'}>*/}
                                 {/*    <span className={'mb-2'}><span className={''}>Trust-Centric Solution</span> For Identity Management  And Open Finance Platform</span>*/}
                                 {/*</div>*/}
-                                <div className={'home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem] font-medium z-10'}>
+                                <div className={'mt-24 lg:mt-32 home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem] font-medium z-10'}>
                                     <span className={'block leading-tight'}>
                                         <span className={'font-bold block text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl mb-4'}>{t('Trust Centric Solution')}</span>
                                         <span>{t('For Identity Management')}</span>
                                         {/*<br/> {t('And Open Finance Platform')}*/}
                                     </span>
+                                    <div>
+                                        <p className={'mt-8 text-justify md:text-left w-[20rem] md:w-[36rem] lg:w-[42rem] text-sm md:text-xl lg:text-2xl tracking-normal font-normal'} style={{lineHeight: 1.75}}>{t('Desc Top Page')}</p>
+                                    </div>
                                 </div>
+
                             </div>
                         </section>
                         <section className={'absolute top-[100%] md:top-20 right-10 md:-right-10 lg:-right-12 xl:-right-28 w-3/5 h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
@@ -164,7 +180,7 @@ export default function Home() {
                     />
                 </div>
                 <section>
-                    <AboutMePage />
+                    <AboutMePage  sectionRef={aboutUsRef}/>
                 </section>
                 <section className={'pl-12 md:pl-20 mt-52'}>
                     <Product
@@ -174,50 +190,50 @@ export default function Home() {
                         setIndexProduct={setIndex}
                     />
                 </section>
-                <UseCase />
+                <UseCase sectionRef={useCasesRef} />
                 <Banner />
-                <TrustedBy />
+                <TrustedBy sectionRef={clientsRef}/>
                 <WeAimed />
                 <div className="h-[20vh]" />
-                <CertificationMembership />
+                <CertificationMembership sectionRef={membershipRef}/>
                 <div className="h-quarter" />
                 <ContactUs sectionRef={contactUsRef } />
                 <Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>
             </div>
-            <div>
-                <ParticlePage
-                    dimention={{
-                        width: mobile ? '100%' : '50%',
-                        height: '100vh'
-                    }}
-                    numberValue={120}
-                    opacity={0.8}
-                    className={'home-plexus'}
-                />
-            </div>
-            <section>
-                <AboutMePage />
-            </section>
-            <section className={'pl-12 md:pl-20 mt-52'}>
-                <Product
-                    onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
-                    productRef={sectionProductRef}
-                    indexProduct={indexProduct}
-                    setIndexProduct={setIndex}
-                />
-            </section>
-            <UseCase
-                onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
-            />
-            <Banner />
-            <TrustedBy />
-            <WeAimed />
-            <div className="h-[5vh] md:h-[20vh]" />
-            <CertificationMembership />
-            <div className="h-quarter" />
-            <ContactUs sectionRef={contactUsRef } />
-            <MapAddress />
-            <Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>
+            {/*<div>*/}
+            {/*    <ParticlePage*/}
+            {/*        dimention={{*/}
+            {/*            width: mobile ? '100%' : '50%',*/}
+            {/*            height: '100vh'*/}
+            {/*        }}*/}
+            {/*        numberValue={240}*/}
+            {/*        opacity={0.8}*/}
+            {/*        className={'home-plexus'}*/}
+            {/*    />*/}
+            {/*</div>*/}
+            {/*<section>*/}
+            {/*    <AboutMePage />*/}
+            {/*</section>*/}
+            {/*<section className={'pl-12 md:pl-20 mt-52'}>*/}
+            {/*    <Product*/}
+            {/*        onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }*/}
+            {/*        productRef={sectionProductRef}*/}
+            {/*        indexProduct={indexProduct}*/}
+            {/*        setIndexProduct={setIndex}*/}
+            {/*    />*/}
+            {/*</section>*/}
+            {/*<UseCase*/}
+            {/*    onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }*/}
+            {/*/>*/}
+            {/*<Banner />*/}
+            {/*<TrustedBy />*/}
+            {/*<WeAimed />*/}
+            {/*<div className="h-[5vh] md:h-[20vh]" />*/}
+            {/*<CertificationMembership />*/}
+            {/*<div className="h-quarter" />*/}
+            {/*<ContactUs sectionRef={contactUsRef } />*/}
+            {/*<MapAddress />*/}
+            {/*<Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>*/}
         </div>
     )
 }

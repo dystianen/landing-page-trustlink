@@ -610,3 +610,21 @@ svg { vertical-align: baseline; }
 @media only screen and (min-device-width: 420px) and (max-device-width: 519px){.triv-top {top: 40px !important}}
 @media only screen and (min-device-width: 520px) and (max-device-width: 575px){.triv-top {top: 50px !important}}
 @media only screen and (min-device-width: 576px) and (max-device-width: 639px) {.triv-top {top: 60px !important}}
+
+
+.use-case-applications {
+  list-style: none;
+}
+
+.use-case-applications li::before {
+  content: "\2022";
+  color: #FF6703;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.section-most-top{
+  scroll-margin-top: 6rem;
+}
