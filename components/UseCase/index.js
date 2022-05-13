@@ -72,7 +72,7 @@ const UseCase = ({sectionRef}) => {
         <div className={'w-full h-full pl-6 sm:pl-12 md:pl-20 mt-10'} >
             <div className={'relative w-full'}>
                          <div className={'absolute right-[-20vh] z-0 top-[-20vh]'}>
-                            <Image className={'z-10 w-[550px]'} preview={ false} src={'/assets/usecase/group-orange.png'} />
+                            <Image className={'z-10 w-[30vw]'} preview={ false} src={'/assets/usecase/group-orange.png'} />
                         </div>
                     </div>
             <div className={'w-full h-full'}>
