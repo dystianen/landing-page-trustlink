@@ -72,7 +72,7 @@ const UseCase = ({sectionRef}) => {
         <div className={'w-full h-full pl-12 md:pl-20 mt-10'} >
             <div className={'relative w-full'}>
                          <div className={'absolute right-[-20vh] z-0 top-[-20vh]'}>
-                            <Image className={'z-10 w-[550px]'} preview={ false} src={'/assets/usecase/group-orange.png'} /> 
+                            <Image className={'z-10 w-[550px]'} preview={ false} src={'/assets/usecase/group-orange.png'} />
                         </div>
                     </div>
             <div className={'w-full h-full'}>
@@ -91,10 +91,10 @@ const UseCase = ({sectionRef}) => {
                     </div> */}
 
                 </div>
-                <div className={'flex flex-col h-auto  pl-20 bg-[#132F70] section-most-top'} ref={sectionRef}>
+                <div className={'flex flex-col h-auto  pl-20 bg-[#132F70] section-most-top-use-case'} ref={sectionRef}>
                     <div className={'relative w-full '}>
                         <div className={'absolute -left-80 z-0 -top-16 opacity-40'}>
-                            <Image className={'z-10 w-auto'} preview={ false} src={'/assets/usecase/bg-group.png'} /> 
+                            <Image className={'z-10 w-auto'} preview={ false} src={'/assets/usecase/bg-group.png'} />
                         </div>
                     </div>
                      <div className={'mt-10 w-3/4'}>
