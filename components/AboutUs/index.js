@@ -42,7 +42,7 @@ const AboutMePage = ({sectionRef}) => {
                             </div>
                             {/*<Fade when={transition} duration={1600}>*/}
                             <div>
-                                <Title className={"font-bold text-xl md:text-2xl lg:text-3xl montserrat"}>
+                                <Title className={"font-bold text-lg md:text-xl lg:text-2xl montserrat"}>
                                         <span className={'block leading-snug '}>{t('about_us_main_text')}</span>
                                     </Title>
                             </div>
