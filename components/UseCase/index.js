@@ -86,7 +86,7 @@ const UseCase = ({sectionRef}) => {
                     </div> */}
 
                 </div>
-                <div className={'flex flex-col h-auto items-start pl-20 bg-[#132F70] section-most-top'} ref={sectionRef}>
+                <div className={'flex flex-col h-auto  pl-20 bg-[#132F70] section-most-top'} ref={sectionRef}>
                     <div className={'relative w-full bg-white'}>
                         <div className={'absolute'}>
                             <Image className={'z-10 w-[2500px]'} src={'/assets/usecase/bg-group.png'} /> 
@@ -139,28 +139,28 @@ const UseCase = ({sectionRef}) => {
                         animation={'slide'}
                         onChange={num => setCurrent(num)}
                     >
-                        {dataUseCase.map((item, index) => (<div key={index} className={'w-full h-auto md:h-[95vh] flex flex-col md:flex-row '}>
+                        {dataUseCase.map((item, index) => (<div key={index} className={'w-full h-[68vh] flex flex-col md:flex-row bg-[#132F70]'}>
                                 <div className={'relative flex justify-center items-center w-full md:w-1/2 h-[18rem] md:h-full my-16 md:my-0'}>
-                                    <div className={'w-full h-full flex justify-center items-center usecase-img-2 px-10'}>
-                                        <Image preview={false} src={item.src} className={'z-10 justify-center w-full h-full'} />
+                                    <div className={'h-[65vh] flex justify-center items-center usecase-img-2 px-10'}>
+                                        <Image preview={false} src={item.src} className={'z-10 justify-center h-[50vh]'} />
                                     </div>
                                 </div>
-                                <div className={'flex flex-col justify-center w-full md:w-1/2 h-auto md:h-full'}>
-                                    <div className={"mb-7"}>
+                                <div className={'flex flex-col justify-start w-full md:w-1/2 h-[67vh] md:h-full'}>
+                                    <div className={"mb-0"}>
                                         <p className={'text-sm lg:text-base xl:text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
                                     </div>
-                                    <div className={'text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white montserrat text-center md:text-left w-full '}>
-                                        <p className={'mb-8 leading-snug md:leading-tight w-auto md:w-[90%] lg:w-[83%] xl:w-3/4'}>
+                                    <div className={'text-xl md:text-2xl lg:text-3xl xl:text-2xl text-white montserrat text-center md:text-left w-full '}>
+                                        <p className={'mb-3 leading-snug md:leading-tight w-auto md:w-[90%] lg:w-[83%] xl:w-3/4'}>
                                             {item.name}
                                         </p>
                                     </div>
-                                    <div className={'mb-6 px-4 sm:px-12 md:px-0'}>
-                                        <p className={"text-white text-sm lg:text-base xl:text-lg w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
+                                    <div className={'mb-2 px-4 sm:px-12 md:px-0'}>
+                                        <p className={"text-white text-xs lg:text-sm xl:text-base w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
                                             {item.desc}
                                         </p>
                                     </div>
-                                    <div className={'mb-6 px-4 sm:px-12 md:px-0'}>
-                                        <p className={"mb-3 text-white text-base lg:text-lg xl:text-xl w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
+                                    <div className={'mb-3 px-4 sm:px-12 md:px-0'}>
+                                        <p className={"mb-1.5 text-white text-sm lg:text-base xl:text-lg w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
                                             {t('use_case_application')}
                                         </p>
                                         <ul className={'use-case-applications'}>
