@@ -102,7 +102,7 @@ export default function Home() {
                 changeMenuOpen={setIsOpen}
                 isMenuOpen={isOpen}
                 onClickProduct={() => sectionProductRef.current.scrollIntoView({ behavior: 'smooth' })}
-                onClickMembership={() => membershipRef.current.scrollIntoView({ behavior: 'smooth' }) }
+                onClickContactUs={() => contactUsRef.current.scrollIntoView({ behavior: 'smooth' }) }
                 onClickClients={() => clientsRef.current.scrollIntoView({ behavior: 'smooth' }) }
                 onClickUseCases={() => useCasesRef.current.scrollIntoView({ behavior: 'smooth' }) }
                 onClickAboutUs={() => aboutUsRef.current.scrollIntoView({ behavior: 'smooth' }) }
