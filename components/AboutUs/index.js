@@ -22,7 +22,7 @@ const AboutMePage = ({sectionRef}) => {
         <div className='pl-12 md:pl-20 mt-[10vw] h-auto flex flex-col'>
             <div className={'relative w-full h-auto items-start flex justify-center'}>
                 <div className={'flex relative w-full lg:w-[95%] xl:w-[90%]'}>
-                        <div className={'absolute z-20 w-full left-[83%] top-0'}>
+                        <div className={'absolute z-20  left-[83%] top-0'}>
                             <Image preview={false} src={"/assets/about-logo.png"} className={'h-full w-full'} />
                         </div>
                     <span className={'z-10 about-img w-full'}>
