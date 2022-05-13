@@ -21,6 +21,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import Link from "next/link";
 import StickyHeader from "../components/StickyHeader";
 import {MapAddress} from "../components/MapAddress";
+import WhyUsPage from "../components/WhyUs";
 
 export const checkRerouteLoggedUser = (store, router) => {
     if (typeof window !== 'undefined') {
@@ -190,6 +191,9 @@ export default function Home() {
                         setIndexProduct={setIndex}
                     />
                 </section>
+
+                <WhyUsPage />
+
                 <UseCase sectionRef={useCasesRef} />
                 <Banner />
                 <TrustedBy sectionRef={clientsRef}/>
