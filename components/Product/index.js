@@ -20,7 +20,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
     const lg = useMediaQuery({query: '(min-width: 1024px)'})
     const md = useMediaQuery({query: '(min-width: 768px)'})
     const sm = useMediaQuery({query: '(min-width: 576px)'})
-    const xs = useMediaQuery({query: '(max-width: 476px)'})
+    const xs = useMediaQuery({query: '(min-width: 425px)'})
 
     const shadow = xl ? 20 : lg ? 10 : md ? 15: sm ? 15 : 5
     const step = xs ? 'w-10 h-10' : 'w-14 h-14'
@@ -70,7 +70,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             src: isSafari ? '/assets/product/bg-white/TrustVerify.mp4' : '/assets/product/TrustVerify.webm',
             subhead: t('trust_verify_title'),
             desc: t('trust_verify_subtitle'),
-            size: '100%',
+            size: md ? '100%' : xs ? '50%' : '80%',
             width_subhead: 'lg:w-[25rem] xl:w-[38rem]',
             width_desc: 'lg:w-[33rem] xl:w-[39rem] 2xl:w-[48rem]'
         },
@@ -81,7 +81,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             src: isSafari ? '/assets/product/bg-white/TrustScan.mp4' : '/assets/product/revision-13-05/TrustScan.webm',
             subhead: t('trust_scan_title'),
             desc: t('trust_scan_subtitle'),
-            size: '100%',
+            size: md ? '100%' : xs ? '50%' : '80%',
             width_subhead: 'lg:w-[23rem] xl:w-auto',
             width_desc: 'lg:w-[33rem] xl:w-[41rem] 2xl:w-[50rem]'
         },
@@ -93,7 +93,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             src: isSafari ? '/assets/product/bg-white/TrustLive-short.mp4' : '/assets/product/revision-13-05/TrustLive-short.webm',
             subhead: t('trust_live_title'),
             desc: t('trust_live_subtitle'),
-            size: '100%',
+            size: md ? '100%' : xs ? '50%' : '80%',
             width_subhead: 'lg:w-[33rem] xl:w-[39rem]',
             width_desc: 'lg:w-[34rem] xl:w-[41rem] 2xl:w-[50rem]'
         },
@@ -112,7 +112,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             src: isSafari ? '/assets/product/bg-white/TrustVision.mp4' : '/assets/product/revision-13-05/TrustVision.webm',
             subhead: t('trust_vision_title'),
             desc: t('trust_vision_subtitle'),
-            size: '90%',
+            size: md ? '90%' : xs ? '50%' : '80%',
             width_subhead: 'lg:w-[25rem] 2xl:w-[50rem]',
             width_desc: 'lg:w-[33rem] xl:w-[39rem] 2xl:w-[50rem]'
         },
@@ -130,10 +130,10 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
     const Item = ({item}) => {
         return (
             // <div className={'flex flex-col md:flex-row w-full min-h-[43rem] md:h-[28rem] lg:h-[38rem] xl:h-[42rem] bg-green-100'}>
-            <div className={'flex flex-col md:flex-row w-full min-h-[50vh] md:h-[50vh] lg:h-[50vh] xl:h-[50vh] mt-0'}>
-                <div className={`flex justify-center md:justify-end items-center w-full md:w-3/6 lg:w-2/4 text-center ${isSafari ? 'z-30' : 'z-10'}`}>
+            <div className={'flex flex-col md:flex-row w-full min-h-[50vh] md:h-[30rem] xl:h-[28rem] mt-0'}>
+                <div className={`flex justify-center items-center w-screen md:w-3/6 lg:w-2/4 text-center ${isSafari ? 'z-30' : 'z-10'}`}>
                     <ReactPlayer
-                        className=''
+                        className='ml-6 sm:ml-0 '
                         url={item.src}
                         width={item.size}
                         height={item.size}
@@ -144,7 +144,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                 </div>
                 <div className={'flex flex-col justify-center w-full md:w-3/6 lg:w-2/4 pl-12 md:pl-0 z-40 mt-0'}>
                     <div>
-                        <p className={'text-center md:text-left text-3xl md:text-4xl lg:text-6xl mb-0 montserrat text-gray-400 font-bold leading-none'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-[#FF6703]' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-lg md:text-xl'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
+                        <p className={'text-center md:text-left text-3xl md:text-4xl lg:text-4xl mb-0 montserrat text-gray-400 font-bold leading-none mt-4'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-[#FF6703]' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-lg md:text-xl'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
                     </div>
                     <p className={`w-[95%] md:w-[80%] ${item.width_subhead} text-lg md:text-lg lg:text-xl mb-0 montserrat leading-none font-bold mt-5 text-center md:text-left`} style={{color: '#04204D'}}>{item.subhead}</p>
                     <div className={'mt-5 md:mt-5 ' + item.width_desc}>
@@ -153,7 +153,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         </p>
                         <a
                             type="primary"
-                            className={'rounded-lg bg-[#04204D] mt-2 flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 mr-4 md:mr-0 md:w-1/2 lg:w-3/12 montserrat'}
+                            className={'rounded-lg  mt-2 flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 mr-4 md:mr-0 md:w-1/2 lg:w-3/12 montserrat '}
                             onClick={onClickContact}
                         >
                             {t('Contact Us')}
@@ -189,23 +189,24 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                     </div>
                 </div>
             </div>
-            <div className={'pl-6'}>
+            <div >
                 <div className={'relative w-screen lg:w-auto overflow-visible'}>
-                    <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-20 sm:h-36 -ml-12 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => onChangeProduct(num)}>
+                    <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-20 sm:h-36 -ml-16 sm:-ml-12 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => onChangeProduct(num)}>
                         {data.map((it, index) => (
                             <Step
                                 className={'flex justify-center items-center overflow-visible'}
                                 key={index}
                                 icon={
-                                    <div className={`flex flex-col justify-content items-center ${current === index ? 'mt-2 lg:mt-0' : 'mt-12 sm:mt-10 lg:mt-12'}`}>
-                                        <div className={`p-0 ${index === (data.length - 1) ? `ml-[16px]` : ``} rounded-full border-4 ${current === index ? `w-10 h-10 sm:w-14 md:w-16 lg:w-24 sm:h-14 md:h-16 lg:h-24 border-[#FF6703]` : `w-8 h-8 sm:w-12 md:w-14 lg:w-20 sm:h-12 md:h-14 lg:h-20 border-[#FF6703]`} mb-2 bg-white z-10 flex justify-center items-center`}
+                                    <div className={`flex flex-col justify-center items-start sm:items-center ${current === index ? 'mt-2 lg:mt-0' : 'mt-10 sm:mt-10 lg:mt-12'}`}>
+                                        <div className={`p-0 ${index === (data.length - 1) ? `sm:ml-[16px]` : ``} rounded-full border-4 ${current === index ? `w-14 h-14 sm:w-[4.75rem] lg:w-24 sm:h-[4.75rem] lg:h-24 border-[#FF6703]` : `w-12 h-12 sm:w-16 lg:w-20 sm:h-16 lg:h-20 border-[#FF6703]`} mb-2 bg-white z-10 flex justify-center items-center`}
                                              style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? `0 0 ${shadow}px 1px #FE6601` : null}}
                                         >
                                             <Tooltip title={'Trust' +it.name}>
-                                                <Image preview={false} src={it.icon} className={`w-[12px] sm:w-[18px] md:w-[28px] lg:w-[35px]`}/>
+                                                <Image preview={false} src={it.icon} className={`w-[24px] sm:w-[28px] md:w-[28px] lg:w-[35px]`}/>
                                             </Tooltip>
                                         </div>
-                                        <p className={`w-24 md:w-40 text-[10px] sm:text-sm lg:text-lg montserrat text-[#B4BCC9] ${current === index ? 'hidden' : null}`}><span className={'font-bold hidden sm:contents'}>Trust</span>{it.name}</p>
+                                        <p className={`w-24 md:w-40 text-[10px] sm:text-sm lg:text-lg montserrat ${current === index ? 'hidden' : null}`}>
+                                            <span className={'font-bold hidden sm:contents text-[#04204D]'}>Trust</span><span className={'text-[#FF6703]'}>{it.name}</span></p>
                                     </div>
                                 }
                             />

@@ -6,7 +6,9 @@ import {Product} from "./product"
 import Fade from 'react-reveal/Fade';
 import { UseCases } from "./usecases";
 import { useTranslation } from "next-i18next";
-import {About} from "./about";
+import { About } from "./about";
+import { useMediaQuery } from 'react-responsive';
+
 
 export const DrawerSlide = observer((props) => {
     const {menu, isOpen, onClickContact, onClose} = props;
@@ -15,6 +17,7 @@ export const DrawerSlide = observer((props) => {
     const [showUseCase, setShowUseCase] = useState(false);
     const [showAbout, setShowAbout] = useState(false);
     const { t } = useTranslation();
+    const tablet = useMediaQuery({ query: '(max-width: 980px)' });
 
     useEffect(() => {
         if(!isOpen){

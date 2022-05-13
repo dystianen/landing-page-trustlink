@@ -140,11 +140,11 @@ export default function Home() {
                             {/*    <Image preview={false} src={'/assets/scroll-down.svg'} />*/}
                             {/*</div>*/}
                             {/*</div>*/}
-                            <div className={'w-max h-[40vh] md:h-full md:min-h-screen lg:pl-8 flex flex-col justify-end md:justify-center'}>
+                            <div className={'w-max h-screen lg:h-[40vh] md:h-full md:min-h-screen lg:pl-8 flex flex-col justify-start md:justify-center'}>
                                 {/*<div className={'home-next-generation text-3xl sm:text-4xl md:text-5xl lg:text-5xl'}>*/}
                                 {/*    <span className={'mb-2'}><span className={''}>Trust-Centric Solution</span> For Identity Management  And Open Finance Platform</span>*/}
                                 {/*</div>*/}
-                                <div className={'mt-24 lg:mt-32 home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem] font-medium z-10'}>
+                                <div className={'md:mt-24 lg:mt-32 home-next-generation-sub text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem] font-medium z-10'}>
                                     <span className={'block leading-tight'}>
                                         <span className={'font-bold block text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl mb-4'}>{t('Trust Centric Solution')}</span>
                                         <span>{t('For Identity Management')}</span>
@@ -157,7 +157,7 @@ export default function Home() {
 
                             </div>
                         </section>
-                        <section className={'absolute top-[100%] md:top-20 right-10 md:-right-10 lg:-right-12 xl:-right-28 w-3/5 h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
+                        <section className={'absolute top-[17rem] md:top-20 right-10 md:-right-10 lg:-right-12 xl:-right-28 w-3/5 h-1/2 md:h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
                             {
                                 product.map((it,index) => (
                                     <div key={index} className={it.className} onClick={()=> handleClickProduct(it.productIndex) }>
@@ -190,7 +190,7 @@ export default function Home() {
                         setIndexProduct={setIndex}
                     />
                 </section>
-                <UseCase sectionRef={useCasesRef} />
+                <UseCase sectionRef={useCasesRef} onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }/>
                 <Banner />
                 <TrustedBy sectionRef={clientsRef}/>
                 <WeAimed />

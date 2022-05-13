@@ -67,7 +67,7 @@ export const Product = observer(({show, setShow}) => {
                                             <Image preview={false} className="w-[6rem] sm:w-[3rem] md:w-[5rem] lg:w-32 xl:w-20" src={data.image}/>
                                         </div>
                                         <div className={'relative h-full flex flex-col justify-center px-2 lg:px-2 xl:px-4'}>
-                                            <p className={'md:text-base lg:text-xl text-[#1D365F] leading-tight mt-4 md:mt-0 md:mb-2 z-10'}>Trust<span className="text-orange">{data.title}</span></p>
+                                            <p className={'md:text-base lg:text-xl text-[#04204D] leading-tight mt-4 md:mt-0 md:mb-2 z-10'}>Trust<span className="text-orange">{data.title}</span></p>
                                             <p className={'montserrat md:text-xs text-[#818FA6] xl:w-60 mb-5 md:mb-0 z-10 text-justify'}>{data.description}</p>
                                         </div>
                                     </div>
