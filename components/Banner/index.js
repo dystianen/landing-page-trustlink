@@ -13,9 +13,9 @@ const Banner = () => {
                     <div className="w-full md:w-3/5 h-full flex justify-center items-center z-10">
                         <div className={'md:w-[28rem] lg:w-[36rem] xl:w-[42rem] ml-4'}>
                             <p className="montserrat text-[#161D24] text-lg lg:text-xl xl:text-2xl font-medium mb-0 ">
-                                {/*<span className={'xl:text-[26px] font-bold'}>*/}
-                                {/*    {t('BannerText1')}*/}
-                                {/*</span>*/}
+                                <span className={'xl:text-[26px] font-bold'}>
+                                    {t('BannerText1')}
+                                </span><br/>
                                 {t('BannerText2')}
                             </p>
                         </div>
