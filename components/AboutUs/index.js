@@ -41,12 +41,12 @@ const AboutMePage = ({sectionRef}) => {
                         <div className={'flex flex-col sm:pl-32 md:pl-12 lg:pl-24 xl:pl-40 2xl:pl-[15%] xl:pt-10 '}>
                             <div className={'flex flex-row items-center mb-2'}>
                                 <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
-                                <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>{t('About Us')}</p>
+                                <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>{t('About Us.')}</p>
                             </div>
                             {/*<Fade when={transition} duration={1600}>*/}
                             <div>
                                 <Title className={"font-bold w-full lg:w-[90%] xl:w-[90%] text-lg md:text-xl lg:text-2xl montserrat"} style={{whiteSpace: 'pre-line'}}>
-                                        <span className={'block leading-snug '}>{t('about_us_main_text')}</span>
+                                        <span className={'block leading-snug text-[#04204D]'}>{t('about_us_main_text')}</span>
                                     </Title>
                             </div>
                         </div>

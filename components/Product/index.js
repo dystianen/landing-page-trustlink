@@ -142,7 +142,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         playing={true}
                     />
                 </div>
-                <div className={'flex flex-col justify-center w-full md:w-3/6 lg:w-2/4 pl-12 md:pl-0 z-40 mt-0'}>
+                <div className={'flex flex-col justify-center w-full md:w-3/6 lg:w-2/4 pl-6 sm:pl-12 md:pl-0 z-40 mt-0'}>
                     <div>
                         <p className={'text-center md:text-left text-3xl md:text-4xl lg:text-6xl mb-0 montserrat text-gray-400 font-bold leading-none'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-[#FF6703]' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-lg md:text-xl'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
                     </div>
@@ -183,7 +183,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             </div>
             <div className={'flex justify-center'}>
                 <div>
-                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#161D24] mb-0 montserrat'}>{t('Products')}</p>
+                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#04204D] mb-0 montserrat'}>{t('Products')}</p>
                     <div className={'text-base lg:text-lg leading-relaxed text-center text-[#4F6382] montserrat w-full flex justify-center items-center'}>
                         <p className='z-10 sm:w-4/6 md:w-[31rem] lg:w-[34rem] mb-0'>{t('We are a leading digital biometric')}</p>
                     </div>
