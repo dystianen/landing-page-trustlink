@@ -190,7 +190,7 @@ export default function Home() {
                         setIndexProduct={setIndex}
                     />
                 </section>
-                <UseCase sectionRef={useCasesRef} />
+                <UseCase sectionRef={useCasesRef} onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }/>
                 <Banner />
                 <TrustedBy sectionRef={clientsRef}/>
                 <WeAimed />
