@@ -16,7 +16,13 @@ const StickyHeader = (props) => {
     const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
     const mobile = useMediaQuery({ query: '(max-width: 576px)' });
     const tablet = useMediaQuery({ query: '(max-width: 980px)' });
+    const [windows, setWindows] = useState()
 
+    useEffect(() => {
+        if(window){
+            setWindows(window)
+        }
+    }, [])
     const menu = [
         {
             name: 'Home',
@@ -68,7 +74,7 @@ const StickyHeader = (props) => {
                     <Image preview={false} className="cursor-pointer relative w-14 md:w-20 top-0" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }}  />
                     <Image preview={false} className="relative h-14 md:h-20 w-auto" src={'/assets/logo/text-only.png'} />
                 </div>
-                {window.scrollY > 70 &&
+                {windows?.scrollY > 70 &&
                     <div>
                         <Image preview={false} className="relative h-14 md:h-20 w-[100%]" src={'/assets/header-plexus.png'} />
                     </div>
