@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import Carousel from 'react-material-ui-carousel'
 import {useTranslation} from "next-i18next";
 
-const UseCase = ({sectionRef}) => {
+const UseCase = ({sectionRef, onClickContact}) => {
     const { t, i18n } = useTranslation('common');
 
     const dataUseCase = [
@@ -160,7 +160,7 @@ const UseCase = ({sectionRef}) => {
                                         </p>
                                     </div>
                                     <div className={'mb-2 px-4 sm:px-12 md:px-0'}>
-                                        <p className={"text-white text-xs lg:text-sm xl:text-base w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
+                                        <p className={"text-white text-xs lg:text-sm xl:text-base w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify whitespace-pre-line"}>
                                             {item.desc}
                                         </p>
                                     </div>
@@ -179,7 +179,7 @@ const UseCase = ({sectionRef}) => {
                                         </ul>
                                     </div>
                                     <div className={'text-center md:text-left mb-24 md:mb-0'}>
-                                        <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-36 md:w-48"} onClick={()=>props.onClickContact()}>
+                                        <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-36 md:w-48"} onClick={()=>onClickContact()}>
                                             {t('Request Demo')}
                                         </Button>
                                     </div>
