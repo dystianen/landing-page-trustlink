@@ -28,7 +28,6 @@ const StickyHeader = (props) => {
             name: 'Home',
             onClicked : onClickTopPage,
         }, {
-        
             name: t('About Us.'),
             onClicked : onClickAboutUs,
         }, {
@@ -36,7 +35,7 @@ const StickyHeader = (props) => {
             name: t('Products'),
             onClicked : onClickProduct,
         }, {
-            name: t('Use Cases'),
+            name: t('Use Case'),
             onClicked :onClickUseCases
 
         },
@@ -78,13 +77,14 @@ const StickyHeader = (props) => {
                 {/* {windows?.scrollY > 70 &&
                     <div className={'relative  bg-red-300'}>
                         <Image preview={false} className=" w-[500px] " src={'/assets/header-plexus.png'} />
-                         <p>dsad</p> 
-                    </div> 
+                         <p>dsad</p>
+                    </div>
                 } */}
                 <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12  z-30'}>
                     <DrawerSlide
                         menu={menu}
                         setOpen={changeMenuOpen}
+                        onClickContact={onClickContactUs}
                         isOpen={isOpen} />
                     {mobile || tablet ? '' : menu.map((items, _props) => (
                         <div key={_props} className='mt-6 mx-2 cursor-pointer ' onClick={items.onClicked}>

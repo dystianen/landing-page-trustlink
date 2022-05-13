@@ -48,7 +48,7 @@ export const DrawerSlide = observer((props) => {
 
     const goToContact = () => {
         props.setOpen(false);
-        // onClickContact()
+        onClickContact()
         //TODO: HEREEEE
     }
 
