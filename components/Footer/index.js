@@ -50,7 +50,7 @@ const Footer = ({onClickTop = () => {}}) => {
                     {/*    </p>*/}
                     {/*</div>*/}
                 </div>
-                <div className={"flex flex-row"}>
+                <div className={"flex flex-col lg:flex-row"}>
                     <div className={"w-full lg:w-2/3 xl:w-2/3 ml-4 mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-between"}>
                         <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start lg:justify-start md:mt-8 lg:mt-0 '}>
                             <div className={'w-full md:w-9/12 lg:w-auto '}>
