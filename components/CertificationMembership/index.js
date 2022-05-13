@@ -11,7 +11,7 @@ export const CertificationMembership = observer(({sectionRef})=> {
     const item = [
         {
             src: '/assets/aftech-2.png',
-            className: 'h-1/2 md:h-3/5 w-auto',
+            className: ' h-1/2 md:h-3/5 w-auto',
             href: 'https://fintech.id/id'
         },
         {

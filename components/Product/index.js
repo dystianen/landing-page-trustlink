@@ -130,7 +130,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
     const Item = ({item}) => {
         return (
             // <div className={'flex flex-col md:flex-row w-full min-h-[43rem] md:h-[28rem] lg:h-[38rem] xl:h-[42rem] bg-green-100'}>
-            <div className={'flex flex-col md:flex-row w-full min-h-[55vh] md:h-[55vh] lg:h-[55vh] xl:h-[50vh]'}>
+            <div className={'flex flex-col md:flex-row w-full min-h-[50vh] md:h-[50vh] lg:h-[50vh] xl:h-[50vh] mt-0'}>
                 <div className={`flex justify-center md:justify-end items-center w-full md:w-3/6 lg:w-2/4 text-center ${isSafari ? 'z-30' : 'z-10'}`}>
                     <ReactPlayer
                         className=''
@@ -142,9 +142,9 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         playing={true}
                     />
                 </div>
-                <div className={'flex flex-col justify-center mt-4 w-full md:w-3/6 lg:w-2/4 pl-12 md:pl-0 z-40'}>
+                <div className={'flex flex-col justify-center w-full md:w-3/6 lg:w-2/4 pl-12 md:pl-0 z-40 mt-0'}>
                     <div>
-                        <p className={'text-center md:text-left text-3xl md:text-4xl lg:text-6xl mb-0 montserrat text-gray-400 font-bold leading-none'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-[#FF6600]' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-lg md:text-xl'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
+                        <p className={'text-center md:text-left text-3xl md:text-4xl lg:text-6xl mb-0 montserrat text-gray-400 font-bold leading-none'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-[#FF6703]' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-lg md:text-xl'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
                     </div>
                     <p className={`w-[95%] md:w-[80%] ${item.width_subhead} text-lg md:text-lg lg:text-xl mb-0 montserrat leading-none font-bold mt-5 text-center md:text-left`} style={{color: '#04204D'}}>{item.subhead}</p>
                     <div className={'mt-5 md:mt-5 ' + item.width_desc}>
@@ -184,27 +184,25 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             <div className={'flex justify-center'}>
                 <div>
                     <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#161D24] mb-0 montserrat'}>{t('Products')}</p>
-                    {/*<p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl text-center mt-2 text-[#161D24] montserrat font-medium'}>{t('End to End Services')}</p>*/}
-                    <br />
                     <div className={'text-base lg:text-lg leading-relaxed text-center text-[#4F6382] montserrat w-full flex justify-center items-center'}>
-                        <p className='z-10 sm:w-4/6 md:w-[31rem] lg:w-[34rem]'>{t('We are a leading digital biometric')}</p>
+                        <p className='z-10 sm:w-4/6 md:w-[31rem] lg:w-[34rem] mb-0'>{t('We are a leading digital biometric')}</p>
                     </div>
                 </div>
             </div>
             <div >
-                <div className={'relative w-screen lg:w-auto'}>
-                    <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-32 sm:h-48 -ml-12 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => onChangeProduct(num)}>
+                <div className={'relative w-screen lg:w-auto overflow-visible'}>
+                    <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-20 sm:h-36 -ml-12 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => onChangeProduct(num)}>
                         {data.map((it, index) => (
                             <Step
-                                className={'flex justify-center items-center'}
+                                className={'flex justify-center items-center overflow-visible'}
                                 key={index}
                                 icon={
                                     <div className={`flex flex-col justify-content items-center ${current === index ? 'mt-2 lg:mt-0' : 'mt-12 sm:mt-10 lg:mt-12'}`}>
-                                        <div className={`rounded-full border-4 ${current === index ? `w-[55px] h-[55px] sm:w-[78px] md:w-[95px] lg:w-32 sm:h-[78px] md:h-[95px] lg:h-32 border-[#FF6600]` : `w-12 h-12 sm:w-16 md:w-20 lg:w-24 sm:h-16 md:h-20 lg:h-24 border-[#FF6600]`} mb-2 bg-white z-10 flex justify-center items-center`}
+                                        <div className={`p-0 ${index === (data.length - 1) ? `ml-[16px]` : ``} rounded-full border-4 ${current === index ? `w-10 h-10 sm:w-14 md:w-16 lg:w-24 sm:h-14 md:h-16 lg:h-24 border-[#FF6703]` : `w-8 h-8 sm:w-12 md:w-14 lg:w-20 sm:h-12 md:h-14 lg:h-20 border-[#FF6703]`} mb-2 bg-white z-10 flex justify-center items-center`}
                                              style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? `0 0 ${shadow}px 1px #FE6601` : null}}
                                         >
                                             <Tooltip title={'Trust' +it.name}>
-                                                <Image preview={false} src={it.icon} className={`w-[18px] sm:w-[28px] md:w-[35px] lg:w-[50px]`}/>
+                                                <Image preview={false} src={it.icon} className={`w-[12px] sm:w-[18px] md:w-[28px] lg:w-[35px]`}/>
                                             </Tooltip>
                                         </div>
                                         <p className={`w-24 md:w-40 text-[10px] sm:text-sm lg:text-lg montserrat text-[#B4BCC9] ${current === index ? 'hidden' : null}`}><span className={'font-bold hidden sm:contents'}>Trust</span>{it.name}</p>
@@ -216,7 +214,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                     </Steps>
                 </div>
 
-                <div className={'mt-4 md:mt-8 z-10'}>
+                <div className={'z-10'}>
                     <Carousel
                         navButtonsAlwaysVisible={true}
                         animation={'slide'}
@@ -236,7 +234,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         navButtonsWrapperProps={{
                             className: `sm:mr-5 sm:ml-5 ${isSafari ? 'z-40' : 'z-40'} ${!current ? 'arrow-prev-product' : current === (items.length - 1) ? 'arrow-next-product' : null}`
                         }}
-                        className={'-ml-12 md:ml-0'}
+                        className={'-ml-12 md:ml-0 mt-0'}
                     >
                         {
                             items.map( (item, i) => <Item key={i} item={item} /> )

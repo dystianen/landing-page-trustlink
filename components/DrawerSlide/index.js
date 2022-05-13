@@ -47,8 +47,9 @@ export const DrawerSlide = observer((props) => {
     ];
 
     const goToContact = () => {
-        onClose();
+        props.setOpen(false);
         onClickContact()
+        //TODO: HEREEEE
     }
 
     const onMenuClick = (name) => {
@@ -71,10 +72,7 @@ export const DrawerSlide = observer((props) => {
                             <div className={'flex flex-col py-11 px-2 sm:px-4 lg:px-18 lg:p-11 w-full'}>
                                      {
                                         menu.map((it, index) => (
-                                            <Button type="link" className={'flex flex-row w-full h-8 justify-between items-center mb-7'} ghost key={index} onClick={()=>{
-                                                props.setOpen(false);
-                                                it.onClicked()
-                                            }}>
+                                            <Button type="link" className={'flex flex-row w-full h-8 justify-between items-center mb-7'} ghost key={index} onClick={()=>onMenuClick(it.name)}>
                                                 <h1 className={'text-xl md:text-2xl font-bold mb-0 montserrat'} style={{color: '#04204D'}}>{it.name}</h1>
                                                 <RightOutlined className={'text-lg opacity-50'} style={{color: '#04204D'}} />
                                             </Button>
@@ -105,13 +103,13 @@ export const DrawerSlide = observer((props) => {
                                 <div className={'flex-col text-white mb-10'}>
                                     <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>{t('Call Us')}</p>
                                     <p className={`text-xl ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>(021) 22902348</p>
-                                    <p className={'text-xs opacity-80 montserrat'} style={{letterSpacing: 0.3}}>{t('Mon to Fri')} (8:30 - 17:30)</p>
+                                    <p className={'text-xs opacity-80 montserrat'} style={{letterSpacing: 0.3}}>{t('Mon to Fri')} (8:30 - 20:00)</p>
                                 </div>
                                 <div className={'flex-col text-white mb-10 cursor-pointer'} onClick={goToContact}>
                                     <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>Email</p>
                                     <p className={`text-xl ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>info@withtrustlink.com</p>
                                 </div>
-                                <div className={'flex-col text-white mb-10'} onClick={goToContact}>
+                                <div className={'flex-col text-white mb-10'}>
                                     <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>{t('Address')}</p>
                                     <p className={`text-xl ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>{t('Kota Kasablanca Office 88')}</p>
                                     <p className={'text-xs opacity-80 montserrat'} style={{letterSpacing: 0.3}}>{t('Jl. Raya Casablanca No.16, RW.5,')}<br/>{t(' Menteng Dalam, Kec. Tebet, DKI Jakarta 12870')}</p>
