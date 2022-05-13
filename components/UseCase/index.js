@@ -72,7 +72,7 @@ const UseCase = ({sectionRef}) => {
         <div className={'w-full h-full pl-12 md:pl-20 mt-10'} >
             <div className={'w-full h-full'}>
                 <div className={"relative w-full h-auto max-h-[519px] usecase-img -mb-1"}>
-                    <Image preview={false} className="w-full  h-[10rem] md:h-[15rem] lg:h-[18rem] xl:h-full" src={'/assets/usecase/bg-usecase-crop.png'}/>
+                    {/* <Image preview={false} className="w-full  h-[10rem] md:h-[15rem] lg:h-[18rem] xl:h-full" src={'/assets/usecase/bg-usecase-crop.png'}/> */}
                     <div className={'absolute top-0 left-0 h-full w-full usecase-img'}>
                         <Image preview={false} className="w-full h-full" src={'/assets/usecase/bg-usecase-crop.png'}/>
                         <div className={'absolute bottom-0 bg-usecase-top w-full h-full'} />
@@ -80,20 +80,25 @@ const UseCase = ({sectionRef}) => {
                     <div className={'absolute right-0 top-0 z-20 h-full w-auto usecase-img'}>
                         <Image preview={false} className="h-4/5 w-auto " src={'/assets/usecase/usecase-icon-crop-2.png'}/>
                     </div>
-                    <div className={'absolute left-[1.2rem] sm:left-[2.2rem] bottom-[1rem] sm:bottom-[2.3rem] z-20'}>
+                    {/* <div className={'absolute left-[1.2rem] sm:left-[2.2rem] bottom-[1rem] sm:bottom-[2.3rem] z-20'}>
                         <p className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-2 montserrat'}>{t('Use Case')}</p>
                         <p className={'text-white text-base md:text-lg xl:text-xl w-[20rem] sm:w-[24rem] md:w-[28rem] xl:w-[48rem] montserrat pr-6 lg:pr-0'}>{t('Biometric Use Case 2')}</p>
-                    </div>
+                    </div> */}
 
                 </div>
                 <div className={'flex flex-col h-auto items-start pl-20 bg-[#132F70] section-most-top'} ref={sectionRef}>
+                    <div className={'relative w-full bg-white'}>
+                        <div className={'absolute'}>
+                            <Image className={'z-10 w-[2500px]'} src={'/assets/usecase/bg-group.png'} /> 
+                        </div>
+                    </div>
                      <div className={'mt-10 w-full'}>
                         <p className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-2 montserrat'}>{t('Use Case')}</p>
                         <p className={'text-white text-base md:text-lg xl:text-xl montserrat pr-6 lg:pr-0'}>{t('Biometric Use Case 2')}</p>
                     </div>
                     <Carousel
                         autoPlay={false}
-                        className={'w-full h-full  flex flex-row'}
+                        className={'w-full h-full  flex flex-row z-[60]'}
                         indicatorContainerProps={{
                             style: {
                                 position: 'absolute',
@@ -109,7 +114,7 @@ const UseCase = ({sectionRef}) => {
                         }}
                         activeIndicatorIconButtonProps={{
                             style: {
-                                backgroundColor: '#0681FA',
+                                // backgroundColor: '#0681FA',
                                 color: '#0681FA',
                                 width: 25,
                                 height: 10,
@@ -134,7 +139,7 @@ const UseCase = ({sectionRef}) => {
                         animation={'slide'}
                         onChange={num => setCurrent(num)}
                     >
-                        {dataUseCase.map((item, index) => ( <div key={index} className={'w-full h-auto md:h-[95vh] flex flex-col md:flex-row bg-[#132F70]'}>
+                        {dataUseCase.map((item, index) => (<div key={index} className={'w-full h-auto md:h-[95vh] flex flex-col md:flex-row '}>
                                 <div className={'relative flex justify-center items-center w-full md:w-1/2 h-[18rem] md:h-full my-16 md:my-0'}>
                                     <div className={'w-full h-full flex justify-center items-center usecase-img-2 px-10'}>
                                         <Image preview={false} src={item.src} className={'z-10 justify-center w-full h-full'} />
