@@ -69,7 +69,7 @@ const UseCase = ({sectionRef}) => {
 
 
     return (
-        <div className={'w-full h-full pl-12 md:pl-20'} >
+        <div className={'w-full h-full pl-12 md:pl-20 mt-10'} >
             <div className={'w-full h-full'}>
                 <div className={"relative w-full h-auto max-h-[519px] usecase-img -mb-1"}>
                     <Image preview={false} className="w-full  h-[10rem] md:h-[15rem] lg:h-[18rem] xl:h-full" src={'/assets/usecase/bg-usecase-crop.png'}/>
@@ -86,10 +86,14 @@ const UseCase = ({sectionRef}) => {
                     </div>
 
                 </div>
-                <div className={'flex flex-row h-auto bg-[#132F70] section-most-top'} ref={sectionRef}>
+                <div className={'flex flex-col h-auto items-start pl-20 bg-[#132F70] section-most-top'} ref={sectionRef}>
+                     <div className={'mt-10 w-full'}>
+                        <p className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-2 montserrat'}>{t('Use Case')}</p>
+                        <p className={'text-white text-base md:text-lg xl:text-xl montserrat pr-6 lg:pr-0'}>{t('Biometric Use Case 2')}</p>
+                    </div>
                     <Carousel
                         autoPlay={false}
-                        className={'w-full h-full'}
+                        className={'w-full h-full  flex flex-row'}
                         indicatorContainerProps={{
                             style: {
                                 position: 'absolute',
