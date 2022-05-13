@@ -589,6 +589,10 @@ svg { vertical-align: baseline; }
   background: linear-gradient(90deg, rgba(0,11,30,1) 0%, rgba(7,39,91,1) 48%, rgba(4,32,77,1) 100%);
 }
 
+.bg-usecase-top {
+  background: linear-gradient(180deg, rgba(19, 47, 112, 0.16) 16.89%, #132F70 100%);
+}
+
 @media only screen and (max-device-width: 576px) {
   .contact-bg > .ant-image{
     height: 100%
