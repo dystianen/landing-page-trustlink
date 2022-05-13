@@ -22,8 +22,8 @@ const StickyHeader = (props) => {
             name: 'Home',
             onClicked : onClickTopPage,
         }, {
-
-            name: t('About'),
+        
+            name: t('About Us.'),
             onClicked : onClickAboutUs,
         }, {
 
@@ -64,10 +64,15 @@ const StickyHeader = (props) => {
     return (
          <div className={`z-[60] w-full sticky top-0 ${header}`}>
             <div className={' w-full top-0 flex flex-row'} style={{ justifyContent: 'space-between' }}>
-                    <div className={'flex items-center'}>
-                        <Image preview={false} className="cursor-pointer relative w-14 md:w-20 top-0" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }}  />
-                        <Image preview={false} className="relative h-14 md:h-20 w-auto" src={'/assets/logo/text-only.png'} />
+                <div className={'flex items-center ml-12 md:ml-20'}>
+                    <Image preview={false} className="cursor-pointer relative w-14 md:w-20 top-0" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }}  />
+                    <Image preview={false} className="relative h-14 md:h-20 w-auto" src={'/assets/logo/text-only.png'} />
+                </div>
+                {window.scrollY > 70 &&
+                    <div>
+                        <Image preview={false} className="relative h-14 md:h-20 w-[100%]" src={'/assets/header-plexus.png'} />
                     </div>
+                }
                 <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12  z-30'}>
                     <DrawerSlide
                         menu={menu}
