@@ -198,7 +198,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                                 key={index}
                                 icon={
                                     <div className={`flex flex-col justify-content items-center ${current === index ? 'mt-2 lg:mt-0' : 'mt-12 sm:mt-10 lg:mt-12'}`}>
-                                        <div className={`rounded-full border-4 ${current === index ? `w-10 h-10 sm:w-14 md:w-16 lg:w-24 sm:h-14 md:h-16 lg:h-24 border-[#FF6703]` : `w-8 h-8 sm:w-12 md:w-14 lg:w-20 sm:h-12 md:h-14 lg:h-20 border-[#FF6703]`} mb-2 bg-white z-10 flex justify-center items-center`}
+                                        <div className={`p-0 ${index === (data.length - 1) ? `ml-[16px]` : ``} rounded-full border-4 ${current === index ? `w-10 h-10 sm:w-14 md:w-16 lg:w-24 sm:h-14 md:h-16 lg:h-24 border-[#FF6703]` : `w-8 h-8 sm:w-12 md:w-14 lg:w-20 sm:h-12 md:h-14 lg:h-20 border-[#FF6703]`} mb-2 bg-white z-10 flex justify-center items-center`}
                                              style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? `0 0 ${shadow}px 1px #FE6601` : null}}
                                         >
                                             <Tooltip title={'Trust' +it.name}>
