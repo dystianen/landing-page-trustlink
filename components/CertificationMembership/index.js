@@ -51,8 +51,8 @@ export const CertificationMembership = observer(({sectionRef})=> {
             </div>
             <div className={'flex justify-center montserrat mt-4'}>
                 <div className={'z-10'}>
-                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-0 text-[#161D24]'}>{t('International')}</p>
-                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl text-center mt-4 text-[#161D24] font-medium'}>{t('Certification and Membership')}</p>
+                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-0 text-[#04204D]'}>{t('International')}</p>
+                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl text-center mt-4 text-[#04204D] font-medium'}>{t('Certification and Membership')}</p>
                 </div>
             </div>
             <div className={'w-full sm:mt-5 flex justify-center items-center'}>

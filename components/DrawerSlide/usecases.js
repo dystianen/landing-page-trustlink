@@ -63,7 +63,7 @@ export const UseCases = observer(({show, setShow}) => {
                     return (
                     <div key={data.key} className={`w-full h-32 md:h-48 lg:h-52 border border-l-0 ${index >= 0 ? null : 'border-b-0'} border-gray-300`}>
                         <div className={'relative h-full  flex flex-col justify-center items-center '}>
-                            <p className={'md:text-base lg:text-lg 2xl:text-xl text-[#1D365F] leading-tight w-[70%] mb-4 z-10 ml-4'}>{data.title}</p>
+                            <p className={'md:text-base lg:text-lg 2xl:text-xl text-[#04204D] leading-tight w-[70%] mb-4 z-10 ml-4'}>{data.title}</p>
                             <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-3/5 md:w-[90%] lg:w-3/4 xl:w-1/2 2xl:w-[70%] mb-5 md:mb-0 z-10 ml-4'}>{data.description}</p>
                             <div className="relative w-full ">
                                 <div className={'absolute -bottom-2 inset-x-0 mx-auto w-full  mt-5 z-0'}>

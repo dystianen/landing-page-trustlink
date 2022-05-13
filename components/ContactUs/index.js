@@ -57,8 +57,8 @@ const ContactUs = observer(({sectionRef}) => {
                             <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>{t('Let us Know')}</p>
                         </div>
                         <div className={'flex flex-row items-end'}>
-                            <p className={'text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-0 text-[#1D365F] mr-4 sm:mr-8'}>{t('Intouch')}</p>
-                            <p className={'text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1D365F] mb-0 font-medium'}>{t('Ask Anything')}</p>
+                            <p className={'text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-0 text-[#04204D] mr-4 sm:mr-8'}>{t('Intouch')}</p>
+                            <p className={'text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#04204D] mb-0 font-medium'}>{t('Ask Anything')}</p>
                         </div>
                     </div>
                 </div>
