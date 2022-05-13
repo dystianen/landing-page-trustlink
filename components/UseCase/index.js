@@ -70,6 +70,11 @@ const UseCase = ({sectionRef}) => {
 
     return (
         <div className={'w-full h-full pl-12 md:pl-20 mt-10'} >
+            <div className={'relative w-full'}>
+                         <div className={'absolute right-[-20vh] z-0 top-[-20vh]'}>
+                            <Image className={'z-10 w-[550px]'} preview={ false} src={'/assets/usecase/group-orange.png'} /> 
+                        </div>
+                    </div>
             <div className={'w-full h-full'}>
                 <div className={"relative w-full h-auto max-h-[519px] usecase-img -mb-1"}>
                     {/* <Image preview={false} className="w-full  h-[10rem] md:h-[15rem] lg:h-[18rem] xl:h-full" src={'/assets/usecase/bg-usecase-crop.png'}/> */}
@@ -87,9 +92,9 @@ const UseCase = ({sectionRef}) => {
 
                 </div>
                 <div className={'flex flex-col h-auto  pl-20 bg-[#132F70] section-most-top'} ref={sectionRef}>
-                    <div className={'relative w-full opacity-40'}>
-                        <div className={'absolute -left-80 z-0 -top-16'}>
-                            <Image className={'z-10 w-[1024px]'} preview={ false} src={'/assets/usecase/bg-group.png'} /> 
+                    <div className={'relative w-full '}>
+                        <div className={'absolute -left-80 z-0 -top-16 opacity-40'}>
+                            <Image className={'z-10 w-auto'} preview={ false} src={'/assets/usecase/bg-group.png'} /> 
                         </div>
                     </div>
                      <div className={'mt-10 w-3/4'}>
