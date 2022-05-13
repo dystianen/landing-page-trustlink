@@ -194,7 +194,7 @@ export default function Home() {
                 <Banner />
                 <TrustedBy sectionRef={clientsRef}/>
                 <WeAimed />
-                <div className="h-[20vh]" />
+                {/* <div className="h-[20vh]" /> */}
                 <CertificationMembership sectionRef={membershipRef}/>
                 <div className="h-quarter" />
                 <ContactUs sectionRef={contactUsRef } />
