@@ -133,7 +133,7 @@ export default function Home() {
                             </Link>
                         </div>
                     </div> */}
-                    <div className={'relative w-full pl-12 sm:pl-20'}>
+                    <div className={'relative w-full pl-6 sm:pl-12'}>
                         <section className={'flex justify-start w-auto h-full'}>
                             {/*<div className={'flex items-end justify-center w-32'}>*/}
                             {/*<div className={'auto-rows-auto invisible ml-8 lg:ml-3 xl:ml-0 md:visible'}><p className={'w-max -rotate-180'} style={{ color: '#161D24', fontFamily: 'Montserrat', letterSpacing: '0.15rem', fontSize: '0.6rem', writingMode: 'vertical-lr', textOrientation: 'sideways' }}>SCROLL DOWN</p>*/}
@@ -182,7 +182,7 @@ export default function Home() {
                 <section>
                     <AboutMePage  sectionRef={aboutUsRef}/>
                 </section>
-                <section className={'pl-12 md:pl-20 mt-52'}>
+                <section className={'pl-6 sm:pl-12 md:pl-20 mt-52'}>
                     <Product
                         onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
                         productRef={sectionProductRef}

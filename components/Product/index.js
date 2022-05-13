@@ -189,7 +189,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                     </div>
                 </div>
             </div>
-            <div >
+            <div className={'pl-6'}>
                 <div className={'relative w-screen lg:w-auto overflow-visible'}>
                     <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-20 sm:h-36 -ml-12 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => onChangeProduct(num)}>
                         {data.map((it, index) => (
