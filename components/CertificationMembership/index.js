@@ -56,10 +56,10 @@ export const CertificationMembership = observer(({sectionRef})=> {
                 </div>
             </div>
             <div className={'w-full sm:mt-5 flex justify-center items-center'}>
-                <div className={'md:w-[90%] lg:w-5/6 h-auto flex flex-wrap justify-center'}>
+                <div className={'w-full md:w-[90%] lg:w-5/6 h-auto flex flex-wrap flex-col md:flex-row justify-center items-center'}>
                     {
                         item.map((props, index) => (
-                            <div key={index} onClick={()=>openLink(props.href)} className={`cursor-pointer w-1/2 md:w-1/3 trusted-img h-36 mb-2 ${props.class}`}>
+                            <div key={index} onClick={()=>openLink(props.href)} className={`cursor-pointer flex sm:flex-row w-1/2 md:w-1/3 trusted-img h-36 mb-2 ${props.class}`}>
                                 <Image  preview={false} className={`${props.className} company-logo ${color === 'true' ? 'logo-image-gray' : ''}`} src={props.src} />
                             </div>
                         ))
