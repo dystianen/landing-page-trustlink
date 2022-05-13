@@ -145,17 +145,17 @@ const UseCase = ({sectionRef}) => {
                                         <p className={'text-sm lg:text-base xl:text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
                                     </div>
                                     <div className={'text-xl md:text-2xl lg:text-3xl xl:text-2xl text-white montserrat text-center md:text-left w-full '}>
-                                        <p className={'mb-4 leading-snug md:leading-tight w-auto md:w-[90%] lg:w-[83%] xl:w-3/4'}>
+                                        <p className={'mb-3 leading-snug md:leading-tight w-auto md:w-[90%] lg:w-[83%] xl:w-3/4'}>
                                             {item.name}
                                         </p>
                                     </div>
-                                    <div className={'mb-3 px-4 sm:px-12 md:px-0'}>
+                                    <div className={'mb-2 px-4 sm:px-12 md:px-0'}>
                                         <p className={"text-white text-xs lg:text-sm xl:text-base w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
                                             {item.desc}
                                         </p>
                                     </div>
                                     <div className={'mb-3 px-4 sm:px-12 md:px-0'}>
-                                        <p className={"mb-3 text-white text-sm lg:text-base xl:text-lg w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
+                                        <p className={"mb-1.5 text-white text-sm lg:text-base xl:text-lg w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
                                             {t('use_case_application')}
                                         </p>
                                         <ul className={'use-case-applications'}>
