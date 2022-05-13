@@ -108,7 +108,7 @@ const UseCase = ({sectionRef}) => {
                             style: {
                                 position: 'absolute',
                                 bottom: '3%',
-                                // right: '3%',
+                                right: '3%',
                                 zIndex: 10
                             },
                         }}
@@ -119,7 +119,7 @@ const UseCase = ({sectionRef}) => {
                         }}
                         activeIndicatorIconButtonProps={{
                             style: {
-                                // backgroundColor: '#0681FA',
+                                backgroundColor: '#0681FA',
                                 color: '#0681FA',
                                 width: 25,
                                 height: 10,
