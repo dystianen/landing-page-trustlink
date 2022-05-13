@@ -119,7 +119,7 @@ const ContactUs = observer(({sectionRef}) => {
                                     </Col>
                                     <Col xs={{span: 24}} sm={{span: 12}}>
                                         <Form.Item
-                                            label={<label className={'text-sm sm:text-base montserrat'}>Email ({t('Company Email Only')})</label>}
+                                            label={<label className={'text-sm sm:text-base montserrat'}>Company Email</label>}
                                             name={'email'}
                                             rules={[
                                                 {
