@@ -206,7 +206,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                                             </Tooltip>
                                         </div>
                                         <p className={`w-24 md:w-40 text-[10px] sm:text-sm lg:text-lg montserrat ${current === index ? 'hidden' : null}`}>
-                                            <span className={'font-bold hidden sm:contents text-[#04204D]'}>Trust</span><span className={'text-[#FF6703]'}>{it.name}</span></p>
+                                            <span className={'font-bold  sm:contents text-[#04204D]'}>Trust</span><span className={'text-[#FF6703]'}>{it.name}</span></p>
                                     </div>
                                 }
                             />
