@@ -142,9 +142,9 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         playing={true}
                     />
                 </div>
-                <div className={'flex flex-col justify-center w-full md:w-3/6 lg:w-2/4 pl-6 sm:pl-12 md:pl-0 z-40 mt-0'}>
+                <div className={'flex flex-col justify-center w-full md:w-3/6 lg:w-2/4 pl-12 md:pl-0 z-40 mt-0'}>
                     <div>
-                        <p className={'text-center md:text-left text-3xl md:text-4xl lg:text-6xl mb-0 montserrat text-gray-400 font-bold leading-none'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-[#FF6703]' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-lg md:text-xl'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
+                        <p className={'text-center md:text-left text-3xl md:text-4xl lg:text-4xl mb-0 montserrat text-gray-400 font-bold leading-none mt-4'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-[#FF6703]' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-lg md:text-xl'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
                     </div>
                     <p className={`w-[95%] md:w-[80%] ${item.width_subhead} text-lg md:text-lg lg:text-xl mb-0 montserrat leading-none font-bold mt-5 text-center md:text-left`} style={{color: '#04204D'}}>{item.subhead}</p>
                     <div className={'mt-5 md:mt-5 ' + item.width_desc}>
@@ -153,7 +153,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         </p>
                         <a
                             type="primary"
-                            className={'rounded-lg bg-[#04204D] mt-2 flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 mr-4 md:mr-0 md:w-1/2 lg:w-3/12 montserrat'}
+                            className={'rounded-lg  mt-2 flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 mr-4 md:mr-0 md:w-1/2 lg:w-3/12 montserrat '}
                             onClick={onClickContact}
                         >
                             {t('Contact Us')}
@@ -189,7 +189,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                     </div>
                 </div>
             </div>
-            <div className={'pl-6'}>
+            <div >
                 <div className={'relative w-screen lg:w-auto overflow-visible'}>
                     <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-20 sm:h-36 -ml-16 sm:-ml-12 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => onChangeProduct(num)}>
                         {data.map((it, index) => (
@@ -205,7 +205,8 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                                                 <Image preview={false} src={it.icon} className={`w-[24px] sm:w-[28px] md:w-[28px] lg:w-[35px]`}/>
                                             </Tooltip>
                                         </div>
-                                        <p className={`w-[3rem] sm:w-24 md:w-40 text-sm lg:text-lg montserrat text-[#B4BCC9] font-bold sm:font-normal ${current === index ? 'hidden' : null}`}><span className={'font-bold hidden sm:contents'}>Trust</span>{it.name}</p>
+                                        <p className={`w-24 md:w-40 text-[10px] sm:text-sm lg:text-lg montserrat ${current === index ? 'hidden' : null}`}>
+                                            <span className={'font-bold  sm:contents text-[#04204D]'}>Trust</span><span className={'text-[#FF6703]'}>{it.name}</span></p>
                                     </div>
                                 }
                             />
