@@ -1,4 +1,4 @@
-import {Button, Drawer} from "antd";
+import {Button, Drawer, Modal} from "antd";
 import {RightOutlined} from "@ant-design/icons";
 import React, {useEffect, useState} from "react";
 import {observer} from "mobx-react-lite";
@@ -68,43 +68,54 @@ export const DrawerSlide = observer((props) => {
     }
 
     return (
-        <Drawer title={null} placement="left" onClose={() => {}} closable={false} visible={isOpen} contentWrapperStyle={{width: '100%'}} bodyStyle={{padding: 0}}>
+        <Modal
+            title={null}
+            wrapClassName={'modal-full'}
+            closable={false}
+            visible={isOpen}
+            footer={null}
+            width={'100%'}
+            wrapClassName={'bg-menu'}
+            className={'relative top-0 h-full w-full p-0 m-0 custom-modal'}
+            maskClosable={false}
+            bodyStyle={{padding: 0, height: '100%', width: '100%'}}
+        >
             <div className={'w-full h-full flex flex-col md:flex-row'}>
-                    <Fade when={(!showProduct || !showUseCase|| !showAbout)} duration={500}>
-                        <div className={`ml-16 sm:ml-20 px-0 border-l border-gray-300 w-auto md:w-[40%] h-full flex items-center ${(showProduct || showUseCase || showAbout) ? 'hidden' : null}`}>
-                            <div className={'flex flex-col py-11 px-2 sm:px-4 lg:px-18 lg:p-11 w-full'}>
-                                     {
-                                        menu.map((it, index) => (
-                                            <Button type="link" className={'flex flex-row w-full h-8 justify-between items-center mb-7'} ghost key={index} onClick={()=>{
-                                                props.setOpen(false);
-                                                it.onClicked()
-                                            }}>
-                                                <h1 className={'text-xl md:text-2xl font-bold mb-0 montserrat'} style={{color: '#04204D'}}>{it.name}</h1>
-                                                <RightOutlined className={'text-lg opacity-50'} style={{color: '#04204D'}} />
-                                            </Button>
-                                        ))
-                                    }
-                            </div>
+                <Fade when={(!showProduct || !showUseCase|| !showAbout)} duration={500}>
+                    <div className={`ml-16 sm:ml-20 px-0 border-l border-gray-300 w-auto md:w-[40%] h-full flex items-center ${(showProduct || showUseCase || showAbout) ? 'hidden' : null}`}>
+                        <div className={'flex flex-col py-11 px-2 sm:px-4 lg:px-18 lg:p-11 w-full'}>
+                            {
+                                menu.map((it, index) => (
+                                    <Button type="link" className={'flex flex-row w-full h-8 justify-between items-center mb-7'} ghost key={index} onClick={()=>{
+                                        props.setOpen(false);
+                                        it.onClicked()
+                                    }}>
+                                        <h1 className={'text-xl md:text-2xl font-bold mb-0 montserrat'} style={{color: '#04204D'}}>{it.name}</h1>
+                                        <RightOutlined className={'text-lg opacity-50'} style={{color: '#04204D'}} />
+                                    </Button>
+                                ))
+                            }
                         </div>
-                    </Fade>
-                    <Fade right when={showProduct} duration={500}>
-                        <div className={`w-full lg:overflow-x-hidden md:w-[65%] h-auto md:h-full m-0 ${!showProduct ? 'hidden' : null}`}>
-                            <Product show={showProduct} setShow={setShowProduct}/>
-                        </div>
-                    </Fade>
-                    <Fade right when={showUseCase} duration={500}>
-                        <div className={`w-full lg:overflow-x-hidden md:w-[65%] h-auto md:h-full m-0 ${!showUseCase ? 'hidden' : null}`}>
-                            <UseCases show={showUseCase} setShow={setShowUseCase} />
-                        </div>
-                    </Fade>
-                    <Fade right when={showAbout} duration={500}>
-                        <div className={`w-full lg:overflow-x-hidden md:w-[65%] h-auto md:h-full m-0 ${!showAbout ? 'hidden' : null}`}>
-                            <About show={showAbout} setShow={setShowAbout} />
-                        </div>
-                    </Fade>
-                <div className={`${(showProduct || showUseCase) ? 'w-auto md:w-[35%] md:fixed md:right-0 lg:py-8' : 'w-auto md:w-[60%] md:pl-14'} h-full md:py-16 pl-6 ml-16 sm:ml-20 md:ml-0`} style={{backgroundColor: '#1D365F', transition: 'width 500ms'}}>
+                    </div>
+                </Fade>
+                <Fade right when={showProduct} duration={500}>
+                    <div className={`w-full lg:overflow-x-hidden md:w-[65%] h-auto md:h-full m-0 ${!showProduct ? 'hidden' : null}`}>
+                        <Product show={showProduct} setShow={setShowProduct}/>
+                    </div>
+                </Fade>
+                <Fade right when={showUseCase} duration={500}>
+                    <div className={`w-full lg:overflow-x-hidden md:w-[65%] h-auto md:h-full m-0 ${!showUseCase ? 'hidden' : null}`}>
+                        <UseCases show={showUseCase} setShow={setShowUseCase} />
+                    </div>
+                </Fade>
+                <Fade right when={showAbout} duration={500}>
+                    <div className={`w-full lg:overflow-x-hidden md:w-[65%] h-auto md:h-full m-0 ${!showAbout ? 'hidden' : null}`}>
+                        <About show={showAbout} setShow={setShowAbout} />
+                    </div>
+                </Fade>
+                <div className={`${(showProduct || showUseCase) ? 'w-auto md:w-[35%] md:fixed md:right-0 lg:py-8' : 'w-auto md:w-[60%] md:pl-14'} h-full md:py-16 pl-6 ml-16 sm:ml-20 md:ml-0 bg-[#1D365F] h-auto`} style={{ transition: 'width 500ms'}}>
                     <div className={'flex flex-col w-full h-full justify-between'}>
-                        <div className={`flex flex-col lg:${(showProduct || showUseCase) ? "flex-col lg:pt-0" : "flex-row justify-between"} pt-10 md:pt-20`} style={{ transition: 'width 300ms ease-in-out'}}>
+                        <div className={`flex flex-col lg:${(showProduct || showUseCase) ? "flex-col lg:pt-0" : "flex-row justify-between"} pt-10 md:pt-20 h-full`} style={{ transition: 'width 300ms ease-in-out'}}>
                             <div className={`flex flex-col`}>
                                 <div className={'flex-col text-white mb-10'}>
                                     <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>{t('Call Us')}</p>
@@ -144,6 +155,6 @@ export const DrawerSlide = observer((props) => {
                     </div>
                 </div>
             </div>
-        </Drawer>
+        </Modal>
     )
 })
