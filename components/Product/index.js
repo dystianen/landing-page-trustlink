@@ -183,7 +183,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             </div>
             <div className={'flex justify-center'}>
                 <div>
-                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#161D24] mb-0 montserrat'}>{t('Products')}</p>
+                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#04204D] mb-0 montserrat'}>{t('Products')}</p>
                     <div className={'text-base lg:text-lg leading-relaxed text-center text-[#4F6382] montserrat w-full flex justify-center items-center'}>
                         <p className='z-10 sm:w-4/6 md:w-[31rem] lg:w-[34rem] mb-0'>{t('We are a leading digital biometric')}</p>
                     </div>
