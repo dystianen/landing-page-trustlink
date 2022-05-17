@@ -146,13 +146,13 @@ const UseCase = ({sectionRef, onClickContact}) => {
                     >
                         {dataUseCase.map((item, index) => (
                             <div key={index} className={'w-full md:h-[68vh] flex flex-col md:flex-row'}>
-                                <div className={'flex justify-center items-center w-full md:w-1/2  mt-0 mb-10 md:my-0'}>
+                                <div className={'flex justify-center items-center w-full md:w-2/3  mt-0 mb-10 md:my-0'}>
                                     <div className={' flex justify-center items-start usecase-img-2 px-10'}>
-                                        <Image preview={false} src={item.src} className={'z-20 justify-center h-auto lg:h-[50vh]'} />
+                                        <Image preview={false} src={item.src} className={'z-20 justify-center h-auto md:h-[35vh] lg:h-[50vh]'} />
                                     </div>
                                 </div>
                            
-                                <div className={'flex flex-col justify-start md:justify-center  w-full md:w-1/2 md:h-full md:pl-10'}>
+                                <div className={'flex flex-col justify-start md:justify-center  w-full md:w-2/3 md:h-full md:pl-10'}>
                                     <div className={"mb-3"}>
                                         <p className={'text-sm lg:text-base xl:text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
                                     </div>
