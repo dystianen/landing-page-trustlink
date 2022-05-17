@@ -113,26 +113,26 @@ export const DrawerSlide = observer((props) => {
                         <About show={showAbout} setShow={setShowAbout} />
                     </div>
                 </Fade>
-                <div className={`${(showProduct || showUseCase) ? 'w-auto md:w-[35%] md:fixed md:right-0 lg:py-8' : 'w-auto md:w-[60%] md:pl-14'} h-full md:py-16 pl-6 ml-16 sm:ml-20 md:ml-0 bg-[#1D365F] h-auto`} style={{ transition: 'width 500ms'}}>
+                <div className={`${(showProduct || showUseCase) ? 'w-auto md:w-[35%] md:fixed md:right-0 lg:py-8' : 'w-auto md:w-[60%] md:pl-14'}  md:py-16 pl-6 ml-16 sm:ml-20 md:ml-0 bg-[#1D365F] h-auto`} style={{ transition: 'width 500ms'}}>
                     <div className={'flex flex-col w-full h-full justify-between'}>
                         <div className={`flex flex-col lg:${(showProduct || showUseCase) ? "flex-col lg:pt-0" : "flex-row justify-between"} pt-10 md:pt-20 h-full`} style={{ transition: 'width 300ms ease-in-out'}}>
                             <div className={`flex flex-col`}>
-                                <div className={'flex-col text-white mb-10'}>
+                                <div className={'flex-col text-white mb-10 md:mb-2 -mt-5'}>
                                     <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>{t('Call Us')}</p>
                                     <p className={`text-xl ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>(021) 22902348</p>
                                     <p className={'text-xs opacity-80 montserrat'} style={{letterSpacing: 0.3}}>{t('Mon to Fri')} (8:30 - 20:00)</p>
                                 </div>
-                                <div className={'flex-col text-white mb-10 cursor-pointer'} onClick={goToContact}>
+                                <div className={'flex-col text-white mb-10  md:mb-2 cursor-pointer'} onClick={goToContact}>
                                     <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>Email</p>
                                     <p className={`text-xl ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>info@withtrustlink.com</p>
                                 </div>
-                                <div className={'flex-col text-white mb-10'}>
+                                <div className={'flex-col text-white mb-10  md:mb-2'}>
                                     <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>{t('Address')}</p>
                                     <p className={`text-xl ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>{t('Kota Kasablanca Office 88')}</p>
                                     <p className={'text-xs opacity-80 montserrat'} style={{letterSpacing: 0.3}}>{t('Jl. Raya Casablanca No.16, RW.5,')}<br/>{t(' Menteng Dalam, Kec. Tebet, DKI Jakarta 12870')}</p>
                                 </div>
                             </div>
-                            <div className={'flex-col text-white mb-10'}>
+                            <div className={'flex-col text-white mb-10  md:mb-2'}>
                                 <p className={'text-xs opacity-80 mb-3 montserrat lg:mr-16'} style={{letterSpacing: 1.8}}>{t('Social Media')}</p>
                                 {socialMedia.map((data, index) => {
                                     return <p key={data.key} className={`text-xl ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>
