@@ -71,7 +71,7 @@ const TrustedBy = ({sectionRef}) => {
                         <p className={'text-sm text-[#818FA6] mb-0 ml-6 montserrat tracking-widest'}>{t('Trusted By')}</p>
                     </div>
                     <p className={'text-3xl sm:text-5xl md:text-6xl lg:text-7xl montserrat text-[#04204D] font-bold my-2 sm:my-6'}>{t('Clients and Partners')}</p>
-                    <p className={'text-base sm:text-lg lg:text-xl montserrat text-[#04204D] font-medium mb-0'}>{t('Collaboration 1')}</p>
+                    <p className={'text-base md:text-lg lg:text-xl montserrat text-[#04204D] font-medium mb-0'}>{t('Collaboration 1')}</p>
                     {/*<p className={'text-base sm:text-lg lg:text-xl montserrat text-[#04204D] font-medium mb-0'}>{t('Collaboration 2')}</p>*/}
                 </div>
                 <div className={'flex flex-row justify-start mt-6 sm:mt-10 z-10 mr-4 lg:mr-20'}>
