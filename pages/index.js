@@ -155,7 +155,7 @@ export default function Home() {
                                         <p className={'mt-8 text-justify md:text-left w-[20rem] md:w-[36rem] lg:w-[42rem] text-sm md:text-xl lg:text-2xl tracking-normal font-normal'} style={{lineHeight: 1.75}}>{t('Desc Top Page')}</p>
                                     </div>
                                     <div>
-                                        <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-36 md:w-48"} onClick={()=> aboutUsRef.current.scrollIntoView({ behavior: 'smooth' }) }>
+                                        <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-36 md:w-48"} onClick={()=> aboutUsRef.current.scrollIntoView({ behavior: 'smooth' }) }>
                                                 Get it Started
                                         </Button>
                                     </div>
