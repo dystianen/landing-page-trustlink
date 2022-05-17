@@ -141,5 +141,7 @@
     "use_case_3_app1": "Driver ID verification",
     "use_case_3_app2": "User onboarding & verification",
     "use_case_3_app3": "Fraud detection & exclusion lists",
-    "use_case_3_app4": "Fast & convenient account opening"
+    "use_case_3_app4": "Fast & convenient account opening",
+
+    "why_title": "Kenapa TrustLink"
 }
