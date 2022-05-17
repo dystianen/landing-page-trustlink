@@ -87,13 +87,24 @@ const StickyHeader = (props) => {
                         onClickContact={onClickContactUs}
                         isOpen={isOpen} />
                     {tablet ? '' : menu.map((items, _props) => (
-                        <div key={_props} className='mt-6 mx-2 xl:mx-4 2xl:mx-6 cursor-pointer ' onClick={items.onClicked}>
-                            <p>
+                        <div key={_props} className='flex items-center mx-2 xl:mx-4 2xl:mx-6 cursor-pointer ' onClick={items.onClicked}>
+                            <p className={'mb-0 text-center'}>
                                {items.name}
                             </p>
                         </div>
                     ))}
-                    <div className={'w-20  h-20 transparent  p-5 '} style={{ zIndex: 10000 }}>
+                    <div className={'flex items-center justify-center'}>
+                        <div className={'choose-lang flex flex-row'}>
+                            <Link href={'/'} locale="en">
+                                <p className={`cursor-pointer font-medium mb-0 ${i18n.language === 'en' && 'text-[#FE7519]'}`}>EN</p>
+                            </Link>
+                            <div className={'w-px h-5 mt-1 mx-2'} style={{ backgroundColor: '#818FA6' }} />
+                            <Link href={'/'} locale="id">
+                                <p className={`cursor-pointer font-medium mb-0 ${i18n.language === 'id' && 'text-[#FE7519]'}`}>ID</p>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className={'w-16 sm:w-20 h-20 transparent  top-4 left-0 p-5 '} style={{ zIndex: 10000 }}>
                         <button className="flex flex-col w-full h-full justify-center group" style={{ zIndex: 10000 }} onClick={() =>{
                             changeMenuOpen(!isOpen)
                         }}
