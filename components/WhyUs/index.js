@@ -40,16 +40,16 @@ const WhyUsPage = () => {
 
     return (
         <div className='relative md:pl-20 pl-12 h-auto mt-30 mb-30 overflow-x-none flex flex-col'>
-            <div className={"absolute -top-30 left-[70%] w-[50rem] lg:w-[67rem] h-auto"}>
+            <div className={"absolute -top-30 left-[75%] w-[50rem] lg:w-[67rem] h-auto"}>
                 <Image src={"/assets/why_us/bg1.png"} preview={false}/>
             </div>
             <div>
                 <div className={'flex flex-row items-center mb-2'}>
                     <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
-                    <p className={'text-xs mb-0 text-center text-[#818FA6] tracking-widest'}>{t('Why TrustLink')}</p>
+                    <p className={'text-xs mb-0 text-center text-[#818FA6] tracking-widest montserrat'}>{t('Why TrustLink')}</p>
                 </div>
                 <div>
-                    <p className={"text-2xl sm:text-4xl lg:text-5xl xl:text-7xl lg:w-[70%] sm:mb-10 font-[montserrat] font-bold sm:font-semibold text-[#1D365F]"}>We Create The Best Result-Oriented Offerings</p>
+                    <p className={"text-2xl sm:text-4xl lg:text-5xl xl:text-7xl lg:w-[75%] sm:mb-10 montserrat font-bold sm:font-semibold text-[#1D365F]"}>We Create The Best Result-Oriented Offerings</p>
                 </div>
             </div>
             <div className={"flex flex-col sm:grid sm:grid-cols-2 gap-4 sm:pl-10 justify-items-center items-center"}>
@@ -58,8 +58,8 @@ const WhyUsPage = () => {
                         <Image src={item.image_url} />
                         <Divider />
                         <div>
-                            <p className={'font-[montserrat] text-sm font-bold text-center mb-1'}>{item.title}</p>
-                            <p className={'font-[montserrat] text-xs text-center'}>{item.description}</p>
+                            <p className={'montserrat text-sm font-bold text-center mb-1'}>{item.title}</p>
+                            <p className={'montserrat text-xs text-center'}>{item.description}</p>
                         </div>
                     </div>
                 ))}
