@@ -205,7 +205,7 @@ export default function Home() {
                 <WeAimed />
                 {/* <div className="h-[20vh]" /> */}
                 <CertificationMembership sectionRef={membershipRef}/>
-                <div className="h-quarter" />
+                <div className="h-[10vh] sm:h-quarter" />
                 <ContactUs sectionRef={contactUsRef } />
                 <Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>
             </div>
