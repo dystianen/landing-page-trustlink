@@ -632,3 +632,12 @@ svg { vertical-align: baseline; }
 .section-most-top{
   scroll-margin-top: 6rem;
 }
+
+.box-hover {
+  transition: box-shadow .3s;
+  float: left;
+
+}
+.box-hover:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
