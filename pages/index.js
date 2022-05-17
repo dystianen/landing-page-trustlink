@@ -163,7 +163,7 @@ export default function Home() {
 
                             </div>
                         </section>
-                        <section className={'absolute top-[17rem] md:top-20 right-10 md:-right-10 lg:-right-12 xl:-right-28 w-3/5 h-1/2 md:h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
+                        <section className={'absolute top-[20rem] md:top-20 right-10 md:-right-10 lg:-right-12 xl:-right-28 w-3/5 h-1/2 md:h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
                             {
                                 product.map((it,index) => (
                                     <div key={index} className={it.className} onClick={()=> handleClickProduct(it.productIndex) }>
@@ -199,7 +199,7 @@ export default function Home() {
 
                 <WhyUsPage />
 
-                <UseCase sectionRef={useCasesRef} />
+                <UseCase sectionRef={useCasesRef} onClickContact={() =>contactUsRef.current.scrollIntoView({behavior: 'smooth'})}/>
                 <Banner />
                 <TrustedBy sectionRef={clientsRef}/>
                 <WeAimed />
