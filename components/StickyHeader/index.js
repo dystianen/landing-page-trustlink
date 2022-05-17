@@ -80,14 +80,14 @@ const StickyHeader = (props) => {
                          <p>dsad</p>
                     </div>
                 } */}
-                <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12  z-30'}>
+                <div className={'choose-lang flex flex-row mr-6 md:mr-10 mr-10 xl:mr-12 z-30'}>
                     <DrawerSlide
                         menu={menu}
                         setOpen={changeMenuOpen}
                         onClickContact={onClickContactUs}
                         isOpen={isOpen} />
                     {tablet ? '' : menu.map((items, _props) => (
-                        <div key={_props} className='mt-6 mx-2 cursor-pointer ' onClick={items.onClicked}>
+                        <div key={_props} className='mt-6 mx-2 xl:mx-4 2xl:mx-6 cursor-pointer ' onClick={items.onClicked}>
                             <p>
                                {items.name}
                             </p>
