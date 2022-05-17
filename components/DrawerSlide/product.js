@@ -52,7 +52,8 @@ export const Product = observer(({show, setShow}) => {
                                 </div>
                             </div>
                             <p className={'inline text-3xl mb-5 pt-2 leading-none font-bold text-[#04204D]'}>{t('Products')}</p>
-                            <p className={'text-sm lg:w-3/4 pt-2 pb-6 text-[#4F6382]'}>
+                            {/*<p className={'text-sm lg:w-3/4 pt-2 pb-6 text-[#4F6382]'}>*/}
+                            <p className={'text-sm lg:w-3/4 pt-2 pb-6 text-[#04204D]'}>
                                 {t('Learn How To')}
                                 {/* Learn how the digitalize biometric of human <br/> unique pattern becomes the lead of security alignment. */}
                             </p>
