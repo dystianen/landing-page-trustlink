@@ -70,7 +70,7 @@ const StickyHeader = (props) => {
     return (
          <div className={`z-[60] w-full sticky top-0 ${header} overflow-x-hidden`}>
             <div className={' w-full top-0 flex flex-row'} style={{ justifyContent: 'space-between' }}>
-                <div className={'flex items-center  md:ml-20'}>
+                <div className={'flex items-center ml-5 md:ml-12'}>
                     <Image preview={false} className="cursor-pointer relative w-14 md:w-20 top-0" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }}  />
                     <Image preview={false} className="relative h-14 md:h-20 w-auto" src={'/assets/logo/text-only.png'} />
                 </div>
@@ -80,7 +80,7 @@ const StickyHeader = (props) => {
                          <p>dsad</p>
                     </div>
                 } */}
-                <div className={'choose-lang flex flex-row mr-6 md:mr-10 mr-10 xl:mr-12 z-30'}>
+                <div className={'choose-lang flex flex-row  mr-5 md:mr-10  xl:mr-12 z-30'}>
                     <DrawerSlide
                         menu={menu}
                         setOpen={changeMenuOpen}
@@ -93,7 +93,7 @@ const StickyHeader = (props) => {
                             </p>
                         </div>
                     ))}
-                    <div className={'w-16 sm:w-20 h-20 transparent  top-6 left-0 p-5'} style={{ zIndex: 10000 }}>
+                    <div className={'w-16 sm:w-20 h-20 transparent  top-4 left-0 p-5 '} style={{ zIndex: 10000 }}>
                         <button className="flex flex-col w-full h-full justify-center group" style={{ zIndex: 10000 }} onClick={() =>{
                             changeMenuOpen(!isOpen)
                         }}
