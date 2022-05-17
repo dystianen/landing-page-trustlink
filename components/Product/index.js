@@ -71,8 +71,8 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             subhead: t('trust_verify_title'),
             desc: t('trust_verify_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
-            width_subhead: 'lg:w-[25rem] xl:w-[38rem]',
-            width_desc: 'lg:w-[33rem] xl:w-[39rem] 2xl:w-[48rem]'
+            width_subhead: 'w-[18rem] md:w-[20rem] lg:w-[22rem] xl:w-[32rem]',
+            width_desc: 'md:w-[23rem] lg:w-[34rem] xl:w-[39rem] 2xl:w-[48rem]'
         },
         {
             name: 'Trust',
@@ -82,8 +82,8 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             subhead: t('trust_scan_title'),
             desc: t('trust_scan_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
-            width_subhead: 'lg:w-[23rem] xl:w-auto',
-            width_desc: 'lg:w-[33rem] xl:w-[41rem] 2xl:w-[50rem]'
+            width_subhead: 'w-[17rem] md:w-[15rem] lg:w-[28rem] xl:w-auto',
+            width_desc: 'md:w-[21rem] lg:w-[34rem] xl:w-[36rem] 2xl:w-[50rem]'
         },
 
         {
@@ -94,8 +94,8 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             subhead: t('trust_live_title'),
             desc: t('trust_live_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
-            width_subhead: 'lg:w-[33rem] xl:w-[39rem]',
-            width_desc: 'lg:w-[34rem] xl:w-[41rem] 2xl:w-[50rem]'
+            width_subhead: 'w-[18rem] md:w-[20rem] lg:w-[28rem] 2xl:w-[40rem]',
+            width_desc: 'md:w-[23rem] lg:w-[34rem] xl:w-[39rem] 2xl:w-[50rem]'
         },
         // {
         //     name: 'Trust',
@@ -113,8 +113,8 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             subhead: t('trust_vision_title'),
             desc: t('trust_vision_subtitle'),
             size: md ? '90%' : xs ? '50%' : '80%',
-            width_subhead: 'lg:w-[25rem] 2xl:w-[50rem]',
-            width_desc: 'lg:w-[33rem] xl:w-[39rem] 2xl:w-[50rem]'
+            width_subhead: 'w-[17.8rem] md:w-[20rem] lg:w-[22rem] xl:w-[38rem] 2xl:w-[50rem]',
+            width_desc: 'w-auto md:w-[24rem] lg:w-[34rem] xl:w-[42rem] 2xl:w-[50rem]'
         },
         // {
         //     name: 'Trust',
@@ -133,7 +133,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             <div className={'flex flex-col md:flex-row w-full min-h-[50vh] md:h-[30rem] xl:h-[28rem] mt-0'}>
                 <div className={`flex justify-center items-center w-screen md:w-3/6 lg:w-2/4 text-center ${isSafari ? 'z-30' : 'z-10'}`}>
                     <ReactPlayer
-                        className='ml-6 sm:ml-0 '
+                        className=''
                         url={item.src}
                         width={item.size}
                         height={item.size}
@@ -142,18 +142,18 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         playing={true}
                     />
                 </div>
-                <div className={'flex flex-col justify-center w-full md:w-3/6 lg:w-2/4 pl-12 md:pl-0 z-40 mt-0'}>
+                <div className={'flex flex-col justify-center items-center md:items-start w-full md:w-3/6 lg:w-2/4 z-40 mt-0 px-6 md:px-0'}>
                     <div>
                         <p className={'text-center md:text-left text-3xl md:text-4xl lg:text-4xl mb-0 montserrat text-gray-400 font-bold leading-none mt-4'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-[#FF6703]' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-lg md:text-xl'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
                     </div>
-                    <p className={`w-[95%] md:w-[80%] ${item.width_subhead} text-lg md:text-lg lg:text-xl mb-0 montserrat leading-none font-bold mt-5 text-center md:text-left`} style={{color: '#04204D'}}>{item.subhead}</p>
+                    <p className={`${item.width_subhead} text-lg md:text-lg lg:text-xl mb-0 montserrat leading-tight md:leading-none font-bold mt-5 text-center md:text-left`} style={{color: '#04204D'}}>{item.subhead}</p>
                     <div className={'mt-5 md:mt-5 ' + item.width_desc}>
-                        <p style={{color: '#04204D'}} className={"w-[95%] md:w-[80%] text-sm md:text-base lg:text-lg montserrat text-justify mb-3"}>
+                        <p style={{color: '#04204D'}} className={"w-full md:w-[80%] text-sm md:text-base lg:text-lg montserrat text-justify mb-3"}>
                             {item.desc}
                         </p>
                         <a
                             type="primary"
-                            className={'rounded-lg  mt-2 flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 mr-4 md:mr-0 md:w-1/2 lg:w-3/12 montserrat '}
+                            className={'rounded-lg  mt-2 flex justify-center items-center bg-[#FF6703] text-white text-base sm:text-lg h-12 md:w-1/2 lg:w-3/12 montserrat '}
                             onClick={onClickContact}
                         >
                             {t('Contact Us')}
@@ -183,21 +183,22 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             </div>
             <div className={'flex justify-center'}>
                 <div>
-                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#161D24] mb-0 montserrat'}>{t('Products')}</p>
-                    <div className={'text-base lg:text-lg leading-relaxed text-center text-[#4F6382] montserrat w-full flex justify-center items-center'}>
+                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#04204D] mb-0 montserrat'}>{t('Products')}</p>
+                    {/*<div className={'text-base lg:text-lg leading-relaxed text-center text-[#4F6382] montserrat w-full flex justify-center items-center'}>*/}
+                    <div className={'text-base lg:text-lg leading-relaxed text-center text-[#04204D] montserrat w-full flex justify-center items-center'}>
                         <p className='z-10 sm:w-4/6 md:w-[31rem] lg:w-[34rem] mb-0'>{t('We are a leading digital biometric')}</p>
                     </div>
                 </div>
             </div>
             <div >
                 <div className={'relative w-screen lg:w-auto overflow-visible'}>
-                    <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-20 sm:h-36 -ml-16 sm:-ml-12 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => onChangeProduct(num)}>
+                    <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-20 sm:h-36 -ml-4 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => onChangeProduct(num)}>
                         {data.map((it, index) => (
                             <Step
                                 className={'flex justify-center items-center overflow-visible'}
                                 key={index}
                                 icon={
-                                    <div className={`flex flex-col justify-center items-start sm:items-center ${current === index ? 'mt-2 lg:mt-0' : 'mt-10 sm:mt-10 lg:mt-12'}`}>
+                                    <div className={`flex flex-col justify-center items-start sm:items-center ${current === index ? 'mt-2 lg:mt-0' : 'mt-12 sm:mt-10 lg:mt-12'}`}>
                                         <div className={`p-0 ${index === (data.length - 1) ? `sm:ml-[16px]` : ``} rounded-full border-4 ${current === index ? `w-14 h-14 sm:w-[4.75rem] lg:w-24 sm:h-[4.75rem] lg:h-24 border-[#FF6703]` : `w-12 h-12 sm:w-16 lg:w-20 sm:h-16 lg:h-20 border-[#FF6703]`} mb-2 bg-white z-10 flex justify-center items-center`}
                                              style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? `0 0 ${shadow}px 1px #FE6601` : null}}
                                         >
@@ -205,13 +206,13 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                                                 <Image preview={false} src={it.icon} className={`w-[24px] sm:w-[28px] md:w-[28px] lg:w-[35px]`}/>
                                             </Tooltip>
                                         </div>
-                                        <p className={`w-24 md:w-40 text-[10px] sm:text-sm lg:text-lg montserrat ${current === index ? 'hidden' : null}`}>
-                                            <span className={'font-bold hidden sm:contents text-[#04204D]'}>Trust</span><span className={'text-[#FF6703]'}>{it.name}</span></p>
+                                        <p className={`w-10 sm:w-20 md:w-40 text-[10px] sm:text-sm lg:text-lg montserrat ${current === index ? 'hidden' : null}`}>
+                                            <span className={'font-bold  sm:contents text-[#04204D]'}>Trust</span><span className={'text-[#FF6703]'}>{it.name}</span></p>
                                     </div>
                                 }
                             />
                         ))}
-                        <hr className={`absolute left-0 lg:left-[10%] top-[48%] w-[78%] h-1 bg-[#FE6601] z-0`}/>
+                        <hr className={`absolute left-12 md:left-0 lg:left-[10%] top-[48%] w-[78%] h-1 bg-[#FE6601] z-0`}/>
                     </Steps>
                 </div>
 
@@ -233,9 +234,9 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                             }
                         }}
                         navButtonsWrapperProps={{
-                            className: `sm:mr-5 sm:ml-5 ${isSafari ? 'z-40' : 'z-40'} ${!current ? 'arrow-prev-product' : current === (items.length - 1) ? 'arrow-next-product' : null}`
+                            className: `sm:mr-5 md:mr-0 lg:mr-5 sm:ml-5 md:ml-0 lg:ml-5 ${isSafari ? 'z-40' : 'z-40'} ${!current ? 'arrow-prev-product' : current === (items.length - 1) ? 'arrow-next-product' : null}`
                         }}
-                        className={'-ml-12 md:ml-0 mt-0'}
+                        className={''}
                     >
                         {
                             items.map( (item, i) => <Item key={i} item={item} /> )

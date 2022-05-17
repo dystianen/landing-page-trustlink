@@ -70,7 +70,7 @@ const StickyHeader = (props) => {
     return (
          <div className={`z-[60] w-full sticky top-0 ${header} overflow-x-hidden`}>
             <div className={' w-full top-0 flex flex-row'} style={{ justifyContent: 'space-between' }}>
-                <div className={'flex items-center  md:ml-20'}>
+                <div className={'flex items-center ml-5 md:ml-12'}>
                     <Image preview={false} className="cursor-pointer relative w-14 md:w-20 top-0" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }}  />
                     <Image preview={false} className="relative h-14 md:h-20 w-auto" src={'/assets/logo/text-only.png'} />
                 </div>
@@ -80,20 +80,31 @@ const StickyHeader = (props) => {
                          <p>dsad</p>
                     </div>
                 } */}
-                <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12  z-30'}>
+                <div className={'choose-lang flex flex-row  mr-5 md:mr-10  xl:mr-12 z-30'}>
                     <DrawerSlide
                         menu={menu}
                         setOpen={changeMenuOpen}
                         onClickContact={onClickContactUs}
                         isOpen={isOpen} />
-                    {mobile || tablet ? '' : menu.map((items, _props) => (
-                        <div key={_props} className='mt-6 mx-2 cursor-pointer ' onClick={items.onClicked}>
-                            <p>
+                    {tablet ? '' : menu.map((items, _props) => (
+                        <div key={_props} className='flex items-center mx-2 xl:mx-4 2xl:mx-6 cursor-pointer ' onClick={items.onClicked}>
+                            <p className={'mb-0 text-center'}>
                                {items.name}
                             </p>
                         </div>
                     ))}
-                    <div className={'w-16 sm:w-20 h-20 transparent  top-6 left-0 p-5'} style={{ zIndex: 10000 }}>
+                    <div className={'flex items-center justify-center'}>
+                        <div className={'choose-lang flex flex-row'}>
+                            <Link href={'/'} locale="en">
+                                <p className={`cursor-pointer font-medium mb-0 ${i18n.language === 'en' && 'text-[#FE7519]'}`}>EN</p>
+                            </Link>
+                            <div className={'w-px h-5 mt-1 mx-2'} style={{ backgroundColor: '#818FA6' }} />
+                            <Link href={'/'} locale="id">
+                                <p className={`cursor-pointer font-medium mb-0 ${i18n.language === 'id' && 'text-[#FE7519]'}`}>ID</p>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className={'w-20 sm:w-20 h-20 transparent p-5 '} style={{ zIndex: 10000 }}>
                         <button className="flex flex-col w-full h-full justify-center group" style={{ zIndex: 10000 }} onClick={() =>{
                             changeMenuOpen(!isOpen)
                         }}

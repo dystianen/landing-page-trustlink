@@ -52,14 +52,14 @@ export const CertificationMembership = observer(({sectionRef})=> {
             <div className={'flex justify-center montserrat mt-4'}>
                 <div className={'z-10'}>
                     <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-0 text-[#04204D]'}>{t('International')}</p>
-                    <p className={'text-[26px] sm:text-3xl md:text-4xl lg:text-5xl text-center mt-4 text-[#04204D] font-medium'}>{t('Certification and Membership')}</p>
+                    <p className={'text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mt-4 text-[#04204D] font-medium'}>{t('Certification and Membership')}</p>
                 </div>
             </div>
             <div className={'w-full sm:mt-5 flex justify-center items-center'}>
-                <div className={'w-full md:w-[90%] lg:w-5/6 h-auto flex flex-wrap flex-col md:flex-row justify-center items-center'}>
+                <div className={'w-full md:w-[90%] lg:w-5/6 h-auto flex flex-wrap flex-col sm:flex-row justify-center items-center'}>
                     {
                         item.map((props, index) => (
-                            <div key={index} onClick={()=>openLink(props.href)} className={`cursor-pointer flex sm:flex-row w-1/2 md:w-1/3 trusted-img h-36 mb-2 ${props.class}`}>
+                            <div key={index} onClick={()=>openLink(props.href)} className={`cursor-pointer flex sm:flex-row w-full sm:w-1/3 trusted-img h-36 mb-2 ${props.class}`}>
                                 <Image  preview={false} className={`${props.className} company-logo ${color === 'true' ? 'logo-image-gray' : ''}`} src={props.src} />
                             </div>
                         ))

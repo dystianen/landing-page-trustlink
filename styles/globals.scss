@@ -593,6 +593,16 @@ svg { vertical-align: baseline; }
   background: linear-gradient(180deg, rgba(19, 47, 112, 0.16) 16.89%, #132F70 100%);
 }
 
+.bg-menu{
+  background-color: rgba(255,255,255, 0.8);
+}
+.custom-modal > .ant-modal-content{
+  width: 100vw !important;
+  height: 100% !important;
+  background: transparent;
+  box-shadow: none !important;
+}
+
 @media only screen and (max-device-width: 576px) {
   .contact-bg > .ant-image{
     height: 100%

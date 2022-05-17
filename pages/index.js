@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { appConfig } from "../config/app";
 import { isAuthUrl } from "../utils/checkUrl";
 import { useStore } from "../components/StoreProvider";
-import { Image } from "antd";
+import { Button, Image } from "antd";
 import React, { useRef, useState } from "react";
 import { ParticlePage } from "../components/Particle";
 import { DrawerSlide } from "../components/DrawerSlide";
@@ -21,6 +21,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import Link from "next/link";
 import StickyHeader from "../components/StickyHeader";
 import {MapAddress} from "../components/MapAddress";
+import WhyUsPage from "../components/WhyUs";
 
 export const checkRerouteLoggedUser = (store, router) => {
     if (typeof window !== 'undefined') {
@@ -109,7 +110,7 @@ export default function Home() {
                 onClickTopPage={() => window.scrollTo({top: 0, behavior: 'smooth'}) } />
             <div className="overflow-hidden">
                 {/*<DrawerSlide menu={menu} isOpen={isOpen} />*/}
-                <div className={'fixed w-16 sm:w-20 h-20 transparent top-2/4 left-0 p-5'} style={{ zIndex: 999999 }}>
+                <div className={'fixed w-16 sm:w-20 h-20  top-2/4 left-0 p-5'} style={{ zIndex: 999999 }}>
                     <button className="flex flex-col w-full h-full justify-center group" style={{visibility: isOpen ? 'visible': 'hidden'}} onClick={() => setIsOpen(!isOpen)}
                     >
                         <div className={`${genericHamburgerLine} self-start ${isOpen ? "w-full rotate-45 translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`}/>
@@ -153,11 +154,16 @@ export default function Home() {
                                     <div>
                                         <p className={'mt-8 text-justify md:text-left w-[20rem] md:w-[36rem] lg:w-[42rem] text-sm md:text-xl lg:text-2xl tracking-normal font-normal'} style={{lineHeight: 1.75}}>{t('Desc Top Page')}</p>
                                     </div>
+                                    <div>
+                                        <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-36 md:w-48"} onClick={()=> aboutUsRef.current.scrollIntoView({ behavior: 'smooth' }) }>
+                                                Get it Started
+                                        </Button>
+                                    </div>
                                 </div>
 
                             </div>
                         </section>
-                        <section className={'absolute top-[17rem] md:top-20 right-10 md:-right-10 lg:-right-12 xl:-right-28 w-3/5 h-1/2 md:h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
+                        <section className={'absolute top-[20rem] md:top-20 right-10 md:-right-10 lg:-right-12 xl:-right-28 w-3/5 h-1/2 md:h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
                             {
                                 product.map((it,index) => (
                                     <div key={index} className={it.className} onClick={()=> handleClickProduct(it.productIndex) }>
@@ -182,7 +188,7 @@ export default function Home() {
                 <section>
                     <AboutMePage  sectionRef={aboutUsRef}/>
                 </section>
-                <section className={'pl-6 sm:pl-12 md:pl-20 mt-52'}>
+                <section className={'pl-0 md:pl-20 mt-52'}>
                     <Product
                         onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }
                         productRef={sectionProductRef}
@@ -190,13 +196,16 @@ export default function Home() {
                         setIndexProduct={setIndex}
                     />
                 </section>
-                <UseCase sectionRef={useCasesRef} onClickContact={()=>contactUsRef.current.scrollIntoView({behavior: 'smooth'}) }/>
+
+                <WhyUsPage />
+
+                <UseCase sectionRef={useCasesRef} onClickContact={() =>contactUsRef.current.scrollIntoView({behavior: 'smooth'})}/>
                 <Banner />
                 <TrustedBy sectionRef={clientsRef}/>
                 <WeAimed />
                 {/* <div className="h-[20vh]" /> */}
                 <CertificationMembership sectionRef={membershipRef}/>
-                <div className="h-quarter" />
+                <div className="h-[10vh] sm:h-quarter" />
                 <ContactUs sectionRef={contactUsRef } />
                 <Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>
             </div>

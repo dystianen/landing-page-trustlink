@@ -3,7 +3,8 @@ import React, {useState} from 'react';
 import Carousel from 'react-material-ui-carousel'
 import {useTranslation} from "next-i18next";
 
-const UseCase = ({sectionRef, onClickContact}) => {
+const emptyFunction = () => { }
+const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
     const { t, i18n } = useTranslation('common');
 
     const dataUseCase = [
@@ -69,12 +70,7 @@ const UseCase = ({sectionRef, onClickContact}) => {
 
 
     return (
-        <div className={'w-full h-full pl-6 sm:pl-12 md:pl-20 mt-10'} >
-            <div className={'relative w-full'}>
-                         <div className={'absolute right-[-20vh] z-0 top-[-20vh]'}>
-                            <Image className={'z-10 w-[30vw]'} preview={ false} src={'/assets/usecase/group-orange.png'} />
-                        </div>
-                    </div>
+        <div className={'w-full h-full  md:pl-20 mt-10'} >
             <div className={'w-full h-full'}>
                 <div className={"relative w-full h-auto max-h-[519px] usecase-img -mb-1"}>
                     {/* <Image preview={false} className="w-full  h-[10rem] md:h-[15rem] lg:h-[18rem] xl:h-full" src={'/assets/usecase/bg-usecase-crop.png'}/> */}
@@ -91,15 +87,20 @@ const UseCase = ({sectionRef, onClickContact}) => {
                     </div> */}
 
                 </div>
-                <div className={'flex flex-col h-auto  pl-20 bg-[#132F70] section-most-top-use-case'} ref={sectionRef}>
+                <div className={'flex flex-col h-auto  md:pl-20 bg-[#132F70] section-most-top-use-case'} ref={sectionRef}>
                     <div className={'relative w-full '}>
                         <div className={'absolute -left-80 z-0 -top-16 opacity-40'}>
-                            <Image className={'z-10 w-auto'} preview={ false} src={'/assets/usecase/bg-group.png'} />
+                            <Image className={'z-0 w-auto'} preview={ false} src={'/assets/usecase/bg-group.png'} />
                         </div>
                     </div>
-                     <div className={'mt-10 w-3/4'}>
-                        <p className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-2 montserrat'}>{t('Use Case')}</p>
-                        <p className={'text-white text-base md:text-lg xl:text-xl montserrat pr-6 lg:pr-0'}>{t('Biometric Use Case 2')}</p>
+                     <div className={'relative w-full'}>
+                         <div className={'absolute z-0 -top-16 -right-20  opacity-60'}>
+                            <Image className={'z-0 w-[30vh] md:w-[35vh] '} preview={ false} src={'/assets/usecase/group-orange.png'} />
+                        </div>
+                    </div>
+                     <div className={'mt-7 md:mt-10 w-full md:3/4 z-10 px-5 md:pl-0 '}>
+                        <p className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-1 md:mb-2 montserrat'}>{t('Use Case')}</p>
+                        <p className={'text-white text-[14px] md:text-lg xl:text-xl montserrat  lg:pr-0'}>{t('Biometric Use Case 2')}</p>
                     </div>
                     <Carousel
                         autoPlay={false}
@@ -134,7 +135,7 @@ const UseCase = ({sectionRef, onClickContact}) => {
                                 backgroundColor: 'rgba(0,0,0, .1)',
                             },
                             // className: 'arrow-usecase mt-[17rem] md:mt-48 lg:mt-36'
-                            className: 'arrow-usecase -mt-44 sm:mt-48 lg:mt-36'
+                            className: 'arrow-usecase my-auto items-between'
                         }}
                         navButtonsWrapperProps={{
                             className: `mx-2 md:mx-8 ${!current ? 'arrow-prev-product' : current === (pageCarousel - 1) ? 'arrow-next-product' : null}`
@@ -144,28 +145,30 @@ const UseCase = ({sectionRef, onClickContact}) => {
                         animation={'slide'}
                         onChange={num => setCurrent(num)}
                     >
-                        {dataUseCase.map((item, index) => (<div key={index} className={'w-full h-[68vh] flex flex-col md:flex-row'}>
-                                <div className={'relative flex justify-center items-center w-full md:w-1/2 h-[18rem] md:h-full my-16 md:my-0'}>
-                                    <div className={'h-[65vh] flex justify-center items-center usecase-img-2 px-10'}>
-                                        <Image preview={false} src={item.src} className={'z-10 justify-center h-[50vh]'} />
+                        {dataUseCase.map((item, index) => (
+                            <div key={index} className={'w-full  flex flex-col md:h-[68vh] md:flex-row md:mb-20'}>
+                                <div className={'flex justify-center items-center w-full md:w-2/3  mt-0 mb-10 md:my-0'}>
+                                    <div className={' flex justify-center items-start usecase-img-2 px-10 md:px-0'}>
+                                        <Image preview={false} src={item.src} className={'z-20 justify-center h-full  '} />
                                     </div>
                                 </div>
-                                <div className={'flex flex-col justify-center w-full md:w-1/2 h-[67vh] md:h-full'}>
-                                    <div className={"mb-0"}>
+                           
+                                <div className={'flex flex-col justify-start md:justify-center  w-full md:w-2/3 md:h-full md:pl-10'}>
+                                    <div className={"mb-2 px-5"}>
                                         <p className={'text-sm lg:text-base xl:text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
                                     </div>
-                                    <div className={'text-xl md:text-2xl lg:text-3xl xl:text-2xl text-white montserrat text-center md:text-left w-full '}>
+                                    <div className={'px-6 md:px-0 text-lg md:text-2xl lg:text-3xl xl:text-2xl text-white montserrat text-center md:text-left w-full '}>
                                         <p className={'mb-3 leading-snug md:leading-tight w-auto md:w-[90%] lg:w-[83%] xl:w-3/4'}>
                                             {item.name}
                                         </p>
                                     </div>
-                                    <div className={'mb-2 px-4 sm:px-12 md:px-0'}>
+                                    <div className={'mb-2 px-5 md:px-0'}>
                                         <p className={"text-white text-xs lg:text-sm xl:text-base w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify whitespace-pre-line"}>
                                             {item.desc}
                                         </p>
                                     </div>
-                                    <div className={'mb-3 px-4 sm:px-12 md:px-0'}>
-                                        <p className={"mb-1.5 text-white text-sm lg:text-base xl:text-lg w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
+                                    <div className={'mb-1 px-8 sm:px-12 md:px-0'}>
+                                        <p className={"text-white text-sm lg:text-base xl:text-lg w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify"}>
                                             {t('use_case_application')}
                                         </p>
                                         <ul className={'use-case-applications'}>
@@ -178,13 +181,14 @@ const UseCase = ({sectionRef, onClickContact}) => {
                                             }
                                         </ul>
                                     </div>
-                                    <div className={'text-center md:text-left mb-24 md:mb-0'}>
+                                    <div className={'text-center md:text-left mb-16 md:mb-0'}>
                                         <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-36 md:w-48"} onClick={()=>onClickContact()}>
                                             {t('Request Demo')}
                                         </Button>
                                     </div>
                                 </div>
                             </div>
+                           
 
                         ))}
                     </Carousel>
