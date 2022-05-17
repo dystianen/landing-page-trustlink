@@ -57,14 +57,14 @@ const ContactUs = observer(({sectionRef}) => {
                             <p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>{t('Let us Know')}</p>
                         </div>
                         <div className={'flex flex-row items-end'}>
-                            <p className={'text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-0 text-[#1D365F] mr-4 sm:mr-8'}>{t('Intouch')}</p>
-                            <p className={'text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1D365F] mb-0 font-medium'}>{t('Ask Anything')}</p>
+                            <p className={'text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-0 text-[#04204D] mr-4 sm:mr-8'}>{t('Intouch')}</p>
+                            <p className={'text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#04204D] mb-0 font-medium'}>{t('Ask Anything')}</p>
                         </div>
                     </div>
                 </div>
                 <div className={'flex justify-center w-full'} >
                     <div className={'w-[80%] lg:w-8/12 xl:w-[52%] bg-white z-30'}>
-                        <div className={'px-6 sm:px-12 md:px-20 pt-6 sm:pt-12 md:pt-20 pb-6 md:pb-10'}>
+                        <div className={'px-6 sm:px-12 md:px-20 pt-10 pb-6 md:pb-10'}>
                             <Form layout={"vertical"} form={form}>
                                 <Row gutter={16}>
                                     <Col xs={{span: 24}} sm={{span: 12}}>
@@ -100,35 +100,41 @@ const ContactUs = observer(({sectionRef}) => {
                                         </Form.Item>
                                     </Col>
                                 </Row>
-                                <Form.Item
-                                    label={<label className={'text-sm sm:text-base montserrat'}>{t('Company')}</label>}
-                                    name={'company'}
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message:'You must input your company'
-                                        },
-                                    ]}>
-                                    <Input
-                                        className={'border rounded border-[#D4D4D8] h-12 montserrat text-sm sm:text-base'}
-                                        placeholder={t('Enter your company name')}
-                                    />
-                                </Form.Item>
-                                <Form.Item
-                                    label={<label className={'text-sm sm:text-base montserrat'}>Email ({t('Company Email Only')})</label>}
-                                    name={'email'}
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message:'You must input your company email'
-                                        },
-                                        { type: 'email' }
-                                    ]}>
-                                    <Input
-                                        className={'border rounded border-[#D4D4D8] h-12 montserrat text-sm sm:text-base'}
-                                        placeholder={t('Enter your email')}
-                                    />
-                                </Form.Item>
+                                <Row gutter={16}>
+                                    <Col xs={{span: 24}} sm={{span: 12}}>
+                                        <Form.Item
+                                            label={<label className={'text-sm sm:text-base montserrat'}>{t('Company')}</label>}
+                                            name={'company'}
+                                            rules={[
+                                                {
+                                                    required: true,
+                                                    message:'You must input your company'
+                                                },
+                                            ]}>
+                                            <Input
+                                                className={'border rounded border-[#D4D4D8] h-12 montserrat text-sm sm:text-base'}
+                                                placeholder={t('Enter your company name')}
+                                            />
+                                        </Form.Item>
+                                    </Col>
+                                    <Col xs={{span: 24}} sm={{span: 12}}>
+                                        <Form.Item
+                                            label={<label className={'text-sm sm:text-base montserrat'}>Company Email</label>}
+                                            name={'email'}
+                                            rules={[
+                                                {
+                                                    required: true,
+                                                    message:'You must input your company email'
+                                                },
+                                                { type: 'email' }
+                                            ]}>
+                                            <Input
+                                                className={'border rounded border-[#D4D4D8] h-12 montserrat text-sm sm:text-base'}
+                                                placeholder={t('Enter your email')}
+                                            />
+                                        </Form.Item>
+                                    </Col>
+                                </Row>
                                 <Form.Item
                                     label={<label className={'text-sm sm:text-base montserrat'}>{t('Phone Number')}</label>}
                                     name={'phone_number'}

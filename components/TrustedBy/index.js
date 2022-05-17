@@ -59,7 +59,7 @@ const TrustedBy = ({sectionRef}) => {
     }
 
     return (
-        <div className={'relative flex items-center w-full h-auto py-28 sm:py-40 lg:py-52 pl-12 md:pl-20 z-50 bg-[#F1F1F1] my-10 sm:my-0 sm:mb-20 section-most-top'} ref={sectionRef}>
+        <div className={'relative flex items-center w-full h-auto py-28 sm:py-40 lg:py-52 pl-6 sm:pl-12 md:pl-20 z-50 bg-[#F1F1F1] my-10 sm:my-0 sm:mb-20 section-most-top-client'} ref={sectionRef}>
             <div className={'h-full sm:h-auto absolute bottom-0 right-0 about-img'}>
                 <Image preview={false} className="w-auto opacity-30" src={'/assets/images/accent-master-connecting-dots-2.png'}/>
             </div>
@@ -70,9 +70,9 @@ const TrustedBy = ({sectionRef}) => {
                         <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                         <p className={'text-sm text-[#818FA6] mb-0 ml-6 montserrat tracking-widest'}>{t('Trusted By')}</p>
                     </div>
-                    <p className={'text-3xl sm:text-5xl md:text-6xl lg:text-7xl montserrat text-[#1D365F] font-bold my-2 sm:my-6'}>{t('Clients and Partners')}</p>
-                    <p className={'text-base sm:text-lg lg:text-xl montserrat text-[#1D365F] font-medium mb-0'}>{t('Collaboration 1')}</p>
-                    {/*<p className={'text-base sm:text-lg lg:text-xl montserrat text-[#1D365F] font-medium mb-0'}>{t('Collaboration 2')}</p>*/}
+                    <p className={'text-3xl sm:text-5xl md:text-6xl lg:text-7xl montserrat text-[#04204D] font-bold my-2 sm:my-6'}>{t('Clients and Partners')}</p>
+                    <p className={'text-base sm:text-lg lg:text-xl montserrat text-[#04204D] font-medium mb-0'}>{t('Collaboration 1')}</p>
+                    {/*<p className={'text-base sm:text-lg lg:text-xl montserrat text-[#04204D] font-medium mb-0'}>{t('Collaboration 2')}</p>*/}
                 </div>
                 <div className={'flex flex-row justify-start mt-6 sm:mt-10 z-10 mr-4 lg:mr-20'}>
                     <div className={"bg-gray-300 w-full"}>

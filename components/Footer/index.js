@@ -50,7 +50,7 @@ const Footer = ({onClickTop = () => {}}) => {
                     {/*    </p>*/}
                     {/*</div>*/}
                 </div>
-                <div className={"flex flex-row"}>
+                <div className={"flex flex-col lg:flex-row"}>
                     <div className={"w-full lg:w-2/3 xl:w-2/3 ml-4 mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-between"}>
                         <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start lg:justify-start md:mt-8 lg:mt-0 '}>
                             <div className={'w-full md:w-9/12 lg:w-auto '}>
@@ -68,8 +68,8 @@ const Footer = ({onClickTop = () => {}}) => {
                         <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start '}>
                             <div className={'w-full md:w-9/12 lg:w-auto '}>
                                 <p className={'text-base montserrat opacity-80'}>{t('Call Us')}</p>
-                                <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-3">0628 671 8889</p>
-                                <p className="text-base montserrat opacity-80">{t('Mon to Fri')} (8.30 - 17.30)</p>
+                                <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-3">(021) 2290 2348</p>
+                                <p className="text-base montserrat opacity-80">{t('Mon to Fri')} (8.30 - 20.00)</p>
                             </div>
                         </div>
                         <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start '}>

@@ -8,7 +8,7 @@ import {startCase} from 'lodash';
 const emptyFunction = () => {}
 
 const StickyHeader = (props) => {
-    const {changeMenuOpen, isMenuOpen, onClickProduct=emptyFunction, onClickClients=emptyFunction, onClickMembership=emptyFunction, onClickUseCases=emptyFunction, onClickAboutUs=emptyFunction, onClickTopPage = emptyFunction} = props;
+    const {changeMenuOpen, isMenuOpen, onClickProduct=emptyFunction, onClickClients=emptyFunction, onClickContactUs=emptyFunction, onClickUseCases=emptyFunction, onClickAboutUs=emptyFunction, onClickTopPage = emptyFunction} = props;
     const { t, i18n } = useTranslation('common');
     const [header, setHeader] = useState("header");
     const [isOpen, setIsOpen] = useState(isMenuOpen);
@@ -16,13 +16,18 @@ const StickyHeader = (props) => {
     const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
     const mobile = useMediaQuery({ query: '(max-width: 576px)' });
     const tablet = useMediaQuery({ query: '(max-width: 980px)' });
+    const [windows, setWindows] = useState()
 
+    useEffect(() => {
+        if(window){
+            setWindows(window)
+        }
+    }, [])
     const menu = [
         {
             name: 'Home',
             onClicked : onClickTopPage,
         }, {
-        
             name: t('About Us.'),
             onClicked : onClickAboutUs,
         }, {
@@ -30,16 +35,17 @@ const StickyHeader = (props) => {
             name: t('Products'),
             onClicked : onClickProduct,
         }, {
-            name: t('Use Cases'),
+            name: t('Use Case'),
             onClicked :onClickUseCases
 
-        }, {
+        },
+        {
             name: 'Clients',
             onClicked :onClickClients
         },
         {
-            name: 'Membership',
-            onClicked :onClickMembership
+            name: t('Contact Us'),
+            onClicked :onClickContactUs
         }
     ];
 
@@ -62,16 +68,23 @@ const StickyHeader = (props) => {
         return () => window.removeEventListener("scroll", listenScrollEvent);
     }, []);
     return (
-         <div className={`z-[60] w-full sticky top-0 ${header}`}>
+         <div className={`z-[60] w-full sticky top-0 ${header} overflow-x-hidden`}>
             <div className={' w-full top-0 flex flex-row'} style={{ justifyContent: 'space-between' }}>
-                    <div className={'flex items-center ml-12 md:ml-20'}>
-                        <Image preview={false} className="cursor-pointer relative w-14 md:w-20 top-0" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }}  />
-                        <Image preview={false} className="relative h-14 md:h-20 w-auto" src={'/assets/logo/text-only.png'} />
+                <div className={'flex items-center  md:ml-20'}>
+                    <Image preview={false} className="cursor-pointer relative w-14 md:w-20 top-0" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }}  />
+                    <Image preview={false} className="relative h-14 md:h-20 w-auto" src={'/assets/logo/text-only.png'} />
+                </div>
+                {/* {windows?.scrollY > 70 &&
+                    <div className={'relative  bg-red-300'}>
+                        <Image preview={false} className=" w-[500px] " src={'/assets/header-plexus.png'} />
+                         <p>dsad</p>
                     </div>
+                } */}
                 <div className={'choose-lang flex flex-row mr-6 md:mr-10 lg:mr-12  z-30'}>
                     <DrawerSlide
                         menu={menu}
                         setOpen={changeMenuOpen}
+                        onClickContact={onClickContactUs}
                         isOpen={isOpen} />
                     {mobile || tablet ? '' : menu.map((items, _props) => (
                         <div key={_props} className='mt-6 mx-2 cursor-pointer ' onClick={items.onClicked}>
