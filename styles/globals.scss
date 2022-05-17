@@ -589,29 +589,9 @@ svg { vertical-align: baseline; }
   background: linear-gradient(90deg, rgba(0,11,30,1) 0%, rgba(7,39,91,1) 48%, rgba(4,32,77,1) 100%);
 }
 
-.bg-usecase-top {
-  background: linear-gradient(180deg, rgba(19, 47, 112, 0.16) 16.89%, #132F70 100%);
-}
-
-.bg-menu{
-  background-color: rgba(255,255,255, 0.8);
-}
-.custom-modal > .ant-modal-content{
-  width: 100vw !important;
-  height: 100% !important;
-  background: transparent;
-  box-shadow: none !important;
-}
-
 @media only screen and (max-device-width: 576px) {
   .contact-bg > .ant-image{
     height: 100%
-  }
-}
-
-@media only screen and (max-device-width: 425px) {
-  .ant-steps-item-icon{
-    width: 10px !important;
   }
 }
 
@@ -635,10 +615,6 @@ svg { vertical-align: baseline; }
 @media only screen and (min-device-width: 520px) and (max-device-width: 575px){.triv-top {top: 50px !important}}
 @media only screen and (min-device-width: 576px) and (max-device-width: 639px) {.triv-top {top: 60px !important}}
 
-.size-full {
-  width: 100% !important;
-  height: 100% !important;
-}
 
 .use-case-applications {
   list-style: none;
@@ -656,15 +632,6 @@ svg { vertical-align: baseline; }
 .section-most-top{
   scroll-margin-top: 6rem;
 }
-
-.section-most-top-use-case{
-  scroll-margin-top: 5rem;
-}
-
-.section-most-top-client{
-  scroll-margin-top: 5rem;
-}
-
 
 .box-hover {
   transition: box-shadow .3s;
