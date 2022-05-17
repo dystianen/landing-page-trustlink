@@ -146,7 +146,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                         onChange={num => setCurrent(num)}
                     >
                         {dataUseCase.map((item, index) => (
-                            <div key={index} className={'w-full  md:h-[68vh] flex flex-col md:flex-row'}>
+                            <div key={index} className={'w-full  flex flex-col md:h-[68vh] md:flex-row md:mb-20'}>
                                 <div className={'flex justify-center items-center w-full md:w-2/3  mt-0 mb-10 md:my-0'}>
                                     <div className={' flex justify-center items-start usecase-img-2 px-10 md:px-0'}>
                                         <Image preview={false} src={item.src} className={'z-20 justify-center h-full  '} />
