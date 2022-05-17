@@ -70,7 +70,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
 
 
     return (
-        <div className={'w-full h-full pl-6 sm:pl-12 md:pl-20 mt-10'} >
+        <div className={'w-full h-full  md:pl-20 mt-10'} >
             <div className={'w-full h-full'}>
                 <div className={"relative w-full h-auto max-h-[519px] usecase-img -mb-1"}>
                     {/* <Image preview={false} className="w-full  h-[10rem] md:h-[15rem] lg:h-[18rem] xl:h-full" src={'/assets/usecase/bg-usecase-crop.png'}/> */}
@@ -98,7 +98,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                             <Image className={'z-0 w-[30vh] md:w-[35vh] '} preview={ false} src={'/assets/usecase/group-orange.png'} />
                         </div>
                     </div>
-                     <div className={'mt-7 md:mt-10 w-full md:3/4 z-10 pl-3 md:pl-0 '}>
+                     <div className={'mt-7 md:mt-10 w-full md:3/4 z-10 px-5 md:pl-0 '}>
                         <p className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-1 md:mb-2 montserrat'}>{t('Use Case')}</p>
                         <p className={'text-white text-[14px] md:text-lg xl:text-xl montserrat  lg:pr-0'}>{t('Biometric Use Case 2')}</p>
                     </div>
@@ -154,7 +154,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                                 </div>
                            
                                 <div className={'flex flex-col justify-start md:justify-center  w-full md:w-2/3 md:h-full md:pl-10'}>
-                                    <div className={"mb-2"}>
+                                    <div className={"mb-2 px-5"}>
                                         <p className={'text-sm lg:text-base xl:text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
                                     </div>
                                     <div className={'px-6 md:px-0 text-lg md:text-2xl lg:text-3xl xl:text-2xl text-white montserrat text-center md:text-left w-full '}>
@@ -162,7 +162,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                                             {item.name}
                                         </p>
                                     </div>
-                                    <div className={'mb-2 px-4 sm:px-12 md:px-0'}>
+                                    <div className={'mb-2 px-5 md:px-0'}>
                                         <p className={"text-white text-xs lg:text-sm xl:text-base w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify whitespace-pre-line"}>
                                             {item.desc}
                                         </p>
