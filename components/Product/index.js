@@ -153,7 +153,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         </p>
                         <a
                             type="primary"
-                            className={'rounded-lg  mt-2 flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 md:w-1/2 lg:w-3/12 montserrat '}
+                            className={'rounded-lg  mt-2 flex justify-center items-center bg-[#FF6703] text-white text-base sm:text-lg h-12 md:w-1/2 lg:w-3/12 montserrat '}
                             onClick={onClickContact}
                         >
                             {t('Contact Us')}
