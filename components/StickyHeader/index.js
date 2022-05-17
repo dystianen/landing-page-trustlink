@@ -93,9 +93,6 @@ const StickyHeader = (props) => {
                             </p>
                         </div>
                     ))}
-<<<<<<< HEAD
-                    <div className={'w-20  h-20 transparent  p-5 '} style={{ zIndex: 10000 }}>
-=======
                     <div className={'flex items-center justify-center'}>
                         <div className={'choose-lang flex flex-row'}>
                             <Link href={'/'} locale="en">
@@ -107,8 +104,7 @@ const StickyHeader = (props) => {
                             </Link>
                         </div>
                     </div>
-                    <div className={'w-16 sm:w-20 h-20 transparent  top-4 left-0 p-5 '} style={{ zIndex: 10000 }}>
->>>>>>> 336c3f361f9d41bbcb8a1e19647a09193f0eb645
+                    <div className={'w-20 sm:w-20 h-20 transparent p-5 '} style={{ zIndex: 10000 }}>
                         <button className="flex flex-col w-full h-full justify-center group" style={{ zIndex: 10000 }} onClick={() =>{
                             changeMenuOpen(!isOpen)
                         }}
