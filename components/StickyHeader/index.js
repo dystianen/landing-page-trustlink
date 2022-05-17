@@ -86,7 +86,7 @@ const StickyHeader = (props) => {
                         setOpen={changeMenuOpen}
                         onClickContact={onClickContactUs}
                         isOpen={isOpen} />
-                    {mobile || tablet ? '' : menu.map((items, _props) => (
+                    {tablet ? '' : menu.map((items, _props) => (
                         <div key={_props} className='mt-6 mx-2 cursor-pointer ' onClick={items.onClicked}>
                             <p>
                                {items.name}
