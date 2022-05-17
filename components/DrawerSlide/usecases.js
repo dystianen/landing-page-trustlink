@@ -53,7 +53,8 @@ export const UseCases = observer(({show, setShow}) => {
                         </div>
                     </div>
                     <p className={'inline text-3xl mb-5 pt-2 montserrat leading-none font-bold text-[#04204D]'}>{t('Use Cases')}</p>
-                    <p className={'text-sm pb-6 pt-2 montserrat text-[#4F6382]'}>
+                    {/*<p className={'text-sm pb-6 pt-2 montserrat text-[#4F6382]'}>*/}
+                    <p className={'text-sm pb-6 pt-2 montserrat text-[#04204D]'}>
                         {t('When')} <br/> {t('Check')}
                     </p>
                 </div>
@@ -68,7 +69,7 @@ export const UseCases = observer(({show, setShow}) => {
                             <div className="relative w-full ">
                                 <div className={'absolute -bottom-2 inset-x-0 mx-auto w-full  mt-5 z-0'}>
                                     <Image preview={false} className="w-[50px] md:w-[3rem] lg:w-[3.5rem] xl:w-[4.5rem]" src={data.left}/>
-                                </div>        
+                                </div>
                             </div>
                             <div className={'absolute top-0 right-0 z-0' }>
                                 <Image preview={false} className="w-[50px] md:w-[3rem] lg:w-[3.5rem] xl:w-[4.5rem]" src={data.right}/>
