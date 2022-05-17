@@ -168,7 +168,7 @@ const ContactUs = observer(({sectionRef}) => {
                                 <div className={'flex justify-end'}>
                                     <Button
                                         loading={loading}
-                                        className={'rounded-lg flex justify-center items-center bg-[#04204D] text-white text-base sm:text-lg h-12 w-1/2 montserrat'}
+                                        className={'rounded-lg flex justify-center items-center bg-[#FF6703] text-white text-base sm:text-lg h-12 w-1/2 montserrat'}
                                         onClick={async () => {
                                             setLoading(true);
                                             await submitForm();
