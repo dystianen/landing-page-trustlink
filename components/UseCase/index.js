@@ -135,7 +135,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                                 backgroundColor: 'rgba(0,0,0, .1)',
                             },
                             // className: 'arrow-usecase mt-[17rem] md:mt-48 lg:mt-36'
-                            className: 'arrow-usecase -mt-44 sm:mt-48 lg:mt-36'
+                            className: 'arrow-usecase my-auto items-between'
                         }}
                         navButtonsWrapperProps={{
                             className: `mx-2 md:mx-8 ${!current ? 'arrow-prev-product' : current === (pageCarousel - 1) ? 'arrow-next-product' : null}`
@@ -146,10 +146,10 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                         onChange={num => setCurrent(num)}
                     >
                         {dataUseCase.map((item, index) => (
-                            <div key={index} className={'w-full md:h-[68vh] flex flex-col md:flex-row'}>
+                            <div key={index} className={'w-full  md:h-[68vh] flex flex-col md:flex-row'}>
                                 <div className={'flex justify-center items-center w-full md:w-2/3  mt-0 mb-10 md:my-0'}>
-                                    <div className={' flex justify-center items-start usecase-img-2 px-10'}>
-                                        <Image preview={false} src={item.src} className={'z-20 justify-center h-auto md:h-[30vh] lg:h-[50vh]'} />
+                                    <div className={' flex justify-center items-start usecase-img-2 px-10 md:px-0'}>
+                                        <Image preview={false} src={item.src} className={'z-20 justify-center h-full  '} />
                                     </div>
                                 </div>
                            
