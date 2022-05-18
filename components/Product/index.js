@@ -192,7 +192,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             </div>
             <div >
                 <div className={'relative w-screen lg:w-auto overflow-visible'}>
-                    <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-20 sm:h-36 -ml-4 md:-ml-20 lg:ml-0 mr-8'} onChange={(num) => onChangeProduct(num)}>
+                    <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-20 sm:h-36 -ml-4 lg:ml-0 mr-8'} onChange={(num) => onChangeProduct(num)}>
                         {data.map((it, index) => (
                             <Step
                                 className={'flex justify-center items-center overflow-visible'}
@@ -212,7 +212,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                                 }
                             />
                         ))}
-                        <hr className={`absolute left-12 md:left-0 lg:left-[10%] top-[48%] w-[78%] h-1 bg-[#FE6601] z-0`}/>
+                        <hr className={`absolute left-12 md:left-16 lg:left-[10%] top-[48%] w-[78%] h-1 bg-[#FE6601] z-0`}/>
                     </Steps>
                 </div>
 
