@@ -4,10 +4,10 @@ import {useTranslation} from "next-i18next";
 const Banner = () => {
     const { t } = useTranslation('common');
     return (
-        <div className={'h-auto w-full  lg:pl-20'}>
-            <div className="relative text-white h-[16rem] sm:h-[18rem] lg:h-[21.8rem] w-full bg-white">
-                <div className="absolute left-0 top-0 w-full h-full about-img">
-                    <Image preview={false} className="w-full h-full xshort:h-[105%] invert-[.1] z-0" src={"/assets/images/accent-master-logo-3-crop.png"}/>
+        <div className={'h-auto w-full lg:pl-20'}>
+            <div className="relative text-white h-[16rem] sm:h-[18rem] lg:h-[21.8rem] w-auto bg-white">
+                <div className="absolute left-0 top-0 w-auto h-full about-img">
+                    <Image preview={false} className="w-auto h-full xshort:h-[105%] invert-[.1] z-0" src={"/assets/images/accent-master-logo-3-crop.png"}/>
                 </div>
                 <div className={'flex flex-col md:flex-row w-full h-full'}>
                     <div className="w-full md:w-3/5 h-full flex justify-center items-center z-10">
