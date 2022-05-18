@@ -38,11 +38,11 @@ const WhyUsPage = () => {
     ]
 
     return (
-        <div className='relative md:pl-20 pl-12 h-auto mt-30 mb-30 overflow-x-none flex flex-col'>
-            <div className={"absolute -top-52 lg:-top-30 left-[75%] w-[50rem] lg:w-[67rem] h-auto"}>
+        <div className='relative lg:pl-20 h-auto mt-30 mb-30 overflow-x-none flex flex-col'>
+            <div className={"absolute -top-16 md:-top-52 lg:-top-30 left-[75%] w-[20rem] md:w-[50rem] lg:w-[67rem] h-auto"}>
                 <Image alt={"why_bg"} src={"/assets/why_us/bg1.png"} preview={false}/>
             </div>
-            <div>
+            <div className={'pl-4'}>
                 <div className={'flex flex-row items-center mb-2'}>
                     <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
                     <p className={'text-xs lg:text-base tracking-wide mb-0 text-center text-[#818FA6] tracking-widest montserrat'}>{t('Why TrustLink')}</p>
