@@ -12,7 +12,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
             title: t("eKYC & User Onboarding"),
             name: t("Desc eKYC"),
             desc: t('Desc eKYC & User Onboarding'),
-            src: '/assets/usecase/usecase-1.png',
+            src: '/assets/usecase/Financial.png',
             applications: [
                 t('use_case_1_app1'),
                 t('use_case_1_app2'),
@@ -31,7 +31,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
             name: t("use_case_2_title"),
             desc: t("use_case_2_description"),
             // src: '/assets/usecase/usecase-ekyc.png',
-            src: '/assets/usecase/usecase-2.png',
+            src: '/assets/usecase/Telco.png',
             applications: [
                 t("use_case_2_app1"),
                 t("use_case_2_app2"),
@@ -70,7 +70,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
 
 
     return (
-        <div className={'w-full h-full  md:pl-20 mt-10'} >
+        <div className={'w-full h-full  lg:pl-20 mt-10'} >
             <div className={'w-full h-full'}>
                 <div className={"relative w-full h-auto max-h-[519px] usecase-img -mb-1"}>
                     {/* <Image preview={false} className="w-full  h-[10rem] md:h-[15rem] lg:h-[18rem] xl:h-full" src={'/assets/usecase/bg-usecase-crop.png'}/> */}
@@ -152,7 +152,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                                         <Image preview={false} src={item.src} className={'z-20 justify-center h-full  '} />
                                     </div>
                                 </div>
-                           
+
                                 <div className={'flex flex-col justify-start md:justify-center  w-full md:w-2/3 md:h-full md:pl-10'}>
                                     <div className={"mb-2 px-5"}>
                                         <p className={'text-sm lg:text-base xl:text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
@@ -188,7 +188,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                                     </div>
                                 </div>
                             </div>
-                           
+
 
                         ))}
                     </Carousel>
