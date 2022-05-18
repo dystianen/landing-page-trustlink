@@ -109,9 +109,9 @@ const StickyHeader = (props) => {
                             changeMenuOpen(!isOpen)
                         }}
                         >
-                            <div className={`${genericHamburgerLine} self-start ${isOpen ? "w-full rotate-45 translate-y-3 opacity-0" : "w-3 sm:w-4 opacity-100 z[60]"}`}/>
+                            <div className={`${genericHamburgerLine} self-start ${isOpen ? "w-full rotate-45 translate-y-3 opacity-0" : "w-6 sm:w-8 lg:w-4 opacity-100 z[60]"}`}/>
                             <div className={`${genericHamburgerLine2} ${isOpen ? "opacity-0" : "opacity-100 z[60]"}`}/>
-                            <div className={`${genericHamburgerLine} self-end ${isOpen ? "w-full -rotate-45 -translate-y-3 opacity-0" : "w-3 sm:w-4 opacity-100 z[60]"}`}/>
+                            <div className={`${genericHamburgerLine} self-end ${isOpen ? "w-full -rotate-45 -translate-y-3 opacity-0" : "w-6 sm:w-8 lg:w-4 opacity-100 z[60]"}`}/>
                         </button>
                     </div>
                 </div>
