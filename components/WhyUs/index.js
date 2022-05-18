@@ -55,8 +55,8 @@ const WhyUsPage = () => {
                 {dataWhyUs.map((item, index) =>(
                     <div key={index} className={"box-hover py-5 px-[1.875rem] flex flex-col text-[#1D365F] lg:h-[35vh] xl:h-[35vh] items-center max-w-[19rem] lg:max-w-[30rem] xl:max-w-[40rem] mb-10 sm:mb-0"}>
                         <Image alt={item.title} width={65} src={item.image_url} preview={false} />
-                        <Divider />
-                        <div>
+                        {/*<Divider />*/}
+                        <div className={'mt-5'}>
                             <p className={'montserrat text-lg md:text-lg lg:text-xl font-bold text-center mb-1'}>{item.title}</p>
                             <p className={'montserrat text-sm md:text-sm lg:text-base text-center'}>{item.description}</p>
                         </div>
