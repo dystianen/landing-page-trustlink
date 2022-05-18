@@ -12,7 +12,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
             title: t("eKYC & User Onboarding"),
             name: t("Desc eKYC"),
             desc: t('Desc eKYC & User Onboarding'),
-            src: '/assets/usecase/Financial.png',
+            src: '/assets/usecase/Financial2.png',
             applications: [
                 t('use_case_1_app1'),
                 t('use_case_1_app2'),
