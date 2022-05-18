@@ -18,8 +18,7 @@ const ContactUs = observer(({sectionRef}) => {
     },[])
 
     const submitForm = () => {
-        form
-            .validateFields().then( res => {
+        form.validateFields().then( res => {
             return store.contact_us.sendContactUs(res).then(res=>{
                 setLoading(false);
                 message.success('Successfully send your message!');
@@ -170,7 +169,7 @@ const ContactUs = observer(({sectionRef}) => {
                                         loading={loading}
                                         className={'rounded-lg flex justify-center items-center bg-[#FF6703] text-white text-base sm:text-lg h-12 w-1/2 montserrat'}
                                         onClick={async () => {
-                                            setLoading(true);
+                                            // setLoading(true);
                                             await submitForm();
                                         }}
                                     >
