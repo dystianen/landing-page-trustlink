@@ -28,11 +28,27 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
     const imageSm = xs ? 'w-[16px]' : 'w-[18px]'
 
     const [isSafari, setIsSafari] = useState(false)
+    const [isIos, setIsIos] = useState(false)
     useEffect(() => {
         const checkSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+        const checkIos = !window.MSStream && /iPad|iPhone|iPod/.test(navigator.userAgent);
+        const checkIos13 = [
+                'iPad Simulator',
+                'iPhone Simulator',
+                'iPod Simulator',
+                'iPad',
+                'iPhone',
+                'iPod'
+            ].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+
+
         if(checkSafari){
             setIsSafari(true)
         }
+        if(checkIos || checkIos13){
+            setIsIos(true)
+        }
+
     },[])
 
     const data = [
@@ -67,7 +83,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             name: 'Trust',
             name2: 'Verify',
             coming_soon : '',
-            src: isSafari ? '/assets/product/bg-white/TrustVerify.mp4' : '/assets/product/TrustVerify.webm',
+            src: isSafari || isIos ? '/assets/product/bg-white/TrustVerify.mp4' : '/assets/product/TrustVerify.webm',
             subhead: t('trust_verify_title'),
             desc: t('trust_verify_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
@@ -78,7 +94,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             name: 'Trust',
             name2: 'Scan',
             coming_soon : '',
-            src: isSafari ? '/assets/product/bg-white/TrustScan.mp4' : '/assets/product/revision-13-05/TrustScan.webm',
+            src: isSafari || isIos ? '/assets/product/bg-white/TrustScan.mp4' : '/assets/product/revision-13-05/TrustScan.webm',
             subhead: t('trust_scan_title'),
             desc: t('trust_scan_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
@@ -90,7 +106,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             name: 'Trust',
             name2: 'Live',
             coming_soon : '',
-            src: isSafari ? '/assets/product/bg-white/TrustLive-short.mp4' : '/assets/product/revision-13-05/TrustLive-short.webm',
+            src: isSafari || isIos ? '/assets/product/bg-white/TrustLive-short.mp4' : '/assets/product/revision-13-05/TrustLive-short.webm',
             subhead: t('trust_live_title'),
             desc: t('trust_live_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
@@ -109,7 +125,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
         {
             name: 'Trust',
             name2: 'Vision',
-            src: isSafari ? '/assets/product/bg-white/TrustVision.mp4' : '/assets/product/revision-13-05/TrustVision.webm',
+            src: isSafari || isIos ? '/assets/product/bg-white/TrustVision.mp4' : '/assets/product/revision-13-05/TrustVision.webm',
             subhead: t('trust_vision_title'),
             desc: t('trust_vision_subtitle'),
             size: md ? '90%' : xs ? '50%' : '80%',
@@ -131,7 +147,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
         return (
             // <div className={'flex flex-col md:flex-row w-full min-h-[43rem] md:h-[28rem] lg:h-[38rem] xl:h-[42rem] bg-green-100'}>
             <div className={'flex flex-col md:flex-row w-full min-h-[50vh] md:h-[30rem] xl:h-[28rem] mt-0'}>
-                <div className={`flex justify-center items-center w-screen md:w-3/6 lg:w-2/4 text-center ${isSafari ? 'z-30' : 'z-10'}`}>
+                <div className={`flex justify-center items-center w-screen md:w-3/6 lg:w-2/4 text-center ${isSafari || isIos ? 'z-30' : 'z-10'}`}>
                     <ReactPlayer
                         className=''
                         url={item.src}
@@ -140,7 +156,6 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         loop={true}
                         muted
                         playing={true}
-                        playsinline={true}
                     />
                 </div>
                 <div className={'flex flex-col justify-center items-center md:items-start w-full md:w-3/6 lg:w-2/4 z-40 mt-0 px-6 md:px-0'}>
@@ -235,7 +250,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                             }
                         }}
                         navButtonsWrapperProps={{
-                            className: `sm:mr-5 md:mr-0 lg:mr-5 sm:ml-5 md:ml-0 lg:ml-5 ${isSafari ? 'z-40' : 'z-40'} ${!current ? 'arrow-prev-product' : current === (items.length - 1) ? 'arrow-next-product' : null}`
+                            className: `sm:mr-5 md:mr-0 lg:mr-5 sm:ml-5 md:ml-0 lg:ml-5 ${isSafari || isIos ? 'z-40' : 'z-40'} ${!current ? 'arrow-prev-product' : current === (items.length - 1) ? 'arrow-next-product' : null}`
                         }}
                         className={''}
                     >
@@ -247,7 +262,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             </div>
 
             <div className="relative h-[3vh] sm:h-[10vh]" />
-            <div className={`absolute w-full lg:w-10/12 xl:w-8/12 h-1/3 sm:h-auto -bottom-10 right-0 usecase-img ${isSafari ? 'z-30' : 'z-0'}`}>
+            <div className={`absolute w-full lg:w-10/12 xl:w-8/12 h-1/3 sm:h-auto -bottom-10 right-0 usecase-img ${isSafari || isIos ? 'z-30' : 'z-0'}`}>
                 <Image preview={false} src={'/assets/images/accent-home-sectionProduct-2-edit.png'} className={'h-full w-full opacity-10'}/>
             </div>
         </div>
