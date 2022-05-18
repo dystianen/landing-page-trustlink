@@ -33,7 +33,7 @@ const Footer = ({onClickTop = () => {}}) => {
     ]
     return (
         <div className={'relative'}>
-            <div className="h-auto w-full text-white py-4 pr-6 md:pr-16 text-2xl bg-footer  pl-6 ">
+            <div className="h-auto w-full text-white py-4 pr-6 md:pr-6 lg:pr-16 text-2xl bg-footer  pl-6 ">
                 <div className={"w-full grid grid-cols-12 gap-2"}>
                     <div className={'col-span-9 lg:col-span-6 xl:col-span-6'}>
                         <Image className="w-3/5 md:w-1/2" src="/assets/logo/logo-for-dark-background-rt.png" preview={false} />
