@@ -11,7 +11,6 @@ const { Title, Text } = Typography;
 const WhyUsPage = () => {
     const router = useRouter();
     const { t } = useTranslation('common');
-    console.log(t, 'isi')
     const [transition, setTransition] = useState(false);
 
     useEffect(() => {
@@ -20,33 +19,33 @@ const WhyUsPage = () => {
 
     const dataWhyUs = [
         {
-            title: "Fast and Easy Integration",
-            description: "With our API based delivery, Your Business can provide the service in no time, and no hassle",
+            title: t("why_us_1_title"),
+            description: t("why_us_1_desc"),
             image_url: "/assets/why_us/API_laptop.png"
         },{
-            title: "Proven State Of The Art Technology",
-            description: "Our services such as biometric facial recognition, Liveness, and OCR all has international licence such as NIST and iBETA",
+            title: t("why_us_2_title"),
+            description: t("why_us_2_desc"),
             image_url: "/assets/why_us/fingerprint_laptop.png"
         },{
-            title: "Fast and Easy Integration",
-            description: "With our API based delivery, Your Business can provide the service in no time, and no hassle",
+            title: t("why_us_3_title"),
+            description: t("why_us_3_desc"),
             image_url: "/assets/why_us/fingerprint_laptop.png"
         },{
-            title: "Fast and Easy Integration",
-            description: "With our API based delivery, Your Business can provide the service in no time, and no hassle",
+            title: t("why_us_4_title"),
+            description: t("why_us_4_desc"),
             image_url: "/assets/why_us/profile_laptop.png"
         },
     ]
 
     return (
-        <div className='relative sm:pl-12 md:pl-20 h-auto mt-30 mb-30 overflow-x-none flex flex-col'>
-            <div className={"absolute -top-16 sm:-top-30 left-[75%] w-[20rem] sm:w-[35rem] lg:w-[67rem] h-auto"}>
-                <Image alt={"why_us_bg"} src={"/assets/why_us/bg1.png"} preview={false}/>
+        <div className='relative md:pl-20 pl-12 h-auto mt-30 mb-30 overflow-x-none flex flex-col'>
+            <div className={"absolute -top-52 lg:-top-30 left-[75%] w-[50rem] lg:w-[67rem] h-auto"}>
+                <Image alt={"why_bg"} src={"/assets/why_us/bg1.png"} preview={false}/>
             </div>
-            <div className={'pl-6 sm:pl-0'}>
+            <div>
                 <div className={'flex flex-row items-center mb-2'}>
                     <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
-                    <p className={'text-xs mb-0 text-center text-[#818FA6] tracking-widest montserrat'}>{t('Why TrustLink')}</p>
+                    <p className={'text-xs lg:text-base tracking-wide mb-0 text-center text-[#818FA6] tracking-widest montserrat'}>{t('Why TrustLink')}</p>
                 </div>
                 <div>
                     <p className={"text-2xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl w-[21rem] sm:w-[32rem] lg:w-[42rem] xl:w-[52rem] 2xl:w-[62rem] sm:mb-10 montserrat font-bold sm:font-semibold text-[#1D365F]"}>We Create The Best Result-Oriented Offerings</p>
@@ -54,12 +53,12 @@ const WhyUsPage = () => {
             </div>
             <div className={"flex flex-col sm:grid sm:grid-cols-2 gap-4 sm:pl-10 justify-items-center items-center"}>
                 {dataWhyUs.map((item, index) =>(
-                    <div key={`${index}`} className={"flex flex-col items-center max-w-[19rem] lg:max-w-[24rem] xl:max-w-[30rem] mb-10 sm:mb-0"}>
-                        <Image alt={item.title} src={item.image_url} preview={false}/>
+                    <div key={index} className={"box-hover py-5 px-[1.875rem] flex flex-col text-[#1D365F] items-center max-w-[19rem] lg:max-w-[30rem] xl:max-w-[40rem] mb-10 sm:mb-0"}>
+                        <Image alt={item.title} src={item.image_url} preview={false} />
                         <Divider />
                         <div>
-                            <p className={'montserrat text-sm font-bold text-center mb-1'}>{item.title}</p>
-                            <p className={'montserrat text-xs text-center'}>{item.description}</p>
+                            <p className={'montserrat text-lg md:text-xl lg:text-2xl font-bold text-center mb-1'}>{item.title}</p>
+                            <p className={'montserrat text-sm md:text-base lg:text-lg text-center'}>{item.description}</p>
                         </div>
                     </div>
                 ))}

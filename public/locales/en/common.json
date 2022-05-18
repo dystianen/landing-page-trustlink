@@ -144,5 +144,13 @@
     "use_case_3_app3": "Fraud detection & exclusion lists",
     "use_case_3_app4": "Fast & convenient account opening",
     "Get it Started" : "Get it Started",
-    "why_title": "Why TrustLink"
+    "why_title": "Why TrustLink",
+    "why_us_1_title": "Fast and Easy Integration",
+    "why_us_1_desc": "With our API based delivery, your business can provide the service in no time, and no hassle.",
+    "why_us_2_title": "Proven State Of The Art Technology",
+    "why_us_2_desc": "Our services such as biometric facial recognition, Liveness, and OCR all has international license such as NIST and iBETA.",
+    "why_us_3_title": "Accurate and Fast Result",
+    "why_us_3_desc": "Optimise your conversion rates by providing a seamless, fast, and accurate result in eKYC and digital onboarding experience.",
+    "why_us_4_title": "Strongest Compliance With Regulators",
+    "why_us_4_desc": "We are the official partner of Dukcapil as one of the Platform Bersama facilitator, ensuring you meet all regulatory requirements while delivering the best digital onboarding experience."
 }
