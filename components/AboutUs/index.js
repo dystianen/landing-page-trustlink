@@ -45,19 +45,21 @@ const AboutMePage = ({sectionRef}) => {
                             </div> */}
                             {/*<Fade when={transition} duration={1600}>*/}
                             <div >
-                            <Title className={"font-bold w-full lg:w-[90%] xl:w-[90%] text-lg md:text-xl lg:text-2xl montserrat"} style={{ whiteSpace: 'pre-line' }}>
+                            <Title className={"font-bold flex flex-col items-center md:items-start w-full xl:w-[90%] text-lg md:text-xl lg:text-2xl montserrat"} style={{ whiteSpace: 'pre-line' }}>
                                         <div className={'flex flex-row justify-center items-center z-10  text-center mb-5'}>
                                             <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                                                 <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center'}>{t('About Us.')}</p>
                                             <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                                         </div>
-                                        <span className={'block leading-snug text-[#04204D] text-center'}>{t('about_us_main_text')}</span>
+                                        <div className={'-ml-3 sm:-ml-12 md:ml-0 w-[20rem] sm:w-[38rem] md:w-[32rem] lg:w-[52rem] xl:w-auto'}>
+                                            <span className={'block leading-snug text-[#04204D] text-base md:text-xl lg:text-2xl text-center'}>{t('about_us_main_text')}</span>
+                                        </div>
                                     </Title>
                             </div>
                         </div>
                         <div style={{whiteSpace: 'pre-line'}}>
                             {/*<Text className={'text-[#4f6382] w-full md:w-[95%] lg:w-[60rem] xl:w-[90%] 2xl:w-[90%] lg:pl-24 xl:pl-40 2xl:pl-[15%] md:px-4 sm:pr-10 sm:mt-10 xl:mt-6 text-base lg:text-lg sm:flex montserrat font-normal'}>*/}
-                            <Text className={'text-[#04204D] w-full md:w-[95%] lg:w-[60rem] xl:w-[90%] 2xl:w-[90%] lg:pl-24 xl:pl-40 2xl:pl-[15%] md:px-4 sm:pr-10 sm:mt-10 xl:mt-6 text-base lg:text-lg sm:flex montserrat font-normal'}>
+                            <Text className={'text-[#04204D] w-full md:w-[95%] lg:w-[60rem] xl:w-[90%] 2xl:w-[90%] sm:pl-10 lg:pl-24 xl:pl-40 2xl:pl-[15%] md:px-4 sm:pr-10 sm:mt-10 xl:mt-6 text-base lg:text-lg sm:flex montserrat font-normal'}>
                                 <span className={'block w-[95%] sm:w-3/4 sm:pr-10 xl:w-full text-justify'}><Trans i18nKey="about_us_column1" /></span>
                                 <br/>
                                 {/*<span className={'block w-[95%] sm:w-3/4 sm:pr-10 xl:w-3/5 text-justify'}>{t('About SubHeadline 2')}</span>*/}
