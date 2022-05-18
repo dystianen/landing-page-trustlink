@@ -140,6 +140,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         loop={true}
                         muted
                         playing={true}
+                        playsinline={true}
                     />
                 </div>
                 <div className={'flex flex-col justify-center items-center md:items-start w-full md:w-3/6 lg:w-2/4 z-40 mt-0 px-6 md:px-0'}>
