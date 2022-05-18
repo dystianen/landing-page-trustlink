@@ -72,7 +72,7 @@ const Footer = ({onClickTop = () => {}}) => {
                                 <p className="text-base montserrat opacity-80">{t('Mon to Fri')} (8.30 - 20.00)</p>
                             </div>
                         </div>
-                        <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start '}>
+                        <div className={'w-full md:w-1/2 lg:w-1/2 flex justify-center md:justify-start '}>
                             <div className={'w-full md:w-9/12 lg:w-auto'}>
                                 <p className={'text-base montserrat opacity-80'}>{t('Social Media')}</p>
                                 <div className="flex flex-row gap-4">
