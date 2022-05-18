@@ -674,3 +674,12 @@ svg { vertical-align: baseline; }
 .box-hover:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
+
+.box-hover {
+  transition: box-shadow .3s;
+  float: left;
+
+}
+.box-hover:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
