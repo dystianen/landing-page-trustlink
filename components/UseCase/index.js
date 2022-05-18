@@ -70,7 +70,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
 
 
     return (
-        <div className={'w-full h-full  md:pl-20 mt-10'} >
+        <div className={'w-full h-full  lg:pl-20 mt-10'} >
             <div className={'w-full h-full'}>
                 <div className={"relative w-full h-auto max-h-[519px] usecase-img -mb-1"}>
                     {/* <Image preview={false} className="w-full  h-[10rem] md:h-[15rem] lg:h-[18rem] xl:h-full" src={'/assets/usecase/bg-usecase-crop.png'}/> */}
