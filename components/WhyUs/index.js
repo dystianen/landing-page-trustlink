@@ -11,7 +11,6 @@ const { Title, Text } = Typography;
 const WhyUsPage = () => {
     const router = useRouter();
     const { t } = useTranslation('common');
-    console.log(t, 'isi')
     const [transition, setTransition] = useState(false);
 
     useEffect(() => {
@@ -20,20 +19,20 @@ const WhyUsPage = () => {
 
     const dataWhyUs = [
         {
-            title: "Fast and Easy Integration",
-            description: "With our API based delivery, Your Business can provide the service in no time, and no hassle",
+            title: t("why_us_1_title"),
+            description: t("why_us_1_desc"),
             image_url: "/assets/why_us/API_laptop.png"
         },{
-            title: "Proven State Of The Art Technology",
-            description: "Our services such as biometric facial recognition, Liveness, and OCR all has international licence such as NIST and iBETA",
+            title: t("why_us_2_title"),
+            description: t("why_us_2_desc"),
             image_url: "/assets/why_us/fingerprint_laptop.png"
         },{
-            title: "Fast and Easy Integration",
-            description: "With our API based delivery, Your Business can provide the service in no time, and no hassle",
+            title: t("why_us_3_title"),
+            description: t("why_us_3_desc"),
             image_url: "/assets/why_us/fingerprint_laptop.png"
         },{
-            title: "Fast and Easy Integration",
-            description: "With our API based delivery, Your Business can provide the service in no time, and no hassle",
+            title: t("why_us_4_title"),
+            description: t("why_us_4_desc"),
             image_url: "/assets/why_us/profile_laptop.png"
         },
     ]
@@ -41,7 +40,7 @@ const WhyUsPage = () => {
     return (
         <div className='relative md:pl-20 pl-12 h-auto mt-30 mb-30 overflow-x-none flex flex-col'>
             <div className={"absolute -top-52 lg:-top-30 left-[75%] w-[50rem] lg:w-[67rem] h-auto"}>
-                <Image src={"/assets/why_us/bg1.png"} preview={false}/>
+                <Image alt={"why_bg"} src={"/assets/why_us/bg1.png"} preview={false}/>
             </div>
             <div>
                 <div className={'flex flex-row items-center mb-2'}>
@@ -55,7 +54,7 @@ const WhyUsPage = () => {
             <div className={"flex flex-col sm:grid sm:grid-cols-2 gap-4 sm:pl-10 justify-items-center items-center"}>
                 {dataWhyUs.map((item, index) =>(
                     <div key={index} className={"box-hover py-5 px-[1.875rem] flex flex-col text-[#1D365F] items-center max-w-[19rem] lg:max-w-[30rem] xl:max-w-[40rem] mb-10 sm:mb-0"}>
-                        <Image src={item.image_url} preview={false} />
+                        <Image alt={item.title} src={item.image_url} preview={false} />
                         <Divider />
                         <div>
                             <p className={'montserrat text-lg md:text-xl lg:text-2xl font-bold text-center mb-1'}>{item.title}</p>
