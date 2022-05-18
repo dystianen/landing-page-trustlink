@@ -41,7 +41,7 @@ const WhyUsPage = () => {
     return (
         <div className='relative sm:pl-12 md:pl-20 h-auto mt-30 mb-30 overflow-x-none flex flex-col'>
             <div className={"absolute -top-16 sm:-top-30 left-[75%] w-[20rem] sm:w-[35rem] lg:w-[67rem] h-auto"}>
-                <Image src={"/assets/why_us/bg1.png"} preview={false}/>
+                <Image alt={"why_us_bg"} src={"/assets/why_us/bg1.png"} preview={false}/>
             </div>
             <div className={'pl-6 sm:pl-0'}>
                 <div className={'flex flex-row items-center mb-2'}>
@@ -54,8 +54,8 @@ const WhyUsPage = () => {
             </div>
             <div className={"flex flex-col sm:grid sm:grid-cols-2 gap-4 sm:pl-10 justify-items-center items-center"}>
                 {dataWhyUs.map((item, index) =>(
-                    <div className={"flex flex-col items-center max-w-[19rem] lg:max-w-[24rem] xl:max-w-[30rem] mb-10 sm:mb-0"}>
-                        <Image src={item.image_url} preview={false}/>
+                    <div key={`${index}`} className={"flex flex-col items-center max-w-[19rem] lg:max-w-[24rem] xl:max-w-[30rem] mb-10 sm:mb-0"}>
+                        <Image alt={item.title} src={item.image_url} preview={false}/>
                         <Divider />
                         <div>
                             <p className={'montserrat text-sm font-bold text-center mb-1'}>{item.title}</p>
