@@ -3,7 +3,7 @@ import { appConfig } from "../config/app";
 import { isAuthUrl } from "../utils/checkUrl";
 import { useStore } from "../components/StoreProvider";
 import { Button, Image } from "antd";
-import React, { useRef, useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import { ParticlePage } from "../components/Particle";
 import { DrawerSlide } from "../components/DrawerSlide";
 import { Product } from "../components/Product";
@@ -22,6 +22,7 @@ import Link from "next/link";
 import StickyHeader from "../components/StickyHeader";
 import {MapAddress} from "../components/MapAddress";
 import WhyUsPage from "../components/WhyUs";
+import { scrollIntoView, polyfill  } from "seamless-scroll-polyfill";
 
 export const checkRerouteLoggedUser = (store, router) => {
     if (typeof window !== 'undefined') {
@@ -37,6 +38,11 @@ export default function Home() {
     const genericHamburgerLine = `h-1 my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
     const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-[#04204D] transition ease transform duration-300`;
     const mobile = useMediaQuery({ query: '(max-width: 576px)' });
+
+    useEffect(()=>{
+        polyfill();
+    }, [])
+
 
     const [indexProduct, setIndexProduct] = useState(0);
 
@@ -97,16 +103,53 @@ export default function Home() {
         topSectionRef.current.scrollIntoView({behavior: 'smooth'})
     }
 
+    const scrollToSpecificY = (elem, options={}) => {
+        if(!usingMenuFromModal){
+            elem.scrollIntoView({ behavior: 'smooth' });
+            return;
+        }
+        let doc = document.documentElement;
+        let top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+        let rect = elem.getBoundingClientRect();
+        let scrollToY = rect.y + top;
+        if(options.scroll_margin_top){
+            scrollToY -= options.scroll_margin_top;
+        }
+        window.scroll({top: scrollToY, behavior: 'smooth'});
+    }
+
+    const usingMenuFromModal = useMediaQuery({query: '(max-width: 1024px)'})
+
     return (
         <div>
             <StickyHeader
                 changeMenuOpen={setIsOpen}
                 isMenuOpen={isOpen}
-                onClickProduct={() => sectionProductRef.current.scrollIntoView({ behavior: 'smooth' })}
-                onClickContactUs={() => contactUsRef.current.scrollIntoView({ behavior: 'smooth' }) }
-                onClickClients={() => clientsRef.current.scrollIntoView({ behavior: 'smooth' }) }
-                onClickUseCases={() => useCasesRef.current.scrollIntoView({ behavior: 'smooth' }) }
-                onClickAboutUs={() => aboutUsRef.current.scrollIntoView({ behavior: 'smooth' }) }
+                onClickProduct={() => {
+                    scrollToSpecificY(sectionProductRef.current, {
+                        scroll_margin_top: 96
+                    })
+                }}
+                onClickContactUs={() => {
+                    scrollToSpecificY(contactUsRef.current, {
+                        scroll_margin_top: 96
+                    })
+                }}
+                onClickClients={() => {
+                    scrollToSpecificY(clientsRef.current, {
+                        scroll_margin_top: 80
+                    })
+                }}
+                onClickUseCases={() => {
+                    scrollToSpecificY(useCasesRef.current, {
+                        scroll_margin_top: 80
+                    })
+                }}
+                onClickAboutUs={() => {
+                    scrollToSpecificY(aboutUsRef.current, {
+                        scroll_margin_top: 96
+                    })
+                }}
                 onClickTopPage={() => window.scrollTo({top: 0, behavior: 'smooth'}) } />
             <div className="overflow-hidden">
                 {/*<DrawerSlide menu={menu} isOpen={isOpen} />*/}
