@@ -45,7 +45,7 @@ const AboutMePage = ({sectionRef}) => {
                             </div> */}
                             {/*<Fade when={transition} duration={1600}>*/}
                             <div >
-                            <Title className={"font-bold flex flex-col items-center md:items-start w-full xl:w-[90%] text-lg md:text-xl lg:text-2xl montserrat"} style={{ whiteSpace: 'pre-line' }}>
+                            <Title className={"font-bold flex flex-col items-center w-full xl:w-[90%] text-lg md:text-xl lg:text-2xl montserrat"} style={{ whiteSpace: 'pre-line' }}>
                                         <div className={'flex flex-row justify-center items-center z-10  text-center mb-5'}>
                                             <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                                                 <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center'}>{t('About Us.')}</p>
