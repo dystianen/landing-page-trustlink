@@ -7,7 +7,7 @@ const WeAimed = () => {
     const { t } = useTranslation('common');
 
     return (<>
-            <div className="h-[340px] w-full pl-12 md:pl-20 z-0 ">
+            <div className="h-[340px] w-full pl-12 lg:pl-20 z-0 ">
                 <div className={'w-full h-full relative text-white montserrat '}>
                 {/* <div className={'section-gradient-bg w-full h-full absolute z-10'} /> */}
                 {tablet === true ?
