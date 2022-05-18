@@ -91,7 +91,7 @@ export const DrawerSlide = observer((props) => {
                                         it.onClicked()
                                     }}>
                                         <h1 className={'text-xl md:text-2xl font-bold mb-0 montserrat'} style={{color: '#04204D'}}>{it.name}</h1>
-                                        <RightOutlined className={'text-lg opacity-50'} style={{color: '#04204D'}} />
+                                        {/* <RightOutlined className={'text-lg opacity-50'} style={{color: '#04204D'}} /> */}
                                     </Button>
                                 ))
                             }
