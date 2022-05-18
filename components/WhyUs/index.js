@@ -25,7 +25,7 @@ const WhyUsPage = () => {
         },{
             title: t("why_us_2_title"),
             description: t("why_us_2_desc"),
-            image_url: "/assets/why_us/fingerprint_laptop.png"
+            image_url: "/assets/why_us/theartoftech.png"
         },{
             title: t("why_us_3_title"),
             description: t("why_us_3_desc"),
@@ -48,17 +48,17 @@ const WhyUsPage = () => {
                     <p className={'text-xs lg:text-base tracking-wide mb-0 text-center text-[#818FA6] tracking-widest montserrat'}>{t('Why TrustLink')}</p>
                 </div>
                 <div>
-                    <p className={"text-2xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl w-[21rem] sm:w-[32rem] lg:w-[42rem] xl:w-[52rem] 2xl:w-[62rem] sm:mb-10 montserrat font-bold sm:font-semibold text-[#1D365F]"}>We Create The Best Result-Oriented Offerings</p>
+                    <p className={"text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl w-full sm:w-[65vw] whitespace-pre-line sm:mb-10 montserrat font-bold sm:font-semibold text-[#04204D]"}>We Create The Best{'\n'}Result-Oriented Offerings</p>
                 </div>
             </div>
-            <div className={"flex flex-col sm:grid sm:grid-cols-2 gap-4 sm:pl-10 justify-items-center items-center"}>
+            <div className={"flex flex-col md:grid md:grid-cols-2 gap-4 sm:pl-10 justify-items-center items-center"}>
                 {dataWhyUs.map((item, index) =>(
-                    <div key={index} className={"box-hover py-5 px-[1.875rem] flex flex-col text-[#1D365F] items-center max-w-[19rem] lg:max-w-[30rem] xl:max-w-[40rem] mb-10 sm:mb-0"}>
-                        <Image alt={item.title} src={item.image_url} preview={false} />
+                    <div key={index} className={"box-hover py-5 px-[1.875rem] flex flex-col text-[#1D365F] h-[45vh] items-center max-w-[19rem] lg:max-w-[30rem] xl:max-w-[40rem] mb-10 sm:mb-0"}>
+                        <Image alt={item.title} width={65} src={item.image_url} preview={false} />
                         <Divider />
                         <div>
-                            <p className={'montserrat text-lg md:text-xl lg:text-2xl font-bold text-center mb-1'}>{item.title}</p>
-                            <p className={'montserrat text-sm md:text-base lg:text-lg text-center'}>{item.description}</p>
+                            <p className={'montserrat text-lg md:text-lg lg:text-xl font-bold text-center mb-1'}>{item.title}</p>
+                            <p className={'montserrat text-sm md:text-sm lg:text-base text-center'}>{item.description}</p>
                         </div>
                     </div>
                 ))}
