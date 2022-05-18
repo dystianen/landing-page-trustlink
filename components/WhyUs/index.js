@@ -21,19 +21,19 @@ const WhyUsPage = () => {
         {
             title: t("why_us_1_title"),
             description: t("why_us_1_desc"),
-            image_url: "/assets/why_us/API_laptop.png"
+            image_url: "/assets/why_us/Fast.png"
         },{
             title: t("why_us_2_title"),
             description: t("why_us_2_desc"),
-            image_url: "/assets/why_us/theartoftech.png"
+            image_url: "/assets/why_us/Proven.png"
         },{
             title: t("why_us_3_title"),
             description: t("why_us_3_desc"),
-            image_url: "/assets/why_us/fingerprint_laptop.png"
+            image_url: "/assets/why_us/Accurate.png"
         },{
             title: t("why_us_4_title"),
             description: t("why_us_4_desc"),
-            image_url: "/assets/why_us/profile_laptop.png"
+            image_url: "/assets/why_us/Strongest.png"
         },
     ]
 
