@@ -156,7 +156,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         loop={true}
                         muted
                         playing={true}
-                        playsinline={true}
+                        playsinline
                     />
                 </div>
                 <div className={'flex flex-col justify-center items-center md:items-start w-full md:w-3/6 lg:w-2/4 z-40 mt-0 px-6 md:px-0'}>
@@ -208,7 +208,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                 </div>
             </div>
             <div >
-                <div className={'relative w-screen lg:w-auto overflow-visible'}>
+                <div className={'z-40 relative w-screen lg:w-auto overflow-visible'}>
                     <Steps responsive={false} current={current} className={'mt-6 md:mt-1 w-full h-20 sm:h-36 -ml-4 lg:ml-0 mr-8'} onChange={(num) => onChangeProduct(num)}>
                         {data.map((it, index) => (
                             <Step
