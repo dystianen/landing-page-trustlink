@@ -89,7 +89,7 @@ const Footer = ({onClickTop = () => {}}) => {
                         <div className={'md:w-1/2 lg:w-0'}/>
                     </div>
                     <div className={"w-full lg:w-1/3 xl:w-1/3 mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-between"}>
-                        <div className={'w-full flex md:justify-start '}>
+                        <div className={'w-full flex md:justify-start z-50'}>
                             <div className={'w-full '}>
                                 <p className={'text-base montserrat opacity-80'}>{t('Address')}</p>
                                 <MapAddress className={'w-full h-[40vh]'}/>
