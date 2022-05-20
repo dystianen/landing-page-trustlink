@@ -199,7 +199,7 @@ export default function Home() {
                                     </div>
                                     <div>
                                         <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-36 md:w-48"} onClick={()=> aboutUsRef.current.scrollIntoView({ behavior: 'smooth' }) }>
-                                            {t('Get it Started')}
+                                            {t('Get Started')}
                                         </Button>
                                     </div>
                                 </div>
