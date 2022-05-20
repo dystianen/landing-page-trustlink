@@ -104,7 +104,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                     </div>
                     <Carousel
                         autoPlay={false}
-                        className={'w-full h-full  flex flex-row z-40'}
+                        className={'w-full h-full flex flex-row z-40'}
                         indicatorContainerProps={{
                             style: {
                                 position: 'absolute',
@@ -153,7 +153,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                                     </div>
                                 </div>
 
-                                <div className={'flex flex-col justify-start md:justify-center  w-full md:w-2/3 md:h-full md:pl-10'}>
+                                <div className={'flex flex-col justify-start md:justify-center w-full md:w-2/3 md:h-full md:pl-10 m-usecase'}>
                                     <div className={"mb-2 px-5"}>
                                         <p className={'text-sm lg:text-base xl:text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
                                     </div>
