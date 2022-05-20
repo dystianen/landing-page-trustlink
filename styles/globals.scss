@@ -622,6 +622,12 @@ svg { vertical-align: baseline; }
   }
 }
 
+@media only screen and (min-device-width: 1024px) and (max-device-height: 712px) {
+  .m-usecase{
+    margin-top: 2rem;
+  }
+}
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) and (max-device-height: 738px) {
   .custom-height{
     height: 29rem !important;
