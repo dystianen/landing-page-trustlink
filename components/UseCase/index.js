@@ -12,7 +12,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
             title: t("eKYC & User Onboarding"),
             name: t("Desc eKYC"),
             desc: t('Desc eKYC & User Onboarding'),
-            src: '/assets/usecase/Financial2.png',
+            src: '/assets/usecase/usecase-1.png',
             applications: [
                 t('use_case_1_app1'),
                 t('use_case_1_app2'),
@@ -31,7 +31,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
             name: t("use_case_2_title"),
             desc: t("use_case_2_description"),
             // src: '/assets/usecase/usecase-ekyc.png',
-            src: '/assets/usecase/Telco.png',
+            src: '/assets/usecase/usecase-2.png',
             applications: [
                 t("use_case_2_app1"),
                 t("use_case_2_app2"),
@@ -43,7 +43,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
             title: t("use_case_3_mini_text"),
             name: t("use_case_3_title"),
             desc: t("use_case_3_description"),
-            src: '/assets/usecase/usecase-3-new.png',
+            src: '/assets/usecase/usecase-3.png',
             applications: [
                 t("use_case_3_app1"),
                 t("use_case_3_app2"),
