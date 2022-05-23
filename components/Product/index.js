@@ -188,8 +188,8 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
 
     return (
         <div className={'relative h-auto w-full section-most-top'} ref={productRef} id={'product-section'}>
-            <div className={'h-[35%] lg:h-auto absolute top-24 -left-60 about-img'}>
-                <Image preview={false} className="h-full w-auto " src={'/assets/images/accent-master-connecting-dots-1.png'}/>
+            <div className={'h-full w-full absolute top-24 -left-48 md:-left-60 about-img'}>
+                <Image preview={false} className="w-full md:w-[70%] lg:w-4/5 xl:w-[90%] 2xl:w-full h-auto " src={'/assets/images/accent-master-connecting-dots-1.png'}/>
             </div>
             <div className={'flex w-full justify-center'} ref={productRef}>
                 <div className={'flex flex-row items-center z-10 mb-2'}>
