@@ -699,9 +699,26 @@ svg { vertical-align: baseline; }
   }
 }
 
-@media only screen and (max-device-width: 767px) and (max-device-height: 678px){
+@media only screen and (max-device-width: 767px) and (max-device-height: 546px){
   .space-mobile {
-    height: 10rem !important;
+    height: 10.5rem !important;
+  }
+}
+
+@media only screen and (max-device-width: 767px) and (min-device-height: 547px) and (max-device-height: 597px) {
+  .space-mobile {
+    height: 11rem !important;
+  }
+}
+
+@media only screen and (max-device-width: 767px) and (min-device-height: 598px) and (max-device-height: 647px) {
+  .space-mobile {
+    height: 8rem !important;
+  }
+}
+@media only screen and (max-device-width: 767px) and (min-device-height: 648px) and (max-device-height: 689px) {
+  .space-mobile {
+    height: 7rem !important;
   }
 }
 
