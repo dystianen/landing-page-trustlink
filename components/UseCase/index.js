@@ -140,7 +140,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                             className: 'arrow-usecase my-auto items-between'
                         }}
                         navButtonsWrapperProps={{
-                            className: `mx-2 md:mx-8 ${!current ? 'arrow-prev-product' : current === (pageCarousel - 1) ? 'arrow-next-product' : null}`
+                            className: `mx-2 lg:mx-3 xl:mx-8 ${!current ? 'arrow-prev-product' : current === (pageCarousel - 1) ? 'arrow-next-product' : null}`
                         }}
                         NextIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-right.svg'}/>}
                         PrevIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-left.svg'}/>}
