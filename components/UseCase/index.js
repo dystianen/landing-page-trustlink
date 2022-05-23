@@ -87,24 +87,26 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                     </div> */}
 
                 </div>
-                <div className={'flex flex-col h-auto  md:pl-20 bg-[#132F70] section-most-top-use-case'} ref={sectionRef}>
-                    <div className={'relative w-full '}>
-                        <div className={'absolute -left-80 z-0 -top-16 opacity-40'}>
-                            <Image className={'z-0 w-auto'} preview={ false} src={'/assets/usecase/bg-group.png'} />
+                <div className={'flex flex-col h-auto bg-[#132F70] section-most-top-use-case'} ref={sectionRef}>
+                    <div className={'md:pl-20'}>
+                        <div className={'relative w-full '}>
+                            <div className={'absolute -left-80 z-0 -top-16 opacity-40'}>
+                                <Image className={'z-0 w-auto'} preview={ false} src={'/assets/usecase/bg-group.png'} />
+                            </div>
                         </div>
-                    </div>
-                     <div className={'relative w-full'}>
-                         <div className={'absolute z-0 -top-16 -right-20  opacity-60'}>
-                            <Image className={'z-0 w-[30vh] md:w-[35vh] '} preview={ false} src={'/assets/usecase/group-orange.png'} />
+                        <div className={'relative w-full'}>
+                            <div className={'absolute z-0 -top-16 -right-20  opacity-60'}>
+                                <Image className={'z-0 w-[30vh] md:w-[35vh] '} preview={ false} src={'/assets/usecase/group-orange.png'} />
+                            </div>
                         </div>
-                    </div>
-                     <div className={'mt-7 md:mt-10 w-full md:3/4 z-10 px-5 md:pl-0 '}>
-                        <p className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-1 md:mb-2 montserrat'}>{t('Use Case')}</p>
-                        <p className={'text-white text-[14px] md:text-lg xl:text-xl montserrat  lg:pr-0'}>{t('Biometric Use Case 2')}</p>
+                        <div className={'mt-7 md:mt-10 w-full md:3/4 z-10 px-5 md:pl-0 '}>
+                            <p className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-1 md:mb-2 montserrat'}>{t('Use Case')}</p>
+                            <p className={'text-white text-[14px] md:text-lg xl:text-xl montserrat  lg:pr-0'}>{t('Biometric Use Case 2')}</p>
+                        </div>
                     </div>
                     <Carousel
                         autoPlay={false}
-                        className={'w-full h-full flex flex-row z-40'}
+                        className={'w-full h-full flex flex-row z-40 justify-center'}
                         indicatorContainerProps={{
                             style: {
                                 position: 'absolute',
@@ -146,7 +148,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                         onChange={num => setCurrent(num)}
                     >
                         {dataUseCase.map((item, index) => (
-                            <div key={index} className={'w-full  flex flex-col md:h-[68vh] md:flex-row md:mb-20'}>
+                            <div key={index} className={'w-full flex flex-col md:h-[28rem] lg:h-[33rem] xl:h-[30rem] md:flex-row md:mb-20 md:pl-20'}>
                                 <div className={'flex justify-center items-center w-full md:w-2/3  mt-0 mb-10 md:my-0'}>
                                     <div className={' flex justify-center items-start usecase-img-2 px-10 md:px-0'}>
                                         <Image preview={false} src={item.src} className={'z-20 justify-center h-full  '} />
