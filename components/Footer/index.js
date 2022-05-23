@@ -55,14 +55,16 @@ const Footer = ({onClickTop = () => {}}) => {
                         <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start lg:justify-start md:mt-8 lg:mt-0 '}>
                             <div className={'w-full md:w-9/12 lg:w-auto '}>
                                 <p className={'text-base montserrat opacity-80'}>{t('Address')}</p>
-                                <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-2">{t('Kota Kasablanca Office 88')}</p>
-                                <p className="text-base montserrat opacity-80">{t('Jl. Raya Casablanca No.16, RW.5,')}<br/>{t(' Menteng Dalam, Kec. Tebet, DKI Jakarta 12870')}</p>
+                                {/*<p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-2">{t('Kota Kasablanca Office 88')}</p>*/}
+                                {/*<p className="text-base montserrat opacity-80">{t('Jl. Raya Casablanca No.16, RW.5,')}<br/>{t(' Menteng Dalam, Kec. Tebet, DKI Jakarta 12870')}</p>*/}
+                                <p className="montserrat text-lg md:text-[1.4rem] 2xl:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-2">{t('Centennial Tower Level 29 Unit F')}</p>
+                                <p className="text-base montserrat opacity-80">{t('Jl. Jend Gatot Subroto No 27,')}<br/>{t('Karet Semanggi, Kec. Setiabudi, Jakarta Selatan, DKI Jakarta 12930')}</p>
                             </div>
                         </div>
                         <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start my-6 md:my-0 '}>
                             <div className={'w-full md:w-9/12 lg:w-auto'}>
                                 <p className={'text-base montserrat opacity-80'}>EMAIL</p>
-                                <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-9">info@withtrustlink.com</p>
+                                <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10">info@withtrustlink.com</p>
                             </div>
                         </div>
                         <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start '}>
