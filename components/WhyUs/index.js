@@ -53,7 +53,7 @@ const WhyUsPage = () => {
             </div>
             <div className={"flex flex-col md:grid md:grid-cols-2 gap-4 lg:pl-10 justify-items-center items-center"}>
                 {dataWhyUs.map((item, index) =>(
-                    <div key={index} className={"box-hover py-5 px-[1.875rem] flex flex-col text-[#1D365F] lg:h-[35vh] xl:h-[35vh] items-center max-w-[19rem] lg:max-w-[30rem] xl:max-w-[40rem] mb-10 sm:mb-0"}>
+                    <div key={index} className={"box-hover py-2 md:py-5 px-[1.875rem] flex flex-col text-[#1D365F] lg:h-[35vh] xl:h-[35vh] items-center max-w-[19rem] lg:max-w-[30rem] xl:max-w-[40rem]"}>
                         <Image alt={item.title} width={65} src={item.image_url} preview={false} />
                         {/*<Divider />*/}
                         <div className={'mt-5'}>
