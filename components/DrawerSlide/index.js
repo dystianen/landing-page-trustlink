@@ -128,8 +128,10 @@ export const DrawerSlide = observer((props) => {
                                 </div>
                                 <div className={'flex-col text-white mb-10  md:mb-2'}>
                                     <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>{t('Address')}</p>
-                                    <p className={`text-xl ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>{t('Kota Kasablanca Office 88')}</p>
-                                    <p className={'text-xs opacity-80 montserrat'} style={{letterSpacing: 0.3}}>{t('Jl. Raya Casablanca No.16, RW.5,')}<br/>{t(' Menteng Dalam, Kec. Tebet, DKI Jakarta 12870')}</p>
+                                    {/*<p className={`text-xl ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>{t('Kota Kasablanca Office 88')}</p>*/}
+                                    {/*<p className={'text-xs opacity-80 montserrat'} style={{letterSpacing: 0.3}}>{t('Jl. Raya Casablanca No.16, RW.5,')}<br/>{t(' Menteng Dalam, Kec. Tebet, DKI Jakarta 12870')}</p>*/}
+                                    <p className={`text-xl ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>{t('Centennial Tower Level 29 Unit F')}</p>
+                                    <p className={'text-xs opacity-80 montserrat'} style={{letterSpacing: 0.3}}>{t('Jl. Jend Gatot Subroto No 27,')}<br/>{t('Karet Semanggi, Kec. Setiabudi, Jakarta Selatan, DKI Jakarta 12930')}</p>
                                 </div>
                             </div>
                             <div className={'flex-col text-white mb-10  md:mb-2'}>
