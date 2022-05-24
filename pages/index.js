@@ -210,7 +210,7 @@ export default function Home() {
                             {
                                 product.map((it,index) => (
                                     <div key={index} className={it.className} onClick={()=> handleClickProduct(it.productIndex) }>
-                                        <Image preview={false} src={`/assets/images/${it.image}`} className={'z-10 justify-center'} />
+                                        <Image preview={false} src={`/assets/images/${it.image}`} alt={'product_top'} className={'z-10 justify-center'} />
                                     </div>
                                 ))
                             }

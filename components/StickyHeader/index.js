@@ -71,8 +71,8 @@ const StickyHeader = (props) => {
          <div className={`z-[60] w-full sticky top-0 ${header} overflow-x-hidden`}>
             <div className={' w-full top-0 flex flex-row'} style={{ justifyContent: 'space-between' }}>
                 <div className={'flex items-center md:ml-12'}>
-                    <Image preview={false} className="cursor-pointer relative w-14 md:w-20 top-0" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }}  />
-                    <Image preview={false} className="relative h-14 md:h-20 w-auto" src={'/assets/logo/text-only.png'} />
+                    <Image preview={false} className="cursor-pointer relative w-14 md:w-20 top-0" alt={'icon_top'} src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }}  />
+                    <Image preview={false} className="relative h-14 md:h-20 w-auto" src={'/assets/logo/text-only.png'} alt={'text_top'}/>
                 </div>
                 {/* {windows?.scrollY > 70 &&
                     <div className={'relative  bg-red-300'}>

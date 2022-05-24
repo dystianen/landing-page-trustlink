@@ -55,14 +55,17 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
         {
             name: 'Verify',
             icon: '/assets/images/logo-trust-verify.png',
+            alt :'product'
         },
         {
             name: 'Scan',
             icon: '/assets/images/logo-trust-scan.png',
+            alt :'product'
         },
         {
             name: 'Live',
             icon: '/assets/images/logo-trust-live.png',
+            alt :'product'
         },
         // {
         //     name: 'Connect',
@@ -71,6 +74,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
         {
             name: 'Vision',
             icon: '/assets/images/logo-trust-vision.png',
+            alt :'product'
         },
         // {
         //     name: 'Score',
@@ -189,7 +193,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
     return (
         <div className={'relative h-auto w-full section-most-top'} ref={productRef} id={'product-section'}>
             <div className={'h-full w-full absolute top-24 -left-48 md:-left-60 about-img'}>
-                <Image preview={false} className="w-full md:w-[70%] lg:w-4/5 xl:w-[90%] 2xl:w-full h-auto " src={'/assets/images/accent-master-connecting-dots-1.png'}/>
+                <Image preview={false} className="w-full md:w-[70%] lg:w-4/5 xl:w-[90%] 2xl:w-full h-auto " alt={'dots-bg'} src={'/assets/images/accent-master-connecting-dots-1.png'}/>
             </div>
             <div className={'flex w-full justify-center'} ref={productRef}>
                 <div className={'flex flex-row items-center z-10 mb-2'}>
@@ -220,7 +224,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                                              style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? `0 0 ${shadow}px 1px #FE6601` : null}}
                                         >
                                             <Tooltip title={'Trust' +it.name}>
-                                                <Image preview={false} src={it.icon} className={`w-[24px] sm:w-[28px] md:w-[28px] lg:w-[35px]`}/>
+                                            <Image preview={false} src={it.icon} alt={it.alt} className={`w-[24px] sm:w-[28px] md:w-[28px] lg:w-[35px]`}/>
                                             </Tooltip>
                                         </div>
                                         <p className={`w-10 sm:w-20 md:w-40 text-[10px] sm:text-sm lg:text-lg montserrat ${current === index ? 'hidden' : null}`}>
@@ -241,8 +245,8 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         prev={num => onChangeProduct(num)}
                         index={current}
                         autoPlay={false}
-                        NextIcon={<Image preview={false} className="w-[20px] lg:w-[25px] h-[20px] lg:h-[25px]" src={'/assets/arrow-right.svg'}/>}
-                        PrevIcon={<Image preview={false} className="w-[20px] lg:w-[25px] h-[20px] lg:h-[25px]" src={'/assets/arrow-left.svg'}/>}
+                        NextIcon={<Image preview={false} alt={"next_logo"} className="w-[20px] lg:w-[25px] h-[20px] lg:h-[25px]" src={'/assets/arrow-right.svg'}/>}
+                        PrevIcon={<Image preview={false}  alt={"prev_logo"}  className="w-[20px] lg:w-[25px] h-[20px] lg:h-[25px]" src={'/assets/arrow-left.svg'}/>}
                         indicators={false}
                         navButtonsProps={{
                             style: {
@@ -264,7 +268,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
 
             <div className="relative h-[3vh] sm:h-[10vh]" />
             <div className={`absolute w-full lg:w-10/12 xl:w-8/12 h-1/3 sm:h-auto -bottom-10 right-0 usecase-img ${isSafari || isIos ? 'z-30' : 'z-0'}`}>
-                <Image preview={false} src={'/assets/images/accent-home-sectionProduct-2-edit.png'} className={'h-full w-full opacity-10'}/>
+              <Image preview={false} src={'/assets/images/accent-home-sectionProduct-2-edit.png'} alt={"bg_product_opacity"} className={'h-full w-full opacity-10'}/>
             </div>
         </div>
     )

@@ -36,7 +36,7 @@ const Footer = ({onClickTop = () => {}}) => {
             <div className="h-auto w-full text-white py-4 pr-6 md:pr-6 lg:pr-16 text-2xl bg-footer  pl-6 ">
                 <div className={"w-full grid grid-cols-12 gap-2"}>
                     <div className={'col-span-9 lg:col-span-6 xl:col-span-6'}>
-                        <Image className="w-3/5 md:w-1/2" src="/assets/logo/logo-for-dark-background-rt.png" preview={false} />
+                        <Image className="w-3/5 md:w-1/2" src="/assets/logo/logo-for-dark-background-rt.png" preview={false} alt={'bg_footer'}/>
                     </div>
                     {/*<div className={'col-span-3 lg:col-span-6 xl:col-span-6 text-[#71757C] flex md:justify-end items-center md:mr-6 lg:mr-12 xl:mr-24'}>*/}
                     {/*    <p className={'text-sm md:text-xl montserrat m-0 z-20'}>*/}
@@ -113,10 +113,10 @@ const Footer = ({onClickTop = () => {}}) => {
                 {/*<p className={'w-max mt-4'} style={{ color: '#fff', fontFamily: 'Montserrat', letterSpacing: '0.15rem', fontSize: '0.6rem', writingMode: 'vertical-rl', textOrientation: 'sideways-right' }}>{t('Go To Top')}</p>*/}
             {/*</div>*/}
             <div className={'absolute bottom-0 left-0'}>
-                <Image preview={false} src={'/assets/images/accent-footer-left.png'}/>
+                <Image preview={false} src={'/assets/images/accent-footer-left.png'} alt={'accent_footer'}/>
             </div>
             <div className={'absolute bottom-0 right-0'}>
-                <Image preview={false} src={'/assets/images/accent-footer-right.png'}/>
+                <Image preview={false} src={'/assets/images/accent-footer-right.png'} alt={'accent_footer'}/>
             </div>
         </div>
     );
