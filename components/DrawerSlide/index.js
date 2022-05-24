@@ -124,7 +124,7 @@ export const DrawerSlide = observer((props) => {
                                 </div>
                                 <div className={'flex-col text-white mb-10  md:mb-2 cursor-pointer'} onClick={goToContact}>
                                     <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>Email</p>
-                                    <p className={`text-xl ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>info@withtrustlink.com</p>
+                                    <a className={`text-xl ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat text-white`}>info@withtrustlink.com</a>
                                 </div>
                                 <div className={'flex-col text-white mb-10  md:mb-2'}>
                                     <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>{t('Address')}</p>
