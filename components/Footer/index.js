@@ -64,7 +64,7 @@ const Footer = ({onClickTop = () => {}}) => {
                         <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start my-6 md:my-0 '}>
                             <div className={'w-full md:w-9/12 lg:w-auto'}>
                                 <p className={'text-base montserrat opacity-80'}>EMAIL</p>
-                                <p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10">info@withtrustlink.com</p>
+                                <a className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 text-none no-underline text-white">info@withtrustlink.com</a>
                             </div>
                         </div>
                         <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start '}>
