@@ -48,7 +48,7 @@ const AboutMePage = ({sectionRef}) => {
                             <Title className={"font-bold flex flex-col items-center w-full xl:w-[90%] text-lg md:text-xl lg:text-2xl montserrat"} style={{ whiteSpace: 'pre-line' }}>
                                         <div className={'flex flex-row justify-center items-center z-10  text-center mb-5'}>
                                             <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
-                                                <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center'}>{t('About Us.')}</p>
+                                                <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center font-normal'}>{t('About Us.')}</p>
                                             <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                                         </div>
                                         <div className={'-ml-3 sm:-ml-12 md:ml-0 w-[20rem] sm:w-[38rem] md:w-[32rem] lg:w-[52rem] xl:w-auto'}>
