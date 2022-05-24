@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
         {/* <link rel="preload" href={"/assets/logo.svg"} /> */}
         <link rel="icon" href="/assets/logo/icon-only.png" as="icon" />
         <link
-          rel="preload"
+          rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Montserrat:bold,light,regular,medium" crossOrigin="anonymous"
         />
         <Script src={"../styles/animation/textCarousel.js"} />
