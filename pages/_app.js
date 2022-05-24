@@ -29,11 +29,11 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:description" content="Trustlink Website" />
         <meta property="og:type" content="website" />
         {/* <meta property="og:url" content="https://myclothingstore.com/" /> */}
-        {/*<link rel="shortcut icon" href={profile?.entity?.logo_url ? appConfig.imageApiUrl + profile?.entity?.logo_url : "/assets/logo.svg"} />*/}
-        <link rel="preload" href="/assets/logo/icon-only.png" />
+        {/* <link rel="preload" href={"/assets/logo.svg"} /> */}
+        <link rel="icon" href="/assets/logo/icon-only.png" as="icon" />
         <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Montserrat:bold,light,regular,medium"
+          rel="preload"
+          href="https://fonts.googleapis.com/css?family=Montserrat:bold,light,regular,medium" crossOrigin="anonymous"
         />
         <Script src={"../styles/animation/textCarousel.js"} />
       </Head>
