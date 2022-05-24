@@ -24,6 +24,11 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Trustlink</title>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+        <meta name="description" content="Trustlink Website" />
+        <meta property="og:title" content="Trustlink" />
+        <meta property="og:description" content="Trustlink Website" />
+        <meta property="og:type" content="website" />
+        {/* <meta property="og:url" content="https://myclothingstore.com/" /> */}
         {/*<link rel="shortcut icon" href={profile?.entity?.logo_url ? appConfig.imageApiUrl + profile?.entity?.logo_url : "/assets/logo.svg"} />*/}
         <link rel="icon" href="/assets/logo/icon-only.png" />
         <link
