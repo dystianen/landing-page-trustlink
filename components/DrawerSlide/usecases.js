@@ -72,7 +72,7 @@ export const UseCases = observer(({show, setShow}) => {
                                 </div>
                             </div>
                             <div className={'absolute top-0 right-0 z-0' }>
-                                <Image preview={false} className="w-[50px] md:w-[3rem] lg:w-[3.5rem] xl:w-[4.5rem]" src={data.right}/>
+                                <Image preview={false} className={"w-[50px] md:w-[3rem] lg:w-[3.5rem] xl:w-[4.5rem]"} src={data.right}/>
                             </div>
                         </div>
                     </div>

@@ -71,8 +71,8 @@ const StickyHeader = (props) => {
          <div className={`z-[60] w-full sticky top-0 ${header} overflow-x-hidden`}>
             <div className={' w-full top-0 flex flex-row'} style={{ justifyContent: 'space-between' }}>
                 <div className={'flex items-center md:ml-12'}>
-                    <Image preview={false} className="cursor-pointer relative w-14 md:w-20 top-0" alt={'icon_top'} src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }}  />
-                    <Image preview={false} className="relative h-14 md:h-20 w-auto" src={'/assets/logo/text-only.png'} alt={'text_top'}/>
+                    <Image preview={false} className={"cursor-pointer relative w-14 md:w-20 top-0"} alt={'icon_top'} src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }}  />
+                    <Image preview={false} className={"relative h-14 md:h-20 w-auto"} src={'/assets/logo/text-only.png'} alt={'text_top'}/>
                 </div>
                 {/* {windows?.scrollY > 70 &&
                     <div className={'relative  bg-red-300'}>
@@ -87,7 +87,7 @@ const StickyHeader = (props) => {
                         onClickContact={onClickContactUs}
                         isOpen={isOpen} />
                     {tablet ? '' : menu.map((items, _props) => (
-                        <div key={_props} className='flex items-center mx-2 xl:mx-4 2xl:mx-6 cursor-pointer ' onClick={items.onClicked}>
+                        <div key={_props} className={'flex items-center mx-2 xl:mx-4 2xl:mx-6 cursor-pointer '} onClick={items.onClicked}>
                             <p className={'mb-0 text-center'}>
                                {items.name}
                             </p>
@@ -105,7 +105,7 @@ const StickyHeader = (props) => {
                     {/*    </div>*/}
                     {/*</div>*/}
                     <div className={'w-20 sm:w-20 h-20 transparent p-5 '} style={{ zIndex: 10000 }}>
-                        <button className="flex flex-col w-full h-full justify-center group" style={{ zIndex: 10000 }} onClick={() =>{
+                        <button className={"flex flex-col w-full h-full justify-center group"} style={{ zIndex: 10000 }} onClick={() =>{
                             changeMenuOpen(!isOpen)
                         }}
                         >
