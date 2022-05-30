@@ -113,9 +113,9 @@ export const DrawerSlide = observer((props) => {
                         <About show={showAbout} setShow={setShowAbout} />
                     </div>
                 </Fade>
-                <div className={`${(showProduct || showUseCase) ? 'w-auto md:w-[35%] md:fixed md:right-0 lg:py-8' : 'w-auto md:w-[60%] md:pl-14'} overflow-y-auto lg:overflow-y-hidden md:py-16 pl-6 ml-16 sm:ml-20 md:ml-0 bg-[#1D365F] h-max lg:h-auto`} style={{ transition: 'width 500ms'}}>
+                <div className={`${(showProduct || showUseCase) ? 'w-auto md:w-[35%] md:fixed md:right-0 lg:py-8' : 'w-auto md:w-[60%] md:pl-14'} md:overflow-y-auto md:py-16 pl-6 ml-16 sm:ml-20 md:ml-0 bg-[#1D365F] h-max lg:h-auto`} style={{ transition: 'width 500ms'}}>
                     <div className={'flex flex-col w-full h-full justify-between'}>
-                        <div className={`flex flex-col lg:${(showProduct || showUseCase) ? "flex-col lg:pt-0" : "flex-row justify-between"} pt-10 md:pt-20 h-full`} style={{ transition: 'width 300ms ease-in-out'}}>
+                        <div className={`flex flex-col lg:${(showProduct || showUseCase) ? "flex-col lg:pt-0" : "flex-row justify-between"} pt-10 h-full`} style={{ transition: 'width 300ms ease-in-out'}}>
                             <div className={`flex flex-col`}>
                                 <div className={'md:h-28 lg:h-40 flex-col text-white mb-10 md:mb-2'}>
                                     <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>{t('Call Us')}</p>
@@ -145,7 +145,7 @@ export const DrawerSlide = observer((props) => {
 
                         </div>
                         <div className={'flex flex-row w-full justify-start'}>
-                            <div className={'w-full md:w-auto mb-12 md:mb-0 drawer-mt drawer-ml'}>
+                            <div className={'w-full md:w-auto mb-12 md:mb-0 drawer-mt'}>
                                 <h1 className={`text-white text-xl  ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} font-bold mb-3 montserrat`}>
                                     {t('Advance Solutions')} <br/>
                                     <span className={'font-light'}>{t('For On Boarding Experience')}</span>
