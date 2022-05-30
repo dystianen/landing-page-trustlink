@@ -145,7 +145,7 @@ export const DrawerSlide = observer((props) => {
 
                         </div>
                         <div className={'flex flex-row w-full justify-start'}>
-                            <div className={'w-full md:w-auto mb-12 md:mb-0 drawer-mt'}>
+                            <div className={'w-full md:w-auto mb-12 md:mb-0 drawer-mt drawer-ml'}>
                                 <h1 className={`text-white text-xl  ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} font-bold mb-3 montserrat`}>
                                     {t('Advance Solutions')} <br/>
                                     <span className={'font-light'}>{t('For On Boarding Experience')}</span>
