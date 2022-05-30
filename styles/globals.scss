@@ -742,10 +742,4 @@ svg { vertical-align: baseline; }
 .drawer-mt {
   margin-top: auto;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
-  .drawer-mt {
-    margin-top: clamp(17rem, 26.0353rem + -18.8235vw, 14rem);
-  }
-}
-
 
