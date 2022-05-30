@@ -17,7 +17,7 @@ export const DrawerSlide = observer((props) => {
     const [showUseCase, setShowUseCase] = useState(false);
     const [showAbout, setShowAbout] = useState(false);
     const { t } = useTranslation();
-    const tablet = useMediaQuery({ query: '(max-width: 980px)' });
+    const laptop = useMediaQuery({ query: '(min-width: 1024px)' });
 
     useEffect(() => {
         if(!isOpen){
@@ -113,9 +113,9 @@ export const DrawerSlide = observer((props) => {
                         <About show={showAbout} setShow={setShowAbout} />
                     </div>
                 </Fade>
-                <div className={`${(showProduct || showUseCase) ? 'w-auto md:w-[35%] md:fixed md:right-0 lg:py-8' : 'w-auto md:w-[60%] md:pl-14'} overflow-y-auto lg:overflow-y-hidden md:py-16 pl-6 ml-16 sm:ml-20 md:ml-0 bg-[#1D365F] h-max lg:h-auto`} style={{ transition: 'width 500ms'}}>
+                <div className={`${(showProduct || showUseCase) ? 'w-auto md:w-[35%] md:fixed md:right-0 lg:py-8' : 'w-auto md:w-[60%] md:pl-14'} md:overflow-y-auto lg:overflow-y-hidden md:py-16 pl-6 ml-16 sm:ml-20 md:ml-0 bg-[#1D365F] h-max lg:h-auto`} style={{ transition: 'width 500ms'}}>
                     <div className={'flex flex-col w-full h-full justify-between'}>
-                        <div className={`flex flex-col lg:${(showProduct || showUseCase) ? "flex-col lg:pt-0" : "flex-row justify-between"} pt-10 md:pt-20 h-full`} style={{ transition: 'width 300ms ease-in-out'}}>
+                        <div className={`flex flex-col lg:${(showProduct || showUseCase) ? "flex-col lg:pt-0" : "flex-row justify-between"} pt-10 md:pt-0 xl:pt-0 h-full`} style={{ transition: 'width 300ms ease-in-out'}}>
                             <div className={`flex flex-col`}>
                                 <div className={'md:h-28 lg:h-40 flex-col text-white mb-10 md:mb-2'}>
                                     <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>{t('Call Us')}</p>
@@ -133,6 +133,19 @@ export const DrawerSlide = observer((props) => {
                                     <p className={`text-xl ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} mb-2 montserrat`}>{t('Centennial Tower Level 29 Unit F')}</p>
                                     <p className={'text-xs opacity-80 montserrat'} style={{letterSpacing: 0.3}}>{t('Jl. Jend Gatot Subroto No 27,')}<br/>{t('Karet Semanggi, Kec. Setiabudi, Jakarta Selatan, DKI Jakarta 12930')}</p>
                                 </div>
+                                {laptop ? (
+                                    <div className={'flex flex-row w-full justify-start'}>
+                                        <div className={'w-auto mt-10 xl:mt-0'}>
+                                            <h1 className={`text-white text-xl  ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} font-bold mb-3 montserrat`}>
+                                                {t('Advance Solutions')} <br/>
+                                                <span className={'font-light'}>{t('For On Boarding Experience')}</span>
+                                                {/*<br/>{t('and Seamless Open Finance')} */}
+                                                {/*<br/> {t('API Infrastructure')}*/}
+                                            </h1>
+                                        </div>
+                                    </div>
+                                ) : null}
+
                             </div>
                             <div className={'flex-col text-white mb-10  md:mb-2'}>
                                 <p className={'text-xs opacity-80 mb-3 montserrat w-28 lg:mr-16'} style={{letterSpacing: 1.8}}>{t('Social Media')}</p>
@@ -144,16 +157,19 @@ export const DrawerSlide = observer((props) => {
                             </div>
 
                         </div>
-                        <div className={'flex flex-row w-full justify-start'}>
-                            <div className={'w-full md:w-auto mb-12 md:mb-0 drawer-mt'}>
-                                <h1 className={`text-white text-xl  ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} font-bold mb-3 montserrat`}>
-                                    {t('Advance Solutions')} <br/>
-                                    <span className={'font-light'}>{t('For On Boarding Experience')}</span>
-                                    {/*<br/>{t('and Seamless Open Finance')} */}
-                                    {/*<br/> {t('API Infrastructure')}*/}
-                                </h1>
+                        {laptop ? null : (
+                            <div className={'flex flex-row w-full justify-start'}>
+                                <div className={'w-full md:w-auto mb-12 md:mb-0 md:mt-10'}>
+                                    <h1 className={`text-white text-xl  ${(showProduct || showUseCase) ? 'md:text-xl' : 'md:text-2xl'} font-bold mb-3 montserrat`}>
+                                        {t('Advance Solutions')} <br/>
+                                        <span className={'font-light'}>{t('For On Boarding Experience')}</span>
+                                        {/*<br/>{t('and Seamless Open Finance')} */}
+                                        {/*<br/> {t('API Infrastructure')}*/}
+                                    </h1>
+                                </div>
                             </div>
-                        </div>
+                        )}
+
                     </div>
                 </div>
             </div>

@@ -739,10 +739,7 @@ svg { vertical-align: baseline; }
 .box-hover:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
-
-@media screen and (max-width: 1023px) {
-  .drawer-mt {
-    margin-top: clamp(14rem, 23.0353rem + -18.8235vw, 11rem);
-  }
+.drawer-mt {
+  margin-top: auto;
 }
 
