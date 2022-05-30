@@ -57,7 +57,7 @@ const Footer = ({onClickTop = () => {}}) => {
                                 <p className={'text-base montserrat opacity-80'}>{t('Address')}</p>
                                 {/*<p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-2">{t('Kota Kasablanca Office 88')}</p>*/}
                                 {/*<p className="text-base montserrat opacity-80">{t('Jl. Raya Casablanca No.16, RW.5,')}<br/>{t(' Menteng Dalam, Kec. Tebet, DKI Jakarta 12870')}</p>*/}
-                                <p className="montserrat text-lg md:text-[1.4rem] 2xl:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-2">{t('Centennial Tower Level 29 Unit F')}</p>
+                                <p className="montserrat text-lg md:text-[1.4rem] 2xl:text-2xl tracking-normal ">{t('Centennial Tower Level 29 Unit F')}</p>
                                 <p className="text-base montserrat opacity-80">{t('Jl. Jend Gatot Subroto No 27,')}<br/>{t('Karet Semanggi, Kec. Setiabudi, Jakarta Selatan, DKI Jakarta 12930')}</p>
                             </div>
                         </div>
@@ -91,7 +91,7 @@ const Footer = ({onClickTop = () => {}}) => {
                         <div className={'md:w-1/2 lg:w-0'}/>
                     </div>
                     <div className={"w-full lg:w-1/3 xl:w-1/3 mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-between"}>
-                        <div className={'w-full flex md:justify-start z-50'}>
+                        <div className={'w-full flex md:justify-start z-[60]'}>
                             <div className={'w-full '}>
                                 <p className={'text-base montserrat opacity-80'}>{t('Address')}</p>
                                 <MapAddress className={'w-full h-[40vh]'}/>
