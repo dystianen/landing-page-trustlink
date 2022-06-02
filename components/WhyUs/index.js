@@ -58,7 +58,7 @@ const WhyUsPage = () => {
                         {/*<Divider />*/}
                         <div className={'mt-5'}>
                             <p className={'montserrat text-lg md:text-lg lg:text-xl font-bold text-center mb-1'}>{item.title}</p>
-                            <p className={'montserrat text-sm md:text-sm lg:text-base text-center'}>{item.description}</p>
+                            <p style={{textAlignLast: "center"}} className={'montserrat text-justify text-sm md:text-sm lg:text-base text-center'}>{item.description}</p>
                         </div>
                     </div>
                 ))}
