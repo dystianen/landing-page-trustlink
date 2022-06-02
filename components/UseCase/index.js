@@ -96,7 +96,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                         </div>
                         <div className={'relative w-full'}>
                             <div className={'absolute z-0 -top-16 -right-20  opacity-60'}>
-                                <Image className={'z-0 w-[30vh] md:w-[35vh] '} preview={false} src={'/assets/usecase/group-orange.png'} alt={"group_orange"}/>
+                                <Image className={'z-0 w-[10rem] md:w-[35vh] '} preview={false} src={'/assets/usecase/group-orange.png'} alt={"group_orange"}/>
                             </div>
                         </div>
                         <div className={'mt-7 md:mt-10 w-full md:3/4 z-10 px-5 md:pl-0 '}>
