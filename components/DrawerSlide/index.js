@@ -119,7 +119,7 @@ export const DrawerSlide = observer((props) => {
                             <div className={`flex flex-col`}>
                                 <div className={'md:h-28 lg:h-40 flex-col text-white mb-10 md:mb-2'}>
                                     <p className={'text-xs opacity-80 mb-3 montserrat'} style={{letterSpacing: 1.8}}>{t('Call Us')}</p>
-                                    <p className={`text-lg md:text-xl lg:text-xl xl:text-2xl mb-2 montserrat`}>(021) 29602116 / 29602117</p>
+                                    <p className={`text-lg md:text-xl lg:text-xl xl:text-2xl mb-2 montserrat pr-3 md:pr-0`}>(021) 29602116 / 29602117</p>
                                     <p className={'text-xs opacity-80 montserrat'} style={{letterSpacing: 0.3}}>{t('Mon to Fri')} (8:30 - 20:00)</p>
                                 </div>
                                 <div className={'md:h-28 lg:h-40 flex-col text-white mb-10  md:mb-2 cursor-pointer'} onClick={goToContact}>
