@@ -92,7 +92,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             desc: t('trust_verify_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
             width_subhead: 'w-[18rem] md:w-[20rem] lg:w-[22rem] xl:w-[32rem]',
-            width_desc: 'md:w-[23rem] lg:w-[34rem] xl:w-[39rem] 2xl:w-[48rem]'
+            width_desc: 'md:w-[23rem] lg:w-[30rem] xl:w-[37.5rem] 2xl:w-[45rem]'
         },
         {
             name: 'Trust',
@@ -102,8 +102,8 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             subhead: t('trust_scan_title'),
             desc: t('trust_scan_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
-            width_subhead: 'w-[17rem] md:w-[15rem] lg:w-[28rem] xl:w-auto',
-            width_desc: 'md:w-[21rem] lg:w-[34rem] xl:w-[36rem] 2xl:w-[50rem]'
+            width_subhead: 'w-[17rem] md:w-[15rem] lg:w-[18rem] xl:w-auto',
+            width_desc: 'md:w-[21rem] lg:w-[27rem] xl:w-[36rem] 2xl:w-[45rem] lg:tracking-tight'
         },
 
         {
@@ -115,7 +115,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             desc: t('trust_live_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
             width_subhead: 'w-[18rem] md:w-[20rem] lg:w-[28rem] 2xl:w-[40rem]',
-            width_desc: 'md:w-[23rem] lg:w-[34rem] xl:w-[39rem] 2xl:w-[50rem]'
+            width_desc: 'md:w-[24rem] lg:w-[30rem] xl:w-[37.5rem] 2xl:w-[47.5rem] md:tracking-tighter lg:tracking-tight'
         },
         // {
         //     name: 'Trust',
@@ -134,7 +134,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             desc: t('trust_vision_subtitle'),
             size: md ? '90%' : xs ? '50%' : '80%',
             width_subhead: 'w-[17.8rem] md:w-[20rem] lg:w-[22rem] xl:w-[38rem] 2xl:w-[50rem]',
-            width_desc: 'w-auto md:w-[24rem] lg:w-[34rem] xl:w-[42rem] 2xl:w-[50rem]'
+            width_desc: 'w-auto md:w-[27rem] lg:w-[34rem] xl:w-[42rem] 2xl:w-[45rem] md:tracking-tight'
         },
         // {
         //     name: 'Trust',
@@ -150,7 +150,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
     const Item = ({item}) => {
         return (
             // <div className={'flex flex-col md:flex-row w-full min-h-[43rem] md:h-[28rem] lg:h-[38rem] xl:h-[42rem] bg-green-100'}>
-            <div className={'flex flex-col md:flex-row w-full min-h-[50vh] md:h-[30rem] xl:h-[28rem] mt-0'}>
+            <div className={'flex flex-col md:flex-row w-full min-h-[50vh] md:h-[30rem] xl:h-[28rem] mt-0 px-0 md:px-6 xl:px-0'}>
                 <div className={`flex justify-center items-center w-screen md:w-3/6 lg:w-2/4 text-center ${isSafari || isIos ? 'z-30' : 'z-10'}`}>
                     <ReactPlayer
                         className=''
@@ -169,7 +169,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                     </div>
                     <p className={`${item.width_subhead} text-lg md:text-lg lg:text-xl mb-0 montserrat leading-tight md:leading-none font-bold mt-5 text-center md:text-left`} style={{color: '#04204D'}}>{item.subhead}</p>
                     <div className={'mt-5 md:mt-5 ' + item.width_desc}>
-                        <p style={{color: '#04204D'}} className={"w-full md:w-[80%] text-sm md:text-base lg:text-lg montserrat text-justify mb-3"}>
+                        <p style={{color: '#04204D', textAlign: "justify"}} className={"w-full md:w-[80%] text-sm md:text-base lg:text-lg montserrat mb-3"}>
                             {item.desc}
                         </p>
                         <a
@@ -255,7 +255,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                             }
                         }}
                         navButtonsWrapperProps={{
-                            className: `sm:mr-5 md:mr-0 lg:mr-5 sm:ml-5 md:ml-0 lg:ml-5 ${isSafari || isIos ? 'z-40' : 'z-40'} ${!current ? 'arrow-prev-product' : current === (items.length - 1) ? 'arrow-next-product' : null}`
+                            className: `sm:mr-5 md:mr-0 xl:mr-5 sm:ml-5 md:ml-0 xl:ml-5 ${isSafari || isIos ? 'z-40' : 'z-40'} ${!current ? 'arrow-prev-product' : current === (items.length - 1) ? 'arrow-next-product' : null}`
                         }}
                         className={''}
                     >

@@ -38,7 +38,7 @@ const WhyUsPage = () => {
     ]
 
     return (
-        <div className='relative lg:pl-20 h-auto mt-30 mb-30 overflow-x-none flex flex-col'>
+        <div className='relative lg:pl-20 h-auto mt-24 md:mt-0 lg:mt-10 xl:mt-16 mb-30 overflow-x-none flex flex-col'>
             <div className={"absolute -top-16 md:-top-12 lg:-top-52 lg:-top-30 left-[75%] w-[20rem] md:w-[30rem] lg:w-[50rem] xl:w-[67rem] h-auto"}>
                 <Image alt={"why_bg"} src={"/assets/why_us/bg1.png"} preview={false}/>
             </div>
@@ -58,7 +58,7 @@ const WhyUsPage = () => {
                         {/*<Divider />*/}
                         <div className={'mt-5'}>
                             <p className={'montserrat text-lg md:text-lg lg:text-xl font-bold text-center mb-1'}>{item.title}</p>
-                            <p className={'montserrat text-sm md:text-sm lg:text-base text-center'}>{item.description}</p>
+                            <p style={{textAlignLast: "center"}} className={'montserrat text-justify text-sm md:text-sm lg:text-base text-center'}>{item.description}</p>
                         </div>
                     </div>
                 ))}

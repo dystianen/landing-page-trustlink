@@ -51,30 +51,30 @@ const Footer = ({onClickTop = () => {}}) => {
                     {/*</div>*/}
                 </div>
                 <div className={"flex flex-col lg:flex-row"}>
-                    <div className={"w-full lg:w-2/3 xl:w-2/3 ml-4 mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-between"}>
+                    <div className={"w-full lg:w-2/3 xl:w-2/3 ml-0 lg:ml-4 mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-between "}>
                         <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start lg:justify-start sm:mt-8 md:mt-0 '}>
                             <div className={'w-full md:w-9/12 lg:w-auto '}>
                                 <p className={'text-base montserrat opacity-80'}>{t('Address')}</p>
                                 {/*<p className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 mb-2">{t('Kota Kasablanca Office 88')}</p>*/}
                                 {/*<p className="text-base montserrat opacity-80">{t('Jl. Raya Casablanca No.16, RW.5,')}<br/>{t(' Menteng Dalam, Kec. Tebet, DKI Jakarta 12870')}</p>*/}
-                                <p className="montserrat text-lg md:text-[1.4rem] 2xl:text-2xl tracking-normal ">{t('Centennial Tower Level 29 Unit F')}</p>
+                                <p className="montserrat text-lg md:text-[1.4rem] 2xl:text-2xl tracking-normal mb-2">{t('Centennial Tower Level 29 Unit F')}</p>
                                 <p className="text-base montserrat opacity-80">{t('Jl. Jend Gatot Subroto No 27,')}<br/>{t('Karet Semanggi, Kec. Setiabudi, Jakarta Selatan, DKI Jakarta 12930')}</p>
                             </div>
                         </div>
-                        <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start my-6 md:my-0 '}>
+                        <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start my-6 md:my-0 lg:pl-5'}>
                             <div className={'w-full md:w-9/12 lg:w-auto'}>
                                 <p className={'text-base montserrat opacity-80'}>EMAIL</p>
                                 <a className="montserrat text-lg md:text-2xl tracking-normal mt-5 md:mt-7 lg:mt-10 text-none no-underline text-white">info@withtrustlink.com</a>
                             </div>
                         </div>
-                        <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start '}>
+                        <div className={'w-full md:w-1/2 lg:w-1/2 flex md:justify-start'}>
                             <div className={'w-full md:w-9/12 lg:w-auto '}>
                                 <p className={'text-base montserrat opacity-80'}>{t('Call Us')}</p>
-                                <p className="montserrat text-lg lg:text-lg xl:text-[1.4rem] tracking-normal mt-5 md:mt-7 lg:mt-10 mb-3">(021) 29602116 / 29602117</p>
+                                <p className="montserrat text-lg lg:text-lg xl:text-[1.4rem] tracking-normal mt-5 md:mt-4 lg:mt-0 mb-3">(021) 29602116 / 29602117</p>
                                 <p className="text-base montserrat opacity-80">{t('Mon to Fri')} (8.30 - 20.00)</p>
                             </div>
                         </div>
-                        <div className={'w-full md:w-1/2 lg:w-1/2 flex justify-center md:justify-start '}>
+                        <div className={'w-full md:w-1/2 lg:w-1/2 flex justify-center md:justify-start lg:pl-5'}>
                             <div className={'w-full md:w-9/12 lg:w-auto'}>
                                 <p className={'text-base montserrat opacity-80'}>{t('Social Media')}</p>
                                 <div className="flex flex-row gap-4">
@@ -88,7 +88,7 @@ const Footer = ({onClickTop = () => {}}) => {
                                 </div>
                             </div>
                         </div>
-                        <div className={'md:w-1/2 lg:w-0'}/>
+                        {/* <div className={'md:w-1/2 lg:w-0'}/> */}
                     </div>
                     <div className={"w-full lg:w-1/3 xl:w-1/3 mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-between"}>
                         <div className={'w-full flex md:justify-start z-[60]'}>

@@ -95,13 +95,13 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                             </div>
                         </div>
                         <div className={'relative w-full'}>
-                            <div className={'absolute z-0 -top-16 -right-20  opacity-60'}>
-                                <Image className={'z-0 w-[30vh] md:w-[35vh] '} preview={false} src={'/assets/usecase/group-orange.png'} alt={"group_orange"}/>
+                            <div className={'absolute z-0 -top-16 -right-20 opacity-60'}>
+                                <Image className={'z-0 w-[9.5rem] sm:w-[10rem] md:w-[11rem] lg:w-[16rem] 2xl:w-[18rem]'} preview={false} src={'/assets/usecase/group-orange.png'} alt={"group_orange"}/>
                             </div>
                         </div>
                         <div className={'mt-7 md:mt-10 w-full md:3/4 z-10 px-5 md:pl-0 '}>
                             <p className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-1 md:mb-2 montserrat'}>{t('Use Case')}</p>
-                            <p className={'text-white text-[14px] md:text-lg xl:text-xl montserrat  lg:pr-0'}>{t('Biometric Use Case 2')}</p>
+                            <p className={'text-white text-sm md:text-lg xl:text-xl montserrat w-auto sm:w-[32rem] md:w-[40rem] xl:w-[60rem]'}>{t('Biometric Use Case 2')}</p>
                         </div>
                     </div>
                     <Carousel
