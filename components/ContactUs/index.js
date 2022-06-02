@@ -129,7 +129,7 @@ const ContactUs = observer(({sectionRef}) => {
                                             ]}>
                                             <Input
                                                 className={'border rounded border-[#D4D4D8] h-12 montserrat text-sm sm:text-base'}
-                                                placeholder={t('Enter your email')}
+                                                placeholder={t('Enter your company email')}
                                             />
                                         </Form.Item>
                                     </Col>
