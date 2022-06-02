@@ -154,7 +154,7 @@ export default function Home() {
             <div className="overflow-hidden">
                 {/*<DrawerSlide menu={menu} isOpen={isOpen} />*/}
                 <div className={'fixed w-16 sm:w-20 h-20  top-2/4 left-0 p-5'} style={{ zIndex: 999999 }}>
-                    <button className="flex flex-col w-full h-full justify-center group" style={{visibility: isOpen ? 'visible': 'hidden'}} onClick={() => setIsOpen(!isOpen)}
+                    <button className="flex sticky top-0 left-4 w-[24px] h-[40px] flex-col w-full h-full justify-center group" style={{visibility: isOpen ? 'visible': 'hidden'}} onClick={() => setIsOpen(!isOpen)}
                     >
                         <div className={`${genericHamburgerLine} self-start ${isOpen ? "w-full rotate-45 translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`}/>
                         <div className={`${genericHamburgerLine2} ${isOpen ? "opacity-0" : "opacity-100"}`}/>
