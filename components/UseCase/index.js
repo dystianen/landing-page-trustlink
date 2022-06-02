@@ -101,7 +101,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                         </div>
                         <div className={'mt-7 md:mt-10 w-full md:3/4 z-10 px-5 md:pl-0 '}>
                             <p className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-1 md:mb-2 montserrat'}>{t('Use Case')}</p>
-                            <p className={'text-white text-sm md:text-lg xl:text-xl montserrat w-auto md:w-[40rem] xl:w-[60rem]'}>{t('Biometric Use Case 2')}</p>
+                            <p className={'text-white text-sm md:text-lg xl:text-xl montserrat w-auto sm:w-[32rem] md:w-[40rem] xl:w-[60rem]'}>{t('Biometric Use Case 2')}</p>
                         </div>
                     </div>
                     <Carousel
