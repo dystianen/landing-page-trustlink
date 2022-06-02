@@ -169,7 +169,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                     </div>
                     <p className={`${item.width_subhead} text-lg md:text-lg lg:text-xl mb-0 montserrat leading-tight md:leading-none font-bold mt-5 text-center md:text-left`} style={{color: '#04204D'}}>{item.subhead}</p>
                     <div className={'mt-5 md:mt-5 ' + item.width_desc}>
-                        <p style={{color: '#04204D'}} className={"w-full md:w-[80%] text-sm md:text-base lg:text-lg montserrat text-justify mb-3"}>
+                        <p style={{color: '#04204D', textAlign: "justify", wordSpacing: -2}} className={"w-full md:w-[80%] text-sm md:text-base lg:text-lg montserrat mb-3"}>
                             {item.desc}
                         </p>
                         <a
