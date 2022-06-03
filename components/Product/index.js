@@ -92,7 +92,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             desc: t('trust_verify_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
             width_subhead: 'w-[18rem] md:w-[20rem] lg:w-[22rem] xl:w-[32rem]',
-            width_desc: 'md:w-[23rem] lg:w-[30rem] xl:w-[37.5rem] 2xl:w-[45rem]'
+            width_desc: 'w-[19.5rem] md:w-[23rem] lg:w-[25rem] xl:w-[37.5rem] 2xl:w-[45rem] tracking-tighter md:tracking-normal lg:tracking-tight 2xl:tracking-tighter'
         },
         {
             name: 'Trust',
@@ -103,7 +103,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             desc: t('trust_scan_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
             width_subhead: 'w-[17rem] md:w-[15rem] lg:w-[18rem] xl:w-auto',
-            width_desc: 'md:w-[21rem] lg:w-[27rem] xl:w-[36rem] 2xl:w-[45rem] lg:tracking-tight'
+            width_desc: 'w-[19rem] md:w-[20.5rem] lg:w-[30.5rem] xl:w-[39rem] 2xl:w-[45rem] tracking-tighter md:tracking-normal lg:tracking-tighter'
         },
 
         {
@@ -115,7 +115,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             desc: t('trust_live_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
             width_subhead: 'w-[18rem] md:w-[20rem] lg:w-[28rem] 2xl:w-[40rem]',
-            width_desc: 'md:w-[24rem] lg:w-[30rem] xl:w-[37.5rem] 2xl:w-[47.5rem] md:tracking-tighter lg:tracking-tight'
+            width_desc: 'w-[19.5rem] md:w-[25.5rem] lg:w-[30rem] xl:w-[37.5rem] 2xl:w-[47.5rem] tracking-tighter lg:tracking-tight'
         },
         // {
         //     name: 'Trust',
@@ -134,7 +134,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             desc: t('trust_vision_subtitle'),
             size: md ? '90%' : xs ? '50%' : '80%',
             width_subhead: 'w-[17.8rem] md:w-[20rem] lg:w-[22rem] xl:w-[38rem] 2xl:w-[50rem]',
-            width_desc: 'w-auto md:w-[27rem] lg:w-[34rem] xl:w-[42rem] 2xl:w-[45rem] md:tracking-tight'
+            width_desc: 'w-[19rem] md:w-[27rem] lg:w-[34rem] xl:w-[42rem] 2xl:w-[45rem] tracking-tighter md:tracking-tight'
         },
         // {
         //     name: 'Trust',
@@ -174,7 +174,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                         </p>
                         <a
                             type="primary"
-                            className={'rounded-lg  mt-2 flex justify-center items-center bg-[#FF6703] text-white text-base sm:text-lg h-12 md:w-1/2 lg:w-3/12 montserrat '}
+                            className={'rounded-lg  mt-2 flex justify-center items-center bg-[#FF6703] text-white text-base sm:text-lg h-12 md:w-1/2 lg:w-2/5 xl:w-3/12 montserrat tracking-normal'}
                             onClick={onClickContact}
                         >
                             {t('Contact Us')}
