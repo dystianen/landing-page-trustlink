@@ -92,7 +92,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             desc: t('trust_verify_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
             width_subhead: 'w-[18rem] md:w-[20rem] lg:w-[22rem] xl:w-[32rem]',
-            width_desc: 'w-[19.5rem] md:w-[23rem] lg:w-[25rem] xl:w-[37.5rem] 2xl:w-[45rem] tracking-tighter md:tracking-normal lg:tracking-tight 2xl:tracking-tighter'
+            width_desc: 'w-[19.5rem] md:w-[22rem] lg:w-[32rem] xl:w-[39rem] tracking-tighter'
         },
         {
             name: 'Trust',
@@ -103,7 +103,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             desc: t('trust_scan_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
             width_subhead: 'w-[17rem] md:w-[15rem] lg:w-[18rem] xl:w-auto',
-            width_desc: 'w-[19rem] md:w-[20.5rem] lg:w-[30.5rem] xl:w-[39rem] 2xl:w-[45rem] tracking-tighter md:tracking-normal lg:tracking-tighter'
+            width_desc: 'w-[19rem] md:w-[20.5rem] lg:w-[30.1rem] xl:w-[38.9rem] 2xl:w-[41.5rem] tracking-tighter md:tracking-normal lg:tracking-tighter'
         },
 
         {
@@ -115,7 +115,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             desc: t('trust_live_subtitle'),
             size: md ? '100%' : xs ? '50%' : '80%',
             width_subhead: 'w-[18rem] md:w-[20rem] lg:w-[28rem] 2xl:w-[40rem]',
-            width_desc: 'w-[19.5rem] md:w-[25.5rem] lg:w-[30rem] xl:w-[37.5rem] 2xl:w-[47.5rem] tracking-tighter lg:tracking-tight'
+            width_desc: 'w-[19.5rem] md:w-[25.5rem] lg:w-[31.9rem] xl:w-[34.5rem] 2xl:w-[47.5rem] tracking-tighter'
         },
         // {
         //     name: 'Trust',
@@ -134,7 +134,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             desc: t('trust_vision_subtitle'),
             size: md ? '90%' : xs ? '50%' : '80%',
             width_subhead: 'w-[17.8rem] md:w-[20rem] lg:w-[22rem] xl:w-[38rem] 2xl:w-[50rem]',
-            width_desc: 'w-[19rem] md:w-[27rem] lg:w-[34rem] xl:w-[42rem] 2xl:w-[45rem] tracking-tighter md:tracking-tight'
+            width_desc: 'w-[18rem] md:w-[27rem] lg:w-[29.5rem] xl:w-[39.8rem] 2xl:w-[46.4rem] tracking-tighter md:tracking-tight lg:tracking-tighter'
         },
         // {
         //     name: 'Trust',
@@ -169,7 +169,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                     </div>
                     <p className={`${item.width_subhead} text-lg md:text-lg lg:text-xl mb-0 montserrat leading-tight md:leading-none font-bold mt-5 text-center md:text-left`} style={{color: '#04204D'}}>{item.subhead}</p>
                     <div className={'mt-5 md:mt-5 ' + item.width_desc}>
-                        <p style={{color: '#04204D', textAlign: "justify"}} className={"w-full md:w-[80%] text-sm md:text-base lg:text-lg montserrat mb-3"}>
+                        <p style={{color: '#04204D'}} className={"w-full md:w-[80%] text-sm md:text-base lg:text-lg montserrat mb-3 text-justify"}>
                             {item.desc}
                         </p>
                         <a
