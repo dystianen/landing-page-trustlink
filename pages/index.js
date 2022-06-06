@@ -195,7 +195,7 @@ export default function Home() {
                                         {/*<br/> {t('And Open Finance Platform')}*/}
                                     </span>
                                     <div>
-                                        <p className={'mt-8 text-justify md:text-left w-auto sm:w-[20rem] md:w-[36rem] lg:w-[36.rem] xl:w-[42rem] text-sm md:text-xl xl:text-2xl tracking-normal font-normal normal-case'} style={{lineHeight: 1.75}}>{t('Desc Top Page')}</p>
+                                        <p className={'mt-8 text-left w-auto sm:w-[24rem] md:w-[36rem] lg:w-[36.rem] xl:w-[42rem] max-w-[22rem] sm:max-w-full text-sm md:text-xl xl:text-2xl tracking-tighter sm:tracking-normal font-normal normal-case'} style={{lineHeight: 1.75}}>{t('Desc Top Page')}</p>
                                     </div>
                                     <div>
                                         <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-36 md:w-48"} onClick={()=> aboutUsRef.current.scrollIntoView({ behavior: 'smooth' }) }>
