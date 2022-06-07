@@ -268,7 +268,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
 
             <div className="relative h-[3vh] sm:h-[10vh]" />
             <div className={`absolute w-full lg:w-10/12 xl:w-8/12 h-1/3 sm:h-auto -bottom-10 right-0 usecase-img ${isSafari || isIos ? 'z-30' : 'z-0'}`}>
-              <Image preview={false} src={'/assets/images/accent-home-sectionProduct-2-edit.png'} alt={"bg_product_opacity"} className={'h-full w-full opacity-10'}/>
+              <Image preview={false} src={'/assets/images/trustBg.png'} alt={"bg_product_opacity"} className={'h-full w-full opacity-10'}/>
             </div>
         </div>
     )
