@@ -155,17 +155,17 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                                     </div>
                                 </div>
 
-                                <div className={'flex flex-col justify-start md:justify-center w-full md:w-2/3 md:h-full md:pl-10 m-usecase'}>
+                                <div className={'flex flex-col justify-start md:justify-center w-full md:w-[30rem] lg:w-[38rem] xl:w-[42rem] 2xl:w-[55.8rem] md:h-full md:pl-10 m-usecase'}>
                                     <div className={"mb-2 px-5"}>
                                         <p className={'text-sm lg:text-base xl:text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
                                     </div>
-                                    <div className={'px-6 md:px-0 text-lg md:text-2xl lg:text-3xl xl:text-2xl text-white montserrat text-center md:text-left w-full '}>
+                                    <div className={'px-6 md:px-0 text-lg md:text-xl lg:text-2xl text-white montserrat text-center md:text-left w-full '}>
                                         <p className={'mb-3 leading-snug md:leading-tight w-auto md:w-[90%] lg:w-[83%] xl:w-3/4'}>
                                             {item.name}
                                         </p>
                                     </div>
                                     <div className={'mb-2 px-5 md:px-0'}>
-                                        <p className={"text-white text-xs lg:text-sm xl:text-base w-auto md:w-[90%] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify whitespace-pre-line"}>
+                                        <p className={"text-white text-xs lg:text-sm xl:text-base w-auto md:w-[15rem] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify tracking-normal md:tracking-tight whitespace-pre-line"}>
                                             {item.desc}
                                         </p>
                                     </div>
