@@ -51,14 +51,14 @@ const WhyUsPage = () => {
                     <p className={"text-xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl w-full sm:w-[65vw] whitespace-pre-line sm:mb-10 montserrat font-bold sm:font-semibold text-[#04204D]"}>We Create The Best{'\n'}Result-Oriented Offerings</p>
                 </div>
             </div>
-            <div className={"flex flex-col md:grid md:grid-cols-2 gap-4 lg:pl-10 justify-items-center items-center"}>
+            <div className={"flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-1 lg:gap-4 lg:pl-10 justify-items-center items-center"}>
                 {dataWhyUs.map((item, index) =>(
-                    <div key={index} className={"box-hover py-2 md:py-5 px-[1.875rem] flex flex-col text-[#1D365F] lg:h-[40vh] xl:h-[35vh] items-center max-w-[19rem] lg:max-w-[30rem] xl:max-w-[40rem]"}>
+                    <div key={index} className={"box-hover py-2 md:py-5 px-3 lg:px-5 flex flex-col text-[#1D365F] md:h-[16rem] xl:h-[14rem] items-center max-w-full mx-4 sm:w-[28rem] md:mx-2 md:w-[23rem] lg:w-[26rem] xl:w-[33rem] 2xl:w-[38rem]"}>
                         <Image alt={item.title} width={65} src={item.image_url} preview={false} />
                         {/*<Divider />*/}
                         <div className={'mt-5'}>
                             <p className={'montserrat text-lg md:text-lg lg:text-xl font-bold text-center mb-1'}>{item.title}</p>
-                            <p style={{textAlignLast: "center"}} className={'montserrat text-justify text-sm md:text-sm lg:text-base text-center lg:tracking-tight'}>{item.description}</p>
+                            <p style={{textAlignLast: "center"}} className={'montserrat text-justify text-sm md:text-sm lg:text-base tracking-tighter'}>{item.description}</p>
                         </div>
                     </div>
                 ))}
