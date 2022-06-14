@@ -163,7 +163,7 @@ export default function Home() {
                         <div className={`${genericHamburgerLine} self-end ${isOpen ? "w-full -rotate-45 -translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`}/>
                     </button>
                 </div>
-                <div className={'relative h-full md:h-[75vh] lg:h-full min-h-screen'} ref={topSectionRef}>
+                <div className={'relative top-0 height-top'} ref={topSectionRef}>
                     {/* <div className={'absolute w-full top-0 flex flex-row'} style={{ justifyContent: 'space-between' }}>
                         <div className={'flex items-center'}>
                             <Image preview={false} className="cursor-pointer fixed w-14 md:w-20 top-4" src={'/assets/logo/icon-only.png'} style={{ zIndex: 10000 }} onClick={onClickLogo} />
@@ -179,18 +179,18 @@ export default function Home() {
                             </Link>
                         </div>
                     </div> */}
-                    <div className={'relative px-4 sm:px-0 w-full sm:pl-12'}>
+                    <div className={'relative px-4 sm:px-0 w-full sm:pl-12 h-full'}>
                         <section className={'flex justify-start w-auto h-full'}>
                             {/*<div className={'flex items-end justify-center w-32'}>*/}
                             {/*<div className={'auto-rows-auto invisible ml-8 lg:ml-3 xl:ml-0 md:visible'}><p className={'w-max -rotate-180'} style={{ color: '#161D24', fontFamily: 'Montserrat', letterSpacing: '0.15rem', fontSize: '0.6rem', writingMode: 'vertical-lr', textOrientation: 'sideways' }}>SCROLL DOWN</p>*/}
                             {/*    <Image preview={false} src={'/assets/scroll-down.svg'} />*/}
                             {/*</div>*/}
                             {/*</div>*/}
-                            <div className={'w-max h-screen lg:h-[40vh] md:h-full md:min-h-screen lg:pl-8 flex flex-col justify-center'}>
+                            <div className={'h-full md:min-h-screen lg:pl-8 flex flex-col justify-center'}>
                                 {/*<div className={'home-next-generation text-3xl sm:text-4xl md:text-5xl lg:text-5xl'}>*/}
                                 {/*    <span className={'mb-2'}><span className={''}>Trust-Centric Solution</span> For Identity Management  And Open Finance Platform</span>*/}
                                 {/*</div>*/}
-                                <div className={'mt-6 md:mt-0 w-auto w-tablet lg:w-auto xl:w-[48rem] home-next-generation-sub font-medium z-10'}>
+                                <div className={'w-auto w-tablet lg:w-auto xl:w-[48rem] home-next-generation-sub font-medium z-10'}>
                                     <span className={'block leading-tight'}>
                                         <span className={'font-bold block text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl mb-4'}>{t('Trust Centric Solution')}</span>
                                         <span className={'text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem]'}>{t('For Identity Management')}</span>
