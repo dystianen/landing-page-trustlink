@@ -14,6 +14,8 @@ COPY . .
 COPY --from=deps /app/node_modules ./node_modules
 ARG NEXT_PUBLIC_BASE_URL
 ENV NEXT_PUBLIC_BASE_URL $NEXT_PUBLIC_BASE_URL
+ARG NEXT_PUBLIC_GOOGLE_ANALYTICS
+ENV NEXT_PUBLIC_GOOGLE_ANALYTICS $NEXT_PUBLIC_GOOGLE_ANALYTICS
 #RUN yarn build && yarn install --production --ignore-scripts --prefer-offline
 RUN npm run build && npm install --production --ignore-scripts --prefer-offline
 
