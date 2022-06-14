@@ -743,3 +743,9 @@ svg { vertical-align: baseline; }
   margin-top: auto;
 }
 
+@media only screen and (max-device-width: 360px) and (max-device-height : 780px){
+  .huawei30-screen{
+    width: 6.5rem !important;
+    height: auto !important;
+  }
+}

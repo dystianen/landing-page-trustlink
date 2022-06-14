@@ -82,10 +82,10 @@ const TrustedBy = ({sectionRef}) => {
                         <Carousel dots={false} slidesToShow={showSlide} autoplay={true} speed={1000} autoplaySpeed={1000}>
                                 {logos.map((props, index) => {
                                     return (
-                                        <div key={index}  className={`flex justify-center cursor-pointer border-r-2 items-center text-center bg-white company-logo ${color === 'true' ? 'logo-image-gray' : ''} h-20 md:h-24 xl:h-30`}>
+                                        <div key={index}  className={`flex justify-center  border-r-2 items-center text-center bg-white company-logo ${color === 'true' ? 'logo-image-gray' : ''} h-20 md:h-24 xl:h-30`}>
                                             <div className={'h-full about-img py-5 md:py-7 xl:py-8 px-2'}>
                                                 {/* <Image onClick={()=>openLink(props.href, index, props.src)} src={props.src} className={'cursor-pointer h-full w-auto'} preview={false}/> */}
-                                                <Image src={props.src} className={'cursor-pointer h-full w-auto'} preview={false} alt={"clients_logo"}/>
+                                                <Image src={props.src} className={' h-full w-auto'} preview={false} alt={"clients_logo"}/>
                                                 </div>
                                         </div>
                                     )

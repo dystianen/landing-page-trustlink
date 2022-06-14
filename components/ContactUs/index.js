@@ -51,7 +51,7 @@ const ContactUs = observer(({sectionRef}) => {
                 </div>
                 <div className={'w-full flex justify-center mb-10'} >
                     <div className={'montserrat'}>
-                        <div className={'flex flex-row items-center'}>
+                        <div className={'flex flex-row justify-center items-center'}>
                             {/*<div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>*/}
                             {/*<p className={'text-sm mb-0 text-center text-[#818FA6] tracking-widest'}>{t('Let us Know')}</p>*/}
                             <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
