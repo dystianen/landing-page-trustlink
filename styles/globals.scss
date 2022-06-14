@@ -622,6 +622,10 @@ svg { vertical-align: baseline; }
   }
 }
 
+.height-top{
+    height: calc(100vh - 50px);
+}
+
 @media only screen and (min-device-width: 1024px) and (max-device-height: 712px) {
   .m-usecase{
     //margin-top: 2rem;
