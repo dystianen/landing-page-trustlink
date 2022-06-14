@@ -44,8 +44,11 @@ const WhyUsPage = () => {
             </div>
             <div className={'pl-4 sm:pl-12'}>
                 <div className={'flex flex-row items-center mb-2'}>
-                    <div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>
-                    <p className={'text-xs lg:text-base tracking-wide mb-0 text-center text-[#818FA6] tracking-widest montserrat'}>{t('Why TrustLink')}</p>
+                    <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
+                    <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center font-normal'}>{t('Why TrustLink')}</p>
+                    <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
+                    {/*<div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>*/}
+                    {/*<p className={'text-xs lg:text-base tracking-wide mb-0 text-center text-[#818FA6] tracking-widest montserrat'}>{t('Why TrustLink')}</p>*/}
                 </div>
                 <div>
                     <p className={"text-xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl w-full sm:w-[65vw] whitespace-pre-line sm:mb-10 montserrat font-bold sm:font-semibold text-[#04204D]"}>We Create The Best{'\n'}Result-Oriented Offerings</p>
