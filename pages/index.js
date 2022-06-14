@@ -184,7 +184,7 @@ export default function Home() {
                             {/*    <Image preview={false} src={'/assets/scroll-down.svg'} />*/}
                             {/*</div>*/}
                             {/*</div>*/}
-                            <div className={'w-max h-screen lg:h-[40vh] md:h-full md:min-h-screen lg:pl-8 flex flex-col justify-start md:justify-center'}>
+                            <div className={'w-max h-screen lg:h-[40vh] md:h-full md:min-h-screen lg:pl-8 flex flex-col justify-center'}>
                                 {/*<div className={'home-next-generation text-3xl sm:text-4xl md:text-5xl lg:text-5xl'}>*/}
                                 {/*    <span className={'mb-2'}><span className={''}>Trust-Centric Solution</span> For Identity Management  And Open Finance Platform</span>*/}
                                 {/*</div>*/}
@@ -206,7 +206,7 @@ export default function Home() {
 
                             </div>
                         </section>
-                        <section className={'absolute top-[22rem] m-top md:top-0 right-10 md:-right-10 lg:-right-20 xl:-right-28 w-3/5 h-1/2 md:h-full mt-6 md:mt-0 mb-24 md:mb-0'}>
+                        <section className={'absolute top-[22rem] m-top md:top-0 right-10 md:-right-10 lg:-right-20 xl:-right-28 w-3/5 h-1/2 md:h-full mt-6 md:mt-0 mb-24 md:mb-0 hidden lg:inline'}>
                             {
                                 product.map((it,index) => (
                                     <div key={index} className={it.className} onClick={()=> handleClickProduct(it.productIndex) }>
@@ -228,7 +228,7 @@ export default function Home() {
                         className={'home-plexus'}
                     />
                 </div>
-                <div className="space-mobile" />
+                {/*<div className="space-mobile" />*/}
                 <section>
                     <AboutMePage  sectionRef={aboutUsRef}/>
                 </section>
