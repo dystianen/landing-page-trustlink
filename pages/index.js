@@ -36,8 +36,8 @@ export default function Home() {
     const { t, i18n } = useTranslation('common');
     const tablet = useMediaQuery({ query: '(max-width: 980px)' });
     const [isOpen, setIsOpen] = useState(false);
-    const genericHamburgerLine = `h-1 my-1 rounded-full ${tablet ? "bg-[#1D365F]": "bg-[#FFFFFF}"} transition ease transform duration-300`;
-    const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full ${tablet ? "bg-[#1D365F]": "bg-[#FFFFFF}"} transition ease transform duration-300`;
+    const genericHamburgerLine = `h-1 my-1 rounded-full bg-white transition ease transform duration-300`;
+    const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full bg-white transition ease transform duration-300`;
     const mobile = useMediaQuery({ query: '(max-width: 576px)' });
 
 
