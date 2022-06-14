@@ -67,8 +67,11 @@ const TrustedBy = ({sectionRef}) => {
                 {/* <div className={'absolute top-14 sm:top-20 lg:top-24 right-0 h-64 sm:h-72 w-[85%] bg-[#EAEDF1] mr-4 lg:mr-20'}/> */}
                 <div className={'relative w-full z-10 pr-4 lg:pr-0'}>
                     <div className={'flex flex-row items-center'}>
+                        {/*<div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>*/}
+                        {/*<p className={'text-sm text-[#818FA6] mb-0 ml-6 montserrat tracking-widest'}>{t('Trusted By')}</p>*/}
                         <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
-                        <p className={'text-sm text-[#818FA6] mb-0 ml-6 montserrat tracking-widest'}>{t('Trusted By')}</p>
+                        <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center font-normal'}>{t('Trusted By')}</p>
+                        <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                     </div>
                     <p className={'text-3xl sm:text-5xl md:text-6xl lg:text-7xl montserrat text-[#04204D] font-bold my-2 sm:my-6'}>{t('Clients and Partners')}</p>
                     <p className={'text-base md:text-lg lg:text-xl montserrat text-[#04204D] font-medium mb-0'}>{t('Collaboration 1')}</p>
