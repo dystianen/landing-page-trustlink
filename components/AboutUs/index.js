@@ -19,7 +19,7 @@ const AboutMePage = ({sectionRef}) => {
     }, []);
 
     return (
-        <div className='pl-6 sm:pl-12 md:pl-20 mt-[10vw] h-auto flex flex-col'>
+        <div className='pl-6 sm:pl-12 md:pl-20 lg:mt-[10vw] h-auto flex flex-col'>
             <div className={'relative w-full h-auto items-start flex justify-center'}>
                 <div className={'flex relative w-full lg:w-[95%] xl:w-[90%]'}>
                         <div className={'absolute z-20  left-[83%] top-0'}>
