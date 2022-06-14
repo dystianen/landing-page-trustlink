@@ -9,6 +9,8 @@ variables:
   STAGING_BASE_URL: https://trustlink-be.k3s.bangun-kreatif.com
   PROD_BASE_URL: https://trustlink-api.withtrustlink.com
   IMAGE_SERVICE_URL: https://files.nationaalwerknemerplan.nl
+  NEXT_PUBLIC_GOOGLE_ANALYTICS: G-EJB2EW8HLM
+
 
 stages:
   - build-staging
@@ -52,7 +54,7 @@ build-production:
     - docker:dind
   script:
     - docker login $REGISTRY_URL -u $BKA_REGISTRY_USER -p $BKA_REGISTRY_PASS
-    - docker build -t $REGISTRY_IMAGE:$VERSION_PRODUCTION . --build-arg NEXT_PUBLIC_BASE_URL=$PROD_BASE_URL --build-arg NEXT_PUBLIC_IMAGE_URL=$IMAGE_SERVICE_URL
+    - docker build -t $REGISTRY_IMAGE:$VERSION_PRODUCTION . --build-arg NEXT_PUBLIC_BASE_URL=$PROD_BASE_URL --build-arg NEXT_PUBLIC_IMAGE_URL=$IMAGE_SERVICE_URL --build-arg NEXT_PUBLIC_GOOGLE_ANALYTICS=$NEXT_PUBLIC_GOOGLE_ANALYTICS
     - docker push $REGISTRY_IMAGE:$VERSION_PRODUCTION
     - docker rmi $REGISTRY_IMAGE:$VERSION_PRODUCTION
 
