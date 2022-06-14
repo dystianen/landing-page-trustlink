@@ -56,7 +56,7 @@ const WhyUsPage = () => {
             </div>
             <div className={"flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-1 lg:gap-4 lg:pl-10 justify-items-center items-center"}>
                 {dataWhyUs.map((item, index) =>(
-                    <div key={index} className={"box-hover py-2 md:py-5 px-3 lg:px-5 flex flex-col text-[#1D365F] md:h-[16rem] xl:h-[14rem] items-center max-w-full mx-4 sm:w-[28rem] md:mx-2 md:w-[23rem] lg:w-[26rem] xl:w-[33rem] 2xl:w-[38rem]"}>
+                    <div key={index} className={" py-2 md:py-5 px-3 lg:px-5 flex flex-col text-[#1D365F] md:h-[16rem] xl:h-[14rem] items-center max-w-full mx-4 sm:w-[28rem] md:mx-2 md:w-[23rem] lg:w-[26rem] xl:w-[33rem] 2xl:w-[38rem]"}>
                         <Image alt={item.title} width={65} src={item.image_url} preview={false} />
                         {/*<Divider />*/}
                         <div className={'mt-5'}>
