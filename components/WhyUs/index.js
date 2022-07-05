@@ -40,7 +40,7 @@ const WhyUsPage = () => {
     return (
         <div className='relative lg:pl-20 h-auto mt-24 md:mt-0 lg:mt-10 xl:mt-16 mb-30 overflow-x-none flex flex-col'>
             <div className={"absolute -top-16 md:-top-12 lg:-top-52 lg:-top-30 left-[75%] w-[20rem] md:w-[30rem] lg:w-[50rem] xl:w-[67rem] h-auto"}>
-                <Image alt={"why_bg"} src={"/assets/why_us/bg1.png"} preview={false}/>
+                {/* <Image alt={"why_bg"} src={"/assets/why_us/bg1.png"} preview={false}/> */}
             </div>
             <div className={'pl-4 sm:pl-12'}>
                 <div className={'flex flex-row justify-center items-center mb-2'}>
