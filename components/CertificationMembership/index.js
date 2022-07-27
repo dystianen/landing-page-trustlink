@@ -30,6 +30,11 @@ export const CertificationMembership = observer(({sectionRef})=> {
             href: 'https://www.kominfo.go.id/'
         },
         {
+            src: '/assets/ibeta.png',
+            className: 'h-3/5 md:h-3/4 w-auto',
+            href: 'https://www.ibeta.com/'
+        },
+        {
             src: '/assets/images/logo-aitb-2.png',
             className: 'h-2/5 md:h-1/2 w-auto',
             href: 'https://biometrik.org/'
