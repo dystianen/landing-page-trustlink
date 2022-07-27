@@ -1,7 +1,8 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Carousel} from "antd";
 
-export const CarouselPage = () => {
+export const
+    CarouselPage = () => {
     const [activeSlide, setActiveSlide] = useState(-1);
     const [contentWidth, setWidth] = useState('66.6%');
 

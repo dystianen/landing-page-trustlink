@@ -30,6 +30,11 @@ export const CertificationMembership = observer(({sectionRef})=> {
             href: 'https://www.kominfo.go.id/'
         },
         {
+            src: '/assets/ibeta.png',
+            className: 'h-3/5 md:h-3/4 w-auto',
+            href: 'https://www.ibeta.com/'
+        },
+        {
             src: '/assets/images/logo-aitb-2.png',
             className: 'h-2/5 md:h-1/2 w-auto',
             href: 'https://biometrik.org/'
@@ -43,7 +48,7 @@ export const CertificationMembership = observer(({sectionRef})=> {
     return (
         <div className={'section-most-top -mt-98'} ref={sectionRef}>
             <div className={'flex w-full justify-center mt-20'}>
-                <div className={'flex flex-row items-center z-10'}>
+                <div className={'flex flex-row items-center z-10'} ref={sectionRef}>
                     <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                     <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center'}>{t('Registred and Supervisied')}</p>
                     <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>

@@ -4,6 +4,12 @@ import Particles from "react-tsparticles";
 export const ParticlePage = (props) => {
     const {
         setChangeSlide = (val)=>{},
+        opacity=0.5,
+        numberValue=180,
+        numberDensity=3200,
+        distance=150,
+        dimention={},
+        className="",
         slide
     } = props
     const [slideActive, setSlideActive] = useState(1);
@@ -16,7 +22,7 @@ export const ParticlePage = (props) => {
     };
 
     const changeParticlePosition = (val) => {
-        console.log('bruh123123', "HAIII", val)
+
     }
 
     useEffect(()=>{
@@ -27,8 +33,12 @@ export const ParticlePage = (props) => {
         <div className={``}>
             <Particles
                 id="tsparticles"
+                className={className}
                 init={particlesInit}
                 loaded={particlesLoaded}
+                {
+                    ...dimention
+                }
                 // width={'25%'}
                 // height={'35vh'}
                 options={{
@@ -76,7 +86,7 @@ export const ParticlePage = (props) => {
                         },
                         links: {
                             color: "#FE944D",
-                            distance: 150,
+                            distance: distance,
                             enable: true,
                             opacity:0.5 ,
                             width: 1,
@@ -95,12 +105,12 @@ export const ParticlePage = (props) => {
                         number: {
                             density: {
                                 enable: true,
-                                area: 3200,
+                                area: numberDensity,
                             },
-                            value: 120,
+                            value: numberValue,
                         },
                         opacity: {
-                            value: 0.5,
+                            value: opacity,
                         },
                         shape: {
                             type: "circle",
