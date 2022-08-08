@@ -37,6 +37,23 @@ class MyDocument extends Document {
                   `,
                     }}
                 />
+
+                {/* Global Site Tag (gtag.js) - Google Adds */}
+                <script
+                    async
+                    src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ADS}`}
+                />
+
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS}');
+                  `,
+                    }}
+                />
                 <Head>
                     <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
                     <link
