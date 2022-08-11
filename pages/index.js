@@ -23,6 +23,7 @@ import StickyHeader from "../components/StickyHeader";
 import {MapAddress} from "../components/MapAddress";
 import WhyUsPage from "../components/WhyUs";
 import { scrollIntoView, polyfill  } from "seamless-scroll-polyfill";
+import ContactHubSpots from "../components/ContactUs/ContactHubSpot";
 
 export const checkRerouteLoggedUser = (store, router) => {
     if (typeof window !== 'undefined') {
@@ -252,7 +253,7 @@ export default function Home() {
                 {/* <div className="h-[20vh]" /> */}
                 <CertificationMembership sectionRef={membershipRef}/>
                 <div className="h-[10vh] sm:h-quarter" />
-                <ContactUs sectionRef={contactUsRef } />
+                <ContactHubSpots sectionRef={contactUsRef } />
                 <Footer onClickTop={()=>topSectionRef.current.scrollIntoView({behavior: 'smooth'}) }/>
             </div>
             {/*<div>*/}
