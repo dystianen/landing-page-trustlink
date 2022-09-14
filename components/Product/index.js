@@ -70,6 +70,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
         {
             name: 'Connect',
             icon: '/assets/images/logo-trust-connect.png',
+            alt : "Trustlink Trust Connect"
         },
         {
             name: 'Vision',
