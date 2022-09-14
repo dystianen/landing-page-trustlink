@@ -35,6 +35,7 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Montserrat:bold,light,regular,medium" crossOrigin="anonymous"
         />
+        <link rel="canonical" href={"https://www.withtrustlink.com/"} />
         <Script src={"../styles/animation/textCarousel.js"} />
       </Head>
       {getLayout(
