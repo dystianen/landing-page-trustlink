@@ -118,15 +118,15 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             width_subhead: 'w-[18rem] md:w-[20rem] lg:w-[28rem] 2xl:w-[40rem]',
             width_desc: 'w-[19.5rem] md:w-[25.5rem] lg:w-[31.9rem] xl:w-[34.5rem] 2xl:w-[47.5rem] tracking-tighter'
         },
-        // {
-        //     name: 'Trust',
-        //     name2: 'Connect',
-        //     coming_soon : '',
-        //     src: isSafari ? '/assets/product/bg-white/TrustConnect.webm' : '/assets/product/revision-13-05/TrustConnect.webm',
-        //     subhead: t('Subhead trust connect'),
-        //     desc: t('Desc TrustConnect'),
-        //     size: '100%'
-        // },
+        {
+            name: 'Trust',
+            name2: 'Connect',
+            coming_soon : '',
+            src: isSafari ? '/assets/product/bg-white/TrustConnect.webm' : '/assets/product/TrustConnect.webm',
+            subhead: t('Subhead trust connect'),
+            desc: t('Desc TrustConnect'),
+            size: '100%'
+        },
         {
             name: 'Trust',
             name2: 'Vision',
