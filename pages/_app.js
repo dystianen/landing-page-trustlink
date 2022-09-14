@@ -25,17 +25,17 @@ function MyApp({ Component, pageProps }) {
         <title key="trustlink">Trustlink</title>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0" key="trustlink-website"/>
         <meta name="description" content="Trustlink Website" key="trustlink-website"/>
-        <meta property="title" content="Trustlink" key="trustlink" />
-        <meta property="og:description" content="Trustlink Website" key="trustlink-website"  />
+        <meta name="keywords" content="TrustLink" />
+        <meta name="author" content="TrustLink" />
+        <meta name="publisher" content="TrustLink" />
+
         <meta property="og:type" content="website" />
-        {/* <meta property="og:url" content="https://myclothingstore.com/" /> */}
-        {/* <link rel="preload" href={"/assets/logo.svg"} /> */}
+        <link rel="canonical" href={"https://www.withtrustlink.com/"} />
         <link rel="icon" href="/assets/logo/icon-only.png" as="icon" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Montserrat:bold,light,regular,medium" crossOrigin="anonymous"
         />
-        <link rel="canonical" href={"https://www.withtrustlink.com/"} />
         <Script src={"../styles/animation/textCarousel.js"} />
       </Head>
       {getLayout(
