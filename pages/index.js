@@ -101,7 +101,7 @@ export default function Home() {
     ]
 
 
-    const handleClickProduct = (index) => {
+    const   handleClickProduct = (index) => {
         setIndexProduct(index)
         sectionProductRef.current.scrollIntoView({behavior: 'smooth'})
     }

@@ -44,6 +44,7 @@ const StickyHeader = (props) => {
     {
       name: t("Products"),
       onClicked: onClickProduct,
+      key : 'products'
     },
     {
       name: t("Use Case"),
@@ -58,6 +59,15 @@ const StickyHeader = (props) => {
       onClicked: onClickContactUs,
     },
   ];
+
+  const subMenu =[
+    {name : 'TrustVerify'},
+    {name : 'TrustScan'},
+    {name : 'TrustLive'},
+    {name : 'TrustConnect'},
+    {name : 'TrustVision'},
+  ]
+
 
   useEffect(() => {
     setIsOpen(isMenuOpen);
