@@ -22,11 +22,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <StoreProvider {...pageProps}>
       <Head>
-        <title>Trustlink</title>
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
-        <meta name="description" content="Trustlink Website" />
-        <meta property="og:title" content="Trustlink" />
-        <meta property="og:description" content="Trustlink Website" />
+        <title key="trustlink">Trustlink</title>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0" key="trustlink-website"/>
+        <meta name="description" content="Trustlink Website" key="trustlink-website"/>
+        <meta property="title" content="Trustlink" key="trustlink" />
+        <meta property="og:description" content="Trustlink Website" key="trustlink-website"  />
         <meta property="og:type" content="website" />
         {/* <meta property="og:url" content="https://myclothingstore.com/" /> */}
         {/* <link rel="preload" href={"/assets/logo.svg"} /> */}
@@ -35,6 +35,7 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Montserrat:bold,light,regular,medium" crossOrigin="anonymous"
         />
+        <link rel="canonical" href={"https://www.withtrustlink.com/"} />
         <Script src={"../styles/animation/textCarousel.js"} />
       </Head>
       {getLayout(
