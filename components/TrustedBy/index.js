@@ -46,6 +46,10 @@ const TrustedBy = ({sectionRef}) => {
         {
             src: 'assets/trusted_by/vida.png',
             href: 'https://www.vida.id/'
+        },
+        {
+            src: 'assets/trusted_by/incode.png',
+            href: 'https://incode.com/'
         }
     ];
 
@@ -85,7 +89,7 @@ const TrustedBy = ({sectionRef}) => {
                                         <div key={index}  className={`flex justify-center  border-r-2 items-center text-center bg-white company-logo ${color === 'true' ? 'logo-image-gray' : ''} h-20 md:h-24 xl:h-30`}>
                                             <div className={'h-full about-img py-5 md:py-7 xl:py-8 px-2'}>
                                                 {/* <Image onClick={()=>openLink(props.href, index, props.src)} src={props.src} className={'cursor-pointer h-full w-auto'} preview={false}/> */}
-                                                <Image src={props.src} className={' h-full w-auto'} preview={false} alt={"Trustlink Clients Logo"}/>
+                                                <Image src={props.src} onClick={()=>openLink(props.href, index, props.src)} className={' h-full w-auto'} preview={false} alt={"Trustlink Clients Logo"}/>
                                                 </div>
                                         </div>
                                     )
