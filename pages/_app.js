@@ -22,15 +22,15 @@ function MyApp({ Component, pageProps }) {
   return (
     <StoreProvider {...pageProps}>
       <Head>
-        <title key="trustlink">Trustlink</title>
+        <title key="trustlink">Trustlink | The only Open Finance with an end-to-end e-KYC provider in South East Asia</title>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0" key="trustlink-website"/>
-        <meta name="description" content="Trustlink Website" key="trustlink-website"/>
+        <meta name="description" content="Enables you to build a greater finance ecosystem with end to end e-KYC authentication process in one platform" key="trustlink-website"/>
         <meta name="keywords" content="TrustLink" />
         <meta name="author" content="TrustLink" />
         <meta name="publisher" content="TrustLink" />
         <meta name="robots" content="INDEX,FOLLOW" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href={"https://garudaeleven.com/"} />
+        <link rel="canonical" href={"https://www.withtrustlink.com/"} />
         <link rel="icon" href="/assets/logo/icon-only.png" as="icon" />
         <link
           rel="stylesheet"
