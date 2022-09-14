@@ -37,7 +37,7 @@ const Footer = ({ onClickTop = () => {} }) => {
           <div className={"col-span-9 lg:col-span-6 xl:col-span-6"}>
             <Image className="w-3/5 md:w-1/2" src="/assets/logo/logo-for-dark-background-rt.png" preview={false} alt={"Trustlink Master Logo"} />
           </div>
-          <div className={"col-span-3 lg:col-span-6 xl:col-span-6 text-[#71757C] flex md:justify-end items-center md:mr-6 lg:mr-12 xl:mr-24"}>
+          {/* <div className={"col-span-3 lg:col-span-6 xl:col-span-6 text-[#71757C] flex md:justify-end items-center md:mr-6 lg:mr-12 xl:mr-24"}>
             <p className={"text-sm md:text-xl montserrat m-0 z-20"}>
               <Link href={"/"} locale="en">
                 <span className={`cursor-pointer ${i18n.language === "en" && "text-orange"}`}>EN</span>
@@ -47,7 +47,7 @@ const Footer = ({ onClickTop = () => {} }) => {
                 <span className={`cursor-pointer ${i18n.language === "id" && "text-orange"}`}>ID</span>
               </Link>
             </p>
-          </div>
+          </div> */}
         </div>
         <div className={"flex flex-col lg:flex-row"}>
           <div className={"w-full lg:w-2/3 xl:w-2/3 ml-0 lg:ml-4 mt-4 md:mt-6 lg:mt-12 font-light flex flex-wrap justify-between "}>

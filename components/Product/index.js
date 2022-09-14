@@ -67,10 +67,10 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             icon: '/assets/images/logo-trust-live.png',
             alt :'Trustlink Trust Live'
         },
-        // {
-        //     name: 'Connect',
-        //     icon: '/assets/images/logo-trust-connect.png',
-        // },
+        {
+            name: 'Connect',
+            icon: '/assets/images/logo-trust-connect.png',
+        },
         {
             name: 'Vision',
             icon: '/assets/images/logo-trust-vision.png',
@@ -233,7 +233,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                                 }
                             />
                         ))}
-                        <hr className={`absolute left-12 md:left-16 lg:left-[10%] top-[48%] w-[78%] h-1 bg-[#FE6601] z-0`}/>
+                        <hr className={`absolute left-12 md:left-16 lg:left-[10%] top-[48%] w-[78%] sm:w-[82%] lg:w-[78%] 2xl:w-[80%] h-1 bg-[#FE6601] z-0`}/>
                     </Steps>
                 </div>
 
