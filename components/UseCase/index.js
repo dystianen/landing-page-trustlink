@@ -100,8 +100,8 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                             </div>
                         </div>
                         <div className={'mt-7 md:mt-10 w-full md:3/4 z-10 px-5 md:pl-0 '}>
-                            <p className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-1 md:mb-2 montserrat'}>{t('Use Case')}</p>
-                            <p className={'text-white text-sm md:text-lg xl:text-xl montserrat w-auto sm:w-[32rem] md:w-[40rem] xl:w-[60rem]'}>{t('Biometric Use Case 2')}</p>
+                            <h1 className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-1 md:mb-2 montserrat'}>{t('Use Case')}</h1>
+                            <h2 className={'text-white text-sm md:text-lg xl:text-xl montserrat w-auto sm:w-[32rem] md:w-[40rem] xl:w-[60rem]'} style={{fontWeight : 400}}>{t('Biometric Use Case 2')}</h2>
                         </div>
                     </div>
                     <Carousel
@@ -157,12 +157,12 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
 
                                 <div className={'flex flex-col justify-start md:justify-center w-full md:w-[30rem] lg:w-[38rem] xl:w-[42rem] 2xl:w-[55.8rem] md:h-full md:pl-10 m-usecase'}>
                                     <div className={"mb-2 px-5 md:px-0"}>
-                                        <p className={'text-sm lg:text-base xl:text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
+                                        <h4 className={'text-sm lg:text-base xl:text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'} style={{fontWeight: 400}}>{item.title}</h4>
                                     </div>
                                     <div className={'px-6 md:px-0 text-lg md:text-xl lg:text-2xl text-white montserrat text-center md:text-left w-full '}>
-                                        <p className={'mb-3 leading-snug md:leading-tight w-auto md:w-[90%] lg:w-[83%] xl:w-3/4'}>
+                                        <h3 className={'text-white mb-3 leading-snug md:leading-tight w-auto md:w-[90%] lg:w-[83%] xl:w-3/4'} style={{fontWeight : 400}}>
                                             {item.name}
-                                        </p>
+                                        </h3>
                                     </div>
                                     <div className={'mb-2 px-5 md:px-0'}>
                                         <p className={"text-white text-xs lg:text-sm xl:text-base w-auto md:w-[15rem] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify tracking-normal md:tracking-tight whitespace-pre-line"}>

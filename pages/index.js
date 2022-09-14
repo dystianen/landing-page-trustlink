@@ -202,8 +202,8 @@ export default function Home() {
                                 {/*</div>*/}
                                 <div className={'w-auto w-tablet lg:w-auto xl:w-[48rem] home-next-generation-sub font-medium z-10'}>
                                     <span className={'block leading-tight'}>
-                                        <span className={'font-bold block text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl mb-4'}>{t('Trust Centric Solution')}</span>
-                                        <span className={'text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem]'}>{t('For Identity Management')}</span>
+                                        <h1 className={'text-[#05204D] font-bold block text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl mb-4'}>{t('Trust Centric Solution')}</h1>
+                                        <h2 className={'text-[#05204D] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem]'}>{t('For Identity Management')}</h2>
                                         {/*<br/> {t('And Open Finance Platform')}*/}
                                     </span>
                                     <div>
