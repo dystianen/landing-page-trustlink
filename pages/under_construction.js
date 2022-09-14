@@ -41,7 +41,7 @@ const UnderConstruction = () => {
                 <div className={'container-1'}>
                     <Slide top delay={100} duration={1600}>
                         <Zoom>
-                        <Image className={"w-4/5 xs:w-3/5 md:w-2/4 xl:w-3/6"} style={{marginLeft:-15}} preview={false} src={'assets/logo/logo-for-light-background-rotated.png'} alt={"Trustlink"}/>
+                        <Image className={"w-4/5 xs:w-3/5 md:w-2/4 xl:w-3/6"} style={{marginLeft:-15}} preview={false} src={'assets/logo/logo-for-light-background-rotated.png'} alt={"Trustlink Master Logo"}/>
                         </Zoom>
                     </Slide>
                     <Slide top delay={100} duration={1600}>

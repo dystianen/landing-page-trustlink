@@ -64,8 +64,9 @@ export const CertificationMembership = observer(({sectionRef})=> {
                 <div className={'w-full md:w-[90%] lg:w-5/6 h-auto flex flex-wrap flex-col sm:flex-row justify-center items-center'}>
                     {
                         item.map((props, index) => (
+                            
                             <div key={index} onClick={()=>openLink(props.href)} className={`cursor-pointer flex sm:flex-row w-full sm:w-1/3 trusted-img h-36 mb-2 ${props.class}`}>
-                                <Image preview={false} className={`${props.className} company-logo ${color === 'true' ? 'logo-image-gray' : ''}`} src={props.src} alt={'certification_logo'}/>
+                                <Image preview={false} className={`${props.className} company-logo ${color === 'true' ? 'logo-image-gray' : ''}`} src={props.src} alt={'Trustlink Certification & Membership'}/>
                             </div>
                         ))
                     }

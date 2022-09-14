@@ -19,19 +19,19 @@ const WhyUsPage = () => {
 
     const dataWhyUs = [
         {
-            title: t("why_us_1_title"),
+            title: t("Trustlink Why Us 1"),
             description: t("why_us_1_desc"),
             image_url: "/assets/why_us/Fast.png"
         },{
-            title: t("why_us_2_title"),
+            title: t("Trustlink Why Us 2"),
             description: t("why_us_2_desc"),
             image_url: "/assets/why_us/Proven.png"
         },{
-            title: t("why_us_3_title"),
+            title: t("Trustlink Why Us 3"),
             description: t("why_us_3_desc"),
             image_url: "/assets/why_us/Accurate.png"
         },{
-            title: t("why_us_4_title"),
+            title: t("Trustlink Why Us 4"),
             description: t("why_us_4_desc"),
             image_url: "/assets/why_us/Strongest.png"
         },
@@ -40,7 +40,7 @@ const WhyUsPage = () => {
     return (
         <div className='relative lg:pl-20 h-auto mt-24 md:mt-0 lg:mt-10 xl:mt-16 mb-30 overflow-x-none flex flex-col'>
             <div className={"absolute -top-16 md:-top-12 lg:-top-52 lg:-top-30 left-[75%] w-[20rem] md:w-[30rem] lg:w-[50rem] xl:w-[67rem] h-auto"}>
-                {/* <Image alt={"why_bg"} src={"/assets/why_us/bg1.png"} preview={false}/> */}
+                {/* <Image alt={"Trustlink Why Us"} src={"/assets/why_us/bg1.png"} preview={false}/> */}
             </div>
             <div className={'pl-4 sm:pl-12'}>
                 <div className={'flex flex-row justify-center items-center mb-2'}>

@@ -81,7 +81,7 @@ const FixedFooter = observer(({ children, title, icon }) => {
                             <a>
                                 <Image
                                     src={profile?.entity?.logo_url ? appConfig.imageApiUrl + profile?.entity?.logo_url : "/assets/logo.svg"}
-                                    alt={"logo"}
+                                    alt={"Trustlink Logo"}
                                     height={87.69}
                                     width={87.69}
                                     className="w-14 h-14 md:w-16 md:h-16"
@@ -111,7 +111,7 @@ const FixedFooter = observer(({ children, title, icon }) => {
                                 >
                                     <Image
                                         src={img_header}
-                                        alt={"Image Header"}
+                                        alt={"Trustlink Profile"}
                                         height={46}
                                         width={46}
                                     />
