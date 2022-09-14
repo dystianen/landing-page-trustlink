@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="keywords" content="TrustLink" />
         <meta name="author" content="TrustLink" />
         <meta name="publisher" content="TrustLink" />
-
+        <meta name="robots" content="INDEX,FOLLOW" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href={"https://www.withtrustlink.com/"} />
         <link rel="icon" href="/assets/logo/icon-only.png" as="icon" />
