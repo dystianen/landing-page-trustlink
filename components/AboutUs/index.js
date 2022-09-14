@@ -23,16 +23,16 @@ const AboutMePage = ({sectionRef}) => {
             <div className={'relative w-full h-auto items-start flex justify-center'}>
                 <div className={'flex relative w-full lg:w-[95%] xl:w-[90%]'}>
                         <div className={'absolute z-20  left-[83%] top-0'}>
-                        <Image preview={false} src={"/assets/about-logo.png"} alt={"about_logo"} className={'h-full w-full'} />
+                        <Image preview={false} src={"/assets/about-logo.png"} alt={"Truslink Master Logo"} className={'h-full w-full'} />
                         </div>
                     <span className={'z-10 about-img w-full'}>
-                        <Image preview={false} src={"/assets/about-new.png"} alt={"about_logo"} className={'h-full w-[2500px]'} />
+                        <Image preview={false} src={"/assets/about-new.png"} alt={"Trustlink About New"} className={'h-full w-[2500px]'} />
                     </span>
                     <div className={'absolute left-0 bottom-0 h-[50%] w-[21%] z-20'}>
-                        <Image src={"/assets/about_us_left.png"} alt={"about_logo"} preview={false} id={'about-me'} className={'h-full'}/>
+                        <Image src={"/assets/about_us_left.png"} alt={"Trustkink Left"} preview={false} id={'about-me'} className={'h-full'}/>
                     </div>
                     <div className={"absolute left-[-21%] top-[50%] w-[42%] h-full z-0 about-img"}>
-                        <Image src={"/assets/about_me.svg"} alt={"about_logo"} preview={false} className={'h-full'}/>
+                        <Image src={"/assets/about_me.svg"} alt={"Trustlink Logo"} preview={false} className={'h-full'}/>
                     </div>
                 </div>
             </div>

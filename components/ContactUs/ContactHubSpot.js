@@ -45,10 +45,10 @@ const ContactHubSpots = observer(({sectionRef}) => {
     return (
             <div className={'w-full relative section-most-top'} id='contact' ref={sectionRef}>
                 <div className={'h-full contact-bg absolute -left-20 md:-left-16 lg:-left-12 xl:left-0 top-5'}>
-                    <Image preview={false} className="h-full w-auto" src={'/assets/images/accent-home-sectionContact-1.jpg'} alt={'contact_us_bg'}/>
+                    <Image preview={false} className="h-full w-auto" src={'/assets/images/accent-home-sectionContact-1.jpg'} alt={'Trustlink Section Contact 1'}/>
                 </div>
                 <div className={'h-full contact-bg absolute right-0 top-5'}>
-                    <Image preview={false} className="h-full w-auto" src={'/assets/images/accent-home-sectionContact-2.jpg'} alt={'contact_us_bg'}/>
+                    <Image preview={false} className="h-full w-auto" src={'/assets/images/accent-home-sectionContact-2.jpg'} alt={'Trustlink Section Contact 2'}/>
                 </div>
                 <div className={'w-full flex justify-center mb-10'} >
                     <div className={'montserrat'}>
