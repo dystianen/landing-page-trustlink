@@ -166,9 +166,9 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                 </div>
                 <div className={'flex flex-col justify-center items-center md:items-start w-full md:w-3/6 lg:w-2/4 z-40 mt-0 px-6 md:px-0'}>
                     <div>
-                        <p className={'text-center md:text-left text-3xl md:text-4xl lg:text-4xl mb-0 montserrat text-gray-400 font-bold leading-none mt-4'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-[#FF6703]' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-lg md:text-xl'}>{item.coming_soon ? 'Coming Soon' : ''}</span></p>
+                        <h2 className={'text-center md:text-left text-3xl md:text-4xl lg:text-4xl mb-0 montserrat text-gray-400 font-bold leading-none mt-4'} style={{ color: item.coming_soon ? '#cbd5e0' : '#04204D' }}>{item.name}<span className={`${item.coming_soon ?  'text-gray-400' : 'text-[#FF6703]' } font-medium`}>{item.name2} </span><span style={{ color: '#fe6601', position:'absolute'}} className={'text-lg md:text-xl'}>{item.coming_soon ? 'Coming Soon' : ''}</span></h2>
                     </div>
-                    <p className={`${item.width_subhead} text-lg md:text-lg lg:text-xl mb-0 montserrat leading-tight md:leading-none font-bold mt-5 text-center md:text-left`} style={{color: '#04204D'}}>{item.subhead}</p>
+                    <h3 className={`${item.width_subhead} text-lg md:text-lg lg:text-xl mb-0 montserrat leading-tight md:leading-none font-bold mt-5 text-center md:text-left`} style={{color: '#04204D'}}>{item.subhead}</h3>
                     <div className={'mt-5 md:mt-5 ' + item.width_desc}>
                         <p style={{color: '#04204D'}} className={"w-full md:w-[80%] text-sm md:text-base lg:text-lg montserrat mb-3 text-justify"}>
                             {item.desc}
@@ -199,16 +199,16 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             <div className={'flex w-full justify-center'} ref={productRef}>
                 <div className={'flex flex-row items-center z-10 mb-2'}>
                     <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
-                        <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center'}>{t('One and For All')}</p>
+                        <h6 className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center'}>{t('One and For All')}</h6>
                     <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                 </div>
             </div>
             <div className={'flex justify-center'}>
                 <div>
-                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#04204D] mb-0 montserrat'}>{t('Products')}</p>
+                    <h4 className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#04204D] mb-0 montserrat'}>{t('Products')}</h4>
                     {/*<div className={'text-base lg:text-lg leading-relaxed text-center text-[#4F6382] montserrat w-full flex justify-center items-center'}>*/}
                     <div className={'text-base lg:text-lg leading-relaxed text-center text-[#04204D] montserrat w-full flex justify-center items-center'}>
-                        <p className='z-10 sm:w-4/6 md:w-[31rem] lg:w-[34rem] mb-0'>{t('We are a leading digital biometric')}</p>
+                        <h5 className=' z-10 sm:w-4/6 md:w-[31rem] lg:w-[34rem] mb-0' style={{fontWeight :400}}>{t('We are a leading digital biometric')}</h5>
                     </div>
                 </div>
             </div>

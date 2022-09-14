@@ -50,17 +50,17 @@ export const CertificationMembership = observer(({sectionRef})=> {
             <div className={'flex w-full justify-center mt-20'}>
                 <div className={'flex flex-row items-center z-10'} ref={sectionRef}>
                     <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
-                    <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center'}>{t('Registred and Supervisied')}</p>
+                    <h6 className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center'} style={{fontWeight:400}}>{t('Registred and Supervisied')}</h6>
                     <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                 </div>
             </div>
             <div className={'flex justify-center montserrat mt-4'}>
                 <div className={'z-10'}>
-                    <p className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-0 text-[#04204D]'}>{t('International')}</p>
-                    <p className={'text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mt-4 text-[#04204D] font-medium'}>{t('Certification and Membership')}</p>
+                    <h1 className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-0 text-[#04204D]'}>{t('International')}</h1>
+                    <h2 className={'text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mt-4 text-[#04204D] font-medium'}>{t('Certification and Membership')}</h2>
                 </div>
             </div>
-            <div className={'w-full sm:mt-5 flex justify-center items-center'}>
+            <div className={'w-full sm:mt-9 flex justify-center items-center'}>
                 <div className={'w-full md:w-[90%] lg:w-5/6 h-auto flex flex-wrap flex-col sm:flex-row justify-center items-center'}>
                     {
                         item.map((props, index) => (

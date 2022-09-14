@@ -70,11 +70,11 @@ const TrustedBy = ({sectionRef}) => {
                         {/*<div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>*/}
                         {/*<p className={'text-sm text-[#818FA6] mb-0 ml-6 montserrat tracking-widest'}>{t('Trusted By')}</p>*/}
                         <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
-                        <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center font-normal'}>{t('Trusted By')}</p>
+                        <h6 className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center font-normal'}>{t('Trusted By')}</h6>
                         <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                     </div>
-                    <p className={'text-3xl sm:text-5xl md:text-6xl lg:text-7xl montserrat text-[#04204D] font-bold my-2 sm:my-6'}>{t('Clients and Partners')}</p>
-                    <p className={'text-base md:text-lg lg:text-xl montserrat text-[#04204D] font-medium mb-0'}>{t('Collaboration 1')}</p>
+                    <h4 className={'text-3xl sm:text-5xl md:text-6xl lg:text-7xl montserrat text-[#04204D] font-bold my-2 sm:my-6'}>{t('Clients and Partners')}</h4>
+                    <h5 className={'text-base md:text-lg lg:text-xl montserrat text-[#04204D] font-medium mb-0'}>{t('Collaboration 1')}</h5>
                     {/*<p className={'text-base sm:text-lg lg:text-xl montserrat text-[#04204D] font-medium mb-0'}>{t('Collaboration 2')}</p>*/}
                 </div>
                 <div className={'flex flex-row justify-start mt-6 sm:mt-10 z-10 mr-4 lg:mr-20'}>

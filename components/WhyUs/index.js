@@ -45,13 +45,13 @@ const WhyUsPage = () => {
             <div className={'pl-4 sm:pl-12'}>
                 <div className={'flex flex-row justify-center items-center mb-2'}>
                     <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
-                    <p className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center font-normal'}>{t('why_title')}</p>
+                    <h6 className={'text-sm mx-2 sm:mx-6 text-[#818FA6] montserrat mb-0 text-center font-normal'}>{t('why_title')}</h6>
                     <div className={'w-10 sm:w-16 h-[2px] bg-[#818FA6] opacity-50'}/>
                     {/*<div className={'w-16 h-[2px] mr-6 opacity-50'} style={{backgroundColor: '#818FA6'}}/>*/}
                     {/*<p className={'text-xs lg:text-base tracking-wide mb-0 text-center text-[#818FA6] tracking-widest montserrat'}>{t('Why TrustLink')}</p>*/}
                 </div>
                 <div className={'flex justify-center text-center'}>
-                    <p className={"text-3xl sm:text-4xl md:text-5xl lg:text-6xl w-full sm:w-[65vw] whitespace-pre-line sm:mb-10 montserrat font-bold sm:font-semibold text-[#04204D]"}>We Create The Best{'\n'}Result-Oriented Offerings</p>
+                    <h1 className={"text-3xl sm:text-4xl md:text-5xl lg:text-6xl w-full sm:w-[65vw] whitespace-pre-line sm:mb-10 montserrat font-bold sm:font-semibold text-[#04204D]"}>We Create The Best{'\n'}Result-Oriented Offerings</h1>
                 </div>
             </div>
             <div className={"flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-1 lg:gap-4 lg:pl-10 justify-items-center items-center"}>
@@ -60,7 +60,7 @@ const WhyUsPage = () => {
                         <Image alt={item.title} width={65} src={item.image_url} preview={false} />
                         {/*<Divider />*/}
                         <div className={'mt-5'}>
-                            <p className={'montserrat text-lg md:text-lg lg:text-xl font-bold text-center mb-1'}>{item.title}</p>
+                            <h5 className={'text-[#05204D] montserrat text-lg md:text-lg lg:text-xl font-bold text-center mb-1'}>{item.title}</h5>
                             <p style={{textAlignLast: "center"}} className={'montserrat text-justify text-sm md:text-sm lg:text-base tracking-tighter'}>{item.description}</p>
                         </div>
                     </div>
