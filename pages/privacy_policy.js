@@ -16,6 +16,8 @@ import { useRouter } from "next/router";
 
  const PrivacyPolicy = () => {
      const router = useRouter();
+     const [isOpen, setIsOpen] = useState(false);
+
     const markdown =`
 # Privacy Policy
 
@@ -152,7 +154,27 @@ You represent and warrant that you have all necessary rights to use your Account
 `
     return (
         <div className={'w-full flew-row'}>
-            <StickyHeader />
+            <StickyHeader
+                changeMenuOpen={setIsOpen}
+                isMenuOpen={isOpen}
+                onClickTopPage={()=>{
+                    router.push('/')
+                }}
+                onClickProduct={() => {
+                    router.push('/')
+                }}
+                onClickContactUs={() => {
+                    router.push('/')
+                }}
+                onClickClients={() => {
+                    router.push('/')
+                }}
+                onClickUseCases={() => {
+                    router.push('/')
+                }}
+                onClickAboutUs={() => {
+                    router.push('/')
+                }}/>
             <div className={'mt-16 ml-14'}>
                 <Button className={" text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-36 md:w-48 my-auto"} icon={<ArrowLeftOutlined/>} onClick={()=> {router.push('/')}}>
                     Back
