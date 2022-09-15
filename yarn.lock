@@ -3815,6 +3815,7 @@ moment@^2.29.2:
   version "2.29.4"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
   integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
+
 mri@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mri/-/mri-1.2.0.tgz#6721480fec2a11a4889861115a48b6cbe7cc8f0b"
@@ -4972,7 +4973,6 @@ rc-virtual-list@^3.2.0:
     rc-resize-observer "^1.0.0"
     rc-util "^5.0.7"
 
-<<<<<<< HEAD
 rc-virtual-list@^3.4.8:
   version "3.4.8"
   resolved "https://registry.yarnpkg.com/rc-virtual-list/-/rc-virtual-list-3.4.8.tgz#c24c10c6940546b7e2a5e9809402c6716adfd26c"
@@ -4982,8 +4982,6 @@ rc-virtual-list@^3.4.8:
     rc-resize-observer "^1.0.0"
     rc-util "^5.15.0"
 
-=======
->>>>>>> f5c6e6267bc5a9a13eef2667ffbc124f36414069
 react-compare-slider@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/react-compare-slider/-/react-compare-slider-2.2.0.tgz#c4229aa39a7a30c9b3efc2937c471107b437ac4c"
@@ -6490,11 +6488,6 @@ youtube-player@5.5.2:
     debug "^2.6.6"
     load-script "^1.0.0"
     sister "^3.0.0"
-
-zwitch@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/zwitch/-/zwitch-2.0.2.tgz#91f8d0e901ffa3d66599756dde7f57b17c95dce1"
-  integrity sha512-JZxotl7SxAJH0j7dN4pxsTV6ZLXoLdGME+PsjkL/DaBrVryK9kTGq06GfKrwcSOqypP+fdXGoCHE36b99fWVoA==
 
 zwitch@^2.0.0:
   version "2.0.2"
