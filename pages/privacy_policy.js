@@ -9,9 +9,13 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import StickyHeader from "../components/StickyHeader";
 import Footer from "../components/Footer";
-import {Image} from "antd";
+import {Button, Image} from "antd";
+import {ArrowLeftOutlined} from "@ant-design/icons";
+import { useRouter } from "next/router";
+
 
  const PrivacyPolicy = () => {
+     const router = useRouter();
     const markdown =`
 # Privacy Policy
 
@@ -147,14 +151,19 @@ You represent and warrant that you have all necessary rights to use your Account
     
 `
     return (
-        <div className={'w-full bg-red-100'}>
+        <div className={'w-full flew-row'}>
             <StickyHeader/>
-            <ReactMarkdown children={markdown}/>
-            <Image preview={false} src={'/assets/BGPrivacyPolicy.png'} alt={"Trustlink Background Opacity"} className={' opacity-10'}/>
-
+            <div className={'absolute z-50 top-[8rem] left-12'}>
+                <Button className={" text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-36 md:w-48 my-auto"} icon={<ArrowLeftOutlined/>} onClick={()=> {router.push('/')}}>
+                    Back
+                </Button>
+            </div>
+            <div className={`relative w-full  sm:h-screen right-0 usecase-img `}>
+                <Image preview={false} src={'/assets/BGPrivacyPolicy.png'} alt={"Trustlink Background Opacity"} className={'h-full w-full opacity-100'}/>
+            </div>
             <Footer/>
         </div>
-    )
+ )
 }
 
 export default PrivacyPolicy;
