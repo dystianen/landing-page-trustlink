@@ -152,14 +152,21 @@ You represent and warrant that you have all necessary rights to use your Account
 `
     return (
         <div className={'w-full flew-row'}>
-            <StickyHeader/>
-            <div className={'absolute z-50 top-[8rem] left-12'}>
+            <StickyHeader />
+            <div className={'mt-16 ml-14'}>
                 <Button className={" text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-36 md:w-48 my-auto"} icon={<ArrowLeftOutlined/>} onClick={()=> {router.push('/')}}>
                     Back
                 </Button>
             </div>
-            <div className={`relative w-full  sm:h-screen right-0 usecase-img `}>
-                <Image preview={false} src={'/assets/BGPrivacyPolicy.png'} alt={"Trustlink Background Opacity"} className={'h-full w-full opacity-100'}/>
+            <div className={'flex w-full'}>
+                <div className={'w-2/3 z-20 text-justify mx-auto mb-20'}>
+                    <ReactMarkdown className={'terms-style'}>
+                        {markdown}
+                    </ReactMarkdown>
+                </div>
+                <div className={'absolute w-full  h-full'}>
+                    <Image preview={false} src={'/assets/BGPrivacyPolicy.png'} alt={"Trustlink Background Opacity"} className={'h-full w-full opacity-100 fixed'}/>
+                </div>
             </div>
             <Footer/>
         </div>
