@@ -16,6 +16,8 @@ import { useRouter } from "next/router";
 
  const PrivacyPolicy = () => {
      const router = useRouter();
+     const [isOpen, setIsOpen] = useState(false);
+
     const markdown =`
 # Privacy Policy
 
@@ -133,12 +135,17 @@ In addition of the privacy policy, this End User Agreement ("Agreement") is a le
 
 We strongly recommend you to read this agreement carefully and make sure you understand it. If you do not understand this Agreement, please contact us before using the Services by emailing us at info@withtrustlink.com or contact our executive sales. 
 
-1.\t**How Trustlink value end user data**
+1.&nbsp;**How Trustlink value end user data**
+
 We use your information in line with full respect and only by your consent, you can refer to our **term and condition** and if you are not comfortable with how we handle your information as explained you should not use our Service. 
-2. **Data retention**
+
+2.&nbsp;**Data retention**
+
 We retain end user data as long as necessary for the purpose(s) according agreement in contract between Us and third parties on your behalf service. For example, we will retain your transaction data as long as you consciously give Us an access. 
 In some cases we retain personal data for longer when we have an ongoing legitimate need to do so, (for example to comply with our legal, tax or accounting obligations, resolve disputes or collect fees owed), or where it is otherwise permitted or required by applicable law, rule or regulation. When we have no ongoing legitimate business need to process your personal information, we will either delete or anonymize it or, if this is not possible (for example, because your personal information has been stored in backup archives), then we will securely store your personal data and isolate it from any further processing until deletion is possible.
-3. **Control and Responsibilities** 
+
+3.&nbsp;**Control and Responsibilities** 
+
 You represent and warrant that you have all necessary rights to use your Accounts and Apps with the Platform, and you agree to comply with all laws and regulations applicable to your use, as well as any rules and guidelines that we post. You must not (1) use or access anyone else’s Accounts or related data, (2) submit information about anyone else’s identity or Accounts or that violates any third-party rights or (3) use the Platform for any fraudulent, illegal or misleading purpose. You also agree not to (a) modify, reverse engineer or seek to gain unauthorized access to the Platform or related systems, data or source code, (b) bypass or circumvent measures designed to prevent or limit access to any part of the Platform, (c) rent, lease, provide access to or sublicense any elements of the Platform to a third party or use the Platform on behalf of or to provide services to third parties, (d) copy, modify or create derivative works of the Platform or remove any of Plaid’s proprietary notices, (e) access the Platform for competitive purposes or publish any benchmark or performance information about the Platform, or (f) use the Platform in any manner that could damage, disable, overburden, or impair the functioning of the Platform or interfere with, disrupt or negatively affect other users.
 
 ## Changes to this Privacy Policy
@@ -152,14 +159,41 @@ You represent and warrant that you have all necessary rights to use your Account
 `
     return (
         <div className={'w-full flew-row'}>
-            <StickyHeader/>
-            <div className={'absolute z-50 top-[8rem] left-12'}>
+            <StickyHeader
+                changeMenuOpen={setIsOpen}
+                isMenuOpen={isOpen}
+                onClickTopPage={()=>{
+                    router.push('/')
+                }}
+                onClickProduct={() => {
+                    router.push('/')
+                }}
+                onClickContactUs={() => {
+                    router.push('/')
+                }}
+                onClickClients={() => {
+                    router.push('/')
+                }}
+                onClickUseCases={() => {
+                    router.push('/')
+                }}
+                onClickAboutUs={() => {
+                    router.push('/')
+                }}/>
+            <div className={'mt-16 ml-14'}>
                 <Button className={" text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-36 md:w-48 my-auto"} icon={<ArrowLeftOutlined/>} onClick={()=> {router.push('/')}}>
                     Back
                 </Button>
             </div>
-            <div className={`relative w-full  sm:h-screen right-0 usecase-img `}>
-                <Image preview={false} src={'/assets/BGPrivacyPolicy.png'} alt={"Trustlink Background Opacity"} className={'h-full w-full opacity-100'}/>
+            <div className={'flex w-full'}>
+                <div className={'w-2/3 z-20 text-justify mx-auto mb-20'}>
+                    <ReactMarkdown className={'terms-style'}>
+                        {markdown}
+                    </ReactMarkdown>
+                </div>
+                <div className={'absolute w-full  h-full'}>
+                    <Image preview={false} src={'/assets/BGPrivacyPolicy.png'} alt={"Trustlink Background Opacity"} className={'h-full w-full opacity-100 fixed'}/>
+                </div>
             </div>
             <Footer/>
         </div>
