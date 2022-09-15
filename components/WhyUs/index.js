@@ -19,19 +19,19 @@ const WhyUsPage = () => {
 
     const dataWhyUs = [
         {
-            title: t("Trustlink Why Us 1"),
+            title: t("why_us_1_title"),
             description: t("why_us_1_desc"),
             image_url: "/assets/why_us/Fast.png"
         },{
-            title: t("Trustlink Why Us 2"),
+            title: t("why_us_2_title"),
             description: t("why_us_2_desc"),
             image_url: "/assets/why_us/Proven.png"
         },{
-            title: t("Trustlink Why Us 3"),
+            title: t("why_us_3_title"),
             description: t("why_us_3_desc"),
             image_url: "/assets/why_us/Accurate.png"
         },{
-            title: t("Trustlink Why Us 4"),
+            title: t("why_us_4_title"),
             description: t("why_us_4_desc"),
             image_url: "/assets/why_us/Strongest.png"
         },

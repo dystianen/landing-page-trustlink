@@ -4,10 +4,11 @@ import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { MapAddress } from "../MapAddress";
 import { FacebookFilled, InstagramFilled, InstagramOutlined, LinkedinFilled, TwitterCircleFilled } from "@ant-design/icons";
+import {useRouter} from "next/router";
 
 const Footer = ({ onClickTop = () => {} }) => {
   const { t, i18n } = useTranslation("common");
-
+  const router = useRouter();
   const socmed = [
     {
       name: "Instagram",
@@ -100,22 +101,32 @@ const Footer = ({ onClickTop = () => {} }) => {
             </div>
           </div>
         </div>
-        <div className={"w-full mt-4 md:mt-10 lg:mt-30 text-xs md:text-base lg:text-lg relative bottom-0 flex flex-col md:flex-row"}>
-          <div className={"w-full md:w-1/2 text-base montserrat text-[#EAEDF1] my-4 md:my-0"}>2022 &copy; {t("Copyright")}</div>
-          <div className={"w-full md:w-1/2 text-base montserrat tracking-wide md:text-right text-[#EAEDF1]"}>
-            {t("Privacy Policy")} <span className={"text-[24px] m-0 p-0"}>&bull;</span> {t("Tnc")}
-          </div>
-        </div>
+        <div className={'mt-16'} />
+        {/*<div className={"w-full mt-4 md:mt-10 lg:mt-30 text-xs md:text-base lg:text-lg relative bottom-0 flex flex-col md:flex-row"}>*/}
+        {/*  <div className={"w-full md:w-1/2 text-base montserrat text-[#EAEDF1] my-4 md:my-0"}>2022 &copy; {t("Copyright")}</div>*/}
+        {/*  <div className={"w-full md:w-1/2 text-base montserrat tracking-wide md:text-right text-[#EAEDF1] "} >*/}
+        {/*    <div className={'text-red-200 cursor-pointer z-20'} onClick={()=>console.log('testestsetests')}>{t("Privacy Policy")}</div>*/}
+        {/*    /!*<span className={"text-[24px] m-0 p-0"}>&bull;</span> {t("Tnc")}*!/*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
       {/*<div className={'absolute top-6 md:top-10 right-6 md:right-10 cursor-pointer z-20'} onClick={onClickTop}>*/}
       {/*<Image preview={false} src={'/assets/scroll-top.svg'} className={'rotate-180'}/>*/}
       {/*<p className={'w-max mt-4'} style={{ color: '#fff', fontFamily: 'Montserrat', letterSpacing: '0.15rem', fontSize: '0.6rem', writingMode: 'vertical-rl', textOrientation: 'sideways-right' }}>{t('Go To Top')}</p>*/}
       {/*</div>*/}
-      <div className={"absolute bottom-0 left-0"}>
+      <div className={"absolute bottom-0 left-0 z-0 w-[50vw]"}>
+        <div className={'absolute bottom-0 w-full py-4 pl-6 text-base montserrat tracking-wide md:text-left text-[#EAEDF1]'}>
+          <div className={"w-full md:w-1/2 text-base montserrat text-[#EAEDF1] my-4 md:my-0"}>2022 &copy; {t("Copyright")}</div>
+        </div>
         <Image preview={false} src={"/assets/images/accent-footer-left.png"} alt={"Trustlink Background Footer Left"} />
       </div>
-      <div className={"absolute bottom-0 right-0"}>
-        <Image preview={false} src={"/assets/images/accent-footer-right.png"} alt={"Trustlink Background Footer Right"} />
+      <div className={"absolute bottom-0 right-0 z-0"}>
+        <div className={'absolute bottom-0 w-full py-4 pr-6 md:pr-6 lg:pr-16 text-base montserrat tracking-wide md:text-right text-[#EAEDF1]'}>
+          <div className={'relative cursor-pointer z-20'} onClick={()=>{
+            router.push('/privacy_policy')
+          }}>{t("Privacy Policy")}</div>
+        </div>
+        <Image className={'relative z-10'} preview={false} src={"/assets/images/accent-footer-right.png"} alt={"Trustlink Background Footer Right"} />
       </div>
     </div>
   );
