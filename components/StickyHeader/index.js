@@ -123,9 +123,9 @@ const StickyHeader = (props) => {
           <div className="text-lg text-grey">Our comprehensive solutions will enable your business to make faster and accurate decisions</div>
         </div>
         <div className="w-3/12 flex flex-col space-y-4">
-          {products1.map((items) => {
+          {products1.map((items, index) => {
             return (
-              <div className="flex space-x-4 items-center">
+              <div key={index} className="flex space-x-4 items-center">
                 <div className="w-20 h-20 2xl:w-20 2xl:h-20 flex justify-center items-center bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full p-3.5 relative -ml-4">
                   <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} width={"20"} height={"20"} />
                 </div>
@@ -137,9 +137,9 @@ const StickyHeader = (props) => {
           })}
         </div>
         <div className="w-3/12 flex flex-col space-y-4">
-          {products2.map((items) => {
+          {products2.map((items, index) => {
             return (
-              <div className="flex space-x-4 items-center">
+              <div key={index} className="flex space-x-4 items-center">
                 <div className="w-20 h-20 2xl:w-20 2xl:h-20 flex justify-center items-center bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full p-3.5 relative -ml-4">
                   <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} width={"20"} height={"20"} />
                 </div>
@@ -151,9 +151,9 @@ const StickyHeader = (props) => {
           })}
         </div>
         <div className="w-3/12 flex flex-col space-y-4">
-          {products3.map((items) => {
+          {products3.map((items, index) => {
             return (
-              <div className="flex space-x-4 items-center">
+              <div key={index} className="flex space-x-4 items-center">
                 <div className="w-20 h-20 2xl:w-20 2xl:h-20 flex justify-center items-center bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full p-3.5 relative -ml-4">
                   <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} width={"20"} height={"20"} />
                 </div>
