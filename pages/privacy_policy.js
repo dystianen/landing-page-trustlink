@@ -9,6 +9,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import StickyHeader from "../components/StickyHeader";
 import Footer from "../components/Footer";
+import {Image} from "antd";
 
  const PrivacyPolicy = () => {
     const markdown =`
@@ -146,9 +147,11 @@ You represent and warrant that you have all necessary rights to use your Account
     
 `
     return (
-        <div>
+        <div className={'w-full bg-red-100'}>
             <StickyHeader/>
             <ReactMarkdown children={markdown}/>
+            <Image preview={false} src={'/assets/BGPrivacyPolicy.png'} alt={"Trustlink Background Opacity"} className={' opacity-10'}/>
+
             <Footer/>
         </div>
     )
