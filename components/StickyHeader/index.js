@@ -1,10 +1,11 @@
-import { Image } from "antd";
+import { Dropdown, Image, Menu, Space } from "antd";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { DrawerSlide } from "../DrawerSlide";
 import { startCase } from "lodash";
+import { CaretDownOutlined, DownOutlined, RightOutlined } from "@ant-design/icons";
 const emptyFunction = () => {};
 
 const StickyHeader = (props) => {
@@ -42,9 +43,9 @@ const StickyHeader = (props) => {
       onClicked: onClickAboutUs,
     },
     {
-      name: t("Products"),
-      onClicked: onClickProduct,
-      key : 'products'
+      name: t(`Products`),
+      // onClicked: onClickProduct,
+      key: "products",
     },
     {
       name: t("Use Case"),
@@ -60,14 +61,7 @@ const StickyHeader = (props) => {
     },
   ];
 
-  const subMenu =[
-    {name : 'TrustVerify'},
-    {name : 'TrustScan'},
-    {name : 'TrustLive'},
-    {name : 'TrustConnect'},
-    {name : 'TrustVision'},
-  ]
-
+  const subMenu = [{ name: "TrustVerify" }, { name: "TrustScan" }, { name: "TrustLive" }, { name: "TrustConnect" }, { name: "TrustVision" }];
 
   useEffect(() => {
     setIsOpen(isMenuOpen);
@@ -86,6 +80,93 @@ const StickyHeader = (props) => {
 
     return () => window.removeEventListener("scroll", listenScrollEvent);
   }, []);
+
+  const products1 = [
+    {
+      image: "logo-trust-verify.png",
+      name: "Verify",
+      productIndex: 0,
+    },
+    {
+      image: "logo-trust-vision.png",
+      name: "Vision",
+      productIndex: 4,
+    },
+  ];
+
+  const products2 = [
+    {
+      image: "logo-trust-scan.png",
+      name: "Scan",
+      productIndex: 1,
+    },
+    {
+      image: "logo-trust-connect.png",
+      name: "Connect",
+      productIndex: 3,
+    },
+  ];
+
+  const products3 = [
+    {
+      image: "logo-trust-live.png",
+      name: "Live",
+      productIndex: 2,
+    },
+  ];
+
+  const dropdownOverlay = (
+    <div className="bg-white drop-shadow-lg">
+      <div className="w-11/12 xl:w-10/12 2xl:9/12 py-11 mx-auto space-x-3 flex justify-center">
+        <div className="w-3/12 flex flex-col space-y-4 mr-7">
+          <div className="font-bold text-3xl">Products</div>
+          <div className="text-lg text-grey">Our comprehensive solutions will enable your business to make faster and accurate decisions</div>
+        </div>
+        <div className="w-3/12 flex flex-col space-y-4">
+          {products1.map((items) => {
+            return (
+              <div className="flex space-x-4 items-center">
+                <div className="w-20 h-20 2xl:w-20 2xl:h-20 flex justify-center items-center bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full p-3.5 relative -ml-4">
+                  <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} width={"20"} height={"20"} />
+                </div>
+                <div className="font-semibold flex items-center text-lg cursor-pointer">
+                  Trust<span className="text-orange">{items.name}</span> <RightOutlined className={"ml-2"} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="w-3/12 flex flex-col space-y-4">
+          {products2.map((items) => {
+            return (
+              <div className="flex space-x-4 items-center">
+                <div className="w-20 h-20 2xl:w-20 2xl:h-20 flex justify-center items-center bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full p-3.5 relative -ml-4">
+                  <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} width={"20"} height={"20"} />
+                </div>
+                <div className="font-semibold flex items-center text-lg cursor-pointer">
+                  Trust<span className="text-orange">{items.name}</span> <RightOutlined className={"ml-2"} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="w-3/12 flex flex-col space-y-4">
+          {products3.map((items) => {
+            return (
+              <div className="flex space-x-4 items-center">
+                <div className="w-20 h-20 2xl:w-20 2xl:h-20 flex justify-center items-center bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full p-3.5 relative -ml-4">
+                  <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} width={"20"} height={"20"} />
+                </div>
+                <div className="font-semibold flex items-center text-lg cursor-pointer">
+                  Trust<span className="text-orange">{items.name}</span> <RightOutlined className={"ml-2"} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
   return (
     <div className={`z-[60] w-full sticky top-0 ${header} overflow-x-hidden`}>
       <div className={" w-full top-0 flex flex-row"} style={{ justifyContent: "space-between" }}>
@@ -104,8 +185,20 @@ const StickyHeader = (props) => {
           {tablet
             ? ""
             : menu.map((items, _props) => (
-                <div key={_props} className={"flex items-center mx-2 xl:mx-4 2xl:mx-6 cursor-pointer "} onClick={items.onClicked}>
-                  <p className={"mb-0 text-center"}>{items.name}</p>
+                <div key={_props} className={"flex items-center mx-2 xl:mx-4 2xl:mx-6 cursor-pointer"} onClick={items.onClicked}>
+                  <p className={"mb-0 text-center flex items-center "}>
+                    {items.key == "products" ? null : items.name}{" "}
+                    {items.key == "products" ? (
+                      <Dropdown overlayClassName="w-full" overlay={dropdownOverlay} trigger={["click"]}>
+                        <Space>
+                          Products
+                          <DownOutlined className="focus:rotate-180" />
+                        </Space>
+                      </Dropdown>
+                    ) : (
+                      ""
+                    )}{" "}
+                  </p>
                 </div>
               ))}
           <div className={"flex items-center justify-center"}>
