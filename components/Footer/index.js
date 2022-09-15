@@ -122,7 +122,9 @@ const Footer = ({ onClickTop = () => {} }) => {
       </div>
       <div className={"absolute bottom-0 right-0 z-0"}>
         <div className={'absolute bottom-0 w-full py-4 pr-6 md:pr-6 lg:pr-16 text-base montserrat tracking-wide md:text-right text-[#EAEDF1]'}>
-          <div className={'relative cursor-pointer z-20'} onClick={()=>router.push('/privacy_policy')}>{t("Privacy Policy")}</div>
+          <div className={'relative cursor-pointer z-20'} onClick={()=>{
+            // router.push('/privacy_policy')
+          }}>{t("Privacy Policy")}</div>
         </div>
         <Image className={'relative z-10'} preview={false} src={"/assets/images/accent-footer-right.png"} alt={"Trustlink Background Footer Right"} />
       </div>
