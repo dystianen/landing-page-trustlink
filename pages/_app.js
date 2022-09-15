@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <StoreProvider {...pageProps}>
       <Head>
-        <title key="trustlink">Trustlink | The only Open Finance with an end-to-end e-KYC provider in South East Asia</title>
+        <title key="trustlink">Trustlink | End to End e-KYC & Open Banking Platform</title>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0" key="trustlink-website"/>
         <meta name="description" content="Enables you to build a greater finance ecosystem with end to end e-KYC authentication process in one platform" key="trustlink-website"/>
         <meta name="keywords" content="TrustLink" />
