@@ -94,7 +94,7 @@ export default function Home() {
             alt : "Trustlink Trust Vision"
         },{
             image: 'trust-connect.png',
-            className: 'cursor-pointer w-20 h-20 lg:w-36 lg:h-36 xl:w-40 xl:h-40 w-custom-big 2xl:w-44 2xl:h-44 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-5 absolute mt-16 md:bottom-82 md:left-32 2xl:top-72 2xl:left-48 z-10 ml-0 md:ml-[15%] lg:ml-[25%] xl:ml-[18%]',
+            className: 'cursor-pointer w-20 h-20 lg:w-36 lg:h-36 xl:w-40 xl:h-40 w-custom-big 2xl:w-44 2xl:h-44 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-5 absolute mt-16 md:bottom-82 md:left-32 lg:top-28 xl:top-44 2xl:top-60 2xl:left-48 z-10 ml-0 md:ml-[15%] lg:ml-[25%] xl:ml-[24%]',
             productIndex: 3 , // index carousel
             alt : "Trustlink Trust Connect"
         }
