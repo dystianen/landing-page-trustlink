@@ -75,24 +75,33 @@ export default function Home() {
         {
             image: 'trust-scan.png',
             className: 'cursor-pointer w-20 h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 w-custom-small 2xl:w-40 2xl:h-40 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-3.5 relative -ml-4 md:ml-0 lg:ml-16 xl:ml-24 z-10',
-            productIndex: 1 // index carousel
+            productIndex: 1 , // index carousel
+            alt : "Trustlink Trust Scan"
         },{
             image: 'trust-verify.png',
             className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 w-custom-big 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-5 relative z-10 -mt-12 lg:-mt-24 ml-[30%] md:ml-[40%]',
-            productIndex: 0 // index carousel
+            productIndex: 0 , // index carousel
+            alt : "Trustlink Trust Verify"
         },{
             image: 'trust-live.png',
             className: 'cursor-pointer w-20 h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 w-custom-small 2xl:w-40 2xl:h-40 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-3.5 absolute mt-6 md:bottom-[30vh] z-10 ml-[65%] md:ml-[65%]',
-            productIndex: 2 // index carousel
+            productIndex: 2 , // index carousel
+            alt : "Trustlink Trust Live"
         },{
             image: 'trust-vision.png',
             className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 w-custom-big 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-5 absolute mt-16 md:bottom-28 2xl:bottom-36 z-10 ml-0 md:ml-[15%] lg:ml-[25%] xl:ml-[18%]',
-            productIndex: 3 // index carousel
-        },
+            productIndex: 4 , // index carousel
+            alt : "Trustlink Trust Vision"
+        },{
+            image: 'trust-connect.png',
+            className: 'cursor-pointer w-20 h-20 lg:w-36 lg:h-36 xl:w-40 xl:h-40 w-custom-big 2xl:w-44 2xl:h-44 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-5 absolute mt-16 md:bottom-82 md:left-32 2xl:top-72 2xl:left-48 z-10 ml-0 md:ml-[15%] lg:ml-[25%] xl:ml-[18%]',
+            productIndex: 3 , // index carousel
+            alt : "Trustlink Trust Connect"
+        }
     ]
 
 
-    const handleClickProduct = (index) => {
+    const   handleClickProduct = (index) => {
         setIndexProduct(index)
         sectionProductRef.current.scrollIntoView({behavior: 'smooth'})
     }
@@ -193,8 +202,8 @@ export default function Home() {
                                 {/*</div>*/}
                                 <div className={'w-auto w-tablet lg:w-auto xl:w-[48rem] home-next-generation-sub font-medium z-10'}>
                                     <span className={'block leading-tight'}>
-                                        <span className={'font-bold block text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl mb-4'}>{t('Trust Centric Solution')}</span>
-                                        <span className={'text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem]'}>{t('For Identity Management')}</span>
+                                        <h1 className={'text-[#05204D] font-bold block text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl mb-4'}>{t('Trust Centric Solution')}</h1>
+                                        <h2 className={'text-[#05204D] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.25rem]'}>{t('For Identity Management')}</h2>
                                         {/*<br/> {t('And Open Finance Platform')}*/}
                                     </span>
                                     <div>
@@ -213,7 +222,7 @@ export default function Home() {
                             {
                                 product.map((it,index) => (
                                     <div key={index} className={it.className} onClick={()=> handleClickProduct(it.productIndex) }>
-                                        <Image preview={false} src={`/assets/images/${it.image}`} alt={'product_top'} className={'z-10 justify-center'} />
+                                        <Image preview={false} src={`/assets/images/${it.image}`} alt={`${it.alt}`} className={'z-10 justify-center'} />
                                     </div>
                                 ))
                             }
