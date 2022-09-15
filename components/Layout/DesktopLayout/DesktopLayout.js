@@ -93,7 +93,7 @@ const DesktopLayout = observer(({children}) => {
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <Image
                             src={profile?.entity?.logo_url ? appConfig.imageApiUrl + profile?.entity?.logo_url : "/assets/logo.svg"}
-                            alt={"logo"} className="min-w-full max-w-xs max-h-44 object-cover"
+                            alt={"Trustlink Logo"} className="min-w-full max-w-xs max-h-44 object-cover"
                             preview={false}
                         />
                     </a>

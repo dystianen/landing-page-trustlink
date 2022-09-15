@@ -15,7 +15,7 @@ const WeAimed = () => {
                         {/* <Image preview={false} src={'/assets/images/accent-home-sectionTrivia-1.jpg'} className={'h-full w-auto'}/> */}
                     </div> :
                     <div className={'absolute triv-top top-6 md:top-16 md:top-5 -left-20 sm:-left-64 h-[120%] md:h-[175%] sm:h-auto w-1/2 sm:w-auto about-img z-0'}>
-                        <Image preview={false} src={'/assets/trivia.png'} alt={"trivia-img"} className={'h-full w-auto'}/>
+                        <Image preview={false} src={'/assets/trivia.png'} alt={"Trustlink Trivia"} className={'h-full w-auto'}/>
                     </div>
                 }
                     <div className={'absolute top-0 left-0 h-[70%] md:h-full w-auto about-img z-30'}>

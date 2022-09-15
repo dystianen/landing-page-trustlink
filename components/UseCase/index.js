@@ -75,11 +75,11 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                 <div className={"relative w-full h-auto max-h-[519px] usecase-img -mb-1"}>
                     {/* <Image preview={false} className="w-full  h-[10rem] md:h-[15rem] lg:h-[18rem] xl:h-full" src={'/assets/usecase/bg-usecase-crop.png'}/> */}
                     <div className={'absolute top-0 left-0 h-full w-full usecase-img'}>
-                        <Image preview={false} className="w-full h-full" alt={"usecase-crop"} src={'/assets/usecase/bg-usecase-crop.png'} />
+                        <Image preview={false} className="w-full h-full" alt={"Trustlink Background Usecase"} src={'/assets/usecase/bg-usecase-crop.png'} />
                         <div className={'absolute bottom-0 bg-usecase-top w-full h-full'} />
                     </div>
                     <div className={'absolute right-0 top-0 z-20 h-full w-auto usecase-img'}>
-                        <Image preview={false} className="h-4/5 w-auto " alt={"usecase-crop"} src={'/assets/usecase/usecase-icon-crop-2.png'}/>
+                        <Image preview={false} className="h-4/5 w-auto " alt={"Trustlink Background Usecase Crop"} src={'/assets/usecase/usecase-icon-crop-2.png'}/>
                     </div>
                     {/* <div className={'absolute left-[1.2rem] sm:left-[2.2rem] bottom-[1rem] sm:bottom-[2.3rem] z-20'}>
                         <p className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-2 montserrat'}>{t('Use Case')}</p>
@@ -91,17 +91,17 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                     <div className={'md:pl-20'}>
                         <div className={'relative w-full '}>
                             <div className={'absolute -left-80 z-0 -top-16 opacity-40'}>
-                                <Image className={'z-0 w-auto'} preview={false} src={'/assets/usecase/bg-group.png'} alt={'bg_group'} />
+                                <Image className={'z-0 w-auto'} preview={false} src={'/assets/usecase/bg-group.png'} alt={'Trustlink Background Group'} />
                             </div>
                         </div>
                         <div className={'relative w-full'}>
                             <div className={'absolute z-0 -top-16 -right-20 opacity-60'}>
-                                <Image className={'z-0 w-[9.5rem] sm:w-[10rem] md:w-[11rem] lg:w-[16rem] 2xl:w-[18rem]'} preview={false} src={'/assets/usecase/group-orange.png'} alt={"group_orange"}/>
+                                <Image className={'z-0 w-[9.5rem] sm:w-[10rem] md:w-[11rem] lg:w-[16rem] 2xl:w-[18rem]'} preview={false} src={'/assets/usecase/group-orange.png'} alt={"Trustlink Background Usecase Orange"}/>
                             </div>
                         </div>
                         <div className={'mt-7 md:mt-10 w-full md:3/4 z-10 px-5 md:pl-0 '}>
-                            <p className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-1 md:mb-2 montserrat'}>{t('Use Case')}</p>
-                            <p className={'text-white text-sm md:text-lg xl:text-xl montserrat w-auto sm:w-[32rem] md:w-[40rem] xl:w-[60rem]'}>{t('Biometric Use Case 2')}</p>
+                            <h1 className={'text-white text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-bold mb-1 md:mb-2 montserrat'}>{t('Use Case')}</h1>
+                            <h2 className={'text-white text-sm md:text-lg xl:text-xl montserrat w-auto sm:w-[32rem] md:w-[40rem] xl:w-[60rem]'} style={{fontWeight : 400}}>{t('Biometric Use Case 2')}</h2>
                         </div>
                     </div>
                     <Carousel
@@ -142,8 +142,8 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                         navButtonsWrapperProps={{
                             className: `invisible md:visible mx-2 lg:mx-3 xl:mx-8 -mt-12 md:mt-5 lg:mt-0 ${!current ? 'arrow-prev-product' : current === (pageCarousel - 1) ? 'arrow-next-product' : null}`
                         }}
-                        NextIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-right.svg'} alt={"next_img"}/>}
-                        PrevIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-left.svg'} alt={"prev_img"}/>}
+                        NextIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-right.svg'} alt={"Trustlink Next Arrow"}/>}
+                        PrevIcon={<Image preview={false} className="w-[25px] h-[25px]" src={'/assets/arrow-left.svg'} alt={"Trustlink Previous Arrow"}/>}
                         animation={'slide'}
                         onChange={num => setCurrent(num)}
                     >
@@ -151,18 +151,18 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                             <div key={index} className={'w-full flex flex-col md:h-[28rem] lg:h-[33rem] xl:h-[30rem] md:flex-row md:mb-20 md:pl-20 mt-6'}>
                                 <div className={'flex justify-center items-center w-full md:w-2/3  mt-0 mb-10 md:my-0'}>
                                     <div className={' flex justify-center items-start usecase-img-2 px-10 md:px-0'}>
-                                        <Image preview={false} src={item.src} className={'z-20 justify-center h-full  '} alt={'usecase_img'} />
+                                        <Image preview={false} src={item.src} className={'z-20 justify-center h-full  '} alt={'Trustlink Usecase'} />
                                     </div>
                                 </div>
 
                                 <div className={'flex flex-col justify-start md:justify-center w-full md:w-[30rem] lg:w-[38rem] xl:w-[42rem] 2xl:w-[55.8rem] md:h-full md:pl-10 m-usecase'}>
                                     <div className={"mb-2 px-5 md:px-0"}>
-                                        <p className={'text-sm lg:text-base xl:text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'}>{item.title}</p>
+                                        <h4 className={'text-sm lg:text-base xl:text-lg text-[#818fa6] tracking-[3px] mb-0 montserrat text-center md:text-left'} style={{fontWeight: 400}}>{item.title}</h4>
                                     </div>
                                     <div className={'px-6 md:px-0 text-lg md:text-xl lg:text-2xl text-white montserrat text-center md:text-left w-full '}>
-                                        <p className={'mb-3 leading-snug md:leading-tight w-auto md:w-[90%] lg:w-[83%] xl:w-3/4'}>
+                                        <h3 className={'text-white mb-3 leading-snug md:leading-tight w-auto md:w-[90%] lg:w-[83%] xl:w-3/4'} style={{fontWeight : 400}}>
                                             {item.name}
-                                        </p>
+                                        </h3>
                                     </div>
                                     <div className={'mb-2 px-5 md:px-0'}>
                                         <p className={"text-white text-xs lg:text-sm xl:text-base w-auto md:w-[15rem] lg:w-[83%] xl:w-3/4 montserrat mb-0 text-justify tracking-normal md:tracking-tight whitespace-pre-line"}>
