@@ -77,27 +77,37 @@ export default function Home() {
             className: 'cursor-pointer w-20 h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 w-custom-small 2xl:w-40 2xl:h-40 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-3.5 relative -ml-4 md:ml-0 lg:ml-16 xl:ml-24 z-10',
             productIndex: 1 , // index carousel
             alt : "Trustlink Trust Scan"
-        },{
+        },
+        {
             image: 'trust-verify.png',
             className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 w-custom-big 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-5 relative z-10 -mt-12 lg:-mt-24 ml-[30%] md:ml-[40%]',
             productIndex: 0 , // index carousel
             alt : "Trustlink Trust Verify"
-        },{
+        },
+        {
             image: 'trust-live.png',
             className: 'cursor-pointer w-20 h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32 w-custom-small 2xl:w-40 2xl:h-40 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-3.5 absolute mt-6 md:bottom-[30vh] z-10 ml-[65%] md:ml-[65%]',
             productIndex: 2 , // index carousel
             alt : "Trustlink Trust Live"
-        },{
-            image: 'trust-vision.png',
-            className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 w-custom-big 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-5 absolute mt-16 md:bottom-28 2xl:bottom-36 z-10 ml-0 md:ml-[15%] lg:ml-[25%] xl:ml-[18%]',
-            productIndex: 4 , // index carousel
-            alt : "Trustlink Trust Vision"
-        },{
+        },
+        // {
+        //     image: 'trust-vision.png',
+        //     className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 w-custom-big 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-5 absolute mt-16 md:bottom-28 2xl:bottom-36 z-10 ml-0 md:ml-[15%] lg:ml-[25%] xl:ml-[18%]',
+        //     productIndex: 4 , // index carousel
+        //     alt : "Trustlink Trust Vision"
+        // },
+        {
             image: 'trust-connect.png',
-            className: 'cursor-pointer w-20 h-20 lg:w-36 lg:h-36 xl:w-40 xl:h-40 w-custom-big 2xl:w-44 2xl:h-44 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-5 absolute mt-16 md:bottom-82 md:left-32 lg:top-28 xl:top-44 2xl:top-60 2xl:left-48 z-10 ml-0 md:ml-[15%] lg:ml-[25%] xl:ml-[24%]',
+            className: 'cursor-pointer w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 w-custom-big 2xl:w-52 2xl:h-52 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-5 absolute mt-16 md:bottom-28 2xl:bottom-36 z-10 ml-0 md:ml-[15%] lg:ml-[25%] xl:ml-[18%]',
             productIndex: 3 , // index carousel
-            alt : "Trustlink Trust Connect"
-        }
+            alt : "Trustlink Trust Vision"
+        },
+        // {
+        //     image: 'trust-connect.png',
+        //     className: 'cursor-pointer w-20 h-20 lg:w-36 lg:h-36 xl:w-40 xl:h-40 w-custom-big 2xl:w-44 2xl:h-44 flex justify-center items-center shadow-xl bg-white border-[6px] xl:border-8 border-[#FF6703] rounded-full p-5 absolute mt-16 md:bottom-82 md:left-32 lg:top-28 xl:top-44 2xl:top-60 2xl:left-48 z-10 ml-0 md:ml-[15%] lg:ml-[25%] xl:ml-[24%]',
+        //     productIndex: 3 , // index carousel
+        //     alt : "Trustlink Trust Connect"
+        // }
     ]
 
 
@@ -137,11 +147,12 @@ export default function Home() {
             <StickyHeader
                 changeMenuOpen={setIsOpen}
                 isMenuOpen={isOpen}
-                onClickProduct={() => {
-                    scrollToSpecificY(sectionProductRef.current, {
-                        scroll_margin_top: 96
-                    })
-                }}
+                // onClickProduct={() => {
+                //     scrollToSpecificY(sectionProductRef.current, {
+                //         scroll_margin_top: 96
+                //     })
+                // }}
+                onClickProduct={handleClickProduct}
                 onClickContactUs={() => {
                     scrollToSpecificY(contactUsRef.current, {
                         scroll_margin_top: 96
