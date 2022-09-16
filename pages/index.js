@@ -147,11 +147,12 @@ export default function Home() {
             <StickyHeader
                 changeMenuOpen={setIsOpen}
                 isMenuOpen={isOpen}
-                onClickProduct={() => {
-                    scrollToSpecificY(sectionProductRef.current, {
-                        scroll_margin_top: 96
-                    })
-                }}
+                // onClickProduct={() => {
+                //     scrollToSpecificY(sectionProductRef.current, {
+                //         scroll_margin_top: 96
+                //     })
+                // }}
+                onClickProduct={handleClickProduct}
                 onClickContactUs={() => {
                     scrollToSpecificY(contactUsRef.current, {
                         scroll_margin_top: 96
