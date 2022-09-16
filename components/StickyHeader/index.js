@@ -181,12 +181,12 @@ const StickyHeader = (props) => {
                     {items.key == "products" ? null : items.name}{" "}
                     {items.key == "products" ? (
                       <Dropdown onClick={() => setIsRotate(!isRotate)} overlayClassName="w-full" overlay={dropdownOverlay} trigger={["click"]}>
-                        <Space>
+                        <Space className="flex items-center">
                           Products
                           <DownOutlined
                             className={`
                           ${isRotate ? "rotate-180" : "rotate-0"}
-                          `}
+                          transition duration-100`}
                           />
                         </Space>
                       </Dropdown>
