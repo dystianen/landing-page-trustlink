@@ -191,8 +191,8 @@ You represent and warrant that you have all necessary rights to use your Account
                         {markdown}
                     </ReactMarkdown>
                 </div>
-                <div className={'absolute w-full  h-full'}>
-                    <Image preview={false} src={'/assets/BGPrivacyPolicy.png'} alt={"Trustlink Background Opacity"} className={'h-full w-full opacity-100 fixed'}/>
+                <div className={'absolute'}>
+                    <Image preview={false} src={'/assets/BGPrivacyPolicy.png'} alt={"Trustlink Background Opacity"} className={'h-auto w-full opacity-100 fixed bottom-0'}/>
                 </div>
             </div>
             <Footer/>
