@@ -807,23 +807,27 @@ svg {
 
 .terms-style h1 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 .terms-style h2 {
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 .terms-style h3 {
   font-size: 1rem;
-}
-.terms-style ol {
-  counter-reset: item;
-  list-style-type: none;
-}
-.terms-style ol > li {
-  counter-increment: item;
-}
-.terms-style ol > li::before {
-  content: counters(item, ".") ". ";
+  .terms-style h3 {
+    font-size: 1.5rem;
+  }
+  .terms-style ol {
+    counter-reset: item;
+    list-style-type: none;
+    font-size: 14px;
+  }
+  .terms-style ol > li {
+    counter-increment: item;
+  }
+  .terms-style ol > li::before {
+    content: counters(item, ".") ". ";
+  }
 }

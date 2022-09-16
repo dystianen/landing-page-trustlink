@@ -72,11 +72,11 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             icon: '/assets/images/logo-trust-connect.png',
             alt : "Trustlink Trust Connect"
         },
-        {
-            name: 'Vision',
-            icon: '/assets/images/logo-trust-vision.png',
-            alt :'Trustlink Trust Vision'
-        },
+        // {
+        //     name: 'Vision',
+        //     icon: '/assets/images/logo-trust-vision.png',
+        //     alt :'Trustlink Trust Vision'
+        // },
         // {
         //     name: 'Score',
         //     icon: '/assets/images/logo-trust-score.png',
@@ -127,16 +127,16 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
             desc: t('Desc TrustConnect'),
             size: '100%'
         },
-        {
-            name: 'Trust',
-            name2: 'Vision',
-            src: isSafari || isIos ? '/assets/product/bg-white/TrustVision.mp4' : '/assets/product/revision-new/TrustVision.webm',
-            subhead: t('trust_vision_title'),
-            desc: t('trust_vision_subtitle'),
-            size: md ? '90%' : xs ? '50%' : '80%',
-            width_subhead: 'w-[17.8rem] md:w-[20rem] lg:w-[22rem] xl:w-[38rem] 2xl:w-[50rem]',
-            width_desc: 'w-[18rem] md:w-[27rem] lg:w-[29.5rem] xl:w-[39.8rem] 2xl:w-[46.4rem] tracking-tighter md:tracking-tight lg:tracking-tighter'
-        },
+        // {
+        //     name: 'Trust',
+        //     name2: 'Vision',
+        //     src: isSafari || isIos ? '/assets/product/bg-white/TrustVision.mp4' : '/assets/product/revision-new/TrustVision.webm',
+        //     subhead: t('trust_vision_title'),
+        //     desc: t('trust_vision_subtitle'),
+        //     size: md ? '90%' : xs ? '50%' : '80%',
+        //     width_subhead: 'w-[17.8rem] md:w-[20rem] lg:w-[22rem] xl:w-[38rem] 2xl:w-[50rem]',
+        //     width_desc: 'w-[18rem] md:w-[27rem] lg:w-[29.5rem] xl:w-[39.8rem] 2xl:w-[46.4rem] tracking-tighter md:tracking-tight lg:tracking-tighter'
+        // },
         // {
         //     name: 'Trust',
         //     name2: 'Score',
