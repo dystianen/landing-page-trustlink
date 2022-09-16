@@ -35,6 +35,7 @@ const StickyHeader = (props) => {
       setWindows(window);
     }
   }, []);
+
   const menu = [
     {
       name: t("Home"),
@@ -172,7 +173,7 @@ const StickyHeader = (props) => {
                     </div>
                 } */}
         <div className={"choose-lang flex flex-row  mr-5 md:mr-10  xl:mr-12 z-30"}>
-          <DrawerSlide menu={menu} setOpen={changeMenuOpen} onClickContact={onClickContactUs} isOpen={isOpen} />
+          <DrawerSlide clicked={onClickProduct} menu={menu} setOpen={changeMenuOpen} onClickContact={onClickContactUs} isOpen={isOpen} />
           {tablet
             ? ""
             : menu.map((items, _props) => (
@@ -183,7 +184,7 @@ const StickyHeader = (props) => {
                       <Dropdown onOpenChange={(val) => setIsRotate(val)} overlayClassName="w-full" overlay={dropdownOverlay} trigger={["hover"]}>
                         <Space>
                           Products
-                          <DownOutlined className={isRotate && "rotate-180 transition duration-100"}/>
+                          <DownOutlined className={isRotate && "rotate-180 transition duration-100"} />
                         </Space>
                       </Dropdown>
                     ) : (

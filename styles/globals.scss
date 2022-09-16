@@ -735,6 +735,23 @@ ul li .ant-menu-item {
   height: 40px;
 }
 
+.ant-menu-item-selected,
+.ant-menu-submenu-selected,
+.ant-menu-submenu-title:hover {
+  color: #4f4f4f !important;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: transparent !important;
+}
+
+.ant-menu-vertical .ant-menu-item::after,
+.ant-menu-vertical-left .ant-menu-item::after,
+.ant-menu-vertical-right .ant-menu-item::after,
+.ant-menu-inline .ant-menu-item::after {
+  border-right: 0px !important;
+}
+
 .ant-menu-title-content {
   padding: 5px;
 }
