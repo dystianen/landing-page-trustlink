@@ -47,11 +47,6 @@ export const DrawerSlide = observer((props) => {
       name: "Connect",
       productIndex: 3,
     },
-    {
-      image: "logo-trust-vision.png",
-      name: "Vision",
-      productIndex: 4,
-    },
   ];
   const socialMedia = [
     {
@@ -108,8 +103,14 @@ export const DrawerSlide = observer((props) => {
     return {
       key: `sub${key}`,
       label: `Products`,
+      bodyStyle: { padding: "20px" },
       children: products.map((v) => {
         return {
+          icon: (
+            <div className="rounded-full w-9 h-9 bg-white flex justify-center items-center bottom-2 py-3 border-2 border-[#FF6703]">
+              <img width={"14px"} height={"14px"} src={`/assets/images/${v.image}`} />
+            </div>
+          ),
           label: `Trust${v.name}`,
         };
       }),
