@@ -108,11 +108,11 @@ const StickyHeader = (props) => {
       name: "Connect",
       productIndex: 3,
     },
-    {
-      image: "logo-trust-vision.png",
-      name: "Vision",
-      productIndex: 4,
-    },
+    // {
+    //   image: "logo-trust-vision.png",
+    //   name: "Vision",
+    //   productIndex: 4,
+    // },
   ];
 
   const dropdownOverlay = (
@@ -125,7 +125,7 @@ const StickyHeader = (props) => {
         <div className="grid grid-cols-2 xl:grid-cols-2 gap-3">
           {products.map((items) => {
             return (
-              <div className="flex items-center space-x-2 xl:space-x-3">
+              <div className="flex items-center space-x-2 xl:space-x-3 cursor-pointer" onClick={() => onClickProduct(items.productIndex)}>
                 <div className="w-20 h-20 2xl:w-20 2xl:h-20 bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full p-3.5">
                   <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} width={"20"} height={"20"} />
                 </div>
@@ -180,13 +180,11 @@ const StickyHeader = (props) => {
                   <p className={"mb-0 text-center flex items-center "}>
                     {items.key == "products" ? null : items.name}{" "}
                     {items.key == "products" ? (
-                      <Dropdown onClick={() => setIsRotate(!isRotate)} overlayClassName="w-full" overlay={dropdownOverlay} trigger={["click"]}>
-                        <Space className="flex items-center">
+                      <Dropdown onClick={() => setIsRotate(!isRotate)} overlayClassName="w-full" overlay={dropdownOverlay} trigger={["hover"]}>
+                        <Space>
                           Products
                           <DownOutlined
-                            className={`
-                          ${isRotate ? "rotate-180" : "rotate-0"}
-                          transition duration-100`}
+                            className={"hover:rotate-180 transition duration-100"}
                           />
                         </Space>
                       </Dropdown>
