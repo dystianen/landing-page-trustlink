@@ -849,6 +849,7 @@ ul li .ant-menu-item {
 
 .terms-style h3 {
   font-size: 1rem;
+}
   .terms-style h3 {
     font-size: 1.5rem;
   }
@@ -856,6 +857,7 @@ ul li .ant-menu-item {
     counter-reset: item;
     list-style-type: none;
     font-size: 14px;
+
   }
   .terms-style ol > li {
     counter-increment: item;
@@ -863,4 +865,3 @@ ul li .ant-menu-item {
   .terms-style ol > li::before {
     content: counters(item, ".") ". ";
   }
-}
