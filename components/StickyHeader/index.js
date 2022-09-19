@@ -117,7 +117,7 @@ const StickyHeader = (props) => {
   ];
 
   const dropdownOverlay = (
-    <div className="bg-white drop-shadow-lg">
+    <div className="bg-white drop-shadow-lg mt-3">
       <div className="w-11/12 lg:w-11/12 xl:w-10/12 2xl:w-10/12 py-11 mx-auto space-x-3 flex justify-center">
         <div className="w-3/12 flex flex-col space-y-4 pr-10">
           <div className="font-bold text-3xl">Products</div>

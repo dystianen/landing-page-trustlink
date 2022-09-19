@@ -133,7 +133,7 @@ We guarantee that we are the owner of intellectual property rights of Services t
 ## End User Agreement 
 In addition of privacy policy, this End User Agreement ("Agreement") is a legal agreement between Truslink. ("Truslink ", "we" or "us") and the end user of our Services ("you", "your"). This Agreement only applies when we provide API and used by end User, and/or when we transmit retrieved data to third parties on your behalf ("Services"). Such third parties include the owner or provider of the website, desktop and/or mobile application through which you have accessed our Services ("Application"). 
 
-We strongly recommend you to read this agreement carefully and make sure you understand it. If you do not understand this Agreement, please contact us before using the Services by emailing us at [info@withtrustlink.com](https://info@withtrustlink.com) or contact our executive sales.
+We strongly recommend you to read this agreement carefully and make sure you understand it. If you do not understand this Agreement, please contact us before using the Services by emailing us at info@withtrustlink.com or contact our executive sales.
 
 1.&nbsp;**How Trustlink value end user data**
 
@@ -159,7 +159,7 @@ We hope you will have a positive experience using our Platform, but should a dis
 2.\tIf any provision in this Privacy Policy is found to be invalid, void, or unenforceable, we, with our sole discretion, will change such provision to be adjusted to prevailing laws and regulations.
 
 ## Miscellaneous
-1.\tIf you would like to access, correct, amend or delete any personal information we have about you, register a complaint, or simply want more information about how we process your Personal Data, you can contact us at [info@withtrustlink.com](http://info@withtrustlink.com) 
+1.\tIf you would like to access, correct, amend or delete any personal information we have about you, register a complaint, or simply want more information about how we process your Personal Data, you can contact us at info@withtrustlink.com
 2.\tBy reading this Privacy
 3.\tPolicy, you acknowledge, agree, and provide your consent to comply with the Privacy Policy. 
 
@@ -194,7 +194,7 @@ These Terms (together with any additional terms applicable to specific Services 
       />
       <div className={"mt-16 ml-14"}>
         <Button
-          className={" text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-36 md:w-48 my-auto z-50"}
+          className={"flex items-center justify-center text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-36 md:w-48 my-auto z-50"}
           icon={<ArrowLeftOutlined />}
           onClick={() => {
             router.push("/");
