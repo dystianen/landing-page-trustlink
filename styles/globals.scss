@@ -716,7 +716,40 @@ svg {
 }
 
 .ant-menu-sub.ant-menu-inline {
-  margin-left: -21px;
+  margin-left: -18px;
+}
+
+.ant-menu-item .ant-menu-item-icon + span,
+.ant-menu-submenu-title .ant-menu-item-icon + span,
+.ant-menu-item .anticon + span,
+.ant-menu-submenu-title .anticon + span {
+  margin-left: 3px !important;
+}
+
+.ant-menu-sub.ant-menu-inline > .ant-menu-item,
+.ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+  height: 36px !important ;
+}
+
+ul li .ant-menu-item {
+  height: 40px;
+}
+
+.ant-menu-item-selected,
+.ant-menu-submenu-selected,
+.ant-menu-submenu-title:hover {
+  color: #4f4f4f !important;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: transparent !important;
+}
+
+.ant-menu-vertical .ant-menu-item::after,
+.ant-menu-vertical-left .ant-menu-item::after,
+.ant-menu-vertical-right .ant-menu-item::after,
+.ant-menu-inline .ant-menu-item::after {
+  border-right: 0px !important;
 }
 
 .ant-menu-title-content {
@@ -725,7 +758,7 @@ svg {
 
 .ant-menu-item {
   font-size: 16px;
-  display: block;
+  margin-left: -9px;
 }
 
 @media only screen and (min-device-width: 1280px) and (max-device-height: 619px) {
@@ -816,6 +849,7 @@ svg {
 
 .terms-style h3 {
   font-size: 1rem;
+}
   .terms-style h3 {
     font-size: 1.5rem;
   }
@@ -823,6 +857,7 @@ svg {
     counter-reset: item;
     list-style-type: none;
     font-size: 14px;
+
   }
   .terms-style ol > li {
     counter-increment: item;
@@ -830,4 +865,3 @@ svg {
   .terms-style ol > li::before {
     content: counters(item, ".") ". ";
   }
-}

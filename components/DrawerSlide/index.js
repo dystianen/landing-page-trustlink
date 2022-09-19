@@ -10,11 +10,12 @@ import { About } from "./about";
 import { useMediaQuery } from "react-responsive";
 
 export const DrawerSlide = observer((props) => {
-  const { menu, isOpen, onClickContact, onClose } = props;
+  const { menu, isOpen, onClickContact, onClose, clicked } = props;
   const [positionLeft, setPositionLeft] = useState(true);
   const [showProduct, setShowProduct] = useState(false);
   const [showUseCase, setShowUseCase] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
+  const [indexProduct, setIndexProduct] = useState();
   const { t } = useTranslation();
   const laptop = useMediaQuery({ query: "(min-width: 1024px)" });
 
@@ -46,11 +47,6 @@ export const DrawerSlide = observer((props) => {
       image: "logo-trust-connect.png",
       name: "Connect",
       productIndex: 3,
-    },
-    {
-      image: "logo-trust-vision.png",
-      name: "Vision",
-      productIndex: 4,
     },
   ];
   const socialMedia = [
@@ -103,14 +99,33 @@ export const DrawerSlide = observer((props) => {
     </div>
   );
 
-  const newProduct = ["Products"].map((v, index) => {
+  const newProduct = ["Products"].map((value, index) => {
     const key = String(index + 1);
     return {
       key: `sub${key}`,
       label: `Products`,
+      bodyStyle: { padding: "20px" },
       children: products.map((v) => {
         return {
-          label: `Trust${v.name}`,
+          icon: (
+            <div
+              onClick={() => {
+                props.clicked(v.productIndex);
+              }}
+              className="rounded-full w-9 h-9 bg-white flex justify-center items-center bottom-2 py-3 border-2 border-[#FF6703]"
+            >
+              <img width={"14px"} height={"14px"} src={`/assets/images/${v.image}`} />
+            </div>
+          ),
+          label: (
+            <span
+              onClick={() => {
+                clicked(v.productIndex);
+              }}
+            >
+              Trust{v.name}
+            </span>
+          ),
         };
       }),
     };
