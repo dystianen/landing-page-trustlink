@@ -1,4 +1,4 @@
-import { Button, Drawer, Dropdown, Menu, Modal, Select, Space } from "antd";
+import {Button, Drawer, Dropdown, Image, Menu, Modal, Select, Space} from "antd";
 import { DownOutlined, RightOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
@@ -92,8 +92,8 @@ export const DrawerSlide = observer((props) => {
   const dropdownProduct = (
     <div className="bg-transparent block">
       <div className="flex flex-col text-base no-underline font-medium">
-        {products.map((index) => {
-          return <a className="text-grey relative block" href="#">{`Trust${index.name}`}</a>;
+        {products.map((item, index) => {
+          return <a key={index} className="text-grey relative block" href="#">{`Trust${item.name}`}</a>;
         })}
       </div>
     </div>
@@ -105,16 +105,17 @@ export const DrawerSlide = observer((props) => {
       key: `sub${key}`,
       label: `Products`,
       bodyStyle: { padding: "20px" },
-      children: products.map((v) => {
+      children: products.map((v, index) => {
         return {
           icon: (
             <div
+                key={index}
               onClick={() => {
                 props.clicked(v.productIndex);
               }}
               className="rounded-full w-9 h-9 bg-white flex justify-center items-center bottom-2 py-3 border-2 border-[#FF6703]"
             >
-              <img width={"14px"} height={"14px"} src={`/assets/images/${v.image}`} />
+              <Image style={{width: 14, height: 14}} preview={false} src={`/assets/images/${v.image}`} />
             </div>
           ),
           label: (
