@@ -35,6 +35,7 @@ const StickyHeader = (props) => {
       setWindows(window);
     }
   }, []);
+
   const menu = [
     {
       name: t("Home"),
@@ -116,16 +117,16 @@ const StickyHeader = (props) => {
   ];
 
   const dropdownOverlay = (
-    <div className="bg-white drop-shadow-lg">
+    <div className="bg-white drop-shadow-lg mt-3">
       <div className="w-11/12 lg:w-11/12 xl:w-10/12 2xl:w-10/12 py-11 mx-auto space-x-3 flex justify-center">
         <div className="w-3/12 flex flex-col space-y-4 pr-10">
           <div className="font-bold text-3xl">Products</div>
           <div className="text-lg text-grey">Our comprehensive solutions will enable your business to make faster and accurate decisions</div>
         </div>
         <div className="grid grid-cols-2 xl:grid-cols-2 gap-3">
-          {products.map((items) => {
+          {products.map((items, index) => {
             return (
-              <div className="flex items-center space-x-2 xl:space-x-3 cursor-pointer" onClick={() => onClickProduct(items.productIndex)}>
+              <div key={index} className="flex items-center space-x-2 xl:space-x-3 cursor-pointer" onClick={() => onClickProduct(items.productIndex)}>
                 <div className="w-20 h-20 2xl:w-20 2xl:h-20 bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full p-3.5">
                   <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} width={"20"} height={"20"} />
                 </div>
@@ -172,7 +173,7 @@ const StickyHeader = (props) => {
                     </div>
                 } */}
         <div className={"choose-lang flex flex-row  mr-5 md:mr-10  xl:mr-12 z-30"}>
-          <DrawerSlide menu={menu} setOpen={changeMenuOpen} onClickContact={onClickContactUs} isOpen={isOpen} />
+          <DrawerSlide clicked={onClickProduct} menu={menu} setOpen={changeMenuOpen} onClickContact={onClickContactUs} isOpen={isOpen} />
           {tablet
             ? ""
             : menu.map((items, _props) => (
@@ -183,7 +184,7 @@ const StickyHeader = (props) => {
                       <Dropdown onOpenChange={(val) => setIsRotate(val)} overlayClassName="w-full" overlay={dropdownOverlay} trigger={["hover"]}>
                         <Space>
                           Products
-                          <DownOutlined className={isRotate && "rotate-180 transition duration-100"}/>
+                          <DownOutlined className={isRotate && "rotate-180 transition duration-100"} />
                         </Space>
                       </Dropdown>
                     ) : (

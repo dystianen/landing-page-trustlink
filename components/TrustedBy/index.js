@@ -48,7 +48,7 @@ const TrustedBy = ({sectionRef}) => {
             href: 'https://www.vida.id/'
         },
         {
-            src: 'assets/trusted_by/incode.png',
+            src: 'assets/trusted_by/incode_blue_png.png',
             href: 'https://incode.com/'
         }
     ];
