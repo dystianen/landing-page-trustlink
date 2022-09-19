@@ -181,7 +181,7 @@ You represent and warrant that you have all necessary rights to use your Account
                     router.push('/')
                 }}/>
             <div className={'mt-16 ml-14'}>
-                <Button className={" text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-36 md:w-48 my-auto"} icon={<ArrowLeftOutlined/>} onClick={()=> {router.push('/')}}>
+                <Button className={" text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-36 md:w-48 my-auto z-50"} icon={<ArrowLeftOutlined/>} onClick={()=> {router.push('/')}}>
                     Back
                 </Button>
             </div>
