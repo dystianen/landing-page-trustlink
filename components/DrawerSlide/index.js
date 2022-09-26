@@ -48,6 +48,11 @@ export const DrawerSlide = observer((props) => {
       name: "Connect",
       productIndex: 3,
     },
+    {
+      image: "incode-crop.png",
+      name: "incode",
+      productIndex: 3,
+    },
   ];
   const socialMedia = [
     {
@@ -108,24 +113,34 @@ export const DrawerSlide = observer((props) => {
       children: products.map((v, index) => {
         return {
           icon: (
-            <div
+            v.name !== 'incode' ? (
+                <div
                 key={index}
-              onClick={() => {
-                props.clicked(v.productIndex);
-              }}
-              className="rounded-full w-9 h-9 bg-white flex justify-center items-center bottom-2 py-3 border-2 border-[#FF6703]"
-            >
-              <Image style={{width: 14, height: 14}} preview={false} src={`/assets/images/${v.image}`} />
-            </div>
+                onClick={() => {
+                  props.clicked(v.productIndex);
+                }}
+                className="rounded-full w-9 h-9 bg-white flex justify-center items-center bottom-2 py-3 border-2 border-[#FF6703]"
+              >
+                <Image style={{width: 14, height: 14}} preview={false} src={`/assets/images/${v.image}`} />
+              </div>
+            ) : (
+                <div className={'w-9 h-9'} />
+            )
           ),
           label: (
-            <span
-              onClick={() => {
-                clicked(v.productIndex);
-              }}
-            >
-              Trust{v.name}
-            </span>
+              v.name === 'incode' ? (
+                    <div onClick={() => window.open('https://incode.com/products/incode-omni/', "_blank")}>
+                      <Image preview={false} src={`/assets/images/${v.image}`} className={'w-24'} />
+                    </div>
+                  ) : (
+                    <span
+                        onClick={() => {
+                          clicked(v.productIndex);
+                        }}
+                    >
+                      Trust{v.name}
+                    </span>
+                  )
           ),
         };
       }),

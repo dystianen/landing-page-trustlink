@@ -12,11 +12,16 @@ import Footer from "../components/Footer";
 import { Button, Image } from "antd";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 import { useRouter } from "next/router";
+import { useMediaQuery } from "react-responsive";
 
 const PrivacyPolicy = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
+  const tablet = useMediaQuery({ query: "(max-width: 767px)" });
+
+  const genericHamburgerLine = `h-1 my-1 rounded-full ${tablet ? "bg-[#1D365F]" : "bg-[#FFFFFF]"} transition ease transform duration-300`;
+  const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full ${tablet ? "bg-[#1D365F]" : "bg-[#FFFFFF]"} transition ease transform duration-300`;
   const markdown = `
   # **Privacy Policy**
 
@@ -217,6 +222,16 @@ info@withtrustlink.com
           router.push("/");
         }}
       />
+      <div className="overflow-hidden">
+        {/*<DrawerSlide menu={menu} isOpen={isOpen} />*/}
+        <div className={`fixed w-16 sm:w-20 h-20 top-0 right-4 p-5 ${isOpen ? "z-[999999]" : "z-0"}`}>
+          <button className="flex sticky top-0 right-0 w-[24px] h-[40px] flex-col justify-center group" style={{ visibility: isOpen ? "visible" : "hidden" }} onClick={() => setIsOpen(!isOpen)}>
+            <div className={`${genericHamburgerLine} self-start ${isOpen ? "w-full rotate-45 translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`} />
+            <div className={`${genericHamburgerLine2} ${isOpen ? "opacity-0" : "opacity-100"}`} />
+            <div className={`${genericHamburgerLine} self-end ${isOpen ? "w-full -rotate-45 -translate-y-3 opacity-100" : "w-3 sm:w-4 opacity-100"}`} />
+          </button>
+        </div>
+      </div>
       <div className={"mt-16 ml-14"}>
         <Button
           className={"flex items-center justify-center text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-36 md:w-48 my-auto z-50"}
