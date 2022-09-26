@@ -100,6 +100,11 @@ const StickyHeader = (props) => {
       productIndex: 1,
     },
     {
+      image: "incode-crop.png",
+      name: "incode",
+      productIndex: 3,
+    },
+    {
       image: "logo-trust-live.png",
       name: "Live",
       productIndex: 2,
@@ -123,22 +128,31 @@ const StickyHeader = (props) => {
           <div className="font-bold text-3xl">Products</div>
           <div className="text-lg text-grey">Our comprehensive solutions will enable your business to make faster and accurate decisions</div>
         </div>
-        <div className="grid grid-cols-2 xl:grid-cols-2 gap-3">
+        <div className="grid grid-cols-3 xl:grid-cols-3 gap-3">
           {products.map((items, index) => {
             return (
-              <div key={index} className="flex items-center space-x-2 xl:space-x-3 cursor-pointer" onClick={() => onClickProduct(items.productIndex)}>
-                <div className="w-20 h-20 2xl:w-20 2xl:h-20 bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full p-3.5">
-                  <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} width={"20"} height={"20"} />
-                </div>
-                <div
-                  className="font-semibold text-lg cursor-pointer"
-                  onClick={() => {
-                    itemProduct(items.productIndex);
-                  }}
-                >
-                  Trust<span className="text-orange">{items.name}</span> <RightOutlined className={"ml-2"} />
-                </div>
-              </div>
+                items.name === 'incode' ? (
+                      <div key={index} className="flex items-center space-x-2 xl:space-x-3 cursor-pointer" onClick={() => window.open('https://incode.com/products/incode-omni/', "_blank")}>
+                        <div className="flex items-center w-32">
+                          <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} />
+                        </div>
+                        <RightOutlined className={"ml-2 text-lg"} />
+                      </div>
+                    ) : (
+                    <div key={index} className="flex items-center space-x-2 xl:space-x-3 cursor-pointer" onClick={() => onClickProduct(items.productIndex)}>
+                      <div className="w-20 h-20 2xl:w-20 2xl:h-20 bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full p-3.5">
+                        <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} width={"20"} height={"20"} />
+                      </div>
+                      <div
+                          className="font-semibold text-lg cursor-pointer"
+                          onClick={() => {
+                            itemProduct(items.productIndex);
+                          }}
+                      >
+                        Trust<span className="text-orange">{items.name}</span> <RightOutlined className={"ml-2"} />
+                      </div>
+                    </div>
+                    )
             );
           })}
         </div>
