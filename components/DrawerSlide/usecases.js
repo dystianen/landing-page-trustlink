@@ -68,11 +68,11 @@ export const UseCases = observer(({show, setShow}) => {
                             <p className={'montserrat md:text-[10px] lg:text-xs text-[#818FA6] w-3/5 md:w-[90%] lg:w-3/4 xl:w-1/2 2xl:w-[70%] mb-5 md:mb-0 z-10 ml-4'}>{data.description}</p>
                             <div className="relative w-full ">
                                 <div className={'absolute -bottom-2 inset-x-0 mx-auto w-full  mt-5 z-0'}>
-                                    <Image preview={false} className="w-[50px] md:w-[3rem] lg:w-[3.5rem] xl:w-[4.5rem]" src={data.left}/>
+                                    <Image alt={`${index+1}-image-left`} preview={false} className="w-[50px] md:w-[3rem] lg:w-[3.5rem] xl:w-[4.5rem]" src={data.left}/>
                                 </div>
                             </div>
                             <div className={'absolute top-0 right-0 z-0' }>
-                                <Image preview={false} className={"w-[50px] md:w-[3rem] lg:w-[3.5rem] xl:w-[4.5rem]"} src={data.right}/>
+                                <Image alt={`${index+1}-image-right`} preview={false} className={"w-[50px] md:w-[3rem] lg:w-[3.5rem] xl:w-[4.5rem]"} src={data.right}/>
                             </div>
                         </div>
                     </div>

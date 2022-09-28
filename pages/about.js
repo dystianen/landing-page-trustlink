@@ -79,10 +79,10 @@ const AboutPage = () => {
                                         We are the only company that provide the most advanced identity verification against Indonesian national database as the official Dukcapil partner in Platform Bersama that combine it with open finance facilitator for a seamless, simpler, and most secure financial data integration
                                     </p>
                                     <div className={'grid grid-cols-2 sm:grid-cols-4'} style={{justifyContent: 'space-between', alignItems: 'center', marginTop: 30}}>
-                                        <Image preview={false} className="w-30 company-logo logo-image" src={'/assets/keminfo.png'}/>
-                                        <Image preview={false} className="w-20 company-logo logo-dukcapil" src={'/assets/dukcapil.svg'}/>
-                                        <Image preview={false} className="w-20 company-logo logo-image mt-10 sm:mt-0" src={'/assets/aftech.png'}/>
-                                        <Image preview={false} className="w-20 company-logo logo-image mt-10 sm:mt-0" src={'/assets/iso.png'}/>
+                                        <Image alt={'trustlink-partners-keminfo'} preview={false} className="w-30 company-logo logo-image" src={'/assets/keminfo.png'}/>
+                                        <Image alt={'trustlink-partners-dukcapil'} preview={false} className="w-20 company-logo logo-dukcapil" src={'/assets/dukcapil.svg'}/>
+                                        <Image alt={'trustlink-partners-aftech'} preview={false} className="w-20 company-logo logo-image mt-10 sm:mt-0" src={'/assets/aftech.png'}/>
+                                        <Image alt={'trustlink-partners-iso'} preview={false} className="w-20 company-logo logo-image mt-10 sm:mt-0" src={'/assets/iso.png'}/>
                                     </div>
 
                                 </div>
