@@ -121,7 +121,7 @@ export const DrawerSlide = observer((props) => {
                 }}
                 className="rounded-full w-9 h-9 bg-white flex justify-center items-center bottom-2 py-3 border-2 border-[#FF6703]"
               >
-                <Image style={{width: 14, height: 14}} preview={false} src={`/assets/images/${v.image}`} />
+                <Image className={`trustlink-product-${index+1}`} style={{width: 14, height: 14}} preview={false} src={`/assets/images/${v.image}`} />
               </div>
             ) : (
                 <div className={'w-9 h-9'} />
@@ -130,7 +130,7 @@ export const DrawerSlide = observer((props) => {
           label: (
               v.name === 'incode' ? (
                     <div onClick={() => window.open('https://incode.com/products/incode-omni/', "_blank")}>
-                      <Image preview={false} src={`/assets/images/${v.image}`} className={'w-24'} />
+                      <Image className={`trustlink-incode`} preview={false} src={`/assets/images/${v.image}`} className={'w-24'} />
                     </div>
                   ) : (
                     <span

@@ -120,6 +120,7 @@ const Footer = ({ onClickTop = () => {} }) => {
         </div>
         <Image preview={false} src={"/assets/images/accent-footer-left.png"} alt={"Trustlink Background Footer Left"} />
       </div>
+
       <div className={"absolute bottom-0 right-0 z-0 w-full md:w-auto"}>
         <div className={'absolute -bottom-2 md:bottom-0 w-full py-4 pl-6 pr-6 md:pr-6 lg:pr-16 text-base montserrat tracking-wide md:text-right text-[#EAEDF1]'}>
           <div className={'relative cursor-pointer z-20'} onClick={()=>{
