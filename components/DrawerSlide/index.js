@@ -130,7 +130,7 @@ export const DrawerSlide = observer((props) => {
           label: (
               v.name === 'incode' ? (
                     <div onClick={() => window.open('https://incode.com/products/incode-omni/', "_blank")}>
-                      <Image className={`trustlink-incode`} preview={false} src={`/assets/images/${v.image}`} className={'w-24'} />
+                      <Image alt={`trustlink-incode`} preview={false} src={`/assets/images/${v.image}`} className={'w-24'} />
                     </div>
                   ) : (
                     <span
