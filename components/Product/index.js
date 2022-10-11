@@ -225,7 +225,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                                              style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? `0 0 ${shadow}px 1px #FE6601` : null}}
                                         >
                                             <Tooltip title={'Trust' +it.name}>
-                                            <Image preview={false} src={it.icon} alt={it.alt} className={`w-[24px] sm:w-[28px] md:w-[28px] lg:w-[35px]`}/>
+                                            <Image id={`click-product-trust-${it.name2}`} preview={false} src={it.icon} alt={it.alt} className={`w-[24px] sm:w-[28px] md:w-[28px] lg:w-[35px]`}/>
                                             </Tooltip>
                                         </div>
                                         <p className={`w-10 sm:w-20 md:w-40 text-[10px] sm:text-sm lg:text-lg montserrat ${current === index ? 'hidden' : null}`}>
