@@ -231,7 +231,7 @@ export default function Home() {
                   </div>
                   <div>
                     <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-36 md:w-48"} onClick={() => aboutUsRef.current.scrollIntoView({ behavior: "smooth" })}>
-                      {t("Get Started")}
+                      <span id={'click-top-page-get-started'}>{t("Get Started")}</span>
                     </Button>
                   </div>
                 </div>
@@ -240,7 +240,7 @@ export default function Home() {
             <section className={"absolute top-[22rem] m-top md:top-0 right-10 md:-right-10 lg:-right-20 xl:-right-28 w-3/5 h-1/2 md:h-full mt-6 md:mt-0 mb-24 md:mb-0 hidden lg:inline"}>
               {product.map((it, index) => (
                 <div key={index} className={it.className} onClick={() => handleClickProduct(it.productIndex)}>
-                  <Image preview={false} src={`/assets/images/${it.image}`} alt={`${it.alt}`} className={"z-10 justify-center"} />
+                  <Image preview={false} src={`/assets/images/${it.image}`} alt={`${it.alt}`} className={"z-10 justify-center"} id={`click-top-page-product-${it.image}`}/>
                 </div>
               ))}
             </section>
