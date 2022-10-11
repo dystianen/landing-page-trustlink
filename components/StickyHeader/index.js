@@ -149,7 +149,7 @@ const StickyHeader = (props) => {
                             itemProduct(items.productIndex);
                           }}
                       >
-                        Trust<span className="text-orange">{items.name}</span> <RightOutlined className={"ml-2"} />
+                        Trust<span className="text-orange" id={`click-header-products-trust-${items.name}`}>{items.name}</span> <RightOutlined className={"ml-2"} />
                       </div>
                     </div>
                     )
@@ -192,7 +192,7 @@ const StickyHeader = (props) => {
             ? ""
             : menu.map((items, _props) => (
                 <div key={_props} className={"flex items-center mx-2 xl:mx-4 2xl:mx-6 cursor-pointer"} onClick={items.onClicked}>
-                  <p className={"mb-0 text-center flex items-center "}>
+                  <p className={"mb-0 text-center flex items-center "} id={`click-header-${items.name}`}>
                     {items.key == "products" ? null : items.name}{" "}
                     {items.key == "products" ? (
                       <Dropdown onOpenChange={(val) => setIsRotate(val)} overlayClassName="w-full" overlay={dropdownOverlay} trigger={["hover"]}>
