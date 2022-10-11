@@ -11,6 +11,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
         {
             title: t("eKYC & User Onboarding"),
             name: t("Desc eKYC"),
+            key: 'finance',
             desc: t('Desc eKYC & User Onboarding'),
             src: '/assets/usecase/usecase-1.png',
             applications: [
@@ -30,6 +31,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
             title: t("use_case_2_mini_text"),
             name: t("use_case_2_title"),
             desc: t("use_case_2_description"),
+            key: 'telecommunication',
             // src: '/assets/usecase/usecase-ekyc.png',
             src: '/assets/usecase/usecase-2.png',
             applications: [
@@ -44,6 +46,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
             name: t("use_case_3_title"),
             desc: t("use_case_3_description"),
             src: '/assets/usecase/usecase-3.png',
+            key: 'sharing_economy',
             applications: [
                 t("use_case_3_app1"),
                 t("use_case_3_app2"),
@@ -185,7 +188,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                                     </div>
                                     <div className={'text-center md:text-left mb-16 md:mb-0'}>
                                         <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-36 md:w-48"} onClick={()=>onClickContact()}>
-                                            {t('Request Demo')}
+                                            <span id={`click-use-case-${item.key}-request-demo`}>{t('Request Demo')}</span>
                                         </Button>
                                     </div>
                                 </div>

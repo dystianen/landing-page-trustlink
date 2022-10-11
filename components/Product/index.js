@@ -178,7 +178,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                             className={'rounded-lg  mt-2 flex justify-center items-center bg-[#FF6703] text-white text-base sm:text-lg h-12 md:w-1/2 lg:w-2/5 xl:w-3/12 montserrat tracking-normal'}
                             onClick={onClickContact}
                         >
-                            {t('Contact Us')}
+                            <div id={`click-products-section-trust-${item.name}-contact-us`}>{t('Contact Us')}</div>
                         </a>
                     </div>
                 </div>
@@ -221,7 +221,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                                 key={index}
                                 icon={
                                     <div className={`flex flex-col justify-center items-start sm:items-center ${current === index ? 'mt-2 lg:mt-0' : 'mt-12 sm:mt-10 lg:mt-12'}`}>
-                                        <div className={`p-0 ${index === (data.length - 1) ? `sm:ml-[16px]` : ``} rounded-full border-4 ${current === index ? `w-14 h-14 sm:w-[4.75rem] lg:w-24 sm:h-[4.75rem] lg:h-24 border-[#FF6703]` : `w-12 h-12 sm:w-16 lg:w-20 sm:h-16 lg:h-20 border-[#FF6703]`} mb-2 bg-white z-10 flex justify-center items-center`}
+                                        <div id={`click-products-section-trust-${it.name}`} className={`p-0 ${index === (data.length - 1) ? `sm:ml-[16px]` : ``} rounded-full border-4 ${current === index ? `w-14 h-14 sm:w-[4.75rem] lg:w-24 sm:h-[4.75rem] lg:h-24 border-[#FF6703]` : `w-12 h-12 sm:w-16 lg:w-20 sm:h-16 lg:h-20 border-[#FF6703]`} mb-2 bg-white z-10 flex justify-center items-center`}
                                              style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? `0 0 ${shadow}px 1px #FE6601` : null}}
                                         >
                                             <Tooltip title={'Trust' +it.name}>
