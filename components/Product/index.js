@@ -221,15 +221,15 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                                 key={index}
                                 icon={
                                     <div className={`flex flex-col justify-center items-start sm:items-center ${current === index ? 'mt-2 lg:mt-0' : 'mt-12 sm:mt-10 lg:mt-12'}`}>
-                                        <div id={`click-products-section-trust-${it.name}`} className={`p-0 ${index === (data.length - 1) ? `sm:ml-[16px]` : ``} rounded-full border-4 ${current === index ? `w-14 h-14 sm:w-[4.75rem] lg:w-24 sm:h-[4.75rem] lg:h-24 border-[#FF6703]` : `w-12 h-12 sm:w-16 lg:w-20 sm:h-16 lg:h-20 border-[#FF6703]`} mb-2 bg-white z-10 flex justify-center items-center`}
+                                        <div id={`click-header-products-trust-${it.name}`} className={`p-0 ${index === (data.length - 1) ? `sm:ml-[16px]` : ``} rounded-full border-4 ${current === index ? `w-14 h-14 sm:w-[4.75rem] lg:w-24 sm:h-[4.75rem] lg:h-24 border-[#FF6703]` : `w-12 h-12 sm:w-16 lg:w-20 sm:h-16 lg:h-20 border-[#FF6703]`} mb-2 bg-white z-10 flex justify-center items-center`}
                                              style={{transition: 'width 200ms, height 200ms', boxShadow: current === index ? `0 0 ${shadow}px 1px #FE6601` : null}}
                                         >
                                             <Tooltip title={'Trust' +it.name}>
-                                            <Image id={`click-product-trust-${it.name2}`} preview={false} src={it.icon} alt={it.alt} className={`w-[24px] sm:w-[28px] md:w-[28px] lg:w-[35px]`}/>
+                                            <Image id={`click-product-trust-${it.name}`} preview={false} src={it.icon} alt={it.alt} className={`w-[24px] sm:w-[28px] md:w-[28px] lg:w-[35px] click-header-products-trust-${it.name}`}/>
                                             </Tooltip>
                                         </div>
                                         <p className={`w-10 sm:w-20 md:w-40 text-[10px] sm:text-sm lg:text-lg montserrat ${current === index ? 'hidden' : null}`}>
-                                            <span className={'font-bold  sm:contents text-[#04204D]'}>Trust</span><span className={'text-[#FF6703]'}>{it.name}</span></p>
+                                            <span className={'font-bold  sm:contents text-[#04204D]'}>Trust</span><span className={'text-[#FF6703]'} id={`click-header-products-trust-${it.name}`}>{it.name}</span></p>
                                     </div>
                                 }
                             />
