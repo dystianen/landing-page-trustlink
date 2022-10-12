@@ -134,7 +134,7 @@ const StickyHeader = (props) => {
                 items.name === 'incode' ? (
                       <div key={index} className="flex items-center space-x-2 xl:space-x-3 cursor-pointer" onClick={() => window.open('https://incode.com/products/incode-omni/', "_blank")}>
                         <div className="flex items-center w-32">
-                          <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} />
+                          <Image id={'click-header-products-incode'} preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} />
                         </div>
                         <RightOutlined className={"ml-2 text-lg"} />
                       </div>
