@@ -41,6 +41,16 @@ export default function Home() {
   const genericHamburgerLine2 = `h-1 w-full my-1 rounded-full ${tablet ? "bg-[#1D365F]" : "bg-[#FFFFFF]"} transition ease transform duration-300`;
   const mobile = useMediaQuery({ query: "(max-width: 576px)" });
 
+  const {section} = router.query
+
+  useEffect(() => {
+    if(section && section === 'contact_us'){
+      scrollToSpecificY(contactUsRef.current, {
+        scroll_margin_top: 96,
+      });
+    }
+  },[section])
+
   useEffect(() => {
     polyfill();
   }, []);
