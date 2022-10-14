@@ -19,7 +19,8 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                 t('use_case_1_app2'),
                 t('use_case_1_app3'),
                 t('use_case_1_app4'),
-            ]
+            ],
+            target: "https://meetings.hubspot.com/avisenna"
         },
         // {
         //     title: t("Credit and Loan Services"),
@@ -39,7 +40,8 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                 t("use_case_2_app2"),
                 t("use_case_2_app3"),
                 t("use_case_2_app4"),
-            ]
+            ],
+            target: "https://meetings.hubspot.com/clara-martani"
         },
         {
             title: t("use_case_3_mini_text"),
@@ -52,7 +54,8 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                 t("use_case_3_app2"),
                 t("use_case_3_app3"),
                 t("use_case_3_app4"),
-            ]
+            ],
+            target: "https://meetings.hubspot.com/clara-martani"
         },
         // {
         //     title: t("Security Surveillance Management"),
@@ -70,6 +73,10 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
 
     const pageCarousel = dataUseCase.length
     const [current, setCurrent] = useState(0);
+
+    const goToTarget = (target) => {
+        window.open(target, '_blank').focus();
+    }
 
 
     return (
@@ -187,7 +194,7 @@ const UseCase = ({sectionRef, onClickContact=emptyFunction}) => {
                                         </ul>
                                     </div>
                                     <div className={'text-center md:text-left mb-16 md:mb-0'}>
-                                        <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-36 md:w-48"} onClick={()=>onClickContact()}>
+                                        <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#fe6601] bg-[#fe6601] montserrat rounded-lg h-12 w-36 md:w-48"} onClick={()=>goToTarget(item.target)}>
                                             <span id={`click-use-case-${item.key}-request-demo`}>{t('Request Demo')}</span>
                                         </Button>
                                     </div>
