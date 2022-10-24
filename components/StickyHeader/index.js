@@ -40,10 +40,12 @@ const StickyHeader = (props) => {
     {
       name: t("Home"),
       onClicked: onClickTopPage,
+      key: 'home',
     },
     {
       name: t("About Us."),
       onClicked: onClickAboutUs,
+      key: 'about_us',
     },
     {
       name: t(`Products`),
@@ -53,14 +55,17 @@ const StickyHeader = (props) => {
     {
       name: t("Use Case"),
       onClicked: onClickUseCases,
+      key: 'use_case',
     },
     {
       name: t("Clients"),
       onClicked: onClickClients,
+      key: 'clients',
     },
     {
       name: t("Contact Us"),
       onClicked: onClickContactUs,
+      key: 'contact_us',
     },
   ];
 
@@ -192,7 +197,7 @@ const StickyHeader = (props) => {
             ? ""
             : menu.map((items, _props) => (
                 <div key={_props} className={"flex items-center mx-2 xl:mx-4 2xl:mx-6 cursor-pointer"} onClick={items.onClicked}>
-                  <p className={"mb-0 text-center flex items-center "} id={`click-header-${items.name}`}>
+                  <p className={"mb-0 text-center flex items-center "} id={`click-header-${items.key}`}>
                     {items.key == "products" ? null : items.name}{" "}
                     {items.key == "products" ? (
                       <Dropdown onOpenChange={(val) => setIsRotate(val)} overlayClassName="w-full" overlay={dropdownOverlay} trigger={["hover"]}>
