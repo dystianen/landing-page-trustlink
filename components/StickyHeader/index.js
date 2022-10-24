@@ -148,12 +148,7 @@ const StickyHeader = (props) => {
                       <div className="w-20 h-20 2xl:w-20 2xl:h-20 bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full p-3.5">
                         <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} width={"20"} height={"20"} />
                       </div>
-                      <div
-                          className="font-semibold text-lg cursor-pointer"
-                          onClick={() => {
-                            itemProduct(items.productIndex);
-                          }}
-                      >
+                      <div className="font-semibold text-lg cursor-pointer">
                         Trust<span className="text-orange">{items.name}</span> <RightOutlined className={"ml-2"} />
                       </div>
                     </div>
