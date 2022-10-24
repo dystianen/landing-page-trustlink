@@ -38,6 +38,25 @@ class MyDocument extends Document {
                     }}
                 />
 
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                    function gtag_report_conversion(url) {
+                        var callback = function () {
+                        if (typeof(url) != 'undefined') {
+                        window.location = url;
+                    }
+                    };
+                        gtag('event', 'conversion', {
+                        'send_to': '${process.env.NEXT_PUBLIC_GOOGLE_ADS}/L2OQCN-CptIDEKKEvOso',
+                        'event_callback': callback
+                    });
+                        return false;
+                    }
+                  `,
+                    }}
+                />
+
                 {/* Global Site Tag (gtag.js) - Google Adds */}
                 <script
                     async
