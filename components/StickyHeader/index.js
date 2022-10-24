@@ -144,12 +144,12 @@ const StickyHeader = (props) => {
                         <RightOutlined className={"ml-2 text-lg"} />
                       </div>
                     ) : (
-                    <div key={index} id={`click-header-products-trust-${items.name}`} className="flex items-center space-x-2 xl:space-x-3 cursor-pointer" onClick={() => onClickProduct(items.productIndex)}>
+                    <div key={index} className="flex items-center space-x-2 xl:space-x-3 cursor-pointer" onClick={() => onClickProduct(items.productIndex)}>
                       <div className="w-20 h-20 2xl:w-20 2xl:h-20 bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full p-3.5">
-                        <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} width={"20"} height={"20"} />
+                        <Image id={`click-header-products-trust-${items.name}`} preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} width={"20"} height={"20"} />
                       </div>
-                      <div className="font-semibold text-lg cursor-pointer">
-                        Trust<span className="text-orange">{items.name}</span> <RightOutlined className={"ml-2"} />
+                      <div className="font-semibold text-lg cursor-pointer" id={`click-header-products-trust-${items.name}`}>
+                        Trust<span className="text-orange">{items.name}</span> <RightOutlined id={`click-header-products-trust-${items.name}`} className={"ml-2"} />
                       </div>
                     </div>
                     )
