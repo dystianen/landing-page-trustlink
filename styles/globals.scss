@@ -850,18 +850,28 @@ ul li .ant-menu-item {
 .terms-style h3 {
   font-size: 1rem;
 }
-  .terms-style h3 {
-    font-size: 1.5rem;
-  }
-  .terms-style ol {
-    counter-reset: item;
-    list-style-type: none;
-    font-size: 14px;
+.terms-style h3 {
+  font-size: 1.5rem;
+}
+.terms-style ol {
+  counter-reset: item;
+  list-style-type: none;
+  font-size: 14px;
 
-  }
-  .terms-style ol > li {
-    counter-increment: item;
-  }
-  .terms-style ol > li::before {
-    content: counters(item, ".") ". ";
-  }
+}
+.terms-style ol > li {
+  counter-increment: item;
+}
+.terms-style ol > li::before {
+  content: counters(item, ".") ". ";
+}
+
+.btn-header-product{
+  box-shadow: none !important;
+}
+
+.btn-header-product:hover {
+  color: unset !important;
+  border: none !important;
+}
+
