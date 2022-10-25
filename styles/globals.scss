@@ -875,3 +875,11 @@ ul li .ant-menu-item {
   border: none !important;
 }
 
+.arrow-right {
+  display: inline-block;
+  border: solid #FCA101;
+  border-width: 0 4px 4px 0;
+  padding: 5px;
+  transform: rotate(-45deg);
+}
+

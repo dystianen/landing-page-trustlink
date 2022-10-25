@@ -141,10 +141,11 @@ const StickyHeader = (props) => {
                         <div className="flex items-center usecase-img click-header-products-incode">
                           <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2 w-full h-full click-header-products-incode"} />
                         </div>
-                        <RightOutlined className={"ml-2 text-lg"} />
+                        {/*<RightOutlined className={"ml-2 text-lg"} />*/}
+                        <div className={`arrow-right click-header-products-trust-${items.name}`} />
                       </div>
                     ) : (
-                    <Button id={`click-header-products-trust-${items.name}`} key={index} className={`click-header-products-trust-${items.name} btn-header-product flex h-full w-full items-center space-x-2 xl:space-x-3 p-0 cursor-pointer border-none`} onClick={() => onClickProduct(items.productIndex)}>
+                    <div id={`click-header-products-trust-${items.name}`} key={index} className={`click-header-products-trust-${items.name} flex h-full w-full items-center space-x-2 xl:space-x-3 p-0 cursor-pointer border-none`} onClick={() => onClickProduct(items.productIndex)}>
                       <div className={`flex items-center click-header-products-trust-${items.name}`}>
                         <div className={`w-[4.2rem] h-[4.2rem] xl:w-20 xl:h-20 bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full usecase-img click-header-products-trust-${items.name} `}>
                           <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={`p-5 w-[4.2rem] h-[4.2rem] xl:w-20 xl:h-20 click-header-products-trust-${items.name} `} />
@@ -153,8 +154,9 @@ const StickyHeader = (props) => {
                           Trust<span className={`text-orange click-header-products-trust-${items.name}`}>{items.name}</span>
                         </div>
                       </div>
-                      <RightOutlined className={"ml-2 text-lg"} />
-                    </Button>
+                      {/*<RightOutlined className={"ml-2 text-lg"} />*/}
+                      <div className={`arrow-right click-header-products-trust-${items.name}`} />
+                    </div>
                     )
             );
           })}
@@ -198,7 +200,7 @@ const StickyHeader = (props) => {
                   <p className={"mb-0 text-center flex items-center "} id={`click-header-${items.key}`}>
                     {items.key == "products" ? null : items.name}{" "}
                     {items.key == "products" ? (
-                      <Dropdown onOpenChange={(val) => setIsRotate(val)} overlayClassName="w-full" overlay={dropdownOverlay} trigger={["hover"]}>
+                      <Dropdown onOpenChange={(val) => setIsRotate(val)} overlayClassName="w-full" overlay={dropdownOverlay} trigger={["click"]}>
                         <Space>
                           Products
                           <DownOutlined className={isRotate && "rotate-180 transition duration-100"} />
