@@ -137,20 +137,20 @@ const StickyHeader = (props) => {
           {products.map((items, index) => {
             return (
                 items.name === 'incode' ? (
-                      <div key={index} id={'click-header-products-incode'} className="w-44 xl:w-48 flex items-center space-x-2 xl:space-x-3 cursor-pointer" onClick={() => window.open('https://incode.com/products/incode-omni/', "_blank")}>
-                        <div className="flex items-center usecase-img">
-                          <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2 w-full h-full"} />
+                      <div key={index} id={'click-header-products-incode'} className="click-header-products-incode w-44 xl:w-48 flex items-center space-x-2 xl:space-x-3 cursor-pointer" onClick={() => window.open('https://incode.com/products/incode-omni/', "_blank")}>
+                        <div className="flex items-center usecase-img click-header-products-incode">
+                          <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2 w-full h-full click-header-products-incode"} />
                         </div>
                         <RightOutlined className={"ml-2 text-lg"} />
                       </div>
                     ) : (
-                    <Button id={`click-header-products-trust-${items.name}`} key={index} className="btn-header-product flex h-full w-full items-center space-x-2 xl:space-x-3 p-0 cursor-pointer border-none" onClick={() => onClickProduct(items.productIndex)}>
-                      <div className={'flex items-center'}>
-                        <div className="w-[4.2rem] h-[4.2rem] xl:w-20 xl:h-20 bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full usecase-img">
-                          <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-5 w-[4.2rem] h-[4.2rem] xl:w-20 xl:h-20"} />
+                    <Button id={`click-header-products-trust-${items.name}`} key={index} className={`click-header-products-trust-${items.name} btn-header-product flex h-full w-full items-center space-x-2 xl:space-x-3 p-0 cursor-pointer border-none`} onClick={() => onClickProduct(items.productIndex)}>
+                      <div className={`flex items-center click-header-products-trust-${items.name}`}>
+                        <div className={`w-[4.2rem] h-[4.2rem] xl:w-20 xl:h-20 bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full usecase-img click-header-products-trust-${items.name} `}>
+                          <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={`p-5 w-[4.2rem] h-[4.2rem] xl:w-20 xl:h-20 click-header-products-trust-${items.name} `} />
                         </div>
-                        <div className={'text-left w-32 font-semibold text-lg ml-2'}>
-                          Trust<span className="text-orange">{items.name}</span>
+                        <div className={`text-left w-32 font-semibold text-lg ml-2 click-header-products-trust-${items.name} `}>
+                          Trust<span className={`text-orange click-header-products-trust-${items.name}`}>{items.name}</span>
                         </div>
                       </div>
                       <RightOutlined className={"ml-2 text-lg"} />
