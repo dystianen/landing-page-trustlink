@@ -1,4 +1,4 @@
-import { Dropdown, Image, Menu, Space } from "antd";
+import {Button, Dropdown, Image, Menu, Space} from "antd";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
@@ -129,28 +129,33 @@ const StickyHeader = (props) => {
   const dropdownOverlay = (
     <div className="bg-white drop-shadow-lg mt-3">
       <div className="w-11/12 lg:w-11/12 xl:w-10/12 2xl:w-10/12 py-11 mx-auto space-x-3 flex justify-center">
-        <div className="w-3/12 flex flex-col space-y-4 pr-10">
+        <div className="w-4/12 flex flex-col space-y-4 pr-2 2xl:pr-10">
           <div className="font-bold text-3xl">Products</div>
           <div className="text-lg text-grey">Our comprehensive solutions will enable your business to make faster and accurate decisions</div>
         </div>
-        <div className="grid grid-cols-3 xl:grid-cols-3 gap-3">
+        <div className="w-full xl:w-10/12 2xl:w-7/12 grid grid-cols-3 xl:grid-cols-3 gap-3">
           {products.map((items, index) => {
             return (
                 items.name === 'incode' ? (
-                      <div key={index} id={'click-header-products-incode'} className="flex items-center space-x-2 xl:space-x-3 cursor-pointer" onClick={() => window.open('https://incode.com/products/incode-omni/', "_blank")}>
-                        <div className="flex items-center w-32">
-                          <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} />
+                      <div key={index} id={'click-header-products-incode'} className="click-header-products-incode w-44 xl:w-48 flex items-center space-x-2 xl:space-x-3 cursor-pointer" onClick={() => window.open('https://incode.com/products/incode-omni/', "_blank")}>
+                        <div className="flex items-center usecase-img click-header-products-incode">
+                          <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2 w-full h-full click-header-products-incode"} />
                         </div>
-                        <RightOutlined className={"ml-2 text-lg"} />
+                        {/*<RightOutlined className={"ml-2 text-lg"} />*/}
+                        <div className={`arrow-right click-header-products-trust-${items.name}`} />
                       </div>
                     ) : (
-                    <div key={index} className="flex items-center space-x-2 xl:space-x-3 cursor-pointer" onClick={() => onClickProduct(items.productIndex)}>
-                      <div className="w-20 h-20 2xl:w-20 2xl:h-20 bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full p-3.5">
-                        <Image id={`click-header-products-trust-${items.name}`} preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={"p-2"} width={"20"} height={"20"} />
+                    <div id={`click-header-products-trust-${items.name}`} key={index} className={`click-header-products-trust-${items.name} flex h-full w-full items-center space-x-2 xl:space-x-3 p-0 cursor-pointer border-none`} onClick={() => onClickProduct(items.productIndex)}>
+                      <div className={`flex items-center click-header-products-trust-${items.name}`}>
+                        <div className={`w-[4.2rem] h-[4.2rem] xl:w-20 xl:h-20 bg-[#fff0e6] border-[2px] xl:border-3 border-[#FF6703] rounded-full usecase-img click-header-products-trust-${items.name} `}>
+                          <Image preview={false} src={`/assets/images/${items.image}`} alt={`Trustlink Trust ${items.name}`} className={`p-5 w-[4.2rem] h-[4.2rem] xl:w-20 xl:h-20 click-header-products-trust-${items.name} `} />
+                        </div>
+                        <div className={`text-left w-32 font-semibold text-lg ml-2 click-header-products-trust-${items.name} `}>
+                          Trust<span className={`text-orange click-header-products-trust-${items.name}`}>{items.name}</span>
+                        </div>
                       </div>
-                      <div className="font-semibold text-lg cursor-pointer" id={`click-header-products-trust-${items.name}`}>
-                        Trust<span className="text-orange">{items.name}</span> <RightOutlined id={`click-header-products-trust-${items.name}`} className={"ml-2"} />
-                      </div>
+                      {/*<RightOutlined className={"ml-2 text-lg"} />*/}
+                      <div className={`arrow-right click-header-products-trust-${items.name}`} />
                     </div>
                     )
             );
@@ -195,7 +200,7 @@ const StickyHeader = (props) => {
                   <p className={"mb-0 text-center flex items-center "} id={`click-header-${items.key}`}>
                     {items.key == "products" ? null : items.name}{" "}
                     {items.key == "products" ? (
-                      <Dropdown onOpenChange={(val) => setIsRotate(val)} overlayClassName="w-full" overlay={dropdownOverlay} trigger={["hover"]}>
+                      <Dropdown onOpenChange={(val) => setIsRotate(val)} overlayClassName="w-full" overlay={dropdownOverlay} trigger={["click"]}>
                         <Space>
                           Products
                           <DownOutlined className={isRotate && "rotate-180 transition duration-100"} />
