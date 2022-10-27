@@ -195,23 +195,31 @@ const StickyHeader = (props) => {
           <DrawerSlide clicked={onClickProduct} menu={menu} setOpen={changeMenuOpen} onClickContact={onClickContactUs} isOpen={isOpen} />
           {tablet
             ? ""
-            : menu.map((items, _props) => (
-                <div key={_props} className={"flex items-center mx-2 xl:mx-4 2xl:mx-6 cursor-pointer"} onClick={items.onClicked}>
-                  <p className={"mb-0 text-center flex items-center "} id={`click-header-${items.key}`}>
-                    {items.key == "products" ? null : items.name}{" "}
-                    {items.key == "products" ? (
-                      <Dropdown onOpenChange={(val) => setIsRotate(val)} overlayClassName="w-full" overlay={dropdownOverlay} trigger={["hover"]}>
-                        <Space>
-                          Products
-                          <DownOutlined className={isRotate && "rotate-180 transition duration-100"} />
-                        </Space>
-                      </Dropdown>
-                    ) : (
-                      ""
-                    )}{" "}
-                  </p>
+            : <>
+                {menu.map((items, _props) => (
+                  <div key={_props} className={"flex items-center mx-2 xl:mx-4 2xl:mx-6 cursor-pointer"} onClick={items.onClicked}>
+                    <p className={"mb-0 text-center flex items-center "} id={`click-header-${items.key}`}>
+                      {items.key == "products" ? null : items.name}{" "}
+                      {items.key == "products" ? (
+                        <Dropdown onOpenChange={(val) => setIsRotate(val)} overlayClassName="w-full" overlay={dropdownOverlay} trigger={["hover"]}>
+                          <Space>
+                            Products
+                            <DownOutlined className={isRotate && "rotate-180 transition duration-100"} />
+                          </Space>
+                        </Dropdown>
+                      ) : (
+                        ""
+                      )}{" "}
+                    </p>
+                  </div>
+                  ))}
+                <div className={"flex items-center mx-3 cursor-pointer"} onClick={() => window.open('https://app.withtrustlink.com/login', "_blank")}>
+                  <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-16 md:w-28"}>
+                      <span id={'click-top-page-get-started'}>{t("Login")}</span>
+                    </Button>
                 </div>
-              ))}
+                </>
+          }
           <div className={"flex items-center justify-center"}>
             {/*<div className={"choose-lang flex flex-row"}>*/}
             {/*  <Link href={"/"} locale="en">*/}

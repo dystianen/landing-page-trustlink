@@ -186,6 +186,11 @@ export const DrawerSlide = observer((props) => {
                   )}
                 </>
               ))}
+              <div className={"flex items-center ml-4 cursor-pointer"} onClick={() => window.open('https://app.withtrustlink.com/login', "_blank")}>
+                <Button className={"text-white text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-28"}>
+                  <span id={'click-top-page-get-started'}>{t("Login")}</span>
+                </Button>
+              </div>
             </div>
           </div>
         </Fade>
