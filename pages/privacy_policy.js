@@ -184,15 +184,15 @@ You represent and warrant that you have all necessary rights to use your Account
 
 ### **ADDRESS**
 
-Office 88 Tower A level 36 Unit D
+Centennial Tower Level 29 Unit F
 
-JL. Raya Casablanca No 16 RW 5 Menteng Dalam
+Jl. Jend Gatot Subroto No 27, Karet Semanggi
 
-Kecamatan Tebet
+Kecamatan Setiabudi, Jakarta Selatan
 
 Daerah khusus ibukota Jakarta
 
-12870
+12930
 
 ### **EMAIL**
 
