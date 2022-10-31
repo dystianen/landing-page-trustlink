@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
 
 ## **Overview**
 
-1. TrustLink is a company incorporated in Indonesia and having its registered office at Office 88 Tower A Level 36 Unit D, Jl. Raya Casablanca No.16, RW.5, Menteng Dalam, Kec. Tebet, Daerah Khusus Ibukota Jakarta 12870, that manage TrustLink. Privacy and the security of data are of paramount importance to TrustLink. Please read this document carefully.
+1. TrustLink is a company incorporated in Indonesia and having its registered office at Centennial Tower Level 29 Unit F, Jl. Jend Gatot Subroto No 27, Karet Semanggi, Kec. Setiabudi, Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12930, that manage TrustLink. Privacy and the security of data are of paramount importance to TrustLink. Please read this document carefully.
 2. In this Privacy Policy, TrustLink will sometimes be referred to as 'we', 'us', or 'our'. Additionally, there are references to "You". In these instances, "You" may be a visitor to our site, or a user of our Services (" **Provider**"), or a customer of a Provider (" **End User**").
 
 ## **Personal Data**
