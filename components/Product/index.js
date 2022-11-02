@@ -228,7 +228,7 @@ export const Product = ({onClickContact=emptyFunction, productRef, indexProduct,
                                             <Image id={`click-product-trust-${it.name}`} preview={false} src={it.icon} alt={it.alt} className={`w-[24px] sm:w-[28px] md:w-[28px] lg:w-[35px] click-header-products-trust-${it.name}`}/>
                                             </Tooltip>
                                         </div>
-                                        <p className={`w-10 sm:w-20 md:w-40 text-[10px] sm:text-sm lg:text-lg montserrat ${current === index ? 'hidden' : null}`}>
+                                        <p className={`${it.name === 'Connect' && '-ml-3 sm:ml-0'} w-10 sm:w-20 md:w-40 text-[10px] sm:text-sm lg:text-lg montserrat ${current === index ? 'hidden' : null}`}>
                                             <span className={'font-bold  sm:contents text-[#04204D]'}>Trust</span><span className={`text-[#FF6703] click-header-products-trust-${it.name}`} id={`click-header-products-trust-${it.name}`}>{it.name}</span></p>
                                     </div>
                                 }
