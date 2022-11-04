@@ -214,8 +214,8 @@ const StickyHeader = (props) => {
                   </div>
                   ))}
                 <div className={"flex items-center mx-3 cursor-pointer"} onClick={() => window.open('https://app.withtrustlink.com/login', "_blank")}>
-                  <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-16 md:w-28"}>
-                      <span id={'click-top-page-get-started'}>{t("Login")}</span>
+                  <Button className={"text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-40 md:w-40"}>
+                      <span id={'click-top-page-get-started'}>{t("Login/Sign Up")}</span>
                     </Button>
                 </div>
                 </>
