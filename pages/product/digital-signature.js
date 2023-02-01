@@ -227,7 +227,7 @@ export default function Products() {
         </div>
         <Product
           breadcrumb="OCR"
-          text="Automatically extract ID Card attributes and automate personal data input including capture ID photo for matching process"
+          text="Our solution provides increased productivity and security through its integration of digital identity, digital signature verification, and electronic certificate technology"
           video="https://www.withtrustlink.com/assets/product/revision-new/TrustVerify.webm"
         />
         <Footer
