@@ -8,7 +8,7 @@ module.exports = {
     theme: {
         fontFamily: {
           'montserrat' : ['"Montserrat"'],
-          'gochi-hand' : ''
+          'gochi-hand' : "'Gochi Hand', cursive",
         },
         extend: {
             screens: {

@@ -5,7 +5,7 @@ import { ParticlePage } from '../../Particle';
 
 export default function Home() {
   const ComponentOne = () => (
-    <div className='bg-banner-orange bg-cover w-full h-screen flex flex-col justify-center items-center'>
+    <div className='bg-banner-orange bg-cover w-full h-screen flex flex-col pt-10'>
       <ParticlePage
         dimention={{
           width: '100%',
@@ -19,12 +19,10 @@ export default function Home() {
       <h2 className='m-0 text-[64px] text-center text-white leading-[56px]'>
         Identity platform to <br /> manage your seamless{' '}
       </h2>
-      <h1 className='text-[74px] text-[#002ED0]'>KYC Process</h1>
+      <h1 className='text-[74px] text-[#002ED0] font-gochi-hand text-center'>KYC Process</h1>
 
-      <div className='flex flex-row justify-between gap-14 bottom-0'>
-        <Image preview={false} className='mt-6' src='/assets/v2/section-1/hp-1.png' width={'344px'} height={'350px'} alt='hp' />
-        <Image preview={false} src='/assets/v2/section-1/hp-2.png' width={'344px'} height={'375px'} alt='hp' />
-        <Image preview={false} className='mt-6' src='/assets/v2/section-1/hp-3.png' width={'344px'} height={'350px'} alt='hp' />
+      <div className='flex flex-row justify-center absolute bottom-0'>
+        <Image preview={false} src='/assets/v2/section-1/hp.png' width={'70%'} height={'auto'} alt='hp' />
       </div>
     </div>
   );
@@ -41,7 +39,7 @@ export default function Home() {
         className={'home-plexus'}
       />
       <h2 className='mb-0 mt-10 text-[64px] text-center text-white leading-[56px]'>
-        One Platform. Single API <br /> Financial Inclusion <span className='text-[74px] text-[#FF6600]'>for All</span>
+        One Platform. Single API <br /> Financial Inclusion <span className='text-[74px] text-[#FF6600] font-gochi-hand'>for All</span>
       </h2>
 
       <div className='flex flex-row justify-center bottom-0'>
