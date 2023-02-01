@@ -1,7 +1,7 @@
 module.exports = {
     '@primary-color': '#145FD9',
     '@secondary-color': '#003049',
-    '@body-background': '#F1F1F1',
+    '@body-background': '#FFFFFF',
     '@font-family': `'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
   'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
   'Noto Color Emoji'`,

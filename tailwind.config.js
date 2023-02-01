@@ -7,7 +7,8 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
         fontFamily: {
-          'montserrat' : ['"Montserrat"']
+          'montserrat' : ['"Montserrat"'],
+          'gochi-hand' : ''
         },
         extend: {
             screens: {
@@ -46,7 +47,11 @@ module.exports = {
                 '112': '42rem',
             },
             backgroundImage:()=>({
-                'banner' : "url('/assets/banner_bg.svg')"
+                'banner' : "url('/assets/banner_bg.svg')",
+                'banner-orange': "url('/assets/v2/section-1/banner-1.jpg')",
+                'banner-blue': "url('/assets/v2/section-1/banner-2.jpg')",
+                'button-puple': "linear-gradient(180deg, #4056A9 9.27%, #1A2E6C 87.76%)",
+                'button-orange': "linear-gradient(180deg, #FFA467 8.85%, #FF7113 100%)"
             })
         },
     },
