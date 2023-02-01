@@ -11,6 +11,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import StickyHeader from "../../components/StickyHeader";
 import { scrollIntoView, polyfill } from "seamless-scroll-polyfill";
 import Product from "../../components/Product/Product";
+import BalanceInformationImg from "../../public/assets/balance_information.svg";
 
 export const checkRerouteLoggedUser = (store, router) => {
   if (typeof window !== "undefined") {
@@ -226,9 +227,9 @@ export default function Products() {
           />
         </div>
         <Product
-          breadcrumb="OCR"
-          text="Automatically extract ID Card attributes and automate personal data input including capture ID photo for matching process"
-          video="https://www.withtrustlink.com/assets/product/revision-new/TrustVerify.webm"
+          breadcrumb="Transaction History"
+          text="The Transactions API allows you to access your customers’ transaction history"
+          image={BalanceInformationImg}
         />
         <Footer
           onClickTop={() =>
