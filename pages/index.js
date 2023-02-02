@@ -46,6 +46,7 @@ export default function Index() {
           });
         }}
         onClickTopPage={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        frontPage
       />
 
       <section className={'-mt-36'}>

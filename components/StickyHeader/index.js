@@ -8,10 +8,13 @@ import { startCase } from "lodash";
 import { CaretDownOutlined, DownOutlined, RightOutlined } from "@ant-design/icons";
 import ProductsDropdownOverlay from "./components/DropdownProducts";
 import IndustryDropdownOverlay from "./components/DropdownIndustry";
+import {ParticlePage} from "../Particle";
+import {useRouter} from "next/router";
 const emptyFunction = () => {};
 const {Text, Title} = Typography;
 
 const StickyHeader = (props) => {
+  const {router} = useRouter();
   const {
     changeMenuOpen,
     isMenuOpen,
@@ -21,6 +24,7 @@ const StickyHeader = (props) => {
     onClickUseCases = emptyFunction,
     onClickAboutUs = emptyFunction,
     onClickTopPage = emptyFunction,
+    frontPage
   } = props;
   const { t, i18n } = useTranslation("common");
   const [header, setHeader] = useState("header");
@@ -102,9 +106,9 @@ const StickyHeader = (props) => {
   }, [isMenuOpen]);
 
   const listenScrollEvent = (_event) => {
-    if (window.scrollY < 149) {
+    if (window.scrollY < 149 && frontPage) {
       return setHeader("ease-in duration-200 ");
-    } else if (window.scrollY > 150) {
+    } else if (window.scrollY > 150 || !frontPage) {
       return setHeader("bg-banner-blue ease-in duration-200 drop-shadow-lg");
     }
   };
@@ -145,7 +149,16 @@ const StickyHeader = (props) => {
   }
 
   return (
-    <div className={`z-[60] w-full sticky top-0 ${header} overflow-x-hidden`}>
+    <div className={`z-[60] w-full ${!frontPage && 'bg-banner-blue'} sticky top-0 ${header} overflow-x-hidden`}>
+      <ParticlePage
+          dimention={{
+            width: '100%',
+            height: '100vh',
+          }}
+          numberValue={120}
+          opacity={0.8}
+          className={'home-plexus'}
+      />
       <div className={" w-full top-0 flex flex-row"} style={{ justifyContent: "space-between" }}>
         <div className={"flex items-center md:ml-12 cursor-pointer"} onClick={() => onClickTopPage()}>
           <Image preview={false} className={"relative h-8 md:h-[3.375rem] w-[16.875rem]"} src={"/assets/logo/title_new2x.png"} alt={"Trustlink Title"} />
