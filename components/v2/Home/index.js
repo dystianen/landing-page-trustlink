@@ -22,7 +22,7 @@ export default function Home() {
       <h1 className='text-[74px] text-[#002ED0] font-gochi-hand text-center'>KYC Process</h1>
 
       <div className='flex flex-row justify-center absolute bottom-0'>
-        <Image preview={false} src='/assets/v2/section-1/hp.png' width={'70%'} height={'auto'} alt='hp' />
+        <Image preview={false} src='/assets/v2/section-1/hp.png' width={'60%'} height={'auto'} alt='hp' />
       </div>
     </div>
   );
@@ -38,7 +38,7 @@ export default function Home() {
         opacity={0.8}
         className={'home-plexus'}
       />
-      <h2 className='mb-0 mt-10 text-[64px] text-center text-white leading-[56px]'>
+      <h2 className='mb-0 -mt-6 text-[64px] text-center text-white leading-[56px]'>
         One Platform. Single API <br /> Financial Inclusion <span className='text-[74px] text-[#FF6600] font-gochi-hand'>for All</span>
       </h2>
 

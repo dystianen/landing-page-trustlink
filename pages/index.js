@@ -49,7 +49,7 @@ export default function Index() {
         frontPage
       />
 
-      <section className={'-mt-36'}>
+      <section>
         <Home />
       </section>
       <section>

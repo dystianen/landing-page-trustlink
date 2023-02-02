@@ -149,7 +149,7 @@ const StickyHeader = (props) => {
   }
 
   return (
-    <div className={`z-[60] w-full ${!frontPage && 'bg-banner-blue'} sticky top-0 ${header} overflow-x-hidden`}>
+    <div className={`z-[60] w-full ${!frontPage && 'bg-banner-blue'} absolute top-0 ${header} overflow-x-hidden`}>
       <ParticlePage
           dimention={{
             width: '100%',
@@ -188,7 +188,7 @@ const StickyHeader = (props) => {
               <Image preview={false} src={`/assets/icons/noun_search.svg`} className={'h-8 w-8'}/>
             </div>
           </div>
-          <div className={"choose-lang flex flex-row  mr-5 md:mr-12 h-20 xl:mr-16 z-30"}>
+          <div className={"choose-lang flex flex-row  mr-5 md:mr-12 xl:mr-16 z-30"}>
             <DrawerSlide clicked={onClickProduct} menu={menu} setOpen={changeMenuOpen} onClickContact={onClickContactUs} isOpen={isOpen} />
             {tablet
               ? ""
