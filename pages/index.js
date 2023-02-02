@@ -48,7 +48,7 @@ export default function Index() {
         onClickTopPage={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       />
 
-      <section>
+      <section className={'-mt-36'}>
         <Home />
       </section>
       <section>

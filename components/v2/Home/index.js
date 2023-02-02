@@ -5,7 +5,7 @@ import { ParticlePage } from '../../Particle';
 
 export default function Home() {
   const ComponentOne = () => (
-    <div className='bg-banner-orange bg-cover w-full h-screen flex flex-col pt-10'>
+    <div className='bg-banner-orange bg-cover w-full h-screen flex flex-col pt-40'>
       <ParticlePage
         dimention={{
           width: '100%',
@@ -28,7 +28,7 @@ export default function Home() {
   );
 
   const ComponentTwo = () => (
-    <div className='bg-banner-blue bg-cover w-full h-screen flex flex-col justify-center items-center pt-5'>
+    <div className='bg-banner-blue bg-cover w-full h-screen flex flex-col justify-center items-center pt-12'>
       <ParticlePage
         dimention={{
           width: '100%',
