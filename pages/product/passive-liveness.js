@@ -226,7 +226,7 @@ export default function Products() {
           />
         </div>
         <Product
-          breadcrumb="OCR"
+          breadcrumb="Passive Liveness"
           text="Provide a secure, real-time user experience with Trustlink’s certified passive liveness technology"
           video="https://www.withtrustlink.com/assets/product/revision-new/TrustVerify.webm"
         />

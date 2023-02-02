@@ -226,7 +226,7 @@ export default function Products() {
           />
         </div>
         <Product
-          breadcrumb="OCR"
+          breadcrumb="Digital Signature with e-KYC"
           text="Our solution provides increased productivity and security through its integration of digital identity, digital signature verification, and electronic certificate technology"
           video="https://www.withtrustlink.com/assets/product/revision-new/TrustVerify.webm"
         />
