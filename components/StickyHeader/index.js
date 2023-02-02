@@ -167,7 +167,7 @@ const StickyHeader = (props) => {
                       <p className={"mb-0 text-center flex items-center poppins font-normal text-[16px] text-white"} id={`click-header-${items.key}`}>
 
                         {items.dropDown ? (
-                          <Dropdown open={isRotate[items.key].rotate} onOpenChange={(val) => handleOpenDropdown(val, items.key)} overlayClassName={`w-full flex justify-center ${!isRotate[items.key].rotate && 'invisible'}`} overlay={() => ( <ProductsDropdownOverlay menu={menuProfile} setMenu={n => setMenuProfile(n)} /> )} trigger={["click"]}>
+                          <Dropdown open={isRotate[items.key].rotate} onOpenChange={(val) => handleOpenDropdown(val, items.key)} overlayClassName={`w-full flex justify-center ${!isRotate[items.key].rotate && 'invisible'}`} overlay={() => ( <ProductsDropdownOverlay menu={menuProfile} setMenu={n => setMenuProfile(n)} /> )}>
                             <Space>
                               {items.name}
                               <DownOutlined className={isRotate[items.key]?.rotate && "rotate-180 transition duration-100"} />
