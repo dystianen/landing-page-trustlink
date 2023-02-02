@@ -28,7 +28,7 @@ export default function Home() {
   );
 
   const ComponentTwo = () => (
-    <div className='bg-banner-blue bg-cover w-full h-screen flex flex-col justify-center items-center pt-40'>
+    <div className='bg-banner-blue bg-cover w-full h-screen flex flex-col justify-center items-center pt-[20%] 2xl:pt-[30%]'>
       <ParticlePage
         dimention={{
           width: '100%',

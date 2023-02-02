@@ -102,9 +102,9 @@ const StickyHeader = (props) => {
   }, [isMenuOpen]);
 
   const listenScrollEvent = (_event) => {
-    if (window.scrollY < 699) {
+    if (window.scrollY < 149) {
       return setHeader("ease-in duration-200 ");
-    } else if (window.scrollY > 700) {
+    } else if (window.scrollY > 150) {
       return setHeader("bg-banner-blue ease-in duration-200 drop-shadow-lg");
     }
   };
