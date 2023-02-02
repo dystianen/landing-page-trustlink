@@ -1,11 +1,13 @@
 import {Image, Typography} from "antd";
 import React, {useState} from "react";
 import Fade from 'react-reveal/Fade';
+import { useRouter } from 'next/router';
 
 
 const {Text, Title} = Typography;
 
 const ProductsDropdownOverlay = (props) => {
+    const router = useRouter();
     const {menu, setMenu = () => {}} = props;
     const products = [
         {
@@ -83,9 +85,9 @@ const ProductsDropdownOverlay = (props) => {
         return menu === 2 ? ( <>
                 <Fade cascade bottom duration={1000}>
                     <div className="h-full w-2/6 rounded-l-3xl flex flex-col px-10 py-9 justify-between montserrat text-[16px] font-medium">
-                        <Text className={'cursor-pointer'}>OCR</Text>
-                        <Text className={'cursor-pointer'}>Transaction History</Text>
-                        <Text className={'cursor-pointer'}>E-Commerce and E-Wallet Data</Text>
+                        <Text className={'cursor-pointer'} onClick={() => router.push('product/account-information')}>OCR</Text>
+                        <Text className={'cursor-pointer'} onClick={() => router.push('product/transaction-history')}>Transaction History</Text>
+                        <Text className={'cursor-pointer'} onClick={() => router.push('product/e-commerce-and-e-wallet-data')}>E-Commerce and E-Wallet Data</Text>
                     </div>
                     <div className="h-full w-2/6 rounded-l-3xl flex flex-col px-10 py-9 justify-start montserrat text-[16px] font-medium">
                         <Text className={'cursor-pointer'}>Income and Employment Verification</Text>
@@ -95,9 +97,9 @@ const ProductsDropdownOverlay = (props) => {
             ) : menu === 1 && (
             <Fade cascade bottom duration={1000}>
                 <div className="h-full w-2/6 rounded-l-3xl flex flex-col px-10 py-9 justify-between montserrat text-[16px] font-medium">
-                    <Text className={'cursor-pointer'}>OCR</Text>
-                    <Text className={'cursor-pointer'}>Passive Liveness</Text>
-                    <Text className={'cursor-pointer'}>Digital Signature with e-KYC</Text>
+                    <Text className={'cursor-pointer'} onClick={() => router.push('product/account-information')}>OCR</Text>
+                    <Text className={'cursor-pointer'} onClick={() => router.push('product/passive-liveness')}>Passive Liveness</Text>
+                    <Text className={'cursor-pointer'} onClick={() => router.push('product/digital-signature')}>Digital Signature with e-KYC</Text>
                 </div>
             </Fade>
         )
