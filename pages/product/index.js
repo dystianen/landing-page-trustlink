@@ -11,7 +11,15 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import StickyHeader from "../../components/StickyHeader";
 import { scrollIntoView, polyfill } from "seamless-scroll-polyfill";
 import Product from "../../components/Product/Product";
-
+import Benefits from "../../components/Benefits";
+import {
+  ClockCircleFilled,
+  FacebookFilled,
+  TwitterCircleFilled,
+} from "@ant-design/icons";
+import ProfitsGraph from "../../assets/profits-graph.png";
+import TimeLeft from "../../assets/time-left.png";
+import Bullseye from "../../assets/bullseye.png";
 export const checkRerouteLoggedUser = (store, router) => {
   if (typeof window !== "undefined") {
     router.push("/under_construction");
@@ -147,7 +155,20 @@ export default function Products() {
   };
 
   const usingMenuFromModal = useMediaQuery({ query: "(max-width: 1024px)" });
-
+  const opticalDataCard = [
+    {
+      image: ProfitsGraph,
+      tittle: "Cost Reduction",
+    },
+    {
+      image: TimeLeft,
+      tittle: "Higher Productivity",
+    },
+    {
+      image: Bullseye,
+      tittle: "High Accuracy",
+    },
+  ];
   return (
     <div>
       <StickyHeader
@@ -229,6 +250,12 @@ export default function Products() {
           breadcrumb="OCR"
           text="Automatically extract ID Card attributes and automate personal data input including capture ID photo for matching process"
           video="https://www.withtrustlink.com/assets/product/revision-new/TrustVerify.webm"
+        />
+        <Benefits
+          text="With OCR, you can increase your productivity and accuracy of data
+          entry. Scan your documents quickly and our platform will convert the
+          images into a searchable text document."
+          cardData={opticalDataCard}
         />
         <Footer
           onClickTop={() =>

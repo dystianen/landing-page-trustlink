@@ -96,9 +96,9 @@ const Footer = ({ onClickTop = () => {} }) => {
               <div className="flex justify-center mt-6 mb-6 lg:mb-0">
                 {socmed.map((data, idx) => {
                   return (
-                    <Link href={data.url}>
+                    <Link href={data.url} key={idx}>
                       <a target={"_blank"}>
-                      <Tooltip placement="top" title={data.name} key={idx}>
+                      <Tooltip placement="top" title={data.name}>
                           <div className="text-3xl font-bold text-white cursor-pointer">
                             {data.icon}
                           </div>

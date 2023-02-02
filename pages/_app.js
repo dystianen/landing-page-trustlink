@@ -24,6 +24,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title key="trustlink">Trustlink | End to End e-KYC & Open Finance Platform</title>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0" key="trustlink-website"/>
+        <meta name="viewport" content="viewport-fit=cover" />
         <meta name="description" content="Enables you to build a greater finance ecosystem with end to end e-KYC authentication process in one platform" key="trustlink-website"/>
         <meta name="keywords" content="TrustLink" />
         <meta name="author" content="TrustLink" />
