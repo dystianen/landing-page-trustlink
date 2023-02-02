@@ -7,6 +7,7 @@ import { DrawerSlide } from "../DrawerSlide";
 import { startCase } from "lodash";
 import { CaretDownOutlined, DownOutlined, RightOutlined } from "@ant-design/icons";
 import ProductsDropdownOverlay from "./components/DropdownProducts";
+import IndustryDropdownOverlay from "./components/DropdownIndustry";
 const emptyFunction = () => {};
 const {Text, Title} = Typography;
 
@@ -43,6 +44,10 @@ const StickyHeader = (props) => {
       setWindows(window);
     }
   }, []);
+
+  useEffect(() => {
+    setMenuProfile(1);
+  }, [isRotate])
 
   const menu = [
     // {
@@ -126,6 +131,19 @@ const StickyHeader = (props) => {
     })
   }
 
+  const getOverlays = (key) => {
+    return (<>
+      {key === menu[1].key ? (
+          <ProductsDropdownOverlay menu={menuProfile} setMenu={n => setMenuProfile(n)} />
+      ) : key === menu[2].key ? (
+          <IndustryDropdownOverlay menu={menuProfile} setMenu={n => setMenuProfile(n)} />
+      ) : key === menu[5].key && (
+          <ProductsDropdownOverlay menu={menuProfile} setMenu={n => setMenuProfile(n)} />
+      )
+      }
+    </>)
+  }
+
   return (
     <div className={`z-[60] w-full sticky top-0 ${header} overflow-x-hidden`}>
       <div className={" w-full top-0 flex flex-row"} style={{ justifyContent: "space-between" }}>
@@ -167,7 +185,7 @@ const StickyHeader = (props) => {
                       <p className={"mb-0 text-center flex items-center poppins font-normal text-[16px] text-white"} id={`click-header-${items.key}`}>
 
                         {items.dropDown ? (
-                          <Dropdown open={isRotate[items.key].rotate} onOpenChange={(val) => handleOpenDropdown(val, items.key)} overlayClassName={`w-full flex justify-center ${!isRotate[items.key].rotate && 'invisible'}`} overlay={() => ( <ProductsDropdownOverlay menu={menuProfile} setMenu={n => setMenuProfile(n)} /> )}>
+                          <Dropdown open={isRotate[items.key].rotate} onOpenChange={(val) => handleOpenDropdown(val, items.key)} overlayClassName={`w-full flex justify-center ${!isRotate[items.key].rotate && 'invisible'}`} overlay={() => getOverlays(items.key)}>
                             <Space>
                               {items.name}
                               <DownOutlined className={isRotate[items.key]?.rotate && "rotate-180 transition duration-100"} />
