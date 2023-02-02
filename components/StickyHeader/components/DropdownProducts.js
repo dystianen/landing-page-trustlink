@@ -85,21 +85,21 @@ const ProductsDropdownOverlay = (props) => {
         return menu === 2 ? ( <>
                 <Fade cascade bottom duration={1000}>
                     <div className="h-full w-2/6 rounded-l-3xl flex flex-col px-10 py-9 justify-between montserrat text-[16px] font-medium">
-                        <Text className={'cursor-pointer'} onClick={() => router.push('product/account-information')}>OCR</Text>
-                        <Text className={'cursor-pointer'} onClick={() => router.push('product/transaction-history')}>Transaction History</Text>
-                        <Text className={'cursor-pointer'} onClick={() => router.push('product/e-commerce-and-e-wallet-data')}>E-Commerce and E-Wallet Data</Text>
+                        <Text className={'cursor-pointer'} onClick={() => router.push('account-information')}>OCR</Text>
+                        <Text className={'cursor-pointer'} onClick={() => router.push('transaction-history')}>Transaction History</Text>
+                        <Text className={'cursor-pointer'} onClick={() => router.push('e-commerce-and-e-wallet-data')}>E-Commerce and E-Wallet Data</Text>
                     </div>
                     <div className="h-full w-2/6 rounded-l-3xl flex flex-col px-10 py-9 justify-start montserrat text-[16px] font-medium">
-                        <Text className={'cursor-pointer'}>Income and Employment Verification</Text>
+                        <Text className={'cursor-pointer'} onClick={() => router.push('income-and-employment-verification')}>Income and Employment Verification</Text>
                     </div>
                 </Fade>
                 </>
             ) : menu === 1 && (
             <Fade cascade bottom duration={1000}>
                 <div className="h-full w-2/6 rounded-l-3xl flex flex-col px-10 py-9 justify-between montserrat text-[16px] font-medium">
-                    <Text className={'cursor-pointer'} onClick={() => router.push('product/account-information')}>OCR</Text>
-                    <Text className={'cursor-pointer'} onClick={() => router.push('product/passive-liveness')}>Passive Liveness</Text>
-                    <Text className={'cursor-pointer'} onClick={() => router.push('product/digital-signature')}>Digital Signature with e-KYC</Text>
+                    <Text className={'cursor-pointer'} onClick={() => router.push('account-information')}>OCR</Text>
+                    <Text className={'cursor-pointer'} onClick={() => router.push('passive-liveness')}>Passive Liveness</Text>
+                    <Text className={'cursor-pointer'} onClick={() => router.push('digital-signature')}>Digital Signature with e-KYC</Text>
                 </div>
             </Fade>
         )
