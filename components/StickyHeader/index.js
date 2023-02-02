@@ -126,7 +126,7 @@ const StickyHeader = (props) => {
     <div className={`z-[60] w-full sticky top-0 ${header} overflow-x-hidden`}>
       <div className={" w-full top-0 flex flex-row"} style={{ justifyContent: "space-between" }}>
         <div className={"flex items-center md:ml-12 cursor-pointer"} onClick={() => onClickTopPage()}>
-          <Image preview={false} className={"relative h-8 md:h-14 w-auto"} src={"/assets/logo/title_new2x.png"} alt={"Trustlink Title"} />
+          <Image preview={false} className={"relative h-8 md:h-[3.375rem] w-[16.875rem]"} src={"/assets/logo/title_new2x.png"} alt={"Trustlink Title"} />
         </div>
         {/* {windows?.scrollY > 70 &&
                     <div className={'relative  bg-red-300'}>
@@ -140,12 +140,11 @@ const StickyHeader = (props) => {
               {/*<Button className={"text-white text-sm lg:text-base xl:text-lg border-[#FF6703] bg-[#FF6703] montserrat rounded-lg h-12 w-40 md:w-40"}>*/}
               {/*  <span id={'click-top-page-get-started'}>{t("Login/Sign Up")}</span>*/}
               {/*</Button>*/}
-              <div className={"flex flex-row items-center text-white text-sm lg:text-base xl:text-lg border-[#FF6703] poppins font-bold rounded-lg h-12"}>
-                <Image src={'/assets/icons/user_fill.svg'} preview={false} className={'h-10 w-10'}/>
+              <div className={"flex flex-row items-center text-white text-sm border-[#FF6703] poppins font-bold rounded-lg h-12"}>
                 Login
               </div>
             </div>
-            <div className={`flex flex-row items-center text-sm lg:text-base xl:text-lg poppins xl:mx-6`}>
+            <div className={`flex flex-row items-center text-sm poppins xl:mx-6`}>
               <Text className={`cursor-pointer text-white ${lang === "Eng" && 'font-bold'}`} onClick={() => setLang('Eng')}>Eng</Text>
               <Divider type={"vertical"} className={'bg-white h-5 mx-4'}/>
               <Text className={`cursor-pointer text-white ${lang === "Ind" && 'font-bold'}`} onClick={() => setLang('Ind')}>Ind</Text>
@@ -161,7 +160,7 @@ const StickyHeader = (props) => {
               : <>
                   {menu.map((items, _props) => (
                     <div key={_props} className={`flex items-center ${_props == menu.length - 1 ? 'ml-2 xl:ml-4 2xl:ml-6' : 'mx-2 xl:mx-4 2xl:mx-6'} cursor-pointer`} onClick={items.onClicked}>
-                      <p className={"mb-0 text-center flex items-center poppins font-thin text-white"} id={`click-header-${items.key}`}>
+                      <p className={"mb-0 text-center flex items-center poppins font-normal text-[16px] text-white"} id={`click-header-${items.key}`}>
 
                         {items.dropDown ? (
                           <Dropdown onOpenChange={(val) => handleOpenDropdown(val, items.name)} overlayClassName="w-full flex justify-center" overlay={() => ( <ProductsDropdownOverlay menu={menuProfile} setMenu={n => setMenuProfile(n)} /> )} trigger={["hover"]}>
